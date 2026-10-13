@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v4",
+    "timeCentral": "2026-10-13T09:46:30.903056-05:00",
+    "usage": {
+      "inputTokens": 6952,
+      "outputTokens": 855,
+      "totalTokens": 7807,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 15052
+    },
+    "requestId": "1a0b10dc-de70-4b75-9c21-cb7ffc44e99e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face fills most of the canvas, built entirely from overlapping looping lines in deep crimson, cobalt blue, lime green, yellow, and white, with no solid filled areas — the features emerge from density rather than outline.\",\n    \"The background is a dense field of magenta and hot-pink loops on black-and-white diagonal stripes, creating a sharp contrast with the multicolored face at center.\",\n    \"The eyes are the most tightly wound zones of the composition: small, concentrated coils of blue and white sit within broader rings of red and yellow, drawing the eye before any other feature.\"\n  ],\n  \"reading\": \"The face here is not drawn so much as accumulated — loops of crimson, blue, and lime pile up until cheekbones and brow become legible through sheer density. The background's magenta scrawl on diagonal stripes pushes the face forward without a single hard edge doing that work. What reads as intensity may be a function of compression: the tightest coils land exactly at the eyes, and everything else radiates outward from that pressure.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between 'nnxyz nifty faces #4' and 'nnxyz nifty faces #6' in both title order and recorded creation order — though those orderings are not guaranteed to reflect making sequence. Each of the three takes a distinct structural approach to the same subject.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbB9AJWKrf5wD9QnofYJNk1aMyBmUjzqLyqWmt4ZrDhvj\",\n      \"reason\": \"Both works build a face from layered colored lines against a busy field, but 'nifty faces #4' uses broad black outlines and open color patches where #5 uses only looping strands with no filled areas, making the contrast in line behavior direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR\",\n      \"reason\": \"'nifty faces #6' replaces the looping scrawl of #5 with thick, angular, rectangular lines in yellow, red, and blue — the same face-centered format but a near-opposite line quality, making the two a clear structural contrast within the owned subset.\"\n    }\n  ],\n  \"tags\": [\n    \"looping line construction\",\n    \"face built from density\",\n    \"magenta and crimson dominant\",\n    \"diagonal striped background\",\n    \"multicolor layered strands\",\n    \"tightly coiled eye zones\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed intensity\",\n    \"surface pressure\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the face become readable — at what point does the density of loops resolve into a feature, and where does it stay pure pattern?\",\n  \"ambiguities\": [\n    \"Title order and recorded creation order align here, but the metadata notes gaps and variants exist across the full series, so adjacency is not confirmed as making sequence.\",\n    \"QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr (nnotb #148) was inspected but offers only a black-and-white line figure with no color or looping overlap; no meaningful formal connection to #5 was found, so it is omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT/image.png",
+        "imageSHA256": "e70b63e08d6bf27d837ac7cab7fada338752c0c4ed0ddce188dc7e8457ee2360"
+      },
+      {
+        "artworkId": "QmbB9AJWKrf5wD9QnofYJNk1aMyBmUjzqLyqWmt4ZrDhvj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbB9AJWKrf5wD9QnofYJNk1aMyBmUjzqLyqWmt4ZrDhvj/image.png",
+        "imageSHA256": "f716a1ce2452302786745a01e00594cea7e0230a5e71a9b069665f298e30df7b"
+      },
+      {
+        "artworkId": "QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr/image.png",
+        "imageSHA256": "db57ab3bc804a1aa09683f9c9fcac604d7d5e6bf6bf41f1e1091a61bac842f77"
+      },
+      {
+        "artworkId": "QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR/image.png",
+        "imageSHA256": "9231b0bc375701689ab74b5540fd74b3fb1e2c3d64361ffafc64d2386ac39ada"
+      }
+    ],
+    "systemPromptSHA256": "8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now.",
+    "systemPromptPath": "curation/full-pass/prompts/8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v4",
+    "timeCentral": "2026-10-13T09:46:38.976393-05:00",
+    "usage": {
+      "inputTokens": 7817,
+      "outputTokens": 1051,
+      "totalTokens": 8868,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7895
+    },
+    "requestId": "28db833b-1114-4808-a0f6-89033cf2cb97",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face fills most of the canvas, built entirely from overlapping looping lines in deep crimson, cobalt blue, lime green, yellow, and white, with no solid filled areas — features emerge from density rather than outline.\",\n    \"The background is a dense field of magenta and hot-pink loops on black-and-white diagonal stripes, creating sharp contrast with the multicolored face at center.\",\n    \"The eyes are the most tightly wound zones: small concentrated coils of blue and white sit within broader rings of red and yellow, drawing attention before any other feature.\"\n  ],\n  \"reading\": \"The face here is not drawn so much as accumulated — loops of crimson, blue, and lime pile up until cheekbones and brow become legible through sheer density. The background's magenta scrawl on diagonal stripes pushes the face forward without a single hard edge doing that work. What reads as intensity may be a function of compression: the tightest coils land at the eyes, and everything else radiates outward from that pressure.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between 'nnxyz nifty faces #4' and 'nnxyz nifty faces #6' in both title order and recorded creation order — though neither ordering confirms making sequence. Each of the three takes a distinct structural approach to the same face-centered format.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbB9AJWKrf5wD9QnofYJNk1aMyBmUjzqLyqWmt4ZrDhvj\",\n      \"reason\": \"Both works build a face from layered colored lines against a busy field, but 'nifty faces #4' uses broad black outlines and open color patches where #5 uses only looping strands with no filled areas — a direct, visible contrast in line behavior.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR\",\n      \"reason\": \"'nifty faces #6' replaces the looping scrawl of #5 with thick angular rectangular lines in yellow, red, and blue — the same face-centered format but a near-opposite line quality, making the two a clear structural contrast within the owned subset.\"\n    }\n  ],\n  \"tags\": [\n    \"looping line construction\",\n    \"face built from density\",\n    \"magenta and crimson dominant\",\n    \"diagonal striped background\",\n    \"multicolor layered strands\",\n    \"tightly coiled eye zones\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed intensity\",\n    \"surface pressure\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the face become readable — at what point does the density of loops resolve into a feature, and where does it stay pure pattern?\",\n  \"ambiguities\": [\n    \"Title order and recorded creation order align here, but metadata notes gaps and variants exist across the full series, so adjacency is not confirmed as making sequence.\",\n    \"QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr (nnotb #148) was inspected but is a black-and-white line figure with no looping color overlap; no meaningful formal connection to #5 was found and it is omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: crimson, cobalt, lime, magenta background on diagonal stripes, and tightly coiled eye zones are all directly visible.\",\n    \"Comparison with QmbB9AJWKrf5wD9QnofYJNk1aMyBmUjzqLyqWmt4ZrDhvj confirmed: #4 visibly uses broad black outlines and open color patches, contrasting with #5's all-loop construction — no invented claims.\",\n    \"Comparison with QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR confirmed: #6 visibly uses thick angular rectangular lines in yellow, red, and blue — structural contrast with #5's looping strands is directly supported by the images.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT/image.png",
+        "imageSHA256": "e70b63e08d6bf27d837ac7cab7fada338752c0c4ed0ddce188dc7e8457ee2360"
+      },
+      {
+        "artworkId": "QmbB9AJWKrf5wD9QnofYJNk1aMyBmUjzqLyqWmt4ZrDhvj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbB9AJWKrf5wD9QnofYJNk1aMyBmUjzqLyqWmt4ZrDhvj/image.png",
+        "imageSHA256": "f716a1ce2452302786745a01e00594cea7e0230a5e71a9b069665f298e30df7b"
+      },
+      {
+        "artworkId": "QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr/image.png",
+        "imageSHA256": "db57ab3bc804a1aa09683f9c9fcac604d7d5e6bf6bf41f1e1091a61bac842f77"
+      },
+      {
+        "artworkId": "QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR/image.png",
+        "imageSHA256": "9231b0bc375701689ab74b5540fd74b3fb1e2c3d64361ffafc64d2386ac39ada"
+      }
+    ],
+    "systemPromptSHA256": "8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A face fills most of the canvas, built entirely from overlapping looping lines in deep crimson, cobalt blue, lime green, yellow, and white, with no solid filled areas — the features emerge from density rather than outline.\", \"The background is a dense field of magenta and hot-pink loops on black-and-white diagonal stripes, creating a sharp contrast with the multicolored face at center.\", \"The eyes are the most tightly wound zones of the composition: small, concentrated coils of blue and white sit within broader rings of red and yellow, drawing the eye before any other feature.\"], \"reading\": \"The face here is not drawn so much as accumulated — loops of crimson, blue, and lime pile up until cheekbones and brow become legible through sheer density. The background's magenta scrawl on diagonal stripes pushes the face forward without a single hard edge doing that work. What reads as intensity may be a function of compression: the tightest coils land exactly at the eyes, and everything else radiates outward from that pressure.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between 'nnxyz nifty faces #4' and 'nnxyz nifty faces #6' in both title order and recorded creation order — though those orderings are not guaranteed to reflect making sequence. Each of the three takes a distinct structural approach to the same subject.\", \"connections\": [{\"targetArtworkId\": \"QmbB9AJWKrf5wD9QnofYJNk1aMyBmUjzqLyqWmt4ZrDhvj\", \"reason\": \"Both works build a face from layered colored lines against a busy field, but 'nifty faces #4' uses broad black outlines and open color patches where #5 uses only looping strands with no filled areas, making the contrast in line behavior direct and visible.\"}, {\"targetArtworkId\": \"QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR\", \"reason\": \"'nifty faces #6' replaces the looping scrawl of #5 with thick, angular, rectangular lines in yellow, red, and blue — the same face-centered format but a near-opposite line quality, making the two a clear structural contrast within the owned subset.\"}], \"tags\": [\"looping line construction\", \"face built from density\", \"magenta and crimson dominant\", \"diagonal striped background\", \"multicolor layered strands\", \"tightly coiled eye zones\"], \"interpretiveTags\": [\"compressed intensity\", \"surface pressure\"], \"lookingQuestion\": \"Where exactly does the face become readable — at what point does the density of loops resolve into a feature, and where does it stay pure pattern?\", \"ambiguities\": [\"Title order and recorded creation order align here, but the metadata notes gaps and variants exist across the full series, so adjacency is not confirmed as making sequence.\", \"QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr (nnotb #148) was inspected but offers only a black-and-white line figure with no color or looping overlap; no meaningful formal connection to #5 was found, so it is omitted.\"]}",
+    "systemPromptPath": "curation/full-pass/prompts/8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:46.399201-05:00",
+    "usage": {
+      "inputTokens": 5959,
+      "outputTokens": 795,
+      "totalTokens": 6754,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13870
+    },
+    "requestId": "2ac18bd0-f8c3-4ead-9641-5a398a35b16c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A yellow disc in the upper left sprouts wavy radiating lines across the canvas; it carries a small teal rectangular shape and a downturned line mouth.\",\n    \"A triangular wedge shape dominates the center, filled with layered orange, red, and olive scribble loops over a yellow-gold base, with dark outlines fraying at the edges.\",\n    \"A round yellow form below the wedge bears large red-framed rectangular eye shapes and a wide mouth showing a row of small rectangular teeth, rendered in dense overlapping black lines.\"\n  ],\n  \"reading\": \"Two faces share the canvas — one small and sour in the upper corner, one large and grinning below — with a wedge shape pressed between them like a third presence. Yellow dominates, but red and olive push through the scribbled surface. The gritted teeth and the downturned disc read as opposing moods held in the same field of warm, restless line.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between 'nnxyz #43' and 'pizza pizza pizza day' in recorded creation order. The yellow-dominant field and layered face structure appear across the owned collection, though the dual-face arrangement and wedge form are specific to this image.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\",\n      \"reason\": \"Both images use a saturated yellow field as the dominant ground, with a red-outlined face form and dense overlapping scribble lines building up the surface — a direct color and line parallel visible in both images.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ\",\n      \"reason\": \"Both images place a large yellow rounded face form at center with a wide tooth-filled mouth, though the comparison work surrounds it with dark ground and scattered hands rather than a second face and wedge.\"\n    }\n  ],\n  \"tags\": [\n    \"dual face forms\",\n    \"yellow ground\",\n    \"radiating wavy lines\",\n    \"red-framed eye shapes\",\n    \"triangular wedge\",\n    \"visible teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"opposing moods\",\n    \"confrontational grin\"\n  ],\n  \"lookingQuestion\": \"What does the placement of the small disc face in the upper corner — separated from the large grinning form below — do to how you move between the two?\",\n  \"ambiguities\": [\n    \"The triangular wedge shape is read as a pizza slice based on title content, but the image alone shows only a layered triangular form; the title is treated as content, not confirmed subject identification.\",\n    \"The comparison with QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2 was inspected but not selected — its pink ground and single close-cropped face offer no strong formal parallel beyond shared teeth motifs, which is too narrow to support a useful connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ/image.png",
+        "imageSHA256": "bb097acc0e4aab16ce2ed584bb3e83df2c94785f7e38e90e57e4c6864724c08d"
+      },
+      {
+        "artworkId": "QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ/image.png",
+        "imageSHA256": "bcb195a27ddc3920341b965afda83a25473963fcfafb67c1603148aee1550db7"
+      },
+      {
+        "artworkId": "QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi/image.png",
+        "imageSHA256": "8190f31405813db5091f0bb1d2f807e5faf7b9fefc270d0ab1d7a08d9a82a35f"
+      },
+      {
+        "artworkId": "QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2/image.png",
+        "imageSHA256": "ffafb15487ef3da0c2cdc4aa7984a731ddcff78c438be2510833173b6e690288"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:54.321723-05:00",
+    "usage": {
+      "inputTokens": 6776,
+      "outputTokens": 1044,
+      "totalTokens": 7820,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7846
+    },
+    "requestId": "d484c23f-83e2-40f6-9e71-c9a147b9344c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A yellow disc in the upper left sprouts wavy radiating lines across the canvas; it carries a small teal rectangular shape and a downturned line mouth.\",\n    \"A triangular wedge dominates the center, filled with layered orange, red, and olive scribble loops over a yellow-gold base, with dark outlines fraying at the edges.\",\n    \"A round yellow form below the wedge bears large red-framed rectangular eye shapes and a wide mouth showing a row of small rectangular teeth, rendered in dense overlapping black lines.\"\n  ],\n  \"reading\": \"Two face forms share the canvas — one small and downturned in the upper corner, one large and tooth-baring below — with a wedge shape pressed between them. Yellow dominates, but red and olive push through the scribbled surface. The gritted teeth and the downturned disc read as opposing moods held in the same warm, restless field of line.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between 'nnxyz #43' and 'pizza pizza pizza day' in recorded creation order. The yellow-dominant field and layered face structure recur across the owned collection, though the dual-face arrangement and central wedge form are specific to this image.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\",\n      \"reason\": \"Both images use a saturated yellow field as dominant ground with a red-outlined face form and dense overlapping scribble lines — a direct color and line parallel visible in both inspected images.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ\",\n      \"reason\": \"Both place a large yellow rounded face at center with a wide tooth-filled mouth; the comparison work surrounds it with dark ground and scattered hand forms rather than a second face and wedge, making the contrast in spatial arrangement visible.\"\n    }\n  ],\n  \"tags\": [\n    \"dual face forms\",\n    \"yellow ground\",\n    \"radiating wavy lines\",\n    \"red-framed eye shapes\",\n    \"triangular wedge\",\n    \"visible teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"opposing moods\",\n    \"confrontational grin\"\n  ],\n  \"lookingQuestion\": \"What does the placement of the small disc face in the upper corner — separated from the large tooth-baring form below — do to how you move between the two?\",\n  \"ambiguities\": [\n    \"The triangular wedge is read as a pizza slice based on title content; the image alone shows a layered triangular form with scribbled surface — title treated as content, not confirmed subject identification.\",\n    \"QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2 was inspected but not selected — its pink ground and single close-cropped face offer no strong formal parallel beyond shared teeth, too narrow for a useful connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: disc with teal rectangle and downturned mouth upper left, central wedge with orange/red/olive scribble, lower round form with red-framed eyes and rectangular teeth — no invented details found.\",\n    \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi confirmed: saturated yellow ground and red-outlined face with dense scribble lines visible in that image, parallel holds; QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ confirmed: yellow face with tooth-filled mouth on dark ground with hand forms — contrast framing is accurate.\",\n    \"Reading revised to remove 'grinning' (implied emotion) in favor of 'tooth-baring' (visible form); word count checked within 45–80 limit; no unsupported intent, biography, or technique claims present.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ/image.png",
+        "imageSHA256": "bb097acc0e4aab16ce2ed584bb3e83df2c94785f7e38e90e57e4c6864724c08d"
+      },
+      {
+        "artworkId": "QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ/image.png",
+        "imageSHA256": "bcb195a27ddc3920341b965afda83a25473963fcfafb67c1603148aee1550db7"
+      },
+      {
+        "artworkId": "QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi/image.png",
+        "imageSHA256": "8190f31405813db5091f0bb1d2f807e5faf7b9fefc270d0ab1d7a08d9a82a35f"
+      },
+      {
+        "artworkId": "QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2/image.png",
+        "imageSHA256": "ffafb15487ef3da0c2cdc4aa7984a731ddcff78c438be2510833173b6e690288"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A yellow disc in the upper left sprouts wavy radiating lines across the canvas; it carries a small teal rectangular shape and a downturned line mouth.\", \"A triangular wedge shape dominates the center, filled with layered orange, red, and olive scribble loops over a yellow-gold base, with dark outlines fraying at the edges.\", \"A round yellow form below the wedge bears large red-framed rectangular eye shapes and a wide mouth showing a row of small rectangular teeth, rendered in dense overlapping black lines.\"], \"reading\": \"Two faces share the canvas — one small and sour in the upper corner, one large and grinning below — with a wedge shape pressed between them like a third presence. Yellow dominates, but red and olive push through the scribbled surface. The gritted teeth and the downturned disc read as opposing moods held in the same field of warm, restless line.\", \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between 'nnxyz #43' and 'pizza pizza pizza day' in recorded creation order. The yellow-dominant field and layered face structure appear across the owned collection, though the dual-face arrangement and wedge form are specific to this image.\", \"connections\": [{\"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\", \"reason\": \"Both images use a saturated yellow field as the dominant ground, with a red-outlined face form and dense overlapping scribble lines building up the surface — a direct color and line parallel visible in both images.\"}, {\"targetArtworkId\": \"QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ\", \"reason\": \"Both images place a large yellow rounded face form at center with a wide tooth-filled mouth, though the comparison work surrounds it with dark ground and scattered hands rather than a second face and wedge.\"}], \"tags\": [\"dual face forms\", \"yellow ground\", \"radiating wavy lines\", \"red-framed eye shapes\", \"triangular wedge\", \"visible teeth\"], \"interpretiveTags\": [\"opposing moods\", \"confrontational grin\"], \"lookingQuestion\": \"What does the placement of the small disc face in the upper corner — separated from the large grinning form below — do to how you move between the two?\", \"ambiguities\": [\"The triangular wedge shape is read as a pizza slice based on title content, but the image alone shows only a layered triangular form; the title is treated as content, not confirmed subject identification.\", \"The comparison with QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2 was inspected but not selected — its pink ground and single close-cropped face offer no strong formal parallel beyond shared teeth motifs, which is too narrow to support a useful connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

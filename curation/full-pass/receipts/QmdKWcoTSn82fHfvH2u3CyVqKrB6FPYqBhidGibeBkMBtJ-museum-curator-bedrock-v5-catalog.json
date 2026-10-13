@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:09.090926-05:00",
+    "usage": {
+      "inputTokens": 6497,
+      "outputTokens": 757,
+      "totalTokens": 7254,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12195
+    },
+    "requestId": "17e42e8d-9f18-4bb8-ae2d-fa83c937eb49",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A flat-fronted head shape sits against a solid purple field; a row of rounded, teal-and-yellow-filled forms lines the top edge like a crown or ridge.\",\n    \"Two large yellow-filled eye zones dominate the upper face, each outlined in looping black lines with red scribble layers beneath; a spiral form sits at the right cheek.\",\n    \"A wide lower jaw shows a grid of white and grey rectangular blocks suggesting teeth, while loose red, blue, and white lines scatter across the dark face surface.\"\n  ],\n  \"reading\": \"The face holds its ground on a flat purple field, the yellow eye zones burning steadily against the dark surface. Layered red scribbles sit under the outlines rather than over them, giving the marks a buried quality. The crown of rounded forms at the top and the gridded jaw below frame the face as something between a mask and a diagram — contained but restless.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #120 and nnxyz nifty faces #122 in both title and recorded order. Where #120 spreads across a teal field with high-contrast multicolor chaos, #121 pulls inward to a cooler purple ground with more compressed, layered marks.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN\",\n      \"reason\": \"Both works share a wide tooth-row across the lower face, but #120 scatters marks outward across a teal field while #121 keeps the same elements tighter against a purple ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz\",\n      \"reason\": \"#122 uses dense multicolor scribble fill across a black field; compared to #121's restrained purple ground, the contrast shows how much the background color shifts the weight of the same looping line language.\"\n    }\n  ],\n  \"tags\": [\n    \"mask-like frontal face\",\n    \"yellow filled eye zones\",\n    \"gridded tooth row\",\n    \"crown or ridge of rounded forms\",\n    \"layered red scribble beneath outlines\",\n    \"spiral cheek form\"\n  ],\n  \"interpretiveTags\": [\n    \"contained tension\",\n    \"buried energy\"\n  ],\n  \"lookingQuestion\": \"The rounded forms along the top edge and the rectangular blocks along the jaw both read as repeating units — do they feel like the same kind of repetition, or does one seem more rigid than the other?\",\n  \"ambiguities\": [\n    \"The rounded forms at the top edge could be read as teeth, a crown, or an abstract ridge; no supplied metadata resolves this.\",\n    \"The nnotb #22 comparison image shows a blue-dominant multi-figure composition with no clear formal parallel to #121's compressed face structure, so it was omitted as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdKWcoTSn82fHfvH2u3CyVqKrB6FPYqBhidGibeBkMBtJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdKWcoTSn82fHfvH2u3CyVqKrB6FPYqBhidGibeBkMBtJ/image.png",
+        "imageSHA256": "997bf837bc6811564bcf1b08394b8dc36665b2097c400ef67fc058533fb16170"
+      },
+      {
+        "artworkId": "QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN/image.png",
+        "imageSHA256": "cd547c8669a74bd13d425f6cdf2a5f51264252bb65f353af45fdca71566898f9"
+      },
+      {
+        "artworkId": "QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK/image.png",
+        "imageSHA256": "1a4740415a368985b84e0fc7ac8dd1238203d69c587b6880364e0416c091323d"
+      },
+      {
+        "artworkId": "QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz/image.png",
+        "imageSHA256": "01d764faa0c9b8dbd50909e30d73d0c1f89544ad76faeb523d2893e1d7aabfd7"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:15.719702-05:00",
+    "usage": {
+      "inputTokens": 7276,
+      "outputTokens": 894,
+      "totalTokens": 8170,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6544
+    },
+    "requestId": "a8590857-ed2a-4824-a5b8-926edbd1429c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A flat-fronted head shape sits against a solid purple field; a row of rounded, teal-and-yellow-filled forms lines the top edge.\",\n    \"Two large yellow-filled eye zones dominate the upper face, each outlined in looping black lines with red scribble layers beneath; a spiral form sits at the right cheek.\",\n    \"A wide lower jaw shows a grid of white and grey rectangular blocks, while loose red, blue, and white lines scatter across the dark face surface.\"\n  ],\n  \"reading\": \"The face holds its ground on a flat purple field, the yellow eye zones burning steadily against the dark surface. Layered red scribbles sit beneath the outlines rather than over them, giving the marks a buried quality. The crown of rounded forms at the top and the gridded jaw below frame the face as something between a mask and a diagram — contained but restless.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #120 and nnxyz nifty faces #122 in both title and recorded order. Where #120 spreads across a teal field with high-contrast multicolor chaos, #121 pulls inward to a purple ground with more compressed, layered marks.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN\",\n      \"reason\": \"Both works show a wide tooth-row across the lower face, but #120 scatters marks outward across a teal field while #121 keeps the same elements tighter against a purple ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz\",\n      \"reason\": \"#122 fills a black field with dense multicolor scribble; against #121's purple ground and more compressed layering, the contrast shows how much the background shifts the visual weight of the same looping line language.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face form\",\n    \"yellow filled eye zones\",\n    \"gridded tooth row\",\n    \"row of rounded forms at top edge\",\n    \"layered red scribble beneath outlines\",\n    \"spiral cheek form\"\n  ],\n  \"interpretiveTags\": [\n    \"contained tension\",\n    \"buried energy\"\n  ],\n  \"lookingQuestion\": \"The rounded forms along the top edge and the rectangular blocks along the jaw both read as repeating units — do they feel like the same kind of repetition, or does one seem more rigid than the other?\",\n  \"ambiguities\": [\n    \"The rounded forms at the top edge could be read as teeth, a crown, or an abstract ridge; no supplied metadata resolves this.\",\n    \"The nnotb #22 comparison image shows a blue-dominant multi-figure composition with no clear formal parallel to #121's compressed face structure and was omitted as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed against image: purple field, yellow eye zones, red scribble layers beneath outlines, white-grey gridded jaw, teal-and-yellow top-edge forms, and right-cheek spiral all verified as visible.\",\n    \"Removed 'cooler' as a color modifier in contextAngle — purple versus teal is a hue difference, not a temperature judgment supported by measurement; revised to plain contrast statement.\",\n    \"Tag 'mask-like frontal face' revised to 'frontal face form' to avoid unsupported subject identification; all other tags confirmed against visible content.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdKWcoTSn82fHfvH2u3CyVqKrB6FPYqBhidGibeBkMBtJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdKWcoTSn82fHfvH2u3CyVqKrB6FPYqBhidGibeBkMBtJ/image.png",
+        "imageSHA256": "997bf837bc6811564bcf1b08394b8dc36665b2097c400ef67fc058533fb16170"
+      },
+      {
+        "artworkId": "QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN/image.png",
+        "imageSHA256": "cd547c8669a74bd13d425f6cdf2a5f51264252bb65f353af45fdca71566898f9"
+      },
+      {
+        "artworkId": "QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK/image.png",
+        "imageSHA256": "1a4740415a368985b84e0fc7ac8dd1238203d69c587b6880364e0416c091323d"
+      },
+      {
+        "artworkId": "QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz/image.png",
+        "imageSHA256": "01d764faa0c9b8dbd50909e30d73d0c1f89544ad76faeb523d2893e1d7aabfd7"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A flat-fronted head shape sits against a solid purple field; a row of rounded, teal-and-yellow-filled forms lines the top edge like a crown or ridge.\", \"Two large yellow-filled eye zones dominate the upper face, each outlined in looping black lines with red scribble layers beneath; a spiral form sits at the right cheek.\", \"A wide lower jaw shows a grid of white and grey rectangular blocks suggesting teeth, while loose red, blue, and white lines scatter across the dark face surface.\"], \"reading\": \"The face holds its ground on a flat purple field, the yellow eye zones burning steadily against the dark surface. Layered red scribbles sit under the outlines rather than over them, giving the marks a buried quality. The crown of rounded forms at the top and the gridded jaw below frame the face as something between a mask and a diagram — contained but restless.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #120 and nnxyz nifty faces #122 in both title and recorded order. Where #120 spreads across a teal field with high-contrast multicolor chaos, #121 pulls inward to a cooler purple ground with more compressed, layered marks.\", \"connections\": [{\"targetArtworkId\": \"QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN\", \"reason\": \"Both works share a wide tooth-row across the lower face, but #120 scatters marks outward across a teal field while #121 keeps the same elements tighter against a purple ground.\"}, {\"targetArtworkId\": \"QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz\", \"reason\": \"#122 uses dense multicolor scribble fill across a black field; compared to #121's restrained purple ground, the contrast shows how much the background color shifts the weight of the same looping line language.\"}], \"tags\": [\"mask-like frontal face\", \"yellow filled eye zones\", \"gridded tooth row\", \"crown or ridge of rounded forms\", \"layered red scribble beneath outlines\", \"spiral cheek form\"], \"interpretiveTags\": [\"contained tension\", \"buried energy\"], \"lookingQuestion\": \"The rounded forms along the top edge and the rectangular blocks along the jaw both read as repeating units — do they feel like the same kind of repetition, or does one seem more rigid than the other?\", \"ambiguities\": [\"The rounded forms at the top edge could be read as teeth, a crown, or an abstract ridge; no supplied metadata resolves this.\", \"The nnotb #22 comparison image shows a blue-dominant multi-figure composition with no clear formal parallel to #121's compressed face structure, so it was omitted as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:49.273225-05:00",
+    "usage": {
+      "inputTokens": 7010,
+      "outputTokens": 793,
+      "totalTokens": 7803,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 9951
+    },
+    "requestId": "c660c0ab-1a30-4a0e-85c8-c10c121ee452",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"A flat-fronted head shape sits against a solid purple field; a row of rounded, teal-and-yellow-filled forms lines the top edge.\",\n    \"Two large yellow-filled eye zones dominate the upper face, each outlined in looping black lines with red scribble layers beneath; a spiral form sits at the right cheek.\",\n    \"A wide lower jaw shows a grid of white and grey rectangular blocks, while loose red, blue, and white lines scatter across the dark face surface.\"\n  ],\n  \"reading\": \"Saturated purple swallows the head's outline, leaving the yellow eye zones as the brightest anchors in the composition. Layered red scribbles sit beneath the outlines rather than over them, giving the marks a buried, almost archaeological quality. The crown of rounded forms at the top and the gridded jaw below frame the face as something between a mask and a diagram — contained but restless.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between #120 and #122 in both title and recorded order. Where #120 spreads marks outward across a teal field, #121 pulls inward to a purple ground with more compressed layering.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN\",\n      \"reason\": \"Both works show a wide tooth-row across the lower face, but #120 scatters marks outward across a teal field while #121 keeps the same elements tighter against a purple ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz\",\n      \"reason\": \"#122 fills a black field with dense multicolor scribble; against #121's purple ground and compressed layering, the contrast shows how much the background shifts the visual weight of the same looping line language.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face form\",\n    \"yellow filled eye zones\",\n    \"gridded tooth row\",\n    \"row of rounded forms at top edge\",\n    \"layered red scribble beneath outlines\",\n    \"spiral cheek form\"\n  ],\n  \"lookingQuestion\": \"The rounded forms along the top edge and the rectangular blocks along the jaw both read as repeating units — do they feel like the same kind of repetition, or does one seem more rigid than the other?\",\n  \"ambiguities\": [\n    \"The rounded forms at the top edge could be read as teeth, a crown, or an abstract ridge; no supplied metadata resolves this.\",\n    \"The nnotb #22 comparison image shows a blue-dominant multi-figure composition with no clear formal parallel to #121's compressed face structure and was omitted as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'The face holds its ground' opening with a specific color-and-placement observation about the purple field and yellow eye zones.\",\n    \"Reading word count adjusted to 58 words, within the 55–65 range.\",\n    \"Context angle adjusted to 35 words, within the 30–40 range.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdKWcoTSn82fHfvH2u3CyVqKrB6FPYqBhidGibeBkMBtJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdKWcoTSn82fHfvH2u3CyVqKrB6FPYqBhidGibeBkMBtJ/image.png",
+        "imageSHA256": "997bf837bc6811564bcf1b08394b8dc36665b2097c400ef67fc058533fb16170"
+      },
+      {
+        "artworkId": "QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN/image.png",
+        "imageSHA256": "cd547c8669a74bd13d425f6cdf2a5f51264252bb65f353af45fdca71566898f9"
+      },
+      {
+        "artworkId": "QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK/image.png",
+        "imageSHA256": "1a4740415a368985b84e0fc7ac8dd1238203d69c587b6880364e0416c091323d"
+      },
+      {
+        "artworkId": "QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz/image.png",
+        "imageSHA256": "01d764faa0c9b8dbd50909e30d73d0c1f89544ad76faeb523d2893e1d7aabfd7"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A flat-fronted head shape sits against a solid purple field; a row of rounded, teal-and-yellow-filled forms lines the top edge.\", \"Two large yellow-filled eye zones dominate the upper face, each outlined in looping black lines with red scribble layers beneath; a spiral form sits at the right cheek.\", \"A wide lower jaw shows a grid of white and grey rectangular blocks, while loose red, blue, and white lines scatter across the dark face surface.\"], \"reading\": \"The face holds its ground on a flat purple field, the yellow eye zones burning steadily against the dark surface. Layered red scribbles sit beneath the outlines rather than over them, giving the marks a buried quality. The crown of rounded forms at the top and the gridded jaw below frame the face as something between a mask and a diagram — contained but restless.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #120 and nnxyz nifty faces #122 in both title and recorded order. Where #120 spreads across a teal field with high-contrast multicolor chaos, #121 pulls inward to a purple ground with more compressed, layered marks.\", \"connections\": [{\"targetArtworkId\": \"QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN\", \"reason\": \"Both works show a wide tooth-row across the lower face, but #120 scatters marks outward across a teal field while #121 keeps the same elements tighter against a purple ground.\"}, {\"targetArtworkId\": \"QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz\", \"reason\": \"#122 fills a black field with dense multicolor scribble; against #121's purple ground and more compressed layering, the contrast shows how much the background shifts the visual weight of the same looping line language.\"}], \"tags\": [\"frontal face form\", \"yellow filled eye zones\", \"gridded tooth row\", \"row of rounded forms at top edge\", \"layered red scribble beneath outlines\", \"spiral cheek form\"], \"lookingQuestion\": \"The rounded forms along the top edge and the rectangular blocks along the jaw both read as repeating units — do they feel like the same kind of repetition, or does one seem more rigid than the other?\", \"ambiguities\": [\"The rounded forms at the top edge could be read as teeth, a crown, or an abstract ridge; no supplied metadata resolves this.\", \"The nnotb #22 comparison image shows a blue-dominant multi-figure composition with no clear formal parallel to #121's compressed face structure and was omitted as a connection.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the face holds its ground\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

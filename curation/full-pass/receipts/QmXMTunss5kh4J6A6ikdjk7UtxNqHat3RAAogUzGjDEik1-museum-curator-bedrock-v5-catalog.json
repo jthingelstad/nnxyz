@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:01.279335-05:00",
+    "usage": {
+      "inputTokens": 6061,
+      "outputTokens": 746,
+      "totalTokens": 6807,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12087
+    },
+    "requestId": "8a9e4688-c91a-4e38-a1a3-4779334b3d6d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large spiral coils from the upper-center leftward, built from concentric rings of red, white, black, and pink lines, with a small dense knot of blue and red loops at its core.\",\n    \"Horizontal bands of black, yellow, and white zigzag lines stack across the lower two-thirds, interrupted by vertical purple bars and patches of flat orange, brown, and sky-blue.\",\n    \"A cluster of white rectangular blocks sits mid-lower center, flanked by yellow wave lines and a row of white arch shapes along the bottom edge.\"\n  ],\n  \"reading\": \"The spiral pulls the eye inward while the horizontal banding pushes across—two competing movements that keep the image unsettled. The dense core reads as pressure or accumulation, while the wave lines below feel more open, almost relieved. Blue sky breaks through at the top and sides, offering space against the packed center. The mood shifts depending on where attention lands.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #238 and nnotb #240 in both title and recorded-creation order. Where #238 builds around a dominant black mass on warm orange, #239 replaces that warmth with cooler blue and a spiral center as the organizing form.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD\",\n      \"reason\": \"Both works share a large central coiled or ringed form with jagged-line surrounds, but #238 anchors its rings in warm orange while #239 shifts the field to blue and multiplies the horizontal banding.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp\",\n      \"reason\": \"nnotb #240 also uses spiral eye-forms and dense wave lines, but its dominant yellow-and-black field and pointed ear shapes give it a warmer, more contained silhouette compared to #239's open blue ground.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral form\",\n    \"horizontal banding\",\n    \"zigzag lines\",\n    \"concentric rings\",\n    \"blue ground\",\n    \"wave pattern\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between inward pull and lateral spread\",\n    \"shifting mood by zone\"\n  ],\n  \"lookingQuestion\": \"Where does the spiral's outermost ring end and the surrounding line work begin—and does that boundary hold consistently around the full circle?\",\n  \"ambiguities\": [\n    \"The white rectangular block cluster mid-lower center could be read as a grid, a set of teeth, or pure geometric fill; no supplied evidence resolves which reading was intended.\",\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps and variants exist across the broader nnotb family, so adjacency does not confirm unbroken sequence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1/image.png",
+        "imageSHA256": "d147cba4feac5802491e612ac876b161a8146807d2a80b4ddbb847b909f84e94"
+      },
+      {
+        "artworkId": "QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD/image.png",
+        "imageSHA256": "f0a73eb696e8ecf65334040810d2fce7ec0e0f36f0ab3a3cfd5406b47c663554"
+      },
+      {
+        "artworkId": "QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw/image.png",
+        "imageSHA256": "12da0ff52daf08159d317b8dbcb13fb2f67af76b6b5221c7c50fcb8e010f7eba"
+      },
+      {
+        "artworkId": "QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp/image.png",
+        "imageSHA256": "de2eeb424f2fd70cf8f072608fa42fb12371e4512ee6883262f963d08fbd1f42"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:07.976993-05:00",
+    "usage": {
+      "inputTokens": 6829,
+      "outputTokens": 948,
+      "totalTokens": 7777,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6629
+    },
+    "requestId": "b3a23987-a9b2-4d3c-9a8a-66b036b32f4f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large spiral coils from upper-center leftward, built from concentric rings of red, white, black, and pink lines, with a dense knot of blue and red loops at its core.\",\n    \"Horizontal bands of black, yellow, and white zigzag lines stack across the lower two-thirds, interrupted by vertical purple bars and patches of flat orange, brown, and sky-blue.\",\n    \"A cluster of white rectangular blocks sits mid-lower center, flanked by yellow wave lines and a row of white arch shapes along the bottom edge.\"\n  ],\n  \"reading\": \"The spiral draws the eye inward while horizontal banding pushes across the surface—two competing movements that keep the image unsettled. The dense core reads as pressure or accumulation; the wave lines below feel more open. Sky-blue breaks through at the top and sides, offering space against the packed center. The mood shifts depending on where attention lands.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #238 and nnotb #240 in both title and recorded-creation order. Where #238 builds around a dominant black mass on warm orange, #239 replaces that warmth with cooler blue and a spiral as the organizing center.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD\",\n      \"reason\": \"Both works place a large coiled ringed form at center with jagged-line surrounds, but #238 anchors its rings in warm orange while #239 shifts the field to blue and multiplies the horizontal banding.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp\",\n      \"reason\": \"nnotb #240 also uses spiral eye-forms and dense wave lines, but its dominant yellow-and-black field and pointed upper shapes give it a warmer, more contained silhouette against #239's open blue ground.\"\n    }\n  ],\n  \"tags\": [\"spiral form\", \"horizontal banding\", \"zigzag lines\", \"concentric rings\", \"blue ground\", \"wave pattern\"],\n  \"interpretiveTags\": [\"tension between inward pull and lateral spread\", \"shifting mood by zone\"],\n  \"lookingQuestion\": \"Where does the spiral's outermost ring end and the surrounding line work begin—and does that boundary hold consistently around the full circle?\",\n  \"ambiguities\": [\n    \"The white rectangular block cluster mid-lower center could read as a grid, a set of arch-topped forms, or geometric fill; no supplied evidence resolves the intended reading.\",\n    \"Title-derived order and recorded-creation order align here, but metadata notes gaps and variants exist across the broader nnotb family, so adjacency does not confirm an unbroken sequence.\"\n  ],\n  \"reviewFindings\": [\n    \"Spiral placement confirmed upper-center to left, concentric rings in red/white/black/pink with blue-red core—observation accurate.\",\n    \"Comparison with QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD confirmed: #238 shows a coiled ringed form on warm orange ground; contrast with #239's blue ground and heavier horizontal banding is visually supported.\",\n    \"Comparison with QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp confirmed: #240 shows spiral eye-forms and wave lines on a yellow-dominant field with a pointed upper silhouette—contrast with #239's blue ground is visually supported; 'ear shapes' softened to 'pointed upper shapes' to avoid unsupported subject identification.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1/image.png",
+        "imageSHA256": "d147cba4feac5802491e612ac876b161a8146807d2a80b4ddbb847b909f84e94"
+      },
+      {
+        "artworkId": "QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD/image.png",
+        "imageSHA256": "f0a73eb696e8ecf65334040810d2fce7ec0e0f36f0ab3a3cfd5406b47c663554"
+      },
+      {
+        "artworkId": "QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw/image.png",
+        "imageSHA256": "12da0ff52daf08159d317b8dbcb13fb2f67af76b6b5221c7c50fcb8e010f7eba"
+      },
+      {
+        "artworkId": "QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp/image.png",
+        "imageSHA256": "de2eeb424f2fd70cf8f072608fa42fb12371e4512ee6883262f963d08fbd1f42"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large spiral coils from the upper-center leftward, built from concentric rings of red, white, black, and pink lines, with a small dense knot of blue and red loops at its core.\", \"Horizontal bands of black, yellow, and white zigzag lines stack across the lower two-thirds, interrupted by vertical purple bars and patches of flat orange, brown, and sky-blue.\", \"A cluster of white rectangular blocks sits mid-lower center, flanked by yellow wave lines and a row of white arch shapes along the bottom edge.\"], \"reading\": \"The spiral pulls the eye inward while the horizontal banding pushes across—two competing movements that keep the image unsettled. The dense core reads as pressure or accumulation, while the wave lines below feel more open, almost relieved. Blue sky breaks through at the top and sides, offering space against the packed center. The mood shifts depending on where attention lands.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #238 and nnotb #240 in both title and recorded-creation order. Where #238 builds around a dominant black mass on warm orange, #239 replaces that warmth with cooler blue and a spiral center as the organizing form.\", \"connections\": [{\"targetArtworkId\": \"QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD\", \"reason\": \"Both works share a large central coiled or ringed form with jagged-line surrounds, but #238 anchors its rings in warm orange while #239 shifts the field to blue and multiplies the horizontal banding.\"}, {\"targetArtworkId\": \"QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp\", \"reason\": \"nnotb #240 also uses spiral eye-forms and dense wave lines, but its dominant yellow-and-black field and pointed ear shapes give it a warmer, more contained silhouette compared to #239's open blue ground.\"}], \"tags\": [\"spiral form\", \"horizontal banding\", \"zigzag lines\", \"concentric rings\", \"blue ground\", \"wave pattern\"], \"interpretiveTags\": [\"tension between inward pull and lateral spread\", \"shifting mood by zone\"], \"lookingQuestion\": \"Where does the spiral's outermost ring end and the surrounding line work begin—and does that boundary hold consistently around the full circle?\", \"ambiguities\": [\"The white rectangular block cluster mid-lower center could be read as a grid, a set of teeth, or pure geometric fill; no supplied evidence resolves which reading was intended.\", \"Title-derived order and recorded-creation order align here, but the metadata notes gaps and variants exist across the broader nnotb family, so adjacency does not confirm unbroken sequence.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

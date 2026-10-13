@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:41.680340-05:00",
+    "usage": {
+      "inputTokens": 6651,
+      "outputTokens": 753,
+      "totalTokens": 7404,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13652
+    },
+    "requestId": "5638331d-2b06-41ee-a29d-f82255853f26",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large black rounded mass dominates the upper-left, with a red cross-mark near its top and yellow diagonal lines radiating from its left edge toward the corner.\",\n    \"A red-orange disc sits right of center, filled with concentric white spiral rings; orange and yellow jagged marks cluster around and beneath it.\",\n    \"Across the white background, small black marks—dashes, hooks, and short strokes—scatter evenly, while looping lines in blue, pink, yellow, and white weave through the mid-ground.\"\n  ],\n  \"reading\": \"Two heavy forms—one black, one red—press against each other near center, the spiral on the red disc pulling the eye inward while the black mass resists with flat opacity. The scattered marks across the white field read as restless noise around a tense core. Yellow lines cut sharp angles against the rounded forms, and the overall feeling is one of pressure held just short of release.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #155 and nnxyz nnotb #157 share the same loose-mark field approach, but #156 replaces their bright open backgrounds with a white ground that makes the black mass feel heavier and more isolated.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y\",\n      \"reason\": \"Both works place a tightly wound spiral inside a circular form—here a red disc with white rings, there an orange circle with a white cross—against a dark surrounding mass, making the spiral the focal anchor in each.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1\",\n      \"reason\": \"nnxyz nnotb #155 uses the same scattered small-mark field across a light ground, but its yellow spiral eyes sit inside a grey rounded form rather than beside a separate black mass, offering a direct structural contrast.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral form\",\n    \"scattered mark field\",\n    \"black mass\",\n    \"red-orange disc\",\n    \"yellow diagonal lines\",\n    \"looping colored lines\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"pressure\",\n    \"noise-versus-focus\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the concentric rings of the red disc, the flat black mass beside it, or the scattered marks across the white field—and what draws it away from that point?\",\n  \"ambiguities\": [\n    \"The black rounded form could read as an animal, a head, or a purely abstract mass; no supplied metadata resolves this, so it is described by shape only.\",\n    \"nnxyz nnotb #157 shares the scattered-mark approach but its purple ground and face-like structure differ enough that a connection would rest mainly on title proximity, so it was not selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTfiG8EufEr23BnFCm27R8GqB6zYNereym39nF7oP9KJL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTfiG8EufEr23BnFCm27R8GqB6zYNereym39nF7oP9KJL/image.png",
+        "imageSHA256": "5018fe6b4c224c92d1e58602374d2f6fe025c51859af1222688e682afee02632"
+      },
+      {
+        "artworkId": "QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1/image.png",
+        "imageSHA256": "5bf46e56549283116b7417b00ae4de4c9f6609225bdda94f5f20965a81b8925a"
+      },
+      {
+        "artworkId": "QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y/image.png",
+        "imageSHA256": "3c7ed1da456442ae3ebc0cf2548af7153b5512d22a24cc2f4f832a60a429e2e5"
+      },
+      {
+        "artworkId": "QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx/image.png",
+        "imageSHA256": "43c9e1a9a5700d242b0f48e8bee2d5aa2bb5bb82b49c2ed58fecf3f3830338e9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:49.577423-05:00",
+    "usage": {
+      "inputTokens": 7424,
+      "outputTokens": 1032,
+      "totalTokens": 8456,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7818
+    },
+    "requestId": "9cbe5b0f-7145-4e64-8e56-e21aa579a040",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large black rounded mass occupies the upper-left quadrant, with a red cross-mark near its top and yellow diagonal lines radiating from its left edge toward the upper corner.\",\n    \"A red-orange disc sits right of center, filled with concentric white spiral rings; orange and yellow jagged marks cluster around and beneath it.\",\n    \"Across the white background, small black marks—dashes, hooks, and short strokes—scatter broadly, while looping lines in blue, pink, yellow, and white weave through the mid-ground.\"\n  ],\n  \"reading\": \"Two heavy forms—one black, one red—press close near center, the spiral on the red disc pulling the eye inward while the black mass holds with flat opacity. Scattered marks across the white field read as restless noise around a tense core. Yellow lines cut sharp angles against the rounded forms, and the overall feeling is one of pressure held just short of release.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #155 and nnxyz nnotb #157 share a loose scattered-mark field, but #156 replaces their bright open backgrounds with a white ground that makes the black mass feel heavier and more isolated.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y\",\n      \"reason\": \"Both works place a tightly wound spiral inside a circular form against a dark surrounding mass—here a red disc with white rings, there an orange-red circle with a white cross—making the spiral the focal anchor in each.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1\",\n      \"reason\": \"nnxyz nnotb #155 uses the same scattered small-mark field across a light ground, but its yellow spiral forms sit inside a grey rounded shape rather than beside a separate black mass, offering a direct structural contrast.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral form\",\n    \"scattered mark field\",\n    \"black rounded mass\",\n    \"red-orange disc\",\n    \"yellow diagonal lines\",\n    \"looping colored lines\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"pressure\",\n    \"noise-versus-focus\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the concentric rings of the red disc, the flat black mass beside it, or the scattered marks across the white field—and what draws it away from that point?\",\n  \"ambiguities\": [\n    \"The black rounded form could read as an animal, a head, or a purely abstract mass; no supplied metadata resolves this, so it is described by shape only.\",\n    \"nnxyz nnotb #157 shares the scattered-mark approach but its purple ground and face-like structure differ enough that a connection would rest mainly on title proximity, so it was not selected.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: black mass upper-left with red cross and yellow diagonals, red-orange disc with white concentric rings right of center, scattered black marks and looping colored lines on white ground—all accurate.\",\n    \"Comparison with QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y confirmed: nifty faces #37 does show a circular spiral form (orange-red with white cross) against a dark surrounding mass, supporting the stated connection; 'orange circle with a white cross' is more precise than draft's phrasing and has been retained in corrected form.\",\n    \"Comparison with QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1 confirmed: #155 has a light (blue) ground with scattered marks and yellow spiral forms inside a grey rounded shape—structural contrast with #156 is valid; background described as 'light ground' rather than 'white' to match the blue field visible in the image.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTfiG8EufEr23BnFCm27R8GqB6zYNereym39nF7oP9KJL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTfiG8EufEr23BnFCm27R8GqB6zYNereym39nF7oP9KJL/image.png",
+        "imageSHA256": "5018fe6b4c224c92d1e58602374d2f6fe025c51859af1222688e682afee02632"
+      },
+      {
+        "artworkId": "QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1/image.png",
+        "imageSHA256": "5bf46e56549283116b7417b00ae4de4c9f6609225bdda94f5f20965a81b8925a"
+      },
+      {
+        "artworkId": "QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y/image.png",
+        "imageSHA256": "3c7ed1da456442ae3ebc0cf2548af7153b5512d22a24cc2f4f832a60a429e2e5"
+      },
+      {
+        "artworkId": "QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx/image.png",
+        "imageSHA256": "43c9e1a9a5700d242b0f48e8bee2d5aa2bb5bb82b49c2ed58fecf3f3830338e9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large black rounded mass dominates the upper-left, with a red cross-mark near its top and yellow diagonal lines radiating from its left edge toward the corner.\", \"A red-orange disc sits right of center, filled with concentric white spiral rings; orange and yellow jagged marks cluster around and beneath it.\", \"Across the white background, small black marks—dashes, hooks, and short strokes—scatter evenly, while looping lines in blue, pink, yellow, and white weave through the mid-ground.\"], \"reading\": \"Two heavy forms—one black, one red—press against each other near center, the spiral on the red disc pulling the eye inward while the black mass resists with flat opacity. The scattered marks across the white field read as restless noise around a tense core. Yellow lines cut sharp angles against the rounded forms, and the overall feeling is one of pressure held just short of release.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #155 and nnxyz nnotb #157 share the same loose-mark field approach, but #156 replaces their bright open backgrounds with a white ground that makes the black mass feel heavier and more isolated.\", \"connections\": [{\"targetArtworkId\": \"QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y\", \"reason\": \"Both works place a tightly wound spiral inside a circular form—here a red disc with white rings, there an orange circle with a white cross—against a dark surrounding mass, making the spiral the focal anchor in each.\"}, {\"targetArtworkId\": \"QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1\", \"reason\": \"nnxyz nnotb #155 uses the same scattered small-mark field across a light ground, but its yellow spiral eyes sit inside a grey rounded form rather than beside a separate black mass, offering a direct structural contrast.\"}], \"tags\": [\"spiral form\", \"scattered mark field\", \"black mass\", \"red-orange disc\", \"yellow diagonal lines\", \"looping colored lines\"], \"interpretiveTags\": [\"tension\", \"pressure\", \"noise-versus-focus\"], \"lookingQuestion\": \"Where does your eye settle first—on the concentric rings of the red disc, the flat black mass beside it, or the scattered marks across the white field—and what draws it away from that point?\", \"ambiguities\": [\"The black rounded form could read as an animal, a head, or a purely abstract mass; no supplied metadata resolves this, so it is described by shape only.\", \"nnxyz nnotb #157 shares the scattered-mark approach but its purple ground and face-like structure differ enough that a connection would rest mainly on title proximity, so it was not selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:21.398579-05:00",
+    "usage": {
+      "inputTokens": 6239,
+      "outputTokens": 651,
+      "totalTokens": 6890,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10781
+    },
+    "requestId": "fcbbaa3a-2e98-4117-9ea6-6fbf6fc917f1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two yellow-green rectangular forms with red oval centers anchor the upper-left and upper-right corners, mirroring each other across a black ground.\",\n    \"A dense tangle of black, white, yellow, blue, red, and lavender lines fills the middle zone, with jagged zigzag strokes alternating with loose looping coils.\",\n    \"The lower half shifts to a grid-like arrangement of red, orange, and blue rectangular outlines stacked on a gray field, contrasting with the looser mark-making above.\"\n  ],\n  \"reading\": \"Two matching corner forms face each other across a field of competing line types — tight zigzags, open loops, slashing diagonals — that never settle into a single rhythm. The lower section pulls toward structure, its stacked rectangles reading as something almost architectural, while the upper zone resists that order entirely. The tension between those two registers gives the image an unsettled, pressurized feeling.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #104 and nnxyz nnotb #106. Those two works show very different visual registers — a softly rendered spherical form against stars, and a flat high-contrast silhouette on solid blue — making #105 the densest and most layered of the three in the owned collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB\",\n      \"reason\": \"Both works layer multicolored looping and zigzag lines over a dark ground at high density, though rawblocks #55 organizes those lines around a central rounded form while #105 distributes them across the full field.\"\n    }\n  ],\n  \"tags\": [\n    \"mirrored corner forms\",\n    \"zigzag line clusters\",\n    \"looping coil marks\",\n    \"stacked rectangular outlines\",\n    \"black ground\",\n    \"yellow-green and red ovals\"\n  ],\n  \"interpretiveTags\": [\n    \"pressurized\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the zigzag line behavior stop and the looping coil behavior begin, and is there a clear boundary between them or do they overlap?\",\n  \"ambiguities\": [\n    \"The two corner forms share a strong visual resemblance but it is unclear whether they depict the same object from the same angle or are variations.\",\n    \"The rawblocks #55 comparison is meaningful on line-density grounds but the formal organization differs enough that the connection is moderate rather than strong.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG/image.png",
+        "imageSHA256": "0e30d7f28bccbc06b4194e1656409b552461098aeac2d57f392a0723a9e37d46"
+      },
+      {
+        "artworkId": "QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h/image.png",
+        "imageSHA256": "b1370d52a9d8bedf3794f2a6294e80a60934081fb195a0bf4d576164420b4a7b"
+      },
+      {
+        "artworkId": "QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB/image.png",
+        "imageSHA256": "5a91f6a0bc3273bf9c259b46798d8f3037cabb5b210373e5e9327aefa9b64724"
+      },
+      {
+        "artworkId": "Qmf1cZGRpxoJqXCxB9NDHvzW4m7hVenyCRDdYxcxjRfe3x",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf1cZGRpxoJqXCxB9NDHvzW4m7hVenyCRDdYxcxjRfe3x/image.png",
+        "imageSHA256": "120d8dd70ae844a0f305992c4d94f87221f836072a5780a29a46fcf22669e73e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:28.087652-05:00",
+    "usage": {
+      "inputTokens": 6921,
+      "outputTokens": 836,
+      "totalTokens": 7757,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6620
+    },
+    "requestId": "4b204cbc-d24a-4e05-8ee4-7909d694ae2a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two yellow-green rectangular forms with red oval centers sit in the upper-left and upper-right corners, roughly mirroring each other against a black ground.\",\n    \"A dense tangle of black, white, yellow, blue, red, and lavender lines fills the middle zone, with jagged zigzag strokes alternating with loose looping coils.\",\n    \"The lower half shifts to a grid-like arrangement of red, orange, and blue rectangular outlines on a gray field, contrasting with the looser mark-making above.\"\n  ],\n  \"reading\": \"Two matching corner forms face each other across a field of competing line types — tight zigzags, open loops, slashing diagonals — that never settle into a single rhythm. The lower section pulls toward structure, its stacked rectangles reading as almost architectural, while the upper zone resists that order. The tension between those two areas gives the image an unsettled, pressurized feeling.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #104 and nnxyz nnotb #106. Those neighbors show strikingly different registers — a softly rendered spherical form against stars, and flat high-contrast silhouettes on solid blue — making #105 the densest and most layered of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB\",\n      \"reason\": \"Both works layer multicolored looping and zigzag lines at high density over a dark ground, though rawblocks #55 concentrates those lines around a central rounded form while #105 distributes them across the full field.\"\n    }\n  ],\n  \"tags\": [\n    \"mirrored corner forms\",\n    \"zigzag line clusters\",\n    \"looping coil marks\",\n    \"stacked rectangular outlines\",\n    \"black ground\",\n    \"yellow-green and red ovals\"\n  ],\n  \"interpretiveTags\": [\n    \"pressurized\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the zigzag line behavior stop and the looping coil behavior begin — is there a clear boundary between them, or do they overlap in the same zone?\",\n  \"ambiguities\": [\n    \"The two corner forms share a strong visual resemblance but it is unclear whether they depict the same object from the same angle or are close variations.\",\n    \"The rawblocks #55 comparison holds on line-density grounds but the differing spatial organization makes it a moderate rather than strong connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: corner forms, mixed line types in the middle zone, and rectangular grid in the lower half are all visible.\",\n    \"Comparison with QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB confirmed: rawblocks #55 shows a rounded central form with radiating lines on a warm ground, not a dark ground — draft claim of 'dark ground' corrected; the shared quality is high-density multicolored line layering, not ground color.\",\n    \"No invented subject identities, unsupported intent language, or prohibited vocabulary detected in the revised draft; word counts for reading and contextAngle fall within specified limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG/image.png",
+        "imageSHA256": "0e30d7f28bccbc06b4194e1656409b552461098aeac2d57f392a0723a9e37d46"
+      },
+      {
+        "artworkId": "QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h/image.png",
+        "imageSHA256": "b1370d52a9d8bedf3794f2a6294e80a60934081fb195a0bf4d576164420b4a7b"
+      },
+      {
+        "artworkId": "QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB/image.png",
+        "imageSHA256": "5a91f6a0bc3273bf9c259b46798d8f3037cabb5b210373e5e9327aefa9b64724"
+      },
+      {
+        "artworkId": "Qmf1cZGRpxoJqXCxB9NDHvzW4m7hVenyCRDdYxcxjRfe3x",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf1cZGRpxoJqXCxB9NDHvzW4m7hVenyCRDdYxcxjRfe3x/image.png",
+        "imageSHA256": "120d8dd70ae844a0f305992c4d94f87221f836072a5780a29a46fcf22669e73e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two yellow-green rectangular forms with red oval centers anchor the upper-left and upper-right corners, mirroring each other across a black ground.\", \"A dense tangle of black, white, yellow, blue, red, and lavender lines fills the middle zone, with jagged zigzag strokes alternating with loose looping coils.\", \"The lower half shifts to a grid-like arrangement of red, orange, and blue rectangular outlines stacked on a gray field, contrasting with the looser mark-making above.\"], \"reading\": \"Two matching corner forms face each other across a field of competing line types — tight zigzags, open loops, slashing diagonals — that never settle into a single rhythm. The lower section pulls toward structure, its stacked rectangles reading as something almost architectural, while the upper zone resists that order entirely. The tension between those two registers gives the image an unsettled, pressurized feeling.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #104 and nnxyz nnotb #106. Those two works show very different visual registers — a softly rendered spherical form against stars, and a flat high-contrast silhouette on solid blue — making #105 the densest and most layered of the three in the owned collection.\", \"connections\": [{\"targetArtworkId\": \"QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB\", \"reason\": \"Both works layer multicolored looping and zigzag lines over a dark ground at high density, though rawblocks #55 organizes those lines around a central rounded form while #105 distributes them across the full field.\"}], \"tags\": [\"mirrored corner forms\", \"zigzag line clusters\", \"looping coil marks\", \"stacked rectangular outlines\", \"black ground\", \"yellow-green and red ovals\"], \"interpretiveTags\": [\"pressurized\", \"unsettled\"], \"lookingQuestion\": \"Where exactly does the zigzag line behavior stop and the looping coil behavior begin, and is there a clear boundary between them or do they overlap?\", \"ambiguities\": [\"The two corner forms share a strong visual resemblance but it is unclear whether they depict the same object from the same angle or are variations.\", \"The rawblocks #55 comparison is meaningful on line-density grounds but the formal organization differs enough that the connection is moderate rather than strong.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

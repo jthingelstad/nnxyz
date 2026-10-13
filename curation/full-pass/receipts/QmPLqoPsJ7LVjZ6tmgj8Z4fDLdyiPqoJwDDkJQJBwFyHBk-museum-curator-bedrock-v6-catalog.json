@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:11:40.745887-05:00",
+    "usage": {
+      "inputTokens": 6446,
+      "outputTokens": 717,
+      "totalTokens": 7163,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20224
+    },
+    "requestId": "c87c22be-7634-4dcb-b6bc-0bceef1e9699",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded black outline dominates the center, enclosing two mismatched circular eye forms—one with petal-like loops, the other with a red-and-black spoke pattern—each topped by a green heart shape.\",\n    \"A wide red-lipped mouth spans the lower third, filled with white rectangular teeth drawn in heavy black grid lines, bordered by scalloped white arcs above.\",\n    \"The background is dense with overlapping diagonal strokes in cyan, orange, yellow, and pink, with thin orange zigzag lines and lavender curves radiating outward from the central form.\"\n  ],\n  \"reading\": \"A face-like form stares out from a tangle of competing marks, its green hearts perched above mismatched eyes that read as both playful and unsettling. The wide, toothy mouth pushes toward the viewer with blunt force, while the surrounding field of cyan arcs, yellow bands, and pink threads refuses to settle into a background. The result feels crowded and loud, a grin that won't stop talking.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #57\\\" and \\\"nnxyz rawblocks #59.\\\" Both neighbors share the frontal head structure and exposed teeth, but #58 stands apart with its green heart motifs and brown-dominated ground, trading the cooler palettes of its neighbors for warmer saturation.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa\",\n      \"reason\": \"Both feature a rounded skull outline with jagged crown-like marks and a wide open mouth full of white teeth, but #59 uses a solid blue field where #58 buries its form in layered warm strokes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto\",\n      \"reason\": \"Both pack a face into a dense, all-over field of hatching and zigzag lines, but nnotb #220 uses spiral eyes and a segmented body where #58 relies on heart shapes and floral loops.\"\n    }\n  ],\n  \"tags\": [\n    \"face form\",\n    \"exposed teeth\",\n    \"heart shapes\",\n    \"dense layered lines\",\n    \"multicolor background\",\n    \"heavy black outline\"\n  ],\n  \"lookingQuestion\": \"How do the two green hearts above the eyes change the way you read the expression of the mouth below them?\",\n  \"ambiguities\": [\n    \"The petal-loop and spoke-wheel eye forms may be decorative fills or distinct symbolic elements; no supplied evidence clarifies which.\",\n    \"Small triangular green shapes near the nose area could be additional hearts or unrelated marks—scale and overlap make them hard to distinguish.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk/image.png",
+        "imageSHA256": "5e26d479672f50c0c604cb73545b9af164479e2dd8d3b855ed9378e6564a03ad"
+      },
+      {
+        "artworkId": "QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk/image.png",
+        "imageSHA256": "2c4d6e30021e364daf33d8236a880a0ed40c9ed2aeb6b0110feb490249b104ec"
+      },
+      {
+        "artworkId": "QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto/image.png",
+        "imageSHA256": "49c5d9222537327d0394124ba2d3900946aaef5fb55f4bb527cfadaf50425962"
+      },
+      {
+        "artworkId": "QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa/image.png",
+        "imageSHA256": "b15005d2b9a721d53f486c079e929c326e9768f3b4e6931103eb85ba58d7a7d7"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:11:51.900444-05:00",
+    "usage": {
+      "inputTokens": 7195,
+      "outputTokens": 838,
+      "totalTokens": 8033,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11055
+    },
+    "requestId": "29f4fcd7-de15-4c60-a04d-44522e57be64",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded black outline dominates the center, enclosing two mismatched circular eye forms—one with petal-like loops, the other with a red-and-black spoke pattern—each topped by a green heart shape.\",\n    \"A wide red-lipped mouth spans the lower third, filled with white rectangular teeth drawn in heavy black grid lines, bordered by scalloped white arcs above.\",\n    \"The background is dense with overlapping diagonal strokes in cyan, orange, yellow, and pink, with thin orange zigzag lines and lavender curves radiating outward from the central form.\"\n  ],\n  \"reading\": \"A face-like form stares out from a tangle of competing marks, its green hearts perched above mismatched eyes that read as both playful and unsettling. The wide, toothy mouth pushes toward the viewer with blunt force, while the surrounding field of cyan arcs, yellow bands, and pink threads refuses to settle into a background. The result feels crowded and loud, a grin that won't stop talking.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #57\\\" and \\\"nnxyz rawblocks #59.\\\" Both neighbors share the frontal head structure and exposed teeth, but #58 stands apart with its green heart motifs and brown-dominated ground, trading the cooler palettes of its neighbors for warmer saturation.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa\",\n      \"reason\": \"Both feature a rounded skull outline with jagged crown-like marks and a wide open mouth of white teeth, but #59 uses a solid blue field where #58 buries its form in layered warm strokes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto\",\n      \"reason\": \"Both pack a face into a dense all-over field of hatching and zigzag lines, but nnotb #220 uses spiral eyes and a segmented body where #58 relies on heart shapes and floral loops.\"\n    }\n  ],\n  \"tags\": [\n    \"face form\",\n    \"exposed teeth\",\n    \"heart shapes\",\n    \"dense layered lines\",\n    \"multicolor background\",\n    \"heavy black outline\"\n  ],\n  \"lookingQuestion\": \"How do the two green hearts above the eyes change the way you read the expression of the mouth below them?\",\n  \"ambiguities\": [\n    \"The petal-loop and spoke-wheel eye forms may be decorative fills or distinct symbolic elements; no supplied evidence clarifies which.\",\n    \"Small triangular green shapes near the nose area could be additional hearts or unrelated marks—scale and overlap make them hard to distinguish.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed green heart shapes above both eyes and smaller green triangular forms near the center of the face in the primary image.\",\n    \"Verified #59 comparison: its background is predominantly solid blue with black grid overlay, contrasting with #58's warm brown ground layered with orange and yellow strokes.\",\n    \"Verified nnotb #220 comparison: spiral concentric eyes and a segmented torso/body area are visible, distinct from #58's petal-loop and spoke-wheel eye fills.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk/image.png",
+        "imageSHA256": "5e26d479672f50c0c604cb73545b9af164479e2dd8d3b855ed9378e6564a03ad"
+      },
+      {
+        "artworkId": "QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk/image.png",
+        "imageSHA256": "2c4d6e30021e364daf33d8236a880a0ed40c9ed2aeb6b0110feb490249b104ec"
+      },
+      {
+        "artworkId": "QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto/image.png",
+        "imageSHA256": "49c5d9222537327d0394124ba2d3900946aaef5fb55f4bb527cfadaf50425962"
+      },
+      {
+        "artworkId": "QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa/image.png",
+        "imageSHA256": "b15005d2b9a721d53f486c079e929c326e9768f3b4e6931103eb85ba58d7a7d7"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded black outline dominates the center, enclosing two mismatched circular eye forms—one with petal-like loops, the other with a red-and-black spoke pattern—each topped by a green heart shape.\", \"A wide red-lipped mouth spans the lower third, filled with white rectangular teeth drawn in heavy black grid lines, bordered by scalloped white arcs above.\", \"The background is dense with overlapping diagonal strokes in cyan, orange, yellow, and pink, with thin orange zigzag lines and lavender curves radiating outward from the central form.\"], \"reading\": \"A face-like form stares out from a tangle of competing marks, its green hearts perched above mismatched eyes that read as both playful and unsettling. The wide, toothy mouth pushes toward the viewer with blunt force, while the surrounding field of cyan arcs, yellow bands, and pink threads refuses to settle into a background. The result feels crowded and loud, a grin that won't stop talking.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #57\\\" and \\\"nnxyz rawblocks #59.\\\" Both neighbors share the frontal head structure and exposed teeth, but #58 stands apart with its green heart motifs and brown-dominated ground, trading the cooler palettes of its neighbors for warmer saturation.\", \"connections\": [{\"targetArtworkId\": \"QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa\", \"reason\": \"Both feature a rounded skull outline with jagged crown-like marks and a wide open mouth full of white teeth, but #59 uses a solid blue field where #58 buries its form in layered warm strokes.\"}, {\"targetArtworkId\": \"QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto\", \"reason\": \"Both pack a face into a dense, all-over field of hatching and zigzag lines, but nnotb #220 uses spiral eyes and a segmented body where #58 relies on heart shapes and floral loops.\"}], \"tags\": [\"face form\", \"exposed teeth\", \"heart shapes\", \"dense layered lines\", \"multicolor background\", \"heavy black outline\"], \"lookingQuestion\": \"How do the two green hearts above the eyes change the way you read the expression of the mouth below them?\", \"ambiguities\": [\"The petal-loop and spoke-wheel eye forms may be decorative fills or distinct symbolic elements; no supplied evidence clarifies which.\", \"Small triangular green shapes near the nose area could be additional hearts or unrelated marks—scale and overlap make them hard to distinguish.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:16:15.468071-05:00",
+    "usage": {
+      "inputTokens": 7019,
+      "outputTokens": 853,
+      "totalTokens": 7872,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11590
+    },
+    "requestId": "7a609447-2265-47b4-a1c2-ce8e821e332f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded black outline dominates the center, enclosing two mismatched circular eye forms—one with petal-like loops, the other with a red-and-black spoke pattern—each topped by a green heart shape.\",\n    \"A wide red-lipped mouth spans the lower third, filled with white rectangular teeth drawn in heavy black grid lines, bordered by scalloped white arcs above; the mouth outline is broad but the dark opening behind the teeth is narrow, more grin than gape.\",\n    \"The background is dense with overlapping diagonal strokes in cyan, orange, yellow, and pink, with thin orange zigzag lines and lavender curves radiating outward from the central form.\"\n  ],\n  \"reading\": \"A face-like form stares out from a tangle of competing marks, its green hearts perched above mismatched eyes that read as both playful and unsettling. The broad, toothy mouth pushes toward the viewer with blunt force, while the surrounding field of cyan arcs, yellow bands, and pink threads refuses to settle into a background. The result feels crowded and loud, a grin that won't stop talking.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between #57 and #59. Both neighbors share the frontal head structure and exposed teeth, but #58 stands apart with its green heart motifs and brown-dominated ground, trading the cooler palettes of its neighbors for warmer saturation.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa\",\n      \"reason\": \"Both feature a rounded skull outline with jagged crown-like marks and a broad tooth-filled mouth, but #59 uses a solid blue field where #58 buries its form in layered warm strokes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto\",\n      \"reason\": \"Both pack a face into a dense all-over field of hatching and zigzag lines, but nnotb #220 uses spiral eyes and a segmented body where #58 relies on heart shapes and floral loops.\"\n    }\n  ],\n  \"tags\": [\n    \"face form\",\n    \"exposed teeth\",\n    \"heart shapes\",\n    \"dense layered lines\",\n    \"multicolor background\",\n    \"heavy black outline\"\n  ],\n  \"lookingQuestion\": \"How do the two green hearts above the eyes change the way you read the expression of the mouth below them?\",\n  \"ambiguities\": [\n    \"The petal-loop and spoke-wheel eye forms may be decorative fills or distinct symbolic elements; no supplied evidence clarifies which.\",\n    \"Small triangular green shapes near the nose area could be additional hearts or unrelated marks—scale and overlap make them hard to distinguish.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide open mouth' in connection to #59 with 'broad tooth-filled mouth'—the dark cavity behind the teeth in #58 is a narrow slit, making the mouth read as a clenched grin rather than a gaping opening.\",\n    \"Updated observation 2 to note the narrow dark opening behind the teeth, distinguishing the broad outline from actual openness.\",\n    \"Reading adjusted from 'wide, toothy mouth' to 'broad, toothy mouth' for consistency with the revised mouth-openness assessment.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk/image.png",
+        "imageSHA256": "5e26d479672f50c0c604cb73545b9af164479e2dd8d3b855ed9378e6564a03ad"
+      },
+      {
+        "artworkId": "QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk/image.png",
+        "imageSHA256": "2c4d6e30021e364daf33d8236a880a0ed40c9ed2aeb6b0110feb490249b104ec"
+      },
+      {
+        "artworkId": "QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto/image.png",
+        "imageSHA256": "49c5d9222537327d0394124ba2d3900946aaef5fb55f4bb527cfadaf50425962"
+      },
+      {
+        "artworkId": "QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa/image.png",
+        "imageSHA256": "b15005d2b9a721d53f486c079e929c326e9768f3b4e6931103eb85ba58d7a7d7"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large rounded black outline dominates the center, enclosing two mismatched circular eye forms—one with petal-like loops, the other with a red-and-black spoke pattern—each topped by a green heart shape.\", \"A wide red-lipped mouth spans the lower third, filled with white rectangular teeth drawn in heavy black grid lines, bordered by scalloped white arcs above.\", \"The background is dense with overlapping diagonal strokes in cyan, orange, yellow, and pink, with thin orange zigzag lines and lavender curves radiating outward from the central form.\"], \"reading\": \"A face-like form stares out from a tangle of competing marks, its green hearts perched above mismatched eyes that read as both playful and unsettling. The wide, toothy mouth pushes toward the viewer with blunt force, while the surrounding field of cyan arcs, yellow bands, and pink threads refuses to settle into a background. The result feels crowded and loud, a grin that won't stop talking.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #57\\\" and \\\"nnxyz rawblocks #59.\\\" Both neighbors share the frontal head structure and exposed teeth, but #58 stands apart with its green heart motifs and brown-dominated ground, trading the cooler palettes of its neighbors for warmer saturation.\", \"connections\": [{\"targetArtworkId\": \"QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa\", \"reason\": \"Both feature a rounded skull outline with jagged crown-like marks and a wide open mouth of white teeth, but #59 uses a solid blue field where #58 buries its form in layered warm strokes.\"}, {\"targetArtworkId\": \"QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto\", \"reason\": \"Both pack a face into a dense all-over field of hatching and zigzag lines, but nnotb #220 uses spiral eyes and a segmented body where #58 relies on heart shapes and floral loops.\"}], \"tags\": [\"face form\", \"exposed teeth\", \"heart shapes\", \"dense layered lines\", \"multicolor background\", \"heavy black outline\"], \"lookingQuestion\": \"How do the two green hearts above the eyes change the way you read the expression of the mouth below them?\", \"ambiguities\": [\"The petal-loop and spoke-wheel eye forms may be decorative fills or distinct symbolic elements; no supplied evidence clarifies which.\", \"Small triangular green shapes near the nose area could be additional hearts or unrelated marks—scale and overlap make them hard to distinguish.\"]}\nFLAGS:\n[{\"artworkId\": \"QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk\", \"field\": \"connections\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

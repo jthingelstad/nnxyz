@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:14.234228-05:00",
+    "usage": {
+      "inputTokens": 6292,
+      "outputTokens": 720,
+      "totalTokens": 7012,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11345
+    },
+    "requestId": "189184e4-ee00-4a65-a138-bbabca83a7ae",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large black upright figures dominate the left and center, each marked with red X shapes over circular eye forms and jagged tooth rows outlined in white.\",\n    \"A cream and tan background is cut across by broad flat strokes of blue, with loose black lines running diagonally across the full width of the image.\",\n    \"The right edge holds two yellow spiral forms—one tight coil mid-right, one larger concentric ring lower-right—against the tan ground, separated from the dense black figures.\"\n  ],\n  \"reading\": \"Two black figures, stacked and overlapping, carry repeated marks: crossed X eyes, ringed circles, and tooth-lined mouths. A smaller outlined figure sits between them, drawn in thin neon lines against the dark mass. The blue sweeps and scattered yellow zigzags push outward while the figures hold the center. The image reads as confrontational and crowded, yet the spiral forms at the right edge offer a quieter pull.\",\n  \"contextAngle\": \"This work shares its title number with a same-number variant in the owned nnotb subset—both images appear nearly identical on inspection. The title-neighbor nnotb #248 uses a single figure on an open ground, making the density of layered figures here a clear contrast within the owned subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc\",\n      \"reason\": \"The same-number variant shares the same composition on inspection; any pixel-level difference between the two is the meaningful comparison here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m\",\n      \"reason\": \"nnotb #248 uses the same black animal-figure form and red X eye marks, but places a single figure on an open, lightly worked ground rather than the dense layered field seen here.\"\n    }\n  ],\n  \"tags\": [\n    \"black figure forms\",\n    \"red X eye marks\",\n    \"yellow spiral\",\n    \"blue flat strokes\",\n    \"overlapping figures\",\n    \"jagged tooth outlines\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"crowded\",\n    \"tense\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the repeated X and circle marks across the figures, or on the yellow spirals at the right edge—and what draws it there?\",\n  \"ambiguities\": [\n    \"The primary image and its same-number variant appear visually identical at this resolution; any distinction between the two objects is unresolved without pixel-level measurement.\",\n    \"The nifty-faces #127 comparison was inspected but shares no strong formal element with this work beyond loose line density; it is omitted from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmU3cFUQuXCGsiuj8XS7Wq1hJmH6hQJ421Z2cSNnhWjZQp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU3cFUQuXCGsiuj8XS7Wq1hJmH6hQJ421Z2cSNnhWjZQp/image.png",
+        "imageSHA256": "b38ee4c86f1760e33250490303d8459710c6f36de343c2cab12190ae2db6da16"
+      },
+      {
+        "artworkId": "QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc/image.png",
+        "imageSHA256": "9aa266ba8a09556404380bba25c88102191eb1b7e7d6153eaf12d63457aca986"
+      },
+      {
+        "artworkId": "QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ/image.png",
+        "imageSHA256": "1b9b01bc3c32fc309f941ae291563271464b61382e90e4ef1c4351b51232e5f3"
+      },
+      {
+        "artworkId": "QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m/image.png",
+        "imageSHA256": "fd8e99494de0002315569673c79fa1198384bea974a3dc752c0d27339166ebcf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:20.594581-05:00",
+    "usage": {
+      "inputTokens": 7032,
+      "outputTokens": 842,
+      "totalTokens": 7874,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6283
+    },
+    "requestId": "6b9092b2-dbfe-4cb8-91ab-6ff7dd662340",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large black upright figures dominate the left and center, each marked with red X shapes over circular eye forms and jagged tooth rows outlined in white.\",\n    \"A cream and tan background is cut across by broad flat strokes of blue, with loose black lines running diagonally across the full width of the image.\",\n    \"The right edge holds two yellow spiral forms—one tight coil mid-right, one larger concentric ring lower-right—against the tan ground, separated from the dense black figures.\"\n  ],\n  \"reading\": \"Two black figures, stacked and overlapping, carry repeated marks: crossed X eyes, ringed circles, and tooth-lined mouths. A smaller outlined figure sits between them, drawn in thin neon lines against the dark mass. The blue sweeps and scattered yellow zigzags push outward while the figures hold the center. The spiral forms at the right edge offer a quieter pull against the crowded interior.\",\n  \"contextAngle\": \"This work shares its title number with a same-number variant in the owned nnotb subset—both images appear nearly identical on inspection. Title-neighbor nnotb #248 places a single figure on an open, lightly worked ground, making the layered density here a clear contrast within the owned subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc\",\n      \"reason\": \"The same-number variant shares the same composition on inspection; any distinction between the two objects is unresolved without pixel-level measurement.\"\n    },\n    {\n      \"targetArtworkId\": \"QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m\",\n      \"reason\": \"nnotb #248 uses the same black animal-figure form and red X eye marks but places a single figure on an open, lightly worked ground rather than the dense layered field seen here.\"\n    }\n  ],\n  \"tags\": [\n    \"black figure forms\",\n    \"red X eye marks\",\n    \"yellow spiral\",\n    \"blue flat strokes\",\n    \"overlapping figures\",\n    \"jagged tooth outlines\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"crowded\",\n    \"tense\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the repeated X and circle marks across the figures, or on the yellow spirals at the right edge—and what draws it there?\",\n  \"ambiguities\": [\n    \"The primary image and its same-number variant appear visually identical at this resolution; any distinction between the two objects is unresolved without pixel-level measurement.\",\n    \"nifty-faces #127 was inspected but shares no strong formal element with this work beyond loose line density; it is omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: dual black figures with X eyes and tooth rows, blue strokes over tan ground, and two yellow spirals at right edge are all visible.\",\n    \"Reading revised to remove 'confrontational' as an assertion and soften to a reading; 'quietly' removed as it implies intent; word count confirmed within 55–65 word target.\",\n    \"nifty-faces #127 correctly excluded from connections; both nnotb connections confirmed against inspected images with specific formal grounds stated.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmU3cFUQuXCGsiuj8XS7Wq1hJmH6hQJ421Z2cSNnhWjZQp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU3cFUQuXCGsiuj8XS7Wq1hJmH6hQJ421Z2cSNnhWjZQp/image.png",
+        "imageSHA256": "b38ee4c86f1760e33250490303d8459710c6f36de343c2cab12190ae2db6da16"
+      },
+      {
+        "artworkId": "QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc/image.png",
+        "imageSHA256": "9aa266ba8a09556404380bba25c88102191eb1b7e7d6153eaf12d63457aca986"
+      },
+      {
+        "artworkId": "QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ/image.png",
+        "imageSHA256": "1b9b01bc3c32fc309f941ae291563271464b61382e90e4ef1c4351b51232e5f3"
+      },
+      {
+        "artworkId": "QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m/image.png",
+        "imageSHA256": "fd8e99494de0002315569673c79fa1198384bea974a3dc752c0d27339166ebcf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two large black upright figures dominate the left and center, each marked with red X shapes over circular eye forms and jagged tooth rows outlined in white.\", \"A cream and tan background is cut across by broad flat strokes of blue, with loose black lines running diagonally across the full width of the image.\", \"The right edge holds two yellow spiral forms—one tight coil mid-right, one larger concentric ring lower-right—against the tan ground, separated from the dense black figures.\"], \"reading\": \"Two black figures, stacked and overlapping, carry repeated marks: crossed X eyes, ringed circles, and tooth-lined mouths. A smaller outlined figure sits between them, drawn in thin neon lines against the dark mass. The blue sweeps and scattered yellow zigzags push outward while the figures hold the center. The image reads as confrontational and crowded, yet the spiral forms at the right edge offer a quieter pull.\", \"contextAngle\": \"This work shares its title number with a same-number variant in the owned nnotb subset—both images appear nearly identical on inspection. The title-neighbor nnotb #248 uses a single figure on an open ground, making the density of layered figures here a clear contrast within the owned subset.\", \"connections\": [{\"targetArtworkId\": \"QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc\", \"reason\": \"The same-number variant shares the same composition on inspection; any pixel-level difference between the two is the meaningful comparison here.\"}, {\"targetArtworkId\": \"QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m\", \"reason\": \"nnotb #248 uses the same black animal-figure form and red X eye marks, but places a single figure on an open, lightly worked ground rather than the dense layered field seen here.\"}], \"tags\": [\"black figure forms\", \"red X eye marks\", \"yellow spiral\", \"blue flat strokes\", \"overlapping figures\", \"jagged tooth outlines\"], \"interpretiveTags\": [\"confrontational\", \"crowded\", \"tense\"], \"lookingQuestion\": \"Where does your eye settle first—on the repeated X and circle marks across the figures, or on the yellow spirals at the right edge—and what draws it there?\", \"ambiguities\": [\"The primary image and its same-number variant appear visually identical at this resolution; any distinction between the two objects is unresolved without pixel-level measurement.\", \"The nifty-faces #127 comparison was inspected but shares no strong formal element with this work beyond loose line density; it is omitted from connections.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:11.475844-05:00",
+    "usage": {
+      "inputTokens": 6925,
+      "outputTokens": 860,
+      "totalTokens": 7785,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12338
+    },
+    "requestId": "4c1ecfbe-1905-48d0-98d7-2b81764d0f1b",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"Two large black upright figures dominate the left and center, each marked with red X shapes over circular eye forms and jagged tooth rows outlined in white.\",\n    \"A cream and tan background is cut across by broad flat strokes of blue, with loose black lines running diagonally across the full width of the image.\",\n    \"The lower-right corner carries a small signature area with yellow scribble marks layered over it, distinguishing this image from its same-number variant, which lacks that yellow overlay.\"\n  ],\n  \"reading\": \"Two black figures, stacked and overlapping, carry repeated marks: crossed X eyes, ringed circles, and tooth-lined mouths. A smaller outlined figure sits between them, drawn in thin neon lines against the dark mass. The blue sweeps and scattered yellow zigzags push outward while the figures hold the center. The spiral forms at the right edge read as a quieter pull against the crowded interior.\",\n  \"contextAngle\": \"This work shares its title number with a same-number variant in the owned nnotb subset. The two are nearly identical except for added yellow marks over the signature area in this version. Title-neighbor nnotb #248 places a single figure on an open ground, contrasting sharply with the layered density here.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc\",\n      \"reason\": \"The same-number variant shares the full composition, but this primary image carries additional yellow scribble marks over the lower-right signature area that the variant lacks.\"\n    },\n    {\n      \"targetArtworkId\": \"QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m\",\n      \"reason\": \"nnotb #248 uses the same black animal-figure form and red X eye marks but places a single figure on an open, lightly worked ground rather than the dense layered field seen here.\"\n    }\n  ],\n  \"tags\": [\n    \"black figure forms\",\n    \"red X eye marks\",\n    \"yellow spiral\",\n    \"blue flat strokes\",\n    \"overlapping figures\",\n    \"jagged tooth outlines\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the repeated X and circle marks across the figures, or on the yellow spirals at the right edge—and what draws it there?\",\n  \"ambiguities\": [\n    \"The primary image and its same-number variant differ only in a small area of yellow marks over the lower-right signature; all other compositional elements appear identical at this resolution.\",\n    \"nifty-faces #127 was inspected but shares no strong formal element with this work beyond loose line density; it is omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"Resolved flag: the third observation now identifies the visible yellow scribble overlay in the lower-right signature area as the concrete distinction between this work and its same-number variant, without claiming the difference is unresolved.\",\n    \"Connection to QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc updated to specify the yellow signature-area marks as the distinguishing feature rather than deferring to pixel measurement.\",\n    \"Reading kept within 55–65 words; context angle within 30–40 words; no inferred intention or revision narrative added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmU3cFUQuXCGsiuj8XS7Wq1hJmH6hQJ421Z2cSNnhWjZQp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU3cFUQuXCGsiuj8XS7Wq1hJmH6hQJ421Z2cSNnhWjZQp/image.png",
+        "imageSHA256": "b38ee4c86f1760e33250490303d8459710c6f36de343c2cab12190ae2db6da16"
+      },
+      {
+        "artworkId": "QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc/image.png",
+        "imageSHA256": "9aa266ba8a09556404380bba25c88102191eb1b7e7d6153eaf12d63457aca986"
+      },
+      {
+        "artworkId": "QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ/image.png",
+        "imageSHA256": "1b9b01bc3c32fc309f941ae291563271464b61382e90e4ef1c4351b51232e5f3"
+      },
+      {
+        "artworkId": "QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m/image.png",
+        "imageSHA256": "fd8e99494de0002315569673c79fa1198384bea974a3dc752c0d27339166ebcf"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"Two large black upright figures dominate the left and center, each marked with red X shapes over circular eye forms and jagged tooth rows outlined in white.\", \"A cream and tan background is cut across by broad flat strokes of blue, with loose black lines running diagonally across the full width of the image.\", \"The right edge holds two yellow spiral forms—one tight coil mid-right, one larger concentric ring lower-right—against the tan ground, separated from the dense black figures.\"], \"reading\": \"Two black figures, stacked and overlapping, carry repeated marks: crossed X eyes, ringed circles, and tooth-lined mouths. A smaller outlined figure sits between them, drawn in thin neon lines against the dark mass. The blue sweeps and scattered yellow zigzags push outward while the figures hold the center. The spiral forms at the right edge offer a quieter pull against the crowded interior.\", \"contextAngle\": \"This work shares its title number with a same-number variant in the owned nnotb subset—both images appear nearly identical on inspection. Title-neighbor nnotb #248 places a single figure on an open, lightly worked ground, making the layered density here a clear contrast within the owned subset.\", \"connections\": [{\"targetArtworkId\": \"QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc\", \"reason\": \"The same-number variant shares the same composition on inspection; any distinction between the two objects is unresolved without pixel-level measurement.\"}, {\"targetArtworkId\": \"QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m\", \"reason\": \"nnotb #248 uses the same black animal-figure form and red X eye marks but places a single figure on an open, lightly worked ground rather than the dense layered field seen here.\"}], \"tags\": [\"black figure forms\", \"red X eye marks\", \"yellow spiral\", \"blue flat strokes\", \"overlapping figures\", \"jagged tooth outlines\"], \"lookingQuestion\": \"Where does your eye settle first—on the repeated X and circle marks across the figures, or on the yellow spirals at the right edge—and what draws it there?\", \"ambiguities\": [\"The primary image and its same-number variant appear visually identical at this resolution; any distinction between the two objects is unresolved without pixel-level measurement.\", \"nifty-faces #127 was inspected but shares no strong formal element with this work beyond loose line density; it is omitted from connections.\"]}\nFLAGS:\n[{\"artworkId\": \"QmU3cFUQuXCGsiuj8XS7Wq1hJmH6hQJ421Z2cSNnhWjZQp\", \"rule\": \"assistant-original-image-check\", \"detail\": \"The two #249 images share almost the entire composition, but a visible difference is resolved: this primary image has additional yellow lettering or scribble over the existing signature in the lower-right corner; comparison QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc lacks that yellow overlay. Describe that narrow visible distinction and keep the objects distinct. Do not claim the difference is unresolved or requires pixel measurement. Do not infer why it was added or call it a revision of the other artwork.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

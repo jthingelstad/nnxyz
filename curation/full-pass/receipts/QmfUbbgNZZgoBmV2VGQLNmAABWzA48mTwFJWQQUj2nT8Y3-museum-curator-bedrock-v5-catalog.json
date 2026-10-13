@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:59.391843-05:00",
+    "usage": {
+      "inputTokens": 6182,
+      "outputTokens": 696,
+      "totalTokens": 6878,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12197
+    },
+    "requestId": "db6efd9f-17d6-4d22-bff1-e2f7d6805138",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head fills most of the grey field; heavy black outlines define the skull shape while leaving the interior open to layered color patches of yellow-green, purple, red, and teal.\",\n    \"The eye socket area is dominated by a dark maroon rectangular form with white highlights inside, creating a hollow, mask-like cavity at the center of the composition.\",\n    \"The lower face opens into a wide white-toothed gap crossed by dense vertical black hatching, with magenta, teal, and red lines scrawling across the chin and neck below.\"\n  ],\n  \"reading\": \"The grey ground holds the head at a slight downward tilt, giving the figure a lowered, weighted presence. Color patches—yellow-green across the crown, purple along the jaw, teal at the collar—sit beneath the black scaffolding rather than filling it neatly. The hollow eye socket reads as absence more than feature. That open lower gap, striped with hatching, carries a rawness the tight skull outline keeps from spilling outward.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #165 and nnxyz nnotb #167. Where #165 fills its field with a flat black ground and radiating marks, #166 keeps the grey open around the figure, making the head feel more isolated. Title order and recorded creation order align here.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS\",\n      \"reason\": \"Both works place a large head on a grey ground with yellow as the dominant warm accent, but nnxyz #3 scatters marks across the full field while #166 concentrates color inside a tighter black outline, making the contrast in containment visible.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded head form\",\n    \"hollow eye socket\",\n    \"vertical hatching\",\n    \"layered color patches\",\n    \"black outline structure\",\n    \"open lower jaw\"\n  ],\n  \"interpretiveTags\": [\n    \"weighted presence\",\n    \"mask-like absence\",\n    \"raw tension\"\n  ],\n  \"lookingQuestion\": \"Where does the black outline hold the color patches inside the head, and where does it break or let them escape—and what does that difference do to how the face reads?\",\n  \"ambiguities\": [\n    \"The scrawled signature in the lower right is consistent with other works in the owned subset but its exact lettering is not fully legible at this resolution.\",\n    \"nnxyz nnotb #167 (the title-next neighbor) shows a warm-toned animal subject on a brown ground with a very different mark density; no meaningful formal connection to #166 was found, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfUbbgNZZgoBmV2VGQLNmAABWzA48mTwFJWQQUj2nT8Y3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfUbbgNZZgoBmV2VGQLNmAABWzA48mTwFJWQQUj2nT8Y3/image.png",
+        "imageSHA256": "516e806de6151a27868b160ceb346d66b9046bb725a15da575dd57e9c68d140e"
+      },
+      {
+        "artworkId": "QmcJiAihCgWGdDwLUHHzawwVKVUaXRNfynejYkikkzLfiV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcJiAihCgWGdDwLUHHzawwVKVUaXRNfynejYkikkzLfiV/image.png",
+        "imageSHA256": "f5e67562bc6df18bfa3344f3453dfca8f9aed966fb5840ca0c709f0de95f476a"
+      },
+      {
+        "artworkId": "QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS/image.png",
+        "imageSHA256": "e08fa2b3caeb9c4f1578c6d0906018135a1ec3c005be2a62af390ba0ec4f971d"
+      },
+      {
+        "artworkId": "QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha/image.png",
+        "imageSHA256": "718a8e0ef7812da9f2c9fe88d38e17a434e366cd51b811565f90623f86041247"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:05.434774-05:00",
+    "usage": {
+      "inputTokens": 6907,
+      "outputTokens": 857,
+      "totalTokens": 7764,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5963
+    },
+    "requestId": "a1776149-3d1a-4925-88a0-96c775251177",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head fills most of the grey field; heavy black outlines define the skull shape while leaving the interior open to layered color patches of yellow-green, purple, red, and teal.\",\n    \"The eye socket area is dominated by a dark maroon rectangular form with white highlights inside, creating a hollow, mask-like cavity at the center of the composition.\",\n    \"The lower face opens into a wide gap crossed by dense vertical black hatching, with magenta, teal, and red lines scrawling across the chin and neck below.\"\n  ],\n  \"reading\": \"The grey ground holds the head at a slight downward tilt, giving the figure a lowered, weighted presence. Color patches—yellow-green across the crown, purple along the jaw, teal at the collar—sit beneath the black scaffolding rather than filling it neatly. The hollow eye socket reads as absence more than feature. That open lower gap, striped with hatching, carries a rawness the tight skull outline keeps from spilling outward.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #165 and nnxyz nnotb #167. Where #165 fills its field with a flat black ground and radiating marks, #166 keeps the grey open around the figure, making the head feel more isolated. Title order and recorded creation order align here.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS\",\n      \"reason\": \"Both works place a large head on a grey ground with yellow as the dominant warm accent, but nnxyz #3 scatters marks across the full field while #166 concentrates color inside a tighter black outline, making the contrast in containment visible.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded head form\",\n    \"hollow eye socket\",\n    \"vertical hatching\",\n    \"layered color patches\",\n    \"black outline structure\",\n    \"open lower jaw\"\n  ],\n  \"interpretiveTags\": [\n    \"weighted presence\",\n    \"mask-like absence\",\n    \"raw tension\"\n  ],\n  \"lookingQuestion\": \"Where does the black outline hold the color patches inside the head, and where does it break or let them escape—and what does that difference do to how the face reads?\",\n  \"ambiguities\": [\n    \"The scrawled signature in the lower right is consistent with other works in the owned subset but its exact lettering is not fully legible at this resolution.\",\n    \"nnxyz nnotb #167 shows a warm-toned animal subject on a brown ground with a very different mark density; no meaningful formal connection to #166 was found, so it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"Observations confirmed against image: maroon rectangular eye socket with white highlights, vertical hatching on lower jaw, and grey ground with yellow-green/purple/teal patches are all directly visible.\",\n    \"Removed 'white-toothed' from observation three—white marks in the lower gap are hatching highlights rather than clearly defined teeth, avoiding unsupported subject identification.\",\n    \"Comparison with QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS confirmed against its image: grey ground and yellow dominance are visible; the containment contrast is a concrete formal difference, not a vague similarity.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfUbbgNZZgoBmV2VGQLNmAABWzA48mTwFJWQQUj2nT8Y3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfUbbgNZZgoBmV2VGQLNmAABWzA48mTwFJWQQUj2nT8Y3/image.png",
+        "imageSHA256": "516e806de6151a27868b160ceb346d66b9046bb725a15da575dd57e9c68d140e"
+      },
+      {
+        "artworkId": "QmcJiAihCgWGdDwLUHHzawwVKVUaXRNfynejYkikkzLfiV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcJiAihCgWGdDwLUHHzawwVKVUaXRNfynejYkikkzLfiV/image.png",
+        "imageSHA256": "f5e67562bc6df18bfa3344f3453dfca8f9aed966fb5840ca0c709f0de95f476a"
+      },
+      {
+        "artworkId": "QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS/image.png",
+        "imageSHA256": "e08fa2b3caeb9c4f1578c6d0906018135a1ec3c005be2a62af390ba0ec4f971d"
+      },
+      {
+        "artworkId": "QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha/image.png",
+        "imageSHA256": "718a8e0ef7812da9f2c9fe88d38e17a434e366cd51b811565f90623f86041247"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head fills most of the grey field; heavy black outlines define the skull shape while leaving the interior open to layered color patches of yellow-green, purple, red, and teal.\", \"The eye socket area is dominated by a dark maroon rectangular form with white highlights inside, creating a hollow, mask-like cavity at the center of the composition.\", \"The lower face opens into a wide white-toothed gap crossed by dense vertical black hatching, with magenta, teal, and red lines scrawling across the chin and neck below.\"], \"reading\": \"The grey ground holds the head at a slight downward tilt, giving the figure a lowered, weighted presence. Color patches—yellow-green across the crown, purple along the jaw, teal at the collar—sit beneath the black scaffolding rather than filling it neatly. The hollow eye socket reads as absence more than feature. That open lower gap, striped with hatching, carries a rawness the tight skull outline keeps from spilling outward.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #165 and nnxyz nnotb #167. Where #165 fills its field with a flat black ground and radiating marks, #166 keeps the grey open around the figure, making the head feel more isolated. Title order and recorded creation order align here.\", \"connections\": [{\"targetArtworkId\": \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS\", \"reason\": \"Both works place a large head on a grey ground with yellow as the dominant warm accent, but nnxyz #3 scatters marks across the full field while #166 concentrates color inside a tighter black outline, making the contrast in containment visible.\"}], \"tags\": [\"rounded head form\", \"hollow eye socket\", \"vertical hatching\", \"layered color patches\", \"black outline structure\", \"open lower jaw\"], \"interpretiveTags\": [\"weighted presence\", \"mask-like absence\", \"raw tension\"], \"lookingQuestion\": \"Where does the black outline hold the color patches inside the head, and where does it break or let them escape—and what does that difference do to how the face reads?\", \"ambiguities\": [\"The scrawled signature in the lower right is consistent with other works in the owned subset but its exact lettering is not fully legible at this resolution.\", \"nnxyz nnotb #167 (the title-next neighbor) shows a warm-toned animal subject on a brown ground with a very different mark density; no meaningful formal connection to #166 was found, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:15.737298-05:00",
+    "usage": {
+      "inputTokens": 6238,
+      "outputTokens": 806,
+      "totalTokens": 7044,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13012
+    },
+    "requestId": "910aba11-013b-44ce-b47e-7da166a4a6e7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark rounded head-form sits left of center against a flat coral-red field; an orange vertical block occupies the left edge, casting a darker shadow shape behind the head.\",\n    \"Yellow zigzag lines run horizontally across the mid-face and along the bottom edge; blue segmented dashes arc above the head and cluster at the chin and base, forming repeated chain-like marks.\",\n    \"The mouth area shows tightly packed white vertical strokes suggesting teeth, rimmed above and below by looping yellow lines; orange and yellow oval spikes radiate from the upper-right of the head.\"\n  ],\n  \"reading\": \"The dark mass holds its ground against a hot coral field, its surface layered with crossing marks in red, yellow, and blue that read as both decoration and agitation. A horizontal yellow zigzag pierces the face like a blade, while spiked ovals along the crown push outward. The white tooth-row and looping yellow rim give the mouth a fixed, wide-open quality that reads as either a shout or a grin.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #210 and nnxyz nnotb #212 show how differently the same head-form can be handled: #210 packs a dark ground with dense multicolor lines, while #212 strips back to a silhouette on open blue. This work sits between those two extremes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\",\n      \"reason\": \"Both works build a dark rounded head-form covered in layered crossing lines, but #210 uses a cool dark ground with white outlines dominating, while #211 sets the same density against a warm coral field with yellow zigzags as the loudest mark.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\",\n      \"reason\": \"The nifty faces #96 work shares a warm orange ground and a wide tooth-row rimmed in yellow, offering a cross-collection comparison of how similar mouth marks and background color read at different levels of line density.\"\n    }\n  ],\n  \"tags\": [\n    \"head-form\",\n    \"zigzag line\",\n    \"coral-red ground\",\n    \"spiked crown\",\n    \"tooth-row\",\n    \"segmented dash marks\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"high-tension\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the horizontal yellow zigzag cutting across the face, the spiked ovals along the crown, or the white tooth-row at the mouth — and what does that path through the marks suggest about how the image is organized?\",\n  \"ambiguities\": [\n    \"The orange vertical block at the left edge may be a separate background element or a shadow cast by the head-form; the image alone does not resolve this.\",\n    \"Title order and recorded creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this alignment cannot be assumed collection-wide.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRjx6MA14AjLQsU1SZGeMpxTX2vLpfxDdQcZsuAiU6Bh2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRjx6MA14AjLQsU1SZGeMpxTX2vLpfxDdQcZsuAiU6Bh2/image.png",
+        "imageSHA256": "ca7061a626ba84c3b561b59f3adffb5975a57cd87d593655e3b7dfb7a9914bee"
+      },
+      {
+        "artworkId": "QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t/image.png",
+        "imageSHA256": "8ab4959fa95189edf040b46be1e07fe4ed6681ab12c1acf49f05e9dea96bdd33"
+      },
+      {
+        "artworkId": "QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2/image.png",
+        "imageSHA256": "a8c39c99721e0c1034f741de062fa3c16d37b8c2cd005617085e3df3c23ef4ac"
+      },
+      {
+        "artworkId": "QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf/image.png",
+        "imageSHA256": "e4f39d115c6f3d6e6c84a9148809a0c68d435d28ad43547ac2e42849f43576e2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:22.637870-05:00",
+    "usage": {
+      "inputTokens": 7066,
+      "outputTokens": 1012,
+      "totalTokens": 8078,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6843
+    },
+    "requestId": "b4de1bc6-f532-478e-a987-de1a17182a7f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark rounded head-form sits left of center against a flat coral-red field; an orange vertical block occupies the left edge with a darker shadow shape behind the head.\",\n    \"Yellow zigzag lines run horizontally across the mid-face and along the bottom edge; blue segmented dashes arc above the head and cluster at the chin and base in chain-like marks.\",\n    \"The mouth area shows tightly packed white vertical strokes rimmed above and below by looping yellow lines; orange and yellow oval spikes radiate from the upper-right of the head.\"\n  ],\n  \"reading\": \"The dark mass holds its ground against a hot coral field, its surface layered with crossing marks in red, yellow, and blue that read as both decoration and agitation. A horizontal yellow zigzag pierces the face, while spiked ovals along the crown push outward. The white tooth-row and looping yellow rim give the mouth a fixed, wide-open quality that reads as a shout or a grin.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #210 and nnxyz nnotb #212 show how differently the same head-form can be handled: #210 packs a cool dark ground with dense multicolor lines; #212 strips back to a silhouette on open blue. This work sits between those extremes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\",\n      \"reason\": \"Both works build a dark rounded head-form covered in layered crossing lines, but #210 uses a cool dark ground with white outlines dominating, while #211 sets comparable density against a warm coral field with yellow zigzags as the loudest mark.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\",\n      \"reason\": \"nifty faces #96 shares a warm orange ground and a wide tooth-row rimmed in yellow, offering a cross-collection contrast of how similar mouth marks and background color read at lower line density and with geometric rather than rounded head structure.\"\n    }\n  ],\n  \"tags\": [\"head-form\", \"zigzag line\", \"coral-red ground\", \"spiked crown\", \"tooth-row\", \"segmented dash marks\"],\n  \"interpretiveTags\": [\"confrontational\", \"high-tension\"],\n  \"lookingQuestion\": \"Where does your eye settle first — on the horizontal yellow zigzag cutting across the face, the spiked ovals along the crown, or the white tooth-row at the mouth — and what does that path through the marks suggest about how the image is organized?\",\n  \"ambiguities\": [\n    \"The orange vertical block at the left edge may be a separate background element or a shadow cast by the head-form; the image alone does not resolve this.\",\n    \"Title order and recorded creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this alignment cannot be assumed collection-wide.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: coral-red ground, orange left block, blue segmented dashes, yellow zigzag, white tooth-row, and spiked ovals are all visibly present.\",\n    \"Comparison with QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t confirmed: #210 has a cool dark (near-navy) ground and white outlines dominating — contrast with #211's warm coral ground is accurate and specific.\",\n    \"Comparison with QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2 confirmed: nifty faces #96 shows a warm orange ground and a wide tooth-row rimmed in yellow; the cross-collection comparison is supported; reason refined to note geometric vs. rounded head structure as a meaningful contrast rather than shared vibe.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRjx6MA14AjLQsU1SZGeMpxTX2vLpfxDdQcZsuAiU6Bh2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRjx6MA14AjLQsU1SZGeMpxTX2vLpfxDdQcZsuAiU6Bh2/image.png",
+        "imageSHA256": "ca7061a626ba84c3b561b59f3adffb5975a57cd87d593655e3b7dfb7a9914bee"
+      },
+      {
+        "artworkId": "QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t/image.png",
+        "imageSHA256": "8ab4959fa95189edf040b46be1e07fe4ed6681ab12c1acf49f05e9dea96bdd33"
+      },
+      {
+        "artworkId": "QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2/image.png",
+        "imageSHA256": "a8c39c99721e0c1034f741de062fa3c16d37b8c2cd005617085e3df3c23ef4ac"
+      },
+      {
+        "artworkId": "QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf/image.png",
+        "imageSHA256": "e4f39d115c6f3d6e6c84a9148809a0c68d435d28ad43547ac2e42849f43576e2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dark rounded head-form sits left of center against a flat coral-red field; an orange vertical block occupies the left edge, casting a darker shadow shape behind the head.\", \"Yellow zigzag lines run horizontally across the mid-face and along the bottom edge; blue segmented dashes arc above the head and cluster at the chin and base, forming repeated chain-like marks.\", \"The mouth area shows tightly packed white vertical strokes suggesting teeth, rimmed above and below by looping yellow lines; orange and yellow oval spikes radiate from the upper-right of the head.\"], \"reading\": \"The dark mass holds its ground against a hot coral field, its surface layered with crossing marks in red, yellow, and blue that read as both decoration and agitation. A horizontal yellow zigzag pierces the face like a blade, while spiked ovals along the crown push outward. The white tooth-row and looping yellow rim give the mouth a fixed, wide-open quality that reads as either a shout or a grin.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #210 and nnxyz nnotb #212 show how differently the same head-form can be handled: #210 packs a dark ground with dense multicolor lines, while #212 strips back to a silhouette on open blue. This work sits between those two extremes.\", \"connections\": [{\"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\", \"reason\": \"Both works build a dark rounded head-form covered in layered crossing lines, but #210 uses a cool dark ground with white outlines dominating, while #211 sets the same density against a warm coral field with yellow zigzags as the loudest mark.\"}, {\"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\", \"reason\": \"The nifty faces #96 work shares a warm orange ground and a wide tooth-row rimmed in yellow, offering a cross-collection comparison of how similar mouth marks and background color read at different levels of line density.\"}], \"tags\": [\"head-form\", \"zigzag line\", \"coral-red ground\", \"spiked crown\", \"tooth-row\", \"segmented dash marks\"], \"interpretiveTags\": [\"confrontational\", \"high-tension\"], \"lookingQuestion\": \"Where does your eye settle first — on the horizontal yellow zigzag cutting across the face, the spiked ovals along the crown, or the white tooth-row at the mouth — and what does that path through the marks suggest about how the image is organized?\", \"ambiguities\": [\"The orange vertical block at the left edge may be a separate background element or a shadow cast by the head-form; the image alone does not resolve this.\", \"Title order and recorded creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this alignment cannot be assumed collection-wide.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:16.925153-05:00",
+    "usage": {
+      "inputTokens": 6835,
+      "outputTokens": 847,
+      "totalTokens": 7682,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5292
+    },
+    "requestId": "71192fc6-35ec-45fc-9c97-79a27fe51b66",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark rounded head-form sits left of center against a flat coral-red field; an orange vertical block occupies the left edge with a darker shadow shape behind the head.\",\n    \"Yellow zigzag lines run horizontally across the mid-face and along the bottom edge; blue segmented dashes arc above the head and cluster at the chin and base in chain-like marks.\",\n    \"The mouth area shows tightly packed white vertical strokes rimmed above and below by looping yellow lines; orange and yellow oval spikes radiate from the upper-right of the head.\"\n  ],\n  \"reading\": \"The dark mass holds its ground against a hot coral field, its surface layered with crossing marks in red, yellow, and blue that read as both decoration and agitation. A horizontal yellow zigzag pierces the face, while spiked ovals along the crown push outward. The white tooth-row, bounded by looping yellow lines above and below, gives the mouth a fixed, bared quality that reads as a shout or a grin.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #210 and nnxyz nnotb #212 show how differently the same head-form can be handled: #210 packs a cool dark ground with dense multicolor lines; #212 strips back to a silhouette on open blue.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\",\n      \"reason\": \"Both works build a dark rounded head-form covered in layered crossing lines, but #210 uses a cool dark ground with white outlines dominating, while #211 sets comparable density against a warm coral field with yellow zigzags as the loudest mark.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\",\n      \"reason\": \"nifty faces #96 shares a warm orange ground and a tooth-row rimmed in yellow, offering a cross-collection contrast of how similar mouth marks and background color read at lower line density and with geometric rather than rounded head structure.\"\n    }\n  ],\n  \"tags\": [\"head-form\", \"zigzag line\", \"coral-red ground\", \"spiked crown\", \"tooth-row\", \"segmented dash marks\"],\n  \"lookingQuestion\": \"Where does your eye settle first — on the horizontal yellow zigzag cutting across the face, the spiked ovals along the crown, or the white tooth-row at the mouth — and what does that path through the marks suggest about how the image is organized?\",\n  \"ambiguities\": [\n    \"The orange vertical block at the left edge may be a separate background element or a shadow cast by the head-form; the image alone does not resolve this.\",\n    \"Title order and recorded creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this alignment cannot be assumed collection-wide.\"\n  ],\n  \"reviewFindings\": [\n    \"mouth-openness-check: 'wide-open' removed; revised to 'bared quality' grounded in the visible tooth-row and looping yellow rims rather than a claim about the degree of opening.\",\n    \"Reading word count confirmed within 55–65 word range after revision.\",\n    \"All other fields retained without change; no additional flags triggered.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRjx6MA14AjLQsU1SZGeMpxTX2vLpfxDdQcZsuAiU6Bh2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRjx6MA14AjLQsU1SZGeMpxTX2vLpfxDdQcZsuAiU6Bh2/image.png",
+        "imageSHA256": "ca7061a626ba84c3b561b59f3adffb5975a57cd87d593655e3b7dfb7a9914bee"
+      },
+      {
+        "artworkId": "QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t/image.png",
+        "imageSHA256": "8ab4959fa95189edf040b46be1e07fe4ed6681ab12c1acf49f05e9dea96bdd33"
+      },
+      {
+        "artworkId": "QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2/image.png",
+        "imageSHA256": "a8c39c99721e0c1034f741de062fa3c16d37b8c2cd005617085e3df3c23ef4ac"
+      },
+      {
+        "artworkId": "QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf/image.png",
+        "imageSHA256": "e4f39d115c6f3d6e6c84a9148809a0c68d435d28ad43547ac2e42849f43576e2"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A dark rounded head-form sits left of center against a flat coral-red field; an orange vertical block occupies the left edge with a darker shadow shape behind the head.\", \"Yellow zigzag lines run horizontally across the mid-face and along the bottom edge; blue segmented dashes arc above the head and cluster at the chin and base in chain-like marks.\", \"The mouth area shows tightly packed white vertical strokes rimmed above and below by looping yellow lines; orange and yellow oval spikes radiate from the upper-right of the head.\"], \"reading\": \"The dark mass holds its ground against a hot coral field, its surface layered with crossing marks in red, yellow, and blue that read as both decoration and agitation. A horizontal yellow zigzag pierces the face, while spiked ovals along the crown push outward. The white tooth-row and looping yellow rim give the mouth a fixed, wide-open quality that reads as a shout or a grin.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #210 and nnxyz nnotb #212 show how differently the same head-form can be handled: #210 packs a cool dark ground with dense multicolor lines; #212 strips back to a silhouette on open blue. This work sits between those extremes.\", \"connections\": [{\"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\", \"reason\": \"Both works build a dark rounded head-form covered in layered crossing lines, but #210 uses a cool dark ground with white outlines dominating, while #211 sets comparable density against a warm coral field with yellow zigzags as the loudest mark.\"}, {\"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\", \"reason\": \"nifty faces #96 shares a warm orange ground and a wide tooth-row rimmed in yellow, offering a cross-collection contrast of how similar mouth marks and background color read at lower line density and with geometric rather than rounded head structure.\"}], \"tags\": [\"head-form\", \"zigzag line\", \"coral-red ground\", \"spiked crown\", \"tooth-row\", \"segmented dash marks\"], \"lookingQuestion\": \"Where does your eye settle first — on the horizontal yellow zigzag cutting across the face, the spiked ovals along the crown, or the white tooth-row at the mouth — and what does that path through the marks suggest about how the image is organized?\", \"ambiguities\": [\"The orange vertical block at the left edge may be a separate background element or a shadow cast by the head-form; the image alone does not resolve this.\", \"Title order and recorded creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this alignment cannot be assumed collection-wide.\"]}\nFLAGS:\n[{\"artworkId\": \"QmRjx6MA14AjLQsU1SZGeMpxTX2vLpfxDdQcZsuAiU6Bh2\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

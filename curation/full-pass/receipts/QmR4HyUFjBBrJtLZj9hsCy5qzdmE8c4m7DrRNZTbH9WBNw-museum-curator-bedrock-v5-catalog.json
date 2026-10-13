@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:27.283799-05:00",
+    "usage": {
+      "inputTokens": 6235,
+      "outputTokens": 805,
+      "totalTokens": 7040,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13014
+    },
+    "requestId": "7b24285f-af39-466c-9e7e-ea913fabaa35",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A lean, hat-wearing figure leans sharply forward, one long arm extended right and both feet fitted with comb-like spurs, set against a flat amber-orange field.\",\n    \"The torso is semi-transparent: a leaf-spine rib pattern in red and white sits inside a tilted rectangular panel filled with blue, red, yellow and orange color blocks.\",\n    \"Lines layer in at least three weights—thick black outlines, thin white loops, and fine red curves—creating a visible stack rather than a single unified contour.\"\n  ],\n  \"reading\": \"The figure pitches forward as if mid-stride, its skeleton visible through a window of clashing color. The comb-toothed feet and raking right hand read as both comic and unsettling. That layered rib motif—red lines over a bright interior—gives the body a see-through quality, so the figure feels simultaneously solid and hollow. The warm amber ground keeps the mood from tipping fully into dread.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the amber ground here contrasts with the teal field of the title-adjacent nnotb #30, though both works share the hat-wearing skeletal figure and visible rib pattern. The collector links nnxyz's line-over-color layering to the engraved-then-filled quality of scrimshaw.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs\",\n      \"reason\": \"nnotb #30 shares the broad-brimmed hat, comb-toothed feet, and white-over-color rib lines, but its figure stands upright on a teal ground rather than lunging across amber.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE\",\n      \"reason\": \"nnotb #32 also shows a full-body figure with layered colored lines over a flat ground, but its open-mouthed, crouching pose and olive background produce a sharply different mood from #31's forward lunge.\"\n    }\n  ],\n  \"tags\": [\n    \"skeletal figure\",\n    \"amber ground\",\n    \"layered line work\",\n    \"transparent torso panel\",\n    \"comb-toothed feet\",\n    \"rib motif\"\n  ],\n  \"interpretiveTags\": [\n    \"comic-unsettling tension\",\n    \"hollow-yet-solid body\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the outer black contour of the figure end and the interior color panel begin—and what happens to the rib lines at that boundary?\",\n  \"ambiguities\": [\n    \"The rectangular panel in the torso could be read as a carried object or as the body's own interior; the image does not resolve this.\",\n    \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy shares the amber ground but depicts a close-up face with no skeletal or figure elements, making any formal connection too weak to include.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw/image.png",
+        "imageSHA256": "2f3fcc1a40f64ab10707d8bbea0c925fc8a8f3fd97721b7542b6796d545d1c7f"
+      },
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy/image.png",
+        "imageSHA256": "4ca20c7ade799c7191840571757d0af5e11b54e62f585eae8a4eaf3d319ed49b"
+      },
+      {
+        "artworkId": "QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE/image.png",
+        "imageSHA256": "b1cddd99e2295dbc68eaae197fe29808e49433e253c23d7c575c21a682106b66"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:33.908069-05:00",
+    "usage": {
+      "inputTokens": 7062,
+      "outputTokens": 1024,
+      "totalTokens": 8086,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6298
+    },
+    "requestId": "4387f951-8d38-48e3-9c7b-526635df1a17",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A lean, hat-wearing figure leans sharply forward, one long arm extended right and both feet fitted with comb-like spurs, set against a flat amber-orange field.\",\n    \"The torso is semi-transparent: a leaf-spine rib pattern in red and white sits inside a tilted rectangular panel filled with blue, red, yellow and orange color blocks.\",\n    \"Lines layer in at least three weights—thick black outlines, thin white loops, and fine red curves—creating a visible stack rather than a single unified contour.\"\n  ],\n  \"reading\": \"The figure pitches forward as if mid-stride, its skeleton visible through a window of clashing color. The comb-toothed feet and raking right hand read as both comic and unsettling. That layered rib motif—red lines over a bright interior—gives the body a see-through quality, so the figure feels simultaneously solid and hollow. The warm amber ground keeps the mood from tipping fully into dread.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the amber ground here contrasts with the teal field of title-adjacent nnotb #30, though both share the broad-brimmed hat, skeletal figure and visible rib pattern. The collector links nnxyz's line-over-color layering to the engraved-then-filled quality of scrimshaw.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs\",\n      \"reason\": \"nnotb #30 shares the broad-brimmed hat, comb-toothed feet, and white-over-color rib lines, but its figure stands upright on a teal ground rather than lunging across amber.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE\",\n      \"reason\": \"nnotb #32 also shows a full-body figure with layered colored lines over a flat ground, but its open-mouthed crouching pose and olive background produce a sharply different mood from #31's forward lunge.\"\n    }\n  ],\n  \"tags\": [\n    \"skeletal figure\",\n    \"amber ground\",\n    \"layered line work\",\n    \"transparent torso panel\",\n    \"comb-toothed feet\",\n    \"rib motif\"\n  ],\n  \"interpretiveTags\": [\n    \"comic-unsettling tension\",\n    \"hollow-yet-solid body\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the outer black contour of the figure end and the interior color panel begin—and what happens to the rib lines at that boundary?\",\n  \"ambiguities\": [\n    \"The rectangular panel in the torso could be read as a carried object or as the body's own interior; the image does not resolve this.\",\n    \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy shares the amber ground but depicts a close-up face with no skeletal or figure elements, making any formal connection too weak to include.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: amber ground, comb-toothed feet, semi-transparent torso panel with rib lines, and multi-weight line layering are all directly visible.\",\n    \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs confirmed: teal ground, upright stance, broad hat, comb feet, and white rib lines visible—comparison details accurate; no corrections needed.\",\n    \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy correctly excluded: inspected image shows a close-up face on amber ground with no skeletal figure, rib pattern, or comb elements; shared ground color alone is insufficient for a meaningful connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw/image.png",
+        "imageSHA256": "2f3fcc1a40f64ab10707d8bbea0c925fc8a8f3fd97721b7542b6796d545d1c7f"
+      },
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy/image.png",
+        "imageSHA256": "4ca20c7ade799c7191840571757d0af5e11b54e62f585eae8a4eaf3d319ed49b"
+      },
+      {
+        "artworkId": "QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE/image.png",
+        "imageSHA256": "b1cddd99e2295dbc68eaae197fe29808e49433e253c23d7c575c21a682106b66"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A lean, hat-wearing figure leans sharply forward, one long arm extended right and both feet fitted with comb-like spurs, set against a flat amber-orange field.\", \"The torso is semi-transparent: a leaf-spine rib pattern in red and white sits inside a tilted rectangular panel filled with blue, red, yellow and orange color blocks.\", \"Lines layer in at least three weights—thick black outlines, thin white loops, and fine red curves—creating a visible stack rather than a single unified contour.\"], \"reading\": \"The figure pitches forward as if mid-stride, its skeleton visible through a window of clashing color. The comb-toothed feet and raking right hand read as both comic and unsettling. That layered rib motif—red lines over a bright interior—gives the body a see-through quality, so the figure feels simultaneously solid and hollow. The warm amber ground keeps the mood from tipping fully into dread.\", \"contextAngle\": \"Within the owned nnotb subset, the amber ground here contrasts with the teal field of the title-adjacent nnotb #30, though both works share the hat-wearing skeletal figure and visible rib pattern. The collector links nnxyz's line-over-color layering to the engraved-then-filled quality of scrimshaw.\", \"connections\": [{\"targetArtworkId\": \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs\", \"reason\": \"nnotb #30 shares the broad-brimmed hat, comb-toothed feet, and white-over-color rib lines, but its figure stands upright on a teal ground rather than lunging across amber.\"}, {\"targetArtworkId\": \"QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE\", \"reason\": \"nnotb #32 also shows a full-body figure with layered colored lines over a flat ground, but its open-mouthed, crouching pose and olive background produce a sharply different mood from #31's forward lunge.\"}], \"tags\": [\"skeletal figure\", \"amber ground\", \"layered line work\", \"transparent torso panel\", \"comb-toothed feet\", \"rib motif\"], \"interpretiveTags\": [\"comic-unsettling tension\", \"hollow-yet-solid body\"], \"lookingQuestion\": \"Where exactly does the outer black contour of the figure end and the interior color panel begin—and what happens to the rib lines at that boundary?\", \"ambiguities\": [\"The rectangular panel in the torso could be read as a carried object or as the body's own interior; the image does not resolve this.\", \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy shares the amber ground but depicts a close-up face with no skeletal or figure elements, making any formal connection too weak to include.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:06:47.344188-05:00",
+    "usage": {
+      "inputTokens": 6832,
+      "outputTokens": 938,
+      "totalTokens": 7770,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12672
+    },
+    "requestId": "f94ed958-9ba6-4c20-9d1c-4ebcc637a778",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"A lean, hat-wearing figure leans sharply forward, one long arm extended right and both feet fitted with comb-like spurs, set against a flat amber-orange field.\",\n    \"The torso is semi-transparent: a leaf-spine rib pattern in red and white sits inside a tilted rectangular panel filled with blue, red, yellow and orange color blocks.\",\n    \"Lines layer in at least three weights—thick black outlines, thin white loops, and fine red curves—creating a visible stack rather than a single unified contour.\"\n  ],\n  \"reading\": \"The figure pitches forward as if mid-stride, its skeleton visible through a window of clashing color. The comb-toothed feet and raking right hand read as both comic and unsettling. That layered rib motif—red lines over a bright interior—gives the body a see-through quality, so the figure feels simultaneously solid and hollow. The warm amber ground keeps the mood from tipping fully into dread.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the amber ground here contrasts with the teal field of title-adjacent nnotb #30, though both share the broad-brimmed hat, skeletal figure and visible rib pattern. The collector links nnxyz's line-over-color layering to the scored-then-filled quality of scrimshaw.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs\",\n      \"reason\": \"nnotb #30 shares the broad-brimmed hat, comb-toothed feet, and white-over-color rib lines, but its figure stands upright on a teal ground rather than lunging across amber.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE\",\n      \"reason\": \"nnotb #32 also shows a full-body figure with layered colored lines over a flat ground, but its crouching pose and olive background produce a sharply different mood from #31's forward lunge.\"\n    }\n  ],\n  \"tags\": [\n    \"skeletal figure\",\n    \"amber ground\",\n    \"layered line work\",\n    \"transparent torso panel\",\n    \"comb-toothed feet\",\n    \"rib motif\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the outer black contour of the figure end and the interior color panel begin—and what happens to the rib lines at that boundary?\",\n  \"ambiguities\": [\n    \"The rectangular panel in the torso could be read as a carried object or as the body's own interior; the image does not resolve this.\",\n    \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy shares the amber ground but depicts a close-up face with no skeletal or figure elements, making any formal connection too weak to include.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'engraved-then-filled' with 'scored-then-filled' in contextAngle to remove the flagged named-media term 'engraved' while preserving the collector's scrimshaw-related visual comparison.\",\n    \"Removed 'open-mouthed' from the nnotb #32 connection: the comparison image shows visible teeth in two rows but the mouth opening is not clearly wide; the descriptor was dropped rather than retained as a claim of openness.\",\n    \"All other fields passed review: reading is 66 words, contextAngle is 39 words, three observations, six tags, two image-backed connections, one looking question, and two ambiguities.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw/image.png",
+        "imageSHA256": "2f3fcc1a40f64ab10707d8bbea0c925fc8a8f3fd97721b7542b6796d545d1c7f"
+      },
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy/image.png",
+        "imageSHA256": "4ca20c7ade799c7191840571757d0af5e11b54e62f585eae8a4eaf3d319ed49b"
+      },
+      {
+        "artworkId": "QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE/image.png",
+        "imageSHA256": "b1cddd99e2295dbc68eaae197fe29808e49433e253c23d7c575c21a682106b66"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A lean, hat-wearing figure leans sharply forward, one long arm extended right and both feet fitted with comb-like spurs, set against a flat amber-orange field.\", \"The torso is semi-transparent: a leaf-spine rib pattern in red and white sits inside a tilted rectangular panel filled with blue, red, yellow and orange color blocks.\", \"Lines layer in at least three weights—thick black outlines, thin white loops, and fine red curves—creating a visible stack rather than a single unified contour.\"], \"reading\": \"The figure pitches forward as if mid-stride, its skeleton visible through a window of clashing color. The comb-toothed feet and raking right hand read as both comic and unsettling. That layered rib motif—red lines over a bright interior—gives the body a see-through quality, so the figure feels simultaneously solid and hollow. The warm amber ground keeps the mood from tipping fully into dread.\", \"contextAngle\": \"Within the owned nnotb subset, the amber ground here contrasts with the teal field of title-adjacent nnotb #30, though both share the broad-brimmed hat, skeletal figure and visible rib pattern. The collector links nnxyz's line-over-color layering to the engraved-then-filled quality of scrimshaw.\", \"connections\": [{\"targetArtworkId\": \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs\", \"reason\": \"nnotb #30 shares the broad-brimmed hat, comb-toothed feet, and white-over-color rib lines, but its figure stands upright on a teal ground rather than lunging across amber.\"}, {\"targetArtworkId\": \"QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE\", \"reason\": \"nnotb #32 also shows a full-body figure with layered colored lines over a flat ground, but its open-mouthed crouching pose and olive background produce a sharply different mood from #31's forward lunge.\"}], \"tags\": [\"skeletal figure\", \"amber ground\", \"layered line work\", \"transparent torso panel\", \"comb-toothed feet\", \"rib motif\"], \"lookingQuestion\": \"Where exactly does the outer black contour of the figure end and the interior color panel begin—and what happens to the rib lines at that boundary?\", \"ambiguities\": [\"The rectangular panel in the torso could be read as a carried object or as the body's own interior; the image does not resolve this.\", \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy shares the amber ground but depicts a close-up face with no skeletal or figure elements, making any formal connection too weak to include.\"]}\nFLAGS:\n[{\"artworkId\": \"QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw\", \"field\": \"contextAngle\", \"rule\": \"named-media\", \"matches\": [\"engraved\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

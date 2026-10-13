@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:01.391102-05:00",
+    "usage": {
+      "inputTokens": 6131,
+      "outputTokens": 636,
+      "totalTokens": 6767,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11012
+    },
+    "requestId": "999a4120-f6f3-4816-b252-a7592b0b7e7a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid black rounded form dominates the right-center, with a long curved tail-like line rising and hooking at the top against a flat sky-blue ground.\",\n    \"A smaller black head shape sits lower-left, containing two yellow rectangular eye marks and a yellow stitched-line mouth; short zigzag lines radiate outward around both forms.\",\n    \"A thick black diagonal fills the lower edge, acting as a ground plane; a blue curved gap between the two black forms creates a negative-space arc.\"\n  ],\n  \"reading\": \"Two black masses—one compact and round, one smaller with yellow-marked eyes and a sewn-looking mouth—sit against an unbroken blue field. Short zigzag lines scatter around them like static or vibration. The yellow marks read as alert or unsettled rather than calm. The blue gap between the forms pulls the eye inward, giving the image an odd stillness beneath its surface agitation.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #132 and nnxyz nnotb #134. Where #132 spreads many small black figures across white, #133 reduces to two forms on a single flat color, concentrating the same black-on-field contrast into a tighter space.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWJna6fQP7xP5Ayro6y7ZiV7r3QAuRu6MjaHsxucxu4ya\",\n      \"reason\": \"Both works use solid black figures against a plain ground, but #132 scatters many small forms across white while #133 consolidates into two large masses on blue, making the contrast in density visible across title neighbors.\"\n    }\n  ],\n  \"tags\": [\n    \"black silhouette\",\n    \"flat blue ground\",\n    \"zigzag radiating lines\",\n    \"yellow eye marks\",\n    \"curved negative space\",\n    \"hooked tail line\"\n  ],\n  \"interpretiveTags\": [\n    \"agitation\",\n    \"alertness\",\n    \"uneasy stillness\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the blue gap between the two black forms begin and end, and how does that shape change the relationship between them?\",\n  \"ambiguities\": [\n    \"The rawblocks #43 comparison image shows a dense multi-color head on orange with no shared formal qualities to #133; no useful connection was found and it is excluded.\",\n    \"Title order and recorded creation order align for this work in the owned subset, but gaps may exist elsewhere in the full nnotb catalogue.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcdCNv8U2rDv9RW76SvEJh4PbSwmP3QTohyP58o3jHMyr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcdCNv8U2rDv9RW76SvEJh4PbSwmP3QTohyP58o3jHMyr/image.png",
+        "imageSHA256": "f6a6285519f3a13f4f536f058c98aa7413c9836ce2d3585139389f3101d88adc"
+      },
+      {
+        "artworkId": "QmWJna6fQP7xP5Ayro6y7ZiV7r3QAuRu6MjaHsxucxu4ya",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWJna6fQP7xP5Ayro6y7ZiV7r3QAuRu6MjaHsxucxu4ya/image.png",
+        "imageSHA256": "a5f086fb9542494ebc4b3002762f88e45ac623cfcd68f600b2f8a07f84535000"
+      },
+      {
+        "artworkId": "QmV3n2cKtMkiMiBV68DwhPUkbW6DHp5jFBQWGrYKEbnKk1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV3n2cKtMkiMiBV68DwhPUkbW6DHp5jFBQWGrYKEbnKk1/image.png",
+        "imageSHA256": "9c56aa54a4e801ecb5aa6bb37a5c35d771e49d4f470d1cc5cce2a6495700ec95"
+      },
+      {
+        "artworkId": "QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS/image.png",
+        "imageSHA256": "8c44b94fb71f3879a1d3dfdbe6bf2363b13ac4efbec400c0ab542cae608595ed"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:08.260879-05:00",
+    "usage": {
+      "inputTokens": 6796,
+      "outputTokens": 866,
+      "totalTokens": 7662,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6808
+    },
+    "requestId": "c596e5bc-baef-4047-847d-d0d473892894",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid black rounded form dominates the right-center, with a long curved line rising and hooking at the top against a flat sky-blue ground.\",\n    \"A smaller black head shape sits lower-left, containing two yellow rectangular marks and a yellow stitched-line mouth; short zigzag lines radiate outward around both forms.\",\n    \"A thick black diagonal fills the lower edge as a ground plane; a blue curved gap between the two black forms creates a negative-space arc.\"\n  ],\n  \"reading\": \"Two black masses—one large and round, one smaller with yellow-marked eyes and a sewn-looking mouth—sit against an unbroken blue field. Short zigzag lines scatter around both forms. The yellow marks read as alert or unsettled rather than calm. The blue arc between the forms pulls the eye inward, giving the image an odd stillness beneath its surface agitation.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #132 and nnxyz nnotb #134. Where #132 spreads many small black figures across white, #133 reduces to two forms on a single flat color, concentrating black-on-field contrast into a tighter space.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWJna6fQP7xP5Ayro6y7ZiV7r3QAuRu6MjaHsxucxu4ya\",\n      \"reason\": \"Both use solid black figures against a plain ground, but #132 scatters many small forms across white while #133 consolidates into two large masses on blue, making the contrast in density visible across title neighbors.\"\n    }\n  ],\n  \"tags\": [\n    \"black silhouette\",\n    \"flat blue ground\",\n    \"zigzag radiating lines\",\n    \"yellow eye marks\",\n    \"curved negative space\",\n    \"hooked tail line\"\n  ],\n  \"interpretiveTags\": [\n    \"agitation\",\n    \"alertness\",\n    \"uneasy stillness\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the blue gap between the two black forms begin and end, and how does that shape change the relationship between them?\",\n  \"ambiguities\": [\n    \"rawblocks #43 shows a dense multi-color head on orange with no shared formal qualities to #133; excluded from connections.\",\n    \"Title order and recorded creation order align for this work in the owned subset, but gaps may exist elsewhere in the full nnotb catalogue.\"\n  ],\n  \"reviewFindings\": [\n    \"All colors and forms confirmed against the primary image: sky-blue ground, two black masses, yellow rectangular eye marks, stitched-line mouth, zigzag radiating lines, hooked tail line, and black diagonal ground plane are all visible.\",\n    \"QmWJna6fQP7xP5Ayro6y7ZiV7r3QAuRu6MjaHsxucxu4ya (#132) confirmed as black figures on white ground—density contrast comparison is supported by direct image inspection.\",\n    \"QmV3n2cKtMkiMiBV68DwhPUkbW6DHp5jFBQWGrYKEbnKk1 (rawblocks #43) and QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS (#134) inspected; neither offers a meaningful formal connection to #133 beyond shared artist, so both are correctly excluded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcdCNv8U2rDv9RW76SvEJh4PbSwmP3QTohyP58o3jHMyr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcdCNv8U2rDv9RW76SvEJh4PbSwmP3QTohyP58o3jHMyr/image.png",
+        "imageSHA256": "f6a6285519f3a13f4f536f058c98aa7413c9836ce2d3585139389f3101d88adc"
+      },
+      {
+        "artworkId": "QmWJna6fQP7xP5Ayro6y7ZiV7r3QAuRu6MjaHsxucxu4ya",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWJna6fQP7xP5Ayro6y7ZiV7r3QAuRu6MjaHsxucxu4ya/image.png",
+        "imageSHA256": "a5f086fb9542494ebc4b3002762f88e45ac623cfcd68f600b2f8a07f84535000"
+      },
+      {
+        "artworkId": "QmV3n2cKtMkiMiBV68DwhPUkbW6DHp5jFBQWGrYKEbnKk1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV3n2cKtMkiMiBV68DwhPUkbW6DHp5jFBQWGrYKEbnKk1/image.png",
+        "imageSHA256": "9c56aa54a4e801ecb5aa6bb37a5c35d771e49d4f470d1cc5cce2a6495700ec95"
+      },
+      {
+        "artworkId": "QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS/image.png",
+        "imageSHA256": "8c44b94fb71f3879a1d3dfdbe6bf2363b13ac4efbec400c0ab542cae608595ed"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A solid black rounded form dominates the right-center, with a long curved tail-like line rising and hooking at the top against a flat sky-blue ground.\", \"A smaller black head shape sits lower-left, containing two yellow rectangular eye marks and a yellow stitched-line mouth; short zigzag lines radiate outward around both forms.\", \"A thick black diagonal fills the lower edge, acting as a ground plane; a blue curved gap between the two black forms creates a negative-space arc.\"], \"reading\": \"Two black masses—one compact and round, one smaller with yellow-marked eyes and a sewn-looking mouth—sit against an unbroken blue field. Short zigzag lines scatter around them like static or vibration. The yellow marks read as alert or unsettled rather than calm. The blue gap between the forms pulls the eye inward, giving the image an odd stillness beneath its surface agitation.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #132 and nnxyz nnotb #134. Where #132 spreads many small black figures across white, #133 reduces to two forms on a single flat color, concentrating the same black-on-field contrast into a tighter space.\", \"connections\": [{\"targetArtworkId\": \"QmWJna6fQP7xP5Ayro6y7ZiV7r3QAuRu6MjaHsxucxu4ya\", \"reason\": \"Both works use solid black figures against a plain ground, but #132 scatters many small forms across white while #133 consolidates into two large masses on blue, making the contrast in density visible across title neighbors.\"}], \"tags\": [\"black silhouette\", \"flat blue ground\", \"zigzag radiating lines\", \"yellow eye marks\", \"curved negative space\", \"hooked tail line\"], \"interpretiveTags\": [\"agitation\", \"alertness\", \"uneasy stillness\"], \"lookingQuestion\": \"Where exactly does the blue gap between the two black forms begin and end, and how does that shape change the relationship between them?\", \"ambiguities\": [\"The rawblocks #43 comparison image shows a dense multi-color head on orange with no shared formal qualities to #133; no useful connection was found and it is excluded.\", \"Title order and recorded creation order align for this work in the owned subset, but gaps may exist elsewhere in the full nnotb catalogue.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:17.412650-05:00",
+    "usage": {
+      "inputTokens": 6206,
+      "outputTokens": 801,
+      "totalTokens": 7007,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13601
+    },
+    "requestId": "4c3e3257-bf28-442a-adef-f8516cc6550b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark, roughly humanoid figure sits low and forward, its wide-open mouth showing white teeth outlined in red, with two red-streaked eye sockets above.\",\n    \"Splayed feather-like forms spread from both sides of the figure's upper body — built from overlapping white, orange, and black lines rather than solid fill.\",\n    \"The background is a soft grey-brown gradient with blurred circular light patches, placing the scribbled figure against a diffuse, almost foggy field.\"\n  ],\n  \"reading\": \"The figure crouches and opens wide, teeth bared, red bleeding into the eye sockets and mouth rim. That red reads as alarm against the dark body. The feathered forms spreading from its shoulders soften the threat slightly — they could be wings or just the energy of the lines escaping outward. The blurred background pushes the figure forward without anchoring it to any specific place.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #26 and nnxyz nnotb #28 share the crouching-figure format. #26 works in near-total black with smooth painted surfaces; #28 uses a flat orange field and loose pink outlines — this piece sits between them in both palette weight and line density.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmcufm6quhnpbA6AEKGu4BUyNQGfucMhPEH223ZuAMYeuq\",\n      \"reason\": \"Both show a crouching non-human figure with hollow eye sockets and arms braced forward, but #26 relies on smooth painted volume against pure black while #27 breaks the same pose open with dense overlapping scribble lines.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTewYBM8ZCwG55CGBXGEthivGiw5RiBYtxt2mEbNkka54\",\n      \"reason\": \"#28 shares the bared-teeth open mouth and red accent color, but strips the composition to a flat orange ground and sparse pink outlines, making the contrast with #27's layered dark scribble and feathered edges direct and visible.\"\n    }\n  ],\n  \"tags\": [\n    \"crouching figure\",\n    \"open mouth with teeth\",\n    \"feather or wing forms\",\n    \"overlapping scribble lines\",\n    \"red eye and mouth accents\",\n    \"diffuse blurred background\"\n  ],\n  \"interpretiveTags\": [\n    \"threatening mood\",\n    \"uneasy energy\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the feathered lines begin and the body outline end — and does that boundary stay consistent on both sides of the figure?\",\n  \"ambiguities\": [\n    \"The feathered forms spreading from the shoulders could be read as wings, fur, or pure line energy; the image does not resolve this.\",\n    \"Candidate QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA (nnxyz #34, different collection) shares a scribble-over-painted-mass approach but its bright teal ground and multi-figure layout offer no focused formal parallel worth including.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7/image.png",
+        "imageSHA256": "69fbfc56f19af629bff1a818da49ed68641babae3f646917e55a5bd2caa57631"
+      },
+      {
+        "artworkId": "Qmcufm6quhnpbA6AEKGu4BUyNQGfucMhPEH223ZuAMYeuq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcufm6quhnpbA6AEKGu4BUyNQGfucMhPEH223ZuAMYeuq/image.png",
+        "imageSHA256": "a1c9283977fcc1d070a1ef9530f6ae62bee8d48c1e63dcf1dd12dfa065ef4857"
+      },
+      {
+        "artworkId": "QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA/image.png",
+        "imageSHA256": "0701bf9c1565e8855e58c7ecca2e53b35449dd859633380517df8cfb9d989dc8"
+      },
+      {
+        "artworkId": "QmTewYBM8ZCwG55CGBXGEthivGiw5RiBYtxt2mEbNkka54",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTewYBM8ZCwG55CGBXGEthivGiw5RiBYtxt2mEbNkka54/image.png",
+        "imageSHA256": "519cf7d4435e43ccac20d10b5cd9ae5750eebfe093b9c30de30e9737ae6b0d4a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:24.242897-05:00",
+    "usage": {
+      "inputTokens": 7029,
+      "outputTokens": 1018,
+      "totalTokens": 8047,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6746
+    },
+    "requestId": "01abd9c9-365b-46bb-9147-af7fabcc8348",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark, roughly humanoid figure sits low and forward, its wide-open mouth showing white teeth outlined in red, with two red-streaked eye sockets above.\",\n    \"Splayed feather-like forms spread from both sides of the figure's upper body — built from overlapping white, orange, and black lines rather than solid fill.\",\n    \"The background is a soft grey-brown gradient with blurred circular light patches, placing the scribbled figure against a diffuse, almost foggy field.\"\n  ],\n  \"reading\": \"The figure crouches and opens wide, teeth bared, red bleeding into the eye sockets and mouth rim. That red reads as alarm against the dark body. The feathered forms spreading from its shoulders soften the threat slightly — they could be wings or just the energy of the lines escaping outward. The blurred background pushes the figure forward without anchoring it to any specific place.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #26 and nnxyz nnotb #28 share the crouching-figure format. #26 works in near-total black with smooth painted surfaces; #28 uses a flat orange field and loose pink outlines — this piece sits between them in palette weight and line density.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmcufm6quhnpbA6AEKGu4BUyNQGfucMhPEH223ZuAMYeuq\",\n      \"reason\": \"Both show a crouching non-human figure with hollow eye sockets and arms braced forward, but #26 relies on smooth painted volume against pure black while #27 breaks the same pose open with dense overlapping scribble lines.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTewYBM8ZCwG55CGBXGEthivGiw5RiBYtxt2mEbNkka54\",\n      \"reason\": \"#28 shares the bared-teeth open mouth and red accent, but strips the composition to a flat orange ground and sparse pink outlines, making the contrast with #27's layered dark scribble and feathered edges direct and visible.\"\n    }\n  ],\n  \"tags\": [\n    \"crouching figure\",\n    \"open mouth with teeth\",\n    \"feather or wing forms\",\n    \"overlapping scribble lines\",\n    \"red eye and mouth accents\",\n    \"diffuse blurred background\"\n  ],\n  \"interpretiveTags\": [\n    \"threatening mood\",\n    \"uneasy energy\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the feathered lines begin and the body outline end — and does that boundary stay consistent on both sides of the figure?\",\n  \"ambiguities\": [\n    \"The feathered forms spreading from the shoulders could be read as wings, fur, or pure line energy; the image does not resolve this.\",\n    \"Candidate QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA (nnxyz #34, different collection) shares a scribble-over-painted-mass approach but its bright teal ground and multi-figure layout offer no focused formal parallel worth including.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: red-streaked eye sockets and white teeth visible; feathered forms on both sides confirmed as overlapping white, orange, and black lines with no solid fill; grey-brown gradient background with blurred circular patches confirmed.\",\n    \"Both comparison connections verified against inspected images: #26 confirms smooth painted dark volume with hollow eye sockets and braced arms; #28 confirms flat orange ground, sparse pink outlines, and bared-teeth mouth with red accent — contrasts stated in draft are accurate.\",\n    \"Reading word count falls within 55–80 range; context word count falls within 30–40 range; no prohibited vocabulary, invented intent, or unsupported subject identity found; QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA correctly excluded from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7/image.png",
+        "imageSHA256": "69fbfc56f19af629bff1a818da49ed68641babae3f646917e55a5bd2caa57631"
+      },
+      {
+        "artworkId": "Qmcufm6quhnpbA6AEKGu4BUyNQGfucMhPEH223ZuAMYeuq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcufm6quhnpbA6AEKGu4BUyNQGfucMhPEH223ZuAMYeuq/image.png",
+        "imageSHA256": "a1c9283977fcc1d070a1ef9530f6ae62bee8d48c1e63dcf1dd12dfa065ef4857"
+      },
+      {
+        "artworkId": "QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA/image.png",
+        "imageSHA256": "0701bf9c1565e8855e58c7ecca2e53b35449dd859633380517df8cfb9d989dc8"
+      },
+      {
+        "artworkId": "QmTewYBM8ZCwG55CGBXGEthivGiw5RiBYtxt2mEbNkka54",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTewYBM8ZCwG55CGBXGEthivGiw5RiBYtxt2mEbNkka54/image.png",
+        "imageSHA256": "519cf7d4435e43ccac20d10b5cd9ae5750eebfe093b9c30de30e9737ae6b0d4a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dark, roughly humanoid figure sits low and forward, its wide-open mouth showing white teeth outlined in red, with two red-streaked eye sockets above.\", \"Splayed feather-like forms spread from both sides of the figure's upper body — built from overlapping white, orange, and black lines rather than solid fill.\", \"The background is a soft grey-brown gradient with blurred circular light patches, placing the scribbled figure against a diffuse, almost foggy field.\"], \"reading\": \"The figure crouches and opens wide, teeth bared, red bleeding into the eye sockets and mouth rim. That red reads as alarm against the dark body. The feathered forms spreading from its shoulders soften the threat slightly — they could be wings or just the energy of the lines escaping outward. The blurred background pushes the figure forward without anchoring it to any specific place.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #26 and nnxyz nnotb #28 share the crouching-figure format. #26 works in near-total black with smooth painted surfaces; #28 uses a flat orange field and loose pink outlines — this piece sits between them in both palette weight and line density.\", \"connections\": [{\"targetArtworkId\": \"Qmcufm6quhnpbA6AEKGu4BUyNQGfucMhPEH223ZuAMYeuq\", \"reason\": \"Both show a crouching non-human figure with hollow eye sockets and arms braced forward, but #26 relies on smooth painted volume against pure black while #27 breaks the same pose open with dense overlapping scribble lines.\"}, {\"targetArtworkId\": \"QmTewYBM8ZCwG55CGBXGEthivGiw5RiBYtxt2mEbNkka54\", \"reason\": \"#28 shares the bared-teeth open mouth and red accent color, but strips the composition to a flat orange ground and sparse pink outlines, making the contrast with #27's layered dark scribble and feathered edges direct and visible.\"}], \"tags\": [\"crouching figure\", \"open mouth with teeth\", \"feather or wing forms\", \"overlapping scribble lines\", \"red eye and mouth accents\", \"diffuse blurred background\"], \"interpretiveTags\": [\"threatening mood\", \"uneasy energy\"], \"lookingQuestion\": \"Where exactly do the feathered lines begin and the body outline end — and does that boundary stay consistent on both sides of the figure?\", \"ambiguities\": [\"The feathered forms spreading from the shoulders could be read as wings, fur, or pure line energy; the image does not resolve this.\", \"Candidate QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA (nnxyz #34, different collection) shares a scribble-over-painted-mass approach but its bright teal ground and multi-figure layout offer no focused formal parallel worth including.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

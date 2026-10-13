@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:06:54.142766-05:00",
+    "usage": {
+      "inputTokens": 6218,
+      "outputTokens": 698,
+      "totalTokens": 6916,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20784
+    },
+    "requestId": "cc80e7b1-5491-424c-abd0-9e2635a050ac",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large golden-yellow round head dominates the upper two-thirds, with small triangular spikes in yellow and orange radiating from its crown and left side.\",\n    \"Lavender-pink glasses with asymmetric eyes sit across the face; the left eye is larger and darker, the right smaller and lighter, both outlined in loose black strokes.\",\n    \"A pale blue torso with dark buttons appears below, one arm extending right with a black scribbled hand; horizontal yellow lines and scattered triangle marks fill the lower left.\"\n  ],\n  \"reading\": \"The oversized round head, warm and sun-like, presses against the frame, leaving the small torso almost an afterthought. The mismatched eyes behind lavender lenses can read as wary or amused depending on where you look. Scattered triangles—yellow above, red at left, blue at right—create a loose halo of repeating shapes that feel like nervous punctuation. The teal background softens what might otherwise seem confrontational.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #2\\\" and \\\"nnxyz rawblocks #4.\\\" Where those neighbors pack the frame with dense overlapping lines, this work isolates a single figure against open color fields, marking a shift toward readable form.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd\",\n      \"reason\": \"Both feature a large head with triangular crown spikes and a teal-blue body area, but #4 fills the face with crossed-out eyes and bared teeth, replacing this work's quiet stare with visible aggression.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af\",\n      \"reason\": \"The zigzag teeth motif and concentric spiral in #2 share the triangle-and-line vocabulary seen here, but #2 buries those elements in dense layering rather than isolating them against open space.\"\n    }\n  ],\n  \"tags\": [\n    \"round head\",\n    \"triangle spikes\",\n    \"lavender glasses\",\n    \"teal background\",\n    \"single figure\",\n    \"scattered marks\"\n  ],\n  \"lookingQuestion\": \"How does the size difference between the two eyes behind the glasses change the expression you read in this face?\",\n  \"ambiguities\": [\n    \"The small dark marks near the mouth could be read as lips, teeth, or a separate scribbled element; the image is too loose to confirm.\",\n    \"Horizontal yellow lines at lower left may be a separate motif or part of the figure's environment; their relationship to the body is unclear.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW/image.png",
+        "imageSHA256": "41e1ffd72020f4a1357ef598a9ec4651781ef4ac7786564dc841031c93439dee"
+      },
+      {
+        "artworkId": "QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af/image.png",
+        "imageSHA256": "1607160a191b258ac5f63a04cba0ea468bdf0f5414281ff45f6f8075f0cb83a5"
+      },
+      {
+        "artworkId": "QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML/image.png",
+        "imageSHA256": "445b8e3e10a0632c27f2f230dab02ff03fee2ea3287a5886d4a13b7011b3603f"
+      },
+      {
+        "artworkId": "QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd/image.png",
+        "imageSHA256": "c87b2817581249389b145b1d5339b83253578268f557651c561c49cad7b88c63"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:07.024564-05:00",
+    "usage": {
+      "inputTokens": 6948,
+      "outputTokens": 825,
+      "totalTokens": 7773,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12777
+    },
+    "requestId": "466fc577-87d7-4b34-995f-3c996d587b00",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large golden-yellow round head fills the upper two-thirds; small triangular spikes in yellow and orange ring its crown, with red-and-black triangles clustered at the left side.\",\n    \"Lavender-pink glasses span the face with mismatched eyes—the left eye is larger and darker, the right smaller and lighter—both framed by loose black outlines.\",\n    \"A pale blue torso with dark buttons sits below; one arm extends right ending in a black scribbled hand; horizontal yellow lines and black triangles fill the lower-left corner.\"\n  ],\n  \"reading\": \"The oversized round head, warm and sun-like, presses against the frame, leaving the small torso almost an afterthought. The mismatched eyes behind lavender lenses can read as wary or amused depending on where you look. Scattered triangles—yellow above, red at left, blue at lower right—form a loose halo of repeating shapes that feel like nervous punctuation. The teal background softens what might otherwise seem confrontational.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #2\\\" and \\\"nnxyz rawblocks #4.\\\" Where those neighbors pack the frame with dense overlapping lines, this work isolates a single figure against open color fields, marking a shift toward readable form.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd\",\n      \"reason\": \"Both feature a large head with triangular crown spikes and a teal-blue body area, but #4 fills the face with crossed-out eyes and bared teeth, replacing this work's quiet stare.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af\",\n      \"reason\": \"The zigzag motif and triangle-and-line vocabulary in #2 echo shapes seen here, but #2 buries them in dense layering rather than isolating them against open space.\"\n    }\n  ],\n  \"tags\": [\n    \"round head\",\n    \"triangle spikes\",\n    \"lavender glasses\",\n    \"teal background\",\n    \"single figure\",\n    \"scattered marks\"\n  ],\n  \"lookingQuestion\": \"How does the size difference between the two eyes behind the glasses change the expression you read in this face?\",\n  \"ambiguities\": [\n    \"The small dark marks near the mouth could be read as lips, teeth, or a separate scribbled element; the image is too loose to confirm.\",\n    \"Horizontal yellow lines at lower left may be a separate motif or part of the figure's surroundings; their relationship to the body is unclear.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed triangles at left side are red-and-black, not just red; corrected first observation to reflect both colors visible in the image.\",\n    \"Confirmed scattered blue marks appear at lower right, not strictly right of the figure; reading adjusted from 'at right' to 'at lower right.'\",\n    \"Comparison to #4 checked: crossed-out eyes and bared teeth are visible in that image; removed the word 'aggression' as an unsupported emotional attribution.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW/image.png",
+        "imageSHA256": "41e1ffd72020f4a1357ef598a9ec4651781ef4ac7786564dc841031c93439dee"
+      },
+      {
+        "artworkId": "QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af/image.png",
+        "imageSHA256": "1607160a191b258ac5f63a04cba0ea468bdf0f5414281ff45f6f8075f0cb83a5"
+      },
+      {
+        "artworkId": "QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML/image.png",
+        "imageSHA256": "445b8e3e10a0632c27f2f230dab02ff03fee2ea3287a5886d4a13b7011b3603f"
+      },
+      {
+        "artworkId": "QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd/image.png",
+        "imageSHA256": "c87b2817581249389b145b1d5339b83253578268f557651c561c49cad7b88c63"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large golden-yellow round head dominates the upper two-thirds, with small triangular spikes in yellow and orange radiating from its crown and left side.\", \"Lavender-pink glasses with asymmetric eyes sit across the face; the left eye is larger and darker, the right smaller and lighter, both outlined in loose black strokes.\", \"A pale blue torso with dark buttons appears below, one arm extending right with a black scribbled hand; horizontal yellow lines and scattered triangle marks fill the lower left.\"], \"reading\": \"The oversized round head, warm and sun-like, presses against the frame, leaving the small torso almost an afterthought. The mismatched eyes behind lavender lenses can read as wary or amused depending on where you look. Scattered triangles—yellow above, red at left, blue at right—create a loose halo of repeating shapes that feel like nervous punctuation. The teal background softens what might otherwise seem confrontational.\", \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #2\\\" and \\\"nnxyz rawblocks #4.\\\" Where those neighbors pack the frame with dense overlapping lines, this work isolates a single figure against open color fields, marking a shift toward readable form.\", \"connections\": [{\"targetArtworkId\": \"QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd\", \"reason\": \"Both feature a large head with triangular crown spikes and a teal-blue body area, but #4 fills the face with crossed-out eyes and bared teeth, replacing this work's quiet stare with visible aggression.\"}, {\"targetArtworkId\": \"QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af\", \"reason\": \"The zigzag teeth motif and concentric spiral in #2 share the triangle-and-line vocabulary seen here, but #2 buries those elements in dense layering rather than isolating them against open space.\"}], \"tags\": [\"round head\", \"triangle spikes\", \"lavender glasses\", \"teal background\", \"single figure\", \"scattered marks\"], \"lookingQuestion\": \"How does the size difference between the two eyes behind the glasses change the expression you read in this face?\", \"ambiguities\": [\"The small dark marks near the mouth could be read as lips, teeth, or a separate scribbled element; the image is too loose to confirm.\", \"Horizontal yellow lines at lower left may be a separate motif or part of the figure's environment; their relationship to the body is unclear.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

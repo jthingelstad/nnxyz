@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:26.583649-05:00",
+    "usage": {
+      "inputTokens": 6114,
+      "outputTokens": 696,
+      "totalTokens": 6810,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19868
+    },
+    "requestId": "41a4c6fa-7d41-4e4a-b348-6fd8ae3cac7a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A single large eye with a red-orange iris sits inside a yellow-bordered oval at center, ringed by pink petal-like shapes and white zigzag lines.\",\n    \"Blue vertical bars drop below the eye like teeth or drips, while a larger blue grid of crossed lines fills the lower face area against dark maroon swirls.\",\n    \"A small red-orange mouth shape appears at the lower left of the head, and the flat pink background leaves the figure isolated with a dark, spiky neck base.\"\n  ],\n  \"reading\": \"The oversized eye dominates the composition like a wound or a lens, its red iris staring out from layers of containment—yellow frame, pink petals, zigzag lashes. Below it, blue bars and a crosshatched grid read as a cage or muzzle, sealing the lower face. The small mouth pushed to the edge feels muted, almost an afterthought. The effect can read as surveillance turned inward, a figure more watched than watching.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work shares its pink background and single-eye structure with its title neighbor \\\"nnxyz rawblocks #20,\\\" but replaces that piece's lavender fur-like crown with tight dark scribble. The nnotb family comparison shows how nnxyz distributes similar motifs—zigzag lines, dripping bars—across very different compositions.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmU9A6nVecRNWbnYUyGcwB7pU5E6V58YSSthSisJGqqwFk\",\n      \"reason\": \"Both place a single framed eye with hanging teal bars on the same pink ground, but #20 adds yellow spikes and a lavender mass at top, making its eye feel crowned rather than caged.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya\",\n      \"reason\": \"The nnotb piece scatters multiple faces and zigzag lines across a black field, contrasting sharply with #19's single locked-down figure on flat pink.\"\n    }\n  ],\n  \"tags\": [\n    \"single eye\",\n    \"blue grid bars\",\n    \"pink background\",\n    \"zigzag lines\",\n    \"layered face\"\n  ],\n  \"lookingQuestion\": \"How does the placement of the small mouth at the far left edge change the way you read the relationship between the eye and the rest of the face?\",\n  \"ambiguities\": [\n    \"Whether the blue vertical bars below the eye represent dripping, teeth, or a barrier is visually ambiguous.\",\n    \"The dark spiral forms filling the head could be hair, shadow, or an internal pattern—no single reading is confirmed by the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmP5zbJsTNpDuYNzVK2b4EX3gR2pUbi2tePuDPSw88PN5X",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP5zbJsTNpDuYNzVK2b4EX3gR2pUbi2tePuDPSw88PN5X/image.png",
+        "imageSHA256": "b500409d040e323d6e0457582314f09645673a35bc59a3ed0e3f3b55210b3fe8"
+      },
+      {
+        "artworkId": "QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk/image.png",
+        "imageSHA256": "ede0a62fe791701cd934d701c92bcfb9711020ec4a9532fcb026f7086c91ae1a"
+      },
+      {
+        "artworkId": "QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya/image.png",
+        "imageSHA256": "f83374faee1d16e7280fe3788a1cf11b481fe6703ebca51fc7ff94da66c6ec99"
+      },
+      {
+        "artworkId": "QmU9A6nVecRNWbnYUyGcwB7pU5E6V58YSSthSisJGqqwFk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU9A6nVecRNWbnYUyGcwB7pU5E6V58YSSthSisJGqqwFk/image.png",
+        "imageSHA256": "88f3bc497cfa97bfc1d1687fe83d7c6b65fc5c9c1fad1b314dadb2096ffa4d23"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:37.637349-05:00",
+    "usage": {
+      "inputTokens": 6844,
+      "outputTokens": 796,
+      "totalTokens": 7640,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10976
+    },
+    "requestId": "9726ff2d-431e-4637-918a-cad5c9dc4a48",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A single large eye with a red-orange iris sits inside a yellow-bordered oval at center, surrounded by pink petal-like shapes and white zigzag lines.\",\n    \"Teal vertical bars hang below the eye, and a blue crosshatched grid fills the lower face area against dark maroon spiral strokes.\",\n    \"A small red-orange mouth appears at the lower left edge of the head, and the flat pink background isolates the figure above a dark, spiky neck base.\"\n  ],\n  \"reading\": \"The oversized eye dominates like a wound or a lens, its red iris staring out from layers of containment—yellow frame, pink petals, zigzag lashes. Below, teal bars and a crosshatched grid read as a cage or muzzle sealing the lower face. The small mouth pushed to the far edge feels muted, almost an afterthought. The effect can read as a figure more watched than watching.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work shares its pink background and single-eye structure with title neighbor \\\"nnxyz rawblocks #20,\\\" but replaces that piece's lavender mass at the crown with tight dark scribble. The nnotb comparison shows similar motifs—zigzag lines, hanging bars—spread across a very different layout.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmU9A6nVecRNWbnYUyGcwB7pU5E6V58YSSthSisJGqqwFk\",\n      \"reason\": \"Both place a single framed eye with hanging teal bars on the same pink ground, but #20 adds yellow spikes and a lavender mass at top, making its eye feel crowned rather than enclosed.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya\",\n      \"reason\": \"The nnotb piece scatters multiple faces and zigzag lines across a black field, contrasting with #19's single locked-down figure on flat pink.\"\n    }\n  ],\n  \"tags\": [\n    \"single eye\",\n    \"blue grid bars\",\n    \"pink background\",\n    \"zigzag lines\",\n    \"layered face\",\n    \"dark spiral fill\"\n  ],\n  \"lookingQuestion\": \"How does the placement of the small mouth at the far left edge change the way you read the relationship between the eye and the rest of the face?\",\n  \"ambiguities\": [\n    \"Whether the teal vertical bars below the eye represent dripping, teeth, or a barrier is visually ambiguous.\",\n    \"The dark spiral forms filling the head could be hair, shadow, or an internal pattern—no single reading is confirmed by the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Changed 'blue vertical bars' to 'teal vertical bars' in observations and reading to match the visible blue-green color more accurately.\",\n    \"Confirmed pink background, yellow eye border, red-orange iris, crosshatched blue grid, and small mouth at lower left all match the primary image.\",\n    \"Confirmed #20 comparison: lavender mass at top, pink petals, teal hanging bars, and same pink background are all visible in that image.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmP5zbJsTNpDuYNzVK2b4EX3gR2pUbi2tePuDPSw88PN5X",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP5zbJsTNpDuYNzVK2b4EX3gR2pUbi2tePuDPSw88PN5X/image.png",
+        "imageSHA256": "b500409d040e323d6e0457582314f09645673a35bc59a3ed0e3f3b55210b3fe8"
+      },
+      {
+        "artworkId": "QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk/image.png",
+        "imageSHA256": "ede0a62fe791701cd934d701c92bcfb9711020ec4a9532fcb026f7086c91ae1a"
+      },
+      {
+        "artworkId": "QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya/image.png",
+        "imageSHA256": "f83374faee1d16e7280fe3788a1cf11b481fe6703ebca51fc7ff94da66c6ec99"
+      },
+      {
+        "artworkId": "QmU9A6nVecRNWbnYUyGcwB7pU5E6V58YSSthSisJGqqwFk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU9A6nVecRNWbnYUyGcwB7pU5E6V58YSSthSisJGqqwFk/image.png",
+        "imageSHA256": "88f3bc497cfa97bfc1d1687fe83d7c6b65fc5c9c1fad1b314dadb2096ffa4d23"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A single large eye with a red-orange iris sits inside a yellow-bordered oval at center, ringed by pink petal-like shapes and white zigzag lines.\", \"Blue vertical bars drop below the eye like teeth or drips, while a larger blue grid of crossed lines fills the lower face area against dark maroon swirls.\", \"A small red-orange mouth shape appears at the lower left of the head, and the flat pink background leaves the figure isolated with a dark, spiky neck base.\"], \"reading\": \"The oversized eye dominates the composition like a wound or a lens, its red iris staring out from layers of containment—yellow frame, pink petals, zigzag lashes. Below it, blue bars and a crosshatched grid read as a cage or muzzle, sealing the lower face. The small mouth pushed to the edge feels muted, almost an afterthought. The effect can read as surveillance turned inward, a figure more watched than watching.\", \"contextAngle\": \"Within the owned rawblocks subset, this work shares its pink background and single-eye structure with its title neighbor \\\"nnxyz rawblocks #20,\\\" but replaces that piece's lavender fur-like crown with tight dark scribble. The nnotb family comparison shows how nnxyz distributes similar motifs—zigzag lines, dripping bars—across very different compositions.\", \"connections\": [{\"targetArtworkId\": \"QmU9A6nVecRNWbnYUyGcwB7pU5E6V58YSSthSisJGqqwFk\", \"reason\": \"Both place a single framed eye with hanging teal bars on the same pink ground, but #20 adds yellow spikes and a lavender mass at top, making its eye feel crowned rather than caged.\"}, {\"targetArtworkId\": \"QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya\", \"reason\": \"The nnotb piece scatters multiple faces and zigzag lines across a black field, contrasting sharply with #19's single locked-down figure on flat pink.\"}], \"tags\": [\"single eye\", \"blue grid bars\", \"pink background\", \"zigzag lines\", \"layered face\"], \"lookingQuestion\": \"How does the placement of the small mouth at the far left edge change the way you read the relationship between the eye and the rest of the face?\", \"ambiguities\": [\"Whether the blue vertical bars below the eye represent dripping, teeth, or a barrier is visually ambiguous.\", \"The dark spiral forms filling the head could be hair, shadow, or an internal pattern—no single reading is confirmed by the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

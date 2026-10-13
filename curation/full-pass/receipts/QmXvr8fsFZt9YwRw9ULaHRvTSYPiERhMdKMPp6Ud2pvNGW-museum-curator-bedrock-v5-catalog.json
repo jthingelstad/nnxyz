@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:56.037820-05:00",
+    "usage": {
+      "inputTokens": 6249,
+      "outputTokens": 780,
+      "totalTokens": 7029,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12770
+    },
+    "requestId": "ec8ac6de-250a-41ca-ae73-4dca5e036acd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval form dominates the center against a flat olive-green ground, built from thick black arcing lines with orange and brown hatching along its upper edge.\",\n    \"Three spiral clusters sit at different scales inside the oval: a tight black coil upper-left, a looser lavender-pink coil center-left, and a dense yellow-and-black rosette upper-center.\",\n    \"Bright sky-blue lines cut diagonally across the mid-section, while a red zigzag band and black block lettering fill a rectangular zone near the lower center.\"\n  ],\n  \"reading\": \"The olive ground holds everything at a low simmer before the eye reaches the oval's interior, where spirals of different sizes and colors pull attention in competing directions. The lavender coil and the yellow rosette sit close but feel unrelated in weight and mood — one soft, one dense. Blue diagonals and a red zigzag band cut across the lower half, adding a restless undercurrent to what the outer arc tries to contain.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work shares its immediate title neighbors — nnotb #197 and nnotb #199 — in both title-derived and recorded-creation order. Where #197 spreads its marks across a teal field and #199 presses forms into a cool grey ground, #198 concentrates its energy inside a single warm oval on olive.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG\",\n      \"reason\": \"Both works use a large enclosing arc to frame dense interior mark-making, but #199 replaces the warm olive ground and lavender spirals with a cool grey field and red-dominant hatching, making the structural similarity readable as a contrast in temperature.\"\n    },\n    {\n      \"targetArtworkId\": \"QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L\",\n      \"reason\": \"nifty faces #92 shares the same olive-green ground tone and uses circular forms as focal anchors, offering a cross-collection comparison of how the same background color frames very different internal geometries — spirals here versus framed rectangles there.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral forms\",\n    \"oval enclosure\",\n    \"olive ground\",\n    \"zigzag line\",\n    \"blue diagonal\",\n    \"block lettering\"\n  ],\n  \"interpretiveTags\": [\n    \"contained tension\",\n    \"competing focal points\"\n  ],\n  \"lookingQuestion\": \"Where does your eye exit the oval — through the blue diagonals, the red zigzag band, or the loose marks scattered on the olive ground outside the arc?\",\n  \"ambiguities\": [\n    \"The black block lettering in the lower-center rectangle may be legible text or purely mark-based; image resolution does not confirm either reading.\",\n    \"Title-derived order and recorded-creation order align for this work, but the metadata notes gaps exist in the broader nnotb family, so adjacency does not confirm sequential making.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXvr8fsFZt9YwRw9ULaHRvTSYPiERhMdKMPp6Ud2pvNGW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXvr8fsFZt9YwRw9ULaHRvTSYPiERhMdKMPp6Ud2pvNGW/image.png",
+        "imageSHA256": "94ff13caee2d187361a248c8606041033920ce7ccd2694ee8e85b999a0aa0818"
+      },
+      {
+        "artworkId": "QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4/image.png",
+        "imageSHA256": "f04d6b2eb90ef8427b9cea0084da2801cf8c3bd25e03cf8d66a21fda1e4cc43b"
+      },
+      {
+        "artworkId": "QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L/image.png",
+        "imageSHA256": "4febcf90aad6d497861f904d5749a5883bdbf0a9f2f5154e7ff9ee93db9b9aa6"
+      },
+      {
+        "artworkId": "QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG/image.png",
+        "imageSHA256": "8a841f005644c131b31cae6a90fca9d8878f6cc51d81c446f7f808660287f27a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:01.959192-05:00",
+    "usage": {
+      "inputTokens": 7051,
+      "outputTokens": 887,
+      "totalTokens": 7938,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5852
+    },
+    "requestId": "047739a2-4cd7-4028-9bef-7f29e46321a2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval form dominates the center against a flat olive-green ground, built from thick black arcing lines with orange and brown hatching along its upper edge.\",\n    \"Three spiral clusters sit at different scales inside the oval: a tight black coil upper-left, a looser lavender-pink coil center-left, and a dense yellow-and-black rosette upper-center.\",\n    \"Bright sky-blue lines cut diagonally across the mid-section, while a red zigzag band and black block marks fill a rectangular zone near the lower center.\"\n  ],\n  \"reading\": \"The olive ground holds everything at a low simmer before the eye reaches the oval's interior, where spirals of different sizes and colors pull attention in competing directions. The lavender coil and the yellow rosette sit close but feel unrelated in weight and mood — one soft, one dense. Blue diagonals and a red zigzag band cut across the lower half, adding a restless undercurrent to what the outer arc tries to contain.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work shares its immediate title neighbors — nnotb #197 and nnotb #199 — in both title-derived and recorded-creation order. Where #197 spreads marks across a teal field and #199 presses forms into a cool grey ground, #198 concentrates its marks inside a single warm oval on olive.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG\",\n      \"reason\": \"Both works use a large enclosing arc to frame dense interior mark-making, but #199 replaces the warm olive ground and lavender spirals with a cool grey field and red-dominant hatching, making the structural similarity readable as a contrast in temperature.\"\n    },\n    {\n      \"targetArtworkId\": \"QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L\",\n      \"reason\": \"nifty faces #92 shares the same olive-green ground and uses circular forms as focal anchors, offering a cross-collection comparison of how the same background color frames very different internal geometries — spirals here versus framed rectangles there.\"\n    }\n  ],\n  \"tags\": [\"spiral forms\", \"oval enclosure\", \"olive ground\", \"zigzag line\", \"blue diagonal\", \"block marks\"],\n  \"interpretiveTags\": [\"contained tension\", \"competing focal points\"],\n  \"lookingQuestion\": \"Where does your eye exit the oval — through the blue diagonals, the red zigzag band, or the loose marks scattered on the olive ground outside the arc?\",\n  \"ambiguities\": [\n    \"The black block marks in the lower-center rectangle may be legible text or purely mark-based; image resolution does not confirm either reading.\",\n    \"Title-derived order and recorded-creation order align for this work, but the metadata notes gaps exist in the broader nnotb family, so adjacency does not confirm sequential making.\"\n  ],\n  \"reviewFindings\": [\n    \"Changed 'block lettering' to 'block marks' in observation 3 and tags to avoid asserting legible text, consistent with the ambiguity note.\",\n    \"Confirmed olive ground, three spiral clusters, blue diagonals, red zigzag, and enclosing oval arc are all directly visible in the primary image.\",\n    \"Both comparison connections verified against inspected images: #199 shows a large enclosing arc on a grey-blue ground; nifty faces #92 shows the same olive ground with circular focal forms inside rectangular frames.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXvr8fsFZt9YwRw9ULaHRvTSYPiERhMdKMPp6Ud2pvNGW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXvr8fsFZt9YwRw9ULaHRvTSYPiERhMdKMPp6Ud2pvNGW/image.png",
+        "imageSHA256": "94ff13caee2d187361a248c8606041033920ce7ccd2694ee8e85b999a0aa0818"
+      },
+      {
+        "artworkId": "QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4/image.png",
+        "imageSHA256": "f04d6b2eb90ef8427b9cea0084da2801cf8c3bd25e03cf8d66a21fda1e4cc43b"
+      },
+      {
+        "artworkId": "QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L/image.png",
+        "imageSHA256": "4febcf90aad6d497861f904d5749a5883bdbf0a9f2f5154e7ff9ee93db9b9aa6"
+      },
+      {
+        "artworkId": "QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG/image.png",
+        "imageSHA256": "8a841f005644c131b31cae6a90fca9d8878f6cc51d81c446f7f808660287f27a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large oval form dominates the center against a flat olive-green ground, built from thick black arcing lines with orange and brown hatching along its upper edge.\", \"Three spiral clusters sit at different scales inside the oval: a tight black coil upper-left, a looser lavender-pink coil center-left, and a dense yellow-and-black rosette upper-center.\", \"Bright sky-blue lines cut diagonally across the mid-section, while a red zigzag band and black block lettering fill a rectangular zone near the lower center.\"], \"reading\": \"The olive ground holds everything at a low simmer before the eye reaches the oval's interior, where spirals of different sizes and colors pull attention in competing directions. The lavender coil and the yellow rosette sit close but feel unrelated in weight and mood — one soft, one dense. Blue diagonals and a red zigzag band cut across the lower half, adding a restless undercurrent to what the outer arc tries to contain.\", \"contextAngle\": \"Within the owned nnotb subset, this work shares its immediate title neighbors — nnotb #197 and nnotb #199 — in both title-derived and recorded-creation order. Where #197 spreads its marks across a teal field and #199 presses forms into a cool grey ground, #198 concentrates its energy inside a single warm oval on olive.\", \"connections\": [{\"targetArtworkId\": \"QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG\", \"reason\": \"Both works use a large enclosing arc to frame dense interior mark-making, but #199 replaces the warm olive ground and lavender spirals with a cool grey field and red-dominant hatching, making the structural similarity readable as a contrast in temperature.\"}, {\"targetArtworkId\": \"QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L\", \"reason\": \"nifty faces #92 shares the same olive-green ground tone and uses circular forms as focal anchors, offering a cross-collection comparison of how the same background color frames very different internal geometries — spirals here versus framed rectangles there.\"}], \"tags\": [\"spiral forms\", \"oval enclosure\", \"olive ground\", \"zigzag line\", \"blue diagonal\", \"block lettering\"], \"interpretiveTags\": [\"contained tension\", \"competing focal points\"], \"lookingQuestion\": \"Where does your eye exit the oval — through the blue diagonals, the red zigzag band, or the loose marks scattered on the olive ground outside the arc?\", \"ambiguities\": [\"The black block lettering in the lower-center rectangle may be legible text or purely mark-based; image resolution does not confirm either reading.\", \"Title-derived order and recorded-creation order align for this work, but the metadata notes gaps exist in the broader nnotb family, so adjacency does not confirm sequential making.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

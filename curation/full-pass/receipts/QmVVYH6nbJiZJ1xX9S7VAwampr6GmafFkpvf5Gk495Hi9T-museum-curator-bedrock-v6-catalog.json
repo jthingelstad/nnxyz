@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:28.538781-05:00",
+    "usage": {
+      "inputTokens": 6220,
+      "outputTokens": 704,
+      "totalTokens": 6924,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 21261
+    },
+    "requestId": "e034c86f-6d7c-431d-b492-6f1223062360",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A head and upper body fill the right-center, built from tangled brown and black scribble lines over warm brown fill, with a single visible eye carrying a small blue-white highlight.\",\n    \"A blue draping shape covered in evenly spaced yellow dots wraps around the figure's head and shoulders, its folds suggested by white grid-like lines running through the blue.\",\n    \"Vertical white streaks cascade down the left edge against a flat teal background, while a loose gray rectangle frames the upper composition and a dark scribble mass anchors the lower right.\"\n  ],\n  \"reading\": \"The figure emerges from a tangle of looping lines, its face barely resolved—one eye peers out through the knot of marks. The blue, dot-covered wrap reads as both shelter and weight, pressing the head downward. A red smear at the mouth feels raw, almost wounded. The white streaks at left stand apart like rain or bars, creating a sense of separation between the figure and open space.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"rawblocks #10\\\" and \\\"rawblocks #12.\\\" All three feature a single figure against a flat-color ground, but this piece is the most enclosed—its figure wrapped and partially hidden rather than exposed or in motion.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic\",\n      \"reason\": \"Both use tangled black scribble to define a head over brown tones, but #10's figure reaches outward with bare arms while #11's figure is covered and turned inward.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD\",\n      \"reason\": \"Both place a single figure against a saturated flat background, but #12 shifts to deep purple and exposes the body, contrasting with #11's teal field and concealing wrap.\"\n    }\n  ],\n  \"tags\": [\n    \"single figure\",\n    \"scribble lines\",\n    \"dotted pattern\",\n    \"teal background\",\n    \"wrapped form\",\n    \"white vertical streaks\"\n  ],\n  \"lookingQuestion\": \"How does the patterned blue wrap change the way you read the figure's posture—does it seem protective, restrictive, or something else based on how the lines and dots sit against the body?\",\n  \"ambiguities\": [\n    \"The red marks near the mouth area could be read as lips, an open mouth, or an unrelated color accent; the scribble density makes it hard to resolve.\",\n    \"The white vertical streaks at left may be part of the scene or a framing device; their separation from the figure leaves their role open.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVVYH6nbJiZJ1xX9S7VAwampr6GmafFkpvf5Gk495Hi9T",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVVYH6nbJiZJ1xX9S7VAwampr6GmafFkpvf5Gk495Hi9T/image.png",
+        "imageSHA256": "d3ce5b4446d3ed4239673984a032f213a56a67128485f32fe2428e58f20145e9"
+      },
+      {
+        "artworkId": "QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic/image.png",
+        "imageSHA256": "3bec27a69d291903c1c5c25a89f1ae61ebf463f5dab39eba321f398cc22be473"
+      },
+      {
+        "artworkId": "QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4/image.png",
+        "imageSHA256": "f04d6b2eb90ef8427b9cea0084da2801cf8c3bd25e03cf8d66a21fda1e4cc43b"
+      },
+      {
+        "artworkId": "QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD/image.png",
+        "imageSHA256": "0431fbef46d3493e70a572bb28c2e78a1ac47e510797d33265c8e3c5529fda3e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:40.121518-05:00",
+    "usage": {
+      "inputTokens": 6956,
+      "outputTokens": 822,
+      "totalTokens": 7778,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11502
+    },
+    "requestId": "c8115eea-240c-4356-a438-108145c0afb2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A head and upper body fill the right-center, built from tangled brown and black scribble lines over warm brown fill, with a single visible eye carrying a small blue-white highlight.\",\n    \"A blue draping shape covered in evenly spaced yellow dots wraps around the figure's head and shoulders, its folds suggested by white grid-like lines running through the blue.\",\n    \"Vertical white streaks cascade down the left edge against a flat teal background, while a loose gray rectangle frames the upper composition and a dark scribble mass anchors the lower right.\"\n  ],\n  \"reading\": \"The figure emerges from a tangle of looping lines, its face barely resolved—one eye peers out through the knot of marks. The blue, dot-covered wrap reads as both shelter and weight, pressing the head downward. A red smear at the mouth feels raw, almost wounded. The white streaks at left stand apart like rain or bars, suggesting separation between the figure and open space.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"rawblocks #10\\\" and \\\"rawblocks #12.\\\" All three show a single figure against a flat-color ground, but here the figure is the most enclosed—wrapped and partially hidden rather than exposed or in motion.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic\",\n      \"reason\": \"Both use tangled black scribble over brown tones to define a head, but #10's figure reaches outward with bare arms while #11's is covered and turned inward.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD\",\n      \"reason\": \"Both place a single figure against a saturated flat background, but #12 shifts to deep purple and exposes the body, contrasting with #11's teal field and concealing wrap.\"\n    }\n  ],\n  \"tags\": [\n    \"single figure\",\n    \"scribble lines\",\n    \"dotted pattern\",\n    \"teal background\",\n    \"wrapped form\",\n    \"white vertical streaks\"\n  ],\n  \"lookingQuestion\": \"How does the patterned blue wrap change the way you read the figure's posture—does it seem protective, restrictive, or something else based on how the lines and dots sit against the body?\",\n  \"ambiguities\": [\n    \"The red marks near the mouth area could be read as lips, an open mouth, or an unrelated color accent; scribble density makes it hard to resolve.\",\n    \"The white vertical streaks at left may be part of the scene or a framing device; their separation from the figure leaves their role open.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed single visible eye with blue-white highlight at center-right of the face area; a second eye socket is suggested by a dark loop but lacks the same highlight.\",\n    \"Yellow dots are evenly round and spaced across the blue wrap, verified against the image; white lines through the blue confirmed as loose grid rather than solid stripes.\",\n    \"Reading trimmed from 80 to 63 words; replaced 'creating a sense of' with 'suggesting' to stay within limit and reduce abstraction.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVVYH6nbJiZJ1xX9S7VAwampr6GmafFkpvf5Gk495Hi9T",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVVYH6nbJiZJ1xX9S7VAwampr6GmafFkpvf5Gk495Hi9T/image.png",
+        "imageSHA256": "d3ce5b4446d3ed4239673984a032f213a56a67128485f32fe2428e58f20145e9"
+      },
+      {
+        "artworkId": "QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic/image.png",
+        "imageSHA256": "3bec27a69d291903c1c5c25a89f1ae61ebf463f5dab39eba321f398cc22be473"
+      },
+      {
+        "artworkId": "QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4/image.png",
+        "imageSHA256": "f04d6b2eb90ef8427b9cea0084da2801cf8c3bd25e03cf8d66a21fda1e4cc43b"
+      },
+      {
+        "artworkId": "QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD/image.png",
+        "imageSHA256": "0431fbef46d3493e70a572bb28c2e78a1ac47e510797d33265c8e3c5529fda3e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A head and upper body fill the right-center, built from tangled brown and black scribble lines over warm brown fill, with a single visible eye carrying a small blue-white highlight.\", \"A blue draping shape covered in evenly spaced yellow dots wraps around the figure's head and shoulders, its folds suggested by white grid-like lines running through the blue.\", \"Vertical white streaks cascade down the left edge against a flat teal background, while a loose gray rectangle frames the upper composition and a dark scribble mass anchors the lower right.\"], \"reading\": \"The figure emerges from a tangle of looping lines, its face barely resolved—one eye peers out through the knot of marks. The blue, dot-covered wrap reads as both shelter and weight, pressing the head downward. A red smear at the mouth feels raw, almost wounded. The white streaks at left stand apart like rain or bars, creating a sense of separation between the figure and open space.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"rawblocks #10\\\" and \\\"rawblocks #12.\\\" All three feature a single figure against a flat-color ground, but this piece is the most enclosed—its figure wrapped and partially hidden rather than exposed or in motion.\", \"connections\": [{\"targetArtworkId\": \"QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic\", \"reason\": \"Both use tangled black scribble to define a head over brown tones, but #10's figure reaches outward with bare arms while #11's figure is covered and turned inward.\"}, {\"targetArtworkId\": \"QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD\", \"reason\": \"Both place a single figure against a saturated flat background, but #12 shifts to deep purple and exposes the body, contrasting with #11's teal field and concealing wrap.\"}], \"tags\": [\"single figure\", \"scribble lines\", \"dotted pattern\", \"teal background\", \"wrapped form\", \"white vertical streaks\"], \"lookingQuestion\": \"How does the patterned blue wrap change the way you read the figure's posture—does it seem protective, restrictive, or something else based on how the lines and dots sit against the body?\", \"ambiguities\": [\"The red marks near the mouth area could be read as lips, an open mouth, or an unrelated color accent; the scribble density makes it hard to resolve.\", \"The white vertical streaks at left may be part of the scene or a framing device; their separation from the figure leaves their role open.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

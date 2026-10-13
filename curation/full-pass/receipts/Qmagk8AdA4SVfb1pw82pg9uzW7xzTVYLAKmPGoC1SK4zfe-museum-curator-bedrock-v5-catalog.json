@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:54.055825-05:00",
+    "usage": {
+      "inputTokens": 5772,
+      "outputTokens": 655,
+      "totalTokens": 6427,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11711
+    },
+    "requestId": "0b3e6d6c-ef71-4db8-98c2-d6d588fb776b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark figure bends forward at the waist, head down, with a small yellow X mark at the neck; wavy radiating lines spread outward from the head in all directions against a flat pink field.\",\n    \"Two squat rectangular forms sit beneath the figure, each bearing a starburst or sun-like mark drawn in black line; a horizontal shadow line runs beneath them.\",\n    \"A small spiral snail shape sits in the lower left corner, isolated and low to the ground, while the artist's signature mark appears in the lower right.\"\n  ],\n  \"reading\": \"The figure's bowed posture and the lines fanning out from its head read as strain or overwhelm rather than triumph. The yellow X at the neck is the only color accent, small but insistent. Below, the two boxy forms anchor the composition with their matching starburst marks. The snail in the far corner introduces a second scale and a quieter pace, pulling against the radiating tension above.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work stands apart from its immediate neighbors: nnxyz nnotb #125 fills the frame with dense layered color, and nnxyz nnotb #127 is an all-over abstract in orange. This piece uses open pink space and a single isolated figure instead.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u\",\n      \"reason\": \"Both works share a pink background and use a single yellow X mark as a focal color accent against otherwise black line drawing, making the X a recurring visual signal across the owned collection.\"\n    }\n  ],\n  \"tags\": [\n    \"bent figure\",\n    \"radiating wavy lines\",\n    \"pink ground\",\n    \"yellow X mark\",\n    \"starburst rectangles\",\n    \"isolated snail\"\n  ],\n  \"interpretiveTags\": [\n    \"strain or exhaustion\",\n    \"scale contrast\",\n    \"quiet versus loud\"\n  ],\n  \"lookingQuestion\": \"What does the distance between the snail and the radiating figure do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The starburst marks on the two rectangular forms could be decorative symbols or functional labels; their meaning is not resolvable from the image alone.\",\n    \"QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh (#125) shares title-family and recorded-creation adjacency but is visually too different to support a meaningful formal connection; omitted from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmagk8AdA4SVfb1pw82pg9uzW7xzTVYLAKmPGoC1SK4zfe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmagk8AdA4SVfb1pw82pg9uzW7xzTVYLAKmPGoC1SK4zfe/image.png",
+        "imageSHA256": "8f3b17673b4cdc5bd3684ce5a1db32e4f957f8f7ace16d463232e50ea8d2ac0f"
+      },
+      {
+        "artworkId": "QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh/image.png",
+        "imageSHA256": "a9766968e0208726a314e72e257cdb4ed0a5b4a2e51a6ef5455e2908a66e457f"
+      },
+      {
+        "artworkId": "QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u/image.png",
+        "imageSHA256": "60fcbef398fd369b44012fe211ef4ff5bb42ed7478818d96903421ba36af089a"
+      },
+      {
+        "artworkId": "QmfQ8ovXZpLsVRyrRmJbYGMTZ7wvG8ujxuKRMD63tFX3F1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfQ8ovXZpLsVRyrRmJbYGMTZ7wvG8ujxuKRMD63tFX3F1/image.png",
+        "imageSHA256": "1eab0de4bc260a3023e5186795b6bff5f81edb36b132148f7b202f92ec82bd2b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:00.473557-05:00",
+    "usage": {
+      "inputTokens": 6456,
+      "outputTokens": 794,
+      "totalTokens": 7250,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6355
+    },
+    "requestId": "fbbc6960-8452-44c3-8c57-217ac0157f00",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark figure bends forward at the waist, head down, with a small yellow X mark at the neck; wavy radiating lines spread outward from the head in all directions against a flat pink field.\",\n    \"Two squat rectangular forms sit beneath the figure, each bearing a starburst mark drawn in black line; a horizontal shadow line runs beneath them.\",\n    \"A small spiral snail shape sits in the lower left corner, isolated and low to the ground, while the artist's signature mark appears in the lower right.\"\n  ],\n  \"reading\": \"The figure's bowed posture and the lines fanning from its head read as strain rather than triumph. The yellow X at the neck is the only color accent—small but insistent against the open pink field. Below, two boxy forms with matching starburst marks anchor the composition. The snail in the far corner introduces a second scale and a quieter pace, pulling against the radiating tension above.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work contrasts sharply with its immediate neighbors: nnxyz nnotb #125 fills the frame with dense layered color, and nnxyz nnotb #127 is an all-over abstract in orange. Here, open pink space and a single isolated figure replace both approaches.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u\",\n      \"reason\": \"Both works use a pink background and place a yellow X mark as the sole color accent within otherwise black line drawing, making the X a recurring visual signal across the owned collection.\"\n    }\n  ],\n  \"tags\": [\"bent figure\", \"radiating wavy lines\", \"pink ground\", \"yellow X mark\", \"starburst rectangles\", \"isolated snail\"],\n  \"interpretiveTags\": [\"strain or exhaustion\", \"scale contrast\", \"quiet versus loud\"],\n  \"lookingQuestion\": \"What does the distance between the snail and the radiating figure do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The starburst marks on the two rectangular forms could be decorative symbols or functional labels; their meaning is not resolvable from the image alone.\",\n    \"QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh (#125) is title-family and recorded-creation adjacent but visually too different—dense multicolor layering versus open pink ground—to support a meaningful formal connection; omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"Yellow X placement confirmed at neck/face area of figure in primary image; same yellow X confirmed visible in QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u on pink ground—connection retained as evidence-based.\",\n    \"Shadow line beneath rectangular forms confirmed visible; 'sun-like' softened to 'starburst' to avoid unsupported subject identification.\",\n    \"Word counts checked: reading 68 words, contextAngle 47 words, both within limits; no invented biography, technique, or intent language detected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmagk8AdA4SVfb1pw82pg9uzW7xzTVYLAKmPGoC1SK4zfe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmagk8AdA4SVfb1pw82pg9uzW7xzTVYLAKmPGoC1SK4zfe/image.png",
+        "imageSHA256": "8f3b17673b4cdc5bd3684ce5a1db32e4f957f8f7ace16d463232e50ea8d2ac0f"
+      },
+      {
+        "artworkId": "QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh/image.png",
+        "imageSHA256": "a9766968e0208726a314e72e257cdb4ed0a5b4a2e51a6ef5455e2908a66e457f"
+      },
+      {
+        "artworkId": "QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u/image.png",
+        "imageSHA256": "60fcbef398fd369b44012fe211ef4ff5bb42ed7478818d96903421ba36af089a"
+      },
+      {
+        "artworkId": "QmfQ8ovXZpLsVRyrRmJbYGMTZ7wvG8ujxuKRMD63tFX3F1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfQ8ovXZpLsVRyrRmJbYGMTZ7wvG8ujxuKRMD63tFX3F1/image.png",
+        "imageSHA256": "1eab0de4bc260a3023e5186795b6bff5f81edb36b132148f7b202f92ec82bd2b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dark figure bends forward at the waist, head down, with a small yellow X mark at the neck; wavy radiating lines spread outward from the head in all directions against a flat pink field.\", \"Two squat rectangular forms sit beneath the figure, each bearing a starburst or sun-like mark drawn in black line; a horizontal shadow line runs beneath them.\", \"A small spiral snail shape sits in the lower left corner, isolated and low to the ground, while the artist's signature mark appears in the lower right.\"], \"reading\": \"The figure's bowed posture and the lines fanning out from its head read as strain or overwhelm rather than triumph. The yellow X at the neck is the only color accent, small but insistent. Below, the two boxy forms anchor the composition with their matching starburst marks. The snail in the far corner introduces a second scale and a quieter pace, pulling against the radiating tension above.\", \"contextAngle\": \"Within the owned nnotb subset, this work stands apart from its immediate neighbors: nnxyz nnotb #125 fills the frame with dense layered color, and nnxyz nnotb #127 is an all-over abstract in orange. This piece uses open pink space and a single isolated figure instead.\", \"connections\": [{\"targetArtworkId\": \"QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u\", \"reason\": \"Both works share a pink background and use a single yellow X mark as a focal color accent against otherwise black line drawing, making the X a recurring visual signal across the owned collection.\"}], \"tags\": [\"bent figure\", \"radiating wavy lines\", \"pink ground\", \"yellow X mark\", \"starburst rectangles\", \"isolated snail\"], \"interpretiveTags\": [\"strain or exhaustion\", \"scale contrast\", \"quiet versus loud\"], \"lookingQuestion\": \"What does the distance between the snail and the radiating figure do to how you move through the image?\", \"ambiguities\": [\"The starburst marks on the two rectangular forms could be decorative symbols or functional labels; their meaning is not resolvable from the image alone.\", \"QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh (#125) shares title-family and recorded-creation adjacency but is visually too different to support a meaningful formal connection; omitted from connections.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

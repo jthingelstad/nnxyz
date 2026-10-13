@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:18.264288-05:00",
+    "usage": {
+      "inputTokens": 6427,
+      "outputTokens": 742,
+      "totalTokens": 7169,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11765
+    },
+    "requestId": "652f65b6-0fa2-4b9f-91c7-a72c397cd0d4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dense pink-and-orange field is divided into stacked rectangular black zones, with yellow-green oval marks scattered across the mid-section like a repeating motif.\",\n    \"In the lower center, a red-outlined face with wide circular eyes and an open mouth floats against an orange rectangle, arms extending outward in a splayed gesture.\",\n    \"White line scribbles, teal dashes, and looping red marks layer over every zone, so no area of the composition reads as background.\"\n  ],\n  \"reading\": \"The image packs multiple zones of black mass and hot color into a single flat plane, refusing any clear foreground or depth. A red-outlined face near the bottom reads as alarmed or exposed against the surrounding density. The yellow-green ovals repeat across the middle like punctuation, giving the eye a rhythm to follow before the white scribble lines pull attention back into the noise. The overall feeling is crowded pressure.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #176 and nnxyz nnotb #178 both center a single rounded form on a solid field—a contrast to #177's wall-to-wall rectangular packing and hot pink ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY\",\n      \"reason\": \"nnxyz nnotb #178 uses a similar red-outlined open-mouthed face with spiral and cross-hatched eye marks, but isolates it on a dark olive ground rather than embedding it in a packed multi-zone field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQNfhm3RYe8dnYn1TCfwLyZu9KtYM7mcDoaJcGoccPmxR\",\n      \"reason\": \"nnxyz nifty faces #42 shares the device of circular scribbled eyes and a wide-open tooth-lined mouth, but fills the face form with layered color strands rather than surrounding it with competing rectangular zones.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular zones\",\n    \"yellow-green oval marks\",\n    \"red-outlined face\",\n    \"layered white line scribble\",\n    \"hot pink ground\",\n    \"open mouth form\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded pressure\",\n    \"alarm\"\n  ],\n  \"lookingQuestion\": \"Where does your eye land first—on the repeated yellow-green ovals in the middle band, or on the red-outlined face at the bottom—and what does the path between them feel like?\",\n  \"ambiguities\": [\n    \"The black rectangular masses could read as architectural forms, large figures, or purely abstract zones; the image does not resolve this.\",\n    \"nnxyz nnotb #176 shares the yellow oval motif but its circular composition differs enough that a connection was not selected over the stronger face-form matches.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZMCYiwVGCD9jxa8WXEvvPwuoM8wFR7yrX4Ez1eSFsNzK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZMCYiwVGCD9jxa8WXEvvPwuoM8wFR7yrX4Ez1eSFsNzK/image.png",
+        "imageSHA256": "ba41a72737241eb933824895cf8445c72a96be094bd066aa79dbfcd07b2f8abc"
+      },
+      {
+        "artworkId": "QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo/image.png",
+        "imageSHA256": "4804db7fa22df3d04c4bbc2898ca5c83749fdb0e83a0351879581d969213ca9d"
+      },
+      {
+        "artworkId": "QmQNfhm3RYe8dnYn1TCfwLyZu9KtYM7mcDoaJcGoccPmxR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQNfhm3RYe8dnYn1TCfwLyZu9KtYM7mcDoaJcGoccPmxR/image.png",
+        "imageSHA256": "8cb346564ed823d8291b32fbef4037c5c7f829979238b06e6a4f91b243413a9b"
+      },
+      {
+        "artworkId": "QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY/image.png",
+        "imageSHA256": "cbffe02b7b281b418f26a21a83e6a34f80afdc8bb3cf2bbf6ab261e28ba6cbb9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:25.894678-05:00",
+    "usage": {
+      "inputTokens": 7191,
+      "outputTokens": 971,
+      "totalTokens": 8162,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7547
+    },
+    "requestId": "e7966257-0949-497a-bfc8-2db4a0e75ced",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dense pink-and-orange field is divided into stacked rectangular black masses, with yellow-green oval marks scattered across the mid-section as a repeating motif.\",\n    \"In the lower center, a red-outlined face with wide circular eyes and an open mouth sits against an orange rectangle, arms extending outward in a splayed gesture.\",\n    \"White line scribbles, teal dashes, and looping red marks layer over every zone, so no area reads as empty background.\"\n  ],\n  \"reading\": \"Multiple black rectangular masses and hot color zones pack the plane with no clear foreground or depth. A red-outlined face near the bottom—wide eyes, open mouth, arms spread—reads as exposed against the surrounding density. Yellow-green ovals repeat across the middle, giving the eye a rhythm before white scribble lines pull attention back into the surrounding noise. The overall feeling is one of crowded pressure.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #176 and nnxyz nnotb #178 each center a single rounded form on a solid field—a clear contrast to #177's wall-to-wall rectangular packing and hot pink ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY\",\n      \"reason\": \"nnxyz nnotb #178 shows a red-outlined open-mouthed face with spiral and cross-hatched eye marks, but isolates it on a dark olive ground rather than embedding it in a packed multi-zone field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQNfhm3RYe8dnYn1TCfwLyZu9KtYM7mcDoaJcGoccPmxR\",\n      \"reason\": \"nnxyz nifty faces #42 uses circular scribbled eyes and a wide tooth-lined open mouth, but fills the face form with layered color strands rather than surrounding it with competing rectangular zones.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular black zones\",\n    \"yellow-green oval marks\",\n    \"red-outlined face\",\n    \"layered white line scribble\",\n    \"hot pink ground\",\n    \"open mouth form\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded pressure\",\n    \"exposed\"\n  ],\n  \"lookingQuestion\": \"Where does your eye land first—on the repeated yellow-green ovals across the middle band, or on the red-outlined face at the bottom—and what does the path between them feel like?\",\n  \"ambiguities\": [\n    \"The black rectangular masses could read as architectural forms, large figures, or purely abstract zones; the image does not resolve this.\",\n    \"nnxyz nnotb #176 shares the yellow oval motif but its circular composition differs enough that the two stronger face-form matches were preferred.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: pink-orange ground, black rectangular masses, yellow-green ovals in mid-section, red-outlined face with splayed arms in lower center, and pervasive white scribble lines all verified against the primary image.\",\n    \"Comparison checks confirmed: QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY shows a face with spiral eye and open mouth on dark olive ground as stated; QmQNfhm3RYe8dnYn1TCfwLyZu9KtYM7mcDoaJcGoccPmxR shows circular scribbled eyes and wide tooth-lined mouth as stated; both comparisons are grounded in inspected images.\",\n    \"No invented biography, intent, technique, or unsupported subject identities found; 'alarmed' softened to 'exposed' to stay closer to visible form; word counts within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZMCYiwVGCD9jxa8WXEvvPwuoM8wFR7yrX4Ez1eSFsNzK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZMCYiwVGCD9jxa8WXEvvPwuoM8wFR7yrX4Ez1eSFsNzK/image.png",
+        "imageSHA256": "ba41a72737241eb933824895cf8445c72a96be094bd066aa79dbfcd07b2f8abc"
+      },
+      {
+        "artworkId": "QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo/image.png",
+        "imageSHA256": "4804db7fa22df3d04c4bbc2898ca5c83749fdb0e83a0351879581d969213ca9d"
+      },
+      {
+        "artworkId": "QmQNfhm3RYe8dnYn1TCfwLyZu9KtYM7mcDoaJcGoccPmxR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQNfhm3RYe8dnYn1TCfwLyZu9KtYM7mcDoaJcGoccPmxR/image.png",
+        "imageSHA256": "8cb346564ed823d8291b32fbef4037c5c7f829979238b06e6a4f91b243413a9b"
+      },
+      {
+        "artworkId": "QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY/image.png",
+        "imageSHA256": "cbffe02b7b281b418f26a21a83e6a34f80afdc8bb3cf2bbf6ab261e28ba6cbb9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dense pink-and-orange field is divided into stacked rectangular black zones, with yellow-green oval marks scattered across the mid-section like a repeating motif.\", \"In the lower center, a red-outlined face with wide circular eyes and an open mouth floats against an orange rectangle, arms extending outward in a splayed gesture.\", \"White line scribbles, teal dashes, and looping red marks layer over every zone, so no area of the composition reads as background.\"], \"reading\": \"The image packs multiple zones of black mass and hot color into a single flat plane, refusing any clear foreground or depth. A red-outlined face near the bottom reads as alarmed or exposed against the surrounding density. The yellow-green ovals repeat across the middle like punctuation, giving the eye a rhythm to follow before the white scribble lines pull attention back into the noise. The overall feeling is crowded pressure.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #176 and nnxyz nnotb #178 both center a single rounded form on a solid field—a contrast to #177's wall-to-wall rectangular packing and hot pink ground.\", \"connections\": [{\"targetArtworkId\": \"QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY\", \"reason\": \"nnxyz nnotb #178 uses a similar red-outlined open-mouthed face with spiral and cross-hatched eye marks, but isolates it on a dark olive ground rather than embedding it in a packed multi-zone field.\"}, {\"targetArtworkId\": \"QmQNfhm3RYe8dnYn1TCfwLyZu9KtYM7mcDoaJcGoccPmxR\", \"reason\": \"nnxyz nifty faces #42 shares the device of circular scribbled eyes and a wide-open tooth-lined mouth, but fills the face form with layered color strands rather than surrounding it with competing rectangular zones.\"}], \"tags\": [\"rectangular zones\", \"yellow-green oval marks\", \"red-outlined face\", \"layered white line scribble\", \"hot pink ground\", \"open mouth form\"], \"interpretiveTags\": [\"crowded pressure\", \"alarm\"], \"lookingQuestion\": \"Where does your eye land first—on the repeated yellow-green ovals in the middle band, or on the red-outlined face at the bottom—and what does the path between them feel like?\", \"ambiguities\": [\"The black rectangular masses could read as architectural forms, large figures, or purely abstract zones; the image does not resolve this.\", \"nnxyz nnotb #176 shares the yellow oval motif but its circular composition differs enough that a connection was not selected over the stronger face-form matches.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

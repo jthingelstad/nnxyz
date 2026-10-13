@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:30.053270-05:00",
+    "usage": {
+      "inputTokens": 6351,
+      "outputTokens": 859,
+      "totalTokens": 7210,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14028
+    },
+    "requestId": "72e9e3b1-2b24-43ca-b22b-a139a64411b9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form fills most of the canvas, outlined in white against a green diamond-patterned background; the jaw extends downward and leftward, ending in a blunt curved point.\",\n    \"Two eye zones sit asymmetrically: the left is a dark recessed socket with a small orange ring; the right is more open, showing a red-and-white starburst ring on a dark field, with dense scribbled lines layered over both.\",\n    \"A wide mouth near the lower center shows a row of white rectangular teeth set against black, with a protruding lower lip shape; the overall surface is covered in overlapping short scribble lines in yellow, cyan, red, and white.\"\n  ],\n  \"reading\": \"The form leans slightly left, its asymmetric eye sockets giving it an off-balance, unsettled quality. One eye recedes into shadow while the other opens onto a red starburst, so the two sides feel like different emotional states sharing one face. The bared teeth read as a grin or a grimace depending on where you look first. Dense scribble lines across the skin suggest agitation held just inside a smooth outer edge.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #94 and nnxyz nifty faces #96. Where #94 uses a near-black field and sharp angular forms, and #96 uses flat orange with rigid rectangular geometry, this piece occupies a middle ground of warm ochre curves on a patterned green ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\",\n      \"reason\": \"Both works show a wide tooth-filled mouth as a dominant feature, but #96 renders it with hard rectangular outlines on a flat orange field while #95 wraps it in curved organic forms and a layered scribble surface, making the contrast in edge quality clear.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU\",\n      \"reason\": \"nnotb #162 shares the device of two visually distinct eye zones on a single face and a similar density of overlapping scribble lines, though its field is olive-gold rather than green and its forms are squarer.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye sockets\",\n    \"white outlined organic form\",\n    \"bared rectangular teeth\",\n    \"dense overlapping scribble lines\",\n    \"green diamond-pattern background\",\n    \"red starburst ring\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled mood\",\n    \"dual emotional register within single form\"\n  ],\n  \"lookingQuestion\": \"The two eye zones are built from different shapes and colors — what does following the line from one eye across to the other reveal about how the face holds together?\",\n  \"ambiguities\": [\n    \"The title is treated as content only; the number 95 does not confirm this is the ninety-fifth work made by the artist across any catalogue.\",\n    \"The comparison to QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2 (nifty faces #94) was inspected but offers mainly contrast rather than formal similarity, so it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSnzoppkGxTPQNWL6EbWivyjJCqZGt4vMempgeCfHNRGY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSnzoppkGxTPQNWL6EbWivyjJCqZGt4vMempgeCfHNRGY/image.png",
+        "imageSHA256": "541d82945dc06c5e86bdffdeb82a931db7eccd7ae2dcb087286a8b0460aa3b00"
+      },
+      {
+        "artworkId": "QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2/image.png",
+        "imageSHA256": "a4557f5831b04f804d5d17743263cec0af16bb02bdf1b69256c1a92e27be7326"
+      },
+      {
+        "artworkId": "QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU/image.png",
+        "imageSHA256": "2fae9d653a729143a32eeb88eb4b7590fa9b90295a2af4a5aacb39e3236b5d77"
+      },
+      {
+        "artworkId": "QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2/image.png",
+        "imageSHA256": "a8c39c99721e0c1034f741de062fa3c16d37b8c2cd005617085e3df3c23ef4ac"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:37.877982-05:00",
+    "usage": {
+      "inputTokens": 7232,
+      "outputTokens": 1060,
+      "totalTokens": 8292,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7749
+    },
+    "requestId": "e359be94-29f0-41e5-8dc7-4e4252c447f7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form fills most of the canvas, outlined in white against a green diamond-patterned background; the jaw extends downward and leftward, ending in a blunt curved point.\",\n    \"Two eye zones sit asymmetrically: the left is a dark recessed socket with a small orange ring; the right is more open, showing a red-and-white starburst ring on a dark field, with dense scribbled lines layered over both.\",\n    \"A wide mouth near the lower center shows a row of white rectangular teeth set against black, with a protruding lower-lip shape; the surface is covered in overlapping short scribble lines in yellow, cyan, red, and white.\"\n  ],\n  \"reading\": \"The form leans slightly left, its asymmetric eye sockets giving it an off-balance quality. One eye recedes into shadow while the other opens onto a red starburst, so the two sides carry different visual weights. The bared teeth read as a grin or a grimace depending on where attention lands first. Dense scribble lines across the surface sit inside a smooth white outer edge, holding the agitation in.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #94 and nnxyz nifty faces #96. Where #94 uses a near-black field with sharp angular forms, and #96 uses flat orange with rigid rectangular geometry, this piece offers warm ochre curves on a patterned green ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\",\n      \"reason\": \"Both works show a wide tooth-filled mouth as a dominant feature, but #96 renders it with hard rectangular outlines on a flat orange field while #95 wraps it in curved organic forms and layered scribble lines, making the contrast in edge quality concrete.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU\",\n      \"reason\": \"nnotb #162 also places two visually distinct eye zones on a single face and uses a comparable density of overlapping scribble lines, though its field is olive-gold and its outer forms are squarer.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye sockets\",\n    \"white-outlined organic form\",\n    \"bared rectangular teeth\",\n    \"dense overlapping scribble lines\",\n    \"green diamond-pattern background\",\n    \"red starburst ring\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled mood\",\n    \"dual visual weight within single form\"\n  ],\n  \"lookingQuestion\": \"The two eye zones are built from different shapes and colors — what does following the line from one eye across to the other reveal about how the face holds together?\",\n  \"ambiguities\": [\n    \"The title number 95 does not confirm this is the ninety-fifth work made by the artist across any catalogue; title order and creation order are distinct.\",\n    \"QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2 (nifty faces #94) was inspected but offers mainly contrast rather than a meaningful formal parallel, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All color and form observations confirmed against the primary image: white outline, green diamond background, asymmetric eye sockets with orange ring left and red starburst right, rectangular teeth, and yellow/cyan/red/white scribble lines are all visible.\",\n    \"Removed 'dual emotional register' from reading as it implies intent; replaced with 'different visual weights' to stay with visible evidence.\",\n    \"Both comparison images inspected: tooth-row contrast with QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2 confirmed; dual eye-zone and scribble-density parallel with QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU confirmed. No invented colors or forms introduced.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSnzoppkGxTPQNWL6EbWivyjJCqZGt4vMempgeCfHNRGY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSnzoppkGxTPQNWL6EbWivyjJCqZGt4vMempgeCfHNRGY/image.png",
+        "imageSHA256": "541d82945dc06c5e86bdffdeb82a931db7eccd7ae2dcb087286a8b0460aa3b00"
+      },
+      {
+        "artworkId": "QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2/image.png",
+        "imageSHA256": "a4557f5831b04f804d5d17743263cec0af16bb02bdf1b69256c1a92e27be7326"
+      },
+      {
+        "artworkId": "QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU/image.png",
+        "imageSHA256": "2fae9d653a729143a32eeb88eb4b7590fa9b90295a2af4a5aacb39e3236b5d77"
+      },
+      {
+        "artworkId": "QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2/image.png",
+        "imageSHA256": "a8c39c99721e0c1034f741de062fa3c16d37b8c2cd005617085e3df3c23ef4ac"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded form fills most of the canvas, outlined in white against a green diamond-patterned background; the jaw extends downward and leftward, ending in a blunt curved point.\", \"Two eye zones sit asymmetrically: the left is a dark recessed socket with a small orange ring; the right is more open, showing a red-and-white starburst ring on a dark field, with dense scribbled lines layered over both.\", \"A wide mouth near the lower center shows a row of white rectangular teeth set against black, with a protruding lower lip shape; the overall surface is covered in overlapping short scribble lines in yellow, cyan, red, and white.\"], \"reading\": \"The form leans slightly left, its asymmetric eye sockets giving it an off-balance, unsettled quality. One eye recedes into shadow while the other opens onto a red starburst, so the two sides feel like different emotional states sharing one face. The bared teeth read as a grin or a grimace depending on where you look first. Dense scribble lines across the skin suggest agitation held just inside a smooth outer edge.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #94 and nnxyz nifty faces #96. Where #94 uses a near-black field and sharp angular forms, and #96 uses flat orange with rigid rectangular geometry, this piece occupies a middle ground of warm ochre curves on a patterned green ground.\", \"connections\": [{\"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\", \"reason\": \"Both works show a wide tooth-filled mouth as a dominant feature, but #96 renders it with hard rectangular outlines on a flat orange field while #95 wraps it in curved organic forms and a layered scribble surface, making the contrast in edge quality clear.\"}, {\"targetArtworkId\": \"QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU\", \"reason\": \"nnotb #162 shares the device of two visually distinct eye zones on a single face and a similar density of overlapping scribble lines, though its field is olive-gold rather than green and its forms are squarer.\"}], \"tags\": [\"asymmetric eye sockets\", \"white outlined organic form\", \"bared rectangular teeth\", \"dense overlapping scribble lines\", \"green diamond-pattern background\", \"red starburst ring\"], \"interpretiveTags\": [\"unsettled mood\", \"dual emotional register within single form\"], \"lookingQuestion\": \"The two eye zones are built from different shapes and colors — what does following the line from one eye across to the other reveal about how the face holds together?\", \"ambiguities\": [\"The title is treated as content only; the number 95 does not confirm this is the ninety-fifth work made by the artist across any catalogue.\", \"The comparison to QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2 (nifty faces #94) was inspected but offers mainly contrast rather than formal similarity, so it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

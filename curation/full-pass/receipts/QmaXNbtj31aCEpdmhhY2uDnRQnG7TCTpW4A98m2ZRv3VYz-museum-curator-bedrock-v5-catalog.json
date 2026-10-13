@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:13.360830-05:00",
+    "usage": {
+      "inputTokens": 6153,
+      "outputTokens": 758,
+      "totalTokens": 6911,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11548
+    },
+    "requestId": "b4644c23-0e40-43df-975c-b4b42034d3b4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A figure stands centered, head bowed, with pale bare arms crossing loosely at the wrists in the lower half; a dense mass of gold, olive, and brown marks spreads wide across the shoulders and upper body.\",\n    \"Black scratched lines radiate outward from both sides of the figure, forming tall dark vertical shapes that frame the composition left and right against deep shadow.\",\n    \"The background moves from deep red at upper left through orange and amber to near-black at the edges, with a small red mark in the lower-left corner.\"\n  ],\n  \"reading\": \"The figure's downward tilt and crossed wrists read as withdrawal rather than display. The gold-and-olive mass at the shoulders spreads like weight rather than ornament, pressing the head lower. Surrounding black lines scratch outward in all directions, yet the pale arms remain still at center. The warm red-to-amber background glows behind the figure while the flanking dark shapes close in, making the warmth feel distant.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #137 and nnxyz nnotb #139. All three place a figure against a warm background with black scratched lines, but #138 shifts the palette to deep red and near-black, pulling the mood darker than the saturated yellow of #137.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA\",\n      \"reason\": \"Both works show a single bowed figure with a large dark mass at the head and shoulders, black scratched lines over a warm background, and pale arms hanging forward — but #137 uses saturated yellow where #138 uses deep red and shadow.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe\",\n      \"reason\": \"Both #138 and #139 use dark vertical framing shapes, gold-brown marks, and black scratched lines around a figure, but #139 opens to a lighter background and tilts the figure sideways rather than facing forward.\"\n    }\n  ],\n  \"tags\": [\n    \"figure centered\",\n    \"crossed arms\",\n    \"black scratched lines\",\n    \"gold-olive mass at shoulders\",\n    \"red-to-amber background\",\n    \"dark vertical framing shapes\"\n  ],\n  \"interpretiveTags\": [\n    \"withdrawal\",\n    \"weight\",\n    \"enclosure\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the still pale arms at center and the scratched lines spreading outward on both sides draw your eye toward first?\",\n  \"ambiguities\": [\n    \"The dense gold-olive mass at the shoulders could be read as hair, feathers, or layered fabric; the image does not resolve this clearly.\",\n    \"The small red mark in the lower-left corner appears to be a signature or logo but its exact content is not legible at this resolution.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaXNbtj31aCEpdmhhY2uDnRQnG7TCTpW4A98m2ZRv3VYz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaXNbtj31aCEpdmhhY2uDnRQnG7TCTpW4A98m2ZRv3VYz/image.png",
+        "imageSHA256": "f76fea5f10d12f1ec5ebde66ae7396fe49567bff658c5823a3bb946a758606ed"
+      },
+      {
+        "artworkId": "QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA/image.png",
+        "imageSHA256": "180b62b11144efd72983f44cb98af94ac2b0e4e31f3959534580ec71f6dfc752"
+      },
+      {
+        "artworkId": "QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr/image.png",
+        "imageSHA256": "e2a24a8191cd92c60aefc9a7731e85e6e5e0cecc9ef4d9d92ec11141dd57905e"
+      },
+      {
+        "artworkId": "QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe/image.png",
+        "imageSHA256": "b70c6bb1474e8a2e624b3fcbca66b9150e3cdc7952d5fcc59e83ad8e3c3682e6"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:20.685659-05:00",
+    "usage": {
+      "inputTokens": 6931,
+      "outputTokens": 975,
+      "totalTokens": 7906,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6961
+    },
+    "requestId": "11437659-1074-4ada-9193-2cda21681880",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A figure stands centered, head bowed, with pale bare arms crossing loosely at the wrists in the lower half; a dense mass of gold, olive, and brown marks spreads wide across the shoulders and upper body.\",\n    \"Black scratched lines radiate outward from both sides of the figure, forming tall dark vertical shapes that frame the composition left and right against deep shadow.\",\n    \"The background moves from deep red at upper left through orange and amber toward near-black at the edges, with a small red mark visible in the lower-left corner.\"\n  ],\n  \"reading\": \"The figure's downward tilt and crossed wrists read as withdrawal rather than display. The gold-and-olive mass at the shoulders spreads like weight, pressing the head lower. Surrounding black lines scratch outward in all directions, yet the pale arms remain still at center. The warm red-to-amber background glows behind the figure while the flanking dark shapes close in, making that warmth feel distant.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #137 and nnxyz nnotb #139. All three place a figure against a warm background with black scratched lines, but #138 shifts to deep red and near-black, pulling the mood darker than the saturated yellow of #137.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA\",\n      \"reason\": \"Both show a single bowed figure with a large dark mass at head and shoulders, black scratched lines over a warm background, and pale arms forward — but #137 uses saturated yellow where #138 uses deep red and shadow.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe\",\n      \"reason\": \"Both use dark vertical framing shapes, gold-brown marks, and black scratched lines around a figure, but #139 opens to a lighter background and tilts the figure sideways rather than facing forward.\"\n    }\n  ],\n  \"tags\": [\n    \"figure centered\",\n    \"crossed arms\",\n    \"black scratched lines\",\n    \"gold-olive mass at shoulders\",\n    \"red-to-amber background\",\n    \"dark vertical framing shapes\"\n  ],\n  \"interpretiveTags\": [\n    \"withdrawal\",\n    \"weight\",\n    \"enclosure\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the still pale arms at center and the scratched lines spreading outward on both sides draw your eye toward first?\",\n  \"ambiguities\": [\n    \"The dense gold-olive mass at the shoulders could be read as hair, feathers, or layered fabric; the image does not resolve this clearly.\",\n    \"The small red mark in the lower-left corner appears to be a signature or logo but its exact content is not legible at this resolution.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: red upper-left, orange-amber mid-background, near-black edges, and small red lower-left mark are all visible.\",\n    \"Comparison with QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA confirmed: #137 shows saturated yellow field, bowed figure, dark head-and-shoulder mass, and pale arm — contrast with #138's red-and-shadow palette is accurate and specific.\",\n    \"Comparison with QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe confirmed: #139 shows dark vertical shapes, gold-brown marks, and black scratched lines, but figure is tilted sideways and background is lighter — contrast stated in draft is accurate; no invented claims found.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaXNbtj31aCEpdmhhY2uDnRQnG7TCTpW4A98m2ZRv3VYz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaXNbtj31aCEpdmhhY2uDnRQnG7TCTpW4A98m2ZRv3VYz/image.png",
+        "imageSHA256": "f76fea5f10d12f1ec5ebde66ae7396fe49567bff658c5823a3bb946a758606ed"
+      },
+      {
+        "artworkId": "QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA/image.png",
+        "imageSHA256": "180b62b11144efd72983f44cb98af94ac2b0e4e31f3959534580ec71f6dfc752"
+      },
+      {
+        "artworkId": "QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr/image.png",
+        "imageSHA256": "e2a24a8191cd92c60aefc9a7731e85e6e5e0cecc9ef4d9d92ec11141dd57905e"
+      },
+      {
+        "artworkId": "QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe/image.png",
+        "imageSHA256": "b70c6bb1474e8a2e624b3fcbca66b9150e3cdc7952d5fcc59e83ad8e3c3682e6"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A figure stands centered, head bowed, with pale bare arms crossing loosely at the wrists in the lower half; a dense mass of gold, olive, and brown marks spreads wide across the shoulders and upper body.\", \"Black scratched lines radiate outward from both sides of the figure, forming tall dark vertical shapes that frame the composition left and right against deep shadow.\", \"The background moves from deep red at upper left through orange and amber to near-black at the edges, with a small red mark in the lower-left corner.\"], \"reading\": \"The figure's downward tilt and crossed wrists read as withdrawal rather than display. The gold-and-olive mass at the shoulders spreads like weight rather than ornament, pressing the head lower. Surrounding black lines scratch outward in all directions, yet the pale arms remain still at center. The warm red-to-amber background glows behind the figure while the flanking dark shapes close in, making the warmth feel distant.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #137 and nnxyz nnotb #139. All three place a figure against a warm background with black scratched lines, but #138 shifts the palette to deep red and near-black, pulling the mood darker than the saturated yellow of #137.\", \"connections\": [{\"targetArtworkId\": \"QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA\", \"reason\": \"Both works show a single bowed figure with a large dark mass at the head and shoulders, black scratched lines over a warm background, and pale arms hanging forward — but #137 uses saturated yellow where #138 uses deep red and shadow.\"}, {\"targetArtworkId\": \"QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe\", \"reason\": \"Both #138 and #139 use dark vertical framing shapes, gold-brown marks, and black scratched lines around a figure, but #139 opens to a lighter background and tilts the figure sideways rather than facing forward.\"}], \"tags\": [\"figure centered\", \"crossed arms\", \"black scratched lines\", \"gold-olive mass at shoulders\", \"red-to-amber background\", \"dark vertical framing shapes\"], \"interpretiveTags\": [\"withdrawal\", \"weight\", \"enclosure\"], \"lookingQuestion\": \"What does the relationship between the still pale arms at center and the scratched lines spreading outward on both sides draw your eye toward first?\", \"ambiguities\": [\"The dense gold-olive mass at the shoulders could be read as hair, feathers, or layered fabric; the image does not resolve this clearly.\", \"The small red mark in the lower-left corner appears to be a signature or logo but its exact content is not legible at this resolution.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

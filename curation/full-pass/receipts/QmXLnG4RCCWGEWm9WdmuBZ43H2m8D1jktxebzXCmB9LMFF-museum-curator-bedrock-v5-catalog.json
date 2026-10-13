@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:21.812541-05:00",
+    "usage": {
+      "inputTokens": 6253,
+      "outputTokens": 803,
+      "totalTokens": 7056,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13436
+    },
+    "requestId": "bf264349-b1f4-49db-aad2-24cf5d648bed",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded red-and-dark form occupies the upper center, with two tight white spiral coils drawn over where eyes would be, and a jagged row of marks suggesting a mouth below.\",\n    \"White lines run in loose, overlapping loops across the whole surface—some forming rough rectangular paths at left, others trailing off into open curves at right—layered over a background of broad yellow, blue, red, and green bands.\",\n    \"A large yellow-outlined spiral sits in the lower-right quadrant, separate from the central form, while a black-outlined figure-like shape appears at the far lower right, partially cut by the edge.\"\n  ],\n  \"reading\": \"The central form reads as a face—two spiral eyes, a jagged mouth—but the white line work refuses to settle there, looping outward and pulling attention across the whole field. The warm reds of the face press against a background that fragments into competing color bands. A second spiral in the lower right echoes the eye coils, suggesting the face's visual logic has leaked into the surrounding space. The mood feels crowded and unresolved.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #141 and nnxyz nnotb #143. Title order and recorded creation order align here. Where #141 builds on a saturated blue field with mechanical-looking repeated marks, #142 shifts to a warm yellow ground with a legible face form at center.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZ7Uo5hyp4ykuRVkxoBgcQBoq6pSdcwhujPoRAmQGH53U\",\n      \"reason\": \"Both works use white outline loops that travel across the full surface independent of the central forms, but #141 keeps its marks more grid-like and mechanical while #142's loops are looser and more open.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUd8NBNYJKhSL4D5dYF8KKDCWLmC2ZsRPXBpdTaDn7WFH\",\n      \"reason\": \"Both #142 and #143 place a single face-like form at center with circular eye marks, but #143 works against a dark ground with sparse color accents, making the face feel more isolated than the crowded warm field in #142.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral eye marks\",\n    \"white looping line work\",\n    \"yellow ground\",\n    \"face-like central form\",\n    \"layered color bands\",\n    \"secondary spiral lower right\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded\",\n    \"unresolved\",\n    \"warm tension\"\n  ],\n  \"lookingQuestion\": \"The white loops appear in both the face area and the surrounding background—can you trace where they connect to the face form and where they break away from it entirely?\",\n  \"ambiguities\": [\n    \"The black-outlined shape at the lower right edge is partially cropped; it is unclear whether it reads as a separate figure or as an extension of the background patterning.\",\n    \"The rawblocks #57 comparison image shows a figure on a framed ground with a very different palette and structure; no strong formal connection to #142 was found, so it was not selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF/image.png",
+        "imageSHA256": "17c1684c39f0291abae7dab20587fe67d6e2ededb0cbe670c41432f47551bbd4"
+      },
+      {
+        "artworkId": "QmZ7Uo5hyp4ykuRVkxoBgcQBoq6pSdcwhujPoRAmQGH53U",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZ7Uo5hyp4ykuRVkxoBgcQBoq6pSdcwhujPoRAmQGH53U/image.png",
+        "imageSHA256": "039c49aabab2908176ffb1b2c603a007aa3030f741141a66c0a8c622656e9395"
+      },
+      {
+        "artworkId": "QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk/image.png",
+        "imageSHA256": "2c4d6e30021e364daf33d8236a880a0ed40c9ed2aeb6b0110feb490249b104ec"
+      },
+      {
+        "artworkId": "QmUd8NBNYJKhSL4D5dYF8KKDCWLmC2ZsRPXBpdTaDn7WFH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUd8NBNYJKhSL4D5dYF8KKDCWLmC2ZsRPXBpdTaDn7WFH/image.png",
+        "imageSHA256": "4dffc4cb347f570462678e837da01da3a15aa76284cdf15e7169359c3f20dee1"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:27.945914-05:00",
+    "usage": {
+      "inputTokens": 7076,
+      "outputTokens": 880,
+      "totalTokens": 7956,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6057
+    },
+    "requestId": "a0fc2abf-bbdd-46b6-9d5b-58e2ab2b2345",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded red-and-dark form occupies the upper center, with two tight white spiral coils drawn over the eye area and a jagged row of short marks below them suggesting a mouth.\",\n    \"White lines run in loose, overlapping loops across the whole surface—some forming rough rectangular paths at left, others trailing into open curves at right—layered over broad yellow, blue, red, and green bands.\",\n    \"A large white-outlined spiral sits in the lower-right quadrant, separate from the central form, while a black-outlined shape at the far lower right is partially cut by the edge.\"\n  ],\n  \"reading\": \"The central form reads as a face—spiral eye marks, a jagged mouth—but the white line work refuses to settle there, looping outward across the whole field. The warm reds of the face press against a background that breaks into competing color bands. A second spiral in the lower right echoes the eye coils, as though the face's visual logic has spread into the surrounding space. The mood feels crowded and unresolved.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #141 and nnxyz nnotb #143, and title order aligns with recorded creation order here. Where #141 builds on a saturated blue field with tighter repeated marks, #142 shifts to a warm yellow ground with a face form at center.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZ7Uo5hyp4ykuRVkxoBgcQBoq6pSdcwhujPoRAmQGH53U\",\n      \"reason\": \"Both works use white outline loops that travel across the full surface independent of the central forms, but #141 keeps its marks more grid-like while #142's loops are looser and more open.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUd8NBNYJKhSL4D5dYF8KKDCWLmC2ZsRPXBpdTaDn7WFH\",\n      \"reason\": \"Both place a single face-like form at center with circular eye marks, but #143 works against a dark ground with sparse color accents, making the face feel more isolated than the crowded warm field in #142.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral eye marks\",\n    \"white looping line work\",\n    \"yellow ground\",\n    \"face-like central form\",\n    \"layered color bands\",\n    \"secondary spiral lower right\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded\",\n    \"unresolved\",\n    \"warm tension\"\n  ],\n  \"lookingQuestion\": \"The white loops appear in both the face area and the surrounding background—can you trace where they connect to the central form and where they break away from it entirely?\",\n  \"ambiguities\": [\n    \"The dark shape at the lower right edge is partially cropped; it is unclear whether it reads as a separate figure or as background patterning.\",\n    \"The rawblocks #57 comparison image shows a figure on a framed ground with a different palette and structure; no strong formal connection to #142 was found and it was not selected.\"\n  ],\n  \"reviewFindings\": [\n    \"Corrected 'yellow-outlined spiral' to 'white-outlined spiral' in observation 3—inspection of the image confirms the lower-right spiral is drawn in white, not yellow.\",\n    \"Reading and context word counts confirmed within limits; no invented biography, intent, or technique language found.\",\n    \"Both comparison IDs verified against inspected images; rawblocks #57 correctly excluded; no other material errors found.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF/image.png",
+        "imageSHA256": "17c1684c39f0291abae7dab20587fe67d6e2ededb0cbe670c41432f47551bbd4"
+      },
+      {
+        "artworkId": "QmZ7Uo5hyp4ykuRVkxoBgcQBoq6pSdcwhujPoRAmQGH53U",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZ7Uo5hyp4ykuRVkxoBgcQBoq6pSdcwhujPoRAmQGH53U/image.png",
+        "imageSHA256": "039c49aabab2908176ffb1b2c603a007aa3030f741141a66c0a8c622656e9395"
+      },
+      {
+        "artworkId": "QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk/image.png",
+        "imageSHA256": "2c4d6e30021e364daf33d8236a880a0ed40c9ed2aeb6b0110feb490249b104ec"
+      },
+      {
+        "artworkId": "QmUd8NBNYJKhSL4D5dYF8KKDCWLmC2ZsRPXBpdTaDn7WFH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUd8NBNYJKhSL4D5dYF8KKDCWLmC2ZsRPXBpdTaDn7WFH/image.png",
+        "imageSHA256": "4dffc4cb347f570462678e837da01da3a15aa76284cdf15e7169359c3f20dee1"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A rounded red-and-dark form occupies the upper center, with two tight white spiral coils drawn over where eyes would be, and a jagged row of marks suggesting a mouth below.\", \"White lines run in loose, overlapping loops across the whole surface—some forming rough rectangular paths at left, others trailing off into open curves at right—layered over a background of broad yellow, blue, red, and green bands.\", \"A large yellow-outlined spiral sits in the lower-right quadrant, separate from the central form, while a black-outlined figure-like shape appears at the far lower right, partially cut by the edge.\"], \"reading\": \"The central form reads as a face—two spiral eyes, a jagged mouth—but the white line work refuses to settle there, looping outward and pulling attention across the whole field. The warm reds of the face press against a background that fragments into competing color bands. A second spiral in the lower right echoes the eye coils, suggesting the face's visual logic has leaked into the surrounding space. The mood feels crowded and unresolved.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #141 and nnxyz nnotb #143. Title order and recorded creation order align here. Where #141 builds on a saturated blue field with mechanical-looking repeated marks, #142 shifts to a warm yellow ground with a legible face form at center.\", \"connections\": [{\"targetArtworkId\": \"QmZ7Uo5hyp4ykuRVkxoBgcQBoq6pSdcwhujPoRAmQGH53U\", \"reason\": \"Both works use white outline loops that travel across the full surface independent of the central forms, but #141 keeps its marks more grid-like and mechanical while #142's loops are looser and more open.\"}, {\"targetArtworkId\": \"QmUd8NBNYJKhSL4D5dYF8KKDCWLmC2ZsRPXBpdTaDn7WFH\", \"reason\": \"Both #142 and #143 place a single face-like form at center with circular eye marks, but #143 works against a dark ground with sparse color accents, making the face feel more isolated than the crowded warm field in #142.\"}], \"tags\": [\"spiral eye marks\", \"white looping line work\", \"yellow ground\", \"face-like central form\", \"layered color bands\", \"secondary spiral lower right\"], \"interpretiveTags\": [\"crowded\", \"unresolved\", \"warm tension\"], \"lookingQuestion\": \"The white loops appear in both the face area and the surrounding background—can you trace where they connect to the face form and where they break away from it entirely?\", \"ambiguities\": [\"The black-outlined shape at the lower right edge is partially cropped; it is unclear whether it reads as a separate figure or as an extension of the background patterning.\", \"The rawblocks #57 comparison image shows a figure on a framed ground with a very different palette and structure; no strong formal connection to #142 was found, so it was not selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

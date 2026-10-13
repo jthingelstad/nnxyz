@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:19.701401-05:00",
+    "usage": {
+      "inputTokens": 6332,
+      "outputTokens": 817,
+      "totalTokens": 7149,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14131
+    },
+    "requestId": "41b65147-202c-4974-ba93-1d37bc68073d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two bulky figures dominate the center against a flat teal ground: a smaller yellow form with a purple cap and a hook shape above its head rides or clings to a larger dark olive mass.\",\n    \"A thick diagonal red stroke cuts across the upper right of the larger figure's rounded form, while loose yellow loop-shapes scatter along the right edge and white outline lines web across the left background.\",\n    \"Orange brushed marks stack vertically on the left margin, and purple scribble lines run across the lower edge and upper field, layering over the teal ground without filling it.\"\n  ],\n  \"reading\": \"The teal field holds its ground while two figures press into each other at the center, the smaller one toy-like and round-faced, the larger one dark and helmet-shaped. A red slash cuts through the larger form with a bluntness that reads as impact or interruption. Yellow loops drift to the right as if shaken loose. The image feels suspended mid-collision, neither resolved nor fully broken.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between title neighbors nnxyz #32 and nnxyz #35 in the numbered family. Where nnxyz #32 fills its field with a dense red ground, nnxyz #34 keeps teal open around its figures, and nnxyz #35 crowds its lavender field with more elements at similar scale.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRJ2v2MWzABVtAMvq83FLoNBs4b9GWzRXdXJNkV1UJHbF\",\n      \"reason\": \"Both works place a compact central mass against a saturated flat ground and use a purple accent—a cap here, a crown-like mark there—but nnxyz #32 fills nearly the entire field while nnxyz #34 leaves the teal ground visibly open.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRX3bnR6bNXmRxQpZ8AcdLixgH9R7cLNSnP7SAr6Jstut\",\n      \"reason\": \"Both nnxyz #34 and nnxyz nifty faces #17 share a teal ground and a hat-bearing central form, but nifty faces #17 builds its figure entirely from dense overlapping strokes while nnxyz #34 mixes filled masses with open-line passages.\"\n    }\n  ],\n  \"tags\": [\n    \"teal ground\",\n    \"two-figure composition\",\n    \"diagonal red stroke\",\n    \"yellow loop marks\",\n    \"white outline webbing\",\n    \"layered scribble lines\"\n  ],\n  \"lookingQuestion\": \"Where does your eye land first—on the red diagonal, the yellow hook shape above the smaller figure, or the boundary where the two figures meet—and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The hook or ring shape above the smaller figure's head is visually distinct but its role in the composition—whether part of the figure or a separate floating element—is unclear from the image alone.\",\n    \"nnxyz #35 shares teal ground and multi-figure layout but its lavender field and denser crowd of elements make the formal comparison moderate rather than strong; included for title-neighbor context, not as a close visual match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA/image.png",
+        "imageSHA256": "0701bf9c1565e8855e58c7ecca2e53b35449dd859633380517df8cfb9d989dc8"
+      },
+      {
+        "artworkId": "QmRJ2v2MWzABVtAMvq83FLoNBs4b9GWzRXdXJNkV1UJHbF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRJ2v2MWzABVtAMvq83FLoNBs4b9GWzRXdXJNkV1UJHbF/image.png",
+        "imageSHA256": "9e08f58c64d912a1fe1b6751e461a7d413baea4a9ca8ec3c94d5bd6059dd109e"
+      },
+      {
+        "artworkId": "QmRX3bnR6bNXmRxQpZ8AcdLixgH9R7cLNSnP7SAr6Jstut",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRX3bnR6bNXmRxQpZ8AcdLixgH9R7cLNSnP7SAr6Jstut/image.png",
+        "imageSHA256": "c59be211539534a0d1ebd7fae5d6f1b5b6c142b3449b40d31e466e6a5a8f9f78"
+      },
+      {
+        "artworkId": "QmQrDKKDYkmfrAhAbcLJLdi4VaZ2xMio1ghWSqF9CCj1S5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQrDKKDYkmfrAhAbcLJLdi4VaZ2xMio1ghWSqF9CCj1S5/image.png",
+        "imageSHA256": "7e033b3f5b4446ba9767893d514ed9e7e1c2194d8af65fb1f1315a4cc0afa1e5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:27.375037-05:00",
+    "usage": {
+      "inputTokens": 7181,
+      "outputTokens": 962,
+      "totalTokens": 8143,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7341
+    },
+    "requestId": "c14646e5-c450-4282-8f03-f7f7936a5fb1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two bulky figures dominate the center against a flat teal ground: a smaller yellow form with a purple cap and a ring or hook shape above its head presses against a larger dark olive rounded mass.\",\n    \"A thick diagonal red stroke cuts across the upper area of the larger figure's rounded form, while loose yellow loop-shapes scatter along the right edge and white outline lines web across the left background.\",\n    \"Orange brushed marks stack vertically on the left margin, and purple scribble lines run across the lower edge and upper field, layering over the teal ground without filling it.\"\n  ],\n  \"reading\": \"The teal field stays open while two figures press together at center, the smaller one round-faced and toy-like with a ring shape floating above it, the larger one dark and helmet-shaped. A red stroke cuts through the larger form with a bluntness that reads as impact or interruption. Yellow loops drift rightward as if shaken loose. The image feels suspended mid-collision, neither resolved nor broken.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between title neighbors nnxyz #32 and nnxyz #35. Where nnxyz #32 fills its field with a dense red ground, nnxyz #34 keeps teal open around its figures, and nnxyz #35 crowds a lavender field with more elements at similar scale.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRJ2v2MWzABVtAMvq83FLoNBs4b9GWzRXdXJNkV1UJHbF\",\n      \"reason\": \"Both place a compact central mass against a saturated flat ground and use a purple accent, but nnxyz #32 fills nearly the entire field with red while nnxyz #34 leaves the teal ground visibly open around its figures.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRX3bnR6bNXmRxQpZ8AcdLixgH9R7cLNSnP7SAr6Jstut\",\n      \"reason\": \"Both share a teal ground and a hat-bearing central form, but nnxyz nifty faces #17 builds its figure entirely from dense overlapping strokes while nnxyz #34 mixes filled dark masses with open-line passages.\"\n    }\n  ],\n  \"tags\": [\n    \"teal ground\",\n    \"two-figure composition\",\n    \"diagonal red stroke\",\n    \"yellow loop marks\",\n    \"white outline webbing\",\n    \"layered scribble lines\"\n  ],\n  \"lookingQuestion\": \"Where does your eye land first—on the red diagonal, the ring shape above the smaller figure, or the boundary where the two figures press together—and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The ring or hook shape above the smaller figure's head is visually distinct but its role—whether part of the figure or a separate floating element—cannot be determined from the image alone.\",\n    \"nnxyz nifty faces #17 shares teal ground and a hat form but comes from a different owned collection family; the comparison is formal, not sequence-based.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: teal ground, two central figures, purple cap on smaller yellow form, ring/hook shape above it, dark olive larger mass, red diagonal stroke, yellow loops right edge, white line webbing left, orange marks left margin, purple scribbles lower and upper field—all visible in image.\",\n    \"nnxyz #32 confirmed: dense red ground, compact central mass, purple crown-like mark, nearly full-field fill—contrast with open teal in nnxyz #34 is accurate.\",\n    \"nnxyz nifty faces #17 confirmed: teal ground, hat-bearing central form, dense overlapping strokes throughout—contrast with nnxyz #34's mixed filled-mass and open-line approach is accurate; connection retained.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA/image.png",
+        "imageSHA256": "0701bf9c1565e8855e58c7ecca2e53b35449dd859633380517df8cfb9d989dc8"
+      },
+      {
+        "artworkId": "QmRJ2v2MWzABVtAMvq83FLoNBs4b9GWzRXdXJNkV1UJHbF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRJ2v2MWzABVtAMvq83FLoNBs4b9GWzRXdXJNkV1UJHbF/image.png",
+        "imageSHA256": "9e08f58c64d912a1fe1b6751e461a7d413baea4a9ca8ec3c94d5bd6059dd109e"
+      },
+      {
+        "artworkId": "QmRX3bnR6bNXmRxQpZ8AcdLixgH9R7cLNSnP7SAr6Jstut",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRX3bnR6bNXmRxQpZ8AcdLixgH9R7cLNSnP7SAr6Jstut/image.png",
+        "imageSHA256": "c59be211539534a0d1ebd7fae5d6f1b5b6c142b3449b40d31e466e6a5a8f9f78"
+      },
+      {
+        "artworkId": "QmQrDKKDYkmfrAhAbcLJLdi4VaZ2xMio1ghWSqF9CCj1S5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQrDKKDYkmfrAhAbcLJLdi4VaZ2xMio1ghWSqF9CCj1S5/image.png",
+        "imageSHA256": "7e033b3f5b4446ba9767893d514ed9e7e1c2194d8af65fb1f1315a4cc0afa1e5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two bulky figures dominate the center against a flat teal ground: a smaller yellow form with a purple cap and a hook shape above its head rides or clings to a larger dark olive mass.\", \"A thick diagonal red stroke cuts across the upper right of the larger figure's rounded form, while loose yellow loop-shapes scatter along the right edge and white outline lines web across the left background.\", \"Orange brushed marks stack vertically on the left margin, and purple scribble lines run across the lower edge and upper field, layering over the teal ground without filling it.\"], \"reading\": \"The teal field holds its ground while two figures press into each other at the center, the smaller one toy-like and round-faced, the larger one dark and helmet-shaped. A red slash cuts through the larger form with a bluntness that reads as impact or interruption. Yellow loops drift to the right as if shaken loose. The image feels suspended mid-collision, neither resolved nor fully broken.\", \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between title neighbors nnxyz #32 and nnxyz #35 in the numbered family. Where nnxyz #32 fills its field with a dense red ground, nnxyz #34 keeps teal open around its figures, and nnxyz #35 crowds its lavender field with more elements at similar scale.\", \"connections\": [{\"targetArtworkId\": \"QmRJ2v2MWzABVtAMvq83FLoNBs4b9GWzRXdXJNkV1UJHbF\", \"reason\": \"Both works place a compact central mass against a saturated flat ground and use a purple accent—a cap here, a crown-like mark there—but nnxyz #32 fills nearly the entire field while nnxyz #34 leaves the teal ground visibly open.\"}, {\"targetArtworkId\": \"QmRX3bnR6bNXmRxQpZ8AcdLixgH9R7cLNSnP7SAr6Jstut\", \"reason\": \"Both nnxyz #34 and nnxyz nifty faces #17 share a teal ground and a hat-bearing central form, but nifty faces #17 builds its figure entirely from dense overlapping strokes while nnxyz #34 mixes filled masses with open-line passages.\"}], \"tags\": [\"teal ground\", \"two-figure composition\", \"diagonal red stroke\", \"yellow loop marks\", \"white outline webbing\", \"layered scribble lines\"], \"lookingQuestion\": \"Where does your eye land first—on the red diagonal, the yellow hook shape above the smaller figure, or the boundary where the two figures meet—and what does that path through the image feel like?\", \"ambiguities\": [\"The hook or ring shape above the smaller figure's head is visually distinct but its role in the composition—whether part of the figure or a separate floating element—is unclear from the image alone.\", \"nnxyz #35 shares teal ground and multi-figure layout but its lavender field and denser crowd of elements make the formal comparison moderate rather than strong; included for title-neighbor context, not as a close visual match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

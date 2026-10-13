@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:36.365543-05:00",
+    "usage": {
+      "inputTokens": 5289,
+      "outputTokens": 686,
+      "totalTokens": 5975,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20618
+    },
+    "requestId": "1d494eaf-0ba1-43c0-9279-d3aad03d4eba",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape dominates the center, built from overlapping dark purple, white, and cyan arcs against a flat sky-blue background.\",\n    \"Two spiral-like eye forms sit asymmetrically: the left one wider with white and red marks inside, the right one tighter with concentric purple rings and a red center.\",\n    \"A rectangular mouth area near the bottom shows jagged white zigzag teeth bordered by red lines, with a second smaller tooth-row visible below it.\"\n  ],\n  \"reading\": \"The face floats against open blue like something surfacing. Dense purple scribble builds the skull's mass, while thin red and cyan lines escape outward, loosening the boundary between figure and field. The doubled mouth reads as uneasy—grinning and grimacing at once. Compared to its neighbors, the composition feels exposed: fewer layers, more bare ground, as if the head arrived before its surroundings could fill in.\",\n  \"contextAngle\": \"Sitting between Scrimshaw3 and Scrimshaw5 in the owned numbered family, this work trades the heavy black outlines and warm backgrounds of its neighbors for thinner purple lines over cool blue. The shift in dominant color and line weight marks a visible break within the sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY\",\n      \"reason\": \"Scrimshaw5 shares the zigzag-teeth mouth and spiral eyes but buries them under denser color fills on yellow, making this work's sparse blue ground a stark contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ\",\n      \"reason\": \"Both use a light blue background with face-like forms showing bared teeth, but the nnxyz work packs multiple figures and far more line density into the same space.\"\n    }\n  ],\n  \"tags\": [\n    \"single head\",\n    \"spiral eyes\",\n    \"zigzag teeth\",\n    \"blue ground\",\n    \"overlapping line layers\",\n    \"open composition\"\n  ],\n  \"lookingQuestion\": \"Where do the thin cyan arcs at the right edge meet or diverge from the purple lines that define the head—do they extend the skull or belong to a separate layer?\",\n  \"ambiguities\": [\n    \"Whether the small marks at upper left (purple and red angular strokes) represent a secondary form or are loose framing lines is unclear from the image alone.\",\n    \"The circular form at the top center with a red dot could be read as a third eye or an anchor-like shape; the image supports either reading.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D/image.png",
+        "imageSHA256": "3181673ec0cafcc4f049052fbff2e8cad3a5bd6f2c8789864c7707fe4229f2d8"
+      },
+      {
+        "artworkId": "QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS/image.png",
+        "imageSHA256": "43c49550dc0d40ff447b72187ab46a80b771dfd444b1e5495196bffc64aae4fb"
+      },
+      {
+        "artworkId": "QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ/image.png",
+        "imageSHA256": "ead3ede709c7cef336841695645bfeeca0d377a12a9db7433b93aff2f77ced3f"
+      },
+      {
+        "artworkId": "QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY/image.png",
+        "imageSHA256": "a2d236328a681914a143fcce7a333955b097277b0853c582ce0973c5391ef350"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:46.989581-05:00",
+    "usage": {
+      "inputTokens": 6007,
+      "outputTokens": 818,
+      "totalTokens": 6825,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10546
+    },
+    "requestId": "042d9c9b-fe45-45a9-8bc6-f9b49594cbe8",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape dominates the center, built from overlapping dark purple, white, and cyan arcs against a flat sky-blue background.\",\n    \"Two eye forms sit asymmetrically: the left one wider with white and red marks inside, the right one tighter with concentric purple rings and a small red center.\",\n    \"A rectangular mouth area near the bottom shows jagged white zigzag teeth bordered by red lines, with a second smaller tooth-row visible below it.\"\n  ],\n  \"reading\": \"The face floats against open blue like something surfacing. Dense purple scribble builds the head's mass, while thin red and cyan lines escape outward, loosening the boundary between figure and field. The doubled mouth reads as uneasy—grinning and grimacing at once. Fewer layers and more bare ground leave the head exposed, as if it arrived before its surroundings could fill in.\",\n  \"contextAngle\": \"Sitting between Scrimshaw3 and Scrimshaw5 in the owned numbered family, this work trades the heavy black outlines and warm backgrounds of its neighbors for thinner purple lines over cool blue. The shift in dominant color and line weight marks a visible break within the sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY\",\n      \"reason\": \"Scrimshaw5 shares the zigzag-teeth mouth and spiral eyes but buries them under denser color fills on yellow, making this work's sparse blue ground a stark contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ\",\n      \"reason\": \"Both use a light blue background with face-like forms showing bared teeth, but the nnxyz work packs multiple figures and far more line density into the same space.\"\n    }\n  ],\n  \"tags\": [\n    \"single head\",\n    \"spiral eyes\",\n    \"zigzag teeth\",\n    \"blue ground\",\n    \"overlapping line layers\",\n    \"open composition\"\n  ],\n  \"lookingQuestion\": \"Where do the thin cyan arcs at the right edge meet or diverge from the purple lines that define the head—do they extend the skull or belong to a separate layer?\",\n  \"ambiguities\": [\n    \"Whether the angular purple and red strokes at upper left represent a secondary form or loose framing lines is unclear from the image alone.\",\n    \"The circular form at top center with a red dot could be read as a third eye or an anchor-like shape; the image supports either reading.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed spiral eyes: left eye is wider with white/red interior marks; right eye has tighter concentric purple rings with red center—matches image.\",\n    \"Reading trimmed from 80 to 65 words; removed comparative claim about neighbors that belonged only in contextAngle; replaced 'skull' with 'head' to avoid unsupported anatomical assertion.\",\n    \"Both comparison images verified: Scrimshaw5 does show zigzag teeth and spiral eyes on yellow ground; nnxyz nnotb #1 shares light blue background with bared-teeth figures and much higher line density.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D/image.png",
+        "imageSHA256": "3181673ec0cafcc4f049052fbff2e8cad3a5bd6f2c8789864c7707fe4229f2d8"
+      },
+      {
+        "artworkId": "QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS/image.png",
+        "imageSHA256": "43c49550dc0d40ff447b72187ab46a80b771dfd444b1e5495196bffc64aae4fb"
+      },
+      {
+        "artworkId": "QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ/image.png",
+        "imageSHA256": "ead3ede709c7cef336841695645bfeeca0d377a12a9db7433b93aff2f77ced3f"
+      },
+      {
+        "artworkId": "QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY/image.png",
+        "imageSHA256": "a2d236328a681914a143fcce7a333955b097277b0853c582ce0973c5391ef350"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape dominates the center, built from overlapping dark purple, white, and cyan arcs against a flat sky-blue background.\", \"Two spiral-like eye forms sit asymmetrically: the left one wider with white and red marks inside, the right one tighter with concentric purple rings and a red center.\", \"A rectangular mouth area near the bottom shows jagged white zigzag teeth bordered by red lines, with a second smaller tooth-row visible below it.\"], \"reading\": \"The face floats against open blue like something surfacing. Dense purple scribble builds the skull's mass, while thin red and cyan lines escape outward, loosening the boundary between figure and field. The doubled mouth reads as uneasy—grinning and grimacing at once. Compared to its neighbors, the composition feels exposed: fewer layers, more bare ground, as if the head arrived before its surroundings could fill in.\", \"contextAngle\": \"Sitting between Scrimshaw3 and Scrimshaw5 in the owned numbered family, this work trades the heavy black outlines and warm backgrounds of its neighbors for thinner purple lines over cool blue. The shift in dominant color and line weight marks a visible break within the sequence.\", \"connections\": [{\"targetArtworkId\": \"QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY\", \"reason\": \"Scrimshaw5 shares the zigzag-teeth mouth and spiral eyes but buries them under denser color fills on yellow, making this work's sparse blue ground a stark contrast.\"}, {\"targetArtworkId\": \"QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ\", \"reason\": \"Both use a light blue background with face-like forms showing bared teeth, but the nnxyz work packs multiple figures and far more line density into the same space.\"}], \"tags\": [\"single head\", \"spiral eyes\", \"zigzag teeth\", \"blue ground\", \"overlapping line layers\", \"open composition\"], \"lookingQuestion\": \"Where do the thin cyan arcs at the right edge meet or diverge from the purple lines that define the head—do they extend the skull or belong to a separate layer?\", \"ambiguities\": [\"Whether the small marks at upper left (purple and red angular strokes) represent a secondary form or are loose framing lines is unclear from the image alone.\", \"The circular form at the top center with a red dot could be read as a third eye or an anchor-like shape; the image supports either reading.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

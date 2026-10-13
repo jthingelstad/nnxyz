@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:41.504029-05:00",
+    "usage": {
+      "inputTokens": 6344,
+      "outputTokens": 794,
+      "totalTokens": 7138,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14381
+    },
+    "requestId": "6d57eb09-c511-43d9-bf91-6e1bbd76dac1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A compact upright figure occupies the lower-left, its face showing red eyes, bared white teeth, and a flat yellow-green surface traced with pink-magenta outlines.\",\n    \"A massive coiled form fills the upper-right, built from overlapping pale yellow, blue-grey, and white rounded segments, each ringed by the same pink-magenta line work.\",\n    \"Soft blurred circles of gold, cream, and pale blue float across both the dark background and over the coiled mass, creating a layered glow that sits between the two forms.\"\n  ],\n  \"reading\": \"The small figure and the enormous coiled mass share the same pink-magenta outline language, which reads as a link between something contained and something overwhelming. The bared teeth and red eyes on the figure suggest threat or alarm, while the coiled form offers no readable face—only scale. The floating light circles soften neither form; they drift across both, indifferent to the tension between them.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbor nnxyz nnotb #39 also pairs a masked central figure with large flanking masses and uses the same gold-and-dark palette, making #40 a useful contrast: #39 spreads outward symmetrically, while #40 stacks its two elements diagonally, small against vast.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRdgcYgbtrFmTeJaFwXTpVPRcQxXDXs5naT5mmbo2Wvj5\",\n      \"reason\": \"Both works place a masked, teeth-bearing face at the center of a much larger surrounding mass, but #39 uses dense hatched strokes for its bulk while #40 replaces hatching with smooth inflated segments and floating light circles.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz\",\n      \"reason\": \"The bared white teeth and red-accented eyes in #40 echo the open-mouthed face in nifty faces #122, though #122 fills its surface with dense multicolor scribble lines where #40 uses smooth forms and a single outline color.\"\n    }\n  ],\n  \"tags\": [\n    \"figure-and-mass contrast\",\n    \"pink-magenta outline network\",\n    \"bared teeth\",\n    \"inflated segmented form\",\n    \"floating light circles\",\n    \"dark ground with gold bloom\"\n  ],\n  \"interpretiveTags\": [\n    \"scale disparity as tension\",\n    \"contained versus overwhelming\"\n  ],\n  \"lookingQuestion\": \"The pink-magenta outlines appear on both the small figure and the large coiled form—do they read as the same kind of mark on both, or does the scale of the form change how the line feels?\",\n  \"ambiguities\": [\n    \"The coiled mass could be read as a separate creature or as an extension of the standing figure; the image does not resolve this.\",\n    \"The nnotb #41 comparison image shows a fully abstract line-and-rectangle composition with no shared figure vocabulary, making it a weak formal match; it was inspected but not selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmR3atsU3reQqLyPWY7Dc58HsujbwTs1yfYQ8ctSar12go",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR3atsU3reQqLyPWY7Dc58HsujbwTs1yfYQ8ctSar12go/image.png",
+        "imageSHA256": "8bd7dcfb7b715adb183164afe5ee775afea165af5e64ee57b355dc35ad54799c"
+      },
+      {
+        "artworkId": "QmRdgcYgbtrFmTeJaFwXTpVPRcQxXDXs5naT5mmbo2Wvj5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRdgcYgbtrFmTeJaFwXTpVPRcQxXDXs5naT5mmbo2Wvj5/image.png",
+        "imageSHA256": "cd8dd5ac68358a1fc61e8f8d64dc74296d6e9b3fd82dbd4aa87f738e0d023e79"
+      },
+      {
+        "artworkId": "QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz/image.png",
+        "imageSHA256": "01d764faa0c9b8dbd50909e30d73d0c1f89544ad76faeb523d2893e1d7aabfd7"
+      },
+      {
+        "artworkId": "QmTYqDCypwuWrRCdAmbgtgFAmVTDtpQ1EEwHoVGhNLynDo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTYqDCypwuWrRCdAmbgtgFAmVTDtpQ1EEwHoVGhNLynDo/image.png",
+        "imageSHA256": "c06f2e567f905d5223249fb0c870529d8ae2ecd0c52c8c1b949b8d2d0f2de79f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:48.462864-05:00",
+    "usage": {
+      "inputTokens": 7160,
+      "outputTokens": 925,
+      "totalTokens": 8085,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6874
+    },
+    "requestId": "f4746131-990b-4291-a0f4-b45d5784973a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A compact upright figure occupies the lower-left, its face showing red eyes, bared white teeth, and a flat yellow-green surface traced with pink-magenta outlines.\",\n    \"A massive coiled form fills the upper-right, built from overlapping pale yellow, blue-grey, and white rounded segments, each ringed by the same pink-magenta line work.\",\n    \"Soft blurred circles of gold, cream, and pale blue float across both the dark background and over the coiled mass, sitting between the two forms as a diffuse layer.\"\n  ],\n  \"reading\": \"The small figure and the enormous coiled mass share the same pink-magenta outline language, which reads as a link between something contained and something overwhelming. The bared teeth and red eyes on the figure suggest threat or alarm, while the coiled form offers no readable face—only scale. The floating light circles drift across both without resolving the tension between them.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #39 also pairs a masked face with large flanking masses in a gold-and-dark palette. Where #39 spreads its bulk outward symmetrically, #40 stacks its two elements diagonally—small figure against vast coil.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRdgcYgbtrFmTeJaFwXTpVPRcQxXDXs5naT5mmbo2Wvj5\",\n      \"reason\": \"Both works place a teeth-bearing masked face beside a much larger surrounding mass, but #39 builds its bulk from dense hatched strokes while #40 uses smooth inflated segments and floating light circles.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz\",\n      \"reason\": \"The bared white teeth and red-accented eyes in #40 echo the open-mouthed face in nifty faces #122, though #122 fills its surface with dense multicolor scribble lines where #40 uses smooth forms and a single outline color.\"\n    }\n  ],\n  \"tags\": [\n    \"figure-and-mass contrast\",\n    \"pink-magenta outline network\",\n    \"bared teeth\",\n    \"inflated segmented form\",\n    \"floating light circles\",\n    \"dark ground with gold bloom\"\n  ],\n  \"interpretiveTags\": [\n    \"scale disparity as tension\",\n    \"contained versus overwhelming\"\n  ],\n  \"lookingQuestion\": \"The pink-magenta outlines appear on both the small figure and the large coiled form—do they read as the same kind of mark on both, or does the scale of the form change how the line feels?\",\n  \"ambiguities\": [\n    \"The coiled mass could be read as a separate creature or as an extension of the standing figure; the image does not resolve this.\",\n    \"nnotb #41 shows a fully abstract line-and-rectangle composition with no shared figure vocabulary; it was inspected and rejected as a weak formal match.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: red eyes, white teeth, pink-magenta outlines on both figure and coiled segments, and floating blurred circles are all directly visible.\",\n    \"Removed 'creating a layered glow' from observation 3—'diffuse layer' is more concrete and avoids evaluative language; word counts for reading and contextAngle checked within limits.\",\n    \"Both comparison connections verified against inspected images: hatched strokes in #39 versus smooth segments in #40 confirmed; dense multicolor scribble in nifty faces #122 versus single-color outline in #40 confirmed; nnotb #41 correctly excluded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmR3atsU3reQqLyPWY7Dc58HsujbwTs1yfYQ8ctSar12go",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR3atsU3reQqLyPWY7Dc58HsujbwTs1yfYQ8ctSar12go/image.png",
+        "imageSHA256": "8bd7dcfb7b715adb183164afe5ee775afea165af5e64ee57b355dc35ad54799c"
+      },
+      {
+        "artworkId": "QmRdgcYgbtrFmTeJaFwXTpVPRcQxXDXs5naT5mmbo2Wvj5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRdgcYgbtrFmTeJaFwXTpVPRcQxXDXs5naT5mmbo2Wvj5/image.png",
+        "imageSHA256": "cd8dd5ac68358a1fc61e8f8d64dc74296d6e9b3fd82dbd4aa87f738e0d023e79"
+      },
+      {
+        "artworkId": "QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz/image.png",
+        "imageSHA256": "01d764faa0c9b8dbd50909e30d73d0c1f89544ad76faeb523d2893e1d7aabfd7"
+      },
+      {
+        "artworkId": "QmTYqDCypwuWrRCdAmbgtgFAmVTDtpQ1EEwHoVGhNLynDo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTYqDCypwuWrRCdAmbgtgFAmVTDtpQ1EEwHoVGhNLynDo/image.png",
+        "imageSHA256": "c06f2e567f905d5223249fb0c870529d8ae2ecd0c52c8c1b949b8d2d0f2de79f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A compact upright figure occupies the lower-left, its face showing red eyes, bared white teeth, and a flat yellow-green surface traced with pink-magenta outlines.\", \"A massive coiled form fills the upper-right, built from overlapping pale yellow, blue-grey, and white rounded segments, each ringed by the same pink-magenta line work.\", \"Soft blurred circles of gold, cream, and pale blue float across both the dark background and over the coiled mass, creating a layered glow that sits between the two forms.\"], \"reading\": \"The small figure and the enormous coiled mass share the same pink-magenta outline language, which reads as a link between something contained and something overwhelming. The bared teeth and red eyes on the figure suggest threat or alarm, while the coiled form offers no readable face—only scale. The floating light circles soften neither form; they drift across both, indifferent to the tension between them.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbor nnxyz nnotb #39 also pairs a masked central figure with large flanking masses and uses the same gold-and-dark palette, making #40 a useful contrast: #39 spreads outward symmetrically, while #40 stacks its two elements diagonally, small against vast.\", \"connections\": [{\"targetArtworkId\": \"QmRdgcYgbtrFmTeJaFwXTpVPRcQxXDXs5naT5mmbo2Wvj5\", \"reason\": \"Both works place a masked, teeth-bearing face at the center of a much larger surrounding mass, but #39 uses dense hatched strokes for its bulk while #40 replaces hatching with smooth inflated segments and floating light circles.\"}, {\"targetArtworkId\": \"QmSsuBhdoiqvrk8fQu3rupXRCq2FUdrTDUXyo6qqSqQpAz\", \"reason\": \"The bared white teeth and red-accented eyes in #40 echo the open-mouthed face in nifty faces #122, though #122 fills its surface with dense multicolor scribble lines where #40 uses smooth forms and a single outline color.\"}], \"tags\": [\"figure-and-mass contrast\", \"pink-magenta outline network\", \"bared teeth\", \"inflated segmented form\", \"floating light circles\", \"dark ground with gold bloom\"], \"interpretiveTags\": [\"scale disparity as tension\", \"contained versus overwhelming\"], \"lookingQuestion\": \"The pink-magenta outlines appear on both the small figure and the large coiled form—do they read as the same kind of mark on both, or does the scale of the form change how the line feels?\", \"ambiguities\": [\"The coiled mass could be read as a separate creature or as an extension of the standing figure; the image does not resolve this.\", \"The nnotb #41 comparison image shows a fully abstract line-and-rectangle composition with no shared figure vocabulary, making it a weak formal match; it was inspected but not selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

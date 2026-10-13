@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:28.804688-05:00",
+    "usage": {
+      "inputTokens": 6380,
+      "outputTokens": 769,
+      "totalTokens": 7149,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13573
+    },
+    "requestId": "39490a82-3668-40e4-94c3-1007c4ec33e1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad skull-like form fills most of the canvas, outlined in looping orange and black lines over a warm yellow-brown ground with blurred olive and amber shapes behind it.\",\n    \"Two large rectangular dark voids sit where eye sockets would be; below them, a lower jaw area is filled with vertical white and red lines suggesting teeth, boxed in by orange and black scribbled rectangles.\",\n    \"Loose red and white lines escape the main form at the edges, and a rough rectangular border drawn in orange and black frames the whole composition against a near-black surround.\"\n  ],\n  \"reading\": \"The skull form here is stripped of detail and warmth: the eye sockets are simply dark holes, and the jaw is a cage of white verticals on red. Orange lines loop and overshoot the form rather than containing it, giving the structure a restless, unresolved quality. The blurred amber ground behind the linework reads as heat or decay. The overall mood is hollow rather than fierce.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #55 and nnxyz nifty faces #57. Where #55 fills its face with dense multicolor and spiraling eyes, #56 strips back to near-monochrome amber and black, and #57 explodes into bright primary color and radial eye forms.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q\",\n      \"reason\": \"Both works use a rectangular jaw zone packed with vertical white lines as teeth, but #55 surrounds that zone with saturated multicolor and spiraling eyes, making the contrast with #56's dark, amber-only palette visible and sharp.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt\",\n      \"reason\": \"Both #56 and #57 use a four-zone face layout with rectangular eye and mouth blocks, but #57 replaces the dark voids with radial spiked circles and floods the field with bright yellow, blue, and green, reversing the darkness of #56.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"dark eye voids\",\n    \"vertical line teeth\",\n    \"amber and black palette\",\n    \"looping orange outline\",\n    \"rectangular border\"\n  ],\n  \"interpretiveTags\": [\n    \"hollow mood\",\n    \"heat or decay reading\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the orange lines stop following the skull's edge, and what happens to the image in those places where they break away?\",\n  \"ambiguities\": [\n    \"The blurred shapes in the background could be a photographic layer or a painted wash; the supplied evidence does not confirm which.\",\n    \"nnotb #139 shares an amber-and-dark palette but its subject and line structure differ enough that no strong formal connection was found; it is omitted from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa/image.png",
+        "imageSHA256": "6a7259a7debff91b2fd51f30950c0721127640cc46d7ed781471cdf09fdc96f2"
+      },
+      {
+        "artworkId": "QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q/image.png",
+        "imageSHA256": "c8ce3c2c0785ce6767e163e42a0ac30269f318d5b02ee77331243b9948ca517a"
+      },
+      {
+        "artworkId": "QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe/image.png",
+        "imageSHA256": "b70c6bb1474e8a2e624b3fcbca66b9150e3cdc7952d5fcc59e83ad8e3c3682e6"
+      },
+      {
+        "artworkId": "QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt/image.png",
+        "imageSHA256": "f8004ba39d36ba6f352a16ae8f1175ce0750bc0f253e51090c4b3d314e7a1678"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:36.034716-05:00",
+    "usage": {
+      "inputTokens": 7171,
+      "outputTokens": 971,
+      "totalTokens": 8142,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7089
+    },
+    "requestId": "83c231c1-285b-40c8-b464-853c78811e0e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad skull-like form fills most of the canvas, outlined in looping orange and black lines over a warm yellow-brown ground with blurred olive and amber shapes behind it.\",\n    \"Two large rectangular dark voids occupy the eye-socket positions; below them, a lower jaw area is filled with vertical white and red lines, boxed in by orange and black scribbled rectangles.\",\n    \"Loose red and white lines escape the main form at the edges, and a rough rectangular border in orange and black frames the whole composition against a near-black surround.\"\n  ],\n  \"reading\": \"The skull form is stripped of detail: the eye sockets are dark holes, and the jaw is a cage of white verticals on red. Orange lines loop and overshoot the form rather than containing it, giving the structure a restless, unresolved quality. The blurred amber ground behind the linework reads as heat or decay. The mood is hollow rather than fierce.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #55 and nnxyz nifty faces #57. Where #55 fills its face with dense multicolor and spiraling eyes, #56 holds to near-monochrome amber and black, and #57 explodes into bright primary color and radial eye forms.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q\",\n      \"reason\": \"Both works use a rectangular jaw zone packed with vertical white lines, but #55 surrounds that zone with saturated multicolor and spiraling eyes, making the contrast with #56's dark amber-only palette sharp and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt\",\n      \"reason\": \"Both #56 and #57 use a four-zone face layout with rectangular eye and mouth blocks, but #57 replaces the dark voids with radial spiked circles and floods the field with bright yellow, blue, and green, reversing #56's darkness.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"dark rectangular eye voids\",\n    \"vertical line teeth\",\n    \"amber and black palette\",\n    \"looping orange outline\",\n    \"rectangular border\"\n  ],\n  \"interpretiveTags\": [\n    \"hollow mood\",\n    \"heat or decay reading\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the orange lines stop following the skull's edge, and what happens to the image in those places where they break away?\",\n  \"ambiguities\": [\n    \"The blurred shapes behind the linework could be a photographic layer or a painted wash; the supplied evidence does not confirm which.\",\n    \"nnotb #139 shares an amber-and-dark palette but its subject and line structure differ enough that no strong formal connection was found; it is omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: orange-and-black looping outline, dark rectangular eye voids, and vertical white-and-red jaw lines are all visible.\",\n    \"Comparison with QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q confirmed: #55 does show a rectangular jaw zone with vertical white lines and spiraling multicolor eyes, supporting the stated contrast.\",\n    \"Comparison with QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt confirmed: #57 does show four rectangular face zones, radial spiked eye circles, and a bright yellow-blue-green field, supporting the stated reversal; no invented claims found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa/image.png",
+        "imageSHA256": "6a7259a7debff91b2fd51f30950c0721127640cc46d7ed781471cdf09fdc96f2"
+      },
+      {
+        "artworkId": "QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q/image.png",
+        "imageSHA256": "c8ce3c2c0785ce6767e163e42a0ac30269f318d5b02ee77331243b9948ca517a"
+      },
+      {
+        "artworkId": "QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe/image.png",
+        "imageSHA256": "b70c6bb1474e8a2e624b3fcbca66b9150e3cdc7952d5fcc59e83ad8e3c3682e6"
+      },
+      {
+        "artworkId": "QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt/image.png",
+        "imageSHA256": "f8004ba39d36ba6f352a16ae8f1175ce0750bc0f253e51090c4b3d314e7a1678"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad skull-like form fills most of the canvas, outlined in looping orange and black lines over a warm yellow-brown ground with blurred olive and amber shapes behind it.\", \"Two large rectangular dark voids sit where eye sockets would be; below them, a lower jaw area is filled with vertical white and red lines suggesting teeth, boxed in by orange and black scribbled rectangles.\", \"Loose red and white lines escape the main form at the edges, and a rough rectangular border drawn in orange and black frames the whole composition against a near-black surround.\"], \"reading\": \"The skull form here is stripped of detail and warmth: the eye sockets are simply dark holes, and the jaw is a cage of white verticals on red. Orange lines loop and overshoot the form rather than containing it, giving the structure a restless, unresolved quality. The blurred amber ground behind the linework reads as heat or decay. The overall mood is hollow rather than fierce.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #55 and nnxyz nifty faces #57. Where #55 fills its face with dense multicolor and spiraling eyes, #56 strips back to near-monochrome amber and black, and #57 explodes into bright primary color and radial eye forms.\", \"connections\": [{\"targetArtworkId\": \"QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q\", \"reason\": \"Both works use a rectangular jaw zone packed with vertical white lines as teeth, but #55 surrounds that zone with saturated multicolor and spiraling eyes, making the contrast with #56's dark, amber-only palette visible and sharp.\"}, {\"targetArtworkId\": \"QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt\", \"reason\": \"Both #56 and #57 use a four-zone face layout with rectangular eye and mouth blocks, but #57 replaces the dark voids with radial spiked circles and floods the field with bright yellow, blue, and green, reversing the darkness of #56.\"}], \"tags\": [\"skull form\", \"dark eye voids\", \"vertical line teeth\", \"amber and black palette\", \"looping orange outline\", \"rectangular border\"], \"interpretiveTags\": [\"hollow mood\", \"heat or decay reading\"], \"lookingQuestion\": \"Where exactly do the orange lines stop following the skull's edge, and what happens to the image in those places where they break away?\", \"ambiguities\": [\"The blurred shapes in the background could be a photographic layer or a painted wash; the supplied evidence does not confirm which.\", \"nnotb #139 shares an amber-and-dark palette but its subject and line structure differ enough that no strong formal connection was found; it is omitted from connections.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

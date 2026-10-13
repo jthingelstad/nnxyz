@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:05.821856-05:00",
+    "usage": {
+      "inputTokens": 6179,
+      "outputTokens": 746,
+      "totalTokens": 6925,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13350
+    },
+    "requestId": "877030ec-72d9-4b29-ab2c-1d14b3b4f234",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form tilts backward at center, its upper surface lit in yellow-gold against a deep black void that opens behind and below it, with loose looping lines tracing its edge.\",\n    \"The background is saturated orange-red broken by diagonal hatching lines and a faint grid overlay; blue-grey patches sit low and to the left, cooling the otherwise warm field.\",\n    \"Dense black scribble lines accumulate at the bottom third, thickening toward the lower corners, while a small hand-lettered mark sits in the lower-left corner.\"\n  ],\n  \"reading\": \"A pale gold form arches back into blackness, its weight pulling against the hot orange field behind it. The grid pressed into that field reads as confinement or pressure, while the blue patches below offer a cooler, quieter note. Scribbled lines pile at the base like static or noise. The image sits between strain and release without resolving either.\",\n  \"contextAngle\": \"Within the owned subset of the nnxyz-numbered family, nnxyz #18 sits between nnxyz #15 and nnxyz #20 in both title order and recorded creation order. Where nnxyz #15 fills its surface with high-contrast multicolor marks, #18 holds to a narrow warm palette with one deep shadow at its core.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH\",\n      \"reason\": \"Both works share a dominant orange-brown field, a central form that recedes into a black void, and a hooded or draped mass framing that void — a contrast to the busy multicolor surfaces of the other candidates.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN\",\n      \"reason\": \"nnxyz #15 uses the same dense overlapping scribble lines across the whole surface, but spreads them over a wide color range; #18 concentrates that same line energy at the base while the upper field stays comparatively open.\"\n    }\n  ],\n  \"tags\": [\n    \"arching form\",\n    \"orange-red field\",\n    \"diagonal hatching\",\n    \"grid overlay\",\n    \"black void\",\n    \"accumulated scribble lines\"\n  ],\n  \"interpretiveTags\": [\n    \"strain\",\n    \"pressure\",\n    \"tension between warmth and shadow\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the gold-lit surface end and the black void begin, and what do the looping lines along that edge do to that boundary?\",\n  \"ambiguities\": [\n    \"The central form's identity is not resolved by the image alone — it reads as a rounded organic mass but no detail confirms a specific subject.\",\n    \"The faint grid may be a distinct layer or an artifact of the hatching density; the image does not make this unambiguous.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb/image.png",
+        "imageSHA256": "19be552d74ed548d256a01f4c2e1aba8ec129476630166dbfaf427bf4a459be1"
+      },
+      {
+        "artworkId": "QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN/image.png",
+        "imageSHA256": "a62c677efc3e03ff2fd9f39ff71589291cbb41ce54b00fe3c29dfe2836887260"
+      },
+      {
+        "artworkId": "QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH/image.png",
+        "imageSHA256": "bb61acbe5f679b4856b0e3f8575add40902e77f3a8a86ef97a8bb3aafb793ce2"
+      },
+      {
+        "artworkId": "Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk/image.png",
+        "imageSHA256": "f8c70935e6fc1ef193d6a7e05f4f206a8b41f8f8951c613b320d89c2e2d2fdbc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:12.913244-05:00",
+    "usage": {
+      "inputTokens": 6945,
+      "outputTokens": 932,
+      "totalTokens": 7877,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7019
+    },
+    "requestId": "acb57d30-3101-43f9-a6b4-d77c6fc6afee",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form tilts backward at center, its upper surface lit in yellow-gold against a deep black void that opens behind and below it, with loose looping lines tracing its edge.\",\n    \"The background is saturated orange-red broken by diagonal hatching lines and a faint grid overlay; blue-grey patches sit low and to the left, cooling the otherwise warm field.\",\n    \"Dense black scribble lines accumulate at the bottom third, thickening toward the lower corners, while a small hand-lettered mark sits in the lower-left corner.\"\n  ],\n  \"reading\": \"A pale gold form arches back into blackness, its weight pulling against the hot orange field behind it. The grid pressed into that field reads as confinement or pressure, while the blue patches below offer a cooler, quieter note. Scribbled lines pile at the base like static or noise. The image sits between strain and release without resolving either.\",\n  \"contextAngle\": \"Within the owned subset of the nnxyz-numbered family, nnxyz #18 sits between nnxyz #15 and nnxyz #20 in both title order and recorded creation order. Where nnxyz #15 fills its surface with high-contrast multicolor marks, #18 holds to a narrow warm palette with one deep shadow at its core.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH\",\n      \"reason\": \"Both works place a central form against a deep black void framed by a warm orange-brown surround; the collector's link of nnxyz to scrimshaw finds a visual echo in both works' contrast of lit surface against dark ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN\",\n      \"reason\": \"nnxyz #15 uses the same dense overlapping scribble lines across its whole surface, but spreads them over a wide color range; #18 concentrates that line energy at the base while the upper field stays comparatively open.\"\n    }\n  ],\n  \"tags\": [\n    \"arching form\",\n    \"orange-red field\",\n    \"diagonal hatching\",\n    \"grid overlay\",\n    \"black void\",\n    \"accumulated scribble lines\"\n  ],\n  \"interpretiveTags\": [\n    \"strain\",\n    \"pressure\",\n    \"tension between warmth and shadow\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the gold-lit surface end and the black void begin, and what do the looping lines along that edge do to that boundary?\",\n  \"ambiguities\": [\n    \"The central form's identity is not resolved by the image alone — it reads as a rounded organic mass but no detail confirms a specific subject.\",\n    \"The faint grid may be a distinct layer or an artifact of hatching density; the image does not make this unambiguous.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: yellow-gold lit form, orange-red hatched background with faint grid, blue-grey patches lower-left, dense black scribble accumulation at base.\",\n    \"QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH connection revised to remove the unsupported 'hooded or draped mass' description; the shared warm-field-against-black-void structure is visually confirmed in both images.\",\n    \"No invented intent, biography, media, or duration found in draft; word counts for reading and contextAngle fall within limits; all candidate IDs are from the supplied set and were inspected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb/image.png",
+        "imageSHA256": "19be552d74ed548d256a01f4c2e1aba8ec129476630166dbfaf427bf4a459be1"
+      },
+      {
+        "artworkId": "QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN/image.png",
+        "imageSHA256": "a62c677efc3e03ff2fd9f39ff71589291cbb41ce54b00fe3c29dfe2836887260"
+      },
+      {
+        "artworkId": "QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH/image.png",
+        "imageSHA256": "bb61acbe5f679b4856b0e3f8575add40902e77f3a8a86ef97a8bb3aafb793ce2"
+      },
+      {
+        "artworkId": "Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk/image.png",
+        "imageSHA256": "f8c70935e6fc1ef193d6a7e05f4f206a8b41f8f8951c613b320d89c2e2d2fdbc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded form tilts backward at center, its upper surface lit in yellow-gold against a deep black void that opens behind and below it, with loose looping lines tracing its edge.\", \"The background is saturated orange-red broken by diagonal hatching lines and a faint grid overlay; blue-grey patches sit low and to the left, cooling the otherwise warm field.\", \"Dense black scribble lines accumulate at the bottom third, thickening toward the lower corners, while a small hand-lettered mark sits in the lower-left corner.\"], \"reading\": \"A pale gold form arches back into blackness, its weight pulling against the hot orange field behind it. The grid pressed into that field reads as confinement or pressure, while the blue patches below offer a cooler, quieter note. Scribbled lines pile at the base like static or noise. The image sits between strain and release without resolving either.\", \"contextAngle\": \"Within the owned subset of the nnxyz-numbered family, nnxyz #18 sits between nnxyz #15 and nnxyz #20 in both title order and recorded creation order. Where nnxyz #15 fills its surface with high-contrast multicolor marks, #18 holds to a narrow warm palette with one deep shadow at its core.\", \"connections\": [{\"targetArtworkId\": \"QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH\", \"reason\": \"Both works share a dominant orange-brown field, a central form that recedes into a black void, and a hooded or draped mass framing that void — a contrast to the busy multicolor surfaces of the other candidates.\"}, {\"targetArtworkId\": \"QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN\", \"reason\": \"nnxyz #15 uses the same dense overlapping scribble lines across the whole surface, but spreads them over a wide color range; #18 concentrates that same line energy at the base while the upper field stays comparatively open.\"}], \"tags\": [\"arching form\", \"orange-red field\", \"diagonal hatching\", \"grid overlay\", \"black void\", \"accumulated scribble lines\"], \"interpretiveTags\": [\"strain\", \"pressure\", \"tension between warmth and shadow\"], \"lookingQuestion\": \"Where exactly does the gold-lit surface end and the black void begin, and what do the looping lines along that edge do to that boundary?\", \"ambiguities\": [\"The central form's identity is not resolved by the image alone — it reads as a rounded organic mass but no detail confirms a specific subject.\", \"The faint grid may be a distinct layer or an artifact of the hatching density; the image does not make this unambiguous.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

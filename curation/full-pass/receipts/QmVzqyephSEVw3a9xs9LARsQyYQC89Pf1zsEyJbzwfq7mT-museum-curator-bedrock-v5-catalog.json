@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:27.019484-05:00",
+    "usage": {
+      "inputTokens": 6453,
+      "outputTokens": 790,
+      "totalTokens": 7243,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13430
+    },
+    "requestId": "d5c6ba19-778a-4cf1-bfa0-32cfba172eba",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large rectangular eye zones, each containing tight yellow-green spiral rings around a dark center, sit side by side in the upper half of a teal field.\",\n    \"The face structure is built from stacked, overlapping rectangles in lime green, orange-red, pink, and black line, giving the head a boxy, layered quality rather than a curved form.\",\n    \"A lower rectangular mouth zone holds a dense crosshatch of red, blue, and white marks between two horizontal bars, flanked by loose scribble lines that extend beyond the face boundary.\"\n  ],\n  \"reading\": \"Rectangles nest inside rectangles here, and the spiral eye zones pull attention inward while the rest of the face pushes outward in clashing warm and cool lines. The mouth's packed crosshatch reads as noise or pressure against the more open teal ground. The overall effect feels confrontational — wide-eyed and clenched — though that reading comes from the forms, not any stated subject.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors #53 and #55 share the spiral-eye device but differ sharply: #53 fragments into diagonal chaos on a dark ground, while #55 fills the face with warm color masses. #54 sits between them in tonal density and structural clarity.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q\",\n      \"reason\": \"Both works use paired spiral-ringed eye zones set inside rectangular frames, but #55 replaces the teal ground and lime outlines with warm yellow-ochre masses and a dark surround, making the structural similarity visible through color contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob\",\n      \"reason\": \"#53 shares the dense overlapping rectangle structure and a crosshatched lower zone, but its diagonal black lines and dark red ground produce a more fractured, less frontal composition than #54's symmetrical teal layout.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral eye zones\",\n    \"nested rectangles\",\n    \"teal ground\",\n    \"lime green outlines\",\n    \"crosshatch mouth\",\n    \"layered line face\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"high visual tension\"\n  ],\n  \"lookingQuestion\": \"How does the size difference between the left and right spiral eye zones affect the way your eye moves across the face?\",\n  \"ambiguities\": [\n    \"The nnotb #92 comparison (QmRUNuNient93Ph1YVaLReExjBhRdBdwe3SqbRHVZ4za7k) shows a flat silhouette on an orange ground with no spiral or rectangle structure; no meaningful formal connection to #54 was found, so it was omitted.\",\n    \"Title-derived order and recorded-creation order align for this work in the owned subset, but gaps in the broader catalogue mean adjacency here does not confirm sequential making.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVzqyephSEVw3a9xs9LARsQyYQC89Pf1zsEyJbzwfq7mT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVzqyephSEVw3a9xs9LARsQyYQC89Pf1zsEyJbzwfq7mT/image.png",
+        "imageSHA256": "cd16432363fa95b5a0668a644199502c35e9b58a2a72e88b7b0c87b575c98e34"
+      },
+      {
+        "artworkId": "QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob/image.png",
+        "imageSHA256": "f1f46eeca5ac0ee0b8ce6737a140dda4208be8339091d192086bf3918df85f7f"
+      },
+      {
+        "artworkId": "QmRUNuNient93Ph1YVaLReExjBhRdBdwe3SqbRHVZ4za7k",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRUNuNient93Ph1YVaLReExjBhRdBdwe3SqbRHVZ4za7k/image.png",
+        "imageSHA256": "0b05f7ddadbe0c7324e87f4b9839f3194f4049c84091a6b1f9da0699d2a0e109"
+      },
+      {
+        "artworkId": "QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q/image.png",
+        "imageSHA256": "c8ce3c2c0785ce6767e163e42a0ac30269f318d5b02ee77331243b9948ca517a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:33.337227-05:00",
+    "usage": {
+      "inputTokens": 7265,
+      "outputTokens": 861,
+      "totalTokens": 8126,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6246
+    },
+    "requestId": "ff721a08-01ba-4c46-ab58-76a050865ca2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large rectangular eye zones, each containing tight yellow-green spiral rings around a dark center, sit side by side in the upper half of a teal field.\",\n    \"The face structure is built from stacked, overlapping rectangles in lime green, orange-red, pink, and black line, giving the head a boxy, layered quality rather than a curved form.\",\n    \"A lower rectangular mouth zone holds a dense crosshatch of red, blue, and white marks between two horizontal bars, flanked by loose scribble lines that extend beyond the face boundary.\"\n  ],\n  \"reading\": \"Rectangles nest inside rectangles, and the spiral eye zones pull attention inward while the rest of the face pushes outward in clashing warm and cool lines. The mouth's packed crosshatch reads as noise or pressure against the open teal ground. The effect feels confrontational — wide-eyed and clenched — though that reading comes from the forms alone.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors #53 and #55 share the spiral-eye device but differ sharply: #53 fragments into diagonal chaos on a dark ground, while #55 fills the face with warm color masses and a dark surround.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q\",\n      \"reason\": \"Both works use paired spiral-ringed eye zones inside rectangular frames, but #55 replaces the teal ground and lime outlines with warm yellow-ochre masses, making the shared structure visible through color contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob\",\n      \"reason\": \"#53 shares the dense overlapping rectangle structure and a crosshatched lower zone, but its diagonal black lines and dark red ground produce a more fractured, less frontal composition than #54's symmetrical teal layout.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral eye zones\",\n    \"nested rectangles\",\n    \"teal ground\",\n    \"lime green outlines\",\n    \"crosshatch mouth\",\n    \"layered line face\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"high visual tension\"\n  ],\n  \"lookingQuestion\": \"How does the size difference between the left and right spiral eye zones affect the way your eye moves across the face?\",\n  \"ambiguities\": [\n    \"The nnotb #92 comparison shows a flat silhouette on an orange ground with no spiral or rectangle structure; no meaningful formal connection to #54 was found, so it was omitted.\",\n    \"Title-derived order and recorded-creation order align for this work in the owned subset, but gaps in the broader catalogue mean adjacency does not confirm sequential making.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: spiral eye zones, nested rectangle structure, and crosshatch mouth zone are all visibly present as described.\",\n    \"Context angle revised to remove the claim that #54 'sits between' neighbors in tonal density — that comparative judgment was unsupported by measured data and has been removed.\",\n    \"Both comparison connections verified against inspected images: spiral-eye and rectangle-frame overlap with #55 confirmed; fractured diagonal structure and dark ground contrast with #53 confirmed. nnotb #92 correctly omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVzqyephSEVw3a9xs9LARsQyYQC89Pf1zsEyJbzwfq7mT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVzqyephSEVw3a9xs9LARsQyYQC89Pf1zsEyJbzwfq7mT/image.png",
+        "imageSHA256": "cd16432363fa95b5a0668a644199502c35e9b58a2a72e88b7b0c87b575c98e34"
+      },
+      {
+        "artworkId": "QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob/image.png",
+        "imageSHA256": "f1f46eeca5ac0ee0b8ce6737a140dda4208be8339091d192086bf3918df85f7f"
+      },
+      {
+        "artworkId": "QmRUNuNient93Ph1YVaLReExjBhRdBdwe3SqbRHVZ4za7k",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRUNuNient93Ph1YVaLReExjBhRdBdwe3SqbRHVZ4za7k/image.png",
+        "imageSHA256": "0b05f7ddadbe0c7324e87f4b9839f3194f4049c84091a6b1f9da0699d2a0e109"
+      },
+      {
+        "artworkId": "QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q/image.png",
+        "imageSHA256": "c8ce3c2c0785ce6767e163e42a0ac30269f318d5b02ee77331243b9948ca517a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two large rectangular eye zones, each containing tight yellow-green spiral rings around a dark center, sit side by side in the upper half of a teal field.\", \"The face structure is built from stacked, overlapping rectangles in lime green, orange-red, pink, and black line, giving the head a boxy, layered quality rather than a curved form.\", \"A lower rectangular mouth zone holds a dense crosshatch of red, blue, and white marks between two horizontal bars, flanked by loose scribble lines that extend beyond the face boundary.\"], \"reading\": \"Rectangles nest inside rectangles here, and the spiral eye zones pull attention inward while the rest of the face pushes outward in clashing warm and cool lines. The mouth's packed crosshatch reads as noise or pressure against the more open teal ground. The overall effect feels confrontational — wide-eyed and clenched — though that reading comes from the forms, not any stated subject.\", \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors #53 and #55 share the spiral-eye device but differ sharply: #53 fragments into diagonal chaos on a dark ground, while #55 fills the face with warm color masses. #54 sits between them in tonal density and structural clarity.\", \"connections\": [{\"targetArtworkId\": \"QmPY4CrXALc76k9YS9D4EC9scGBYB6wq6WQwrdC5TNvG2q\", \"reason\": \"Both works use paired spiral-ringed eye zones set inside rectangular frames, but #55 replaces the teal ground and lime outlines with warm yellow-ochre masses and a dark surround, making the structural similarity visible through color contrast.\"}, {\"targetArtworkId\": \"QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob\", \"reason\": \"#53 shares the dense overlapping rectangle structure and a crosshatched lower zone, but its diagonal black lines and dark red ground produce a more fractured, less frontal composition than #54's symmetrical teal layout.\"}], \"tags\": [\"spiral eye zones\", \"nested rectangles\", \"teal ground\", \"lime green outlines\", \"crosshatch mouth\", \"layered line face\"], \"interpretiveTags\": [\"confrontational mood\", \"high visual tension\"], \"lookingQuestion\": \"How does the size difference between the left and right spiral eye zones affect the way your eye moves across the face?\", \"ambiguities\": [\"The nnotb #92 comparison (QmRUNuNient93Ph1YVaLReExjBhRdBdwe3SqbRHVZ4za7k) shows a flat silhouette on an orange ground with no spiral or rectangle structure; no meaningful formal connection to #54 was found, so it was omitted.\", \"Title-derived order and recorded-creation order align for this work in the owned subset, but gaps in the broader catalogue mean adjacency here does not confirm sequential making.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

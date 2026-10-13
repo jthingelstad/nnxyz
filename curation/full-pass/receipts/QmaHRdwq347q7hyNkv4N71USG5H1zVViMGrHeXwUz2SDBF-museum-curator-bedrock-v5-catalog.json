@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:01.464628-05:00",
+    "usage": {
+      "inputTokens": 6208,
+      "outputTokens": 759,
+      "totalTokens": 6967,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11884
+    },
+    "requestId": "75e4741b-1f3b-4c87-bbcf-c9b532adef80",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid black silhouette of a small rounded figure occupies the lower center, one arm raised and extended flat, palm up, with a tiny winged shape resting on it emitting short radiating lines.\",\n    \"From behind the figure's round head, eight to ten loose wavy and zigzag lines fan outward to the right and upward, drawn in black on a flat, saturated yellow ground that fills the entire picture area.\",\n    \"A small cross mark sits on the figure's chest; the artist's signature appears in the lower left corner as scratchy black lettering against the yellow.\"\n  ],\n  \"reading\": \"A black silhouette holds something small aloft, and the tiny radiating lines around it suggest a charged or fragile moment. The loose wavy lines fanning from the figure's head read as noise, feeling, or pressure—hard to say which. The vast yellow field above is empty and open, which pulls against the crowded energy at the figure's head, giving the image an unresolved, suspended quality.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the flat yellow ground and radiating black lines also appear in title neighbor nnxyz nnotb #109, suggesting yellow-on-black line patterns recur across this part of the collection. Title neighbors nnxyz nnotb #129 and #131 use very different palettes and mark densities.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUECswo5M92TAFKnWn2MBZnnddhPPWQUkpnkp6dfuSRkr\",\n      \"reason\": \"Both works use a saturated yellow ground with black radiating wavy lines spreading outward from a central form, making the line-pattern logic directly comparable across the two images.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9\",\n      \"reason\": \"Both show a figure with one arm extended horizontally, a small creature resting on the outstretched hand—a shared compositional structure that reads very differently across the two contrasting palettes.\"\n    }\n  ],\n  \"tags\": [\n    \"silhouette figure\",\n    \"radiating wavy lines\",\n    \"flat yellow ground\",\n    \"outstretched arm\",\n    \"small winged form\",\n    \"black-on-yellow\"\n  ],\n  \"interpretiveTags\": [\n    \"suspended moment\",\n    \"internal pressure\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the tiny winged shape and its radiating lines at the hand, or on the fan of wavy lines behind the head—and what does that order do to how you read the rest of the image?\",\n  \"ambiguities\": [\n    \"The tiny form on the outstretched palm has wing-like shapes and radiating lines but is too small to identify with certainty.\",\n    \"The wavy lines behind the head could be read as emanating from the head or from a separate source just above it; the image does not resolve this clearly.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF/image.png",
+        "imageSHA256": "3d9c8db88ca457dea8a767ac2999547bc12f17c8bc2d1b9f35cb2234902925bb"
+      },
+      {
+        "artworkId": "QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9/image.png",
+        "imageSHA256": "df87091193909ce7d4e6edb314f7aa3ba0bfb9db44687047b4b6c64f38c720b0"
+      },
+      {
+        "artworkId": "QmYLCcxugnqhJStTPXHfTr9XNk1nckh3BRRXVLwkRYmnoa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYLCcxugnqhJStTPXHfTr9XNk1nckh3BRRXVLwkRYmnoa/image.png",
+        "imageSHA256": "2fbab9176abd5ea9b62df7bd87cd2c5ec9a486df7bc4bcd58bc2000bc1c6b460"
+      },
+      {
+        "artworkId": "QmUECswo5M92TAFKnWn2MBZnnddhPPWQUkpnkp6dfuSRkr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUECswo5M92TAFKnWn2MBZnnddhPPWQUkpnkp6dfuSRkr/image.png",
+        "imageSHA256": "0652c747203504dad8bda6d07b4ee1dd27a01e67984a6ffc9d3d864f6cde7609"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:08.089545-05:00",
+    "usage": {
+      "inputTokens": 6989,
+      "outputTokens": 935,
+      "totalTokens": 7924,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6555
+    },
+    "requestId": "77706630-ff2c-48d6-87c1-df3ae4606755",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid black silhouette of a small rounded figure sits in the lower center, one arm raised and extended flat with palm up, a tiny winged shape resting on it and short radiating lines around it.\",\n    \"From behind the figure's round head, eight to ten loose wavy and zigzag black lines fan outward to the right and upward against a flat saturated yellow ground that fills the entire picture area.\",\n    \"A small cross mark sits on the figure's chest; a scratchy black signature appears in the lower-left corner against the yellow.\"\n  ],\n  \"reading\": \"A black silhouette holds something small aloft; the short radiating lines around it suggest a charged or fragile moment. Loose wavy lines fan from behind the figure's head—noise, feeling, or pressure, hard to say which. The vast empty yellow field above pulls against the crowded marks at the figure's head, giving the image a suspended, unresolved quality.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #109 shares the flat yellow ground and outward-fanning black wavy lines, making the line-pattern logic directly comparable. Title neighbors nnxyz nnotb #129 and #131 use markedly different palettes and mark densities.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUECswo5M92TAFKnWn2MBZnnddhPPWQUkpnkp6dfuSRkr\",\n      \"reason\": \"Both works place black wavy radiating lines against a flat saturated yellow ground, making the line-pattern structure directly comparable across the two images.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9\",\n      \"reason\": \"Both show a figure with one arm extended horizontally and a small creature resting on the outstretched hand, a shared compositional structure that reads very differently across the two contrasting palettes.\"\n    }\n  ],\n  \"tags\": [\n    \"silhouette figure\",\n    \"radiating wavy lines\",\n    \"flat yellow ground\",\n    \"outstretched arm\",\n    \"small winged form\",\n    \"black-on-yellow\"\n  ],\n  \"interpretiveTags\": [\n    \"suspended moment\",\n    \"internal pressure\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the tiny winged shape and its radiating lines at the hand, or on the fan of wavy lines behind the head—and what does that order do to how you read the rest of the image?\",\n  \"ambiguities\": [\n    \"The tiny form on the outstretched palm has wing-like shapes and radiating lines but is too small to identify with certainty.\",\n    \"The wavy lines behind the head could be read as emanating from the head or from a separate source just above it; the image does not resolve this clearly.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: flat saturated yellow ground, black silhouette, wavy/zigzag radiating lines, cross on chest, and scratchy signature all verified against the primary image.\",\n    \"Connection to QmUECswo5M92TAFKnWn2MBZnnddhPPWQUkpnkp6dfuSRkr confirmed: yellow ground and outward black wavy lines visible in both images; draft reason retained with minor tightening.\",\n    \"Connection to QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9 confirmed: outstretched arm with small creature on hand visible in both images; palette contrast accurately noted; no invented content found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF/image.png",
+        "imageSHA256": "3d9c8db88ca457dea8a767ac2999547bc12f17c8bc2d1b9f35cb2234902925bb"
+      },
+      {
+        "artworkId": "QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9/image.png",
+        "imageSHA256": "df87091193909ce7d4e6edb314f7aa3ba0bfb9db44687047b4b6c64f38c720b0"
+      },
+      {
+        "artworkId": "QmYLCcxugnqhJStTPXHfTr9XNk1nckh3BRRXVLwkRYmnoa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYLCcxugnqhJStTPXHfTr9XNk1nckh3BRRXVLwkRYmnoa/image.png",
+        "imageSHA256": "2fbab9176abd5ea9b62df7bd87cd2c5ec9a486df7bc4bcd58bc2000bc1c6b460"
+      },
+      {
+        "artworkId": "QmUECswo5M92TAFKnWn2MBZnnddhPPWQUkpnkp6dfuSRkr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUECswo5M92TAFKnWn2MBZnnddhPPWQUkpnkp6dfuSRkr/image.png",
+        "imageSHA256": "0652c747203504dad8bda6d07b4ee1dd27a01e67984a6ffc9d3d864f6cde7609"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A solid black silhouette of a small rounded figure occupies the lower center, one arm raised and extended flat, palm up, with a tiny winged shape resting on it emitting short radiating lines.\", \"From behind the figure's round head, eight to ten loose wavy and zigzag lines fan outward to the right and upward, drawn in black on a flat, saturated yellow ground that fills the entire picture area.\", \"A small cross mark sits on the figure's chest; the artist's signature appears in the lower left corner as scratchy black lettering against the yellow.\"], \"reading\": \"A black silhouette holds something small aloft, and the tiny radiating lines around it suggest a charged or fragile moment. The loose wavy lines fanning from the figure's head read as noise, feeling, or pressure—hard to say which. The vast yellow field above is empty and open, which pulls against the crowded energy at the figure's head, giving the image an unresolved, suspended quality.\", \"contextAngle\": \"Within the owned nnotb subset, the flat yellow ground and radiating black lines also appear in title neighbor nnxyz nnotb #109, suggesting yellow-on-black line patterns recur across this part of the collection. Title neighbors nnxyz nnotb #129 and #131 use very different palettes and mark densities.\", \"connections\": [{\"targetArtworkId\": \"QmUECswo5M92TAFKnWn2MBZnnddhPPWQUkpnkp6dfuSRkr\", \"reason\": \"Both works use a saturated yellow ground with black radiating wavy lines spreading outward from a central form, making the line-pattern logic directly comparable across the two images.\"}, {\"targetArtworkId\": \"QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9\", \"reason\": \"Both show a figure with one arm extended horizontally, a small creature resting on the outstretched hand—a shared compositional structure that reads very differently across the two contrasting palettes.\"}], \"tags\": [\"silhouette figure\", \"radiating wavy lines\", \"flat yellow ground\", \"outstretched arm\", \"small winged form\", \"black-on-yellow\"], \"interpretiveTags\": [\"suspended moment\", \"internal pressure\"], \"lookingQuestion\": \"Where does your eye settle first—on the tiny winged shape and its radiating lines at the hand, or on the fan of wavy lines behind the head—and what does that order do to how you read the rest of the image?\", \"ambiguities\": [\"The tiny form on the outstretched palm has wing-like shapes and radiating lines but is too small to identify with certainty.\", \"The wavy lines behind the head could be read as emanating from the head or from a separate source just above it; the image does not resolve this clearly.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

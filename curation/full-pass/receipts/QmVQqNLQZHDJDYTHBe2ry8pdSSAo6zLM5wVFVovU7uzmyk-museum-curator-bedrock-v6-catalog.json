@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:40.067341-05:00",
+    "usage": {
+      "inputTokens": 5058,
+      "outputTokens": 707,
+      "totalTokens": 5765,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20182
+    },
+    "requestId": "42ebe0cc-e2a5-49a2-885e-8dfcbfea9816",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head-like form fills the frame, built from dense overlapping black scribble lines over warm olive-gold and brown washes against a black background.\",\n    \"Three concentric spiral circles sit where eyes and a third upper socket would be, drawn in white and light blue lines, each ringed by black loops.\",\n    \"A wide rectangular mouth shape at the bottom shows a row of white zigzag teeth above a red-orange horizontal bar, framed by scratchy black outlines.\"\n  ],\n  \"reading\": \"The head looms forward, its three hollow eye-sockets staring outward with an unsettling symmetry. Tangled black lines pile up like wire, trapping flashes of cyan, pink, yellow, and purple underneath. The jagged white teeth read as a frozen grin or grimace—the expression stays unresolved. Warm golden tones seep through the scribble, giving the dark mass a faint glow that can feel either menacing or mournful depending on where you focus.\",\n  \"contextAngle\": \"Scrimshaw 41 sits near the end of the owned numbered Scrimshaw family. Its title neighbor Scrimshaw 42 shares the black background and head-form approach but trades the frontal stare for a profile view with bright pink and yellow outlines, making this work feel more confrontational by comparison.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31\",\n      \"reason\": \"Both use spiral-circle eyes and zigzag teeth on black grounds, but Scrimshaw 42 shifts to a profile with open color outlines, while this work buries its color under dense black hatching.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv\",\n      \"reason\": \"The nnxyz piece shares zigzag-tooth mouths, cyan-blue line accents, and warm golden background washes, showing a visual overlap the collector connects across the two collections.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal head form\",\n    \"zigzag teeth\",\n    \"spiral eyes\",\n    \"dense black hatching\",\n    \"warm underlayer\",\n    \"black background\"\n  ],\n  \"lookingQuestion\": \"What changes when you focus on the third circle above the two lower eye-shapes—does it alter how the face seems to look at you?\",\n  \"ambiguities\": [\n    \"Whether the third upper circle functions as a third eye or a forehead marking is visually ambiguous; no text or context resolves it.\",\n    \"The warm golden tones could be a distinct painted layer or bleed-through from background strokes beneath the black lines; the method is not confirmed.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      },
+      {
+        "artworkId": "QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd/image.png",
+        "imageSHA256": "ac0065d1817a032625a2400fd56070f2cc8f5fee5c9da9da48500a21919945c1"
+      },
+      {
+        "artworkId": "QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv/image.png",
+        "imageSHA256": "282ce0ee862f63a052f87f069a0acb48587321e03d60d227234b8a5e06b5a1f0"
+      },
+      {
+        "artworkId": "QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31/image.png",
+        "imageSHA256": "73593dbbab5258119a320ac8258ddd152853cf0cb20b715e48ba733b3a23dd58"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:50.611176-05:00",
+    "usage": {
+      "inputTokens": 5797,
+      "outputTokens": 835,
+      "totalTokens": 6632,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10480
+    },
+    "requestId": "2bc180d8-c2a5-4be5-b18c-8972b599739f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head-like form fills the frame, built from dense overlapping black scribble lines over warm olive-gold and brown washes against a black background.\",\n    \"Three concentric spiral circles sit where eyes and a third upper socket would be, drawn in white and light blue lines, each ringed by black loops.\",\n    \"A wide rectangular mouth shape at the bottom shows a row of white zigzag teeth above a red-orange horizontal bar, framed by scratchy black outlines.\"\n  ],\n  \"reading\": \"The head looms forward, its three hollow spiral sockets staring outward with unsettling symmetry. Tangled black lines pile up like wire, trapping flashes of cyan, pink, yellow, and purple underneath. The jagged white teeth read as a frozen grin or grimace—the expression stays unresolved. Warm golden tones seep through the scribble, giving the dark mass a faint glow that can feel either menacing or mournful depending on where you look.\",\n  \"contextAngle\": \"Scrimshaw 41 sits near the end of the owned numbered Scrimshaw family. Its title neighbor Scrimshaw 42 shares the black background and head-form approach but shifts to a profile view with bright pink and yellow outlines, making this work feel more confrontational by comparison.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31\",\n      \"reason\": \"Both use spiral-circle eyes and zigzag teeth on black grounds, but Scrimshaw 42 shifts to a profile with open color outlines while this work buries its color under dense black hatching.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv\",\n      \"reason\": \"The nnxyz piece shares zigzag-tooth mouths, cyan-blue line accents, and warm golden background washes, showing a visual overlap the collector connects across the two collections.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal head form\",\n    \"zigzag teeth\",\n    \"spiral eyes\",\n    \"dense black hatching\",\n    \"warm underlayer\",\n    \"black background\"\n  ],\n  \"lookingQuestion\": \"What changes when you focus on the third circle above the two lower eye-shapes—does it alter how the face seems to look at you?\",\n  \"ambiguities\": [\n    \"Whether the third upper circle functions as a third eye or a forehead marking is visually ambiguous; no text or context resolves it.\",\n    \"The warm golden tones could be a distinct painted layer or bleed-through from background strokes beneath the black lines; the method is not confirmed.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed three spiral circles visible: two lower (eye positions) and one upper-center, all drawn in white and light blue—matches draft claim.\",\n    \"Checked Scrimshaw 42 image: profile orientation, pink outer outline, yellow crown shape, and zigzag teeth all confirmed; contrast with frontal view here is accurate.\",\n    \"Checked nnxyz nnotb #183: zigzag-tooth mouths, cyan-blue lines, and warm gold-brown background washes all present across multiple figures—cross-collection visual link holds.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      },
+      {
+        "artworkId": "QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd/image.png",
+        "imageSHA256": "ac0065d1817a032625a2400fd56070f2cc8f5fee5c9da9da48500a21919945c1"
+      },
+      {
+        "artworkId": "QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv/image.png",
+        "imageSHA256": "282ce0ee862f63a052f87f069a0acb48587321e03d60d227234b8a5e06b5a1f0"
+      },
+      {
+        "artworkId": "QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31/image.png",
+        "imageSHA256": "73593dbbab5258119a320ac8258ddd152853cf0cb20b715e48ba733b3a23dd58"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large head-like form fills the frame, built from dense overlapping black scribble lines over warm olive-gold and brown washes against a black background.\", \"Three concentric spiral circles sit where eyes and a third upper socket would be, drawn in white and light blue lines, each ringed by black loops.\", \"A wide rectangular mouth shape at the bottom shows a row of white zigzag teeth above a red-orange horizontal bar, framed by scratchy black outlines.\"], \"reading\": \"The head looms forward, its three hollow eye-sockets staring outward with an unsettling symmetry. Tangled black lines pile up like wire, trapping flashes of cyan, pink, yellow, and purple underneath. The jagged white teeth read as a frozen grin or grimace—the expression stays unresolved. Warm golden tones seep through the scribble, giving the dark mass a faint glow that can feel either menacing or mournful depending on where you focus.\", \"contextAngle\": \"Scrimshaw 41 sits near the end of the owned numbered Scrimshaw family. Its title neighbor Scrimshaw 42 shares the black background and head-form approach but trades the frontal stare for a profile view with bright pink and yellow outlines, making this work feel more confrontational by comparison.\", \"connections\": [{\"targetArtworkId\": \"QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31\", \"reason\": \"Both use spiral-circle eyes and zigzag teeth on black grounds, but Scrimshaw 42 shifts to a profile with open color outlines, while this work buries its color under dense black hatching.\"}, {\"targetArtworkId\": \"QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv\", \"reason\": \"The nnxyz piece shares zigzag-tooth mouths, cyan-blue line accents, and warm golden background washes, showing a visual overlap the collector connects across the two collections.\"}], \"tags\": [\"frontal head form\", \"zigzag teeth\", \"spiral eyes\", \"dense black hatching\", \"warm underlayer\", \"black background\"], \"lookingQuestion\": \"What changes when you focus on the third circle above the two lower eye-shapes—does it alter how the face seems to look at you?\", \"ambiguities\": [\"Whether the third upper circle functions as a third eye or a forehead marking is visually ambiguous; no text or context resolves it.\", \"The warm golden tones could be a distinct painted layer or bleed-through from background strokes beneath the black lines; the method is not confirmed.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

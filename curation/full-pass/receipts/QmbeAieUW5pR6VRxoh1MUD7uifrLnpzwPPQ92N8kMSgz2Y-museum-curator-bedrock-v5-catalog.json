@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:47.888534-05:00",
+    "usage": {
+      "inputTokens": 6144,
+      "outputTokens": 803,
+      "totalTokens": 6947,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14090
+    },
+    "requestId": "9a7f7b3c-ac08-40a8-875e-07c82b9fb00b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Five round-headed figures are outlined in thick white lines against a background of stacked horizontal bands in orange, magenta, purple, and yellow-green; the white outlines give each figure a sticker-like separation from the ground.\",\n    \"The central figure's mouth is open wide showing a row of teeth, while the figure to its left displays a similar toothed grin; both faces carry dense scribbled fill in black over bright color.\",\n    \"A bone shape floats in the upper left, held or near the leftmost figure; loose black line-work layers over the color bands throughout, creating a surface of overlapping marks that reads as both background texture and foreground detail.\"\n  ],\n  \"reading\": \"Several round-headed figures crowd the space, their white outlines pressing them forward against a loud field of color bands. Two open mouths—one a wide grin, one a dark open gap—give the scene a range that reads somewhere between comic and unsettled. The bone in the upper left adds an odd prop without resolving what the gathering means. The scribbled fill keeps every form restless rather than settled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #42 shows a quieter, more spaced composition with a snail and grid forms, making #43's crowded figures and hot color bands a strong contrast. The rawblocks collection, also owned, shares dense layered line-work but organizes it around rectangular forms rather than figures.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qma9qLodnfzVMMBokuAFjCg2tjgNDnZbBqqJdkKLDxU6bL\",\n      \"reason\": \"nnxyz nnotb #42 uses white outlines to separate drawn forms from a color background, the same device #43 uses for its figures, but #42 spaces its objects apart while #43 packs them into a single jostling group.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr\",\n      \"reason\": \"nnxyz rawblocks #1 shares the same dense overlap of black scribble lines over saturated color fields, though it builds its density around nested rectangles rather than round-headed figures.\"\n    }\n  ],\n  \"tags\": [\n    \"round-headed figures\",\n    \"white outline silhouette\",\n    \"open mouth teeth\",\n    \"horizontal color bands\",\n    \"floating bone form\",\n    \"layered black scribble\"\n  ],\n  \"interpretiveTags\": [\n    \"comic-unsettled tone\",\n    \"crowded gathering mood\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move between the two open mouths, and what does the bone in the upper left do to that path?\",\n  \"ambiguities\": [\n    \"The fifth figure at far right is less fully drawn than the others; it is unclear whether this is a separate figure or an extension of the central one.\",\n    \"The nnxyz nnotb #44 comparison image shows organic line-work over a soft blurred background with no figures or color bands, making it a weak formal match; it was inspected but not selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y/image.png",
+        "imageSHA256": "9755b4d5a4f856abf44dff23440c9f47b66a918c5778e0c9cae5c37b0dde98c8"
+      },
+      {
+        "artworkId": "Qma9qLodnfzVMMBokuAFjCg2tjgNDnZbBqqJdkKLDxU6bL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma9qLodnfzVMMBokuAFjCg2tjgNDnZbBqqJdkKLDxU6bL/image.png",
+        "imageSHA256": "795f94c1972c07c8f6ac6c83e0b60fc999dcf6ad2dc6ac9e82283ba4c12d4f25"
+      },
+      {
+        "artworkId": "QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr/image.png",
+        "imageSHA256": "e2a24a8191cd92c60aefc9a7731e85e6e5e0cecc9ef4d9d92ec11141dd57905e"
+      },
+      {
+        "artworkId": "QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7/image.png",
+        "imageSHA256": "76a270058058b364793dec7d644f35871484b9a91718331ed10c1a5f53634e8c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:54.565190-05:00",
+    "usage": {
+      "inputTokens": 6969,
+      "outputTokens": 904,
+      "totalTokens": 7873,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6585
+    },
+    "requestId": "93cd28df-a3c4-4666-a9a6-9a93e663287f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Five round-headed figures are outlined in thick white lines against stacked horizontal bands of orange, magenta, purple, and yellow-green; the white outlines give each figure a sticker-like separation from the ground.\",\n    \"The central figure's mouth opens wide showing a row of teeth; the figure to its left displays a similar toothed grin; both faces carry dense black scribbled fill over bright color.\",\n    \"A bone shape floats in the upper left near the leftmost figure; loose black line-work layers over the color bands throughout, functioning as both background texture and foreground detail.\"\n  ],\n  \"reading\": \"Several round-headed figures crowd the space, their white outlines pressing them forward against a loud field of color bands. Two open mouths—one a wide toothed grin, one a dark open gap—give the scene a range that reads somewhere between comic and unsettled. The bone in the upper left adds an odd prop without resolving what the gathering means. The scribbled fill keeps every form restless rather than settled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #42 shows a quieter, more spaced composition with distinct objects, making #43's packed figures and hot color bands a strong contrast. The owned rawblocks collection shares dense layered line-work but organizes it around rectangular forms rather than figures.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qma9qLodnfzVMMBokuAFjCg2tjgNDnZbBqqJdkKLDxU6bL\",\n      \"reason\": \"nnxyz nnotb #42 uses white outlines to lift drawn forms from a color background—the same device #43 uses for its figures—but #42 spaces its objects apart while #43 packs them into a single jostling group.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr\",\n      \"reason\": \"nnxyz rawblocks #1 shares dense overlap of black scribble lines over saturated color fields, though it builds its density around nested rectangles rather than round-headed figures.\"\n    }\n  ],\n  \"tags\": [\n    \"round-headed figures\",\n    \"white outline silhouette\",\n    \"open mouth teeth\",\n    \"horizontal color bands\",\n    \"floating bone form\",\n    \"layered black scribble\"\n  ],\n  \"interpretiveTags\": [\n    \"comic-unsettled tone\",\n    \"crowded gathering mood\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move between the two open mouths, and what does the bone in the upper left do to that path?\",\n  \"ambiguities\": [\n    \"The figure at far right is less fully drawn than the others; it is unclear whether it is a separate figure or an extension of the central one.\",\n    \"nnxyz nnotb #44 shows organic line-work over a soft blurred background with no figures or color bands; it was inspected but offers no useful formal connection and was not selected.\"\n  ],\n  \"reviewFindings\": [\n    \"All five figures, white outlines, toothed mouths, bone form, and horizontal color bands confirmed against the primary image; no invented details found.\",\n    \"Both comparison selections confirmed visually: #42 white-outline device and spaced composition verified; rawblocks #1 dense black scribble over saturated color verified; #44 correctly excluded as weak match.\",\n    \"Word counts checked: reading 64 words, contextAngle 38 words, all observations and comparison reasons within limits; no prohibited vocabulary detected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y/image.png",
+        "imageSHA256": "9755b4d5a4f856abf44dff23440c9f47b66a918c5778e0c9cae5c37b0dde98c8"
+      },
+      {
+        "artworkId": "Qma9qLodnfzVMMBokuAFjCg2tjgNDnZbBqqJdkKLDxU6bL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma9qLodnfzVMMBokuAFjCg2tjgNDnZbBqqJdkKLDxU6bL/image.png",
+        "imageSHA256": "795f94c1972c07c8f6ac6c83e0b60fc999dcf6ad2dc6ac9e82283ba4c12d4f25"
+      },
+      {
+        "artworkId": "QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr/image.png",
+        "imageSHA256": "e2a24a8191cd92c60aefc9a7731e85e6e5e0cecc9ef4d9d92ec11141dd57905e"
+      },
+      {
+        "artworkId": "QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7/image.png",
+        "imageSHA256": "76a270058058b364793dec7d644f35871484b9a91718331ed10c1a5f53634e8c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Five round-headed figures are outlined in thick white lines against a background of stacked horizontal bands in orange, magenta, purple, and yellow-green; the white outlines give each figure a sticker-like separation from the ground.\", \"The central figure's mouth is open wide showing a row of teeth, while the figure to its left displays a similar toothed grin; both faces carry dense scribbled fill in black over bright color.\", \"A bone shape floats in the upper left, held or near the leftmost figure; loose black line-work layers over the color bands throughout, creating a surface of overlapping marks that reads as both background texture and foreground detail.\"], \"reading\": \"Several round-headed figures crowd the space, their white outlines pressing them forward against a loud field of color bands. Two open mouths—one a wide grin, one a dark open gap—give the scene a range that reads somewhere between comic and unsettled. The bone in the upper left adds an odd prop without resolving what the gathering means. The scribbled fill keeps every form restless rather than settled.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #42 shows a quieter, more spaced composition with a snail and grid forms, making #43's crowded figures and hot color bands a strong contrast. The rawblocks collection, also owned, shares dense layered line-work but organizes it around rectangular forms rather than figures.\", \"connections\": [{\"targetArtworkId\": \"Qma9qLodnfzVMMBokuAFjCg2tjgNDnZbBqqJdkKLDxU6bL\", \"reason\": \"nnxyz nnotb #42 uses white outlines to separate drawn forms from a color background, the same device #43 uses for its figures, but #42 spaces its objects apart while #43 packs them into a single jostling group.\"}, {\"targetArtworkId\": \"QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr\", \"reason\": \"nnxyz rawblocks #1 shares the same dense overlap of black scribble lines over saturated color fields, though it builds its density around nested rectangles rather than round-headed figures.\"}], \"tags\": [\"round-headed figures\", \"white outline silhouette\", \"open mouth teeth\", \"horizontal color bands\", \"floating bone form\", \"layered black scribble\"], \"interpretiveTags\": [\"comic-unsettled tone\", \"crowded gathering mood\"], \"lookingQuestion\": \"Where does your eye move between the two open mouths, and what does the bone in the upper left do to that path?\", \"ambiguities\": [\"The fifth figure at far right is less fully drawn than the others; it is unclear whether this is a separate figure or an extension of the central one.\", \"The nnxyz nnotb #44 comparison image shows organic line-work over a soft blurred background with no figures or color bands, making it a weak formal match; it was inspected but not selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

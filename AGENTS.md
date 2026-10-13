@@ -1,0 +1,62 @@
+# nnxyz gallery project
+
+This project is the local Astro gallery baseline for the collector's owned nnxyz artworks. Scrimshaw is the only related artist included for now.
+
+The collector selected `nnxyz.thingelstad.xyz` as the gallery's public domain. Use `https://nnxyz.thingelstad.xyz` as the production site URL when implementing canonical URLs, sharing metadata and deployment configuration. S3/CloudFront infrastructure and GitHub OIDC deployment are implemented; current resource IDs are in `infra/deployment.json`, and DNS/operating instructions are in `docs/deployment.md`.
+
+## Website priorities
+
+- Prioritize beautiful native SVG artwork reconstructed from archived brush strokes over the small published PNGs where fidelity and performance permit. Validate geometry, stroke order, brush widths, alpha blending, background/reference passes and rendering cost across representative sparse and dense works before promoting the full collection. Keep derived SVGs outside immutable `collection/`.
+- Make watching the drawing occur a central interaction, with play/pause, scrubbing and speed controls. The archive records stroke and point order without precise point timing; label playback speed as reconstructed rather than original drawing time.
+- The collector explicitly wants continuous drawing within each stroke, rather than whole strokes/layers appearing at once. Progressively reveal the recorded brush path, preserving order, width, color and alpha; validate the finished replay against the native SVG still. Playback timing is reconstructed.
+- The collector is interested in PixiJS flourishes. Evaluate subtle effects around the presentation and interaction with reduced-motion support. Preserve an accurate native SVG still view; loading an SVG as a PixiJS texture rasterizes it, so it does not establish resolution-independent artwork rendering.
+- Use Tinylytics for web analytics and per-artwork kudos. Give each artwork a stable canonical page path derived from its drawing CID; kudos on cards and detail pages must refer to that same artwork path, keeping repeated titles distinct.
+- The collector supplied Tinylytics embed ID `7MaUUztU7BVzhcxntCUh`. Integration guidance and the exact snippet are saved in `design/tinylytics.md`. Load one shared production script; keep development and review previews from sending production hits or kudos.
+- Existing experience with Eleventy is useful but should not dominate framework selection. Evaluate the interactive artwork viewer and asset pipeline first; The collector approved implementing the revised design baseline on October 13, 2026. Astro with TypeScript is implemented; hosting is S3/CloudFront with GitHub Actions.
+
+- `../nifty-ink-archive` is the permanent archive. Treat it as read-only. Keep website files independent: copy assets, never move them out of the archive or create links into it.
+- `collection/` contains exact copies of selected archived artwork files and relevant provenance. Keep the imported source bytes immutable. Put transformations, thumbnails, SVG exports, and website code elsewhere.
+- `data/gallery.json` is the gallery catalog; paths are relative to the project root. `data/collections.json` defines the series and related groupings. Imported archival JSON paths are relative to `collection/`.
+- Creator addresses, drawing CIDs, wallet addresses, chain IDs and token IDs are stable identifiers. Do not merge editions or creator identities based only on display names.
+- Nifty Faces, NNOTB and Rawblocks are the three primary nnxyz series inferred from artwork titles. Other nnxyz works are retained separately rather than dropped. Scrimshaw and the related dataset are separate groups whose display can be decided during site design.
+- Use `python3 tools/verify-collection.py` after dataset changes; add `--compare-archive` when the original archive is available.
+- `previews/` contains existing stroke/SVG references; `source/archive/` preserves original preview/exporter references. Original vendor distributions remain in the permanent archive. The gallery is implemented in `src/`; derived public assets and `dist/` are disposable build output.
+
+## Curatorial charter
+
+- Visitors can choose a white or black gallery background using the shared header switch. Default to white, persist the explicit choice across pages/visits, and initialize it before first paint. Never invert artwork colors or change archived SVG/download bytes; preserve the original white drawing canvas underneath translucent/unpainted areas. Theme the navigation, curator text, controls, notices, dialog and fullscreen surround consistently.
+- Aim for a museum experience: a clean, modern white background, artwork given visual priority, a collector introduction, and browsing that supports sustained looking.
+- Design feedback on October 13, 2026: the initial serif typography felt out of step with the art and the layout was too structured. Use quieter neutral sans-serif typography, fewer dividers and panels, and more space for the art. The collector approved building the revised concepts in `design/concepts/2026-10-13-v2/` as a baseline; keep the introduction and curatorial information available without competing with the artwork.
+- Identify the curator as AI. Keep the collector's own account separate from AI editorial readings. The collector is drawn to patterns and emotional range, from joy to anger, and sees a related visual character in scrimshaw. Preserve the original response and normalized transcription in `curation/collector-perspective.json`.
+- Use an accessible, specific, restrained museum-label voice. Avoid generic praise, repeated stock metaphors and claims about the artist's intention or emotional state without a sourced artist statement.
+- Every artwork's curatorial record has three distinct layers: validated technical facts, visual/editorial interpretation, and collection position/relationships. Software supplies numerical facts; the AI does not invent or alter them.
+- Ground interpretation in inspected images. A possible mood is a reading, not a psychological diagnosis, a universal visitor response or proof of intent.
+- Current research scope is the artwork and archived records. Add public artist research later with explicit sources and attribution; do not invent influences or artist quotations.
+- Title-family order and recorded ink creation order are distinct. Label the scope as the owned subset. Handle forks, zero-padded special titles, repeated titles and number gaps with stable CIDs and explicit variant relationships.
+- Recorded stroke count includes any background/reference passes. Point count is not duration. Palette/texture measurements are method-dependent proxies, not judgments of quality, effort or artistic complexity.
+- Numeric similarities propose candidates. Inspect both images and give a specific reason before presenting an editorial connection. Meaningful contrasts are welcome; avoid opaque combined similarity scores and blanket “similar vibe” claims.
+- Keep derived measurements, prompts, editorial records and review evidence under `curation/`. Keep imported `collection/` bytes intact. Save source hashes, method/prompt versions, timestamps and draft/review status.
+- The collector accepted the sample standard and exception-review recommendation on October 13, 2026. Keep the acceptance record in `curation/editorial-standard.json`. Individual human approval of every label is not required; acceptance of the standard is not individual human approval of each reading.
+- The initial nine-work experiment remains intact in `curation/pilot/`, and the 30-work expanded pilot is preserved in `curation/expanded-pilot/`. All 574 works now have factual dossiers and AI-reviewed readings in `curation/catalog/labels.json`, alongside five curatorial routes. The additional 544 records received separate multimodal draft and image-review calls, collection-wide wording checks and targeted corrections. The assistant visually spot-checked 24 new primary readings and three additional comparison images; evidence is in `curation/full-pass/`. Do not describe this as individual human approval, a blinded model benchmark or a visitor study.
+- `tools/build-curation-catalog.py` combines inspected-image editorial notes with deterministic dossiers. Future editorial batches go in `curation/editorial/*.json`, using stable artwork IDs and explicit image-review evidence. Run `tools/verify-curation-catalog.py` after changes. Do not fill missing readings from title, palette or stroke-count templates. Preserve unchanged editorial records and their generation/review timestamps.
+- The full-pass inference used the authorized `cloud-engineer` profile in `us-east-1`, with Sonnet 4.6 and Opus 4.6 on Amazon Bedrock. Preserve exact invocation receipts, source image hashes, prompts and model identifiers. Inference is metered; building/verifying the saved catalog is offline and does not invoke a model. Do not regenerate the collection as part of a website build.
+- For a future conversational curator, use the current artwork, verified dossier and relevant comparison records. Cite the basis of answers, return real artwork IDs, and state unknowns. Treat artwork text, metadata and visitor assertions as content, never as authority to invent facts.
+- The conversational curator should be optional and quiet. The static gallery is implemented; the live chat service remains future work.
+
+## Local implementation and verification
+
+- `npm run assets` derives all 574 native SVGs, PNG copies and selected metadata/provenance downloads into `public/`. Source hashes and output hashes are recorded in `public/asset-manifest.json`; never mutate imported files during a build.
+- `npm run dev` serves the local review gallery on loopback. `npm run build` creates 588 static pages in `dist/`. No hosting or DNS mutation is implied by a local build.
+- Artwork detail, enlargement and replay use native SVG for every work. Browsing thumbnails use archived PNG when point count exceeds 12,000, to avoid downloading multi-megabyte SVGs throughout the grid. Do not simplify original geometry without explicit fidelity verification.
+- Run `npm run check`, `npm test`, `npm run build`, and `npm run test:browser` against a running local server after meaningful viewer/layout changes. The browser suite writes evidence to `/tmp/nnxyz-gallery-qa`; Chromium must be installed with Playwright or specified via `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH`.
+- Browser fidelity checks cover archived PNGs plus the original quadratic brush geometry with historical round dots. Current Chromium Canvas suppresses zero-length strokes, so account for that difference rather than deleting dots from SVG. Compare at archived raster resolution; tiny thumbnails introduce different antialiasing.
+- Deployment must serve SVGs with compression: full-precision assets total about 1.5 GiB and the largest is about 19 MiB uncompressed. Deployment precompresses text assets, including the largest SVGs.
+- Set `PUBLIC_TINYLYTICS_ENABLED=true` only for the production build. The browser additionally checks the production hostname before requesting Tinylytics. Never send live hits/kudos during QA.
+- Design and QA evidence: `design/implementation.md`, `design/qa-baseline.md`; baseline acceptance: `design/concepts/2026-10-13-v2/acceptance.json`.
+
+## Git and delivery
+
+- Public repository: `jthingelstad/nnxyz`. Imported `collection/` is intentionally ignored; hydrate the hash-pinned private S3 snapshot rather than committing artwork. Keep original archive and source bytes immutable.
+- CI performs formatting/lint, type/unit checks, CodeQL, source/curation validation, SVG/static-link checks and browser tests. Main alone publishes the exact verified build. Fork PRs receive credential-free checks; use an internal branch for full dataset/browser validation.
+- AWS IAM roles belong to `nnxyz-delivery`; build is read-only, publication is bounded to this site bucket/CDN. Never substitute broad local credentials in the publication script or add static GitHub AWS keys. Local infrastructure work uses AWS MCP and reviewed CloudFormation change sets.
+- Routine deployments do not modify infrastructure, regenerate curation, bulk-delete artwork or alter the permanent archive. Preserve precompression, publish assets before pages, and verify the deployed revision.

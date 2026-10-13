@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:04.107468-05:00",
+    "usage": {
+      "inputTokens": 6046,
+      "outputTokens": 800,
+      "totalTokens": 6846,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12765
+    },
+    "requestId": "6b569a97-1669-4ead-ae33-c7692f92c41b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face fills the frame, outlined in thick white and black lines, with two rectangular eye areas topped by spiky crown-like forms and a wide open mouth showing a row of white teeth.\",\n    \"The color field is dominated by deep blue across the face and background, cut through by diagonal stripes of yellow, red, and teal in the forehead area, with orange and red shapes stacked along the right edge.\",\n    \"Small looping spirals appear at the left jaw, zigzag lines run along the top and bottom edges, and yellow cross-hatching fills the rectangular eye zones, adding a dense, layered quality to the surface.\"\n  ],\n  \"reading\": \"The face pushes to every edge, leaving almost no neutral space. Two rectangular eye zones, each cross-hatched in yellow, sit beneath spiky crown shapes that read as both decorative and aggressive. The wide-open mouth, teeth clearly counted, holds the composition open rather than closed. Blue dominates, but the diagonal stripes in the forehead and the stacked orange forms at the right edge keep the surface restless. The overall feeling is loud, unguarded exposure.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #273 and nnxyz nnotb #275. The title order and recorded creation order align here. Where #275 strips back to near-monochrome on yellow, #274 packs the surface with competing color bands.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3\",\n      \"reason\": \"Both works use toothed zigzag lines as a repeated mark and share a red-yellow-blue palette, but #273 spreads its forms loosely on a flat lavender ground while #274 compresses everything into a dense, dark-blue face.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL\",\n      \"reason\": \"Both show a face with circular or rectangular eye forms and a tooth-filled mouth, but #275 reduces the palette to white, grey, and yellow, making the contrast with #274's saturated blue-and-red surface direct and measurable.\"\n    }\n  ],\n  \"tags\": [\n    \"face filling frame\",\n    \"rectangular eye zones\",\n    \"spiky crown forms\",\n    \"open mouth with teeth\",\n    \"diagonal color stripes\",\n    \"zigzag edge marks\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"loud exposure\",\n    \"restless surface\"\n  ],\n  \"lookingQuestion\": \"The two rectangular eye zones are treated almost identically in structure but differ in what fills them — what specific differences can you find between the left and right eye areas?\",\n  \"ambiguities\": [\n    \"The orange and red stacked shapes along the right edge are partially cropped; whether they form a separate figure or are background marks cannot be confirmed from this image alone.\",\n    \"The spiky forms above each eye could be read as crown shapes, eyelashes, or purely abstract marks; no supplied evidence resolves which reading the artist intended.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97/image.png",
+        "imageSHA256": "3d2d6bf5dc0ab3216659316d69b4aecafea7bf07846bb431ba4a6f8976212b67"
+      },
+      {
+        "artworkId": "QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3/image.png",
+        "imageSHA256": "1181b29db5ee2bd016e0f2ac4e1b200dff1914cf960daf64767cf585d3b66867"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL/image.png",
+        "imageSHA256": "a8f0c33df6d4fc8061c0aec79b3bad6e6bc476d402badbb09c81749113d75bb5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:10.481223-05:00",
+    "usage": {
+      "inputTokens": 6866,
+      "outputTokens": 913,
+      "totalTokens": 7779,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6310
+    },
+    "requestId": "490a6a2d-9b49-41e7-a5e6-17c293a28413",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face fills the frame, outlined in thick white and black lines, with two rectangular eye areas topped by spiky crown-like forms and a wide open mouth showing a row of white teeth.\",\n    \"Deep blue dominates the face and background, cut through by diagonal stripes of yellow, red, and teal in the forehead area, with stacked orange and red shapes along the right edge.\",\n    \"Small looping spirals appear at the left jaw, zigzag lines run along the top and bottom edges, and yellow cross-hatching fills the rectangular eye zones, adding a dense layered quality to the surface.\"\n  ],\n  \"reading\": \"The face pushes to every edge, leaving almost no neutral space. Two rectangular eye zones, each cross-hatched in yellow, sit beneath spiky forms that read as both decorative and aggressive. The wide-open mouth, teeth clearly countable, holds the composition open rather than closed. Blue dominates, but diagonal forehead stripes and stacked orange forms at the right edge keep the surface restless. The overall feeling is one of loud, unguarded exposure.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #273 and nnxyz nnotb #275, with title order and recorded creation order aligned here. Where #275 strips back to near-monochrome on yellow, #274 packs the surface with competing color bands.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3\",\n      \"reason\": \"Both works use toothed zigzag lines as a repeated mark and share red, yellow, and blue, but #273 spreads its forms loosely on a flat lavender ground while #274 compresses everything into a dense dark-blue face.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL\",\n      \"reason\": \"Both show a face with eye forms and a tooth-filled mouth, but #275 reduces the palette to white, grey, and yellow, making the contrast with #274's saturated blue-and-red surface direct and measurable.\"\n    }\n  ],\n  \"tags\": [\n    \"face filling frame\",\n    \"rectangular eye zones\",\n    \"spiky crown-like forms\",\n    \"open mouth with teeth\",\n    \"diagonal color stripes\",\n    \"zigzag edge marks\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"restless surface\",\n    \"unguarded exposure\"\n  ],\n  \"lookingQuestion\": \"The two rectangular eye zones share the same basic structure — what specific differences can you find between what fills the left and right eye areas?\",\n  \"ambiguities\": [\n    \"The stacked orange and red shapes along the right edge are partially cropped; whether they form a separate figure or are background marks cannot be confirmed from this image alone.\",\n    \"The spiky forms above each eye could be read as crown shapes, eyelashes, or purely abstract marks; no supplied evidence resolves the intended reading.\"\n  ],\n  \"reviewFindings\": [\n    \"Color observations confirmed against image: deep blue dominates, diagonal yellow/red/teal stripes in forehead, orange-red stack at right edge — all accurate.\",\n    \"Removed 'teeth clearly counted' (implies precision claim) and replaced with 'clearly countable' to describe visible result without asserting an exact count.\",\n    \"Both comparison images inspected: zigzag marks and palette overlap in #273 confirmed; #275 near-monochrome white/grey/yellow on yellow ground confirmed — connections retained as accurate.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97/image.png",
+        "imageSHA256": "3d2d6bf5dc0ab3216659316d69b4aecafea7bf07846bb431ba4a6f8976212b67"
+      },
+      {
+        "artworkId": "QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3/image.png",
+        "imageSHA256": "1181b29db5ee2bd016e0f2ac4e1b200dff1914cf960daf64767cf585d3b66867"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL/image.png",
+        "imageSHA256": "a8f0c33df6d4fc8061c0aec79b3bad6e6bc476d402badbb09c81749113d75bb5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large face fills the frame, outlined in thick white and black lines, with two rectangular eye areas topped by spiky crown-like forms and a wide open mouth showing a row of white teeth.\", \"The color field is dominated by deep blue across the face and background, cut through by diagonal stripes of yellow, red, and teal in the forehead area, with orange and red shapes stacked along the right edge.\", \"Small looping spirals appear at the left jaw, zigzag lines run along the top and bottom edges, and yellow cross-hatching fills the rectangular eye zones, adding a dense, layered quality to the surface.\"], \"reading\": \"The face pushes to every edge, leaving almost no neutral space. Two rectangular eye zones, each cross-hatched in yellow, sit beneath spiky crown shapes that read as both decorative and aggressive. The wide-open mouth, teeth clearly counted, holds the composition open rather than closed. Blue dominates, but the diagonal stripes in the forehead and the stacked orange forms at the right edge keep the surface restless. The overall feeling is loud, unguarded exposure.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #273 and nnxyz nnotb #275. The title order and recorded creation order align here. Where #275 strips back to near-monochrome on yellow, #274 packs the surface with competing color bands.\", \"connections\": [{\"targetArtworkId\": \"QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3\", \"reason\": \"Both works use toothed zigzag lines as a repeated mark and share a red-yellow-blue palette, but #273 spreads its forms loosely on a flat lavender ground while #274 compresses everything into a dense, dark-blue face.\"}, {\"targetArtworkId\": \"QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL\", \"reason\": \"Both show a face with circular or rectangular eye forms and a tooth-filled mouth, but #275 reduces the palette to white, grey, and yellow, making the contrast with #274's saturated blue-and-red surface direct and measurable.\"}], \"tags\": [\"face filling frame\", \"rectangular eye zones\", \"spiky crown forms\", \"open mouth with teeth\", \"diagonal color stripes\", \"zigzag edge marks\"], \"interpretiveTags\": [\"confrontational\", \"loud exposure\", \"restless surface\"], \"lookingQuestion\": \"The two rectangular eye zones are treated almost identically in structure but differ in what fills them — what specific differences can you find between the left and right eye areas?\", \"ambiguities\": [\"The orange and red stacked shapes along the right edge are partially cropped; whether they form a separate figure or are background marks cannot be confirmed from this image alone.\", \"The spiky forms above each eye could be read as crown shapes, eyelashes, or purely abstract marks; no supplied evidence resolves which reading the artist intended.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:48.429809-05:00",
+    "usage": {
+      "inputTokens": 6644,
+      "outputTokens": 913,
+      "totalTokens": 7557,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6579
+    },
+    "requestId": "c981e58d-d7c4-46e2-ae75-1f8e5e8b3d84",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face fills the frame, outlined in thick white and black lines, with two rectangular eye areas topped by spiky crown-like forms and a mouth showing a row of white teeth set within red-outlined lips.\",\n    \"Deep blue dominates the face and background, cut through by diagonal stripes of yellow, red, and teal in the forehead area, with stacked orange and red shapes along the right edge.\",\n    \"Small looping spirals appear at the left jaw, zigzag lines run along the top and bottom edges, and yellow cross-hatching fills the rectangular eye zones, adding a dense layered quality to the surface.\"\n  ],\n  \"reading\": \"Two rectangular eye zones, each cross-hatched in yellow, sit beneath spiky forms that read as both decorative and aggressive. The mouth, with its countable tooth row set between red-outlined lips, holds the composition open rather than closed. Blue dominates, but diagonal forehead stripes and stacked orange forms at the right edge keep the surface restless, and the face presses to every edge, leaving almost no neutral space. The overall feeling is one of loud, unguarded exposure.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #273 and nnxyz nnotb #275, with title order and recorded creation order aligned here. Where #275 strips back to near-monochrome on yellow, #274 packs the surface with competing color bands.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3\",\n      \"reason\": \"Both works use toothed zigzag lines as a repeated mark and share red, yellow, and blue, but #273 spreads its forms loosely on a flat lavender ground while #274 compresses everything into a dense dark-blue face.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL\",\n      \"reason\": \"Both show a face with eye forms and a tooth-filled mouth, but #275 reduces the palette to white, grey, and yellow, making the contrast with #274's saturated blue-and-red surface direct and measurable.\"\n    }\n  ],\n  \"tags\": [\"face filling frame\", \"rectangular eye zones\", \"spiky crown-like forms\", \"tooth row in red-outlined mouth\", \"diagonal color stripes\", \"zigzag edge marks\"],\n  \"lookingQuestion\": \"The two rectangular eye zones share the same basic structure — what specific differences can you find between what fills the left and right eye areas?\",\n  \"ambiguities\": [\n    \"The stacked orange and red shapes along the right edge are partially cropped; whether they form a separate figure or are background marks cannot be confirmed from this image alone.\",\n    \"The spiky forms above each eye could be read as crown shapes, eyelashes, or purely abstract marks; no supplied evidence resolves the intended reading.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open mouth' with 'mouth showing a row of white teeth set within red-outlined lips' in observations, and revised the reading sentence to 'the mouth, with its countable tooth row set between red-outlined lips, holds the composition open rather than closed,' removing the unsupported openness claim.\",\n    \"Resolved repeated-sentence flag by restructuring the reading: the substance of 'face pushes to every edge' is retained but moved to later in the paragraph and reworded so it no longer opens the reading.\",\n    \"Mouth tag updated from 'open mouth with teeth' to 'tooth row in red-outlined mouth' to match the revised observational language.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97/image.png",
+        "imageSHA256": "3d2d6bf5dc0ab3216659316d69b4aecafea7bf07846bb431ba4a6f8976212b67"
+      },
+      {
+        "artworkId": "QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3/image.png",
+        "imageSHA256": "1181b29db5ee2bd016e0f2ac4e1b200dff1914cf960daf64767cf585d3b66867"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL/image.png",
+        "imageSHA256": "a8f0c33df6d4fc8061c0aec79b3bad6e6bc476d402badbb09c81749113d75bb5"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large face fills the frame, outlined in thick white and black lines, with two rectangular eye areas topped by spiky crown-like forms and a wide open mouth showing a row of white teeth.\", \"Deep blue dominates the face and background, cut through by diagonal stripes of yellow, red, and teal in the forehead area, with stacked orange and red shapes along the right edge.\", \"Small looping spirals appear at the left jaw, zigzag lines run along the top and bottom edges, and yellow cross-hatching fills the rectangular eye zones, adding a dense layered quality to the surface.\"], \"reading\": \"The face pushes to every edge, leaving almost no neutral space. Two rectangular eye zones, each cross-hatched in yellow, sit beneath spiky forms that read as both decorative and aggressive. The wide-open mouth, teeth clearly countable, holds the composition open rather than closed. Blue dominates, but diagonal forehead stripes and stacked orange forms at the right edge keep the surface restless. The overall feeling is one of loud, unguarded exposure.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #273 and nnxyz nnotb #275, with title order and recorded creation order aligned here. Where #275 strips back to near-monochrome on yellow, #274 packs the surface with competing color bands.\", \"connections\": [{\"targetArtworkId\": \"QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3\", \"reason\": \"Both works use toothed zigzag lines as a repeated mark and share red, yellow, and blue, but #273 spreads its forms loosely on a flat lavender ground while #274 compresses everything into a dense dark-blue face.\"}, {\"targetArtworkId\": \"QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL\", \"reason\": \"Both show a face with eye forms and a tooth-filled mouth, but #275 reduces the palette to white, grey, and yellow, making the contrast with #274's saturated blue-and-red surface direct and measurable.\"}], \"tags\": [\"face filling frame\", \"rectangular eye zones\", \"spiky crown-like forms\", \"open mouth with teeth\", \"diagonal color stripes\", \"zigzag edge marks\"], \"lookingQuestion\": \"The two rectangular eye zones share the same basic structure — what specific differences can you find between what fills the left and right eye areas?\", \"ambiguities\": [\"The stacked orange and red shapes along the right edge are partially cropped; whether they form a separate figure or are background marks cannot be confirmed from this image alone.\", \"The spiky forms above each eye could be read as crown shapes, eyelashes, or purely abstract marks; no supplied evidence resolves the intended reading.\"]}\nFLAGS:\n[{\"artworkId\": \"Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}, {\"rule\": \"repeated-sentence\", \"text\": \"the face pushes to every edge, leaving almost no neutral space.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

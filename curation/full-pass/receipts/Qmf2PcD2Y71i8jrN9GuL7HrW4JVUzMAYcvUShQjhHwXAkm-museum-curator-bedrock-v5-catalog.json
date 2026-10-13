@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:47.596910-05:00",
+    "usage": {
+      "inputTokens": 6125,
+      "outputTokens": 790,
+      "totalTokens": 6915,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14140
+    },
+    "requestId": "e269bfef-e9e3-4b79-acde-bac8d9558767",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large curved form dominates the center, rendered in layered yellows and golds with a bright white-yellow bloom at the top; a row of pointed triangular shapes hangs along the lower edge.\",\n    \"The dark background is covered edge-to-edge in small looping and zigzag lines in blue, yellow, red, gray, and pink, forming a dense, restless border around the central form.\",\n    \"A vertical white-and-dark jagged line splits the lower center, with red and black coiled lines descending from it, while a teal-and-white oval shape sits to the upper right of the main form.\"\n  ],\n  \"reading\": \"The gold form swells upward into a near-blinding bloom, then drops into a row of hanging points that read as both decorative and threatening. The jagged vertical split below it introduces a note of rupture. Around all of this, the border scrawl hums at a different register of energy — smaller, more insistent — so the image holds two emotional temperatures at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #82 and nnxyz nnotb #84 share the gold-dominant palette and layered line-over-form approach. #84 also places a large armored shape against a scrawl-filled field, making the three a loose visual cluster in the owned group.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWXexGezAjBMZWAQLN3dc6tupfseumERvUSUDjzQ3WQFR\",\n      \"reason\": \"Both works center a large gold-toned curved form against a blue-toned field filled with looping line work, and both use a bright lateral light source that bleaches part of the form.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRF6jqpej5JypUnPrTX2m2YHp2z4ZdXZQnhfhvNSzEKLV\",\n      \"reason\": \"Like #83, this work layers multicolor zigzag lines across a warm gold field, but the lines here spread more horizontally and the central form is less enclosed, offering a contrast in spatial density.\"\n    }\n  ],\n  \"tags\": [\n    \"curved gold form\",\n    \"hanging triangular points\",\n    \"border zigzag lines\",\n    \"white-yellow bloom\",\n    \"vertical split line\",\n    \"teal oval shape\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first — toward the bright bloom at the top, the hanging points at the bottom, or the jagged split in between — and what does that path feel like?\",\n  \"ambiguities\": [\n    \"The central form's subject is not identifiable from the image alone; reading it as a beak, a helmet visor, or an abstract shape are all plausible.\",\n    \"QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw (rawblocks #17) shares the artist but shows a clearly figurative composition with a polka-dot field; no strong formal connection to #83 was found, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmf2PcD2Y71i8jrN9GuL7HrW4JVUzMAYcvUShQjhHwXAkm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf2PcD2Y71i8jrN9GuL7HrW4JVUzMAYcvUShQjhHwXAkm/image.png",
+        "imageSHA256": "99b5fb3ae930f91a8924c7705b6cbf15cdc55182ee58a4746d9c5da310828601"
+      },
+      {
+        "artworkId": "QmRF6jqpej5JypUnPrTX2m2YHp2z4ZdXZQnhfhvNSzEKLV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRF6jqpej5JypUnPrTX2m2YHp2z4ZdXZQnhfhvNSzEKLV/image.png",
+        "imageSHA256": "dbddd70a29b6ac9d660cbc02e090f68aac1d784cc1242bc20967caf488eb63a7"
+      },
+      {
+        "artworkId": "QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw/image.png",
+        "imageSHA256": "ba798aa01f9bdc057fd37e59a29eeda4aa52edd08baf1b692bb80f4c029d57a9"
+      },
+      {
+        "artworkId": "QmWXexGezAjBMZWAQLN3dc6tupfseumERvUSUDjzQ3WQFR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWXexGezAjBMZWAQLN3dc6tupfseumERvUSUDjzQ3WQFR/image.png",
+        "imageSHA256": "38b155f074e1c51e7a5df25b902dc2b87212b8f82a88f8c952850b915ac6df0b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:54.656591-05:00",
+    "usage": {
+      "inputTokens": 6947,
+      "outputTokens": 880,
+      "totalTokens": 7827,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6957
+    },
+    "requestId": "a0308743-e511-4849-b302-9846ed691701",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large curved form dominates the center, rendered in layered yellows and golds with a bright white-yellow bloom at the top; a row of pointed triangular shapes hangs along the lower edge.\",\n    \"The dark background is covered edge-to-edge in small looping and zigzag lines in blue, yellow, red, gray, and pink, forming a dense border around the central form.\",\n    \"A vertical white-and-dark jagged line splits the lower center, with red and black coiled lines descending from it, while a teal-and-white oval shape sits to the upper right of the main form.\"\n  ],\n  \"reading\": \"The gold form swells upward into a near-blinding bloom, then drops into a row of hanging points that read as both decorative and threatening. The jagged vertical split below introduces a note of rupture. Around all of this, the border scrawl hums at a smaller scale — more insistent — so the image holds two emotional temperatures at once, the dense outer field pressing against the luminous center.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #82 and nnxyz nnotb #84 share a gold-dominant palette and layered line-over-form approach. #84 also places a large curved form against a scrawl-filled field, making the three a loose visual cluster in the owned group.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWXexGezAjBMZWAQLN3dc6tupfseumERvUSUDjzQ3WQFR\",\n      \"reason\": \"Both works center a large gold-toned curved form against a blue-toned field of looping lines, and both show a bright lateral light source that bleaches part of the form.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRF6jqpej5JypUnPrTX2m2YHp2z4ZdXZQnhfhvNSzEKLV\",\n      \"reason\": \"Both layer multicolor zigzag lines across a warm gold field, but in #82 the lines spread more horizontally and the central form is less enclosed, offering a contrast in spatial density.\"\n    }\n  ],\n  \"tags\": [\n    \"curved gold form\",\n    \"hanging triangular points\",\n    \"border zigzag lines\",\n    \"white-yellow bloom\",\n    \"vertical split line\",\n    \"teal oval shape\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first — toward the bright bloom at the top, the hanging points at the bottom, or the jagged split in between?\",\n  \"ambiguities\": [\n    \"The central form's subject is not identifiable from the image alone; readings as a beak, a helmet visor, or an abstract shape are all plausible.\",\n    \"QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw (rawblocks #17) shows a clearly figurative composition with a polka-dot field; no strong formal connection to #83 was found, so it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: teal-and-white oval visible upper right, jagged vertical split with red/black coils confirmed in image — observations accurate.\",\n    \"Removed 'register' from reading per vocabulary restriction; replaced with 'scale'.\",\n    \"Confirmed #84 shows a large gold curved form against a blue scrawl-filled field with lateral light bleaching — connection reason is supported by inspected image.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmf2PcD2Y71i8jrN9GuL7HrW4JVUzMAYcvUShQjhHwXAkm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf2PcD2Y71i8jrN9GuL7HrW4JVUzMAYcvUShQjhHwXAkm/image.png",
+        "imageSHA256": "99b5fb3ae930f91a8924c7705b6cbf15cdc55182ee58a4746d9c5da310828601"
+      },
+      {
+        "artworkId": "QmRF6jqpej5JypUnPrTX2m2YHp2z4ZdXZQnhfhvNSzEKLV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRF6jqpej5JypUnPrTX2m2YHp2z4ZdXZQnhfhvNSzEKLV/image.png",
+        "imageSHA256": "dbddd70a29b6ac9d660cbc02e090f68aac1d784cc1242bc20967caf488eb63a7"
+      },
+      {
+        "artworkId": "QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw/image.png",
+        "imageSHA256": "ba798aa01f9bdc057fd37e59a29eeda4aa52edd08baf1b692bb80f4c029d57a9"
+      },
+      {
+        "artworkId": "QmWXexGezAjBMZWAQLN3dc6tupfseumERvUSUDjzQ3WQFR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWXexGezAjBMZWAQLN3dc6tupfseumERvUSUDjzQ3WQFR/image.png",
+        "imageSHA256": "38b155f074e1c51e7a5df25b902dc2b87212b8f82a88f8c952850b915ac6df0b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large curved form dominates the center, rendered in layered yellows and golds with a bright white-yellow bloom at the top; a row of pointed triangular shapes hangs along the lower edge.\", \"The dark background is covered edge-to-edge in small looping and zigzag lines in blue, yellow, red, gray, and pink, forming a dense, restless border around the central form.\", \"A vertical white-and-dark jagged line splits the lower center, with red and black coiled lines descending from it, while a teal-and-white oval shape sits to the upper right of the main form.\"], \"reading\": \"The gold form swells upward into a near-blinding bloom, then drops into a row of hanging points that read as both decorative and threatening. The jagged vertical split below it introduces a note of rupture. Around all of this, the border scrawl hums at a different register of energy — smaller, more insistent — so the image holds two emotional temperatures at once.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #82 and nnxyz nnotb #84 share the gold-dominant palette and layered line-over-form approach. #84 also places a large armored shape against a scrawl-filled field, making the three a loose visual cluster in the owned group.\", \"connections\": [{\"targetArtworkId\": \"QmWXexGezAjBMZWAQLN3dc6tupfseumERvUSUDjzQ3WQFR\", \"reason\": \"Both works center a large gold-toned curved form against a blue-toned field filled with looping line work, and both use a bright lateral light source that bleaches part of the form.\"}, {\"targetArtworkId\": \"QmRF6jqpej5JypUnPrTX2m2YHp2z4ZdXZQnhfhvNSzEKLV\", \"reason\": \"Like #83, this work layers multicolor zigzag lines across a warm gold field, but the lines here spread more horizontally and the central form is less enclosed, offering a contrast in spatial density.\"}], \"tags\": [\"curved gold form\", \"hanging triangular points\", \"border zigzag lines\", \"white-yellow bloom\", \"vertical split line\", \"teal oval shape\"], \"lookingQuestion\": \"Where does your eye move first — toward the bright bloom at the top, the hanging points at the bottom, or the jagged split in between — and what does that path feel like?\", \"ambiguities\": [\"The central form's subject is not identifiable from the image alone; reading it as a beak, a helmet visor, or an abstract shape are all plausible.\", \"QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw (rawblocks #17) shares the artist but shows a clearly figurative composition with a polka-dot field; no strong formal connection to #83 was found, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

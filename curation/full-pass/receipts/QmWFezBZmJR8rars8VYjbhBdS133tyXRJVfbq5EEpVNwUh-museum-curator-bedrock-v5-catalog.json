@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:05.362625-05:00",
+    "usage": {
+      "inputTokens": 6542,
+      "outputTokens": 752,
+      "totalTokens": 7294,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12378
+    },
+    "requestId": "dd31cad7-38a4-4138-b3b1-4ebe5ee067f7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face occupies the lower-left two-thirds of the image, with tight golden spiral lines drawn over both eye areas against a flat pink background.\",\n    \"Loose multicolored lines—cyan, yellow, green, white—layer over warm brown tonal shapes that suggest a torso and raised arms, leaving much of the pink ground visible.\",\n    \"A smaller, densely packed figure in blue, orange, and black floats in the upper-right corner, separated from the main form by open pink space.\"\n  ],\n  \"reading\": \"Two figures share a hot-pink field without touching: a large face anchored by coiled golden spirals at the eyes, and a smaller, tightly wound form drifting upper-right. The spirals read as pressure or fixation; the open ground between the figures reads as distance rather than connection. Loose colored lines trace the larger form without fully closing it, giving the image a feeling of something held together loosely.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #168 and nnxyz nnotb #170 both use flat saturated grounds and spiral-eye motifs, but #169 replaces those works' dense all-over mark-making with open pink space and a two-figure split.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\",\n      \"reason\": \"nnxyz nnotb #168 shares the concentric spiral-within-eye construction, but places it on a single compressed face against solid orange, making the open pink ground and two-figure spread of #169 a clear contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT\",\n      \"reason\": \"nnxyz nnotb #170 repeats the spiral-eye form and uses a similarly saturated ground, but its marks fill the entire field, whereas #169 leaves large areas of background bare.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral line over eye\",\n    \"two-figure composition\",\n    \"flat pink ground\",\n    \"multicolor loose line overlay\",\n    \"floating secondary figure\",\n    \"warm brown tonal underpainting\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between closeness and distance\",\n    \"fixation or pressure reading\"\n  ],\n  \"lookingQuestion\": \"What does the open pink space between the two figures do to your sense of the relationship between them?\",\n  \"ambiguities\": [\n    \"The smaller upper-right form is too compressed to confirm whether it depicts a second figure or an object; the label treats it as a distinct form without asserting subject identity.\",\n    \"The nifty-faces #11 comparison image shows dense multicolor line work over a face but lacks the spiral-eye motif and pink ground; no strong formal connection was found, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWFezBZmJR8rars8VYjbhBdS133tyXRJVfbq5EEpVNwUh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWFezBZmJR8rars8VYjbhBdS133tyXRJVfbq5EEpVNwUh/image.png",
+        "imageSHA256": "1264a0a3ddfca410d2bf89b6d44ee8fe8ca7dde476bb5a3895cf3c41c9c40b9b"
+      },
+      {
+        "artworkId": "QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe/image.png",
+        "imageSHA256": "369481c24c3b39716ae9163bbe9f1083383b12c1cddaccc7ef16aca10c35f4f6"
+      },
+      {
+        "artworkId": "QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry/image.png",
+        "imageSHA256": "a18a0bd568f37d3c2e4f4ed2ee1e1927f94ffe59d57fe1926de9141e78e93b7e"
+      },
+      {
+        "artworkId": "QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT/image.png",
+        "imageSHA256": "29a58eb9933f348720d68665a037f5b04d6aed0b0800b971ef0e9e56d915c81a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:13.947333-05:00",
+    "usage": {
+      "inputTokens": 7316,
+      "outputTokens": 880,
+      "totalTokens": 8196,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 8231
+    },
+    "requestId": "14d97f3e-cb80-4f89-9e3b-297330a920cc",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face occupies the lower-left two-thirds of the image, with tight golden spiral lines drawn over both eye areas against a flat pink background.\",\n    \"Loose multicolored lines—cyan, yellow, green, white—layer over warm brown tonal shapes that suggest a torso and raised arms, leaving much of the pink ground visible.\",\n    \"A smaller, densely packed form in blue, orange, and black floats in the upper-right corner, separated from the main form by open pink space.\"\n  ],\n  \"reading\": \"Two forms share a hot-pink field without touching: a large face anchored by coiled golden spirals at the eyes, and a smaller, tightly wound form drifting upper-right. The spirals read as pressure or fixation; the open ground between the forms reads as distance rather than connection. Loose colored lines trace the larger form without fully closing it, giving the image a feeling of something held together loosely.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #168 and nnxyz nnotb #170 both use flat saturated grounds and spiral-eye motifs, but #169 replaces those works' dense all-over mark-making with open pink space and a two-form split.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\",\n      \"reason\": \"nnxyz nnotb #168 shares the concentric spiral-within-eye construction, but places it on a single compressed face against solid orange, making the open pink ground and two-form spread of #169 a clear contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT\",\n      \"reason\": \"nnxyz nnotb #170 repeats the spiral-eye form on a saturated ground, but its marks fill the entire field, whereas #169 leaves large areas of background bare.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral line over eye\",\n    \"two-form composition\",\n    \"flat pink ground\",\n    \"multicolor loose line overlay\",\n    \"floating secondary form\",\n    \"warm brown tonal underpainting\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between closeness and distance\",\n    \"fixation or pressure reading\"\n  ],\n  \"lookingQuestion\": \"What does the open pink space between the two forms do to your sense of the relationship between them?\",\n  \"ambiguities\": [\n    \"The smaller upper-right form is too compressed to confirm whether it depicts a second figure or an object; the label treats it as a distinct form without asserting subject identity.\",\n    \"The nifty-faces #11 comparison image shows dense multicolor line work over a face but lacks the spiral-eye motif and pink ground; no strong formal connection was found, so it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'figure' with 'form' for the smaller upper-right element throughout, consistent with the ambiguity note and the instruction not to assert subject identity.\",\n    \"Confirmed both spiral-eye motifs in #168 and #170 against their images; comparison reasons are supported by visible evidence.\",\n    \"Confirmed nifty-faces #11 omission is correct: its white ground, hat form, and dense multicolor scribble lines share no specific formal feature with #169 strong enough to warrant a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWFezBZmJR8rars8VYjbhBdS133tyXRJVfbq5EEpVNwUh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWFezBZmJR8rars8VYjbhBdS133tyXRJVfbq5EEpVNwUh/image.png",
+        "imageSHA256": "1264a0a3ddfca410d2bf89b6d44ee8fe8ca7dde476bb5a3895cf3c41c9c40b9b"
+      },
+      {
+        "artworkId": "QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe/image.png",
+        "imageSHA256": "369481c24c3b39716ae9163bbe9f1083383b12c1cddaccc7ef16aca10c35f4f6"
+      },
+      {
+        "artworkId": "QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry/image.png",
+        "imageSHA256": "a18a0bd568f37d3c2e4f4ed2ee1e1927f94ffe59d57fe1926de9141e78e93b7e"
+      },
+      {
+        "artworkId": "QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT/image.png",
+        "imageSHA256": "29a58eb9933f348720d68665a037f5b04d6aed0b0800b971ef0e9e56d915c81a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large face occupies the lower-left two-thirds of the image, with tight golden spiral lines drawn over both eye areas against a flat pink background.\", \"Loose multicolored lines—cyan, yellow, green, white—layer over warm brown tonal shapes that suggest a torso and raised arms, leaving much of the pink ground visible.\", \"A smaller, densely packed figure in blue, orange, and black floats in the upper-right corner, separated from the main form by open pink space.\"], \"reading\": \"Two figures share a hot-pink field without touching: a large face anchored by coiled golden spirals at the eyes, and a smaller, tightly wound form drifting upper-right. The spirals read as pressure or fixation; the open ground between the figures reads as distance rather than connection. Loose colored lines trace the larger form without fully closing it, giving the image a feeling of something held together loosely.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #168 and nnxyz nnotb #170 both use flat saturated grounds and spiral-eye motifs, but #169 replaces those works' dense all-over mark-making with open pink space and a two-figure split.\", \"connections\": [{\"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\", \"reason\": \"nnxyz nnotb #168 shares the concentric spiral-within-eye construction, but places it on a single compressed face against solid orange, making the open pink ground and two-figure spread of #169 a clear contrast.\"}, {\"targetArtworkId\": \"QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT\", \"reason\": \"nnxyz nnotb #170 repeats the spiral-eye form and uses a similarly saturated ground, but its marks fill the entire field, whereas #169 leaves large areas of background bare.\"}], \"tags\": [\"spiral line over eye\", \"two-figure composition\", \"flat pink ground\", \"multicolor loose line overlay\", \"floating secondary figure\", \"warm brown tonal underpainting\"], \"interpretiveTags\": [\"tension between closeness and distance\", \"fixation or pressure reading\"], \"lookingQuestion\": \"What does the open pink space between the two figures do to your sense of the relationship between them?\", \"ambiguities\": [\"The smaller upper-right form is too compressed to confirm whether it depicts a second figure or an object; the label treats it as a distinct form without asserting subject identity.\", \"The nifty-faces #11 comparison image shows dense multicolor line work over a face but lacks the spiral-eye motif and pink ground; no strong formal connection was found, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

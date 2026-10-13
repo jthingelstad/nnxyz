@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:57.488927-05:00",
+    "usage": {
+      "inputTokens": 6354,
+      "outputTokens": 734,
+      "totalTokens": 7088,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20547
+    },
+    "requestId": "9b2fcb90-122f-4735-ba34-3a281cca8a3f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A head fills most of the frame, turned slightly, with thick black outlines defining rectangular glasses, a small hoop earring, and a garment with collar details against a flat olive-green background.\",\n    \"The hair is built from a dense tangle of black scribbled lines threaded with bright cyan, pink, and orange zigzag strokes that spike outward past the head's silhouette.\",\n    \"The face is filled with overlapping translucent blobs of pink, green, yellow, and muted purple, while a single bright red-orange lip shape anchors the lower right of the head.\"\n  ],\n  \"reading\": \"The flat olive field pushes the figure forward, giving the tangled neon-threaded hair a crackling presence against the stillness. Soft, cloudy color patches beneath the skin lines read as warmth seen through frosted glass—something held back. The dark rectangular glasses block the eyes entirely, creating a sealed-off quality. That single vivid lip becomes the only point of open expression, lending the whole composition a feeling of guarded cool.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #13\\\" and \\\"nnxyz rawblocks #15.\\\" All three feature head-and-shoulder compositions with black contour lines over layered color, but this piece is the most restrained in background treatment, using a single flat tone where its neighbors fill the field with pattern.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7\",\n      \"reason\": \"Both use black contour lines over translucent color patches to build a head, but #13 leaves the eyes as crossed-out marks on a warm gold ground, while #14 hides them behind opaque glasses on cool olive.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj\",\n      \"reason\": \"Both show hair as a mass of looping black lines, yet #15 radiates light-blue streaks outward from the head, giving an open burst that contrasts with #14's contained olive backdrop.\"\n    }\n  ],\n  \"tags\": [\n    \"head with glasses\",\n    \"tangled line work\",\n    \"flat solid background\",\n    \"translucent color layers\",\n    \"earring detail\",\n    \"bright lip accent\"\n  ],\n  \"lookingQuestion\": \"How does the single flat olive background change the way you read the multicolored patches on the face compared to the patterned backgrounds in neighboring works?\",\n  \"ambiguities\": [\n    \"The glasses lenses contain faint marks that may be reflections or text, but they are too small to read with certainty.\",\n    \"A signature-like mark appears in the lower-right corner but its exact lettering is unclear.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY/image.png",
+        "imageSHA256": "f76de33fd65fbd9399a1edd27b6d12441f4103ce82029b84dfc5bc563f93240f"
+      },
+      {
+        "artworkId": "QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7/image.png",
+        "imageSHA256": "7d372d48c923f3ce75bf290f3d85b7dfb3c6f4785801543f943250f4bc8667a3"
+      },
+      {
+        "artworkId": "QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ/image.png",
+        "imageSHA256": "899e25da4be9fb79265a5f9664665d867471e860d88d0fb3535fd7877d172a16"
+      },
+      {
+        "artworkId": "QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj/image.png",
+        "imageSHA256": "f9ada2bfa29a4699bed14443b05c4e205d66d7b3d70d77e4facc968bcbe289dd"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:09.651115-05:00",
+    "usage": {
+      "inputTokens": 7120,
+      "outputTokens": 864,
+      "totalTokens": 7984,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12078
+    },
+    "requestId": "bc2e19bb-7123-4bdb-8bd2-6b97ecc4adc4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A head fills most of the frame, turned slightly, with thick black outlines defining rectangular glasses, a small hoop earring, and a garment with collar details against a flat olive-green background.\",\n    \"The hair is built from a dense tangle of black scribbled lines threaded with bright cyan, pink, and orange zigzag strokes that spike outward past the head's silhouette.\",\n    \"The face is filled with overlapping translucent blobs of pink, green, yellow, and muted purple, while a single bright red-orange lip shape anchors the lower right of the head.\"\n  ],\n  \"reading\": \"The flat olive field pushes the figure forward, giving the tangled neon-threaded hair a crackling presence against the stillness. Soft, cloudy color patches beneath the skin lines read as warmth seen through frosted glass—something held back. The dark rectangular glasses block the eyes entirely, creating a sealed-off quality. That single vivid lip becomes the only point of open expression, lending the composition a feeling of guarded cool.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #13\\\" and \\\"nnxyz rawblocks #15.\\\" All three feature head-and-shoulder compositions with black contour lines over layered color, but this piece uses a single flat background tone where its neighbors fill the field with pattern.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7\",\n      \"reason\": \"Both build a head from black contour lines over translucent color patches, but #13 marks the eyes with dark crosses on a warm gold ground while #14 hides them behind opaque glasses on cool olive.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj\",\n      \"reason\": \"Both show hair as a mass of looping black lines, yet #15 radiates light-blue streaks outward from the head, giving an open burst that contrasts with #14's contained olive backdrop.\"\n    }\n  ],\n  \"tags\": [\n    \"head with glasses\",\n    \"tangled line work\",\n    \"flat solid background\",\n    \"translucent color layers\",\n    \"earring detail\",\n    \"bright lip accent\"\n  ],\n  \"lookingQuestion\": \"How does the single flat olive background change the way you read the multicolored patches on the face compared to the patterned backgrounds in neighboring works?\",\n  \"ambiguities\": [\n    \"The glasses lenses contain faint marks that may be reflections or text, but they are too small to read with certainty.\",\n    \"A signature-like mark appears in the lower-right corner but its exact lettering is unclear.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: glasses are rectangular with dark lenses and yellow-gold rims visible in the image; hoop earring hangs below the left ear; garment shows collar and strap details with faint cyan lines.\",\n    \"Confirmed: #13 comparison uses dark X-shaped marks for eyes on a golden-yellow background with rounded blob pattern, matching the draft's description of crossed-out marks on warm gold.\",\n    \"Reading trimmed from 80 to 75 words to sit comfortably within limits; replaced 'whole composition' with 'the composition' to avoid filler.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY/image.png",
+        "imageSHA256": "f76de33fd65fbd9399a1edd27b6d12441f4103ce82029b84dfc5bc563f93240f"
+      },
+      {
+        "artworkId": "QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7/image.png",
+        "imageSHA256": "7d372d48c923f3ce75bf290f3d85b7dfb3c6f4785801543f943250f4bc8667a3"
+      },
+      {
+        "artworkId": "QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ/image.png",
+        "imageSHA256": "899e25da4be9fb79265a5f9664665d867471e860d88d0fb3535fd7877d172a16"
+      },
+      {
+        "artworkId": "QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj/image.png",
+        "imageSHA256": "f9ada2bfa29a4699bed14443b05c4e205d66d7b3d70d77e4facc968bcbe289dd"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A head fills most of the frame, turned slightly, with thick black outlines defining rectangular glasses, a small hoop earring, and a garment with collar details against a flat olive-green background.\", \"The hair is built from a dense tangle of black scribbled lines threaded with bright cyan, pink, and orange zigzag strokes that spike outward past the head's silhouette.\", \"The face is filled with overlapping translucent blobs of pink, green, yellow, and muted purple, while a single bright red-orange lip shape anchors the lower right of the head.\"], \"reading\": \"The flat olive field pushes the figure forward, giving the tangled neon-threaded hair a crackling presence against the stillness. Soft, cloudy color patches beneath the skin lines read as warmth seen through frosted glass—something held back. The dark rectangular glasses block the eyes entirely, creating a sealed-off quality. That single vivid lip becomes the only point of open expression, lending the whole composition a feeling of guarded cool.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #13\\\" and \\\"nnxyz rawblocks #15.\\\" All three feature head-and-shoulder compositions with black contour lines over layered color, but this piece is the most restrained in background treatment, using a single flat tone where its neighbors fill the field with pattern.\", \"connections\": [{\"targetArtworkId\": \"QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7\", \"reason\": \"Both use black contour lines over translucent color patches to build a head, but #13 leaves the eyes as crossed-out marks on a warm gold ground, while #14 hides them behind opaque glasses on cool olive.\"}, {\"targetArtworkId\": \"QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj\", \"reason\": \"Both show hair as a mass of looping black lines, yet #15 radiates light-blue streaks outward from the head, giving an open burst that contrasts with #14's contained olive backdrop.\"}], \"tags\": [\"head with glasses\", \"tangled line work\", \"flat solid background\", \"translucent color layers\", \"earring detail\", \"bright lip accent\"], \"lookingQuestion\": \"How does the single flat olive background change the way you read the multicolored patches on the face compared to the patterned backgrounds in neighboring works?\", \"ambiguities\": [\"The glasses lenses contain faint marks that may be reflections or text, but they are too small to read with certainty.\", \"A signature-like mark appears in the lower-right corner but its exact lettering is unclear.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

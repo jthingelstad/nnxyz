@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:25.364018-05:00",
+    "usage": {
+      "inputTokens": 6097,
+      "outputTokens": 749,
+      "totalTokens": 6846,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12592
+    },
+    "requestId": "cfaab4d0-2eaa-4301-991f-ace88d4f9dff",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large roughly circular form dominates the center, outlined in white, filled with layered rectangular zones in blue, red, and lavender, with two yellow-ringed circular shapes near its upper portion.\",\n    \"A band of evenly spaced rectangular cells runs horizontally across the lower third of the central form, outlined in yellow and orange, each cell subdivided by short parallel lines.\",\n    \"A zigzag black line runs beneath the rectangular band, and a loose coil of white line descends from the lower right, while the upper canvas is split between a flat yellow band and a flat blue field.\"\n  ],\n  \"reading\": \"The central form reads as a face-like structure, though its parts behave more like stacked mechanical panels than features. The two ringed circles suggest eyes without confirming them; the rectangular band below could be teeth or a keyboard. White outlines hold the zones together while red, orange, and blue shapes press outward at the edges. The mood sits somewhere between comic and unsettled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #215 shares the yellow-and-black palette and a central stacked structure, while title neighbor nnxyz nnotb #217 shifts to a radiating composition on deep blue. This work sits between those two spatial approaches.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZ6BTui3et3ewfMDshyG2vqhoe3RGj4noCHM6XpfouMWA\",\n      \"reason\": \"Both works place a dense, frontally oriented stacked structure against a black ground and use yellow outlines to define interior zones, though #215 relies more on spiral forms where #216 uses rectangular grids.\"\n    },\n    {\n      \"targetArtworkId\": \"QmY63wdc3jK9pRqzYaJmgtwrYQzGDRLkUvrqeVQigX1VPJ\",\n      \"reason\": \"nnxyz nnotb #217 contrasts directly: its composition radiates outward from a circular center on deep blue, while #216 stacks zones vertically within a white-outlined boundary against a fragmented background.\"\n    }\n  ],\n  \"tags\": [\n    \"circular central form\",\n    \"stacked rectangular zones\",\n    \"white outline structure\",\n    \"zigzag line border\",\n    \"yellow flat band\",\n    \"ringed circular shapes\"\n  ],\n  \"interpretiveTags\": [\n    \"face-like ambiguity\",\n    \"comic-unsettled tone\"\n  ],\n  \"lookingQuestion\": \"How does the relationship between the white outline boundary and the flat color fields outside it change the way you read the central form?\",\n  \"ambiguities\": [\n    \"The two ringed circular shapes are consistent with eyes but the overall structure does not resolve clearly as a face; the reading is offered as one possibility.\",\n    \"The comparison to nnxyz nifty faces #0000 was inspected but not selected; its composition is too different in spatial logic to support a specific formal connection beyond shared line density.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmX3CYygChRpUSugZX8RUWtafmBbnQFhcD9KdikZFMi98M",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmX3CYygChRpUSugZX8RUWtafmBbnQFhcD9KdikZFMi98M/image.png",
+        "imageSHA256": "41130e21ef9b92ce084fcdab157853be334b5adaa521961dbdbc69e72445356a"
+      },
+      {
+        "artworkId": "QmZ6BTui3et3ewfMDshyG2vqhoe3RGj4noCHM6XpfouMWA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZ6BTui3et3ewfMDshyG2vqhoe3RGj4noCHM6XpfouMWA/image.png",
+        "imageSHA256": "8f461d0d33ace88fc1b50ddab6b422d24f2ed7006121621315955eeecf1332e6"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmY63wdc3jK9pRqzYaJmgtwrYQzGDRLkUvrqeVQigX1VPJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY63wdc3jK9pRqzYaJmgtwrYQzGDRLkUvrqeVQigX1VPJ/image.png",
+        "imageSHA256": "82e4c670584837e5c659b31a08ec4b33187a2a0f0577a33a506b367734fd779b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:31.615318-05:00",
+    "usage": {
+      "inputTokens": 6868,
+      "outputTokens": 865,
+      "totalTokens": 7733,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6170
+    },
+    "requestId": "23dd76ce-b9e7-4fff-ac8b-f582b7af49de",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large roughly circular form dominates the center, outlined in white, filled with layered rectangular zones in blue, red, and lavender, with two yellow-ringed circular shapes near its upper portion.\",\n    \"A band of evenly spaced rectangular cells runs horizontally across the lower third of the central form, outlined in yellow and orange, each cell subdivided by short parallel lines.\",\n    \"A zigzag black line runs beneath the rectangular band, and a loose coil of white line descends from the lower right, while the upper canvas is split between a flat yellow band on the right and a flat blue field on the left.\"\n  ],\n  \"reading\": \"The central form reads as a face-like structure, though its parts behave more like stacked mechanical panels than features. The two ringed circles suggest eyes without confirming them; the rectangular band below could be teeth or a keyboard. White outlines hold the zones together while red, orange, and blue shapes press outward at the edges. The mood sits somewhere between comic and unsettled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #215 shares a yellow-and-black palette and a frontally stacked central structure, while title neighbor nnxyz nnotb #217 shifts to a radiating composition on deep blue. This work sits between those two spatial approaches.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZ6BTui3et3ewfMDshyG2vqhoe3RGj4noCHM6XpfouMWA\",\n      \"reason\": \"Both works place a dense, frontally oriented stacked structure against a black ground and use yellow outlines to define interior zones, though #215 relies more on spiral forms where #216 uses rectangular grids.\"\n    },\n    {\n      \"targetArtworkId\": \"QmY63wdc3jK9pRqzYaJmgtwrYQzGDRLkUvrqeVQigX1VPJ\",\n      \"reason\": \"nnxyz nnotb #217 contrasts directly: its composition radiates outward from a circular center on deep blue, while #216 stacks zones vertically within a white-outlined boundary against a fragmented background.\"\n    }\n  ],\n  \"tags\": [\n    \"circular central form\",\n    \"stacked rectangular zones\",\n    \"white outline structure\",\n    \"zigzag line border\",\n    \"yellow flat band\",\n    \"ringed circular shapes\"\n  ],\n  \"interpretiveTags\": [\n    \"face-like ambiguity\",\n    \"comic-unsettled tone\"\n  ],\n  \"lookingQuestion\": \"How does the relationship between the white outline boundary and the flat color fields outside it change the way you read the central form?\",\n  \"ambiguities\": [\n    \"The two ringed circular shapes are consistent with eyes but the overall structure does not resolve clearly as a face; the reading is offered as one possibility.\",\n    \"nnxyz nifty faces #0000 was inspected but not selected; its spatial logic and composition differ enough that no specific formal connection beyond shared line density could be supported.\"\n  ],\n  \"reviewFindings\": [\n    \"Upper canvas split confirmed against image: yellow band occupies upper right, blue field upper left; draft description corrected to specify placement.\",\n    \"Both selected comparison connections verified against inspected images: yellow-outlined stacked structure on black confirmed in #215; radiating circular composition on deep blue confirmed in #217.\",\n    \"No invented biography, intent, technique, or unsupported subject identity found; face-like reading correctly framed as a possibility throughout.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmX3CYygChRpUSugZX8RUWtafmBbnQFhcD9KdikZFMi98M",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmX3CYygChRpUSugZX8RUWtafmBbnQFhcD9KdikZFMi98M/image.png",
+        "imageSHA256": "41130e21ef9b92ce084fcdab157853be334b5adaa521961dbdbc69e72445356a"
+      },
+      {
+        "artworkId": "QmZ6BTui3et3ewfMDshyG2vqhoe3RGj4noCHM6XpfouMWA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZ6BTui3et3ewfMDshyG2vqhoe3RGj4noCHM6XpfouMWA/image.png",
+        "imageSHA256": "8f461d0d33ace88fc1b50ddab6b422d24f2ed7006121621315955eeecf1332e6"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmY63wdc3jK9pRqzYaJmgtwrYQzGDRLkUvrqeVQigX1VPJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY63wdc3jK9pRqzYaJmgtwrYQzGDRLkUvrqeVQigX1VPJ/image.png",
+        "imageSHA256": "82e4c670584837e5c659b31a08ec4b33187a2a0f0577a33a506b367734fd779b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large roughly circular form dominates the center, outlined in white, filled with layered rectangular zones in blue, red, and lavender, with two yellow-ringed circular shapes near its upper portion.\", \"A band of evenly spaced rectangular cells runs horizontally across the lower third of the central form, outlined in yellow and orange, each cell subdivided by short parallel lines.\", \"A zigzag black line runs beneath the rectangular band, and a loose coil of white line descends from the lower right, while the upper canvas is split between a flat yellow band and a flat blue field.\"], \"reading\": \"The central form reads as a face-like structure, though its parts behave more like stacked mechanical panels than features. The two ringed circles suggest eyes without confirming them; the rectangular band below could be teeth or a keyboard. White outlines hold the zones together while red, orange, and blue shapes press outward at the edges. The mood sits somewhere between comic and unsettled.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #215 shares the yellow-and-black palette and a central stacked structure, while title neighbor nnxyz nnotb #217 shifts to a radiating composition on deep blue. This work sits between those two spatial approaches.\", \"connections\": [{\"targetArtworkId\": \"QmZ6BTui3et3ewfMDshyG2vqhoe3RGj4noCHM6XpfouMWA\", \"reason\": \"Both works place a dense, frontally oriented stacked structure against a black ground and use yellow outlines to define interior zones, though #215 relies more on spiral forms where #216 uses rectangular grids.\"}, {\"targetArtworkId\": \"QmY63wdc3jK9pRqzYaJmgtwrYQzGDRLkUvrqeVQigX1VPJ\", \"reason\": \"nnxyz nnotb #217 contrasts directly: its composition radiates outward from a circular center on deep blue, while #216 stacks zones vertically within a white-outlined boundary against a fragmented background.\"}], \"tags\": [\"circular central form\", \"stacked rectangular zones\", \"white outline structure\", \"zigzag line border\", \"yellow flat band\", \"ringed circular shapes\"], \"interpretiveTags\": [\"face-like ambiguity\", \"comic-unsettled tone\"], \"lookingQuestion\": \"How does the relationship between the white outline boundary and the flat color fields outside it change the way you read the central form?\", \"ambiguities\": [\"The two ringed circular shapes are consistent with eyes but the overall structure does not resolve clearly as a face; the reading is offered as one possibility.\", \"The comparison to nnxyz nifty faces #0000 was inspected but not selected; its composition is too different in spatial logic to support a specific formal connection beyond shared line density.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

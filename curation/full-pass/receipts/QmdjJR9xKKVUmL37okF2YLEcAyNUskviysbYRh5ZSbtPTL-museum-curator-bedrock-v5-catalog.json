@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:03.017412-05:00",
+    "usage": {
+      "inputTokens": 6221,
+      "outputTokens": 643,
+      "totalTokens": 6864,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10873
+    },
+    "requestId": "c2262b52-7aa5-435f-9aba-28b6debfcc71",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded, bulky figure fills the frame against a flat amber-yellow background; the form is built from layered horizontal bands of white, grey, and black that wrap the head and shoulders.\",\n    \"Two solid black circular lenses sit side by side in the upper face, framed by thin drawn rings; a wide curved line below them reads as a grin.\",\n    \"The mouth area shows a row of small, tightly packed white teeth rendered with scratchy overlapping lines, set against the dark interior of the open smile.\"\n  ],\n  \"reading\": \"Bands of white and grey wrap a bulbous figure so completely that the underlying form is hard to locate — the wrapping is the surface. Against the flat amber field, two black disc lenses and a wide grin give the figure a fixed, unreadable expression. The smile shows teeth but offers no warmth; the opaque lenses block any return gaze. The mood reads as cheerful and unsettling at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work stands out for its near-monochrome palette — white, grey, black, with amber only as background — where title neighbors #274 and #276 both use dense, multi-colour fields. That restraint makes the grin land differently.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97\",\n      \"reason\": \"Both #274 and #275 place a wide-open toothed mouth at the lower centre of a close-cropped face, but #274 fills every surface with clashing colour while #275 strips back to near-monochrome, making the shared grin feel colder here.\"\n    }\n  ],\n  \"tags\": [\n    \"wrapped figure\",\n    \"circular lenses\",\n    \"banded surface\",\n    \"toothed grin\",\n    \"amber background\",\n    \"monochrome form\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettling cheerfulness\",\n    \"masked affect\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the wrapping end and the face begin — can you find a boundary, or does the banding continue across both?\",\n  \"ambiguities\": [\n    \"The scratchy lines inside the mouth area may indicate teeth or may be surface texture; the distinction is not fully resolved at this scale.\",\n    \"Candidate #276 (nnotb #276) and #117 (nifty faces #117) were inspected but offer no stronger formal connection than #274; they are omitted rather than included weakly.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL/image.png",
+        "imageSHA256": "a8f0c33df6d4fc8061c0aec79b3bad6e6bc476d402badbb09c81749113d75bb5"
+      },
+      {
+        "artworkId": "Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97/image.png",
+        "imageSHA256": "3d2d6bf5dc0ab3216659316d69b4aecafea7bf07846bb431ba4a6f8976212b67"
+      },
+      {
+        "artworkId": "QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy/image.png",
+        "imageSHA256": "b78b35ca0d53c98a8552b0b373bef6bcda35e7490e6e5f7b9221ba4888d132d3"
+      },
+      {
+        "artworkId": "QmVzAeY6jaNPHrdH8z4PrD3nu6xMwDcK4G1D9z8MugtUXf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVzAeY6jaNPHrdH8z4PrD3nu6xMwDcK4G1D9z8MugtUXf/image.png",
+        "imageSHA256": "2d040af943b612302770ef8f2037b8bea0a03897f590236b8efd8a20fd2a533d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:09.167771-05:00",
+    "usage": {
+      "inputTokens": 6895,
+      "outputTokens": 802,
+      "totalTokens": 7697,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6088
+    },
+    "requestId": "df534af7-78ad-4245-9ec0-916e4874dfdf",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded, bulky figure fills the frame against a flat amber-yellow background; the form is built from layered horizontal bands of white, grey, and black wrapping the head and shoulders.\",\n    \"Two solid black circular lenses sit side by side in the upper face, each framed by a thin drawn ring; a wide curved line below them reads as a grin.\",\n    \"The mouth area shows a row of small, tightly packed white shapes rendered with scratchy overlapping lines, set against the dark interior of the open smile.\"\n  ],\n  \"reading\": \"Bands of white and grey wrap a bulbous figure so completely that the underlying form is hard to locate — the wrapping is the surface. Against the flat amber field, two black disc lenses and a wide grin give the figure a fixed, unreadable expression. The smile shows teeth but offers no warmth; the opaque lenses block any return gaze. The mood reads as cheerful and unsettling at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work stands out for its near-monochrome palette — white, grey, black, with amber only as background — where title neighbors nnxyz nnotb #274 and nnxyz nnotb #276 both use dense, multi-colour fields. That restraint makes the grin land differently.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97\",\n      \"reason\": \"Both works place a wide-open toothed mouth at the lower centre of a close-cropped face, but nnxyz nnotb #274 fills every surface with clashing colour while this work strips back to near-monochrome, making the shared grin feel colder here.\"\n    }\n  ],\n  \"tags\": [\"wrapped figure\", \"circular lenses\", \"banded surface\", \"toothed grin\", \"amber background\", \"monochrome form\"],\n  \"interpretiveTags\": [\"unsettling cheerfulness\", \"masked affect\"],\n  \"lookingQuestion\": \"Where exactly does the wrapping end and the face begin — can you find a boundary, or does the banding continue across both?\",\n  \"ambiguities\": [\n    \"The scratchy lines inside the mouth area may indicate teeth or surface texture; the distinction is not fully resolved at this scale.\",\n    \"Candidates nnxyz nnotb #276 and nnxyz nifty faces #117 were inspected but offer no stronger formal connection than nnxyz nnotb #274 and are omitted rather than included weakly.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: banded wrapping, dual black circular lenses with drawn rings, and scratchy white tooth forms are all visibly present.\",\n    \"Reading word count confirmed within 55–80 word range; no invented biography, technique claims, or intent language detected; 'deliberately/intentional' vocabulary absent.\",\n    \"Comparison to Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97 verified against inspected image: toothed mouth placement and colour contrast are concrete and visible; no weak or colour-only connection retained.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL/image.png",
+        "imageSHA256": "a8f0c33df6d4fc8061c0aec79b3bad6e6bc476d402badbb09c81749113d75bb5"
+      },
+      {
+        "artworkId": "Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97/image.png",
+        "imageSHA256": "3d2d6bf5dc0ab3216659316d69b4aecafea7bf07846bb431ba4a6f8976212b67"
+      },
+      {
+        "artworkId": "QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy/image.png",
+        "imageSHA256": "b78b35ca0d53c98a8552b0b373bef6bcda35e7490e6e5f7b9221ba4888d132d3"
+      },
+      {
+        "artworkId": "QmVzAeY6jaNPHrdH8z4PrD3nu6xMwDcK4G1D9z8MugtUXf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVzAeY6jaNPHrdH8z4PrD3nu6xMwDcK4G1D9z8MugtUXf/image.png",
+        "imageSHA256": "2d040af943b612302770ef8f2037b8bea0a03897f590236b8efd8a20fd2a533d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A rounded, bulky figure fills the frame against a flat amber-yellow background; the form is built from layered horizontal bands of white, grey, and black that wrap the head and shoulders.\", \"Two solid black circular lenses sit side by side in the upper face, framed by thin drawn rings; a wide curved line below them reads as a grin.\", \"The mouth area shows a row of small, tightly packed white teeth rendered with scratchy overlapping lines, set against the dark interior of the open smile.\"], \"reading\": \"Bands of white and grey wrap a bulbous figure so completely that the underlying form is hard to locate — the wrapping is the surface. Against the flat amber field, two black disc lenses and a wide grin give the figure a fixed, unreadable expression. The smile shows teeth but offers no warmth; the opaque lenses block any return gaze. The mood reads as cheerful and unsettling at once.\", \"contextAngle\": \"Within the owned nnotb subset, this work stands out for its near-monochrome palette — white, grey, black, with amber only as background — where title neighbors #274 and #276 both use dense, multi-colour fields. That restraint makes the grin land differently.\", \"connections\": [{\"targetArtworkId\": \"Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97\", \"reason\": \"Both #274 and #275 place a wide-open toothed mouth at the lower centre of a close-cropped face, but #274 fills every surface with clashing colour while #275 strips back to near-monochrome, making the shared grin feel colder here.\"}], \"tags\": [\"wrapped figure\", \"circular lenses\", \"banded surface\", \"toothed grin\", \"amber background\", \"monochrome form\"], \"interpretiveTags\": [\"unsettling cheerfulness\", \"masked affect\"], \"lookingQuestion\": \"Where exactly does the wrapping end and the face begin — can you find a boundary, or does the banding continue across both?\", \"ambiguities\": [\"The scratchy lines inside the mouth area may indicate teeth or may be surface texture; the distinction is not fully resolved at this scale.\", \"Candidate #276 (nnotb #276) and #117 (nifty faces #117) were inspected but offer no stronger formal connection than #274; they are omitted rather than included weakly.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:43.474075-05:00",
+    "usage": {
+      "inputTokens": 6686,
+      "outputTokens": 746,
+      "totalTokens": 7432,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5998
+    },
+    "requestId": "08234ca5-ed04-4a7c-b1c5-edfc061f603c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded, bulky figure fills the frame against a flat amber-yellow background; the form is built from layered horizontal bands of white, grey, and black wrapping the head and shoulders.\",\n    \"Two solid black circular lenses sit side by side in the upper face, each framed by a thin drawn ring; a wide curved line below them reads as a grin.\",\n    \"The mouth area shows a row of small, tightly packed white shapes rendered with scratchy overlapping lines; a dark curved outline frames them above and below, but no large open cavity is clearly visible.\"\n  ],\n  \"reading\": \"Bands of white and grey wrap a bulbous figure so completely that the underlying form is hard to locate — the wrapping is the surface. Against the flat amber field, two black disc lenses and a wide grin give the figure a fixed, unreadable expression. The smile shows a packed row of teeth but offers no warmth; the opaque lenses block any return gaze. The mood reads as cheerful and unsettling at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work stands out for its near-monochrome palette — white, grey, black, with amber only as background — where title neighbors nnxyz nnotb #274 and nnxyz nnotb #276 both use dense, multi-colour fields.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97\",\n      \"reason\": \"Both works place a toothed grin at the lower centre of a close-cropped face, but nnxyz nnotb #274 fills every surface with clashing colour while this work strips back to near-monochrome, making the shared grin feel colder here.\"\n    }\n  ],\n  \"tags\": [\"wrapped figure\", \"circular lenses\", \"banded surface\", \"toothed grin\", \"amber background\", \"monochrome form\"],\n  \"lookingQuestion\": \"Where exactly does the wrapping end and the face begin — can you find a boundary, or does the banding continue across both?\",\n  \"ambiguities\": [\n    \"The scratchy lines inside the mouth area suggest a tooth row, but no large dark opening is clearly visible; the mouth reads as a grin with teeth rather than a wide-open cavity.\",\n    \"Candidates nnxyz nnotb #276 and nnxyz nifty faces #117 were inspected but offer no stronger formal connection than nnxyz nnotb #274 and are omitted rather than included weakly.\"\n  ],\n  \"reviewFindings\": [\n    \"Removed 'wide-open' from the connections description; re-examination shows a dark curved outline framing a tooth row but no clearly visible large open cavity, so the claim of openness was not retained.\",\n    \"Reading and observation language adjusted to describe the mouth as a grin showing teeth rather than an open smile, consistent with what is visible at this scale.\",\n    \"No other flags required changes; all other claims remain grounded in visible form.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL/image.png",
+        "imageSHA256": "a8f0c33df6d4fc8061c0aec79b3bad6e6bc476d402badbb09c81749113d75bb5"
+      },
+      {
+        "artworkId": "Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97/image.png",
+        "imageSHA256": "3d2d6bf5dc0ab3216659316d69b4aecafea7bf07846bb431ba4a6f8976212b67"
+      },
+      {
+        "artworkId": "QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy/image.png",
+        "imageSHA256": "b78b35ca0d53c98a8552b0b373bef6bcda35e7490e6e5f7b9221ba4888d132d3"
+      },
+      {
+        "artworkId": "QmVzAeY6jaNPHrdH8z4PrD3nu6xMwDcK4G1D9z8MugtUXf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVzAeY6jaNPHrdH8z4PrD3nu6xMwDcK4G1D9z8MugtUXf/image.png",
+        "imageSHA256": "2d040af943b612302770ef8f2037b8bea0a03897f590236b8efd8a20fd2a533d"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A rounded, bulky figure fills the frame against a flat amber-yellow background; the form is built from layered horizontal bands of white, grey, and black wrapping the head and shoulders.\", \"Two solid black circular lenses sit side by side in the upper face, each framed by a thin drawn ring; a wide curved line below them reads as a grin.\", \"The mouth area shows a row of small, tightly packed white shapes rendered with scratchy overlapping lines, set against the dark interior of the open smile.\"], \"reading\": \"Bands of white and grey wrap a bulbous figure so completely that the underlying form is hard to locate — the wrapping is the surface. Against the flat amber field, two black disc lenses and a wide grin give the figure a fixed, unreadable expression. The smile shows teeth but offers no warmth; the opaque lenses block any return gaze. The mood reads as cheerful and unsettling at once.\", \"contextAngle\": \"Within the owned nnotb subset, this work stands out for its near-monochrome palette — white, grey, black, with amber only as background — where title neighbors nnxyz nnotb #274 and nnxyz nnotb #276 both use dense, multi-colour fields. That restraint makes the grin land differently.\", \"connections\": [{\"targetArtworkId\": \"Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97\", \"reason\": \"Both works place a wide-open toothed mouth at the lower centre of a close-cropped face, but nnxyz nnotb #274 fills every surface with clashing colour while this work strips back to near-monochrome, making the shared grin feel colder here.\"}], \"tags\": [\"wrapped figure\", \"circular lenses\", \"banded surface\", \"toothed grin\", \"amber background\", \"monochrome form\"], \"lookingQuestion\": \"Where exactly does the wrapping end and the face begin — can you find a boundary, or does the banding continue across both?\", \"ambiguities\": [\"The scratchy lines inside the mouth area may indicate teeth or surface texture; the distinction is not fully resolved at this scale.\", \"Candidates nnxyz nnotb #276 and nnxyz nifty faces #117 were inspected but offer no stronger formal connection than nnxyz nnotb #274 and are omitted rather than included weakly.\"]}\nFLAGS:\n[{\"artworkId\": \"QmdjJR9xKKVUmL37okF2YLEcAyNUskviysbYRh5ZSbtPTL\", \"field\": \"connections\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

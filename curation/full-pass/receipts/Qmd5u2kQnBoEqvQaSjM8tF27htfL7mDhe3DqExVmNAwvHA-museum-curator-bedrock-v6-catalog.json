@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:34.387982-05:00",
+    "usage": {
+      "inputTokens": 6303,
+      "outputTokens": 707,
+      "totalTokens": 7010,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 21097
+    },
+    "requestId": "53a6dc66-5453-46e9-8cda-8506f1135bd3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face-like form fills the center, built from tangled loops of purple, yellow, red, and teal lines over a mint-green interior and a lavender-purple background.\",\n    \"The left eye area contains a white X crossing inside a circular scribble, while the right eye is a looser spiral of yellow and blue lines with no blocking mark.\",\n    \"A wide mouth shape at the bottom shows vertical white bars resembling teeth, framed by red and dark blue overlapping strokes.\"\n  ],\n  \"reading\": \"The face emerges not from outline but from accumulation—loops pile on loops until two asymmetric eye hollows and a barred mouth surface from the tangle. The white X over the left eye reads as sealed or struck through, giving the two sides different weight, as if one half watches and the other refuses. Purple scribbles spill past the face into the background, dissolving any boundary between figure and field. The effect can feel both frantic and oddly contained.\",\n  \"contextAngle\": \"In the owned Scrimshaw subset, this work sits between \\\"Scrimshaw 21\\\" and \\\"Scrimshaw 33\\\" by title number and by recorded creation. Where \\\"Scrimshaw 21\\\" uses a bright yellow ground and heavy black outlines, this piece buries its structure under layered color, making the face harder to separate from its surroundings.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy\",\n      \"reason\": \"Both show face-like forms with bared teeth, but Scrimshaw 21 isolates the head against flat yellow while this work lets purple scribbles merge figure and ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ\",\n      \"reason\": \"Both use hatched vertical bars for teeth and circular eye forms, but the nnxyz piece relies on dark tones and radial pink fills rather than tangled multicolor lines.\"\n    }\n  ],\n  \"tags\": [\n    \"tangled linework\",\n    \"face-like form\",\n    \"purple field\",\n    \"asymmetric eyes\",\n    \"bared teeth\",\n    \"layered scribbles\"\n  ],\n  \"lookingQuestion\": \"What happens when you try to trace where the face ends and the purple background begins—can you find a consistent edge, or does the boundary shift depending on which color you follow?\",\n  \"ambiguities\": [\n    \"Whether the white X in the left eye is a distinct symbol or part of the same continuous scribble layer is unclear from the image alone.\",\n    \"Faint letter-like marks appear in the upper-left purple area but are too obscured to read with confidence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmd5u2kQnBoEqvQaSjM8tF27htfL7mDhe3DqExVmNAwvHA",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/Qmd5u2kQnBoEqvQaSjM8tF27htfL7mDhe3DqExVmNAwvHA/image.png",
+        "imageSHA256": "388fe9dd76bfbcd20468e22c13c41f50f3f8b49dcae5ba261e4bfaa72e4c5c04"
+      },
+      {
+        "artworkId": "QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy/image.png",
+        "imageSHA256": "721315da947b2eb5e6fefc1f390653e85c8fd975d9aaca3d231b86cf8f750a4b"
+      },
+      {
+        "artworkId": "QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ/image.png",
+        "imageSHA256": "899e25da4be9fb79265a5f9664665d867471e860d88d0fb3535fd7877d172a16"
+      },
+      {
+        "artworkId": "QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX/image.png",
+        "imageSHA256": "f7641c94baea961e0c705ce405e70b57d0dba484bd3c3bd49f0f168e47cc8a4e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:44.919059-05:00",
+    "usage": {
+      "inputTokens": 7042,
+      "outputTokens": 822,
+      "totalTokens": 7864,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10450
+    },
+    "requestId": "f31bba96-d7f7-47e7-9081-354b0ebaf33b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face-like form fills the center, built from tangled loops of purple, yellow, red, and teal lines over a mint-green interior and a lavender-purple background.\",\n    \"The left eye area contains a white X crossing inside a circular scribble, while the right eye is a looser spiral of yellow and blue lines with no blocking mark.\",\n    \"A wide mouth shape at the bottom shows vertical white bars resembling teeth, framed by red and dark blue overlapping strokes.\"\n  ],\n  \"reading\": \"The face emerges from accumulation—loops pile on loops until two asymmetric eye hollows and a barred mouth surface from the tangle. The white X over the left eye reads as sealed or struck through, giving the two sides different weight, as if one half watches and the other refuses. Purple scribbles spill past the face into the background, dissolving any boundary between figure and field. The effect can feel both frantic and oddly contained.\",\n  \"contextAngle\": \"In the owned Scrimshaw subset, this work sits between \\\"Scrimshaw 21\\\" and \\\"Scrimshaw 33\\\" by title number and by recorded creation. Where \\\"Scrimshaw 21\\\" uses a bright yellow ground and heavy black outlines, this piece buries its structure under layered color, making the face harder to separate from its surroundings.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy\",\n      \"reason\": \"Both show face-like forms with bared teeth, but Scrimshaw 21 isolates the head against flat yellow while this work lets purple scribbles merge figure and ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ\",\n      \"reason\": \"Both use hatched vertical bars for teeth and circular eye forms, but the nnxyz piece relies on dark tones and radial pink fills rather than tangled multicolor lines.\"\n    }\n  ],\n  \"tags\": [\n    \"tangled linework\",\n    \"face-like form\",\n    \"purple field\",\n    \"asymmetric eyes\",\n    \"bared teeth\",\n    \"layered scribbles\"\n  ],\n  \"lookingQuestion\": \"What happens when you try to trace where the face ends and the purple background begins—can you find a consistent edge, or does the boundary shift depending on which color you follow?\",\n  \"ambiguities\": [\n    \"Whether the white X in the left eye is a distinct symbol or part of the same continuous scribble layer is unclear from the image alone.\",\n    \"Faint letter-like marks appear in the upper-left purple area but are too obscured to read with confidence.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed white X in left eye area and looser spiral in right eye by re-inspecting the primary image; asymmetry description is accurate.\",\n    \"Verified Scrimshaw 21 comparison: yellow background, black outlines, and visible teeth all confirmed in the comparison image; contrast with purple-field layering here holds.\",\n    \"Reading trimmed from 82 words to 75 to stay within the 45–80 word limit; removed redundant opening phrase.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmd5u2kQnBoEqvQaSjM8tF27htfL7mDhe3DqExVmNAwvHA",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/Qmd5u2kQnBoEqvQaSjM8tF27htfL7mDhe3DqExVmNAwvHA/image.png",
+        "imageSHA256": "388fe9dd76bfbcd20468e22c13c41f50f3f8b49dcae5ba261e4bfaa72e4c5c04"
+      },
+      {
+        "artworkId": "QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy/image.png",
+        "imageSHA256": "721315da947b2eb5e6fefc1f390653e85c8fd975d9aaca3d231b86cf8f750a4b"
+      },
+      {
+        "artworkId": "QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ/image.png",
+        "imageSHA256": "899e25da4be9fb79265a5f9664665d867471e860d88d0fb3535fd7877d172a16"
+      },
+      {
+        "artworkId": "QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX/image.png",
+        "imageSHA256": "f7641c94baea961e0c705ce405e70b57d0dba484bd3c3bd49f0f168e47cc8a4e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A face-like form fills the center, built from tangled loops of purple, yellow, red, and teal lines over a mint-green interior and a lavender-purple background.\", \"The left eye area contains a white X crossing inside a circular scribble, while the right eye is a looser spiral of yellow and blue lines with no blocking mark.\", \"A wide mouth shape at the bottom shows vertical white bars resembling teeth, framed by red and dark blue overlapping strokes.\"], \"reading\": \"The face emerges not from outline but from accumulation—loops pile on loops until two asymmetric eye hollows and a barred mouth surface from the tangle. The white X over the left eye reads as sealed or struck through, giving the two sides different weight, as if one half watches and the other refuses. Purple scribbles spill past the face into the background, dissolving any boundary between figure and field. The effect can feel both frantic and oddly contained.\", \"contextAngle\": \"In the owned Scrimshaw subset, this work sits between \\\"Scrimshaw 21\\\" and \\\"Scrimshaw 33\\\" by title number and by recorded creation. Where \\\"Scrimshaw 21\\\" uses a bright yellow ground and heavy black outlines, this piece buries its structure under layered color, making the face harder to separate from its surroundings.\", \"connections\": [{\"targetArtworkId\": \"QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy\", \"reason\": \"Both show face-like forms with bared teeth, but Scrimshaw 21 isolates the head against flat yellow while this work lets purple scribbles merge figure and ground.\"}, {\"targetArtworkId\": \"QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ\", \"reason\": \"Both use hatched vertical bars for teeth and circular eye forms, but the nnxyz piece relies on dark tones and radial pink fills rather than tangled multicolor lines.\"}], \"tags\": [\"tangled linework\", \"face-like form\", \"purple field\", \"asymmetric eyes\", \"bared teeth\", \"layered scribbles\"], \"lookingQuestion\": \"What happens when you try to trace where the face ends and the purple background begins—can you find a consistent edge, or does the boundary shift depending on which color you follow?\", \"ambiguities\": [\"Whether the white X in the left eye is a distinct symbol or part of the same continuous scribble layer is unclear from the image alone.\", \"Faint letter-like marks appear in the upper-left purple area but are too obscured to read with confidence.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

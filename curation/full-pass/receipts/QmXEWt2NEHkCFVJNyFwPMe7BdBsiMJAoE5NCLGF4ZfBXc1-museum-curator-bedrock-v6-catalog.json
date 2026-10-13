@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:09:29.774290-05:00",
+    "usage": {
+      "inputTokens": 6315,
+      "outputTokens": 689,
+      "totalTokens": 7004,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 21711
+    },
+    "requestId": "abf8172e-fa5e-458d-bcb8-dee056123fb4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded outline dominates the composition, filled with nested shapes: a red three-pointed crown, a circle with radiating spokes and a cross, and stacked rectangles at center.\",\n    \"A jagged red zigzag line spans the lower third like an open jaw, with rainbow-colored zigzag bands and scalloped patterns filling the space below it.\",\n    \"Rows of colored dots—coral red along the top arc, olive-yellow down the left, blue on the right—trace the perimeter, while pink and orange diagonal bands cross the background.\"\n  ],\n  \"reading\": \"The rounded outline reads as a container crammed past capacity: crown, wheel, dotted borders, and stacked boxes compete for space inside a single boundary. The red zigzag splitting the lower half can feel like a grinning mouth or a fault line, turning the whole shape into something that oscillates between a face and a packed machine. Bright pink background bands push the interior forward, making the density almost physical.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #29\\\" and \\\"nnxyz rawblocks #31.\\\" All three share a rounded head-like outline on a colored ground, but this piece packs more discrete, readable symbols—crown, wheel, dots—inside that boundary than either neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS\",\n      \"reason\": \"Both use a rounded black-and-white outline on a pink ground, but #29 fills its interior with tangled overlapping lines, while #30 replaces that tangle with distinct, separated symbols.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmcf7QQo6G8DLPNJWfZw6STsctJtzY1E9CaestowV8BYSt\",\n      \"reason\": \"#31 shifts to a brown ground and leaves open space around its circle, making its spiky interior shapes feel exposed, whereas #30 buries its circle in surrounding pattern and color.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded outline\",\n    \"crown shape\",\n    \"zigzag teeth\",\n    \"dot borders\",\n    \"nested symbols\",\n    \"pink background\"\n  ],\n  \"lookingQuestion\": \"How do the rows of colored dots along the perimeter change the way you read the boundary—do they reinforce the enclosure or break it open?\",\n  \"ambiguities\": [\n    \"Whether the interior shapes represent specific objects or function as abstract pattern-fill cannot be determined from the image alone.\",\n    \"The spoke-and-cross circle at upper right resembles a wheel or compass but its role within the composition is unclear.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXEWt2NEHkCFVJNyFwPMe7BdBsiMJAoE5NCLGF4ZfBXc1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXEWt2NEHkCFVJNyFwPMe7BdBsiMJAoE5NCLGF4ZfBXc1/image.png",
+        "imageSHA256": "6a935823283c76de0ee841506677248376a6af94bd512f8db9a7772d7f2522f4"
+      },
+      {
+        "artworkId": "QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS/image.png",
+        "imageSHA256": "8b97097ae3b231f0f8b1f805688554a4bf4969d7cbca0638653f87520e92ed25"
+      },
+      {
+        "artworkId": "QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio/image.png",
+        "imageSHA256": "6d701636a2c6a48d13ab1090035a4ca11e5dfe76c228c86aeb82b0854d3f3f85"
+      },
+      {
+        "artworkId": "Qmcf7QQo6G8DLPNJWfZw6STsctJtzY1E9CaestowV8BYSt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcf7QQo6G8DLPNJWfZw6STsctJtzY1E9CaestowV8BYSt/image.png",
+        "imageSHA256": "8af3361949cf07fb4f702d546870c8aa49b8aef21e6da6e0d7ccf04f98ee27ad"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:09:41.701678-05:00",
+    "usage": {
+      "inputTokens": 7036,
+      "outputTokens": 805,
+      "totalTokens": 7841,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11602
+    },
+    "requestId": "e26101e0-4f27-47fc-a6e4-e73ba8babb79",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded outline dominates the composition, packed with nested shapes: a red three-pointed crown at upper left, a circle with radiating spokes and a cross at upper right, and stacked rectangles at center.\",\n    \"A jagged red zigzag line spans the lower third like an open jaw, with rainbow-colored zigzag bands, scalloped patterns, and triangular rows filling the space below it.\",\n    \"Rows of colored dots—coral red along the top arc, olive-yellow down the left, blue on the right—trace the perimeter, while pink and orange diagonal bands cross the background.\"\n  ],\n  \"reading\": \"The rounded outline reads as a container crammed past capacity: crown, spoked wheel, dotted borders, and stacked boxes compete for space inside a single boundary. The red zigzag splitting the lower half can feel like a grinning mouth or a fault line, turning the whole shape into something that shifts between a face and a packed machine. Bright pink background bands push the interior forward, making the density almost physical.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #29\\\" and \\\"nnxyz rawblocks #31.\\\" All three share a rounded outline on a colored ground, but this piece packs more discrete, readable symbols—crown, wheel, dots—inside that boundary than either neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS\",\n      \"reason\": \"Both use a rounded black-and-white outline on a pink ground, but #29 fills its interior with tangled overlapping lines, while #30 replaces that tangle with distinct separated symbols.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmcf7QQo6G8DLPNJWfZw6STsctJtzY1E9CaestowV8BYSt\",\n      \"reason\": \"#31 shifts to a brown ground and leaves open space around its circle, making its spiky interior feel exposed, whereas #30 buries its shapes in surrounding pattern.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded outline\",\n    \"crown shape\",\n    \"zigzag teeth\",\n    \"dot borders\",\n    \"nested symbols\",\n    \"pink background\"\n  ],\n  \"lookingQuestion\": \"How do the rows of colored dots along the perimeter change the way you read the boundary—do they reinforce the enclosure or break it open?\",\n  \"ambiguities\": [\n    \"Whether the interior shapes represent specific objects or function as abstract pattern-fill cannot be determined from the image alone.\",\n    \"The spoke-and-cross circle at upper right resembles a wheel or compass but its role within the composition is unclear.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed coral-red dots along top arc, olive-yellow dots at left, and blue dots at right by inspecting the primary image.\",\n    \"Confirmed #29 comparison: pink ground, rounded outline, tangled interior lines versus #30's separated symbols all verified against both images.\",\n    \"Confirmed #31 comparison: brown ground, more open space around circle, spiky sun-like forms visible in that image versus the dense packing here.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXEWt2NEHkCFVJNyFwPMe7BdBsiMJAoE5NCLGF4ZfBXc1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXEWt2NEHkCFVJNyFwPMe7BdBsiMJAoE5NCLGF4ZfBXc1/image.png",
+        "imageSHA256": "6a935823283c76de0ee841506677248376a6af94bd512f8db9a7772d7f2522f4"
+      },
+      {
+        "artworkId": "QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS/image.png",
+        "imageSHA256": "8b97097ae3b231f0f8b1f805688554a4bf4969d7cbca0638653f87520e92ed25"
+      },
+      {
+        "artworkId": "QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio/image.png",
+        "imageSHA256": "6d701636a2c6a48d13ab1090035a4ca11e5dfe76c228c86aeb82b0854d3f3f85"
+      },
+      {
+        "artworkId": "Qmcf7QQo6G8DLPNJWfZw6STsctJtzY1E9CaestowV8BYSt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcf7QQo6G8DLPNJWfZw6STsctJtzY1E9CaestowV8BYSt/image.png",
+        "imageSHA256": "8af3361949cf07fb4f702d546870c8aa49b8aef21e6da6e0d7ccf04f98ee27ad"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded outline dominates the composition, filled with nested shapes: a red three-pointed crown, a circle with radiating spokes and a cross, and stacked rectangles at center.\", \"A jagged red zigzag line spans the lower third like an open jaw, with rainbow-colored zigzag bands and scalloped patterns filling the space below it.\", \"Rows of colored dots—coral red along the top arc, olive-yellow down the left, blue on the right—trace the perimeter, while pink and orange diagonal bands cross the background.\"], \"reading\": \"The rounded outline reads as a container crammed past capacity: crown, wheel, dotted borders, and stacked boxes compete for space inside a single boundary. The red zigzag splitting the lower half can feel like a grinning mouth or a fault line, turning the whole shape into something that oscillates between a face and a packed machine. Bright pink background bands push the interior forward, making the density almost physical.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #29\\\" and \\\"nnxyz rawblocks #31.\\\" All three share a rounded head-like outline on a colored ground, but this piece packs more discrete, readable symbols—crown, wheel, dots—inside that boundary than either neighbor.\", \"connections\": [{\"targetArtworkId\": \"QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS\", \"reason\": \"Both use a rounded black-and-white outline on a pink ground, but #29 fills its interior with tangled overlapping lines, while #30 replaces that tangle with distinct, separated symbols.\"}, {\"targetArtworkId\": \"Qmcf7QQo6G8DLPNJWfZw6STsctJtzY1E9CaestowV8BYSt\", \"reason\": \"#31 shifts to a brown ground and leaves open space around its circle, making its spiky interior shapes feel exposed, whereas #30 buries its circle in surrounding pattern and color.\"}], \"tags\": [\"rounded outline\", \"crown shape\", \"zigzag teeth\", \"dot borders\", \"nested symbols\", \"pink background\"], \"lookingQuestion\": \"How do the rows of colored dots along the perimeter change the way you read the boundary—do they reinforce the enclosure or break it open?\", \"ambiguities\": [\"Whether the interior shapes represent specific objects or function as abstract pattern-fill cannot be determined from the image alone.\", \"The spoke-and-cross circle at upper right resembles a wheel or compass but its role within the composition is unclear.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

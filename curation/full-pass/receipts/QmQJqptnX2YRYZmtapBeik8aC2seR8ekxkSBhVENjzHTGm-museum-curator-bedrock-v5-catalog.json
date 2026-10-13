@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:34.505047-05:00",
+    "usage": {
+      "inputTokens": 6233,
+      "outputTokens": 818,
+      "totalTokens": 7051,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13394
+    },
+    "requestId": "20d5e7d4-809e-42bb-af6e-f3ad86e7cdb2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape, outlined in thick black, fills most of the canvas against a background of overlapping diagonal stripes in red, green, yellow, and teal.\",\n    \"The right eye is a dense spiral of red and yellow lines inside a dark-red ring, while the left eye area holds a loose orange scribble circle; a wide mouth shows a row of white tooth shapes edged in dark red zigzag lines.\",\n    \"Across the yellow interior of the head, smaller marks compete for space: purple comb-like strokes, a blue spiral, a triangular yellow burst, and a pink outline loop that extends outside the head's left edge.\"\n  ],\n  \"reading\": \"The head shape holds its ground against a background that pushes back with equal force. Two mismatched eye forms — one tightly wound, one loosely scrawled — give the face an off-balance look that reads as agitation rather than calm. The wide tooth-lined mouth, framed in zigzag red, pulls the lower half open. Layered marks inside the head suggest crowding rather than order.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #221 and nnxyz nnotb #223. Both neighbors also use a large central face form with dense interior marks, but #222 shifts to a warmer yellow ground where #221 favors brown and #223 leans toward dark grey-blue.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWrZ8Q8cQ4sPwomchofn9sCCuTZ2btDPvhC3VV5vV8Tef\",\n      \"reason\": \"nnxyz nnotb #223 shares the same thick black oval head outline and mismatched eye treatment — one spiral, one looser form — but replaces the warm yellow ground with a cooler blue-grey, making the contrast between the two works visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8\",\n      \"reason\": \"nnxyz nnotb #221 uses the same zigzag-edged mouth with white tooth shapes, visible in the small head at upper left, linking that specific mark to #222 while the overall compositions differ in scale and color temperature.\"\n    }\n  ],\n  \"tags\": [\n    \"face form\",\n    \"spiral eye\",\n    \"zigzag mouth\",\n    \"dense interior marks\",\n    \"diagonal stripe background\",\n    \"mismatched eyes\"\n  ],\n  \"interpretiveTags\": [\n    \"agitation\",\n    \"crowding\",\n    \"off-balance\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the tightly wound spiral eye, the open tooth-lined mouth, or the competing marks in the background — and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The orange scribble on the left side of the face could read as a second eye or as a separate floating mark; the image does not resolve this clearly.\",\n    \"The nifty-faces #69 comparison image shows a restrained tonal face with a dot-grid garment — no useful formal connection to #222 was found, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQJqptnX2YRYZmtapBeik8aC2seR8ekxkSBhVENjzHTGm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQJqptnX2YRYZmtapBeik8aC2seR8ekxkSBhVENjzHTGm/image.png",
+        "imageSHA256": "f9aa8c76f8bafc5d231d2967457802d84a2d19479139cc107d6914ce00c08347"
+      },
+      {
+        "artworkId": "QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8/image.png",
+        "imageSHA256": "f6c8fcb9e83218c1eaa044ac0a5f58cc3dd784eae76ba2850703f525367a75b2"
+      },
+      {
+        "artworkId": "QmaToVng2vXr8An25dTLaZ1fL5tGLVxoVg8dNhyLzhMLUZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaToVng2vXr8An25dTLaZ1fL5tGLVxoVg8dNhyLzhMLUZ/image.png",
+        "imageSHA256": "b47c7a526905734ad916e2110cd8ee5cd367e9e4ea5db87bf4345c578dc0b30c"
+      },
+      {
+        "artworkId": "QmWrZ8Q8cQ4sPwomchofn9sCCuTZ2btDPvhC3VV5vV8Tef",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWrZ8Q8cQ4sPwomchofn9sCCuTZ2btDPvhC3VV5vV8Tef/image.png",
+        "imageSHA256": "62f82ada477b658cf16499c47e8d3c467816c7d0fff890a45c377146d9c5aa03"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:41.430799-05:00",
+    "usage": {
+      "inputTokens": 7071,
+      "outputTokens": 963,
+      "totalTokens": 8034,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6840
+    },
+    "requestId": "feeb5f69-4bd0-41a3-8723-61debe843989",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape, outlined in thick black, fills most of the canvas against a background of overlapping diagonal stripes in red, green, yellow, and teal.\",\n    \"The right eye is a dense spiral of red and yellow lines inside a dark-red ring; the left eye area holds a loose orange scribble circle; a wide mouth shows a row of white tooth shapes edged in dark-red zigzag lines.\",\n    \"Across the yellow interior of the head, smaller marks compete for space: purple comb-like strokes, a blue spiral, a triangular yellow burst, and a pink outline loop that extends outside the head's left edge.\"\n  ],\n  \"reading\": \"The head shape holds its ground against a background that pushes back with equal force. Two mismatched eye forms — one tightly wound, one loosely scrawled — give the face an off-balance look that reads as agitation rather than calm. The wide tooth-lined mouth, framed in zigzag red, pulls the lower half open. Layered marks inside the head suggest crowding rather than order.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #221 and nnxyz nnotb #223. Both use a large central face form with dense interior marks, but #222 sits on a warmer yellow ground where #221 favors brown and #223 leans toward dark grey-blue.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWrZ8Q8cQ4sPwomchofn9sCCuTZ2btDPvhC3VV5vV8Tef\",\n      \"reason\": \"nnxyz nnotb #223 shares the thick black oval head outline and mismatched eye treatment — one spiral, one looser form — but replaces the warm yellow ground with a cooler blue-grey, making the contrast between the two works visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8\",\n      \"reason\": \"nnxyz nnotb #221 shows a zigzag-edged mouth with white tooth shapes in the small head at upper left, linking that specific mark to #222 while the overall compositions differ in scale and color temperature.\"\n    }\n  ],\n  \"tags\": [\n    \"face form\",\n    \"spiral eye\",\n    \"zigzag mouth\",\n    \"dense interior marks\",\n    \"diagonal stripe background\",\n    \"mismatched eyes\"\n  ],\n  \"interpretiveTags\": [\n    \"agitation\",\n    \"crowding\",\n    \"off-balance\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the tightly wound spiral eye, the open tooth-lined mouth, or the competing marks filling the interior — and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The orange scribble on the left side of the face could read as a second eye or as a separate floating mark; the image does not resolve this clearly.\",\n    \"nnxyz nifty faces #69 shows a restrained tonal face with a dot-grid garment — no useful formal connection to #222 was found, so it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: thick black head outline, diagonal stripe background, spiral right eye, orange scribble left area, white tooth shapes with dark-red zigzag, purple comb strokes, blue spiral, pink loop, and yellow interior all visible.\",\n    \"Context angle color descriptions verified: #221 image shows brown-dominant ground, #223 image shows blue-grey dominant ground, #222 shows yellow dominant ground — no correction needed.\",\n    \"Both comparison connections confirmed against inspected images; nifty-faces #69 correctly excluded; no invented intent, biography, or unsupported technique claims found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQJqptnX2YRYZmtapBeik8aC2seR8ekxkSBhVENjzHTGm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQJqptnX2YRYZmtapBeik8aC2seR8ekxkSBhVENjzHTGm/image.png",
+        "imageSHA256": "f9aa8c76f8bafc5d231d2967457802d84a2d19479139cc107d6914ce00c08347"
+      },
+      {
+        "artworkId": "QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8/image.png",
+        "imageSHA256": "f6c8fcb9e83218c1eaa044ac0a5f58cc3dd784eae76ba2850703f525367a75b2"
+      },
+      {
+        "artworkId": "QmaToVng2vXr8An25dTLaZ1fL5tGLVxoVg8dNhyLzhMLUZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaToVng2vXr8An25dTLaZ1fL5tGLVxoVg8dNhyLzhMLUZ/image.png",
+        "imageSHA256": "b47c7a526905734ad916e2110cd8ee5cd367e9e4ea5db87bf4345c578dc0b30c"
+      },
+      {
+        "artworkId": "QmWrZ8Q8cQ4sPwomchofn9sCCuTZ2btDPvhC3VV5vV8Tef",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWrZ8Q8cQ4sPwomchofn9sCCuTZ2btDPvhC3VV5vV8Tef/image.png",
+        "imageSHA256": "62f82ada477b658cf16499c47e8d3c467816c7d0fff890a45c377146d9c5aa03"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape, outlined in thick black, fills most of the canvas against a background of overlapping diagonal stripes in red, green, yellow, and teal.\", \"The right eye is a dense spiral of red and yellow lines inside a dark-red ring, while the left eye area holds a loose orange scribble circle; a wide mouth shows a row of white tooth shapes edged in dark red zigzag lines.\", \"Across the yellow interior of the head, smaller marks compete for space: purple comb-like strokes, a blue spiral, a triangular yellow burst, and a pink outline loop that extends outside the head's left edge.\"], \"reading\": \"The head shape holds its ground against a background that pushes back with equal force. Two mismatched eye forms — one tightly wound, one loosely scrawled — give the face an off-balance look that reads as agitation rather than calm. The wide tooth-lined mouth, framed in zigzag red, pulls the lower half open. Layered marks inside the head suggest crowding rather than order.\", \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #221 and nnxyz nnotb #223. Both neighbors also use a large central face form with dense interior marks, but #222 shifts to a warmer yellow ground where #221 favors brown and #223 leans toward dark grey-blue.\", \"connections\": [{\"targetArtworkId\": \"QmWrZ8Q8cQ4sPwomchofn9sCCuTZ2btDPvhC3VV5vV8Tef\", \"reason\": \"nnxyz nnotb #223 shares the same thick black oval head outline and mismatched eye treatment — one spiral, one looser form — but replaces the warm yellow ground with a cooler blue-grey, making the contrast between the two works visible.\"}, {\"targetArtworkId\": \"QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8\", \"reason\": \"nnxyz nnotb #221 uses the same zigzag-edged mouth with white tooth shapes, visible in the small head at upper left, linking that specific mark to #222 while the overall compositions differ in scale and color temperature.\"}], \"tags\": [\"face form\", \"spiral eye\", \"zigzag mouth\", \"dense interior marks\", \"diagonal stripe background\", \"mismatched eyes\"], \"interpretiveTags\": [\"agitation\", \"crowding\", \"off-balance\"], \"lookingQuestion\": \"Where does your eye settle first — on the tightly wound spiral eye, the open tooth-lined mouth, or the competing marks in the background — and what does that path through the image feel like?\", \"ambiguities\": [\"The orange scribble on the left side of the face could read as a second eye or as a separate floating mark; the image does not resolve this clearly.\", \"The nifty-faces #69 comparison image shows a restrained tonal face with a dot-grid garment — no useful formal connection to #222 was found, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

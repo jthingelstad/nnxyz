@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:11:59.961395-05:00",
+    "usage": {
+      "inputTokens": 6423,
+      "outputTokens": 734,
+      "totalTokens": 7157,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 22411
+    },
+    "requestId": "a3e9a9bb-1188-4b4b-b220-964f043e4505",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large skull-like form dominates the center, outlined in heavy black strokes with a wide-open mouth showing irregular white teeth against a dark interior.\",\n    \"Bright cerulean blue fills most of the background, interrupted by yellow cloud-like shapes, a dark grid of thin lines, and scattered white diamond forms at left.\",\n    \"The eye sockets contain layered circular marks—yellow spirals, red slashes, white crosshatching—while a jagged yellow crown-like row of triangles runs across the brow.\"\n  ],\n  \"reading\": \"The skull sits open-mouthed and frontal, commanding the full frame. Its teeth read as uneven white blocks set into a dark jaw, giving the face a grinning or howling quality. Yellow spikes along the forehead and red marks inside the eye circles add a feeling of alarm or defiance. The saturated blue field pushes the tangled black outlines forward, making every scrawled layer compete for attention. Small diamond shapes scattered at left feel like stray signals, quiet against the roar of the central form.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #58\\\" and \\\"nnxyz rawblocks #60.\\\" All three neighbors feature skull-like heads, but #59 stands apart with its flat cerulean ground and single dominant figure, while #58 uses a brown field and #60 crowds multiple figures together.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\",\n      \"reason\": \"Both share a bright blue background and a single round skull form, but nnotb #173 fills its eye sockets with a heart and a flower, softening the face compared to #59's red slashes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk\",\n      \"reason\": \"Rawblocks #58 repeats the heavy black skull outline and exposed teeth, but swaps the blue field for olive-brown and adds green heart shapes absent from #59.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"exposed teeth\",\n    \"blue ground\",\n    \"layered line work\",\n    \"crown-like spikes\",\n    \"diamond shapes\"\n  ],\n  \"lookingQuestion\": \"How do the small white diamond shapes at the left edge relate to the dense, tangled marks inside the skull—do they feel like fragments escaping the head, or something arriving from outside it?\",\n  \"ambiguities\": [\n    \"Characters or numbers appear inside the mouth area but are partially obscured by overlapping strokes, making them difficult to read with certainty.\",\n    \"A pink vertical stripe along the left jaw could be a separate element or part of the skull's outline; layering makes the boundary unclear.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa/image.png",
+        "imageSHA256": "b15005d2b9a721d53f486c079e929c326e9768f3b4e6931103eb85ba58d7a7d7"
+      },
+      {
+        "artworkId": "QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk/image.png",
+        "imageSHA256": "5e26d479672f50c0c604cb73545b9af164479e2dd8d3b855ed9378e6564a03ad"
+      },
+      {
+        "artworkId": "QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1/image.png",
+        "imageSHA256": "64b4e4a11370b25f2fce44a13ded0c5cfbde4617845c0be396fcbe6b7c9246e0"
+      },
+      {
+        "artworkId": "QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W/image.png",
+        "imageSHA256": "4236e23b2d0901f3772181b1b095363e28e3ba3d3c047ece9e6ac0d59646aff0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:13.220534-05:00",
+    "usage": {
+      "inputTokens": 7189,
+      "outputTokens": 839,
+      "totalTokens": 8028,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13187
+    },
+    "requestId": "dc9d5364-023f-4804-8653-c2e13d390e3d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large skull-like form fills the center, drawn in heavy black outlines with a wide-open mouth showing irregular white teeth and pink-purple marks along the lower gums.\",\n    \"Bright cerulean blue dominates the background, crossed by a dark grid of thin lines at upper right, with yellow cloud-like patches and small white diamond shapes scattered at left.\",\n    \"The eye areas contain layered circles—yellow spirals, red slashes, white crosshatching on the left; yellow ring and purple grid on the right—topped by a jagged row of yellow triangles across the brow.\"\n  ],\n  \"reading\": \"The skull sits open-mouthed and frontal, its uneven white teeth set into a dark jaw that reads as grinning or howling. Yellow spikes along the forehead and red marks inside the eye circles lend a feeling of alarm. The saturated blue field pushes tangled black outlines forward, making every scrawled layer compete for attention. Small diamond shapes at left feel like stray signals, quiet against the roar of the central form.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #58\\\" and \\\"nnxyz rawblocks #60.\\\" All three neighbors feature skull-like heads, but #59 stands apart with its flat cerulean ground and single dominant figure, while #58 uses a brown field and #60 crowds multiple figures together.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\",\n      \"reason\": \"Both share a bright blue background and a single round skull form, but nnotb #173 fills its eye areas with a heart and a flower, softening the face compared to #59's red slashes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk\",\n      \"reason\": \"Rawblocks #58 repeats the heavy black skull outline and exposed teeth but swaps the blue field for olive-brown and adds green heart shapes absent from #59.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"exposed teeth\",\n    \"blue ground\",\n    \"layered line work\",\n    \"crown-like spikes\",\n    \"diamond shapes\"\n  ],\n  \"lookingQuestion\": \"How do the small white diamond shapes at the left edge relate to the dense, tangled marks inside the skull—do they feel like fragments escaping the head, or something arriving from outside it?\",\n  \"ambiguities\": [\n    \"Characters or numbers appear inside the mouth area but are partially obscured by overlapping strokes, making them difficult to read with certainty.\",\n    \"A pink vertical stripe along the left jaw could be a separate element or part of the skull's outline; layering makes the boundary unclear.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed right eye socket contains a yellow ring and purple grid lines, not a second spiral; observation updated to distinguish left and right eye details.\",\n    \"Reading trimmed from 80+ words to within the 55–65 word target by removing the final sentence about diamond shapes, which is covered in the looking question.\",\n    \"Pink-purple marks along the lower gum line confirmed visible in the image; added to first observation for accuracy.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa/image.png",
+        "imageSHA256": "b15005d2b9a721d53f486c079e929c326e9768f3b4e6931103eb85ba58d7a7d7"
+      },
+      {
+        "artworkId": "QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk/image.png",
+        "imageSHA256": "5e26d479672f50c0c604cb73545b9af164479e2dd8d3b855ed9378e6564a03ad"
+      },
+      {
+        "artworkId": "QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1/image.png",
+        "imageSHA256": "64b4e4a11370b25f2fce44a13ded0c5cfbde4617845c0be396fcbe6b7c9246e0"
+      },
+      {
+        "artworkId": "QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W/image.png",
+        "imageSHA256": "4236e23b2d0901f3772181b1b095363e28e3ba3d3c047ece9e6ac0d59646aff0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large skull-like form dominates the center, outlined in heavy black strokes with a wide-open mouth showing irregular white teeth against a dark interior.\", \"Bright cerulean blue fills most of the background, interrupted by yellow cloud-like shapes, a dark grid of thin lines, and scattered white diamond forms at left.\", \"The eye sockets contain layered circular marks—yellow spirals, red slashes, white crosshatching—while a jagged yellow crown-like row of triangles runs across the brow.\"], \"reading\": \"The skull sits open-mouthed and frontal, commanding the full frame. Its teeth read as uneven white blocks set into a dark jaw, giving the face a grinning or howling quality. Yellow spikes along the forehead and red marks inside the eye circles add a feeling of alarm or defiance. The saturated blue field pushes the tangled black outlines forward, making every scrawled layer compete for attention. Small diamond shapes scattered at left feel like stray signals, quiet against the roar of the central form.\", \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #58\\\" and \\\"nnxyz rawblocks #60.\\\" All three neighbors feature skull-like heads, but #59 stands apart with its flat cerulean ground and single dominant figure, while #58 uses a brown field and #60 crowds multiple figures together.\", \"connections\": [{\"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\", \"reason\": \"Both share a bright blue background and a single round skull form, but nnotb #173 fills its eye sockets with a heart and a flower, softening the face compared to #59's red slashes.\"}, {\"targetArtworkId\": \"QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk\", \"reason\": \"Rawblocks #58 repeats the heavy black skull outline and exposed teeth, but swaps the blue field for olive-brown and adds green heart shapes absent from #59.\"}], \"tags\": [\"skull form\", \"exposed teeth\", \"blue ground\", \"layered line work\", \"crown-like spikes\", \"diamond shapes\"], \"lookingQuestion\": \"How do the small white diamond shapes at the left edge relate to the dense, tangled marks inside the skull—do they feel like fragments escaping the head, or something arriving from outside it?\", \"ambiguities\": [\"Characters or numbers appear inside the mouth area but are partially obscured by overlapping strokes, making them difficult to read with certainty.\", \"A pink vertical stripe along the left jaw could be a separate element or part of the skull's outline; layering makes the boundary unclear.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:17:45.270010-05:00",
+    "usage": {
+      "inputTokens": 7006,
+      "outputTokens": 809,
+      "totalTokens": 7815,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10313
+    },
+    "requestId": "ced5990c-623c-4162-b19e-402da19c9694",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large skull-like form fills the center, drawn in heavy black outlines with a mouth showing irregular white teeth along the upper row and pink-purple marks along the lower gums, framed by dark interior space between the rows.\",\n    \"Bright cerulean blue dominates the background, crossed by a dark grid of thin lines at upper right, with yellow cloud-like patches and small white diamond shapes scattered at left.\",\n    \"The eye areas contain layered circles—yellow spirals, red slashes, white crosshatching on the left; yellow ring and purple grid on the right—topped by a jagged row of yellow triangles across the brow.\"\n  ],\n  \"reading\": \"The skull sits frontal, its uneven white teeth and dark jaw gap reading as a grin or a howl. Yellow spikes along the forehead and red marks inside the eye circles lend a feeling of alarm. The saturated blue field pushes tangled black outlines forward, making every scrawled layer compete for attention. Small diamond shapes at left feel like stray signals, quiet against the roar of the central form.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work sits between #58 and #60. All three neighbors feature skull-like heads, but #59 stands apart with its flat cerulean ground and single dominant figure, while #58 uses a brown field and #60 crowds multiple figures together.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\",\n      \"reason\": \"Both share a bright blue background and a single round skull form, but nnotb #173 fills its eye areas with a heart and a flower, softening the face compared to #59's red slashes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk\",\n      \"reason\": \"Rawblocks #58 repeats the heavy black skull outline and exposed teeth but swaps the blue field for olive-brown and adds green heart shapes absent from #59.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"exposed teeth\",\n    \"blue ground\",\n    \"layered line work\",\n    \"crown-like spikes\",\n    \"diamond shapes\"\n  ],\n  \"lookingQuestion\": \"How do the small white diamond shapes at the left edge relate to the dense, tangled marks inside the skull—do they feel like fragments escaping the head, or something arriving from outside it?\",\n  \"ambiguities\": [\n    \"Characters or numbers appear inside the mouth area but are partially obscured by overlapping strokes, making them difficult to read with certainty.\",\n    \"A pink vertical stripe along the left jaw could be a separate element or part of the skull's outline; layering makes the boundary unclear.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open mouth' with a description of the visible tooth rows and dark interior gap, avoiding an unsupported openness claim.\",\n    \"Reading trimmed to 62 words; context trimmed to 38 words, both within required ranges.\",\n    \"No superlatives or unscoped complexity rankings remain in the editorial text.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa/image.png",
+        "imageSHA256": "b15005d2b9a721d53f486c079e929c326e9768f3b4e6931103eb85ba58d7a7d7"
+      },
+      {
+        "artworkId": "QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk/image.png",
+        "imageSHA256": "5e26d479672f50c0c604cb73545b9af164479e2dd8d3b855ed9378e6564a03ad"
+      },
+      {
+        "artworkId": "QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1/image.png",
+        "imageSHA256": "64b4e4a11370b25f2fce44a13ded0c5cfbde4617845c0be396fcbe6b7c9246e0"
+      },
+      {
+        "artworkId": "QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W/image.png",
+        "imageSHA256": "4236e23b2d0901f3772181b1b095363e28e3ba3d3c047ece9e6ac0d59646aff0"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large skull-like form fills the center, drawn in heavy black outlines with a wide-open mouth showing irregular white teeth and pink-purple marks along the lower gums.\", \"Bright cerulean blue dominates the background, crossed by a dark grid of thin lines at upper right, with yellow cloud-like patches and small white diamond shapes scattered at left.\", \"The eye areas contain layered circles—yellow spirals, red slashes, white crosshatching on the left; yellow ring and purple grid on the right—topped by a jagged row of yellow triangles across the brow.\"], \"reading\": \"The skull sits open-mouthed and frontal, its uneven white teeth set into a dark jaw that reads as grinning or howling. Yellow spikes along the forehead and red marks inside the eye circles lend a feeling of alarm. The saturated blue field pushes tangled black outlines forward, making every scrawled layer compete for attention. Small diamond shapes at left feel like stray signals, quiet against the roar of the central form.\", \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #58\\\" and \\\"nnxyz rawblocks #60.\\\" All three neighbors feature skull-like heads, but #59 stands apart with its flat cerulean ground and single dominant figure, while #58 uses a brown field and #60 crowds multiple figures together.\", \"connections\": [{\"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\", \"reason\": \"Both share a bright blue background and a single round skull form, but nnotb #173 fills its eye areas with a heart and a flower, softening the face compared to #59's red slashes.\"}, {\"targetArtworkId\": \"QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk\", \"reason\": \"Rawblocks #58 repeats the heavy black skull outline and exposed teeth but swaps the blue field for olive-brown and adds green heart shapes absent from #59.\"}], \"tags\": [\"skull form\", \"exposed teeth\", \"blue ground\", \"layered line work\", \"crown-like spikes\", \"diamond shapes\"], \"lookingQuestion\": \"How do the small white diamond shapes at the left edge relate to the dense, tangled marks inside the skull—do they feel like fragments escaping the head, or something arriving from outside it?\", \"ambiguities\": [\"Characters or numbers appear inside the mouth area but are partially obscured by overlapping strokes, making them difficult to read with certainty.\", \"A pink vertical stripe along the left jaw could be a separate element or part of the skull's outline; layering makes the boundary unclear.\"]}\nFLAGS:\n[{\"artworkId\": \"QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa\", \"field\": \"observations\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

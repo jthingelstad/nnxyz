@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:51.795167-05:00",
+    "usage": {
+      "inputTokens": 6256,
+      "outputTokens": 837,
+      "totalTokens": 7093,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13826
+    },
+    "requestId": "dd59912d-ac45-430b-acba-fb9f1d5721ad",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large glowing orbs occupy the upper-center of the face, radiating soft yellow-white light against a dark olive-brown background, with no visible iris or pupil detail.\",\n    \"Dense, short scribbled lines in yellow, red, teal, and black form a wide mass across the top of the figure, spreading beyond the head's width on both sides.\",\n    \"Below the orbs, loosely looped yellow lines trace a narrow lower face and open mouth, while the shoulders and chest are built from overlapping color patches on a near-black ground.\"\n  ],\n  \"reading\": \"The face here is organized around absence: where eyes would anchor expression, two blown-out light sources sit instead, erasing detail rather than revealing it. The scribbled mass above reads as weight pressing down, its warm reds and teals flickering against dark. Below, the jaw and chest are barely held together by looping yellow lines. The overall feeling is exposure without legibility—seen but not readable.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #85 and nnxyz nnotb #87. All three share a yellow-dominant palette and a figure-centered composition, but #86 strips the face to near-abstraction where its neighbors retain more surface detail.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmX2GfYTAgzez7A2EWwBWab3uuZUrwus5zxYw4FHdXTCPc\",\n      \"reason\": \"Both works place a figure against a dark ground with a large, heavily worked mass above the head and small glowing eye forms, but #85 keeps facial features readable where #86 replaces them with blown-out orbs.\"\n    },\n    {\n      \"targetArtworkId\": \"Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f\",\n      \"reason\": \"nnxyz nifty faces #66 uses the same tight scribble-line method to build a face from colored marks over a dark base, but works in red, orange, and white against near-black rather than the yellow-dominant glow of #86.\"\n    }\n  ],\n  \"tags\": [\n    \"glowing orbs\",\n    \"scribble-line construction\",\n    \"dark ground\",\n    \"yellow dominant\",\n    \"figure bust\",\n    \"overworked crown mass\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettling\",\n    \"exposed\",\n    \"illegible presence\"\n  ],\n  \"lookingQuestion\": \"What happens to your reading of the figure when you trace where the glowing orbs end and the scribbled lines of the face begin—is there a clear boundary, or do they bleed into each other?\",\n  \"ambiguities\": [\n    \"The wide scribbled mass above the head could be read as hair, a hat, or purely abstract mark-making; no supplied metadata resolves this.\",\n    \"QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b (nnotb #87) was inspected but its dense text-and-figure layering shares no strong formal element with #86's glow-and-scribble structure, so it was omitted as a weak match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWBfBYn6nXjURFq53yfQYrggqCjUWcuexZSpx3gUSs1RD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWBfBYn6nXjURFq53yfQYrggqCjUWcuexZSpx3gUSs1RD/image.png",
+        "imageSHA256": "b9aa157e7169f142daa04dc873d3d076e18f9c59d6b6a1548aa2679cde5171ae"
+      },
+      {
+        "artworkId": "QmX2GfYTAgzez7A2EWwBWab3uuZUrwus5zxYw4FHdXTCPc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmX2GfYTAgzez7A2EWwBWab3uuZUrwus5zxYw4FHdXTCPc/image.png",
+        "imageSHA256": "797dadcc55868b2ac8e5c91249b817ee6fda0a6e203782169e304d9c34c71dec"
+      },
+      {
+        "artworkId": "Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f/image.png",
+        "imageSHA256": "20ef3cd7545f6490eeb31c944a8ed98ac4cf422484f8d9e13ec623768115b834"
+      },
+      {
+        "artworkId": "QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b/image.png",
+        "imageSHA256": "f148a09e2f3a8abb9411b0b2522fb87f9e5af7ba2130132376163caa82418ac0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:59.119977-05:00",
+    "usage": {
+      "inputTokens": 7113,
+      "outputTokens": 1008,
+      "totalTokens": 8121,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7244
+    },
+    "requestId": "12afd9ae-4b2d-4085-88c7-ac6c978a9d80",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large glowing orbs occupy the upper-center of the face, radiating soft yellow-white light against a dark olive-brown background, with no visible iris or pupil detail.\",\n    \"Dense, short scribbled lines in yellow, red, teal, and black form a wide mass across the top of the figure, spreading beyond the head's width on both sides.\",\n    \"Below the orbs, loosely looped yellow lines trace a narrow lower face and open mouth, while the shoulders and chest are built from overlapping color patches on a near-black ground.\"\n  ],\n  \"reading\": \"The face is organized around absence: where eyes would anchor expression, two blown-out light sources sit instead, erasing detail rather than revealing it. The scribbled mass above carries warm reds and teals flickering against dark, reading as weight pressing down. Below, the jaw and chest are barely held together by looping yellow lines—present as a figure, but not fully legible as one.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #85 and nnxyz nnotb #87. All three share a yellow-dominant palette and a figure-centered composition, but #86 strips the face to near-abstraction where its neighbors retain more surface detail.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmX2GfYTAgzez7A2EWwBWab3uuZUrwus5zxYw4FHdXTCPc\",\n      \"reason\": \"Both works place a figure against a dark ground with a large, heavily worked mass above the head and small glowing eye forms, but #85 keeps facial features readable where #86 replaces them with blown-out orbs.\"\n    },\n    {\n      \"targetArtworkId\": \"Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f\",\n      \"reason\": \"nnxyz nifty faces #66 builds a face from dense scribble lines over a dark base in a similar tight-mark method, but works in red, orange, and white rather than the yellow-dominant glow structure of #86.\"\n    }\n  ],\n  \"tags\": [\n    \"glowing orbs\",\n    \"scribble-line construction\",\n    \"dark ground\",\n    \"yellow dominant\",\n    \"figure bust\",\n    \"overworked crown mass\"\n  ],\n  \"interpretiveTags\": [\n    \"exposed\",\n    \"illegible presence\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the glowing orbs end and the scribbled lines of the face begin—is there a clear boundary, or do they bleed into each other?\",\n  \"ambiguities\": [\n    \"The wide scribbled mass above the head could be read as hair, a hat, or purely abstract mark-making; no supplied metadata resolves this.\",\n    \"QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b (nnotb #87) was inspected but its dense text-and-figure layering shares no strong formal element with #86's glow-and-scribble structure and was omitted as a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: yellow-white orbs, red/teal/yellow/black scribble mass, looping yellow jaw lines, and near-black ground are all visible.\",\n    \"Comparison with QmX2GfYTAgzez7A2EWwBWab3uuZUrwus5zxYw4FHdXTCPc confirmed: #85 shows small glowing eye forms and a large worked mass above the head on a dark ground, supporting the stated contrast with #86's blown-out orbs.\",\n    \"Draft reading phrase 'exposure without legibility' replaced with plainer language per style rules; 'unsettling' removed from interpretiveTags as an unsupported mood assertion; all other content confirmed accurate against inspected images.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWBfBYn6nXjURFq53yfQYrggqCjUWcuexZSpx3gUSs1RD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWBfBYn6nXjURFq53yfQYrggqCjUWcuexZSpx3gUSs1RD/image.png",
+        "imageSHA256": "b9aa157e7169f142daa04dc873d3d076e18f9c59d6b6a1548aa2679cde5171ae"
+      },
+      {
+        "artworkId": "QmX2GfYTAgzez7A2EWwBWab3uuZUrwus5zxYw4FHdXTCPc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmX2GfYTAgzez7A2EWwBWab3uuZUrwus5zxYw4FHdXTCPc/image.png",
+        "imageSHA256": "797dadcc55868b2ac8e5c91249b817ee6fda0a6e203782169e304d9c34c71dec"
+      },
+      {
+        "artworkId": "Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f/image.png",
+        "imageSHA256": "20ef3cd7545f6490eeb31c944a8ed98ac4cf422484f8d9e13ec623768115b834"
+      },
+      {
+        "artworkId": "QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b/image.png",
+        "imageSHA256": "f148a09e2f3a8abb9411b0b2522fb87f9e5af7ba2130132376163caa82418ac0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two large glowing orbs occupy the upper-center of the face, radiating soft yellow-white light against a dark olive-brown background, with no visible iris or pupil detail.\", \"Dense, short scribbled lines in yellow, red, teal, and black form a wide mass across the top of the figure, spreading beyond the head's width on both sides.\", \"Below the orbs, loosely looped yellow lines trace a narrow lower face and open mouth, while the shoulders and chest are built from overlapping color patches on a near-black ground.\"], \"reading\": \"The face here is organized around absence: where eyes would anchor expression, two blown-out light sources sit instead, erasing detail rather than revealing it. The scribbled mass above reads as weight pressing down, its warm reds and teals flickering against dark. Below, the jaw and chest are barely held together by looping yellow lines. The overall feeling is exposure without legibility—seen but not readable.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #85 and nnxyz nnotb #87. All three share a yellow-dominant palette and a figure-centered composition, but #86 strips the face to near-abstraction where its neighbors retain more surface detail.\", \"connections\": [{\"targetArtworkId\": \"QmX2GfYTAgzez7A2EWwBWab3uuZUrwus5zxYw4FHdXTCPc\", \"reason\": \"Both works place a figure against a dark ground with a large, heavily worked mass above the head and small glowing eye forms, but #85 keeps facial features readable where #86 replaces them with blown-out orbs.\"}, {\"targetArtworkId\": \"Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f\", \"reason\": \"nnxyz nifty faces #66 uses the same tight scribble-line method to build a face from colored marks over a dark base, but works in red, orange, and white against near-black rather than the yellow-dominant glow of #86.\"}], \"tags\": [\"glowing orbs\", \"scribble-line construction\", \"dark ground\", \"yellow dominant\", \"figure bust\", \"overworked crown mass\"], \"interpretiveTags\": [\"unsettling\", \"exposed\", \"illegible presence\"], \"lookingQuestion\": \"What happens to your reading of the figure when you trace where the glowing orbs end and the scribbled lines of the face begin—is there a clear boundary, or do they bleed into each other?\", \"ambiguities\": [\"The wide scribbled mass above the head could be read as hair, a hat, or purely abstract mark-making; no supplied metadata resolves this.\", \"QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b (nnotb #87) was inspected but its dense text-and-figure layering shares no strong formal element with #86's glow-and-scribble structure, so it was omitted as a weak match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

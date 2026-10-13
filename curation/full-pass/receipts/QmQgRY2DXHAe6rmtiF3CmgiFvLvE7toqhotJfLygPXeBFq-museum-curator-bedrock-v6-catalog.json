@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:11:03.942260-05:00",
+    "usage": {
+      "inputTokens": 6216,
+      "outputTokens": 693,
+      "totalTokens": 6909,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20335
+    },
+    "requestId": "5dafbffb-f12e-4052-97b0-0ad047b0f5bf",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large skull-like form dominates the center, outlined in light blue loops, with a rectangular eye socket filled with vertical white bars and red framing.\",\n    \"A wide mouth near the bottom shows two rows of gold-yellow rectangular teeth against a dark red interior, giving the lower face a grinning or grimacing shape.\",\n    \"The background splits between deep black at upper right and warm ochre-brown patches, while magenta, green, and cyan marks scatter across the left side like debris.\"\n  ],\n  \"reading\": \"The skull sits heavy and frontal, its blue outline holding together a face that seems to be coming apart under layers of scribbled color. Gold teeth flash against a dark mouth cavity, reading as both ornament and threat. The rectangular eye socket, barred like a window, suggests something trapped behind the surface. Scattered magenta and green marks around the edges feel like sparks thrown off by the central form's pressure.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #49\\\" and \\\"nnxyz rawblocks #51.\\\" Where #49 uses a teal background and white outline for its open-mouthed face, #50 shifts to black and ochre, producing a denser, more enclosed feeling. #51 departs sharply into a quieter, near-monochrome yellow composition.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmakJYgBtsnRNMhbBmyiKaFGz929td7R8Fp3ywLezL7Gi9\",\n      \"reason\": \"Both share exposed teeth and a rounded head outline, but #49 uses white arcs and a teal field while #50 buries its skull in darker, tighter layering.\"\n    },\n    {\n      \"targetArtworkId\": \"QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF\",\n      \"reason\": \"The nnotb piece also features bared teeth and heavy black overpainting, but its cross-shaped eye marks and red-orange fills contrast with #50's barred rectangular socket.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"exposed teeth\",\n    \"layered line work\",\n    \"blue outline\",\n    \"dark background\",\n    \"dense overpainting\"\n  ],\n  \"lookingQuestion\": \"How does the rectangular, barred shape of the eye socket differ in feeling from the rounder, more open eye forms in the neighboring works?\",\n  \"ambiguities\": [\n    \"Whether the gold-yellow teeth are a distinct drawn element or an overlap of background color showing through gaps in black lines is hard to determine at this resolution.\",\n    \"Small letterforms appear at the lower right corner but are only partly legible.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq/image.png",
+        "imageSHA256": "c515045e826ae291c7fde3291c9e34cd6efc534a545ed3b37c8b4c48a180f037"
+      },
+      {
+        "artworkId": "QmakJYgBtsnRNMhbBmyiKaFGz929td7R8Fp3ywLezL7Gi9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmakJYgBtsnRNMhbBmyiKaFGz929td7R8Fp3ywLezL7Gi9/image.png",
+        "imageSHA256": "624f5b48114397ead27398049ec27a5ca14196e9a171035cd249fb8b5d6bd439"
+      },
+      {
+        "artworkId": "QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF/image.png",
+        "imageSHA256": "d4c179828ec61a4eb2744cfd3b5b3d6af2398bb9851c8d11fdaad59c1d86fa10"
+      },
+      {
+        "artworkId": "Qmck5dVisUvmpVFwQ2VCcpuye5FLTo3tqpjh1QAPz9x8D5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmck5dVisUvmpVFwQ2VCcpuye5FLTo3tqpjh1QAPz9x8D5/image.png",
+        "imageSHA256": "af9364ef9a2496004ca86102d8d75e8b0bd359f26651e63ca164ddfc791d3534"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:11:19.047263-05:00",
+    "usage": {
+      "inputTokens": 6941,
+      "outputTokens": 800,
+      "totalTokens": 7741,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14997
+    },
+    "requestId": "52ac8f8e-dfb0-46f7-b182-504931c276c1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills the center, outlined in light blue loops, with a rectangular dark socket at center containing vertical white bars and red-lined framing.\",\n    \"A wide mouth near the bottom displays two rows of gold-yellow rectangular teeth set against a dark red-brown interior, forming a broad grin or grimace.\",\n    \"The background is mostly deep black at upper right and warm ochre-brown at left, with scattered magenta, green, and cyan marks radiating outward from the head.\"\n  ],\n  \"reading\": \"The head sits heavy and frontal, its blue outline holding together a face that seems to fracture under tangled layers of color. Gold teeth flash against a dark mouth cavity, reading as both ornament and menace. The rectangular barred socket at center suggests confinement—something sealed behind the surface. Scattered magenta and green marks at the edges feel like sparks thrown from the central form's density.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #49\\\" and \\\"nnxyz rawblocks #51.\\\" Where #49 uses a teal background and white outline for its open-mouthed face, #50 shifts to black and ochre, producing a denser, more enclosed feel. #51 departs into a quieter near-monochrome yellow composition.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmakJYgBtsnRNMhbBmyiKaFGz929td7R8Fp3ywLezL7Gi9\",\n      \"reason\": \"Both show exposed teeth and a rounded head outline, but #49 uses white arcs on teal while #50 buries its form in darker, tighter layering.\"\n    },\n    {\n      \"targetArtworkId\": \"QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF\",\n      \"reason\": \"The nnotb piece also features bared teeth and heavy black overpainting, but its cross-shaped marks and red-orange fills contrast with #50's barred rectangular socket.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"exposed teeth\",\n    \"layered line work\",\n    \"blue outline\",\n    \"dark background\",\n    \"dense overpainting\"\n  ],\n  \"lookingQuestion\": \"How does the rectangular, barred shape of the central socket differ in feeling from the rounder, more open eye forms in the neighboring works?\",\n  \"ambiguities\": [\n    \"Whether the gold-yellow teeth are distinct drawn shapes or background color showing through gaps in black lines is hard to confirm at this resolution.\",\n    \"Small letterforms appear at the lower right corner but are only partly legible.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'skull' with 'head' in the reading to avoid asserting a fixed subject; the form could read as a skull or a face.\",\n    \"Confirmed blue outline loops, rectangular barred socket, and gold teeth rows are all visible in the primary image.\",\n    \"Confirmed #49 comparison: teal background, white arcs, open mouth with white teeth visible; #51 comparison: yellow monochrome, sparse lines, no teeth—contrast holds.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq/image.png",
+        "imageSHA256": "c515045e826ae291c7fde3291c9e34cd6efc534a545ed3b37c8b4c48a180f037"
+      },
+      {
+        "artworkId": "QmakJYgBtsnRNMhbBmyiKaFGz929td7R8Fp3ywLezL7Gi9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmakJYgBtsnRNMhbBmyiKaFGz929td7R8Fp3ywLezL7Gi9/image.png",
+        "imageSHA256": "624f5b48114397ead27398049ec27a5ca14196e9a171035cd249fb8b5d6bd439"
+      },
+      {
+        "artworkId": "QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF/image.png",
+        "imageSHA256": "d4c179828ec61a4eb2744cfd3b5b3d6af2398bb9851c8d11fdaad59c1d86fa10"
+      },
+      {
+        "artworkId": "Qmck5dVisUvmpVFwQ2VCcpuye5FLTo3tqpjh1QAPz9x8D5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmck5dVisUvmpVFwQ2VCcpuye5FLTo3tqpjh1QAPz9x8D5/image.png",
+        "imageSHA256": "af9364ef9a2496004ca86102d8d75e8b0bd359f26651e63ca164ddfc791d3534"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large skull-like form dominates the center, outlined in light blue loops, with a rectangular eye socket filled with vertical white bars and red framing.\", \"A wide mouth near the bottom shows two rows of gold-yellow rectangular teeth against a dark red interior, giving the lower face a grinning or grimacing shape.\", \"The background splits between deep black at upper right and warm ochre-brown patches, while magenta, green, and cyan marks scatter across the left side like debris.\"], \"reading\": \"The skull sits heavy and frontal, its blue outline holding together a face that seems to be coming apart under layers of scribbled color. Gold teeth flash against a dark mouth cavity, reading as both ornament and threat. The rectangular eye socket, barred like a window, suggests something trapped behind the surface. Scattered magenta and green marks around the edges feel like sparks thrown off by the central form's pressure.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #49\\\" and \\\"nnxyz rawblocks #51.\\\" Where #49 uses a teal background and white outline for its open-mouthed face, #50 shifts to black and ochre, producing a denser, more enclosed feeling. #51 departs sharply into a quieter, near-monochrome yellow composition.\", \"connections\": [{\"targetArtworkId\": \"QmakJYgBtsnRNMhbBmyiKaFGz929td7R8Fp3ywLezL7Gi9\", \"reason\": \"Both share exposed teeth and a rounded head outline, but #49 uses white arcs and a teal field while #50 buries its skull in darker, tighter layering.\"}, {\"targetArtworkId\": \"QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF\", \"reason\": \"The nnotb piece also features bared teeth and heavy black overpainting, but its cross-shaped eye marks and red-orange fills contrast with #50's barred rectangular socket.\"}], \"tags\": [\"skull form\", \"exposed teeth\", \"layered line work\", \"blue outline\", \"dark background\", \"dense overpainting\"], \"lookingQuestion\": \"How does the rectangular, barred shape of the eye socket differ in feeling from the rounder, more open eye forms in the neighboring works?\", \"ambiguities\": [\"Whether the gold-yellow teeth are a distinct drawn element or an overlap of background color showing through gaps in black lines is hard to determine at this resolution.\", \"Small letterforms appear at the lower right corner but are only partly legible.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

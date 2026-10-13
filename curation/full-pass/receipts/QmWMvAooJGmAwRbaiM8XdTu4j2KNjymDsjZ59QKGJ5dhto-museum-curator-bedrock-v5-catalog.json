@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:30.466788-05:00",
+    "usage": {
+      "inputTokens": 6102,
+      "outputTokens": 762,
+      "totalTokens": 6864,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12709
+    },
+    "requestId": "96d2d3f4-3dd7-41c6-8e23-b00d8c976241",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape dominates the center, outlined in white, with two mismatched spiral eyes—one large and gold-coiled, one smaller and black-ringed—set asymmetrically on a tan face.\",\n    \"A spiky crown of black, purple, and yellow points rises from the top of the head, flanked by a dense background of zigzag lines, orange and red fields, and scattered blue dashes.\",\n    \"A wide horizontal band across the lower face holds a row of gold oval shapes resembling teeth or keys, below which a blue-outlined chin pocket and small circular forms continue the face structure.\"\n  ],\n  \"reading\": \"The face pushes forward from a background packed with competing zigzag and wave marks in orange, red, and yellow. Its two spiral eyes pull attention in different directions—one dense and golden, one spare and open—giving the face a lopsided alertness that reads as comic unease. The spiked crown and tooth-row band add ceremony without resolving whether the mood is festive or unsettled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #219 and nnxyz nnotb #221. Those two show a soft luminous mass and a tall arched figure respectively—making #220's close-cropped, spike-crowned face the most compressed and frontal of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8\",\n      \"reason\": \"nnxyz nnotb #221 shares the same zigzag-filled background language and a white-outlined central figure, but stretches vertically where #220 presses the face flat against the picture edge.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg\",\n      \"reason\": \"nnxyz nifty faces #0000 uses a similarly dense layering of marks across the whole surface with a central constructed figure, offering a cross-collection contrast in mark weight and color key.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral eyes\",\n    \"spiked crown\",\n    \"zigzag background\",\n    \"frontal face\",\n    \"tooth-row band\",\n    \"asymmetric features\"\n  ],\n  \"interpretiveTags\": [\n    \"comic unease\",\n    \"ceremonial ambiguity\"\n  ],\n  \"lookingQuestion\": \"What does the difference in size and line density between the two spiral eyes do to how you read the face's expression?\",\n  \"ambiguities\": [\n    \"The gold oval band across the lower face could be read as teeth, keys, or a decorative collar—the image does not resolve this.\",\n    \"nnxyz nifty faces #0000 is from a different collection and its recorded creation position is distant from #220; the connection rests on visible surface similarity, not sequence proximity.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto/image.png",
+        "imageSHA256": "49c5d9222537327d0394124ba2d3900946aaef5fb55f4bb527cfadaf50425962"
+      },
+      {
+        "artworkId": "QmSJAr63wu3YBNXrPhJ2iCNbrjAdCo6rEaVyefPABUNBcx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSJAr63wu3YBNXrPhJ2iCNbrjAdCo6rEaVyefPABUNBcx/image.png",
+        "imageSHA256": "296840a9c6a37c7f79fee0257dba29673a1613b9343653705fc6a625dcf58be3"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8/image.png",
+        "imageSHA256": "f6c8fcb9e83218c1eaa044ac0a5f58cc3dd784eae76ba2850703f525367a75b2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:37.581564-05:00",
+    "usage": {
+      "inputTokens": 6886,
+      "outputTokens": 875,
+      "totalTokens": 7761,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7026
+    },
+    "requestId": "899b0d47-bf82-4b3b-83ab-b2bc557bd5bd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape dominates the center, outlined in white, with two mismatched spiral eyes—one large and gold-coiled, one smaller and black-ringed—set asymmetrically on a tan face.\",\n    \"A spiky crown of black, purple, and yellow points rises from the top of the head, flanked by a dense background of zigzag lines, orange and red fields, and scattered blue dashes.\",\n    \"A wide horizontal band across the lower face holds a row of gold oval shapes, below which a blue-outlined rounded form and small circular marks continue the face structure.\"\n  ],\n  \"reading\": \"The face pushes forward from a background packed with zigzag and wave marks in orange, red, and yellow. Its two spiral eyes pull attention in different directions—one dense and golden, one spare and open—giving the face a lopsided alertness that reads as comic unease. The spiked crown and gold oval band add ceremony without resolving whether the mood is festive or unsettled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #219 and nnxyz nnotb #221. Those two show a soft luminous mass and a tall arched figure respectively—making #220's close-cropped, spike-crowned face the most compressed and frontal of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8\",\n      \"reason\": \"nnxyz nnotb #221 shares the same zigzag-filled background and a white-outlined central figure, but stretches vertically where #220 presses the face flat against the picture edge.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg\",\n      \"reason\": \"nnxyz nifty faces #0000 layers dense marks across the whole surface around a central constructed figure, offering a cross-collection contrast: darker ground and sharper angular marks against #220's warmer, rounder forms.\"\n    }\n  ],\n  \"tags\": [\"spiral eyes\", \"spiked crown\", \"zigzag background\", \"frontal face\", \"gold oval band\", \"asymmetric features\"],\n  \"interpretiveTags\": [\"comic unease\", \"ceremonial ambiguity\"],\n  \"lookingQuestion\": \"What does the difference in size and line density between the two spiral eyes do to how you read the face's expression?\",\n  \"ambiguities\": [\n    \"The gold oval band across the lower face could be read as teeth, keys, or a decorative element—the image does not resolve this.\",\n    \"nnxyz nifty faces #0000 is from a different collection; the connection rests on inspected visual surface similarity, not sequence proximity.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: both spiral eyes visible as described—large gold-coiled left eye, smaller black-ringed right eye; asymmetry accurate.\",\n    \"Revised 'tooth-row band' tag to 'gold oval band' to avoid unsupported subject identification per ambiguity note; reading retained 'gold oval band' consistently.\",\n    \"Confirmed nifty faces #0000 comparison: darker ground and angular marks are visible in that image, so contrast description sharpened beyond generic 'mark weight'; nnotb #221 vertical stretch versus #220 frontal compression confirmed against both images.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto/image.png",
+        "imageSHA256": "49c5d9222537327d0394124ba2d3900946aaef5fb55f4bb527cfadaf50425962"
+      },
+      {
+        "artworkId": "QmSJAr63wu3YBNXrPhJ2iCNbrjAdCo6rEaVyefPABUNBcx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSJAr63wu3YBNXrPhJ2iCNbrjAdCo6rEaVyefPABUNBcx/image.png",
+        "imageSHA256": "296840a9c6a37c7f79fee0257dba29673a1613b9343653705fc6a625dcf58be3"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8/image.png",
+        "imageSHA256": "f6c8fcb9e83218c1eaa044ac0a5f58cc3dd784eae76ba2850703f525367a75b2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape dominates the center, outlined in white, with two mismatched spiral eyes—one large and gold-coiled, one smaller and black-ringed—set asymmetrically on a tan face.\", \"A spiky crown of black, purple, and yellow points rises from the top of the head, flanked by a dense background of zigzag lines, orange and red fields, and scattered blue dashes.\", \"A wide horizontal band across the lower face holds a row of gold oval shapes resembling teeth or keys, below which a blue-outlined chin pocket and small circular forms continue the face structure.\"], \"reading\": \"The face pushes forward from a background packed with competing zigzag and wave marks in orange, red, and yellow. Its two spiral eyes pull attention in different directions—one dense and golden, one spare and open—giving the face a lopsided alertness that reads as comic unease. The spiked crown and tooth-row band add ceremony without resolving whether the mood is festive or unsettled.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #219 and nnxyz nnotb #221. Those two show a soft luminous mass and a tall arched figure respectively—making #220's close-cropped, spike-crowned face the most compressed and frontal of the three.\", \"connections\": [{\"targetArtworkId\": \"QmSpWxXAWGLkBPRGpnLnM1ftXxbpeZv75EJrmxcDqyMHW8\", \"reason\": \"nnxyz nnotb #221 shares the same zigzag-filled background language and a white-outlined central figure, but stretches vertically where #220 presses the face flat against the picture edge.\"}, {\"targetArtworkId\": \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg\", \"reason\": \"nnxyz nifty faces #0000 uses a similarly dense layering of marks across the whole surface with a central constructed figure, offering a cross-collection contrast in mark weight and color key.\"}], \"tags\": [\"spiral eyes\", \"spiked crown\", \"zigzag background\", \"frontal face\", \"tooth-row band\", \"asymmetric features\"], \"interpretiveTags\": [\"comic unease\", \"ceremonial ambiguity\"], \"lookingQuestion\": \"What does the difference in size and line density between the two spiral eyes do to how you read the face's expression?\", \"ambiguities\": [\"The gold oval band across the lower face could be read as teeth, keys, or a decorative collar—the image does not resolve this.\", \"nnxyz nifty faces #0000 is from a different collection and its recorded creation position is distant from #220; the connection rests on visible surface similarity, not sequence proximity.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

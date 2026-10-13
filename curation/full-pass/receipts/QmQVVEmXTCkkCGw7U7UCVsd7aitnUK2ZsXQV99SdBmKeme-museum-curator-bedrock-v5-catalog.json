@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:20.228081-05:00",
+    "usage": {
+      "inputTokens": 6086,
+      "outputTokens": 726,
+      "totalTokens": 6812,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12052
+    },
+    "requestId": "92d16598-363c-4a23-bcf4-0832a898e288",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-open mouth with white teeth and a red-lined outline sits in the lower center, drawn with thick white fill and black tooth divisions against a black ground.\",\n    \"Two round eyes with red rims, black irises, and yellow-green pupils are placed side by side in the upper center, set against a dark field scattered with bright green dots.\",\n    \"A vertical column of yellow-outlined ovals, each containing a blue shape, runs down the left border; a matching column of yellow rectangles with orange-red centers lines the right border and bottom edge.\"\n  ],\n  \"reading\": \"The face here is stripped to its loudest parts: eyes that bulge with yellow-green rings and a mouth stretched wide enough to read as a shout or a laugh. The border columns of repeating ovals and rectangles hold the scene in a frame that feels more like a marquee than a margin. The dark interior, scattered with green dots and loose pink scribbles, reads as noise behind the face rather than space around it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #66 and nnxyz nnotb #68 in both title and recorded creation order. Where #66 fills its field with a warm-toned animal form, #67 pulls back to a flat, bordered composition built on repeating units—a shift in structure rather than subject.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN\",\n      \"reason\": \"nnxyz nnotb #68 shares the face-centered layout and a row of repeating rectangular units along an edge, but replaces the flat black ground and bold color with layered scribble lines and muted olive tones, making the contrast in surface density clear.\"\n    }\n  ],\n  \"tags\": [\n    \"repeating border units\",\n    \"open mouth with teeth\",\n    \"round outlined eyes\",\n    \"green dot pattern\",\n    \"flat black ground\",\n    \"yellow and orange rectangles\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational affect\",\n    \"carnival or marquee mood\"\n  ],\n  \"lookingQuestion\": \"The border columns of ovals and rectangles use the same yellow outline but different interior colors on each side—what does that difference do to the way your eye moves around the edge?\",\n  \"ambiguities\": [\n    \"The title-derived order and recorded creation order align here, but the metadata notes gaps and variants exist elsewhere in the nnotb family, so adjacency cannot confirm a making sequence.\",\n    \"The nifty-faces comparison (QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg) shares a dense multi-element composition but no specific formal unit matches the border columns or face structure of #67 closely enough to support a useful connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme/image.png",
+        "imageSHA256": "0d893ea5d6810dee4e1b139fa5d17e6021393bd905c859859208056d2d6b8171"
+      },
+      {
+        "artworkId": "QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw/image.png",
+        "imageSHA256": "c5df97b5cafd540b1b4c317009d39a2251bca088c1896ea0495ca1ac6630cc09"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN/image.png",
+        "imageSHA256": "421b6eeffb13f512a7f48c63425378dda46ebdb7df5bb6a617c9bb5908672c3d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:26.128571-05:00",
+    "usage": {
+      "inputTokens": 6843,
+      "outputTokens": 821,
+      "totalTokens": 7664,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5817
+    },
+    "requestId": "f6b17c88-c0c5-483f-b9ee-f394b66b5944",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-open mouth with white teeth and a red-lined outline sits in the lower center, drawn with thick white fill and black tooth divisions against a black ground.\",\n    \"Two round eyes with red rims, black irises, and yellow-green pupils are placed side by side in the upper center, set against a dark field scattered with bright green dots.\",\n    \"A vertical column of yellow-outlined ovals, each containing a blue shape, runs down the left border; a matching column of yellow rectangles with orange-red centers lines the right border and bottom edge.\"\n  ],\n  \"reading\": \"The face is stripped to its loudest parts: eyes that bulge with yellow-green rings and a mouth stretched wide enough to read as a shout or a laugh. The border columns of repeating ovals and rectangles hold the scene in a frame that feels more like a marquee than a margin. The dark interior, scattered with green dots and loose pink scribbles, reads as noise behind the face rather than space around it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #66 and nnxyz nnotb #68 in both title and recorded creation order. Where #66 fills its field with a warm-toned animal form, #67 pulls back to a flat, bordered composition built on repeating units.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN\",\n      \"reason\": \"nnxyz nnotb #68 shares the face-centered layout and a row of repeating rectangular units along an edge, but replaces the flat black ground and bold color with layered scribble lines and muted olive tones, making the contrast in surface density visible.\"\n    }\n  ],\n  \"tags\": [\n    \"repeating border units\",\n    \"open mouth with teeth\",\n    \"round outlined eyes\",\n    \"green dot pattern\",\n    \"flat black ground\",\n    \"yellow and orange rectangles\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational affect\",\n    \"carnival or marquee mood\"\n  ],\n  \"lookingQuestion\": \"The border columns of ovals and rectangles use the same yellow outline but different interior colors on each side—what does that difference do to the way your eye moves around the edge?\",\n  \"ambiguities\": [\n    \"Title-derived order and recorded creation order align here, but the metadata notes gaps and variants exist elsewhere in the nnotb family, so adjacency cannot confirm a making sequence.\",\n    \"The nifty-faces comparison (QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg) shares a dense multi-element composition but no specific formal unit matches the border columns or face structure of #67 closely enough to support a useful connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: mouth placement, eye detail with yellow-green pupils, and dual border columns with correct color descriptions.\",\n    \"Reading trimmed to fit within the 55–65 word target while retaining all grounded claims; no invented intent or biography present.\",\n    \"nifty-faces candidate correctly excluded; #68 connection retained with specific contrast in surface density confirmed by inspecting both images.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme/image.png",
+        "imageSHA256": "0d893ea5d6810dee4e1b139fa5d17e6021393bd905c859859208056d2d6b8171"
+      },
+      {
+        "artworkId": "QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw/image.png",
+        "imageSHA256": "c5df97b5cafd540b1b4c317009d39a2251bca088c1896ea0495ca1ac6630cc09"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN/image.png",
+        "imageSHA256": "421b6eeffb13f512a7f48c63425378dda46ebdb7df5bb6a617c9bb5908672c3d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A wide-open mouth with white teeth and a red-lined outline sits in the lower center, drawn with thick white fill and black tooth divisions against a black ground.\", \"Two round eyes with red rims, black irises, and yellow-green pupils are placed side by side in the upper center, set against a dark field scattered with bright green dots.\", \"A vertical column of yellow-outlined ovals, each containing a blue shape, runs down the left border; a matching column of yellow rectangles with orange-red centers lines the right border and bottom edge.\"], \"reading\": \"The face here is stripped to its loudest parts: eyes that bulge with yellow-green rings and a mouth stretched wide enough to read as a shout or a laugh. The border columns of repeating ovals and rectangles hold the scene in a frame that feels more like a marquee than a margin. The dark interior, scattered with green dots and loose pink scribbles, reads as noise behind the face rather than space around it.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #66 and nnxyz nnotb #68 in both title and recorded creation order. Where #66 fills its field with a warm-toned animal form, #67 pulls back to a flat, bordered composition built on repeating units—a shift in structure rather than subject.\", \"connections\": [{\"targetArtworkId\": \"QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN\", \"reason\": \"nnxyz nnotb #68 shares the face-centered layout and a row of repeating rectangular units along an edge, but replaces the flat black ground and bold color with layered scribble lines and muted olive tones, making the contrast in surface density clear.\"}], \"tags\": [\"repeating border units\", \"open mouth with teeth\", \"round outlined eyes\", \"green dot pattern\", \"flat black ground\", \"yellow and orange rectangles\"], \"interpretiveTags\": [\"confrontational affect\", \"carnival or marquee mood\"], \"lookingQuestion\": \"The border columns of ovals and rectangles use the same yellow outline but different interior colors on each side—what does that difference do to the way your eye moves around the edge?\", \"ambiguities\": [\"The title-derived order and recorded creation order align here, but the metadata notes gaps and variants exist elsewhere in the nnotb family, so adjacency cannot confirm a making sequence.\", \"The nifty-faces comparison (QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg) shares a dense multi-element composition but no specific formal unit matches the border columns or face structure of #67 closely enough to support a useful connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:18:07.507118-05:00",
+    "usage": {
+      "inputTokens": 6635,
+      "outputTokens": 791,
+      "totalTokens": 7426,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11773
+    },
+    "requestId": "41427739-2bce-42dc-80ff-2d554ab8a744",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A mouth with two rows of white teeth separated by a dark gap sits in the lower center, outlined in red and black against a black ground; the upper and lower tooth rows are drawn with vertical white strokes divided by thin black lines.\",\n    \"Two round eyes with red rims, black irises, and yellow-green pupils are placed side by side in the upper center, set against a dark field scattered with bright green dots.\",\n    \"A vertical column of yellow-outlined ovals, each containing a blue shape, runs down the left border; a matching column of yellow rectangles with orange-red centers lines the right border and bottom edge.\"\n  ],\n  \"reading\": \"The face is stripped to its loudest parts: eyes that bulge with yellow-green rings and a bared mouth whose two tooth rows read as a grin or a grimace. The border columns of repeating ovals and rectangles hold the scene in a frame that feels more like a marquee than a margin. The dark interior, scattered with green dots and loose pink scribbles, reads as noise behind the face rather than space around it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between #66 and #68 in both title and recorded creation order. Where #66 fills its field with a warm-toned animal form, #67 pulls back to a flat, bordered composition built on repeating units.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN\",\n      \"reason\": \"nnxyz nnotb #68 shares the face-centered layout and a row of repeating rectangular units along an edge, but replaces the flat black ground and bold color with layered scribble lines and muted olive tones, making the contrast in surface density visible.\"\n    }\n  ],\n  \"tags\": [\n    \"repeating border units\",\n    \"bared teeth\",\n    \"round outlined eyes\",\n    \"green dot pattern\",\n    \"flat black ground\",\n    \"yellow and orange rectangles\"\n  ],\n  \"lookingQuestion\": \"The border columns of ovals and rectangles use the same yellow outline but different interior colors on each side—what does that difference do to the way your eye moves around the edge?\",\n  \"ambiguities\": [\n    \"Title-derived order and recorded creation order align here, but the metadata notes gaps and variants exist elsewhere in the nnotb family, so adjacency cannot confirm a making sequence.\",\n    \"The nifty-faces comparison shares a dense multi-element composition but no specific formal unit matches the border columns or face structure of #67 closely enough to support a useful connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open mouth' with 'mouth with two rows of white teeth separated by a dark gap'—the teeth are prominent but the mouth outline does not show a large dark opening; the gap between rows is narrow.\",\n    \"Replaced 'open mouth with teeth' tag with 'bared teeth' to describe visible tooth rows without implying wide openness.\",\n    \"Reading revised from 'mouth stretched wide enough to read as a shout or a laugh' to 'bared mouth whose two tooth rows read as a grin or a grimace' to stay closer to visible evidence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme/image.png",
+        "imageSHA256": "0d893ea5d6810dee4e1b139fa5d17e6021393bd905c859859208056d2d6b8171"
+      },
+      {
+        "artworkId": "QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw/image.png",
+        "imageSHA256": "c5df97b5cafd540b1b4c317009d39a2251bca088c1896ea0495ca1ac6630cc09"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN/image.png",
+        "imageSHA256": "421b6eeffb13f512a7f48c63425378dda46ebdb7df5bb6a617c9bb5908672c3d"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A wide-open mouth with white teeth and a red-lined outline sits in the lower center, drawn with thick white fill and black tooth divisions against a black ground.\", \"Two round eyes with red rims, black irises, and yellow-green pupils are placed side by side in the upper center, set against a dark field scattered with bright green dots.\", \"A vertical column of yellow-outlined ovals, each containing a blue shape, runs down the left border; a matching column of yellow rectangles with orange-red centers lines the right border and bottom edge.\"], \"reading\": \"The face is stripped to its loudest parts: eyes that bulge with yellow-green rings and a mouth stretched wide enough to read as a shout or a laugh. The border columns of repeating ovals and rectangles hold the scene in a frame that feels more like a marquee than a margin. The dark interior, scattered with green dots and loose pink scribbles, reads as noise behind the face rather than space around it.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #66 and nnxyz nnotb #68 in both title and recorded creation order. Where #66 fills its field with a warm-toned animal form, #67 pulls back to a flat, bordered composition built on repeating units.\", \"connections\": [{\"targetArtworkId\": \"QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN\", \"reason\": \"nnxyz nnotb #68 shares the face-centered layout and a row of repeating rectangular units along an edge, but replaces the flat black ground and bold color with layered scribble lines and muted olive tones, making the contrast in surface density visible.\"}], \"tags\": [\"repeating border units\", \"open mouth with teeth\", \"round outlined eyes\", \"green dot pattern\", \"flat black ground\", \"yellow and orange rectangles\"], \"lookingQuestion\": \"The border columns of ovals and rectangles use the same yellow outline but different interior colors on each side—what does that difference do to the way your eye moves around the edge?\", \"ambiguities\": [\"Title-derived order and recorded creation order align here, but the metadata notes gaps and variants exist elsewhere in the nnotb family, so adjacency cannot confirm a making sequence.\", \"The nifty-faces comparison (QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg) shares a dense multi-element composition but no specific formal unit matches the border columns or face structure of #67 closely enough to support a useful connection.\"]}\nFLAGS:\n[{\"artworkId\": \"QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme\", \"field\": \"observations\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

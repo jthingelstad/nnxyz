@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:26.921298-05:00",
+    "usage": {
+      "inputTokens": 6866,
+      "outputTokens": 775,
+      "totalTokens": 7641,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13815
+    },
+    "requestId": "9c2eea09-2c7d-4c06-bba9-ad4b5713b1cd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A stacked rectangular structure dominates the center, divided into an upper zone with two large oval eye-shapes filled with red and white cross marks, and a lower zone containing a wide rounded mouth shape with vertical white bars.\",\n    \"A thick yellow-orange horizontal bar runs across the top edge; a black coil-spring line descends the left margin and a matching one the right, framing the whole composition symmetrically.\",\n    \"The background is white, and the interior is packed with overlapping lines in teal, blue, red, pink, yellow, and lime green, while small circular scribble forms appear in the upper corners and along the outer edges.\"\n  ],\n  \"reading\": \"Two cross-marked ovals sit inside nested rectangles, staring outward with an unblinking, mechanical weight. Below them a wide mouth shape holds white vertical bars like keys or teeth. Spring coils bracket the sides, giving the whole structure a sense of compressed tension rather than ease. The dense layering of color inside the frame reads as noise or static behind a face that refuses to move.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, #51 sits between title neighbors #50 and #52. Where #50 uses a dark ground and loose, slashing marks, #51 returns to a white ground with a tightly stacked frontal structure — a contrast visible across both images.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4\",\n      \"reason\": \"nifty faces #52 shares the white ground, a frontal face structure with rectangular eye zones, and a prominent tooth-bar mouth, making it the closest formal echo in the owned subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr\",\n      \"reason\": \"rawblocks #1 uses the same stacked-rectangle logic with concentric nested frames and dense multicolor line fill, which the collector links to the pattern-and-scrimshaw visual quality seen in #51.\"\n    }\n  ],\n  \"tags\": [\n    \"stacked rectangles\",\n    \"cross-marked oval eyes\",\n    \"vertical bar mouth\",\n    \"spring-coil border\",\n    \"dense multicolor line fill\",\n    \"white ground\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical affect\",\n    \"compressed tension\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the rigid outer rectangle and the coiled spring lines on each side do to how you read the structure's edges?\",\n  \"ambiguities\": [\n    \"The small drawn figures visible inside the lower mouth zone are unclear at this resolution — they may be additional face marks or incidental line crossings.\",\n    \"The candidate comparison QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t (#50) offers a meaningful contrast rather than a similarity; no second connection was selected on that basis.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6/image.png",
+        "imageSHA256": "70f082b91f55ea9db6575966050dc4e7545cc5dc710e9d4fef7b7f40a5ff9154"
+      },
+      {
+        "artworkId": "QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t/image.png",
+        "imageSHA256": "697b2300a608e8b7e002530b7438440dca72e91acf060ff71f0262a095ed4d06"
+      },
+      {
+        "artworkId": "QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr/image.png",
+        "imageSHA256": "e2a24a8191cd92c60aefc9a7731e85e6e5e0cecc9ef4d9d92ec11141dd57905e"
+      },
+      {
+        "artworkId": "QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4/image.png",
+        "imageSHA256": "19e13d3f2279082f723ab4c6ca2de47cf590d40f33943003b176eb7443abbc42"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:33.801967-05:00",
+    "usage": {
+      "inputTokens": 7663,
+      "outputTokens": 876,
+      "totalTokens": 8539,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6741
+    },
+    "requestId": "4e0e24c9-1094-42b6-b792-f923f387cdfc",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A stacked rectangular structure dominates the center, divided into an upper zone with two large oval eye-shapes filled with red and white cross marks, and a lower zone containing a wide rounded mouth shape with vertical white bars.\",\n    \"A thick yellow-orange horizontal bar runs across the top edge; a black coil-spring line descends the left margin and a matching one the right, framing the whole composition symmetrically.\",\n    \"The background is white, and the interior is packed with overlapping lines in teal, blue, red, pink, yellow, and lime green, while small circular scribble forms appear in the upper corners and along the outer edges.\"\n  ],\n  \"reading\": \"Two cross-marked ovals sit inside nested rectangles, staring outward with a flat, mechanical weight. Below them a wide mouth shape holds white vertical bars. Spring coils bracket the sides, giving the structure a sense of compressed stillness. The dense layering of color inside the frame reads as noise or static behind a face that refuses to shift.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, #51 sits between title neighbors #50 and #52. Where #50 uses a dark ground with loose slashing marks, #51 returns to a white ground with a tightly stacked frontal structure — a contrast visible across both images.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4\",\n      \"reason\": \"nifty faces #52 shares the white ground, a frontal face structure with rectangular eye zones, and a prominent tooth-bar mouth, making it the closest formal echo in the owned subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr\",\n      \"reason\": \"rawblocks #1 uses the same stacked-rectangle logic with concentric nested frames and dense multicolor line fill across a similarly packed interior surface.\"\n    }\n  ],\n  \"tags\": [\n    \"stacked rectangles\",\n    \"cross-marked oval eyes\",\n    \"vertical bar mouth\",\n    \"spring-coil border\",\n    \"dense multicolor line fill\",\n    \"white ground\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical affect\",\n    \"compressed stillness\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the rigid outer rectangle and the coiled spring lines on each side do to how you read the structure's edges?\",\n  \"ambiguities\": [\n    \"The small drawn marks visible inside the lower mouth zone are unclear at this resolution — they may be additional face marks or incidental line crossings.\",\n    \"The candidate comparison QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t (#50) offers a meaningful contrast rather than a similarity and was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Draft reading phrase 'compressed tension' replaced with 'compressed stillness' to remove an interpretive mood word from the factual reading; tension moved to interpretiveTags.\",\n    \"rawblocks #1 connection reason trimmed to remove the collector-perspective scrimshaw reference, which belongs to collection context framing rather than a direct formal comparison sentence.\",\n    \"All color, form, and placement claims checked against the primary image and both selected comparison images; no invented subject identities or unsupported intent found requiring removal.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6/image.png",
+        "imageSHA256": "70f082b91f55ea9db6575966050dc4e7545cc5dc710e9d4fef7b7f40a5ff9154"
+      },
+      {
+        "artworkId": "QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t/image.png",
+        "imageSHA256": "697b2300a608e8b7e002530b7438440dca72e91acf060ff71f0262a095ed4d06"
+      },
+      {
+        "artworkId": "QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr/image.png",
+        "imageSHA256": "e2a24a8191cd92c60aefc9a7731e85e6e5e0cecc9ef4d9d92ec11141dd57905e"
+      },
+      {
+        "artworkId": "QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4/image.png",
+        "imageSHA256": "19e13d3f2279082f723ab4c6ca2de47cf590d40f33943003b176eb7443abbc42"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A stacked rectangular structure dominates the center, divided into an upper zone with two large oval eye-shapes filled with red and white cross marks, and a lower zone containing a wide rounded mouth shape with vertical white bars.\", \"A thick yellow-orange horizontal bar runs across the top edge; a black coil-spring line descends the left margin and a matching one the right, framing the whole composition symmetrically.\", \"The background is white, and the interior is packed with overlapping lines in teal, blue, red, pink, yellow, and lime green, while small circular scribble forms appear in the upper corners and along the outer edges.\"], \"reading\": \"Two cross-marked ovals sit inside nested rectangles, staring outward with an unblinking, mechanical weight. Below them a wide mouth shape holds white vertical bars like keys or teeth. Spring coils bracket the sides, giving the whole structure a sense of compressed tension rather than ease. The dense layering of color inside the frame reads as noise or static behind a face that refuses to move.\", \"contextAngle\": \"Within the owned nifty-faces subset, #51 sits between title neighbors #50 and #52. Where #50 uses a dark ground and loose, slashing marks, #51 returns to a white ground with a tightly stacked frontal structure — a contrast visible across both images.\", \"connections\": [{\"targetArtworkId\": \"QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4\", \"reason\": \"nifty faces #52 shares the white ground, a frontal face structure with rectangular eye zones, and a prominent tooth-bar mouth, making it the closest formal echo in the owned subset.\"}, {\"targetArtworkId\": \"QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr\", \"reason\": \"rawblocks #1 uses the same stacked-rectangle logic with concentric nested frames and dense multicolor line fill, which the collector links to the pattern-and-scrimshaw visual quality seen in #51.\"}], \"tags\": [\"stacked rectangles\", \"cross-marked oval eyes\", \"vertical bar mouth\", \"spring-coil border\", \"dense multicolor line fill\", \"white ground\"], \"interpretiveTags\": [\"mechanical affect\", \"compressed tension\"], \"lookingQuestion\": \"What does the relationship between the rigid outer rectangle and the coiled spring lines on each side do to how you read the structure's edges?\", \"ambiguities\": [\"The small drawn figures visible inside the lower mouth zone are unclear at this resolution — they may be additional face marks or incidental line crossings.\", \"The candidate comparison QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t (#50) offers a meaningful contrast rather than a similarity; no second connection was selected on that basis.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

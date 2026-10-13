@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:45.855292-05:00",
+    "usage": {
+      "inputTokens": 5590,
+      "outputTokens": 688,
+      "totalTokens": 6278,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20321
+    },
+    "requestId": "0cb1fe7c-5ca2-4f04-b6a6-35507908cb1e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A bold blue continuous line dominates the composition, forming a large head-like shape with zigzag teeth, scribbled eye hollows, and angular hair strokes at the top.\",\n    \"Behind the blue line work, soft translucent circles in lavender and pale yellow float across the background, creating a pastel field that contrasts with the sharp foreground marks.\",\n    \"Thinner secondary lines in gray, red, pink, and yellow weave through the interior of the blue outline, adding tangled density without competing for the dominant contour.\"\n  ],\n  \"reading\": \"A single heavy blue line carves out a face-like form that reads as both mask and scream—zigzag teeth gape open, scribbled hollows stare. The soft lavender and yellow circles behind it feel almost gentle, which makes the jagged foreground feel more unsettling by contrast. Thin colored threads inside the outline suggest a restless interior, as though the figure is barely holding its own shape together.\",\n  \"contextAngle\": \"As the first work in the owned Scrimshaw numbered family, this piece establishes the raw, line-driven approach that recurs across the set. Its title neighbor Scrimshaw2 shares the face-and-teeth motif but fills the frame far more densely, suggesting a shift from open space to saturation.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz\",\n      \"reason\": \"Scrimshaw2 repeats the zigzag-teeth and spiral-eye elements but packs them into a fully saturated blue-green field, eliminating the open pastel breathing room seen here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN\",\n      \"reason\": \"nnxyz nnotb #13 shares the scribbled-face and bared-teeth vocabulary but builds density through layered orange and teal hatching against black, a much darker tonal range.\"\n    }\n  ],\n  \"tags\": [\n    \"continuous blue line\",\n    \"zigzag teeth\",\n    \"translucent circles\",\n    \"tangled interior lines\",\n    \"face-like form\"\n  ],\n  \"lookingQuestion\": \"How does the softness of the background circles change the way you read the jagged blue teeth and scribbled eye hollows in the foreground?\",\n  \"ambiguities\": [\n    \"Whether the blue outline describes one figure or overlapping forms is unclear; the lower section could be read as a second smaller head.\",\n    \"The relationship between title order and actual making sequence is not confirmed for this family.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVNZF7YMfLP93bnKcUB1bdyQp5v59uxyGWdt74vQH4DVm",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVNZF7YMfLP93bnKcUB1bdyQp5v59uxyGWdt74vQH4DVm/image.png",
+        "imageSHA256": "941042786b1bffb4b29863416eba7adb257306e59329fbaf960815e81c885a91"
+      },
+      {
+        "artworkId": "QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz/image.png",
+        "imageSHA256": "83424605a7f8b7ad869db57cb69de2d55ce5ed9899d6ba0f79fd9da846ba5dde"
+      },
+      {
+        "artworkId": "QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN/image.png",
+        "imageSHA256": "cfacef9d146ece01267c60cd62c616171bf6b86e8578379a4ea7c5fbc7f38a61"
+      },
+      {
+        "artworkId": "QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB/image.png",
+        "imageSHA256": "12ebe604c64e5cbdd03cac57bcebde8e6e350b6dc7a9a7488b8140a450208aaf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:58.582007-05:00",
+    "usage": {
+      "inputTokens": 6312,
+      "outputTokens": 770,
+      "totalTokens": 7082,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12641
+    },
+    "requestId": "51fa655e-1ce2-4d2e-aae1-76d6c34b56e4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A heavy blue line traces a large head-like shape with zigzag teeth at the bottom, scribbled oval hollows near the center, and sharp angular strokes across the top.\",\n    \"Soft translucent circles in lavender and pale yellow overlap across the background, forming a pastel field that sits behind the sharp blue foreground marks.\",\n    \"Thinner lines in gray, red, pink, and yellow thread through the interior of the blue outline, adding tangled density without overriding the dominant contour.\"\n  ],\n  \"reading\": \"A single heavy blue line carves out a face-like form that reads as both mask and open mouth—zigzag teeth gape, scribbled hollows stare. The soft lavender and yellow circles behind it feel almost gentle, which makes the jagged foreground more unsettling by contrast. Thin colored threads inside the outline suggest a restless interior, as though the shape is barely holding itself together.\",\n  \"contextAngle\": \"As the first work in the owned Scrimshaw numbered family, this piece establishes a raw, line-driven approach. Its title neighbor Scrimshaw2 shares the teeth-and-hollow motif but fills the frame far more densely, replacing open pastel space with saturation.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz\",\n      \"reason\": \"Scrimshaw2 repeats zigzag teeth and spiral hollows but packs them into a saturated blue-green field, eliminating the open pastel breathing room seen here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN\",\n      \"reason\": \"nnxyz nnotb #13 shares scribbled faces and bared teeth but builds density through layered orange and teal hatching against black, a much darker tonal range.\"\n    }\n  ],\n  \"tags\": [\n    \"continuous blue line\",\n    \"zigzag teeth\",\n    \"translucent circles\",\n    \"tangled interior lines\",\n    \"face-like form\"\n  ],\n  \"lookingQuestion\": \"How does the softness of the background circles change the way you read the jagged blue teeth and scribbled hollows in the foreground?\",\n  \"ambiguities\": [\n    \"Whether the blue outline describes one figure or overlapping forms is unclear; the lower section could be read as a second smaller head.\",\n    \"The relationship between title order and actual making sequence is not confirmed for this family.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed lavender and pale yellow translucent circles visible in background; no color errors in draft.\",\n    \"Replaced 'eye hollows' with 'hollows' in reading to avoid asserting anatomy; the scribbled ovals could be eyes but are not certain.\",\n    \"Checked Scrimshaw2 image: zigzag teeth and spiral forms confirmed; dense blue-green saturation confirmed; comparison is accurate.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVNZF7YMfLP93bnKcUB1bdyQp5v59uxyGWdt74vQH4DVm",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVNZF7YMfLP93bnKcUB1bdyQp5v59uxyGWdt74vQH4DVm/image.png",
+        "imageSHA256": "941042786b1bffb4b29863416eba7adb257306e59329fbaf960815e81c885a91"
+      },
+      {
+        "artworkId": "QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz/image.png",
+        "imageSHA256": "83424605a7f8b7ad869db57cb69de2d55ce5ed9899d6ba0f79fd9da846ba5dde"
+      },
+      {
+        "artworkId": "QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN/image.png",
+        "imageSHA256": "cfacef9d146ece01267c60cd62c616171bf6b86e8578379a4ea7c5fbc7f38a61"
+      },
+      {
+        "artworkId": "QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB/image.png",
+        "imageSHA256": "12ebe604c64e5cbdd03cac57bcebde8e6e350b6dc7a9a7488b8140a450208aaf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A bold blue continuous line dominates the composition, forming a large head-like shape with zigzag teeth, scribbled eye hollows, and angular hair strokes at the top.\", \"Behind the blue line work, soft translucent circles in lavender and pale yellow float across the background, creating a pastel field that contrasts with the sharp foreground marks.\", \"Thinner secondary lines in gray, red, pink, and yellow weave through the interior of the blue outline, adding tangled density without competing for the dominant contour.\"], \"reading\": \"A single heavy blue line carves out a face-like form that reads as both mask and scream—zigzag teeth gape open, scribbled hollows stare. The soft lavender and yellow circles behind it feel almost gentle, which makes the jagged foreground feel more unsettling by contrast. Thin colored threads inside the outline suggest a restless interior, as though the figure is barely holding its own shape together.\", \"contextAngle\": \"As the first work in the owned Scrimshaw numbered family, this piece establishes the raw, line-driven approach that recurs across the set. Its title neighbor Scrimshaw2 shares the face-and-teeth motif but fills the frame far more densely, suggesting a shift from open space to saturation.\", \"connections\": [{\"targetArtworkId\": \"QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz\", \"reason\": \"Scrimshaw2 repeats the zigzag-teeth and spiral-eye elements but packs them into a fully saturated blue-green field, eliminating the open pastel breathing room seen here.\"}, {\"targetArtworkId\": \"QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN\", \"reason\": \"nnxyz nnotb #13 shares the scribbled-face and bared-teeth vocabulary but builds density through layered orange and teal hatching against black, a much darker tonal range.\"}], \"tags\": [\"continuous blue line\", \"zigzag teeth\", \"translucent circles\", \"tangled interior lines\", \"face-like form\"], \"lookingQuestion\": \"How does the softness of the background circles change the way you read the jagged blue teeth and scribbled eye hollows in the foreground?\", \"ambiguities\": [\"Whether the blue outline describes one figure or overlapping forms is unclear; the lower section could be read as a second smaller head.\", \"The relationship between title order and actual making sequence is not confirmed for this family.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

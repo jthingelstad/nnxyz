@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:46.612165-05:00",
+    "usage": {
+      "inputTokens": 6754,
+      "outputTokens": 790,
+      "totalTokens": 7544,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13467
+    },
+    "requestId": "dc2c41c4-894a-4a1e-9412-21a34db0a2d1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large coiled spirals dominate the upper half, one yellow-and-cyan on the left, one orange-and-multicolor on the right, each wound tightly around a small dark center.\",\n    \"A dark brown background holds a dense crosshatch of red, magenta, and white lines that fill every gap between the main forms, with a white wave-scallop band running across the top edge.\",\n    \"Below the spirals, green hatched cheek patches flank a yellow chevron nose, and a horizontal black-outlined mouth sits above two lime-green coil forms at the bottom corners.\"\n  ],\n  \"reading\": \"Two coiled spirals pull the eye inward from opposite sides, giving the face a fixed, wide-open look. The brown ground keeps the magenta and cyan lines from dissolving into noise, holding tension between stillness and overload. Green hatching at the cheeks and a blunt chevron nose read as deadpan rather than expressive, while the scallop band at the top adds a flat, almost decorative calm above the density below.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #28 and #30. Where #28 uses a tilted, angular structure on a dark teal ground and #30 fills its field with loose yellow scribble-mass, #29 plants its spirals symmetrically on a warm brown ground, making it the most frontally stable of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA\",\n      \"reason\": \"Both works use coiled spiral forms as the primary eye markers, but #30 replaces the symmetric brown-ground stillness of #29 with an asymmetric yellow scribble-mass and a wide open mouth, sharpening the contrast in emotional register across the two pieces.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT\",\n      \"reason\": \"#28 shares the dense layered-line approach and a face-like arrangement of circular forms, but its tilted composition and cool teal ground read as unstable where #29 sits level and warm.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral forms\",\n    \"symmetrical layout\",\n    \"dense crosshatch background\",\n    \"coiled line\",\n    \"warm brown ground\",\n    \"scallop border\"\n  ],\n  \"interpretiveTags\": [\n    \"deadpan\",\n    \"contained intensity\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the tightly wound spiral centers and the loose crosshatch lines surrounding them do to how you read the space between the two eyes?\",\n  \"ambiguities\": [\n    \"The white scallop band at the top edge could be a border element or a separate drawn form; its role relative to the face structure is unclear from the image alone.\",\n    \"The collector's stated connection between scrimshaw and nnxyz rests on visual pattern qualities; no external source confirms this as the artist's framing.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq/image.png",
+        "imageSHA256": "f07b5f51d4006ce11485f0af29b1c0a5a07678858f4c54dff7d41d90ae8556df"
+      },
+      {
+        "artworkId": "QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT/image.png",
+        "imageSHA256": "09502613fe243cac108f130eea61dfed9edf7606e2bd3cfa7935927e40f6f5fe"
+      },
+      {
+        "artworkId": "QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX/image.png",
+        "imageSHA256": "fa7b1d2d6f943cfc153c6bf88506c3475ec60168cb9b5bfe3a27e17273ef43fe"
+      },
+      {
+        "artworkId": "QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA/image.png",
+        "imageSHA256": "ff51a915ef3a7d23e9c89685138aad1c0e0a41b17063df921fab4d4e955d0b44"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:54.761774-05:00",
+    "usage": {
+      "inputTokens": 7566,
+      "outputTokens": 904,
+      "totalTokens": 8470,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7870
+    },
+    "requestId": "125771fe-9a25-450d-a4ac-46602ef3f83b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large coiled spirals dominate the upper half, one yellow-and-cyan on the left, one orange-and-multicolor on the right, each wound tightly around a small dark center.\",\n    \"A dark brown background holds a dense crosshatch of red, magenta, and white lines filling every gap between the main forms, with a white wave-scallop band running across the top edge.\",\n    \"Below the spirals, green hatched patches flank a yellow chevron form, and a horizontal black-outlined mouth sits above two lime-green coil forms at the bottom corners.\"\n  ],\n  \"reading\": \"Two coiled spirals pull the eye inward from opposite sides, giving the face a fixed, wide-open look. The brown ground keeps the magenta and cyan lines from dissolving into noise, holding tension between stillness and overload. Green hatching at the cheeks and a blunt chevron read as flat rather than expressive, while the scallop band at the top adds a brief decorative pause above the density below.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #28 and #30. Where #28 uses a tilted angular structure on a dark teal ground and #30 fills its field with loose yellow scribble-mass, #29 plants its spirals symmetrically on a warm brown ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA\",\n      \"reason\": \"Both works use coiled spiral forms as primary eye markers, but #30 replaces the symmetric brown-ground stillness with an asymmetric yellow scribble-mass and a wide open mouth, making the contrast in mood concrete and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT\",\n      \"reason\": \"#28 shares the dense layered-line approach and circular eye forms, but its tilted composition and cool teal ground read as unstable where #29 sits level and warm.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral forms\",\n    \"symmetrical layout\",\n    \"dense crosshatch background\",\n    \"coiled line\",\n    \"warm brown ground\",\n    \"scallop border\"\n  ],\n  \"interpretiveTags\": [\n    \"deadpan\",\n    \"contained intensity\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the tightly wound spiral centers and the loose crosshatch lines surrounding them do to how you read the space between the two eye forms?\",\n  \"ambiguities\": [\n    \"The white scallop band at the top edge could be a border element or a separate drawn form; its role relative to the face structure is unclear from the image alone.\",\n    \"The collector's stated connection between scrimshaw and nnxyz rests on visual pattern qualities; no external source confirms this as the artist's framing.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: spirals, brown ground crosshatch, scallop band, chevron, green hatching, and bottom coils are all visible.\",\n    \"Removed 'emotional register' from the #30 comparison reason and replaced with concrete visible contrast; confirmed #30 shows asymmetric yellow scribble-mass and open mouth, #28 shows teal ground and tilted structure.\",\n    \"Word counts checked: reading is 63 words, contextAngle is 47 words, both comparison reasons are under 35 words; no banned vocabulary detected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq/image.png",
+        "imageSHA256": "f07b5f51d4006ce11485f0af29b1c0a5a07678858f4c54dff7d41d90ae8556df"
+      },
+      {
+        "artworkId": "QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT/image.png",
+        "imageSHA256": "09502613fe243cac108f130eea61dfed9edf7606e2bd3cfa7935927e40f6f5fe"
+      },
+      {
+        "artworkId": "QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX/image.png",
+        "imageSHA256": "fa7b1d2d6f943cfc153c6bf88506c3475ec60168cb9b5bfe3a27e17273ef43fe"
+      },
+      {
+        "artworkId": "QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA/image.png",
+        "imageSHA256": "ff51a915ef3a7d23e9c89685138aad1c0e0a41b17063df921fab4d4e955d0b44"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two large coiled spirals dominate the upper half, one yellow-and-cyan on the left, one orange-and-multicolor on the right, each wound tightly around a small dark center.\", \"A dark brown background holds a dense crosshatch of red, magenta, and white lines that fill every gap between the main forms, with a white wave-scallop band running across the top edge.\", \"Below the spirals, green hatched cheek patches flank a yellow chevron nose, and a horizontal black-outlined mouth sits above two lime-green coil forms at the bottom corners.\"], \"reading\": \"Two coiled spirals pull the eye inward from opposite sides, giving the face a fixed, wide-open look. The brown ground keeps the magenta and cyan lines from dissolving into noise, holding tension between stillness and overload. Green hatching at the cheeks and a blunt chevron nose read as deadpan rather than expressive, while the scallop band at the top adds a flat, almost decorative calm above the density below.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #28 and #30. Where #28 uses a tilted, angular structure on a dark teal ground and #30 fills its field with loose yellow scribble-mass, #29 plants its spirals symmetrically on a warm brown ground, making it the most frontally stable of the three.\", \"connections\": [{\"targetArtworkId\": \"QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA\", \"reason\": \"Both works use coiled spiral forms as the primary eye markers, but #30 replaces the symmetric brown-ground stillness of #29 with an asymmetric yellow scribble-mass and a wide open mouth, sharpening the contrast in emotional register across the two pieces.\"}, {\"targetArtworkId\": \"QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT\", \"reason\": \"#28 shares the dense layered-line approach and a face-like arrangement of circular forms, but its tilted composition and cool teal ground read as unstable where #29 sits level and warm.\"}], \"tags\": [\"spiral forms\", \"symmetrical layout\", \"dense crosshatch background\", \"coiled line\", \"warm brown ground\", \"scallop border\"], \"interpretiveTags\": [\"deadpan\", \"contained intensity\"], \"lookingQuestion\": \"What does the relationship between the tightly wound spiral centers and the loose crosshatch lines surrounding them do to how you read the space between the two eyes?\", \"ambiguities\": [\"The white scallop band at the top edge could be a border element or a separate drawn form; its role relative to the face structure is unclear from the image alone.\", \"The collector's stated connection between scrimshaw and nnxyz rests on visual pattern qualities; no external source confirms this as the artist's framing.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:24.403449-05:00",
+    "usage": {
+      "inputTokens": 7375,
+      "outputTokens": 865,
+      "totalTokens": 8240,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6503
+    },
+    "requestId": "3c770209-2359-4a82-ac1a-ef1ce3df7b91",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large coiled spirals dominate the upper half, one yellow-and-cyan on the left, one orange-and-multicolor on the right, each wound tightly around a small dark center.\",\n    \"A dark brown background holds a dense crosshatch of red, magenta, and white lines filling every gap between the main forms, with a white wave-scallop band running across the top edge.\",\n    \"Below the spirals, green hatched patches flank a yellow chevron form, and a horizontal black-outlined mouth sits above two lime-green coil forms at the bottom corners.\"\n  ],\n  \"reading\": \"Two coiled spirals pull the eye inward from opposite sides, giving the face a fixed, staring quality. The brown ground keeps the magenta and cyan lines from dissolving into noise, holding tension between stillness and overload. Green hatching at the cheeks and a blunt chevron read as flat rather than expressive, while the scallop band at the top adds a brief decorative pause above the density below.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #28 and #30. Where #28 uses a tilted angular structure on a dark teal ground and #30 fills its field with loose yellow scribble-mass, #29 plants its spirals symmetrically on a warm brown ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA\",\n      \"reason\": \"Both works use coiled spiral forms as primary eye markers, but #30 replaces the symmetric brown-ground stillness with an asymmetric yellow scribble-mass and a large red-outlined mouth form, making the contrast in visual weight concrete and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT\",\n      \"reason\": \"#28 shares the dense layered-line approach and circular eye forms, but its tilted composition and cool teal ground read as unstable where #29 sits level and warm.\"\n    }\n  ],\n  \"tags\": [\"spiral forms\", \"symmetrical layout\", \"dense crosshatch background\", \"coiled line\", \"warm brown ground\", \"scallop border\"],\n  \"lookingQuestion\": \"What does the relationship between the tightly wound spiral centers and the loose crosshatch lines surrounding them do to how you read the space between the two eye forms?\",\n  \"ambiguities\": [\n    \"The white scallop band at the top edge could be a border element or a separate drawn form; its role relative to the face structure is unclear from the image alone.\",\n    \"The horizontal mouth form shows a black outline and a thin dark interior line but no clearly visible tooth row or open cavity; openness cannot be confirmed from the image.\",\n    \"The collector's stated connection between scrimshaw and nnxyz rests on visual pattern qualities; no external source confirms this as the artist's framing.\"\n  ],\n  \"reviewFindings\": [\n    \"Removed 'wide-open' mouth claim from reading; the mouth shows a black outline and thin dark line but no visible tooth row or open cavity sufficient to support that description.\",\n    \"Removed 'wide open mouth' from the #30 connection reason; replaced with reference to the visible large red-outlined mouth form, which is observable without claiming degree of openness.\",\n    \"All other observations, tags, and connections retained as image-backed.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq/image.png",
+        "imageSHA256": "f07b5f51d4006ce11485f0af29b1c0a5a07678858f4c54dff7d41d90ae8556df"
+      },
+      {
+        "artworkId": "QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT/image.png",
+        "imageSHA256": "09502613fe243cac108f130eea61dfed9edf7606e2bd3cfa7935927e40f6f5fe"
+      },
+      {
+        "artworkId": "QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX/image.png",
+        "imageSHA256": "fa7b1d2d6f943cfc153c6bf88506c3475ec60168cb9b5bfe3a27e17273ef43fe"
+      },
+      {
+        "artworkId": "QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA/image.png",
+        "imageSHA256": "ff51a915ef3a7d23e9c89685138aad1c0e0a41b17063df921fab4d4e955d0b44"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"Two large coiled spirals dominate the upper half, one yellow-and-cyan on the left, one orange-and-multicolor on the right, each wound tightly around a small dark center.\", \"A dark brown background holds a dense crosshatch of red, magenta, and white lines filling every gap between the main forms, with a white wave-scallop band running across the top edge.\", \"Below the spirals, green hatched patches flank a yellow chevron form, and a horizontal black-outlined mouth sits above two lime-green coil forms at the bottom corners.\"], \"reading\": \"Two coiled spirals pull the eye inward from opposite sides, giving the face a fixed, wide-open look. The brown ground keeps the magenta and cyan lines from dissolving into noise, holding tension between stillness and overload. Green hatching at the cheeks and a blunt chevron read as flat rather than expressive, while the scallop band at the top adds a brief decorative pause above the density below.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #28 and #30. Where #28 uses a tilted angular structure on a dark teal ground and #30 fills its field with loose yellow scribble-mass, #29 plants its spirals symmetrically on a warm brown ground.\", \"connections\": [{\"targetArtworkId\": \"QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA\", \"reason\": \"Both works use coiled spiral forms as primary eye markers, but #30 replaces the symmetric brown-ground stillness with an asymmetric yellow scribble-mass and a wide open mouth, making the contrast in mood concrete and visible.\"}, {\"targetArtworkId\": \"QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT\", \"reason\": \"#28 shares the dense layered-line approach and circular eye forms, but its tilted composition and cool teal ground read as unstable where #29 sits level and warm.\"}], \"tags\": [\"spiral forms\", \"symmetrical layout\", \"dense crosshatch background\", \"coiled line\", \"warm brown ground\", \"scallop border\"], \"lookingQuestion\": \"What does the relationship between the tightly wound spiral centers and the loose crosshatch lines surrounding them do to how you read the space between the two eye forms?\", \"ambiguities\": [\"The white scallop band at the top edge could be a border element or a separate drawn form; its role relative to the face structure is unclear from the image alone.\", \"The collector's stated connection between scrimshaw and nnxyz rests on visual pattern qualities; no external source confirms this as the artist's framing.\"]}\nFLAGS:\n[{\"artworkId\": \"QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}, {\"artworkId\": \"QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq\", \"field\": \"connections\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

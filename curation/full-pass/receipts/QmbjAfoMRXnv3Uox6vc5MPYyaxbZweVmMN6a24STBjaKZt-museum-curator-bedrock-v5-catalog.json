@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:30.173889-05:00",
+    "usage": {
+      "inputTokens": 6382,
+      "outputTokens": 804,
+      "totalTokens": 7186,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14698
+    },
+    "requestId": "36d0946f-c39e-436d-acbf-6cfb73308fa1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"The image is divided into four roughly equal quadrants by thick black lines, with two circular forms in the upper half — the left ringed with concentric circles, the right bearing a bold red cross — each surrounded by dense radiating spike marks.\",\n    \"The lower half holds two rectangular forms filled with parallel vertical white lines on dark grounds, framed by red and yellow outlines; the left rectangle tilts slightly, the right sits more upright.\",\n    \"Yellow dominates the overall field, broken by patches of sky blue, lime green, orange, and pink; loose black scribble lines and white strokes run across all four quadrants, ignoring the internal borders.\"\n  ],\n  \"reading\": \"Four zones lock together like a grid that refuses to stay tidy — the dividing lines bulge and overlap rather than rule cleanly. The two spiked circles read as watchful and mismatched: one coiled inward, one crossed out. Below them, the barred rectangles carry a cooler, more closed feeling. Yellow floods the gaps, keeping the whole image loud even where the black lines press down.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #56 and nnxyz nifty faces #58. Those two lean toward dark grounds and blended washes; this one plants hard geometry and high-key yellow at the center, making it a bright outlier in the immediate run.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa\",\n      \"reason\": \"nnxyz nifty faces #56 uses a similar grid of rectangular zones and parallel vertical white lines in the lower mouth area, but its dark amber ground and blurred wash make a strong tonal contrast with the high-key yellow field here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF\",\n      \"reason\": \"nnxyz nnotb #142 shares the same dense spike-and-spiral marks around a central circular form and uses a similarly saturated yellow field, offering a cross-collection comparison of how the same mark type reads in two different structural contexts.\"\n    }\n  ],\n  \"tags\": [\n    \"grid structure\",\n    \"concentric circles\",\n    \"radiating spike marks\",\n    \"parallel vertical lines\",\n    \"high-key yellow field\",\n    \"red cross form\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful\",\n    \"loud\",\n    \"closed\"\n  ],\n  \"lookingQuestion\": \"The two circular forms in the upper half use different interior marks — one layered with rings, one crossed — what does that difference do to how you move between the left and right sides of the image?\",\n  \"ambiguities\": [\n    \"The title family order and the recorded creation order align here, but the metadata notes gaps and variants exist elsewhere in the owned subset, so proximity does not confirm sequential making.\",\n    \"The spiked radiating marks around the circles resemble marks in nnotb #142, but whether this reflects a shared formal approach or coincidence cannot be determined from the images alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt/image.png",
+        "imageSHA256": "f8004ba39d36ba6f352a16ae8f1175ce0750bc0f253e51090c4b3d314e7a1678"
+      },
+      {
+        "artworkId": "QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa/image.png",
+        "imageSHA256": "6a7259a7debff91b2fd51f30950c0721127640cc46d7ed781471cdf09fdc96f2"
+      },
+      {
+        "artworkId": "QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF/image.png",
+        "imageSHA256": "17c1684c39f0291abae7dab20587fe67d6e2ededb0cbe670c41432f47551bbd4"
+      },
+      {
+        "artworkId": "QmTQbv1CtRd93KMTdtqGzZKtcxeFBDzv7SEKLGP2URzLhL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTQbv1CtRd93KMTdtqGzZKtcxeFBDzv7SEKLGP2URzLhL/image.png",
+        "imageSHA256": "48fc9e9cc175404576ad05d6bec9882bb56dd4661c9489357904cbea068c9034"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:38.327796-05:00",
+    "usage": {
+      "inputTokens": 7206,
+      "outputTokens": 1025,
+      "totalTokens": 8231,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 8069
+    },
+    "requestId": "0befcd98-1d9d-4d3a-920a-f4a7b32a3d36",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"The image is divided into four roughly equal quadrants by thick black lines, with two circular forms in the upper half — the left ringed with concentric circles, the right bearing a bold red cross — each surrounded by dense radiating spike marks.\",\n    \"The lower half holds two rectangular forms filled with parallel vertical white lines on dark grounds, framed by red and yellow outlines; the left rectangle tilts slightly, the right sits more upright.\",\n    \"Yellow dominates the overall field, broken by patches of sky blue, lime green, orange, and pink; loose black scribble lines and white strokes run across all four quadrants, ignoring the internal borders.\"\n  ],\n  \"reading\": \"Four zones lock together like a grid that refuses to stay tidy — the dividing lines bulge and overlap rather than rule cleanly. The two spiked circles are mismatched: one coiled inward with rings, one marked with a cross. Below them, the barred rectangles carry a cooler, more closed feeling. Yellow floods the gaps, keeping the whole image loud even where the black lines press down.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #56 and nnxyz nifty faces #58. Both neighbors lean toward dark grounds and blended washes; this one plants hard geometry and high-key yellow at the center, making it a bright outlier in the immediate run.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa\",\n      \"reason\": \"nnxyz nifty faces #56 shares parallel vertical white lines in a rectangular lower zone, but its dark amber ground and blurred wash create a strong tonal contrast with the high-key yellow field here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF\",\n      \"reason\": \"nnxyz nnotb #142 shows dense spike-and-spiral marks around a central circular form against a saturated yellow field, offering a cross-collection look at how the same mark type reads in a looser, less gridded structure.\"\n    }\n  ],\n  \"tags\": [\n    \"grid structure\",\n    \"concentric circles\",\n    \"radiating spike marks\",\n    \"parallel vertical lines\",\n    \"high-key yellow field\",\n    \"red cross form\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful\",\n    \"loud\",\n    \"closed\"\n  ],\n  \"lookingQuestion\": \"The two circular forms in the upper half use different interior marks — one layered with rings, one crossed — what does that difference do to how you move between the left and right sides of the image?\",\n  \"ambiguities\": [\n    \"Title family order and recorded creation order align for this work, but the metadata notes gaps and variants exist elsewhere in the owned subset, so proximity does not confirm sequential making.\",\n    \"The spiked radiating marks around the circles resemble marks in nnotb #142, but whether this reflects a shared formal approach or coincidence cannot be determined from the images alone.\"\n  ],\n  \"reviewFindings\": [\n    \"All color and form observations confirmed against the primary image: four-quadrant grid, concentric-circle and cross-marked circles, tilted and upright rectangles with vertical white lines, and yellow-dominant field are all visible.\",\n    \"Comparison with QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa confirmed: dark amber ground, blurred wash, and vertical white lines in lower rectangular zone are visible in that image; tonal contrast claim is accurate.\",\n    \"Comparison with QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF confirmed: spike marks around a circular form and saturated yellow field are visible; draft phrase 'cross-collection comparison' retained and sharpened to note structural difference; no invented intent or subject identity introduced.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbjAfoMRXnv3Uox6vc5MPYyaxbZweVmMN6a24STBjaKZt/image.png",
+        "imageSHA256": "f8004ba39d36ba6f352a16ae8f1175ce0750bc0f253e51090c4b3d314e7a1678"
+      },
+      {
+        "artworkId": "QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa/image.png",
+        "imageSHA256": "6a7259a7debff91b2fd51f30950c0721127640cc46d7ed781471cdf09fdc96f2"
+      },
+      {
+        "artworkId": "QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF/image.png",
+        "imageSHA256": "17c1684c39f0291abae7dab20587fe67d6e2ededb0cbe670c41432f47551bbd4"
+      },
+      {
+        "artworkId": "QmTQbv1CtRd93KMTdtqGzZKtcxeFBDzv7SEKLGP2URzLhL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTQbv1CtRd93KMTdtqGzZKtcxeFBDzv7SEKLGP2URzLhL/image.png",
+        "imageSHA256": "48fc9e9cc175404576ad05d6bec9882bb56dd4661c9489357904cbea068c9034"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"The image is divided into four roughly equal quadrants by thick black lines, with two circular forms in the upper half — the left ringed with concentric circles, the right bearing a bold red cross — each surrounded by dense radiating spike marks.\", \"The lower half holds two rectangular forms filled with parallel vertical white lines on dark grounds, framed by red and yellow outlines; the left rectangle tilts slightly, the right sits more upright.\", \"Yellow dominates the overall field, broken by patches of sky blue, lime green, orange, and pink; loose black scribble lines and white strokes run across all four quadrants, ignoring the internal borders.\"], \"reading\": \"Four zones lock together like a grid that refuses to stay tidy — the dividing lines bulge and overlap rather than rule cleanly. The two spiked circles read as watchful and mismatched: one coiled inward, one crossed out. Below them, the barred rectangles carry a cooler, more closed feeling. Yellow floods the gaps, keeping the whole image loud even where the black lines press down.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #56 and nnxyz nifty faces #58. Those two lean toward dark grounds and blended washes; this one plants hard geometry and high-key yellow at the center, making it a bright outlier in the immediate run.\", \"connections\": [{\"targetArtworkId\": \"QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa\", \"reason\": \"nnxyz nifty faces #56 uses a similar grid of rectangular zones and parallel vertical white lines in the lower mouth area, but its dark amber ground and blurred wash make a strong tonal contrast with the high-key yellow field here.\"}, {\"targetArtworkId\": \"QmXLnG4RCCWGEWm9WdmuBZ43H2m8D1jktxebzXCmB9LMFF\", \"reason\": \"nnxyz nnotb #142 shares the same dense spike-and-spiral marks around a central circular form and uses a similarly saturated yellow field, offering a cross-collection comparison of how the same mark type reads in two different structural contexts.\"}], \"tags\": [\"grid structure\", \"concentric circles\", \"radiating spike marks\", \"parallel vertical lines\", \"high-key yellow field\", \"red cross form\"], \"interpretiveTags\": [\"watchful\", \"loud\", \"closed\"], \"lookingQuestion\": \"The two circular forms in the upper half use different interior marks — one layered with rings, one crossed — what does that difference do to how you move between the left and right sides of the image?\", \"ambiguities\": [\"The title family order and the recorded creation order align here, but the metadata notes gaps and variants exist elsewhere in the owned subset, so proximity does not confirm sequential making.\", \"The spiked radiating marks around the circles resemble marks in nnotb #142, but whether this reflects a shared formal approach or coincidence cannot be determined from the images alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

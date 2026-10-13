@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:05.881126-05:00",
+    "usage": {
+      "inputTokens": 6927,
+      "outputTokens": 766,
+      "totalTokens": 7693,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13597
+    },
+    "requestId": "43cb35a9-b956-4fc9-b8fb-44a29ab42f53",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad dark-brown rounded shape fills the canvas against a black ground, with two asymmetric eye zones built from concentric black and yellow rings with teal cross-hair centers, set at different heights.\",\n    \"A wide rectangular mouth sits in the lower third, outlined in white and black, filled with a row of blocky white teeth marked by short vertical black lines, with orange beneath.\",\n    \"Dense overlapping lines in magenta, yellow, blue, green, and white pack the interior of the face shape, while a zigzag wave runs along the top edge and a small artist signature appears at lower right.\"\n  ],\n  \"reading\": \"Two mismatched ring-eyes stare outward from a squat brown mass, one higher and larger than the other, giving the face an off-balance weight. The white-boxed teeth below read as a fixed, wide-open display rather than a smile. Layers of colored lines fill every gap, so the face feels dense and pressurized. The overall mood reads as confrontational, though that is a reading, not a fact.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #35 and #37. Where #35 uses a bright yellow outer frame and open line work on a busy ground, #36 pulls the face into a darker, more enclosed brown mass with the color pushed inward.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC\",\n      \"reason\": \"Both works share the concentric-ring eye motif and a wide toothed mouth zone, but #35 spreads its structure across a bright yellow border while #36 compresses the same elements into a dark enclosed shape.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y\",\n      \"reason\": \"Title neighbor #37 also uses a dark outer mass with ring eyes and visible teeth, but its eyes are differently shaped—one oval, one rectangular—offering a direct contrast in how the eye forms are handled across adjacent works in the owned subset.\"\n    }\n  ],\n  \"tags\": [\n    \"concentric ring eyes\",\n    \"rectangular toothed mouth\",\n    \"dark brown enclosing shape\",\n    \"dense interior line fill\",\n    \"zigzag top edge\",\n    \"asymmetric eye placement\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood reading\",\n    \"pressurized interior feeling\"\n  ],\n  \"lookingQuestion\": \"How does the difference in size and height between the two ring-eyes affect the way you read the balance of the face?\",\n  \"ambiguities\": [\n    \"The zigzag line at the top edge could be read as a decorative border or as part of the face structure; the image does not resolve this.\",\n    \"The nnotb #206 comparison image shows a spiral eye and toothed mouth but the overall composition and color field differ enough that no strong formal connection was found; it is omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc/image.png",
+        "imageSHA256": "28622ac12a01c1aec4f9c52e254e7528dfe75ac5f7ab9a0bb3f4479bc61fd37a"
+      },
+      {
+        "artworkId": "Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC/image.png",
+        "imageSHA256": "3239fc2ce97d90e895ca0301fd3c0cf7cf384a18aa3063867fd61a669ee29a32"
+      },
+      {
+        "artworkId": "QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY/image.png",
+        "imageSHA256": "16b717168fe37dda5b9caacf0cb4fe8a7fd18ab3b349d3e8cf2fbcbabc406c9c"
+      },
+      {
+        "artworkId": "QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y/image.png",
+        "imageSHA256": "3c7ed1da456442ae3ebc0cf2548af7153b5512d22a24cc2f4f832a60a429e2e5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:12.744290-05:00",
+    "usage": {
+      "inputTokens": 7715,
+      "outputTokens": 986,
+      "totalTokens": 8701,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6719
+    },
+    "requestId": "5afbddd3-ebeb-4e28-a630-de146351f8fc",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad dark-brown rounded shape fills the canvas against a black ground, with two asymmetric ring-eyes built from concentric black and yellow circles with teal cross-hair centers, set at different heights.\",\n    \"A wide rectangular mouth sits in the lower third, outlined in white and black, filled with a row of blocky white teeth marked by short vertical black lines, with orange visible beneath.\",\n    \"Dense overlapping lines in magenta, yellow, blue, green, and white pack the interior of the face shape, while a tight zigzag wave runs along the top edge and a small artist signature appears at lower right.\"\n  ],\n  \"reading\": \"Two mismatched ring-eyes stare outward from a squat brown mass, one higher and larger than the other, giving the face an off-balance weight. The white-boxed teeth below read as a fixed, wide-open display rather than a smile. Layers of colored lines fill every gap, making the face feel dense and pressurized. The overall mood reads as confrontational, though that is a reading, not a fact.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #35 and #37. Where #35 uses a bright yellow outer frame and open line work on a busy ground, #36 pulls the face into a darker enclosed brown mass with color pushed inward.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC\",\n      \"reason\": \"Both works share concentric-ring eye forms and a wide toothed mouth zone, but #35 spreads its structure across a bright yellow border while #36 compresses the same elements into a dark enclosed shape.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y\",\n      \"reason\": \"Title neighbor #37 also uses a dark outer mass with ring eyes and visible teeth, but its eyes differ—one oval, one rectangular—offering a direct contrast in eye-form handling across adjacent works in the owned subset.\"\n    }\n  ],\n  \"tags\": [\n    \"concentric ring eyes\",\n    \"rectangular toothed mouth\",\n    \"dark brown enclosing shape\",\n    \"dense interior line fill\",\n    \"zigzag top edge\",\n    \"asymmetric eye placement\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood reading\",\n    \"pressurized interior feeling\"\n  ],\n  \"lookingQuestion\": \"How does the difference in size and height between the two ring-eyes affect the way you read the balance of the face?\",\n  \"ambiguities\": [\n    \"The zigzag line at the top edge could be read as a decorative border or as part of the face structure; the image does not resolve this.\",\n    \"The nnotb #206 comparison shows a spiral eye and toothed mouth but the overall composition and color field differ enough that no strong formal connection was found; it is omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: concentric ring eyes with teal cross-hairs, white-boxed blocky teeth with orange beneath, and dense multicolor line fill with zigzag top edge are all visibly present.\",\n    \"Comparison with Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC confirmed: #35 does show a yellow outer border and open line work versus #36's dark enclosed mass; concentric ring eyes and toothed mouth are present in both.\",\n    \"Comparison with QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y confirmed: #37 does show a dark outer mass, ring eyes, and visible teeth; one eye is oval and one is rectangular, supporting the stated contrast; no material corrections required.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc/image.png",
+        "imageSHA256": "28622ac12a01c1aec4f9c52e254e7528dfe75ac5f7ab9a0bb3f4479bc61fd37a"
+      },
+      {
+        "artworkId": "Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC/image.png",
+        "imageSHA256": "3239fc2ce97d90e895ca0301fd3c0cf7cf384a18aa3063867fd61a669ee29a32"
+      },
+      {
+        "artworkId": "QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY/image.png",
+        "imageSHA256": "16b717168fe37dda5b9caacf0cb4fe8a7fd18ab3b349d3e8cf2fbcbabc406c9c"
+      },
+      {
+        "artworkId": "QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y/image.png",
+        "imageSHA256": "3c7ed1da456442ae3ebc0cf2548af7153b5512d22a24cc2f4f832a60a429e2e5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad dark-brown rounded shape fills the canvas against a black ground, with two asymmetric eye zones built from concentric black and yellow rings with teal cross-hair centers, set at different heights.\", \"A wide rectangular mouth sits in the lower third, outlined in white and black, filled with a row of blocky white teeth marked by short vertical black lines, with orange beneath.\", \"Dense overlapping lines in magenta, yellow, blue, green, and white pack the interior of the face shape, while a zigzag wave runs along the top edge and a small artist signature appears at lower right.\"], \"reading\": \"Two mismatched ring-eyes stare outward from a squat brown mass, one higher and larger than the other, giving the face an off-balance weight. The white-boxed teeth below read as a fixed, wide-open display rather than a smile. Layers of colored lines fill every gap, so the face feels dense and pressurized. The overall mood reads as confrontational, though that is a reading, not a fact.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #35 and #37. Where #35 uses a bright yellow outer frame and open line work on a busy ground, #36 pulls the face into a darker, more enclosed brown mass with the color pushed inward.\", \"connections\": [{\"targetArtworkId\": \"Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC\", \"reason\": \"Both works share the concentric-ring eye motif and a wide toothed mouth zone, but #35 spreads its structure across a bright yellow border while #36 compresses the same elements into a dark enclosed shape.\"}, {\"targetArtworkId\": \"QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y\", \"reason\": \"Title neighbor #37 also uses a dark outer mass with ring eyes and visible teeth, but its eyes are differently shaped—one oval, one rectangular—offering a direct contrast in how the eye forms are handled across adjacent works in the owned subset.\"}], \"tags\": [\"concentric ring eyes\", \"rectangular toothed mouth\", \"dark brown enclosing shape\", \"dense interior line fill\", \"zigzag top edge\", \"asymmetric eye placement\"], \"interpretiveTags\": [\"confrontational mood reading\", \"pressurized interior feeling\"], \"lookingQuestion\": \"How does the difference in size and height between the two ring-eyes affect the way you read the balance of the face?\", \"ambiguities\": [\"The zigzag line at the top edge could be read as a decorative border or as part of the face structure; the image does not resolve this.\", \"The nnotb #206 comparison image shows a spiral eye and toothed mouth but the overall composition and color field differ enough that no strong formal connection was found; it is omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:22.748201-05:00",
+    "usage": {
+      "inputTokens": 7480,
+      "outputTokens": 798,
+      "totalTokens": 8278,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5708
+    },
+    "requestId": "d406704c-8ee6-4eaf-a787-62823202376c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad dark-brown rounded shape fills the canvas against a black ground, with two asymmetric ring-eyes built from concentric black and yellow circles with teal cross-hair centers, set at different heights.\",\n    \"A wide rectangular mouth sits in the lower third, outlined in white and black, filled with a row of blocky white teeth marked by short vertical black lines, with orange visible beneath.\",\n    \"Dense overlapping lines in magenta, yellow, blue, green, and white pack the interior of the face shape, while a tight zigzag wave runs along the top edge and a small artist signature appears at lower right.\"\n  ],\n  \"reading\": \"Two mismatched ring-eyes stare outward from a squat brown mass, one higher and larger than the other, giving the face an off-balance weight. The white-boxed tooth row below sits within a rectangular outline, its blocky regularity reading as a fixed, hard-edged display. Layers of colored lines fill every gap, making the face feel dense and pressurized. The overall mood reads as confrontational, though that is a reading, not a fact.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #35 and #37. Where #35 uses a bright yellow outer frame and open line work, #36 pulls the face into a darker enclosed brown mass with color pushed inward.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC\",\n      \"reason\": \"Both works share concentric-ring eye forms and a rectangular toothed mouth zone, but #35 spreads its structure across a bright yellow border while #36 compresses the same elements into a dark enclosed shape.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y\",\n      \"reason\": \"Title neighbor #37 also uses a dark outer mass with ring eyes and a visible tooth row, but its eyes differ—one oval, one rectangular—offering a direct contrast in eye-form handling across adjacent works in the owned subset.\"\n    }\n  ],\n  \"tags\": [\"concentric ring eyes\", \"rectangular toothed mouth\", \"dark brown enclosing shape\", \"dense interior line fill\", \"zigzag top edge\", \"asymmetric eye placement\"],\n  \"lookingQuestion\": \"How does the difference in size and height between the two ring-eyes affect the way you read the balance of the face?\",\n  \"ambiguities\": [\n    \"The zigzag line at the top edge could be read as a decorative border or as part of the face structure; the image does not resolve this.\",\n    \"The nnotb #206 comparison shows a spiral eye and toothed mouth but the overall composition and color field differ enough that no strong formal connection was found; it is omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"Mouth-openness flag resolved: 'wide-open' removed; revised reading describes the tooth row and rectangular outline without asserting degree of opening.\",\n    \"Reading word count confirmed within 55–65 word target after revision.\",\n    \"All other fields retained; no additional flags triggered.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc/image.png",
+        "imageSHA256": "28622ac12a01c1aec4f9c52e254e7528dfe75ac5f7ab9a0bb3f4479bc61fd37a"
+      },
+      {
+        "artworkId": "Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC/image.png",
+        "imageSHA256": "3239fc2ce97d90e895ca0301fd3c0cf7cf384a18aa3063867fd61a669ee29a32"
+      },
+      {
+        "artworkId": "QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY/image.png",
+        "imageSHA256": "16b717168fe37dda5b9caacf0cb4fe8a7fd18ab3b349d3e8cf2fbcbabc406c9c"
+      },
+      {
+        "artworkId": "QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y/image.png",
+        "imageSHA256": "3c7ed1da456442ae3ebc0cf2548af7153b5512d22a24cc2f4f832a60a429e2e5"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A broad dark-brown rounded shape fills the canvas against a black ground, with two asymmetric ring-eyes built from concentric black and yellow circles with teal cross-hair centers, set at different heights.\", \"A wide rectangular mouth sits in the lower third, outlined in white and black, filled with a row of blocky white teeth marked by short vertical black lines, with orange visible beneath.\", \"Dense overlapping lines in magenta, yellow, blue, green, and white pack the interior of the face shape, while a tight zigzag wave runs along the top edge and a small artist signature appears at lower right.\"], \"reading\": \"Two mismatched ring-eyes stare outward from a squat brown mass, one higher and larger than the other, giving the face an off-balance weight. The white-boxed teeth below read as a fixed, wide-open display rather than a smile. Layers of colored lines fill every gap, making the face feel dense and pressurized. The overall mood reads as confrontational, though that is a reading, not a fact.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #35 and #37. Where #35 uses a bright yellow outer frame and open line work on a busy ground, #36 pulls the face into a darker enclosed brown mass with color pushed inward.\", \"connections\": [{\"targetArtworkId\": \"Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC\", \"reason\": \"Both works share concentric-ring eye forms and a wide toothed mouth zone, but #35 spreads its structure across a bright yellow border while #36 compresses the same elements into a dark enclosed shape.\"}, {\"targetArtworkId\": \"QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y\", \"reason\": \"Title neighbor #37 also uses a dark outer mass with ring eyes and visible teeth, but its eyes differ—one oval, one rectangular—offering a direct contrast in eye-form handling across adjacent works in the owned subset.\"}], \"tags\": [\"concentric ring eyes\", \"rectangular toothed mouth\", \"dark brown enclosing shape\", \"dense interior line fill\", \"zigzag top edge\", \"asymmetric eye placement\"], \"lookingQuestion\": \"How does the difference in size and height between the two ring-eyes affect the way you read the balance of the face?\", \"ambiguities\": [\"The zigzag line at the top edge could be read as a decorative border or as part of the face structure; the image does not resolve this.\", \"The nnotb #206 comparison shows a spiral eye and toothed mouth but the overall composition and color field differ enough that no strong formal connection was found; it is omitted.\"]}\nFLAGS:\n[{\"artworkId\": \"QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

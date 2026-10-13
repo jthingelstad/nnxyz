@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:12.648135-05:00",
+    "usage": {
+      "inputTokens": 6041,
+      "outputTokens": 813,
+      "totalTokens": 6854,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13912
+    },
+    "requestId": "ae749806-a05a-4cb4-a313-7cf13b79407e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form dominates the upper center, rendered in saturated yellow-gold with black line work layered over it; two glowing white-yellow orbs sit above it against a dark background.\",\n    \"Four splayed hand-like forms appear at the lower left, lower center, and right side, each outlined in yellow-gold with black hatching, fingers spread wide against the dark ground.\",\n    \"A loose pink-magenta rectangle frames the left and upper-left edges, while white, green, blue, and pink short marks scatter across the dark field like thrown confetti.\"\n  ],\n  \"reading\": \"A glowing yellow-gold mass anchors the composition, its surface crossed by dense black lines that suggest pressure or containment. Around it, four open-fingered forms reach outward from multiple edges, giving the image a feeling of grasping or release rather than stillness. The scattered bright marks across the dark field read as agitation held just outside the central form. The mood is urgent without being resolved.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between nnxyz #27 and nnxyz #31 in both title order and recorded creation order. Where nnxyz #27 fills its field with dense flat color and hard outlines, this work uses a blurred luminous ground beneath the line work, shifting the visual weight toward glow rather than graphic flatness.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcvnXa1JLwDTHLSCUbdayrXBnqegafJzoK3D2Vx3e9fjo\",\n      \"reason\": \"Both works center a large yellow-gold glowing form on a dark ground with black line work layered over it, though nnxyz nnotb #300 tilts the form upward and opens a wide mouth zone, while this work spreads the glow more evenly and distributes reaching hand forms around the edges.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTvB2pkxMzZN8fzpYojZQiuALZUh3abtsm9mbVNWHerqV\",\n      \"reason\": \"nnxyz #27 shares the splayed hand forms at lower left and right, but its palette is high-contrast primaries on deep blue rather than the warm yellow-gold glow that saturates this work, making the two a useful color-contrast pair.\"\n    }\n  ],\n  \"tags\": [\n    \"yellow-gold glowing form\",\n    \"splayed hand outlines\",\n    \"dark ground with scattered marks\",\n    \"layered black line work over luminous base\",\n    \"loose rectangular framing element\",\n    \"white circular light forms\"\n  ],\n  \"interpretiveTags\": [\n    \"urgency\",\n    \"grasping or release\",\n    \"contained pressure\"\n  ],\n  \"lookingQuestion\": \"How many distinct hand-like forms can you locate, and do they all appear to reach in the same direction or different ones?\",\n  \"ambiguities\": [\n    \"The central rounded form reads as a head-like mass but carries no clearly legible facial features; identification as a head is a reading, not a certainty.\",\n    \"The nnxyz #31 comparison image shows a very different palette and structure; no strong formal connection to the primary was found, so it was not selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ/image.png",
+        "imageSHA256": "bcb195a27ddc3920341b965afda83a25473963fcfafb67c1603148aee1550db7"
+      },
+      {
+        "artworkId": "QmTvB2pkxMzZN8fzpYojZQiuALZUh3abtsm9mbVNWHerqV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTvB2pkxMzZN8fzpYojZQiuALZUh3abtsm9mbVNWHerqV/image.png",
+        "imageSHA256": "cdeb3d3aec6a367413744dd68d8d743dea5741876421415ffbdeed805f62b8a7"
+      },
+      {
+        "artworkId": "QmcvnXa1JLwDTHLSCUbdayrXBnqegafJzoK3D2Vx3e9fjo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcvnXa1JLwDTHLSCUbdayrXBnqegafJzoK3D2Vx3e9fjo/image.png",
+        "imageSHA256": "942f9f74c772c2b8a0cd8c24825d9211ba0c09226820553647e8ff5ce2aa1e97"
+      },
+      {
+        "artworkId": "QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2/image.png",
+        "imageSHA256": "c00d7770fb9f7946da0209d3c75ec7aba20c2af921142764035fd365d639bc16"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:19.512720-05:00",
+    "usage": {
+      "inputTokens": 6874,
+      "outputTokens": 1015,
+      "totalTokens": 7889,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6774
+    },
+    "requestId": "0f2ecdc5-b0be-4eca-94c8-cf312d748471",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded yellow-gold form occupies the upper center, its surface crossed by dense black line work; two bright white-yellow circular glows sit above it against a dark background.\",\n    \"Four splayed hand-like forms appear at the lower left, lower center, and right side, each outlined in yellow-gold with black hatching, fingers spread wide against the dark ground.\",\n    \"A loose pink-magenta rectangle frames the left and upper-left edges, while short white, green, blue, and pink marks scatter across the dark field.\"\n  ],\n  \"reading\": \"A glowing yellow-gold mass anchors the composition, its surface crossed by dense black lines that suggest pressure or containment. Around it, four open-fingered forms reach outward from multiple edges, giving the image a feeling of grasping or release rather than stillness. Scattered bright marks across the dark field read as agitation held just outside the central form. The mood is urgent without being resolved.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between nnxyz #27 and nnxyz #31 in both title order and recorded creation order. Where nnxyz #27 fills its field with dense flat color and hard outlines, this work uses a blurred luminous ground beneath the line work, shifting visual weight toward glow rather than graphic flatness.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcvnXa1JLwDTHLSCUbdayrXBnqegafJzoK3D2Vx3e9fjo\",\n      \"reason\": \"Both works center a large yellow-gold glowing form on a dark ground with black line work layered over it; nnxyz nnotb #300 tilts its form upward and opens a wide mouth zone, while this work spreads the glow more evenly and distributes hand forms around the edges.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTvB2pkxMzZN8fzpYojZQiuALZUh3abtsm9mbVNWHerqV\",\n      \"reason\": \"nnxyz #27 shares splayed hand forms at lower left and right, but its palette is high-contrast primaries on deep blue rather than the warm yellow-gold glow that saturates this work, making the two a useful color-contrast pair.\"\n    }\n  ],\n  \"tags\": [\n    \"yellow-gold glowing form\",\n    \"splayed hand outlines\",\n    \"dark ground with scattered marks\",\n    \"layered black line work over luminous base\",\n    \"loose rectangular framing element\",\n    \"white circular light forms\"\n  ],\n  \"interpretiveTags\": [\n    \"urgency\",\n    \"grasping or release\",\n    \"contained pressure\"\n  ],\n  \"lookingQuestion\": \"How many distinct hand-like forms can you locate, and do they all appear to reach in the same direction or different ones?\",\n  \"ambiguities\": [\n    \"The central rounded form reads as a head-like mass but carries no clearly legible facial features; identification as a head is a reading, not a certainty.\",\n    \"nnxyz #31 shows a very different palette and structure with no strong formal connection to the primary, so it was not selected as a comparison.\"\n  ],\n  \"reviewFindings\": [\n    \"All color and form observations confirmed against the primary image: yellow-gold central mass, white circular glows, four splayed hand forms, pink-magenta rectangle, and scattered short marks are all visibly present.\",\n    \"Comparison with QmcvnXa1JLwDTHLSCUbdayrXBnqegafJzoK3D2Vx3e9fjo confirmed: shared yellow-gold glow on dark ground with black line work is visible in both images; contrast in form tilt and mouth zone is accurate.\",\n    \"Comparison with QmTvB2pkxMzZN8fzpYojZQiuALZUh3abtsm9mbVNWHerqV confirmed: splayed hand forms at lower edges visible in both; palette contrast between deep blue primaries and warm yellow-gold glow is accurate and meaningful.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ/image.png",
+        "imageSHA256": "bcb195a27ddc3920341b965afda83a25473963fcfafb67c1603148aee1550db7"
+      },
+      {
+        "artworkId": "QmTvB2pkxMzZN8fzpYojZQiuALZUh3abtsm9mbVNWHerqV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTvB2pkxMzZN8fzpYojZQiuALZUh3abtsm9mbVNWHerqV/image.png",
+        "imageSHA256": "cdeb3d3aec6a367413744dd68d8d743dea5741876421415ffbdeed805f62b8a7"
+      },
+      {
+        "artworkId": "QmcvnXa1JLwDTHLSCUbdayrXBnqegafJzoK3D2Vx3e9fjo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcvnXa1JLwDTHLSCUbdayrXBnqegafJzoK3D2Vx3e9fjo/image.png",
+        "imageSHA256": "942f9f74c772c2b8a0cd8c24825d9211ba0c09226820553647e8ff5ce2aa1e97"
+      },
+      {
+        "artworkId": "QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2/image.png",
+        "imageSHA256": "c00d7770fb9f7946da0209d3c75ec7aba20c2af921142764035fd365d639bc16"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded form dominates the upper center, rendered in saturated yellow-gold with black line work layered over it; two glowing white-yellow orbs sit above it against a dark background.\", \"Four splayed hand-like forms appear at the lower left, lower center, and right side, each outlined in yellow-gold with black hatching, fingers spread wide against the dark ground.\", \"A loose pink-magenta rectangle frames the left and upper-left edges, while white, green, blue, and pink short marks scatter across the dark field like thrown confetti.\"], \"reading\": \"A glowing yellow-gold mass anchors the composition, its surface crossed by dense black lines that suggest pressure or containment. Around it, four open-fingered forms reach outward from multiple edges, giving the image a feeling of grasping or release rather than stillness. The scattered bright marks across the dark field read as agitation held just outside the central form. The mood is urgent without being resolved.\", \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between nnxyz #27 and nnxyz #31 in both title order and recorded creation order. Where nnxyz #27 fills its field with dense flat color and hard outlines, this work uses a blurred luminous ground beneath the line work, shifting the visual weight toward glow rather than graphic flatness.\", \"connections\": [{\"targetArtworkId\": \"QmcvnXa1JLwDTHLSCUbdayrXBnqegafJzoK3D2Vx3e9fjo\", \"reason\": \"Both works center a large yellow-gold glowing form on a dark ground with black line work layered over it, though nnxyz nnotb #300 tilts the form upward and opens a wide mouth zone, while this work spreads the glow more evenly and distributes reaching hand forms around the edges.\"}, {\"targetArtworkId\": \"QmTvB2pkxMzZN8fzpYojZQiuALZUh3abtsm9mbVNWHerqV\", \"reason\": \"nnxyz #27 shares the splayed hand forms at lower left and right, but its palette is high-contrast primaries on deep blue rather than the warm yellow-gold glow that saturates this work, making the two a useful color-contrast pair.\"}], \"tags\": [\"yellow-gold glowing form\", \"splayed hand outlines\", \"dark ground with scattered marks\", \"layered black line work over luminous base\", \"loose rectangular framing element\", \"white circular light forms\"], \"interpretiveTags\": [\"urgency\", \"grasping or release\", \"contained pressure\"], \"lookingQuestion\": \"How many distinct hand-like forms can you locate, and do they all appear to reach in the same direction or different ones?\", \"ambiguities\": [\"The central rounded form reads as a head-like mass but carries no clearly legible facial features; identification as a head is a reading, not a certainty.\", \"The nnxyz #31 comparison image shows a very different palette and structure; no strong formal connection to the primary was found, so it was not selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

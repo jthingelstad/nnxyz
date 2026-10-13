@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { routes } from '../../lib/catalog';
+---
+
+<Layout title="Curated walks — nnxyz">
+  <article class="text-page">
+    <h1>Curated walks</h1>
+    <p>Five paths through the owned collection, proposed by the AI curator.</p>
+    {routes.map((route) => (
+      <section class="walk-summary">
+        <h2>
+          <a href={`/walks/${route.id}/`}>{route.title} →</a>
+        </h2>
+        <p>{route.basis}</p>
+        <p class="small-note">{route.stops.length} works</p>
+      </section>
+    ))}
+  </article>
+</Layout>

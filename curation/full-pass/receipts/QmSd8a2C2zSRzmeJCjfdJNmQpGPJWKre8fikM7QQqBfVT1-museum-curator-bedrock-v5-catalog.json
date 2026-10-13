@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:25.122008-05:00",
+    "usage": {
+      "inputTokens": 5916,
+      "outputTokens": 820,
+      "totalTokens": 6736,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13605
+    },
+    "requestId": "ebf39509-c5a2-495a-9a7a-613096237671",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal face fills most of the frame, built from overlapping amber, dark brown, and black lines on a flat tan ground, with two pale blue-white circular eyes set in heavily scribbled rectangular sockets.\",\n    \"The open mouth at the lower center shows a row of white vertical bars outlined in dark brown, resembling a grid of teeth, surrounded by loose looping lines in rust and gold.\",\n    \"Orange-gold lines run across the forehead in a dense horizontal tangle, while black lines form a rough rectangular block above the brow, creating a layered, almost architectural crown zone.\"\n  ],\n  \"reading\": \"The face pushes forward, filling the frame with little breathing room. Its pale eyes sit inside scribbled boxes, giving them a fixed, wide quality that reads as alarm or raw attention. The mouth's white grid of teeth holds the gaze downward. Warm amber and rust lines pile over a flat tan ground, so the face feels built up rather than revealed — accumulated rather than drawn once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #287 and nnxyz nnotb #289. Both neighbors also center a face with an open, tooth-showing mouth on a warm ground, but #288 strips away the vivid background of #287 and the profile shift of #289, staying with a stark frontal view.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk\",\n      \"reason\": \"Both #287 and #288 show a frontal skull-like face with a wide-open mouth and a white tooth-grid at center, but #287 wraps its face in saturated multicolor bands and bokeh circles while #288 holds to a spare tan-and-amber palette.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz\",\n      \"reason\": \"Title neighbor #289 shares the warm tan ground and a mouth with white jagged marks, but shifts to a three-quarter profile and introduces red and teal, contrasting with #288's strict frontality and amber-dominant lines.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face\",\n    \"open mouth with tooth grid\",\n    \"scribbled eye sockets\",\n    \"amber and rust line work\",\n    \"flat tan ground\",\n    \"layered forehead marks\"\n  ],\n  \"interpretiveTags\": [\n    \"alarm or raw attention\",\n    \"accumulated presence\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the tightly packed forehead lines and the wide-open mouth suggest about where tension is held in this face?\",\n  \"ambiguities\": [\n    \"The rectangular block above the brow could be read as hair, a hat form, or purely structural mark-making — the image does not resolve this.\",\n    \"Candidate QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX shares a face-and-teeth motif but its dense text overlays and different collection membership make the formal comparison weak; it was inspected and excluded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1/image.png",
+        "imageSHA256": "e7c36c94757b5eacf3b1f8ae8f426d0beb8b170656a50f28caaa024f8278fef8"
+      },
+      {
+        "artworkId": "QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk/image.png",
+        "imageSHA256": "312b32750c21b8700dab8728790ec0ca63c05b5f02706fe869a663f1f8c4afcb"
+      },
+      {
+        "artworkId": "QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX/image.png",
+        "imageSHA256": "01484a87d1870e31995de4a02485192394121cd8eb07b5910adb1841d6f766c6"
+      },
+      {
+        "artworkId": "QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz/image.png",
+        "imageSHA256": "03cf8038a5a48924f67a1321aec3152fe59152a07f34f9d394b9492e8c2ad38d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:31.340488-05:00",
+    "usage": {
+      "inputTokens": 6758,
+      "outputTokens": 892,
+      "totalTokens": 7650,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6156
+    },
+    "requestId": "dd406a75-cf02-44e4-a7e2-fd92bba95b98",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal face fills most of the frame, built from overlapping amber, dark brown, and black lines on a flat tan ground, with two pale blue-white circular eyes set in heavily scribbled rectangular sockets.\",\n    \"The open mouth at the lower center shows a row of white vertical bars outlined in dark brown, surrounded by loose looping lines in rust and gold.\",\n    \"Orange-gold lines run across the forehead in a dense horizontal tangle, while black lines form a rough rectangular block above the brow, creating a layered crown zone.\"\n  ],\n  \"reading\": \"The face fills the frame with little breathing room. Its pale eyes sit inside scribbled boxes, giving them a fixed, wide quality that reads as alarm or raw attention. The mouth's white grid of teeth pulls the gaze downward. Warm amber and rust lines pile over a flat tan ground, so the face feels built up rather than revealed — accumulated rather than drawn once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #287 and nnxyz nnotb #289. Both also center a face with an open, tooth-showing mouth on a warm ground, but #288 strips away #287's saturated background and #289's profile shift, holding to a stark frontal view.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk\",\n      \"reason\": \"Both show a frontal skull-like face with a wide-open mouth and a white tooth-grid, but #287 wraps its face in saturated multicolor bands and bokeh circles while #288 holds to a spare tan-and-amber palette.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz\",\n      \"reason\": \"Title neighbor #289 shares the warm tan ground and a mouth with white jagged marks, but shifts to a three-quarter profile and introduces red and teal, contrasting with #288's strict frontality and amber-dominant lines.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face\",\n    \"open mouth with tooth grid\",\n    \"scribbled eye sockets\",\n    \"amber and rust line work\",\n    \"flat tan ground\",\n    \"layered forehead marks\"\n  ],\n  \"interpretiveTags\": [\n    \"alarm or raw attention\",\n    \"accumulated presence\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the tightly packed forehead lines and the wide-open mouth suggest about where tension is held in this face?\",\n  \"ambiguities\": [\n    \"The rectangular block above the brow could be read as hair, a hat form, or purely structural mark-making — the image does not resolve this.\",\n    \"Candidate QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX was inspected; its dense text overlays and different collection membership make the formal comparison too weak to include.\"\n  ],\n  \"reviewFindings\": [\n    \"Tooth description revised from 'resembling a grid' to plain description of white vertical bars; visual evidence confirmed in image.\",\n    \"Reading word count checked: 63 words, within 55–80 limit; no invented biography, intent, or technique added.\",\n    \"Both comparison images inspected: #287 bokeh and multicolor bands confirmed; #289 three-quarter profile, red and teal confirmed; connections retained as accurate.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1/image.png",
+        "imageSHA256": "e7c36c94757b5eacf3b1f8ae8f426d0beb8b170656a50f28caaa024f8278fef8"
+      },
+      {
+        "artworkId": "QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk/image.png",
+        "imageSHA256": "312b32750c21b8700dab8728790ec0ca63c05b5f02706fe869a663f1f8c4afcb"
+      },
+      {
+        "artworkId": "QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX/image.png",
+        "imageSHA256": "01484a87d1870e31995de4a02485192394121cd8eb07b5910adb1841d6f766c6"
+      },
+      {
+        "artworkId": "QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz/image.png",
+        "imageSHA256": "03cf8038a5a48924f67a1321aec3152fe59152a07f34f9d394b9492e8c2ad38d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large frontal face fills most of the frame, built from overlapping amber, dark brown, and black lines on a flat tan ground, with two pale blue-white circular eyes set in heavily scribbled rectangular sockets.\", \"The open mouth at the lower center shows a row of white vertical bars outlined in dark brown, resembling a grid of teeth, surrounded by loose looping lines in rust and gold.\", \"Orange-gold lines run across the forehead in a dense horizontal tangle, while black lines form a rough rectangular block above the brow, creating a layered, almost architectural crown zone.\"], \"reading\": \"The face pushes forward, filling the frame with little breathing room. Its pale eyes sit inside scribbled boxes, giving them a fixed, wide quality that reads as alarm or raw attention. The mouth's white grid of teeth holds the gaze downward. Warm amber and rust lines pile over a flat tan ground, so the face feels built up rather than revealed — accumulated rather than drawn once.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #287 and nnxyz nnotb #289. Both neighbors also center a face with an open, tooth-showing mouth on a warm ground, but #288 strips away the vivid background of #287 and the profile shift of #289, staying with a stark frontal view.\", \"connections\": [{\"targetArtworkId\": \"QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk\", \"reason\": \"Both #287 and #288 show a frontal skull-like face with a wide-open mouth and a white tooth-grid at center, but #287 wraps its face in saturated multicolor bands and bokeh circles while #288 holds to a spare tan-and-amber palette.\"}, {\"targetArtworkId\": \"QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz\", \"reason\": \"Title neighbor #289 shares the warm tan ground and a mouth with white jagged marks, but shifts to a three-quarter profile and introduces red and teal, contrasting with #288's strict frontality and amber-dominant lines.\"}], \"tags\": [\"frontal face\", \"open mouth with tooth grid\", \"scribbled eye sockets\", \"amber and rust line work\", \"flat tan ground\", \"layered forehead marks\"], \"interpretiveTags\": [\"alarm or raw attention\", \"accumulated presence\"], \"lookingQuestion\": \"What does the relationship between the tightly packed forehead lines and the wide-open mouth suggest about where tension is held in this face?\", \"ambiguities\": [\"The rectangular block above the brow could be read as hair, a hat form, or purely structural mark-making — the image does not resolve this.\", \"Candidate QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX shares a face-and-teeth motif but its dense text overlays and different collection membership make the formal comparison weak; it was inspected and excluded.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:17.437355-05:00",
+    "usage": {
+      "inputTokens": 6495,
+      "outputTokens": 844,
+      "totalTokens": 7339,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5870
+    },
+    "requestId": "71dd3ea8-562b-4af1-8280-faa76c65e5c3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal face fills most of the frame, built from overlapping amber, dark brown, and black lines on a flat tan ground, with two pale blue-white circular eyes set in heavily scribbled rectangular sockets.\",\n    \"The mouth at the lower center shows a row of white vertical bars outlined in dark brown, surrounded by loose looping lines in rust and gold; a narrow dark gap is visible above the tooth row.\",\n    \"Orange-gold lines run across the forehead in a dense horizontal tangle, while black lines form a rough rectangular block above the brow, creating a layered crown zone.\"\n  ],\n  \"reading\": \"The face fills the frame with little breathing room. Its pale eyes sit inside scribbled boxes, giving them a fixed, wide quality that reads as alarm or raw attention. The mouth's white grid of teeth, with a dark gap above them, pulls the gaze downward. Warm amber and rust lines pile over a flat tan ground, so the face feels built up rather than revealed — accumulated rather than drawn once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #287 and nnxyz nnotb #289. Both also center a face with a tooth-showing mouth on a warm ground, but #288 holds to a stark frontal view that neither neighbor shares.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk\",\n      \"reason\": \"Both show a frontal skull-like face with a white tooth-grid at the mouth, but #287 wraps its face in saturated multicolor bands and bokeh circles while #288 holds to a spare tan-and-amber palette.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz\",\n      \"reason\": \"Title neighbor #289 shares the warm tan ground and a mouth with white jagged marks, but shifts to a three-quarter profile and introduces red and teal, contrasting with #288's strict frontality and amber-dominant lines.\"\n    }\n  ],\n  \"tags\": [\"frontal face\", \"tooth-row mouth\", \"scribbled eye sockets\", \"amber and rust line work\", \"flat tan ground\", \"layered forehead marks\"],\n  \"lookingQuestion\": \"What does the relationship between the tightly packed forehead lines and the tooth-row mouth suggest about where tension is held in this face?\",\n  \"ambiguities\": [\n    \"The rectangular block above the brow could be read as hair, a hat form, or purely structural mark-making — the image does not resolve this.\",\n    \"Candidate QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX was inspected; its dense text overlays and different collection membership make the formal comparison too weak to include.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open mouth' with 'a narrow dark gap visible above the tooth row' to reflect what is actually visible rather than an assumed degree of openness.\",\n    \"Updated lookingQuestion to remove 'wide-open' in line with the mouth-openness correction.\",\n    \"Reading and context angle adjusted to remove the 'open' mouth characterization while preserving the tooth-grid observation.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1/image.png",
+        "imageSHA256": "e7c36c94757b5eacf3b1f8ae8f426d0beb8b170656a50f28caaa024f8278fef8"
+      },
+      {
+        "artworkId": "QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk/image.png",
+        "imageSHA256": "312b32750c21b8700dab8728790ec0ca63c05b5f02706fe869a663f1f8c4afcb"
+      },
+      {
+        "artworkId": "QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX/image.png",
+        "imageSHA256": "01484a87d1870e31995de4a02485192394121cd8eb07b5910adb1841d6f766c6"
+      },
+      {
+        "artworkId": "QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz/image.png",
+        "imageSHA256": "03cf8038a5a48924f67a1321aec3152fe59152a07f34f9d394b9492e8c2ad38d"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large frontal face fills most of the frame, built from overlapping amber, dark brown, and black lines on a flat tan ground, with two pale blue-white circular eyes set in heavily scribbled rectangular sockets.\", \"The open mouth at the lower center shows a row of white vertical bars outlined in dark brown, surrounded by loose looping lines in rust and gold.\", \"Orange-gold lines run across the forehead in a dense horizontal tangle, while black lines form a rough rectangular block above the brow, creating a layered crown zone.\"], \"reading\": \"The face fills the frame with little breathing room. Its pale eyes sit inside scribbled boxes, giving them a fixed, wide quality that reads as alarm or raw attention. The mouth's white grid of teeth pulls the gaze downward. Warm amber and rust lines pile over a flat tan ground, so the face feels built up rather than revealed — accumulated rather than drawn once.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #287 and nnxyz nnotb #289. Both also center a face with an open, tooth-showing mouth on a warm ground, but #288 strips away #287's saturated background and #289's profile shift, holding to a stark frontal view.\", \"connections\": [{\"targetArtworkId\": \"QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk\", \"reason\": \"Both show a frontal skull-like face with a wide-open mouth and a white tooth-grid, but #287 wraps its face in saturated multicolor bands and bokeh circles while #288 holds to a spare tan-and-amber palette.\"}, {\"targetArtworkId\": \"QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz\", \"reason\": \"Title neighbor #289 shares the warm tan ground and a mouth with white jagged marks, but shifts to a three-quarter profile and introduces red and teal, contrasting with #288's strict frontality and amber-dominant lines.\"}], \"tags\": [\"frontal face\", \"open mouth with tooth grid\", \"scribbled eye sockets\", \"amber and rust line work\", \"flat tan ground\", \"layered forehead marks\"], \"lookingQuestion\": \"What does the relationship between the tightly packed forehead lines and the wide-open mouth suggest about where tension is held in this face?\", \"ambiguities\": [\"The rectangular block above the brow could be read as hair, a hat form, or purely structural mark-making — the image does not resolve this.\", \"Candidate QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX was inspected; its dense text overlays and different collection membership make the formal comparison too weak to include.\"]}\nFLAGS:\n[{\"artworkId\": \"QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1\", \"field\": \"connections\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

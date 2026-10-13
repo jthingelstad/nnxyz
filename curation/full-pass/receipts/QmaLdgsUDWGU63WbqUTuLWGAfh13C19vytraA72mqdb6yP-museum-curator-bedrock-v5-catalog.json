@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:26.940429-05:00",
+    "usage": {
+      "inputTokens": 6611,
+      "outputTokens": 759,
+      "totalTokens": 7370,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12086
+    },
+    "requestId": "987784c7-31e6-46d2-985a-08bc8c78bf11",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Five distinct open-mouthed faces are distributed across the canvas, each ringed by spiky radiating lines; the central figure is the largest and sits against a near-black ground.\",\n    \"A pink six-petaled flower floats above the central figure, and a yellow spiral occupies the upper right, providing two isolated calm shapes inside otherwise dense, jagged mark-making.\",\n    \"The palette layers deep red and black across most of the field, with bursts of sky blue, gold, and white lines cutting through, concentrating brightness around each face's eye area.\"\n  ],\n  \"reading\": \"Five open-mouthed faces crowd the picture plane, each ringed by spiky lines that read as agitation or alarm. The near-black ground presses them forward while white lines trace their features with quick, scratchy strokes. A lone pink flower and a yellow spiral sit above the chaos—small, rounded forms that feel oddly quiet against the surrounding noise. The image holds both menace and absurdity at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #181 and nnxyz nnotb #183. Where #181 isolates a single face on saturated yellow and #183 spreads figures across warm amber, #182 packs the most faces into the darkest ground of the three, making the white line-work stand out sharply.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv\",\n      \"reason\": \"Both #182 and #183 arrange multiple open-mouthed figures side by side with spiky radiating lines around each head, but #183 uses a warm amber ground while #182 uses near-black, reversing the light-dark relationship.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF\",\n      \"reason\": \"nifty faces #7 shares the concentric-spiral eye motif and white-line face construction visible in #182's central figure, though #7 fills its ground with red rather than black.\"\n    }\n  ],\n  \"tags\": [\n    \"multiple faces\",\n    \"spiky radiating lines\",\n    \"open mouths\",\n    \"dark ground\",\n    \"white line drawing\",\n    \"isolated floral shape\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded\",\n    \"agitated\",\n    \"absurdist\"\n  ],\n  \"lookingQuestion\": \"Which of the five faces draws your eye first, and what specific lines or colors around it pull your attention there?\",\n  \"ambiguities\": [\n    \"The pink flower form could be read as a separate floating object or as a headdress element on the central figure; the image does not resolve this clearly.\",\n    \"Title order and recorded creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this cannot be generalized.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaLdgsUDWGU63WbqUTuLWGAfh13C19vytraA72mqdb6yP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaLdgsUDWGU63WbqUTuLWGAfh13C19vytraA72mqdb6yP/image.png",
+        "imageSHA256": "287144fbddf9d70cbc9de01605f1c2a405855faaf22efd558c384ade4ee6d0db"
+      },
+      {
+        "artworkId": "Qmd56gRcqbjyHmK6rDpynuMZdDheHCZmaEFP4UPNdQ62So",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd56gRcqbjyHmK6rDpynuMZdDheHCZmaEFP4UPNdQ62So/image.png",
+        "imageSHA256": "ad9cc115bb96975d49320e9f40c0012e1c8ba1dddccecd1fae2713427164adfc"
+      },
+      {
+        "artworkId": "QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF/image.png",
+        "imageSHA256": "eb42ba3160ea0588f5dfd58fc2025eca09264fbe4fd6bd61e045ebd070cfa366"
+      },
+      {
+        "artworkId": "QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv/image.png",
+        "imageSHA256": "282ce0ee862f63a052f87f069a0acb48587321e03d60d227234b8a5e06b5a1f0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:33.489194-05:00",
+    "usage": {
+      "inputTokens": 7390,
+      "outputTokens": 932,
+      "totalTokens": 8322,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6195
+    },
+    "requestId": "3e569541-ae10-49cc-8390-ebabe5b2a2dd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Five open-mouthed faces are distributed across the canvas, each ringed by spiky radiating lines; the central figure is the largest and sits against a near-black ground.\",\n    \"A pink six-petaled flower floats above the central figure, and a yellow spiral occupies the upper right, providing two rounded, calm shapes inside otherwise dense, jagged mark-making.\",\n    \"Deep red and black cover most of the field, with bursts of sky blue, gold, and white lines concentrating brightness around each face's eye area.\"\n  ],\n  \"reading\": \"Five open-mouthed faces crowd the picture plane, each ringed by spiky lines that read as agitation or alarm. The near-black ground presses them forward while white lines trace their features with quick, scratchy strokes. A lone pink flower and a yellow spiral sit above the central figure—small, rounded forms that feel oddly quiet against the surrounding noise. The image holds both menace and absurdity at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #181 and nnxyz nnotb #183. Where #181 isolates a single face on saturated yellow and #183 spreads figures across warm amber, #182 packs the most faces into the darkest ground of the three, making white line-work stand out sharply.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv\",\n      \"reason\": \"Both #182 and #183 arrange multiple open-mouthed figures side by side with spiky radiating lines around each head, but #183 uses a warm amber ground while #182 uses near-black, reversing the light-dark relationship.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF\",\n      \"reason\": \"nifty faces #7 shares the concentric-spiral eye construction and white-line face-building visible in #182's central figure, though #7 fills its ground with red rather than black.\"\n    }\n  ],\n  \"tags\": [\"multiple faces\", \"spiky radiating lines\", \"open mouths\", \"dark ground\", \"white line drawing\", \"isolated floral shape\"],\n  \"interpretiveTags\": [\"crowded\", \"agitated\", \"absurdist\"],\n  \"lookingQuestion\": \"Which of the five faces draws your eye first, and what specific lines or colors around it pull your attention there?\",\n  \"ambiguities\": [\n    \"The pink flower form could be read as a separate floating object or as a headdress element on the central figure; the image does not resolve this clearly.\",\n    \"Title order and recorded creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this cannot be generalized.\"\n  ],\n  \"reviewFindings\": [\n    \"All five faces, spiky radiating lines, near-black ground, pink flower, yellow spiral, sky blue and gold accents confirmed against the primary image; no invented forms found.\",\n    \"Comparison with QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv (#183) confirmed: multiple figures, spiky head-rings, warm amber ground visible in that image versus near-black in #182.\",\n    \"Comparison with QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF (nifty faces #7) confirmed: concentric-spiral eyes and white-line face construction visible in both; red ground in #7 versus black in #182 noted accurately.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaLdgsUDWGU63WbqUTuLWGAfh13C19vytraA72mqdb6yP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaLdgsUDWGU63WbqUTuLWGAfh13C19vytraA72mqdb6yP/image.png",
+        "imageSHA256": "287144fbddf9d70cbc9de01605f1c2a405855faaf22efd558c384ade4ee6d0db"
+      },
+      {
+        "artworkId": "Qmd56gRcqbjyHmK6rDpynuMZdDheHCZmaEFP4UPNdQ62So",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd56gRcqbjyHmK6rDpynuMZdDheHCZmaEFP4UPNdQ62So/image.png",
+        "imageSHA256": "ad9cc115bb96975d49320e9f40c0012e1c8ba1dddccecd1fae2713427164adfc"
+      },
+      {
+        "artworkId": "QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF/image.png",
+        "imageSHA256": "eb42ba3160ea0588f5dfd58fc2025eca09264fbe4fd6bd61e045ebd070cfa366"
+      },
+      {
+        "artworkId": "QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv/image.png",
+        "imageSHA256": "282ce0ee862f63a052f87f069a0acb48587321e03d60d227234b8a5e06b5a1f0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Five distinct open-mouthed faces are distributed across the canvas, each ringed by spiky radiating lines; the central figure is the largest and sits against a near-black ground.\", \"A pink six-petaled flower floats above the central figure, and a yellow spiral occupies the upper right, providing two isolated calm shapes inside otherwise dense, jagged mark-making.\", \"The palette layers deep red and black across most of the field, with bursts of sky blue, gold, and white lines cutting through, concentrating brightness around each face's eye area.\"], \"reading\": \"Five open-mouthed faces crowd the picture plane, each ringed by spiky lines that read as agitation or alarm. The near-black ground presses them forward while white lines trace their features with quick, scratchy strokes. A lone pink flower and a yellow spiral sit above the chaos—small, rounded forms that feel oddly quiet against the surrounding noise. The image holds both menace and absurdity at once.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #181 and nnxyz nnotb #183. Where #181 isolates a single face on saturated yellow and #183 spreads figures across warm amber, #182 packs the most faces into the darkest ground of the three, making the white line-work stand out sharply.\", \"connections\": [{\"targetArtworkId\": \"QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv\", \"reason\": \"Both #182 and #183 arrange multiple open-mouthed figures side by side with spiky radiating lines around each head, but #183 uses a warm amber ground while #182 uses near-black, reversing the light-dark relationship.\"}, {\"targetArtworkId\": \"QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF\", \"reason\": \"nifty faces #7 shares the concentric-spiral eye motif and white-line face construction visible in #182's central figure, though #7 fills its ground with red rather than black.\"}], \"tags\": [\"multiple faces\", \"spiky radiating lines\", \"open mouths\", \"dark ground\", \"white line drawing\", \"isolated floral shape\"], \"interpretiveTags\": [\"crowded\", \"agitated\", \"absurdist\"], \"lookingQuestion\": \"Which of the five faces draws your eye first, and what specific lines or colors around it pull your attention there?\", \"ambiguities\": [\"The pink flower form could be read as a separate floating object or as a headdress element on the central figure; the image does not resolve this clearly.\", \"Title order and recorded creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this cannot be generalized.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

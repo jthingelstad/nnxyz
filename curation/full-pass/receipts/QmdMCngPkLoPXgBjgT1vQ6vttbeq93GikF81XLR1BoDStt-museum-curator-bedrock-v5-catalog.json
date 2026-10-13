@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:04.474735-05:00",
+    "usage": {
+      "inputTokens": 6187,
+      "outputTokens": 781,
+      "totalTokens": 6968,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12628
+    },
+    "requestId": "9114bc3a-a506-4d87-abf5-3be23944c43b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded head-like form fills the center, built from overlapping white circular lines on a warm tan-gold ground, with two glowing cream-white ovals where eyes might be, emitting a horizontal light streak to the right.\",\n    \"Three thick gold vertical bars occupy the upper-right corner against a flat orange rectangle, while a broad dark-red horizontal bar cuts across the lower third of the composition.\",\n    \"On the left side, dense magenta and dark marks cluster around a small square shape, contrasting with looser pink, red, and white scribbled lines that layer across the whole surface.\"\n  ],\n  \"reading\": \"Two blank, blazing ovals anchor the center and push light outward in a flat beam, giving the layered head-form an almost blinded or broadcasting quality. The warm ground is interrupted by hard geometry—orange block, gold bars, red stripe—that reads as pressure against the softer circular scrawl. The magenta cluster on the left pulls attention away from the glow, suggesting unresolved tension rather than resolution.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #92 and nnxyz nnotb #94. Title order and recorded creation order align here. Where #92 strips the composition to a flat silhouette on a single-color field, #93 piles layers of line and color onto a complex ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco\",\n      \"reason\": \"nnxyz nnotb #94 shares the same glowing double-oval eye structure and outward light beam, but shifts the palette to deep greens and yellows and crowds the frame with a larger, darker surrounding form.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj\",\n      \"reason\": \"nnxyz rawblocks #26 also builds a head-like form from overlapping scribbled lines against a flat bold ground, but uses a deep red field and yellow dot eyes rather than the cream glow and tan ground seen here.\"\n    }\n  ],\n  \"tags\": [\n    \"circular overlapping lines\",\n    \"glowing oval forms\",\n    \"horizontal light beam\",\n    \"flat geometric color blocks\",\n    \"layered scribble surface\",\n    \"magenta accent cluster\"\n  ],\n  \"interpretiveTags\": [\n    \"broadcasting or blinded mood\",\n    \"tension between geometry and scrawl\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the two bright ovals at the center, the gold bars in the corner, or the magenta cluster on the left—and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The small square shape within the magenta cluster on the left is unclear; it may be a drawn object or an artifact of layered marks.\",\n    \"The collector's scrimshaw connection is a stated personal visual association, not a claim about the work's subject or making process.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt/image.png",
+        "imageSHA256": "3fc438063eeb938f5dd65a5331835825d5f4ca1bc2ef432ef7dbb059ebb1c123"
+      },
+      {
+        "artworkId": "QmRUNuNient93Ph1YVaLReExjBhRdBdwe3SqbRHVZ4za7k",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRUNuNient93Ph1YVaLReExjBhRdBdwe3SqbRHVZ4za7k/image.png",
+        "imageSHA256": "0b05f7ddadbe0c7324e87f4b9839f3194f4049c84091a6b1f9da0699d2a0e109"
+      },
+      {
+        "artworkId": "QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj/image.png",
+        "imageSHA256": "bc8a01343d30fc1108be79600ee2579114463a5e1fe53ac139948c6495ff1978"
+      },
+      {
+        "artworkId": "QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco/image.png",
+        "imageSHA256": "035fad10dd1c8e063c2be5966f1452e848d41c2faa2589a95a199237bc96d088"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:11.482069-05:00",
+    "usage": {
+      "inputTokens": 6990,
+      "outputTokens": 953,
+      "totalTokens": 7943,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6943
+    },
+    "requestId": "9dd78800-f682-4ee3-b74f-578ae7960d06",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded head-like form fills the center, built from overlapping white circular lines on a warm tan-gold ground, with two glowing cream-white ovals where eyes might be, emitting a horizontal light streak to the right.\",\n    \"Three thick gold vertical bars occupy the upper-right corner against a flat orange rectangle, while a broad dark-red horizontal bar cuts across the lower third of the composition.\",\n    \"On the left side, dense magenta and dark marks cluster around a small square shape, contrasting with looser pink, red, and white scribbled lines layered across the whole surface.\"\n  ],\n  \"reading\": \"Two blazing cream ovals anchor the center and push light outward in a flat horizontal beam, giving the layered head-form a blinded or broadcasting quality. The warm ground is interrupted by hard geometry—orange block, gold bars, red stripe—that reads as pressure against the softer circular scrawl. The magenta cluster on the left pulls attention away from the glow, leaving the composition unresolved rather than settled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #92 and nnxyz nnotb #94; title order and recorded creation order align here. Where #92 strips to a flat silhouette on a single-color field, #93 piles layers of line and color onto a complex, busy ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco\",\n      \"reason\": \"nnxyz nnotb #94 shares the same glowing double-oval eye structure and outward light beam, but shifts to deep greens and yellows and crowds the frame with a larger, darker surrounding form.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj\",\n      \"reason\": \"nnxyz rawblocks #26 also builds a head-like form from overlapping scribbled lines, but uses a deep red field and small yellow dot eyes rather than the cream glow and tan ground seen here.\"\n    }\n  ],\n  \"tags\": [\n    \"circular overlapping lines\",\n    \"glowing oval forms\",\n    \"horizontal light beam\",\n    \"flat geometric color blocks\",\n    \"layered scribble surface\",\n    \"magenta accent cluster\"\n  ],\n  \"interpretiveTags\": [\n    \"broadcasting or blinded mood\",\n    \"tension between geometry and scrawl\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the two bright ovals at the center, the gold bars in the corner, or the magenta cluster on the left—and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The small square shape within the magenta cluster on the left is unclear; it may be a drawn object or an artifact of layered marks.\",\n    \"The collector's scrimshaw connection is a stated personal visual association, not a claim about the work's subject or making process.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: cream ovals with light beam, gold bars on orange block upper-right, dark-red horizontal bar lower third, and magenta cluster left are all visible.\",\n    \"Both comparison connections verified against inspected images: #94 shows matching double-oval glow and beam in a darker green-yellow field; rawblocks #26 shows a head-like scribbled form on a deep red ground with small yellow dot eyes—contrast is accurate and specific.\",\n    \"Reading revised to remove 'almost' hedging and tighten to 58 words; no invented intent, biography, or technique added; 'unresolved rather than settled' replaces 'suggesting unresolved tension' to stay closer to visible result.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt/image.png",
+        "imageSHA256": "3fc438063eeb938f5dd65a5331835825d5f4ca1bc2ef432ef7dbb059ebb1c123"
+      },
+      {
+        "artworkId": "QmRUNuNient93Ph1YVaLReExjBhRdBdwe3SqbRHVZ4za7k",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRUNuNient93Ph1YVaLReExjBhRdBdwe3SqbRHVZ4za7k/image.png",
+        "imageSHA256": "0b05f7ddadbe0c7324e87f4b9839f3194f4049c84091a6b1f9da0699d2a0e109"
+      },
+      {
+        "artworkId": "QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj/image.png",
+        "imageSHA256": "bc8a01343d30fc1108be79600ee2579114463a5e1fe53ac139948c6495ff1978"
+      },
+      {
+        "artworkId": "QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco/image.png",
+        "imageSHA256": "035fad10dd1c8e063c2be5966f1452e848d41c2faa2589a95a199237bc96d088"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A rounded head-like form fills the center, built from overlapping white circular lines on a warm tan-gold ground, with two glowing cream-white ovals where eyes might be, emitting a horizontal light streak to the right.\", \"Three thick gold vertical bars occupy the upper-right corner against a flat orange rectangle, while a broad dark-red horizontal bar cuts across the lower third of the composition.\", \"On the left side, dense magenta and dark marks cluster around a small square shape, contrasting with looser pink, red, and white scribbled lines that layer across the whole surface.\"], \"reading\": \"Two blank, blazing ovals anchor the center and push light outward in a flat beam, giving the layered head-form an almost blinded or broadcasting quality. The warm ground is interrupted by hard geometry—orange block, gold bars, red stripe—that reads as pressure against the softer circular scrawl. The magenta cluster on the left pulls attention away from the glow, suggesting unresolved tension rather than resolution.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #92 and nnxyz nnotb #94. Title order and recorded creation order align here. Where #92 strips the composition to a flat silhouette on a single-color field, #93 piles layers of line and color onto a complex ground.\", \"connections\": [{\"targetArtworkId\": \"QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco\", \"reason\": \"nnxyz nnotb #94 shares the same glowing double-oval eye structure and outward light beam, but shifts the palette to deep greens and yellows and crowds the frame with a larger, darker surrounding form.\"}, {\"targetArtworkId\": \"QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj\", \"reason\": \"nnxyz rawblocks #26 also builds a head-like form from overlapping scribbled lines against a flat bold ground, but uses a deep red field and yellow dot eyes rather than the cream glow and tan ground seen here.\"}], \"tags\": [\"circular overlapping lines\", \"glowing oval forms\", \"horizontal light beam\", \"flat geometric color blocks\", \"layered scribble surface\", \"magenta accent cluster\"], \"interpretiveTags\": [\"broadcasting or blinded mood\", \"tension between geometry and scrawl\"], \"lookingQuestion\": \"Where does your eye settle first—on the two bright ovals at the center, the gold bars in the corner, or the magenta cluster on the left—and what does that path through the image feel like?\", \"ambiguities\": [\"The small square shape within the magenta cluster on the left is unclear; it may be a drawn object or an artifact of layered marks.\", \"The collector's scrimshaw connection is a stated personal visual association, not a claim about the work's subject or making process.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

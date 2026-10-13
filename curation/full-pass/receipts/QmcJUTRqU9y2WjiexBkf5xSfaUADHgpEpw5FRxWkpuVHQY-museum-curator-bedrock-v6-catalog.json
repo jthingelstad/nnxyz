@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:42.735382-05:00",
+    "usage": {
+      "inputTokens": 5370,
+      "outputTokens": 688,
+      "totalTokens": 6058,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 18380
+    },
+    "requestId": "4e1e63c6-9dd3-41ef-bfc1-796fc31d3b23",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A skull-like head dominates the composition, built from overlapping loops of red, purple, blue, and orange lines against a saturated yellow background.\",\n    \"The left eye socket contains a concentric spiral with a cross or peace-sign form in white and blue; the right eye is a tight black spiral ringed in red.\",\n    \"A row of pointed teeth spans the lower face, and loose chain-like blue loops run across the bottom, sitting above a blue and orange torso shape.\"\n  ],\n  \"reading\": \"Layered line loops construct a head that reads as both face and skull at once—exposed teeth grin below mismatched eyes, one marked with a symbol, the other a dark vortex. The hot yellow field pushes the tangled reds and greens forward, giving the image a feeling of loud, unresolved tension. Those chain-like forms at the bottom could suggest restraint or decoration, leaving the figure's mood ambiguous.\",\n  \"contextAngle\": \"In the owned Scrimshaw numbered family, this work sits between \\\"Scrimshaw4\\\" and \\\"Scrimshaw6.\\\" All three neighbors share skull-like heads built from rapid overlapping lines, but this piece stands out for its bright yellow ground and the symbolic marks inside the eye sockets.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D\",\n      \"reason\": \"Both show skull-like heads with spiral eyes and bared teeth, but Scrimshaw4 uses a cool blue field and heavier dark purple lines, making it feel more enclosed than this yellow-ground version.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB\",\n      \"reason\": \"Shares a yellow background and dense red zigzag lines; the nnxyz piece fragments its face into angular shards rather than rounded loops, showing how two artists handle similar palettes differently.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"spiral eyes\",\n    \"yellow ground\",\n    \"overlapping line layers\",\n    \"bared teeth\",\n    \"chain-link shapes\"\n  ],\n  \"lookingQuestion\": \"How do the two eyes differ in their internal marks, and what effect does that asymmetry have on where your gaze settles?\",\n  \"ambiguities\": [\n    \"The symbol inside the left eye could be read as a peace sign, a cross, or an abstract target—no single reading is confirmed by the image alone.\",\n    \"The blue chain-like loops at the bottom may be part of the figure or a separate element; their relationship to the head is unclear.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY/image.png",
+        "imageSHA256": "a2d236328a681914a143fcce7a333955b097277b0853c582ce0973c5391ef350"
+      },
+      {
+        "artworkId": "Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D/image.png",
+        "imageSHA256": "3181673ec0cafcc4f049052fbff2e8cad3a5bd6f2c8789864c7707fe4229f2d8"
+      },
+      {
+        "artworkId": "QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB/image.png",
+        "imageSHA256": "31a390e5e18405d706d0f8c49bf42e281965cf7de7252471a0a83136a31b503e"
+      },
+      {
+        "artworkId": "QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU/image.png",
+        "imageSHA256": "0cbae346fa04bfe60a8fc18a15c3d837a67856d8c4199cfbc70d3293e2cd0e94"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:53.951597-05:00",
+    "usage": {
+      "inputTokens": 6090,
+      "outputTokens": 780,
+      "totalTokens": 6870,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11148
+    },
+    "requestId": "9d0c28ca-3b6f-4a47-8bf2-71d57c8f5b17",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A skull-like head fills the frame, built from overlapping loops of red, purple, blue, and orange lines set against a saturated yellow background.\",\n    \"The left eye contains concentric rings with a cross-like mark in white and blue; the right eye is a tight black spiral ringed in red and brown.\",\n    \"A row of pointed teeth spans the lower face, and loose chain-like blue-gray loops run across the bottom above a blue and orange shape suggesting shoulders.\"\n  ],\n  \"reading\": \"Layered line loops construct a head that reads as both face and skull—exposed teeth grin below mismatched eyes, one marked with a symbol, the other a dark vortex. The hot yellow field pushes tangled reds and greens forward, producing a feeling of loud, unresolved tension. Chain-like forms at the bottom could suggest restraint or ornament, leaving the figure's mood open.\",\n  \"contextAngle\": \"In the owned Scrimshaw numbered family, this work sits between \\\"Scrimshaw4\\\" and \\\"Scrimshaw6.\\\" All three neighbors share skull-like heads from rapid overlapping lines, but this piece stands apart with its bright yellow ground and distinct symbolic marks inside the eye sockets.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D\",\n      \"reason\": \"Both show skull-like heads with spiral eyes and bared teeth, but Scrimshaw4 uses a cool blue field and heavier dark purple lines, feeling more enclosed than this yellow-ground version.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB\",\n      \"reason\": \"Shares a yellow background and dense red zigzag lines; the nnxyz piece fragments its face into angular shards rather than rounded loops, showing different handling of a similar palette.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"spiral eyes\",\n    \"yellow ground\",\n    \"overlapping line layers\",\n    \"bared teeth\",\n    \"chain-link shapes\"\n  ],\n  \"lookingQuestion\": \"How do the two eyes differ in their internal marks, and what effect does that asymmetry have on where your gaze settles?\",\n  \"ambiguities\": [\n    \"The symbol inside the left eye could be read as a peace sign, a cross, or an abstract target—no single reading is confirmed by the image alone.\",\n    \"The blue-gray chain-like loops at the bottom may be part of the figure or a separate element; their relationship to the head is unclear.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed right eye spiral is black with red and brown rings, not solely red; corrected observation wording.\",\n    \"Confirmed chain-like loops are blue-gray rather than pure blue; adjusted observation and ambiguity note.\",\n    \"Verified nnxyz comparison: both share yellow ground and red zigzag lines; nnxyz face is angular/fragmented versus rounded loops here—comparison holds.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY/image.png",
+        "imageSHA256": "a2d236328a681914a143fcce7a333955b097277b0853c582ce0973c5391ef350"
+      },
+      {
+        "artworkId": "Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D/image.png",
+        "imageSHA256": "3181673ec0cafcc4f049052fbff2e8cad3a5bd6f2c8789864c7707fe4229f2d8"
+      },
+      {
+        "artworkId": "QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB/image.png",
+        "imageSHA256": "31a390e5e18405d706d0f8c49bf42e281965cf7de7252471a0a83136a31b503e"
+      },
+      {
+        "artworkId": "QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU/image.png",
+        "imageSHA256": "0cbae346fa04bfe60a8fc18a15c3d837a67856d8c4199cfbc70d3293e2cd0e94"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A skull-like head dominates the composition, built from overlapping loops of red, purple, blue, and orange lines against a saturated yellow background.\", \"The left eye socket contains a concentric spiral with a cross or peace-sign form in white and blue; the right eye is a tight black spiral ringed in red.\", \"A row of pointed teeth spans the lower face, and loose chain-like blue loops run across the bottom, sitting above a blue and orange torso shape.\"], \"reading\": \"Layered line loops construct a head that reads as both face and skull at once—exposed teeth grin below mismatched eyes, one marked with a symbol, the other a dark vortex. The hot yellow field pushes the tangled reds and greens forward, giving the image a feeling of loud, unresolved tension. Those chain-like forms at the bottom could suggest restraint or decoration, leaving the figure's mood ambiguous.\", \"contextAngle\": \"In the owned Scrimshaw numbered family, this work sits between \\\"Scrimshaw4\\\" and \\\"Scrimshaw6.\\\" All three neighbors share skull-like heads built from rapid overlapping lines, but this piece stands out for its bright yellow ground and the symbolic marks inside the eye sockets.\", \"connections\": [{\"targetArtworkId\": \"Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D\", \"reason\": \"Both show skull-like heads with spiral eyes and bared teeth, but Scrimshaw4 uses a cool blue field and heavier dark purple lines, making it feel more enclosed than this yellow-ground version.\"}, {\"targetArtworkId\": \"QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB\", \"reason\": \"Shares a yellow background and dense red zigzag lines; the nnxyz piece fragments its face into angular shards rather than rounded loops, showing how two artists handle similar palettes differently.\"}], \"tags\": [\"skull form\", \"spiral eyes\", \"yellow ground\", \"overlapping line layers\", \"bared teeth\", \"chain-link shapes\"], \"lookingQuestion\": \"How do the two eyes differ in their internal marks, and what effect does that asymmetry have on where your gaze settles?\", \"ambiguities\": [\"The symbol inside the left eye could be read as a peace sign, a cross, or an abstract target—no single reading is confirmed by the image alone.\", \"The blue chain-like loops at the bottom may be part of the figure or a separate element; their relationship to the head is unclear.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

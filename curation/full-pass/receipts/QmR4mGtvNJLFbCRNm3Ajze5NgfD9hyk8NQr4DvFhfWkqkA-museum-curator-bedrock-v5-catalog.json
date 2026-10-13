@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:12.192282-05:00",
+    "usage": {
+      "inputTokens": 5914,
+      "outputTokens": 644,
+      "totalTokens": 6558,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10411
+    },
+    "requestId": "c11a87cb-e22b-4947-9d5b-21329f5227c9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A figure stands slightly left of center, arm raised so that a pale forearm crosses in front of a large dark mass that fills the upper half of the image, obscuring where a head would be.\",\n    \"Red scribbled lines run through and around the dark mass, sitting on top of deeper black and brown tones; the figure wears a yellow-green top and blue lower garment.\",\n    \"The background is entirely saturated yellow-orange, built from overlapping broad vertical strokes that press in from both sides, leaving a darker shadow zone directly behind the figure.\"\n  ],\n  \"reading\": \"The raised arm blocks the face completely, so the figure reads as closed-off rather than confrontational. Yellow-orange presses in from every edge, bright and insistent, while the dark mass above absorbs that light. The red scribble lines feel agitated against the stillness of the pale arm. That tension—warmth surrounding withdrawal—gives the image its pull.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #136 and nnotb #138 in both title order and recorded creation order. Where #136 fills its surface with dense, high-contrast line work and many colors, #137 strips back to three dominant zones: yellow surround, dark mass, pale limb.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaXNbtj31aCEpdmhhY2uDnRQnG7TCTpW4A98m2ZRv3VYz\",\n      \"reason\": \"nnotb #138 shares the same structure of a single figure centered against a dark background with warm color pressing in from the sides, though its scribbled marks are black rather than red and the figure faces outward rather than turning away.\"\n    }\n  ],\n  \"tags\": [\n    \"figure with obscured face\",\n    \"raised arm crossing body\",\n    \"red scribble lines on dark mass\",\n    \"saturated yellow-orange background\",\n    \"high contrast warm-dark opposition\",\n    \"isolated single figure\"\n  ],\n  \"interpretiveTags\": [\n    \"withdrawal\",\n    \"tension between warmth and enclosure\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the pale arm meet the dark mass above it, and what happens to the red lines at that boundary?\",\n  \"ambiguities\": [\n    \"The dark form above the figure's shoulders is ambiguous—it reads as hair or a large organic mass but cannot be confirmed from the image alone.\",\n    \"nnotb #136 shares title-neighbor and recorded-creation-neighbor status but its visual language is so different that no strong formal connection was found; it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA/image.png",
+        "imageSHA256": "180b62b11144efd72983f44cb98af94ac2b0e4e31f3959534580ec71f6dfc752"
+      },
+      {
+        "artworkId": "QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj/image.png",
+        "imageSHA256": "c1af397d412424fb83bb5937458a1af76fdf9c51056294b37a4b8e38e5f8973a"
+      },
+      {
+        "artworkId": "Qmegoi6JQN84Ws2juuU6m7V5rvbgj2peWGpbKgm8m97ZNh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmegoi6JQN84Ws2juuU6m7V5rvbgj2peWGpbKgm8m97ZNh/image.png",
+        "imageSHA256": "3e2e6e81e3de14b574f93da344332b279b8124b41c4427053b2cff1c5e04d17f"
+      },
+      {
+        "artworkId": "QmaXNbtj31aCEpdmhhY2uDnRQnG7TCTpW4A98m2ZRv3VYz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaXNbtj31aCEpdmhhY2uDnRQnG7TCTpW4A98m2ZRv3VYz/image.png",
+        "imageSHA256": "f76fea5f10d12f1ec5ebde66ae7396fe49567bff658c5823a3bb946a758606ed"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:18.260806-05:00",
+    "usage": {
+      "inputTokens": 6589,
+      "outputTokens": 765,
+      "totalTokens": 7354,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5996
+    },
+    "requestId": "61584fbb-1360-4593-b84e-60fe9bbf078d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A figure stands slightly left of center, one pale forearm raised to cross in front of a large dark mass that fills the upper half of the image, covering where a head would be.\",\n    \"Red scribbled lines run through and around the dark mass over deeper black and brown tones; the figure wears a yellow-green top and blue lower garment.\",\n    \"The background is saturated yellow-orange, built from overlapping broad vertical strokes pressing in from both sides, with a darker shadow zone directly behind the figure.\"\n  ],\n  \"reading\": \"The raised arm blocks the face entirely, so the figure reads as closed-off rather than confrontational. Yellow-orange presses in from every edge, bright and insistent, while the dark mass above absorbs that light. The red scribble lines feel agitated against the stillness of the pale arm. That tension—warmth surrounding withdrawal—gives the image its pull.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #136 and nnotb #138 in both title order and recorded creation order. Where #136 fills its surface with dense, high-contrast line work and many colors, #137 reduces to three dominant zones: yellow surround, dark mass, pale limb.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaXNbtj31aCEpdmhhY2uDnRQnG7TCTpW4A98m2ZRv3VYz\",\n      \"reason\": \"nnotb #138 shares a single figure centered against a dark background with warm color pressing in from the sides, though its scribbled marks are black rather than red and the figure faces outward rather than turning away.\"\n    }\n  ],\n  \"tags\": [\n    \"figure with obscured face\",\n    \"raised arm crossing body\",\n    \"red scribble lines on dark mass\",\n    \"saturated yellow-orange background\",\n    \"high contrast warm-dark opposition\",\n    \"isolated single figure\"\n  ],\n  \"interpretiveTags\": [\"withdrawal\", \"tension between warmth and enclosure\"],\n  \"lookingQuestion\": \"Where exactly does the pale arm meet the dark mass above it, and what happens to the red lines at that boundary?\",\n  \"ambiguities\": [\n    \"The dark form above the figure's shoulders is ambiguous—it reads as hair or a large organic mass but cannot be confirmed from the image alone.\",\n    \"nnotb #136 shares title-neighbor and recorded-creation-neighbor status but its visual language is so different that no strong formal connection was found; it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: pale forearm, red scribble lines over dark mass, yellow-orange vertical-stroke background with shadow zone behind figure.\",\n    \"nnotb #138 comparison confirmed: single centered figure, warm color flanking a dark background, black rather than red scribble marks, figure orientation differs—connection retained as meaningful contrast.\",\n    \"No invented biography, intent, technique, or unsupported subject identity found in draft; word counts for reading (63 words) and contextAngle (52 words) fall within limits; no material corrections required.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA/image.png",
+        "imageSHA256": "180b62b11144efd72983f44cb98af94ac2b0e4e31f3959534580ec71f6dfc752"
+      },
+      {
+        "artworkId": "QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj/image.png",
+        "imageSHA256": "c1af397d412424fb83bb5937458a1af76fdf9c51056294b37a4b8e38e5f8973a"
+      },
+      {
+        "artworkId": "Qmegoi6JQN84Ws2juuU6m7V5rvbgj2peWGpbKgm8m97ZNh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmegoi6JQN84Ws2juuU6m7V5rvbgj2peWGpbKgm8m97ZNh/image.png",
+        "imageSHA256": "3e2e6e81e3de14b574f93da344332b279b8124b41c4427053b2cff1c5e04d17f"
+      },
+      {
+        "artworkId": "QmaXNbtj31aCEpdmhhY2uDnRQnG7TCTpW4A98m2ZRv3VYz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaXNbtj31aCEpdmhhY2uDnRQnG7TCTpW4A98m2ZRv3VYz/image.png",
+        "imageSHA256": "f76fea5f10d12f1ec5ebde66ae7396fe49567bff658c5823a3bb946a758606ed"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A figure stands slightly left of center, arm raised so that a pale forearm crosses in front of a large dark mass that fills the upper half of the image, obscuring where a head would be.\", \"Red scribbled lines run through and around the dark mass, sitting on top of deeper black and brown tones; the figure wears a yellow-green top and blue lower garment.\", \"The background is entirely saturated yellow-orange, built from overlapping broad vertical strokes that press in from both sides, leaving a darker shadow zone directly behind the figure.\"], \"reading\": \"The raised arm blocks the face completely, so the figure reads as closed-off rather than confrontational. Yellow-orange presses in from every edge, bright and insistent, while the dark mass above absorbs that light. The red scribble lines feel agitated against the stillness of the pale arm. That tension—warmth surrounding withdrawal—gives the image its pull.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #136 and nnotb #138 in both title order and recorded creation order. Where #136 fills its surface with dense, high-contrast line work and many colors, #137 strips back to three dominant zones: yellow surround, dark mass, pale limb.\", \"connections\": [{\"targetArtworkId\": \"QmaXNbtj31aCEpdmhhY2uDnRQnG7TCTpW4A98m2ZRv3VYz\", \"reason\": \"nnotb #138 shares the same structure of a single figure centered against a dark background with warm color pressing in from the sides, though its scribbled marks are black rather than red and the figure faces outward rather than turning away.\"}], \"tags\": [\"figure with obscured face\", \"raised arm crossing body\", \"red scribble lines on dark mass\", \"saturated yellow-orange background\", \"high contrast warm-dark opposition\", \"isolated single figure\"], \"interpretiveTags\": [\"withdrawal\", \"tension between warmth and enclosure\"], \"lookingQuestion\": \"Where exactly does the pale arm meet the dark mass above it, and what happens to the red lines at that boundary?\", \"ambiguities\": [\"The dark form above the figure's shoulders is ambiguous—it reads as hair or a large organic mass but cannot be confirmed from the image alone.\", \"nnotb #136 shares title-neighbor and recorded-creation-neighbor status but its visual language is so different that no strong formal connection was found; it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

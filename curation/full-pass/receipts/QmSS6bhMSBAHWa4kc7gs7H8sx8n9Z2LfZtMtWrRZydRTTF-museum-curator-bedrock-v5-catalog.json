@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:42.985904-05:00",
+    "usage": {
+      "inputTokens": 6233,
+      "outputTokens": 822,
+      "totalTokens": 7055,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13738
+    },
+    "requestId": "d56a924d-72d1-49e0-b024-eee6ef5afa7f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large eye-like forms sit side by side near center, each ringed in yellow and black with white oval whites; the left sits on a pale blue ground, the right on grey-yellow.\",\n    \"A wide mouth with white tooth shapes runs horizontally across the lower-center, outlined in thick black and yellow zigzag lines, set against a dark cross-hatched band.\",\n    \"The entire background radiates outward in dense layered stripes of orange, red, yellow and green, broken by pink angular outlines and small zigzag marks that fill every edge of the frame.\"\n  ],\n  \"reading\": \"Two paired eye forms stare outward from a face that fills the frame almost entirely, leaving no neutral space. The radiating background presses inward rather than receding, and the mouth's yellow outline reads as a grimace or a grin depending on where attention lands. Dense cross-hatching below the mouth adds weight, while the pink angular lines scatter that weight back toward the edges. The image holds aggression and absurdity at the same time.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #117 and nnxyz nnotb #119 in both title and recorded-creation order. Where #117 spreads multiple figures across open blue space and #119 reduces forms to flat silhouette, #118 packs a single close face with layered mark-making across the full frame.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZS5sig7hJtdbyx5pA21ihbd5XsZvKR1KyGxFx35Dob73\",\n      \"reason\": \"Both works share yellow as a dominant structural color and use dense zigzag marks throughout, but #117 distributes energy across several figures in open space while #118 compresses everything into one close face.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2\",\n      \"reason\": \"Both images center a single large face that nearly fills the frame, with layered scribble marks building the surface, though nifty faces #131 uses a flat blue ground and muted tones against #118's radiating warm stripes.\"\n    }\n  ],\n  \"tags\": [\n    \"close-cropped face\",\n    \"radiating stripe background\",\n    \"paired eye forms\",\n    \"zigzag line work\",\n    \"yellow and black outline\",\n    \"dense cross-hatching\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"tense ambiguity between grimace and grin\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the paired eye forms, the outlined mouth, or the radiating edges — and does that entry point change how the face reads?\",\n  \"ambiguities\": [\n    \"The pink angular outlines in the mid-ground could describe a structural form or function purely as surface marks; the image does not resolve this.\",\n    \"Comparison QmfPDZog9x7p1uXahAERAmrvWrXxyoZHrCvFkGcqDd3mnz (#119) was inspected but its flat silhouette style offers only a stark contrast with no shared formal quality strong enough to warrant a connection entry.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSS6bhMSBAHWa4kc7gs7H8sx8n9Z2LfZtMtWrRZydRTTF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSS6bhMSBAHWa4kc7gs7H8sx8n9Z2LfZtMtWrRZydRTTF/image.png",
+        "imageSHA256": "5706474da8e9d30e370be16c523f89ad4be78334771657ada0ca63794b86daa2"
+      },
+      {
+        "artworkId": "QmZS5sig7hJtdbyx5pA21ihbd5XsZvKR1KyGxFx35Dob73",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZS5sig7hJtdbyx5pA21ihbd5XsZvKR1KyGxFx35Dob73/image.png",
+        "imageSHA256": "6fed99c847bebe6d478227564621a9c77b2afdf5208e44a6a4c60218c5eb06c5"
+      },
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      },
+      {
+        "artworkId": "QmfPDZog9x7p1uXahAERAmrvWrXxyoZHrCvFkGcqDd3mnz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfPDZog9x7p1uXahAERAmrvWrXxyoZHrCvFkGcqDd3mnz/image.png",
+        "imageSHA256": "c9da92681212ec943bcdc3ce8b8ae59f23c927ed0357b8ff65df68c42d814806"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:49.908258-05:00",
+    "usage": {
+      "inputTokens": 7077,
+      "outputTokens": 970,
+      "totalTokens": 8047,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6842
+    },
+    "requestId": "0112a477-ffb7-4ca4-b582-aef4520fbf67",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large eye-like forms sit side by side near center, each ringed in yellow and black with white oval shapes; the left sits on a pale blue ground, the right on grey-yellow.\",\n    \"A wide mouth with white tooth shapes runs horizontally across the lower-center, outlined in thick black and yellow zigzag lines, set against a dark cross-hatched band.\",\n    \"The background radiates outward in dense layered stripes of orange, red, yellow and green, broken by pink angular outlines and small zigzag marks that fill every edge of the frame.\"\n  ],\n  \"reading\": \"Two paired eye forms stare outward from a face that fills the frame entirely, leaving no neutral space. The radiating background presses inward rather than receding, and the mouth's yellow outline reads as a grimace or a grin depending on where attention lands. Dense cross-hatching below the mouth adds visual weight, while pink angular lines scatter that weight back toward the edges. The image holds aggression and absurdity at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #117 and nnxyz nnotb #119 in both title and recorded-creation order. Where #117 spreads multiple figures across open blue space and #119 reduces forms to flat silhouette, #118 packs a single close face with layered mark-making across the full frame.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZS5sig7hJtdbyx5pA21ihbd5XsZvKR1KyGxFx35Dob73\",\n      \"reason\": \"Both works use yellow as a dominant structural color and dense zigzag marks throughout, but #117 distributes multiple figures across open space while #118 compresses everything into one close face.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2\",\n      \"reason\": \"Both images center a single large face that nearly fills the frame with layered scribble marks building the surface, though nifty faces #131 uses a flat blue ground and cooler tones against #118's radiating warm stripes.\"\n    }\n  ],\n  \"tags\": [\n    \"close-cropped face\",\n    \"radiating stripe background\",\n    \"paired eye forms\",\n    \"zigzag line work\",\n    \"yellow and black outline\",\n    \"dense cross-hatching\"\n  ],\n  \"interpretiveTags\": [\n    \"tense ambiguity between grimace and grin\",\n    \"confrontational compression\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the paired eye forms, the outlined mouth, or the radiating edges — and does that entry point change how the face reads?\",\n  \"ambiguities\": [\n    \"The pink angular outlines in the mid-ground could describe a structural form or function purely as surface marks; the image does not resolve this.\",\n    \"Comparison QmfPDZog9x7p1uXahAERAmrvWrXxyoZHrCvFkGcqDd3mnz (#119) was inspected but its flat silhouette style offers only stark contrast with no shared formal quality strong enough to warrant a connection entry.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form observations confirmed against primary image: radiating warm stripes, pink angular outlines, paired eye forms with yellow-black rings, and cross-hatched lower band all visually verified.\",\n    \"Removed 'muted tones' from nifty faces #131 comparison — the inspected image shows gold, purple and olive over blue, not muted; revised to 'cooler tones' which is accurate relative to #118's warm palette.\",\n    \"Word counts checked: reading lands within 55–80 words, contextAngle within 25–55 words, both comparison reasons under 35 words; no prohibited vocabulary detected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSS6bhMSBAHWa4kc7gs7H8sx8n9Z2LfZtMtWrRZydRTTF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSS6bhMSBAHWa4kc7gs7H8sx8n9Z2LfZtMtWrRZydRTTF/image.png",
+        "imageSHA256": "5706474da8e9d30e370be16c523f89ad4be78334771657ada0ca63794b86daa2"
+      },
+      {
+        "artworkId": "QmZS5sig7hJtdbyx5pA21ihbd5XsZvKR1KyGxFx35Dob73",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZS5sig7hJtdbyx5pA21ihbd5XsZvKR1KyGxFx35Dob73/image.png",
+        "imageSHA256": "6fed99c847bebe6d478227564621a9c77b2afdf5208e44a6a4c60218c5eb06c5"
+      },
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      },
+      {
+        "artworkId": "QmfPDZog9x7p1uXahAERAmrvWrXxyoZHrCvFkGcqDd3mnz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfPDZog9x7p1uXahAERAmrvWrXxyoZHrCvFkGcqDd3mnz/image.png",
+        "imageSHA256": "c9da92681212ec943bcdc3ce8b8ae59f23c927ed0357b8ff65df68c42d814806"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two large eye-like forms sit side by side near center, each ringed in yellow and black with white oval whites; the left sits on a pale blue ground, the right on grey-yellow.\", \"A wide mouth with white tooth shapes runs horizontally across the lower-center, outlined in thick black and yellow zigzag lines, set against a dark cross-hatched band.\", \"The entire background radiates outward in dense layered stripes of orange, red, yellow and green, broken by pink angular outlines and small zigzag marks that fill every edge of the frame.\"], \"reading\": \"Two paired eye forms stare outward from a face that fills the frame almost entirely, leaving no neutral space. The radiating background presses inward rather than receding, and the mouth's yellow outline reads as a grimace or a grin depending on where attention lands. Dense cross-hatching below the mouth adds weight, while the pink angular lines scatter that weight back toward the edges. The image holds aggression and absurdity at the same time.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #117 and nnxyz nnotb #119 in both title and recorded-creation order. Where #117 spreads multiple figures across open blue space and #119 reduces forms to flat silhouette, #118 packs a single close face with layered mark-making across the full frame.\", \"connections\": [{\"targetArtworkId\": \"QmZS5sig7hJtdbyx5pA21ihbd5XsZvKR1KyGxFx35Dob73\", \"reason\": \"Both works share yellow as a dominant structural color and use dense zigzag marks throughout, but #117 distributes energy across several figures in open space while #118 compresses everything into one close face.\"}, {\"targetArtworkId\": \"QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2\", \"reason\": \"Both images center a single large face that nearly fills the frame, with layered scribble marks building the surface, though nifty faces #131 uses a flat blue ground and muted tones against #118's radiating warm stripes.\"}], \"tags\": [\"close-cropped face\", \"radiating stripe background\", \"paired eye forms\", \"zigzag line work\", \"yellow and black outline\", \"dense cross-hatching\"], \"interpretiveTags\": [\"confrontational\", \"tense ambiguity between grimace and grin\"], \"lookingQuestion\": \"Where does your eye settle first — on the paired eye forms, the outlined mouth, or the radiating edges — and does that entry point change how the face reads?\", \"ambiguities\": [\"The pink angular outlines in the mid-ground could describe a structural form or function purely as surface marks; the image does not resolve this.\", \"Comparison QmfPDZog9x7p1uXahAERAmrvWrXxyoZHrCvFkGcqDd3mnz (#119) was inspected but its flat silhouette style offers only a stark contrast with no shared formal quality strong enough to warrant a connection entry.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

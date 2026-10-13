@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:04.079858-05:00",
+    "usage": {
+      "inputTokens": 6117,
+      "outputTokens": 809,
+      "totalTokens": 6926,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13741
+    },
+    "requestId": "78d3fcaf-9b79-4d26-99a1-e367c391e51a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large open-jawed form fills the canvas center, with a row of white tooth-like shapes running across the lower third against a dark interior void.\",\n    \"Two circular eye zones sit in the upper half, each built from layered yellow, teal, and red looping lines over a dark olive-brown background.\",\n    \"Thick black arcing lines sweep outward from the form's edges, while loose multicolor scribbles in pink, teal, orange, and red layer densely across the body.\"\n  ],\n  \"reading\": \"The wide-open jaw and staring eye zones give the image a raw, confrontational charge. White teeth anchor the lower field while the surrounding scribble-work in pink, teal, and orange keeps the surface restless. The dark background holds the form in place even as the loose lines push outward. The overall feeling is one of barely contained force rather than settled calm.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #201 and nnxyz nnotb #203. Where #201 uses a cooler grey ground and a more closed, downward-facing form, #202 opens the jaw wide and shifts to a warmer olive ground with higher color density.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSLsGfSZqJ9TYt4sQXXJ5gEWzjn55pp1AsYNqfDZNy6cp\",\n      \"reason\": \"Both works center a large animal-like head with layered scribble lines over a muted ground, but #201 keeps the mouth closed and the palette cooler, making the open jaw and warmer tones of #202 a direct contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu\",\n      \"reason\": \"Both #202 and #203 show a wide grinning mouth with visible white teeth as a focal anchor, though #203 pulls back to show a fuller figure on a brown ground while #202 fills the frame with the head alone.\"\n    }\n  ],\n  \"tags\": [\n    \"open jaw\",\n    \"circular eye forms\",\n    \"white tooth row\",\n    \"dense layered scribble\",\n    \"olive-brown ground\",\n    \"outward-sweeping black arcs\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"barely contained force\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the white tooth row at the bottom, the looping eye zones above, or the black arcs at the edges — and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The form reads as an animal head, but the layered scribble work obscures whether specific anatomical features are present or constructed purely from line.\",\n    \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg (nifty faces #0000) was inspected but shows a geometric, architectural composition with no comparable jaw or eye structure, so no meaningful formal connection was found and it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXJvtFj5TUcVDrmZx8v2VPH4RdXR21woKdfscRQz1U21U",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXJvtFj5TUcVDrmZx8v2VPH4RdXR21woKdfscRQz1U21U/image.png",
+        "imageSHA256": "7f1ddada431989cccd963646343b0230773640b17ff5b345c91d2a240d96ff37"
+      },
+      {
+        "artworkId": "QmSLsGfSZqJ9TYt4sQXXJ5gEWzjn55pp1AsYNqfDZNy6cp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSLsGfSZqJ9TYt4sQXXJ5gEWzjn55pp1AsYNqfDZNy6cp/image.png",
+        "imageSHA256": "00647eb328b15a1e0802e9140ce061f794303280a4470eb96d325371dea9e9db"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu/image.png",
+        "imageSHA256": "620f21d489fc3496e55b53796fca78237904ff7d31e4f6fd717c1c92c36eb5ca"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:10.854575-05:00",
+    "usage": {
+      "inputTokens": 6948,
+      "outputTokens": 942,
+      "totalTokens": 7890,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6436
+    },
+    "requestId": "bdd1e74c-9f11-4083-9b64-c81d81802443",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large open-jawed form fills the canvas center, with a row of white tooth-like shapes running across the lower third against a dark interior void.\",\n    \"Two circular eye zones sit in the upper half, each built from layered yellow, teal, and red looping lines over a dark olive-brown background.\",\n    \"Thick black arcing lines sweep outward from the form's edges, while loose multicolor scribbles in pink, teal, orange, and red layer densely across the body.\"\n  ],\n  \"reading\": \"The wide-open jaw and staring eye zones give the image a raw, confrontational charge. White teeth anchor the lower field while the surrounding scribble-work in pink, teal, and orange keeps the surface restless. The dark background holds the form in place even as the loose lines push outward. The overall feeling is one of barely contained force rather than settled calm.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #201 and nnxyz nnotb #203. Where #201 uses a cooler grey ground and a more closed, downward-facing form, #202 opens the jaw wide and shifts to a warmer olive ground with higher color density.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSLsGfSZqJ9TYt4sQXXJ5gEWzjn55pp1AsYNqfDZNy6cp\",\n      \"reason\": \"Both works center a large animal-like head with layered scribble lines over a muted ground, but #201 keeps the mouth nearly closed and the palette cooler, making the open jaw and warmer tones of #202 a direct contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu\",\n      \"reason\": \"Both #202 and #203 show a wide grinning mouth with visible white teeth as a focal anchor, though #203 pulls back to show a fuller figure on a brown ground while #202 fills the frame with the head alone.\"\n    }\n  ],\n  \"tags\": [\n    \"open jaw\",\n    \"circular eye forms\",\n    \"white tooth row\",\n    \"dense layered scribble\",\n    \"olive-brown ground\",\n    \"outward-sweeping black arcs\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"barely contained force\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the white tooth row at the bottom, the looping eye zones above, or the black arcs at the edges — and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The form reads as an animal head, but the layered scribble work obscures whether specific anatomical features are present or constructed purely from line.\",\n    \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg (nifty faces #0000) was inspected but shows a geometric, architectural composition with no comparable jaw or eye structure, so no meaningful formal connection was found and it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: white tooth row, yellow/teal/red eye zones, and pink/teal/orange/red scribble body are all visibly present.\",\n    \"#201 comparison confirmed: grey ground and downward-facing, more closed mouth contrast clearly with #202's olive ground and open jaw; reason statement is accurate.\",\n    \"#203 comparison confirmed: white teeth row and grinning mouth are visible in both images; figure-versus-head-fill distinction is accurate; no invented claims found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXJvtFj5TUcVDrmZx8v2VPH4RdXR21woKdfscRQz1U21U",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXJvtFj5TUcVDrmZx8v2VPH4RdXR21woKdfscRQz1U21U/image.png",
+        "imageSHA256": "7f1ddada431989cccd963646343b0230773640b17ff5b345c91d2a240d96ff37"
+      },
+      {
+        "artworkId": "QmSLsGfSZqJ9TYt4sQXXJ5gEWzjn55pp1AsYNqfDZNy6cp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSLsGfSZqJ9TYt4sQXXJ5gEWzjn55pp1AsYNqfDZNy6cp/image.png",
+        "imageSHA256": "00647eb328b15a1e0802e9140ce061f794303280a4470eb96d325371dea9e9db"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu/image.png",
+        "imageSHA256": "620f21d489fc3496e55b53796fca78237904ff7d31e4f6fd717c1c92c36eb5ca"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large open-jawed form fills the canvas center, with a row of white tooth-like shapes running across the lower third against a dark interior void.\", \"Two circular eye zones sit in the upper half, each built from layered yellow, teal, and red looping lines over a dark olive-brown background.\", \"Thick black arcing lines sweep outward from the form's edges, while loose multicolor scribbles in pink, teal, orange, and red layer densely across the body.\"], \"reading\": \"The wide-open jaw and staring eye zones give the image a raw, confrontational charge. White teeth anchor the lower field while the surrounding scribble-work in pink, teal, and orange keeps the surface restless. The dark background holds the form in place even as the loose lines push outward. The overall feeling is one of barely contained force rather than settled calm.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #201 and nnxyz nnotb #203. Where #201 uses a cooler grey ground and a more closed, downward-facing form, #202 opens the jaw wide and shifts to a warmer olive ground with higher color density.\", \"connections\": [{\"targetArtworkId\": \"QmSLsGfSZqJ9TYt4sQXXJ5gEWzjn55pp1AsYNqfDZNy6cp\", \"reason\": \"Both works center a large animal-like head with layered scribble lines over a muted ground, but #201 keeps the mouth closed and the palette cooler, making the open jaw and warmer tones of #202 a direct contrast.\"}, {\"targetArtworkId\": \"QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu\", \"reason\": \"Both #202 and #203 show a wide grinning mouth with visible white teeth as a focal anchor, though #203 pulls back to show a fuller figure on a brown ground while #202 fills the frame with the head alone.\"}], \"tags\": [\"open jaw\", \"circular eye forms\", \"white tooth row\", \"dense layered scribble\", \"olive-brown ground\", \"outward-sweeping black arcs\"], \"interpretiveTags\": [\"confrontational\", \"barely contained force\"], \"lookingQuestion\": \"Where does your eye settle first — on the white tooth row at the bottom, the looping eye zones above, or the black arcs at the edges — and what does that path through the image feel like?\", \"ambiguities\": [\"The form reads as an animal head, but the layered scribble work obscures whether specific anatomical features are present or constructed purely from line.\", \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg (nifty faces #0000) was inspected but shows a geometric, architectural composition with no comparable jaw or eye structure, so no meaningful formal connection was found and it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:29.483745-05:00",
+    "usage": {
+      "inputTokens": 6723,
+      "outputTokens": 906,
+      "totalTokens": 7629,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6601
+    },
+    "requestId": "49c14990-a0ec-4c11-9a5f-59cc6dc19baa",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large jaw-like form fills the canvas center, with a row of white tooth-shaped marks running across the lower third against a dark interior void.\",\n    \"Two circular eye zones sit in the upper half, each built from layered yellow, teal, and red looping lines over a dark olive-brown background.\",\n    \"Thick black arcing lines sweep outward from the form's edges, while loose multicolor scribbles in pink, teal, orange, and red layer densely across the body.\"\n  ],\n  \"reading\": \"The exposed tooth row and staring eye zones give the image a raw, confrontational charge. White marks anchor the lower field while the surrounding scribble-work in pink, teal, and orange keeps the surface restless. The dark background holds the form in place even as the loose lines push outward. The overall feeling is one of barely contained force rather than settled calm.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #201 and nnxyz nnotb #203. Where #201 uses a cooler grey ground and a more closed, downward-facing form, #202 shifts to a warmer olive ground with higher color density.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSLsGfSZqJ9TYt4sQXXJ5gEWzjn55pp1AsYNqfDZNy6cp\",\n      \"reason\": \"Both works center a large animal-like head with layered scribble lines over a muted ground, but #201 keeps the mouth nearly closed and the palette cooler, making the exposed tooth row and warmer tones of #202 a direct contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu\",\n      \"reason\": \"Both #202 and #203 show a visible white tooth row as a focal anchor, though #203 pulls back to show a fuller figure on a brown ground while #202 fills the frame with the head alone.\"\n    }\n  ],\n  \"tags\": [\"jaw form\", \"circular eye forms\", \"white tooth row\", \"dense layered scribble\", \"olive-brown ground\", \"outward-sweeping black arcs\"],\n  \"lookingQuestion\": \"Where does your eye settle first — on the white tooth row at the bottom, the looping eye zones above, or the black arcs at the edges — and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The form reads as an animal head, but the layered scribble work obscures whether specific anatomical features are present or constructed purely from line.\",\n    \"The dark area above the tooth row contains a visible void, but the degree to which the jaw is open versus the marks simply describing a mouth shape remains ambiguous at this resolution.\",\n    \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg (nifty faces #0000) was inspected but shows a geometric, architectural composition with no comparable jaw or eye structure, so no meaningful formal connection was found and it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open jaw' with 'exposed tooth row' and 'jaw-like form' throughout the reading to ground the claim in the visible white marks rather than asserting a specific degree of openness.\",\n    \"Reading remains within the 55–65 word target at 62 words after revision.\",\n    \"Context angle trimmed to 38 words to meet the 30–40 word owned-subset requirement.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXJvtFj5TUcVDrmZx8v2VPH4RdXR21woKdfscRQz1U21U",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXJvtFj5TUcVDrmZx8v2VPH4RdXR21woKdfscRQz1U21U/image.png",
+        "imageSHA256": "7f1ddada431989cccd963646343b0230773640b17ff5b345c91d2a240d96ff37"
+      },
+      {
+        "artworkId": "QmSLsGfSZqJ9TYt4sQXXJ5gEWzjn55pp1AsYNqfDZNy6cp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSLsGfSZqJ9TYt4sQXXJ5gEWzjn55pp1AsYNqfDZNy6cp/image.png",
+        "imageSHA256": "00647eb328b15a1e0802e9140ce061f794303280a4470eb96d325371dea9e9db"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu/image.png",
+        "imageSHA256": "620f21d489fc3496e55b53796fca78237904ff7d31e4f6fd717c1c92c36eb5ca"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large open-jawed form fills the canvas center, with a row of white tooth-like shapes running across the lower third against a dark interior void.\", \"Two circular eye zones sit in the upper half, each built from layered yellow, teal, and red looping lines over a dark olive-brown background.\", \"Thick black arcing lines sweep outward from the form's edges, while loose multicolor scribbles in pink, teal, orange, and red layer densely across the body.\"], \"reading\": \"The wide-open jaw and staring eye zones give the image a raw, confrontational charge. White teeth anchor the lower field while the surrounding scribble-work in pink, teal, and orange keeps the surface restless. The dark background holds the form in place even as the loose lines push outward. The overall feeling is one of barely contained force rather than settled calm.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #201 and nnxyz nnotb #203. Where #201 uses a cooler grey ground and a more closed, downward-facing form, #202 opens the jaw wide and shifts to a warmer olive ground with higher color density.\", \"connections\": [{\"targetArtworkId\": \"QmSLsGfSZqJ9TYt4sQXXJ5gEWzjn55pp1AsYNqfDZNy6cp\", \"reason\": \"Both works center a large animal-like head with layered scribble lines over a muted ground, but #201 keeps the mouth nearly closed and the palette cooler, making the open jaw and warmer tones of #202 a direct contrast.\"}, {\"targetArtworkId\": \"QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu\", \"reason\": \"Both #202 and #203 show a wide grinning mouth with visible white teeth as a focal anchor, though #203 pulls back to show a fuller figure on a brown ground while #202 fills the frame with the head alone.\"}], \"tags\": [\"open jaw\", \"circular eye forms\", \"white tooth row\", \"dense layered scribble\", \"olive-brown ground\", \"outward-sweeping black arcs\"], \"lookingQuestion\": \"Where does your eye settle first — on the white tooth row at the bottom, the looping eye zones above, or the black arcs at the edges — and what does that path through the image feel like?\", \"ambiguities\": [\"The form reads as an animal head, but the layered scribble work obscures whether specific anatomical features are present or constructed purely from line.\", \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg (nifty faces #0000) was inspected but shows a geometric, architectural composition with no comparable jaw or eye structure, so no meaningful formal connection was found and it was omitted.\"]}\nFLAGS:\n[{\"artworkId\": \"QmXJvtFj5TUcVDrmZx8v2VPH4RdXR21woKdfscRQz1U21U\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

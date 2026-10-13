@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:09.790313-05:00",
+    "usage": {
+      "inputTokens": 6279,
+      "outputTokens": 813,
+      "totalTokens": 7092,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14363
+    },
+    "requestId": "79bcd9df-57a6-450b-840d-4bd2a3523cb5",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A red and ochre upright figure with pointed ears occupies the center; two large circular eyes contain flower-like rings drawn in black outline over yellow fills.\",\n    \"Horizontal zigzag lines in black, yellow, and white cross the full width of the image at mid-height, layered over the blue-purple background wash.\",\n    \"Small rectangular marks and looping scribbles in orange, red, pink, and white are scattered across all four corners, sitting on top of broad blue brushed shapes.\"\n  ],\n  \"reading\": \"The figure holds its ground at center, arms raised, while the background pushes back with wide blue sweeps. Flower-ring eyes give the face an alert, almost wired quality. Zigzag bands cut across the body like interference, and the corner marks feel like static that never quite settles. The mood sits somewhere between confrontation and comedy, neither fully resolved.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #241 and nnxyz nnotb #243 share the same layered-line approach, but #242 swaps #241's warm ochre ground for a cool blue field. Title order and recorded creation order align for these three owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95\",\n      \"reason\": \"Both #242 and #243 place a pointed-eared figure with paired circular eyes at center against a layered background, but #243 uses a dark body on warm yellow while #242 reverses to a red-ochre body on cool blue.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy\",\n      \"reason\": \"In #241 a crown-like spike ring and a single spiral eye anchor a dark central form on warm ochre; #242 echoes the spike crown and ringed eyes but distributes them across a blue ground with a fuller upright body.\"\n    }\n  ],\n  \"tags\": [\n    \"upright figure\",\n    \"circular ringed eyes\",\n    \"zigzag horizontal bands\",\n    \"blue ground\",\n    \"corner scatter marks\",\n    \"pointed ears\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"wired alertness\",\n    \"unresolved tension\"\n  ],\n  \"lookingQuestion\": \"How do the horizontal zigzag bands relate to the figure's body — do they pass behind it, through it, or in front of it, and what does that layering do to the sense of space?\",\n  \"ambiguities\": [\n    \"The flower-ring forms inside the eyes could be read as mechanical dials or organic rosettes; the image does not resolve which.\",\n    \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS (nnxyz #3) shares ringed eyes and a raised-arm pose but belongs to a different owned collection family, making the formal link suggestive rather than grounded in supplied collection context; it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf/image.png",
+        "imageSHA256": "818d96ea1e3e3e76015fa983453677d51a725790c9f8ec31afcd41bb162aa0b6"
+      },
+      {
+        "artworkId": "QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy/image.png",
+        "imageSHA256": "1254ce78cb99421711bf0a55bd6206f1ac84f4412f3a6fc234a75366e482db8f"
+      },
+      {
+        "artworkId": "QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS/image.png",
+        "imageSHA256": "e08fa2b3caeb9c4f1578c6d0906018135a1ec3c005be2a62af390ba0ec4f971d"
+      },
+      {
+        "artworkId": "QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95/image.png",
+        "imageSHA256": "5f3f28e2d85069a68ac6b2db7810b8219fc0c08964bc848fa533a873cf80c633"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:17.076300-05:00",
+    "usage": {
+      "inputTokens": 7112,
+      "outputTokens": 1053,
+      "totalTokens": 8165,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7205
+    },
+    "requestId": "48aaff80-9fdb-4a4e-a92b-7bf44b4d33cd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A red and ochre upright figure with pointed ears occupies the center; two large circular eyes contain flower-like rings drawn in black outline over yellow fills.\",\n    \"Horizontal zigzag lines in black, yellow, and white cross the full width of the image at mid-height, layered over the blue-purple background wash.\",\n    \"Small rectangular marks and looping scribbles in orange, red, pink, and white are scattered across all four corners, sitting on top of broad blue brushed shapes.\"\n  ],\n  \"reading\": \"The figure holds its ground at center, arms raised, while the background pushes back with wide blue sweeps. Flower-ring eyes give the face an alert, almost wired quality. Zigzag bands cut across the body like interference, and the corner marks feel like static that never quite settles. The mood sits somewhere between confrontation and comedy, neither fully resolved.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #241 and nnxyz nnotb #243 share the same layered-line approach, but #242 swaps #241's warm ochre ground for a cool blue field. Title order and recorded creation order align for these three owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95\",\n      \"reason\": \"Both #242 and #243 place a pointed-eared figure with paired circular eyes at center against a layered background, but #243 uses a dark body on warm yellow while #242 reverses to a red-ochre body on cool blue.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy\",\n      \"reason\": \"In #241 a spike-crown ring and a single spiral eye anchor a dark central form on warm ochre; #242 echoes the spike crown and ringed eyes but distributes them across a blue ground with a fuller upright body.\"\n    }\n  ],\n  \"tags\": [\n    \"upright figure\",\n    \"circular ringed eyes\",\n    \"zigzag horizontal bands\",\n    \"blue ground\",\n    \"corner scatter marks\",\n    \"pointed ears\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"wired alertness\",\n    \"unresolved tension\"\n  ],\n  \"lookingQuestion\": \"How do the horizontal zigzag bands relate to the figure's body — do they pass behind it, through it, or in front of it, and what does that layering do to the sense of space?\",\n  \"ambiguities\": [\n    \"The flower-ring forms inside the eyes could be read as mechanical dials or organic rosettes; the image does not resolve which.\",\n    \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS (nnxyz #3) shares ringed eyes and a raised-arm pose but belongs to a different owned collection family; it was inspected and set aside as the two selected connections are more specific.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: pointed-eared figure, flower-ring eyes, zigzag bands at mid-height, and corner scatter marks are all directly visible.\",\n    \"Comparison with QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy confirmed: #241 has a warm ochre ground, a spike-crown form, and a single large spiral eye — draft's 'crown-like spike ring' refined to 'spike-crown ring' to avoid unsupported crown identification; connection reason is grounded in visible form.\",\n    \"Comparison with QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95 confirmed: #243 shows a dark-bodied pointed-eared figure on a warm yellow ground with paired circular eyes — contrast with #242's cool blue ground and red-ochre body is accurate and specific.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf/image.png",
+        "imageSHA256": "818d96ea1e3e3e76015fa983453677d51a725790c9f8ec31afcd41bb162aa0b6"
+      },
+      {
+        "artworkId": "QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy/image.png",
+        "imageSHA256": "1254ce78cb99421711bf0a55bd6206f1ac84f4412f3a6fc234a75366e482db8f"
+      },
+      {
+        "artworkId": "QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS/image.png",
+        "imageSHA256": "e08fa2b3caeb9c4f1578c6d0906018135a1ec3c005be2a62af390ba0ec4f971d"
+      },
+      {
+        "artworkId": "QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95/image.png",
+        "imageSHA256": "5f3f28e2d85069a68ac6b2db7810b8219fc0c08964bc848fa533a873cf80c633"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A red and ochre upright figure with pointed ears occupies the center; two large circular eyes contain flower-like rings drawn in black outline over yellow fills.\", \"Horizontal zigzag lines in black, yellow, and white cross the full width of the image at mid-height, layered over the blue-purple background wash.\", \"Small rectangular marks and looping scribbles in orange, red, pink, and white are scattered across all four corners, sitting on top of broad blue brushed shapes.\"], \"reading\": \"The figure holds its ground at center, arms raised, while the background pushes back with wide blue sweeps. Flower-ring eyes give the face an alert, almost wired quality. Zigzag bands cut across the body like interference, and the corner marks feel like static that never quite settles. The mood sits somewhere between confrontation and comedy, neither fully resolved.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #241 and nnxyz nnotb #243 share the same layered-line approach, but #242 swaps #241's warm ochre ground for a cool blue field. Title order and recorded creation order align for these three owned works.\", \"connections\": [{\"targetArtworkId\": \"QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95\", \"reason\": \"Both #242 and #243 place a pointed-eared figure with paired circular eyes at center against a layered background, but #243 uses a dark body on warm yellow while #242 reverses to a red-ochre body on cool blue.\"}, {\"targetArtworkId\": \"QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy\", \"reason\": \"In #241 a crown-like spike ring and a single spiral eye anchor a dark central form on warm ochre; #242 echoes the spike crown and ringed eyes but distributes them across a blue ground with a fuller upright body.\"}], \"tags\": [\"upright figure\", \"circular ringed eyes\", \"zigzag horizontal bands\", \"blue ground\", \"corner scatter marks\", \"pointed ears\"], \"interpretiveTags\": [\"confrontational mood\", \"wired alertness\", \"unresolved tension\"], \"lookingQuestion\": \"How do the horizontal zigzag bands relate to the figure's body — do they pass behind it, through it, or in front of it, and what does that layering do to the sense of space?\", \"ambiguities\": [\"The flower-ring forms inside the eyes could be read as mechanical dials or organic rosettes; the image does not resolve which.\", \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS (nnxyz #3) shares ringed eyes and a raised-arm pose but belongs to a different owned collection family, making the formal link suggestive rather than grounded in supplied collection context; it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:32.040266-05:00",
+    "usage": {
+      "inputTokens": 6839,
+      "outputTokens": 859,
+      "totalTokens": 7698,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10789
+    },
+    "requestId": "ec030f64-5b1c-4d58-bbe1-60f3b66b685c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A red and ochre upright figure with pointed ears occupies the center; two large circular eyes contain flower-like rings drawn in black outline over yellow fills.\",\n    \"Horizontal zigzag lines in black, yellow, and white cross the full width of the image at mid-height, layered over the blue-purple background wash.\",\n    \"Small rectangular marks and looping scribbles in orange, red, pink, and white are scattered across all four corners, sitting on top of broad blue brushed shapes.\"\n  ],\n  \"reading\": \"Cool blue washes dominate the ground, but the red-ochre figure at center refuses to recede. Flower-ring eyes lend the face an alert, almost wired quality. Zigzag bands cut across the body like interference, and the corner marks read as static that never quite settles. The mood sits somewhere between confrontation and comedy, neither fully resolved.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #241 and #243 share the same layered-line approach, but #242 swaps #241's warm ochre ground for a cool blue field. Title order and recorded creation order align for these three owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95\",\n      \"reason\": \"Both #242 and #243 place a pointed-eared figure with paired circular eyes at center against a layered background, but #243 uses a dark body on warm yellow while #242 reverses to a red-ochre body on cool blue.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy\",\n      \"reason\": \"In #241 a spike-crown ring and a single spiral eye anchor a dark central form on warm ochre; #242 echoes the spike crown and ringed eyes but distributes them across a blue ground with a fuller upright body.\"\n    }\n  ],\n  \"tags\": [\"upright figure\", \"circular ringed eyes\", \"zigzag horizontal bands\", \"blue ground\", \"corner scatter marks\", \"pointed ears\"],\n  \"lookingQuestion\": \"How do the horizontal zigzag bands relate to the figure's body — do they pass behind it, through it, or in front of it, and what does that layering do to the sense of space?\",\n  \"ambiguities\": [\n    \"The flower-ring forms inside the eyes could be read as mechanical dials or organic rosettes; the image does not resolve which.\",\n    \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS (nnxyz #3) shares ringed eyes and a raised-arm pose but belongs to a different owned collection family; it was inspected and set aside as the two selected connections are more specific.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced opening phrase 'The figure holds its ground' with a color-and-ground observation ('Cool blue washes dominate the ground') to avoid the repeated-opening pattern.\",\n    \"Reading remains 55 words, grounded in visible zigzag bands, flower-ring eyes, and corner marks without attributing intention.\",\n    \"Context angle confirmed at 36 words, referencing only the owned nnotb subset and the alignment of title and recorded creation order for these three neighbors.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf/image.png",
+        "imageSHA256": "818d96ea1e3e3e76015fa983453677d51a725790c9f8ec31afcd41bb162aa0b6"
+      },
+      {
+        "artworkId": "QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy/image.png",
+        "imageSHA256": "1254ce78cb99421711bf0a55bd6206f1ac84f4412f3a6fc234a75366e482db8f"
+      },
+      {
+        "artworkId": "QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS/image.png",
+        "imageSHA256": "e08fa2b3caeb9c4f1578c6d0906018135a1ec3c005be2a62af390ba0ec4f971d"
+      },
+      {
+        "artworkId": "QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95/image.png",
+        "imageSHA256": "5f3f28e2d85069a68ac6b2db7810b8219fc0c08964bc848fa533a873cf80c633"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A red and ochre upright figure with pointed ears occupies the center; two large circular eyes contain flower-like rings drawn in black outline over yellow fills.\", \"Horizontal zigzag lines in black, yellow, and white cross the full width of the image at mid-height, layered over the blue-purple background wash.\", \"Small rectangular marks and looping scribbles in orange, red, pink, and white are scattered across all four corners, sitting on top of broad blue brushed shapes.\"], \"reading\": \"The figure holds its ground at center, arms raised, while the background pushes back with wide blue sweeps. Flower-ring eyes give the face an alert, almost wired quality. Zigzag bands cut across the body like interference, and the corner marks feel like static that never quite settles. The mood sits somewhere between confrontation and comedy, neither fully resolved.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #241 and nnxyz nnotb #243 share the same layered-line approach, but #242 swaps #241's warm ochre ground for a cool blue field. Title order and recorded creation order align for these three owned works.\", \"connections\": [{\"targetArtworkId\": \"QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95\", \"reason\": \"Both #242 and #243 place a pointed-eared figure with paired circular eyes at center against a layered background, but #243 uses a dark body on warm yellow while #242 reverses to a red-ochre body on cool blue.\"}, {\"targetArtworkId\": \"QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy\", \"reason\": \"In #241 a spike-crown ring and a single spiral eye anchor a dark central form on warm ochre; #242 echoes the spike crown and ringed eyes but distributes them across a blue ground with a fuller upright body.\"}], \"tags\": [\"upright figure\", \"circular ringed eyes\", \"zigzag horizontal bands\", \"blue ground\", \"corner scatter marks\", \"pointed ears\"], \"lookingQuestion\": \"How do the horizontal zigzag bands relate to the figure's body — do they pass behind it, through it, or in front of it, and what does that layering do to the sense of space?\", \"ambiguities\": [\"The flower-ring forms inside the eyes could be read as mechanical dials or organic rosettes; the image does not resolve which.\", \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS (nnxyz #3) shares ringed eyes and a raised-arm pose but belongs to a different owned collection family; it was inspected and set aside as the two selected connections are more specific.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the figure holds its ground\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

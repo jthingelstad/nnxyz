@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:30.743514-05:00",
+    "usage": {
+      "inputTokens": 5888,
+      "outputTokens": 800,
+      "totalTokens": 6688,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14108
+    },
+    "requestId": "f665e88d-4489-4b14-a7a7-57b31e334ffb",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form fills most of the frame, lit from the upper left by white ray-like streaks against a warm orange-amber background; the form's surface mixes teal, gold, and dark brown.\",\n    \"A single dark circular eye socket sits near center, containing a small white-ringed eye; to its right a second large hollow socket holds no visible eye, giving the face an asymmetric, off-balance look.\",\n    \"A wide open mouth near the lower center shows a row of blocky white teeth rendered with short, stacked marks; loose zigzag lines in white, red, and yellow run across the bulging cheek masses.\"\n  ],\n  \"reading\": \"Warm amber light rakes across a swollen, lumpen face from the upper left, catching teal and gold patches on otherwise dark surfaces. One eye stares back from a deep socket while the other socket sits empty, pulling the face off-balance. The open mouth and blocky teeth read as a shout or gasp. The loose zigzag lines layered over the rounded forms add a restless surface energy that sits against the stillness of the hollow socket.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits at the title-numbered end of the run. Its neighbor in both title order and recorded creation order is nifty faces #131, which uses a bright sky-blue field and a more upright, readable face structure — a strong contrast to the amber darkness and asymmetry here.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2\",\n      \"reason\": \"nifty faces #131 shares the zigzag line overlay and visible teeth, but its open sky-blue ground and frontal face structure make the amber darkness and hollow socket of #132 feel like a deliberate tonal shift between the two neighbors.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\",\n      \"reason\": \"Scrimshaw 41 also presents a wide-open mouth with a row of white tooth marks and a dark ground with warm amber patches — the collector's cross-collection link between scrimshaw and nnxyz is visible in this shared tooth-and-darkness motif.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye sockets\",\n    \"open mouth with teeth\",\n    \"amber-orange ground\",\n    \"teal-gold surface patches\",\n    \"white ray streaks\",\n    \"zigzag line overlay\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettling\",\n    \"confrontational\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the filled eye socket and the empty one do to how you read the direction the face is turned?\",\n  \"ambiguities\": [\n    \"The second large dark socket may contain a deeply shadowed form rather than being fully empty; the image resolution makes this uncertain.\",\n    \"The nnotb #203 comparison image shows a full figure with glasses and teeth but no strong formal overlap with this work beyond warm tones; it was inspected and set aside as a weak match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZrvtsQy3N4zBqiqcSH6Wk5GxbAjBVvBvwmi22sCPXxE6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZrvtsQy3N4zBqiqcSH6Wk5GxbAjBVvBvwmi22sCPXxE6/image.png",
+        "imageSHA256": "7e884b603b60cf502f4f25077ca0c3e5134666490e07fcde4d080c3e9b929239"
+      },
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      },
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      },
+      {
+        "artworkId": "QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu/image.png",
+        "imageSHA256": "620f21d489fc3496e55b53796fca78237904ff7d31e4f6fd717c1c92c36eb5ca"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:37.286351-05:00",
+    "usage": {
+      "inputTokens": 6710,
+      "outputTokens": 868,
+      "totalTokens": 7578,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6469
+    },
+    "requestId": "11c9954f-47ef-488f-bc76-89205d45f8d0",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form fills most of the frame, lit from the upper left by white ray-like streaks against a warm orange-amber background; the surface mixes teal, gold, and dark brown.\",\n    \"A single dark circular socket near center contains a small white-ringed eye; to its right a second large hollow socket shows no visible eye, giving the face an asymmetric, off-balance quality.\",\n    \"A wide open mouth near the lower center shows a row of blocky white teeth rendered with short stacked marks; loose zigzag lines in white, red, and yellow run across the bulging cheek masses.\"\n  ],\n  \"reading\": \"Warm amber light rakes across a swollen, lumpen face from the upper left, catching teal and gold patches on otherwise dark surfaces. One eye stares back from a deep socket while the other sits empty, pulling the face off-balance. The open mouth and blocky teeth read as a shout or gasp. Zigzag lines layered over the rounded forms add a restless surface quality that sits against the stillness of the hollow socket.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits at the title-numbered end of the run. Its neighbor in both title order and recorded creation order is nifty faces #131, which uses a bright sky-blue field and a more upright face structure — a strong contrast to the amber darkness and asymmetry here.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2\",\n      \"reason\": \"nifty faces #131 shares the zigzag line overlay and visible teeth, but its open sky-blue ground and frontal face structure contrast sharply with the amber darkness and hollow socket of #132.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\",\n      \"reason\": \"Scrimshaw 41 shows a wide-open mouth with a row of white tooth marks against a dark ground with warm amber patches — a cross-collection formal echo the collector links through shared tooth-and-darkness structure.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye sockets\",\n    \"open mouth with teeth\",\n    \"amber-orange ground\",\n    \"teal-gold surface patches\",\n    \"white ray streaks\",\n    \"zigzag line overlay\"\n  ],\n  \"interpretiveTags\": [\"unsettling\", \"confrontational\"],\n  \"lookingQuestion\": \"What does the difference between the filled eye socket and the empty one do to how you read the direction the face is turned?\",\n  \"ambiguities\": [\n    \"The second large dark socket may contain a deeply shadowed form rather than being fully empty; image resolution makes this uncertain.\",\n    \"nnotb #203 was inspected and set aside — warm tones are shared but no strong formal overlap with this work justifies a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Removed 'deliberate tonal shift' from the #131 connection reason — 'deliberate' implies intent; replaced with a plain contrast statement.\",\n    \"Confirmed Scrimshaw 41 comparison against its image: wide open mouth, white tooth marks, dark ground with amber patches are all visible and support the stated formal link.\",\n    \"Reading trimmed to stay within 55–65 word target; no invented biography, technique claims, or unsupported subject identities remain.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZrvtsQy3N4zBqiqcSH6Wk5GxbAjBVvBvwmi22sCPXxE6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZrvtsQy3N4zBqiqcSH6Wk5GxbAjBVvBvwmi22sCPXxE6/image.png",
+        "imageSHA256": "7e884b603b60cf502f4f25077ca0c3e5134666490e07fcde4d080c3e9b929239"
+      },
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      },
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      },
+      {
+        "artworkId": "QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu/image.png",
+        "imageSHA256": "620f21d489fc3496e55b53796fca78237904ff7d31e4f6fd717c1c92c36eb5ca"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded form fills most of the frame, lit from the upper left by white ray-like streaks against a warm orange-amber background; the form's surface mixes teal, gold, and dark brown.\", \"A single dark circular eye socket sits near center, containing a small white-ringed eye; to its right a second large hollow socket holds no visible eye, giving the face an asymmetric, off-balance look.\", \"A wide open mouth near the lower center shows a row of blocky white teeth rendered with short, stacked marks; loose zigzag lines in white, red, and yellow run across the bulging cheek masses.\"], \"reading\": \"Warm amber light rakes across a swollen, lumpen face from the upper left, catching teal and gold patches on otherwise dark surfaces. One eye stares back from a deep socket while the other socket sits empty, pulling the face off-balance. The open mouth and blocky teeth read as a shout or gasp. The loose zigzag lines layered over the rounded forms add a restless surface energy that sits against the stillness of the hollow socket.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits at the title-numbered end of the run. Its neighbor in both title order and recorded creation order is nifty faces #131, which uses a bright sky-blue field and a more upright, readable face structure — a strong contrast to the amber darkness and asymmetry here.\", \"connections\": [{\"targetArtworkId\": \"QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2\", \"reason\": \"nifty faces #131 shares the zigzag line overlay and visible teeth, but its open sky-blue ground and frontal face structure make the amber darkness and hollow socket of #132 feel like a deliberate tonal shift between the two neighbors.\"}, {\"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\", \"reason\": \"Scrimshaw 41 also presents a wide-open mouth with a row of white tooth marks and a dark ground with warm amber patches — the collector's cross-collection link between scrimshaw and nnxyz is visible in this shared tooth-and-darkness motif.\"}], \"tags\": [\"asymmetric eye sockets\", \"open mouth with teeth\", \"amber-orange ground\", \"teal-gold surface patches\", \"white ray streaks\", \"zigzag line overlay\"], \"interpretiveTags\": [\"unsettling\", \"confrontational\"], \"lookingQuestion\": \"What does the difference between the filled eye socket and the empty one do to how you read the direction the face is turned?\", \"ambiguities\": [\"The second large dark socket may contain a deeply shadowed form rather than being fully empty; the image resolution makes this uncertain.\", \"The nnotb #203 comparison image shows a full figure with glasses and teeth but no strong formal overlap with this work beyond warm tones; it was inspected and set aside as a weak match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:36.175860-05:00",
+    "usage": {
+      "inputTokens": 6442,
+      "outputTokens": 896,
+      "totalTokens": 7338,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6602
+    },
+    "requestId": "c8202f57-564a-4813-ac1f-57128e5a83b6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form fills most of the frame, lit from the upper left by white ray-like streaks against a warm orange-amber background; the surface mixes teal, gold, and dark brown.\",\n    \"A single dark circular socket near center contains a small white-ringed eye; to its right a second large hollow socket shows no visible eye, giving the face an asymmetric, off-balance quality.\",\n    \"A row of blocky white teeth is visible near the lower center, rendered with short stacked marks; loose zigzag lines in white, red, and yellow run across the bulging cheek masses.\"\n  ],\n  \"reading\": \"Warm amber light rakes across a swollen, lumpen face from the upper left, catching teal and gold patches on otherwise dark surfaces. One eye stares back from a deep socket while the other sits empty, pulling the face off-balance. The blocky tooth row and surrounding dark cavity read as a grimace or cry. Zigzag lines layered over the rounded forms add a restless surface quality that sits against the stillness of the hollow socket.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits at the title-numbered end of the run. Its neighbor in both title order and recorded creation order is nifty faces #131, which uses a bright sky-blue field and a more upright face structure — a strong contrast to the amber darkness and asymmetry here.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2\",\n      \"reason\": \"nifty faces #131 shares the zigzag line overlay and a visible tooth row, but its open sky-blue ground and frontal face structure contrast sharply with the amber darkness and hollow socket of #132.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\",\n      \"reason\": \"Scrimshaw 41 shows a tooth row rendered in white marks against a dark ground with warm amber patches — a cross-collection formal echo the collector links through shared tooth-and-darkness structure.\"\n    }\n  ],\n  \"tags\": [\"asymmetric eye sockets\", \"visible tooth row\", \"amber-orange ground\", \"teal-gold surface patches\", \"white ray streaks\", \"zigzag line overlay\"],\n  \"lookingQuestion\": \"What does the difference between the filled eye socket and the empty one do to how you read the direction the face is turned?\",\n  \"ambiguities\": [\n    \"The second large dark socket may contain a deeply shadowed form rather than being fully empty; image resolution makes this uncertain.\",\n    \"The dark area around the tooth row suggests a cavity or recess, but whether the mouth is wide open or partially closed cannot be confirmed from the image alone — 'wide-open' has been removed from the connection prose.\",\n    \"nnotb #203 was inspected and set aside — warm tones are shared but no strong formal overlap with this work justifies a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Removed 'wide-open' from the Scrimshaw 41 connection; the tooth row and surrounding dark area are visible but the degree of mouth opening cannot be confirmed from the image.\",\n    \"Revised reading to replace 'open mouth and blocky teeth read as a shout or gasp' with 'blocky tooth row and surrounding dark cavity read as a grimace or cry' to avoid asserting mouth-openness.\",\n    \"Tags updated: 'open mouth with teeth' replaced by 'visible tooth row' to reflect only what is confirmed visible.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZrvtsQy3N4zBqiqcSH6Wk5GxbAjBVvBvwmi22sCPXxE6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZrvtsQy3N4zBqiqcSH6Wk5GxbAjBVvBvwmi22sCPXxE6/image.png",
+        "imageSHA256": "7e884b603b60cf502f4f25077ca0c3e5134666490e07fcde4d080c3e9b929239"
+      },
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      },
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      },
+      {
+        "artworkId": "QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmctB7t9Ek1mg9cEjaao6YfVVyBEDV7UPGdjKg5XnqgNuu/image.png",
+        "imageSHA256": "620f21d489fc3496e55b53796fca78237904ff7d31e4f6fd717c1c92c36eb5ca"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large rounded form fills most of the frame, lit from the upper left by white ray-like streaks against a warm orange-amber background; the surface mixes teal, gold, and dark brown.\", \"A single dark circular socket near center contains a small white-ringed eye; to its right a second large hollow socket shows no visible eye, giving the face an asymmetric, off-balance quality.\", \"A wide open mouth near the lower center shows a row of blocky white teeth rendered with short stacked marks; loose zigzag lines in white, red, and yellow run across the bulging cheek masses.\"], \"reading\": \"Warm amber light rakes across a swollen, lumpen face from the upper left, catching teal and gold patches on otherwise dark surfaces. One eye stares back from a deep socket while the other sits empty, pulling the face off-balance. The open mouth and blocky teeth read as a shout or gasp. Zigzag lines layered over the rounded forms add a restless surface quality that sits against the stillness of the hollow socket.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits at the title-numbered end of the run. Its neighbor in both title order and recorded creation order is nifty faces #131, which uses a bright sky-blue field and a more upright face structure — a strong contrast to the amber darkness and asymmetry here.\", \"connections\": [{\"targetArtworkId\": \"QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2\", \"reason\": \"nifty faces #131 shares the zigzag line overlay and visible teeth, but its open sky-blue ground and frontal face structure contrast sharply with the amber darkness and hollow socket of #132.\"}, {\"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\", \"reason\": \"Scrimshaw 41 shows a wide-open mouth with a row of white tooth marks against a dark ground with warm amber patches — a cross-collection formal echo the collector links through shared tooth-and-darkness structure.\"}], \"tags\": [\"asymmetric eye sockets\", \"open mouth with teeth\", \"amber-orange ground\", \"teal-gold surface patches\", \"white ray streaks\", \"zigzag line overlay\"], \"lookingQuestion\": \"What does the difference between the filled eye socket and the empty one do to how you read the direction the face is turned?\", \"ambiguities\": [\"The second large dark socket may contain a deeply shadowed form rather than being fully empty; image resolution makes this uncertain.\", \"nnotb #203 was inspected and set aside — warm tones are shared but no strong formal overlap with this work justifies a connection.\"]}\nFLAGS:\n[{\"artworkId\": \"QmZrvtsQy3N4zBqiqcSH6Wk5GxbAjBVvBvwmi22sCPXxE6\", \"field\": \"connections\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

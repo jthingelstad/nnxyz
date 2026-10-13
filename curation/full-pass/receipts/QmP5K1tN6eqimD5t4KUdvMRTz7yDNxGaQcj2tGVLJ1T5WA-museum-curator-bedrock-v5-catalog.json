@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:07.512342-05:00",
+    "usage": {
+      "inputTokens": 6553,
+      "outputTokens": 746,
+      "totalTokens": 7299,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12640
+    },
+    "requestId": "ba450ac3-f429-4ef2-898f-b994fdcb8d01",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A gabled structure with multiple overlapping outline passes sits left of center, its roof plane defined by brown and yellow-green lines that do not fully close at the corners.\",\n    \"Neon yellow-green marks run vertically across the entire image, densest at the edges, creating a loose frame that bleeds into the building's walls and the teal-blue sky zone above.\",\n    \"A pale blue-grey horizontal band below the structure reads as still water; loose yellow and white lines float across it, mirroring the vertical marks above.\"\n  ],\n  \"reading\": \"The building holds its shape through repeated, slightly misaligned outlines rather than solid fill, so the walls feel provisional. Orange verticals cut through olive and brown, keeping the structure from settling into calm. The water band below introduces a cooler stillness that sits in tension with the charged marks surrounding it. The image reads as unsettled shelter — present but not quite fixed.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #20 and nnxyz nnotb #22. Where #20 fills the field with rounded, drifting forms and soft yellow light, #21 anchors itself to hard rectilinear geometry — a notable shift in structure across consecutive titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr\",\n      \"reason\": \"nnxyz nnotb #20 shares the yellow-green and teal palette but dissolves all hard edges into organic clusters, making the contrast with #21's insistent straight lines visible and direct.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK\",\n      \"reason\": \"nnxyz nnotb #22 also builds forms from layered open-contour lines over a flat ground, but swaps warm olive for deep blue, showing how the same line-over-wash approach produces a very different atmosphere.\"\n    }\n  ],\n  \"tags\": [\n    \"rectilinear structure\",\n    \"layered open outlines\",\n    \"vertical mark field\",\n    \"teal and olive ground\",\n    \"neon yellow-green accents\",\n    \"horizontal water reflection\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled shelter\",\n    \"tension between stillness and agitation\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the building's outlines stop agreeing with each other, and what happens to the structure at those gaps?\",\n  \"ambiguities\": [\n    \"The pale horizontal band reads as water but could be a ground plane or shadow; no supplied metadata confirms the subject.\",\n    \"nnxyz rawblocks #6 shares the same artist but shows no formal overlap with this image's geometry or palette; it was inspected and excluded as a weak match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA/image.png",
+        "imageSHA256": "413cf86e63301d4f70708dc56d018eb5d9eb1d246a47e9771dbf7c1ad5c5f01e"
+      },
+      {
+        "artworkId": "QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr/image.png",
+        "imageSHA256": "6a2edf1542791c2d99ffa08abdf3ac49b0472da340b5e5bedae1887675b717b5"
+      },
+      {
+        "artworkId": "QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP/image.png",
+        "imageSHA256": "9e2b753a7ecf7a331382a530032e9b621bcdf47f18fe1e2595dbf4954661118d"
+      },
+      {
+        "artworkId": "QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK/image.png",
+        "imageSHA256": "1a4740415a368985b84e0fc7ac8dd1238203d69c587b6880364e0416c091323d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:14.285090-05:00",
+    "usage": {
+      "inputTokens": 7321,
+      "outputTokens": 863,
+      "totalTokens": 8184,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6676
+    },
+    "requestId": "e4d08bb8-f075-4617-b945-923a01a9fa27",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A gabled structure with multiple overlapping outline passes sits left of center; its roof plane is defined by brown and yellow-green lines that do not fully close at the corners.\",\n    \"Neon yellow-green marks run vertically across the entire image, densest at the edges, creating a loose frame that bleeds into the building's walls and the teal-blue zone above.\",\n    \"A pale blue-grey horizontal band below the structure reads as a flat plane; loose yellow and white lines float across it, echoing the vertical marks above.\"\n  ],\n  \"reading\": \"The building holds its shape through repeated, slightly misaligned outlines rather than solid fill, so the walls feel provisional. Orange verticals cut through olive and brown, keeping the structure from settling. The pale band below introduces a cooler stillness that sits in tension with the charged marks surrounding it. The image reads as unsettled shelter — present but not quite fixed.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #20 and nnxyz nnotb #22. Where #20 fills the field with rounded, drifting forms and soft yellow light, #21 anchors itself to hard rectilinear geometry — a notable shift in structure across consecutive titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr\",\n      \"reason\": \"nnxyz nnotb #20 shares yellow-green and teal but dissolves all hard edges into organic clusters, making the contrast with #21's insistent straight lines visible and direct.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK\",\n      \"reason\": \"nnxyz nnotb #22 also builds forms from layered open-contour lines over a flat ground, but swaps warm olive for deep blue, showing how the same line-over-wash approach produces a different atmosphere.\"\n    }\n  ],\n  \"tags\": [\n    \"rectilinear structure\",\n    \"layered open outlines\",\n    \"vertical mark field\",\n    \"teal and olive ground\",\n    \"neon yellow-green accents\",\n    \"horizontal reflection band\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled shelter\",\n    \"tension between stillness and agitation\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the building's outlines stop agreeing with each other, and what happens to the structure at those gaps?\",\n  \"ambiguities\": [\n    \"The pale horizontal band reads as water but could be a ground plane or shadow; no supplied metadata confirms the subject.\",\n    \"nnxyz rawblocks #6 was inspected and excluded — its palette and form language show no meaningful overlap with this image's geometry.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: gabled outline structure, neon yellow-green vertical marks at edges, and pale blue-grey horizontal band are all visible.\",\n    \"Both comparison connections verified against inspected images: #20 confirms organic/dissolved contrast; #22 confirms shared open-contour line method over flat ground with blue dominant field.\",\n    \"Reading phrase 'unsettled shelter' moved to interpretiveTags only; no invented biography, intent, or technique beyond visible evidence remains in the reading or contextAngle.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA/image.png",
+        "imageSHA256": "413cf86e63301d4f70708dc56d018eb5d9eb1d246a47e9771dbf7c1ad5c5f01e"
+      },
+      {
+        "artworkId": "QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr/image.png",
+        "imageSHA256": "6a2edf1542791c2d99ffa08abdf3ac49b0472da340b5e5bedae1887675b717b5"
+      },
+      {
+        "artworkId": "QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP/image.png",
+        "imageSHA256": "9e2b753a7ecf7a331382a530032e9b621bcdf47f18fe1e2595dbf4954661118d"
+      },
+      {
+        "artworkId": "QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK/image.png",
+        "imageSHA256": "1a4740415a368985b84e0fc7ac8dd1238203d69c587b6880364e0416c091323d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A gabled structure with multiple overlapping outline passes sits left of center, its roof plane defined by brown and yellow-green lines that do not fully close at the corners.\", \"Neon yellow-green marks run vertically across the entire image, densest at the edges, creating a loose frame that bleeds into the building's walls and the teal-blue sky zone above.\", \"A pale blue-grey horizontal band below the structure reads as still water; loose yellow and white lines float across it, mirroring the vertical marks above.\"], \"reading\": \"The building holds its shape through repeated, slightly misaligned outlines rather than solid fill, so the walls feel provisional. Orange verticals cut through olive and brown, keeping the structure from settling into calm. The water band below introduces a cooler stillness that sits in tension with the charged marks surrounding it. The image reads as unsettled shelter — present but not quite fixed.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #20 and nnxyz nnotb #22. Where #20 fills the field with rounded, drifting forms and soft yellow light, #21 anchors itself to hard rectilinear geometry — a notable shift in structure across consecutive titles.\", \"connections\": [{\"targetArtworkId\": \"QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr\", \"reason\": \"nnxyz nnotb #20 shares the yellow-green and teal palette but dissolves all hard edges into organic clusters, making the contrast with #21's insistent straight lines visible and direct.\"}, {\"targetArtworkId\": \"QmUWiULUFVEpQKD6TqBEpGF2h5XKRDqU8KUbKtbVHWEjLK\", \"reason\": \"nnxyz nnotb #22 also builds forms from layered open-contour lines over a flat ground, but swaps warm olive for deep blue, showing how the same line-over-wash approach produces a very different atmosphere.\"}], \"tags\": [\"rectilinear structure\", \"layered open outlines\", \"vertical mark field\", \"teal and olive ground\", \"neon yellow-green accents\", \"horizontal water reflection\"], \"interpretiveTags\": [\"unsettled shelter\", \"tension between stillness and agitation\"], \"lookingQuestion\": \"Where exactly do the building's outlines stop agreeing with each other, and what happens to the structure at those gaps?\", \"ambiguities\": [\"The pale horizontal band reads as water but could be a ground plane or shadow; no supplied metadata confirms the subject.\", \"nnxyz rawblocks #6 shares the same artist but shows no formal overlap with this image's geometry or palette; it was inspected and excluded as a weak match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

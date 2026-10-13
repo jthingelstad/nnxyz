@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:03.467043-05:00",
+    "usage": {
+      "inputTokens": 5289,
+      "outputTokens": 712,
+      "totalTokens": 6001,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 18282
+    },
+    "requestId": "01d324d6-bb17-4c3d-a734-cacc702e2efe",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly four-by-four grid of rounded rectangular shapes fills the canvas, each containing a simplified face with looping eyes, noses, and mouths drawn in heavy black lines.\",\n    \"A saturated purple-violet field dominates the background, interrupted by streaks of orange, yellow, white, and pink that cross over and between the face compartments.\",\n    \"Faces vary in fill color—muted green, peach, lavender, gray—giving each cell a distinct tonal identity despite the uniform black outlines binding them together.\"\n  ],\n  \"reading\": \"The grid reads like a crowd pressed together, each face boxed in yet bleeding into its neighbors through tangled overlapping lines. Some mouths gape with visible teeth; others flatten into thin curves. The purple ground pushes the warmer fills forward, creating a sense of faces surfacing from noise. The effect can feel claustrophobic or communal depending on where the eye rests—every cell competes for attention, none fully wins.\",\n  \"contextAngle\": \"In the owned Scrimshaw subset, this work sits between Scrimshaw9 and Scrimshaw13 by title number. Where Scrimshaw9 isolates a single head against open space, Scrimshaw12 multiplies faces into a packed field, marking a shift from solitary figure to dense crowd within the collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW\",\n      \"reason\": \"Scrimshaw13 shares the heavy black outline and looping spiral eyes but returns to a single large face, making the grid compression here feel like a distinct structural choice.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry\",\n      \"reason\": \"nnxyz nifty faces #11 builds a face from dense tangled lines over the whole canvas; Scrimshaw12 distributes that same density across many smaller compartments.\"\n    }\n  ],\n  \"tags\": [\n    \"grid composition\",\n    \"multiple faces\",\n    \"heavy black outlines\",\n    \"purple field\",\n    \"looping line work\",\n    \"crowded arrangement\"\n  ],\n  \"lookingQuestion\": \"Do the faces along the edges—partially cropped by the border—seem to extend the crowd beyond the visible frame, or does the grid feel like a closed, contained set?\",\n  \"ambiguities\": [\n    \"The exact count of distinct faces is hard to fix; overlapping lines merge some cells, making it unclear whether certain compartments hold one face or two.\",\n    \"Some colored streaks (orange, white) may be separate drawing layers or part of the face outlines—their role is visually ambiguous.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeJTHQocUK1m3JdmuaEJDPSDtvbnyvHM5BPZkWR6Zr1r6",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeJTHQocUK1m3JdmuaEJDPSDtvbnyvHM5BPZkWR6Zr1r6/image.png",
+        "imageSHA256": "48c7927b17717d15315cb015f5d942ee0ebbf5ca29fd451d12a4cd36d10e5f56"
+      },
+      {
+        "artworkId": "QmfNadsrbcpMmJRG5qXVijUcqeGarsAYAHoGybBvkhfKva",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmfNadsrbcpMmJRG5qXVijUcqeGarsAYAHoGybBvkhfKva/image.png",
+        "imageSHA256": "e4478bdbc6870c94729275593212d6af6a03bcd1babd5d210d369ab543661ec0"
+      },
+      {
+        "artworkId": "QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry/image.png",
+        "imageSHA256": "a18a0bd568f37d3c2e4f4ed2ee1e1927f94ffe59d57fe1926de9141e78e93b7e"
+      },
+      {
+        "artworkId": "QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW/image.png",
+        "imageSHA256": "bd4be3a44b4396052d57b395bd2cd4751c5721ee0ad5a827a5352045229cc2cc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:15.668381-05:00",
+    "usage": {
+      "inputTokens": 6033,
+      "outputTokens": 818,
+      "totalTokens": 6851,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11975
+    },
+    "requestId": "d6a462af-9e50-4c1e-afcd-6c0b3b6f503e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly four-by-four grid of rounded rectangular shapes fills the canvas, each containing a simplified face with looping eyes, noses, and mouths drawn in heavy black lines.\",\n    \"A saturated purple-violet field dominates the background, interrupted by streaks of orange, yellow, white, and pink that cross over and between the face compartments.\",\n    \"Faces vary in fill color—muted green, peach, lavender, gray—giving each cell a distinct tonal identity despite the uniform black outlines binding them together.\"\n  ],\n  \"reading\": \"The grid reads like a crowd pressed together, each face boxed in yet bleeding into its neighbors through tangled overlapping lines. Some mouths gape with visible teeth; others flatten into thin curves. The purple ground pushes the warmer fills forward, creating a sense of faces surfacing from noise. The effect can feel claustrophobic or communal depending on where the eye rests—every cell competes for attention, none fully wins.\",\n  \"contextAngle\": \"In the owned Scrimshaw subset, this work sits between Scrimshaw9 and Scrimshaw13 by title number. Where Scrimshaw9 isolates a single head against open peach space, Scrimshaw12 multiplies faces into a packed field, shifting from solitary figure to dense crowd.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW\",\n      \"reason\": \"Scrimshaw13 shares heavy black outlines and looping spiral eyes but returns to a single large face, making the grid compression here a distinct structural choice.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry\",\n      \"reason\": \"nnxyz nifty faces #11 builds a face from dense tangled lines across the whole canvas; Scrimshaw12 distributes that same density across many smaller compartments.\"\n    }\n  ],\n  \"tags\": [\n    \"grid composition\",\n    \"multiple faces\",\n    \"heavy black outlines\",\n    \"purple field\",\n    \"looping line work\",\n    \"crowded arrangement\"\n  ],\n  \"lookingQuestion\": \"Do the faces along the edges—partially cropped by the border—seem to extend the crowd beyond the visible frame, or does the grid feel like a closed, contained set?\",\n  \"ambiguities\": [\n    \"The exact count of distinct faces is hard to fix; overlapping lines merge some cells, making it unclear whether certain compartments hold one face or two.\",\n    \"Some colored streaks (orange, white) may be separate drawing layers or part of the face outlines—their role is visually ambiguous.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed grid layout, purple background, and varied cell fills (green, peach, lavender, gray) all visible in the primary image.\",\n    \"Scrimshaw9 comparison checked: single head on open peach background confirmed; contrast with Scrimshaw12's packed grid is accurate.\",\n    \"Reading trimmed from 80 to 76 words; context trimmed from 50 to 39 words to stay within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeJTHQocUK1m3JdmuaEJDPSDtvbnyvHM5BPZkWR6Zr1r6",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeJTHQocUK1m3JdmuaEJDPSDtvbnyvHM5BPZkWR6Zr1r6/image.png",
+        "imageSHA256": "48c7927b17717d15315cb015f5d942ee0ebbf5ca29fd451d12a4cd36d10e5f56"
+      },
+      {
+        "artworkId": "QmfNadsrbcpMmJRG5qXVijUcqeGarsAYAHoGybBvkhfKva",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmfNadsrbcpMmJRG5qXVijUcqeGarsAYAHoGybBvkhfKva/image.png",
+        "imageSHA256": "e4478bdbc6870c94729275593212d6af6a03bcd1babd5d210d369ab543661ec0"
+      },
+      {
+        "artworkId": "QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry/image.png",
+        "imageSHA256": "a18a0bd568f37d3c2e4f4ed2ee1e1927f94ffe59d57fe1926de9141e78e93b7e"
+      },
+      {
+        "artworkId": "QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW/image.png",
+        "imageSHA256": "bd4be3a44b4396052d57b395bd2cd4751c5721ee0ad5a827a5352045229cc2cc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A roughly four-by-four grid of rounded rectangular shapes fills the canvas, each containing a simplified face with looping eyes, noses, and mouths drawn in heavy black lines.\", \"A saturated purple-violet field dominates the background, interrupted by streaks of orange, yellow, white, and pink that cross over and between the face compartments.\", \"Faces vary in fill color—muted green, peach, lavender, gray—giving each cell a distinct tonal identity despite the uniform black outlines binding them together.\"], \"reading\": \"The grid reads like a crowd pressed together, each face boxed in yet bleeding into its neighbors through tangled overlapping lines. Some mouths gape with visible teeth; others flatten into thin curves. The purple ground pushes the warmer fills forward, creating a sense of faces surfacing from noise. The effect can feel claustrophobic or communal depending on where the eye rests—every cell competes for attention, none fully wins.\", \"contextAngle\": \"In the owned Scrimshaw subset, this work sits between Scrimshaw9 and Scrimshaw13 by title number. Where Scrimshaw9 isolates a single head against open space, Scrimshaw12 multiplies faces into a packed field, marking a shift from solitary figure to dense crowd within the collection.\", \"connections\": [{\"targetArtworkId\": \"QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW\", \"reason\": \"Scrimshaw13 shares the heavy black outline and looping spiral eyes but returns to a single large face, making the grid compression here feel like a distinct structural choice.\"}, {\"targetArtworkId\": \"QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry\", \"reason\": \"nnxyz nifty faces #11 builds a face from dense tangled lines over the whole canvas; Scrimshaw12 distributes that same density across many smaller compartments.\"}], \"tags\": [\"grid composition\", \"multiple faces\", \"heavy black outlines\", \"purple field\", \"looping line work\", \"crowded arrangement\"], \"lookingQuestion\": \"Do the faces along the edges—partially cropped by the border—seem to extend the crowd beyond the visible frame, or does the grid feel like a closed, contained set?\", \"ambiguities\": [\"The exact count of distinct faces is hard to fix; overlapping lines merge some cells, making it unclear whether certain compartments hold one face or two.\", \"Some colored streaks (orange, white) may be separate drawing layers or part of the face outlines—their role is visually ambiguous.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

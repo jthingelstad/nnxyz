@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:33.073412-05:00",
+    "usage": {
+      "inputTokens": 6496,
+      "outputTokens": 743,
+      "totalTokens": 7239,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13190
+    },
+    "requestId": "4a4cb4e4-22be-4a27-8e49-9af44f2d391b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark-gray ovoid head fills the left two-thirds of the teal field; yellow coiled loops crowd its left edge and a dense yellow-orange wave runs across the top.\",\n    \"The right eye socket holds a sunflower-like form—orange petals radiating from a dark center—while the left socket contains a tightly wound spiral in black and brown.\",\n    \"White scribble lines cross the gray head mass in loose arcs; a horizontal red slash and a serrated dark band mark the brow, and a small red-outlined rectangle sits near the lower jaw.\"\n  ],\n  \"reading\": \"Two mismatched eye forms—one a radiating flower shape, one a tight coil—give the head an off-balance, watchful feeling. The teal field stays open while the head absorbs layer after layer of line, making the figure feel dense and pressured against its own calm background. The serrated brow and the small boxed shape near the jaw read as contained agitation rather than open expression.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work shares the teal ground seen in nnotb #197 from a different collection—a color link the collector connects to nnxyz's broader visual range. Title neighbors #97 and #99 use flat purple and flat yellow grounds, making the teal here a distinct choice across these three owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4\",\n      \"reason\": \"Both works share the same teal ground color and use yellow looping lines as a recurring mark, offering a direct color and line comparison across two different owned series.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo\",\n      \"reason\": \"The title neighbor #97 uses a flat single-color ground and bold rectangular eye forms, contrasting sharply with #98's layered gray head mass and mismatched circular eye shapes.\"\n    }\n  ],\n  \"tags\": [\n    \"teal ground\",\n    \"coiled line forms\",\n    \"radial eye shape\",\n    \"layered gray mass\",\n    \"yellow looping marks\",\n    \"serrated brow band\"\n  ],\n  \"interpretiveTags\": [\n    \"off-balance\",\n    \"contained agitation\",\n    \"watchful\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the two eye forms—one radiating outward, one winding inward—do to how you read the head as a whole?\",\n  \"ambiguities\": [\n    \"The small red-outlined rectangle near the lower jaw is unclear in function—it may be a mouth element or a separate mark layer.\",\n    \"Title-derived order and recorded-creation order align here, but gaps exist elsewhere in the owned subset, so sequence position is not confirmed as strict creation order.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3/image.png",
+        "imageSHA256": "fe3880dc497fd81e7cc28a66b255034f986e00ebb28a95a6b152bdd47994bbb2"
+      },
+      {
+        "artworkId": "QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo/image.png",
+        "imageSHA256": "05047569572b0579a0ac0eef56e37b4a4bc07c4ef6725e0e49ba198460368f90"
+      },
+      {
+        "artworkId": "QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4/image.png",
+        "imageSHA256": "f04d6b2eb90ef8427b9cea0084da2801cf8c3bd25e03cf8d66a21fda1e4cc43b"
+      },
+      {
+        "artworkId": "QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc/image.png",
+        "imageSHA256": "8693d1519b420bbb29a5dd7011dfcd8df2e324c25db0d3c44a23ce3277e40b81"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:40.202570-05:00",
+    "usage": {
+      "inputTokens": 7259,
+      "outputTokens": 958,
+      "totalTokens": 8217,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6779
+    },
+    "requestId": "d8f0bdba-aeb2-4d40-a3d8-7d25f0d12d39",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark-gray ovoid head fills the left two-thirds of the teal field; yellow coiled loops crowd its left edge and a dense yellow-orange wave runs across the top.\",\n    \"The right eye socket holds a sunflower-like form—orange petals radiating from a dark center—while the left socket contains a tightly wound spiral in black and brown.\",\n    \"White scribble lines cross the gray head mass in loose arcs; a horizontal red slash and a serrated dark band mark the brow, and a small red-outlined rectangle sits near the lower jaw.\"\n  ],\n  \"reading\": \"Two mismatched eye forms—one radiating outward, one winding inward—give the head an off-balance, watchful feeling. The teal field stays open while the head absorbs layer after layer of line, making the figure feel dense and pressured against its calm background. The serrated brow and the small boxed shape near the jaw read as contained agitation rather than open expression.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors #97 and #99 use flat purple and flat yellow grounds. The teal ground here also appears in nnotb #197 from a different owned series—a color link the collector connects to nnxyz's broader visual range.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4\",\n      \"reason\": \"Both works share the same teal ground and use yellow looping lines as a recurring mark, offering a direct color and line comparison across two different owned series.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo\",\n      \"reason\": \"Title neighbor #97 uses a flat purple ground with bold rectangular eye forms, contrasting with #98's layered gray head mass and mismatched circular eye shapes.\"\n    }\n  ],\n  \"tags\": [\n    \"teal ground\",\n    \"coiled line forms\",\n    \"radial eye shape\",\n    \"layered gray mass\",\n    \"yellow looping marks\",\n    \"serrated brow band\"\n  ],\n  \"interpretiveTags\": [\n    \"off-balance\",\n    \"contained agitation\",\n    \"watchful\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the two eye forms—one radiating outward, one winding inward—do to how you read the head as a whole?\",\n  \"ambiguities\": [\n    \"The small red-outlined rectangle near the lower jaw is unclear in function—it may be a mouth element or a separate mark layer.\",\n    \"Title-derived order and recorded-creation order align for this work, but gaps exist elsewhere in the owned subset, so sequence position is not confirmed as strict creation order.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: teal ground, yellow coils at left, yellow-orange wave at top, sunflower radial right eye, spiral left eye, white arc lines, red slash, serrated brow band, and red-outlined rectangle near jaw are all visible.\",\n    \"Reading trimmed by two words to land within 55–65 word target; no invented intent or biography present; 'pressured' retained as a reading, not an assertion of intent.\",\n    \"Both comparison connections verified against inspected images: QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4 confirms teal ground and yellow looping lines; QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo confirms flat purple ground and rectangular eye forms as a meaningful contrast.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3/image.png",
+        "imageSHA256": "fe3880dc497fd81e7cc28a66b255034f986e00ebb28a95a6b152bdd47994bbb2"
+      },
+      {
+        "artworkId": "QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo/image.png",
+        "imageSHA256": "05047569572b0579a0ac0eef56e37b4a4bc07c4ef6725e0e49ba198460368f90"
+      },
+      {
+        "artworkId": "QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4/image.png",
+        "imageSHA256": "f04d6b2eb90ef8427b9cea0084da2801cf8c3bd25e03cf8d66a21fda1e4cc43b"
+      },
+      {
+        "artworkId": "QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc/image.png",
+        "imageSHA256": "8693d1519b420bbb29a5dd7011dfcd8df2e324c25db0d3c44a23ce3277e40b81"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large dark-gray ovoid head fills the left two-thirds of the teal field; yellow coiled loops crowd its left edge and a dense yellow-orange wave runs across the top.\", \"The right eye socket holds a sunflower-like form—orange petals radiating from a dark center—while the left socket contains a tightly wound spiral in black and brown.\", \"White scribble lines cross the gray head mass in loose arcs; a horizontal red slash and a serrated dark band mark the brow, and a small red-outlined rectangle sits near the lower jaw.\"], \"reading\": \"Two mismatched eye forms—one a radiating flower shape, one a tight coil—give the head an off-balance, watchful feeling. The teal field stays open while the head absorbs layer after layer of line, making the figure feel dense and pressured against its own calm background. The serrated brow and the small boxed shape near the jaw read as contained agitation rather than open expression.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work shares the teal ground seen in nnotb #197 from a different collection—a color link the collector connects to nnxyz's broader visual range. Title neighbors #97 and #99 use flat purple and flat yellow grounds, making the teal here a distinct choice across these three owned works.\", \"connections\": [{\"targetArtworkId\": \"QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4\", \"reason\": \"Both works share the same teal ground color and use yellow looping lines as a recurring mark, offering a direct color and line comparison across two different owned series.\"}, {\"targetArtworkId\": \"QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo\", \"reason\": \"The title neighbor #97 uses a flat single-color ground and bold rectangular eye forms, contrasting sharply with #98's layered gray head mass and mismatched circular eye shapes.\"}], \"tags\": [\"teal ground\", \"coiled line forms\", \"radial eye shape\", \"layered gray mass\", \"yellow looping marks\", \"serrated brow band\"], \"interpretiveTags\": [\"off-balance\", \"contained agitation\", \"watchful\"], \"lookingQuestion\": \"What does the difference between the two eye forms—one radiating outward, one winding inward—do to how you read the head as a whole?\", \"ambiguities\": [\"The small red-outlined rectangle near the lower jaw is unclear in function—it may be a mouth element or a separate mark layer.\", \"Title-derived order and recorded-creation order align here, but gaps exist elsewhere in the owned subset, so sequence position is not confirmed as strict creation order.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

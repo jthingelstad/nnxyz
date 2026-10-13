@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:06:52.637303-05:00",
+    "usage": {
+      "inputTokens": 6074,
+      "outputTokens": 693,
+      "totalTokens": 6767,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19219
+    },
+    "requestId": "daa4bf78-4edd-47ec-8832-cc42a8e564cd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head dominates the left side, filled with tangled pink, yellow, and teal scribbles, wearing blocky red glasses with three rectangular openings.\",\n    \"A small orange figure in the lower right holds up a sign with heart symbols; it wears its own pair of red rectangular glasses, mirroring the larger head.\",\n    \"Short pale blue dashes scatter across the bright blue background like rain or confetti, while two pizza-slice shapes float near the upper right.\"\n  ],\n  \"reading\": \"The oversized head lunges forward with bared teeth and a raised hand, its interior a tangle of competing colors that reads as frantic or overstimulated. Two floating pizza slices and the small sign-holding companion add a cartoonish narrative layer. The doubling of the red glasses—large figure and small—creates a visual echo that can feel affectionate or absurd. Rain-like dashes soften the scene with a sense of atmosphere unusual in this artist's work.\",\n  \"contextAngle\": \"In the owned subset, this piece sits between \\\"pizza pizza pizza day\\\" and \\\"nnxyz #48\\\" by recorded creation order, suggesting a cluster of pizza-titled works. Its readable figures and narrative staging contrast with the denser, more abstract faces found across the nnotb holdings.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\",\n      \"reason\": \"Both share a bright blue background and a face built from layered scribbles, but \\\"nnotb #173\\\" fills the frame edge-to-edge while this work isolates its figures in open space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw\",\n      \"reason\": \"Both feature recognizable character-like figures with distinct body outlines, unlike the all-over abstraction in many nnotb works, though \\\"nnotb #9\\\" uses warm tones where this piece relies on blue.\"\n    }\n  ],\n  \"tags\": [\n    \"face with glasses\",\n    \"pizza shapes\",\n    \"paired figures\",\n    \"blue background with dashes\",\n    \"heart symbols\",\n    \"open-mouth expression\"\n  ],\n  \"lookingQuestion\": \"How does the small orange figure at lower right change your reading of the large head—does it seem like a companion, an audience, or something else entirely?\",\n  \"ambiguities\": [\n    \"The floating objects near the upper right appear to be pizza slices, consistent with the title, but their shapes are loose enough to be read otherwise.\",\n    \"Whether the pale blue dashes represent rain, confetti, or a purely decorative texture is not determinable from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH/image.png",
+        "imageSHA256": "7b6d1775bbf2ebb96153886c0b42c6e0bd0414a352762a454d20f143688ce7db"
+      },
+      {
+        "artworkId": "QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1/image.png",
+        "imageSHA256": "64b4e4a11370b25f2fce44a13ded0c5cfbde4617845c0be396fcbe6b7c9246e0"
+      },
+      {
+        "artworkId": "QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1/image.png",
+        "imageSHA256": "d147cba4feac5802491e612ac876b161a8146807d2a80b4ddbb847b909f84e94"
+      },
+      {
+        "artworkId": "QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw/image.png",
+        "imageSHA256": "fd29e4090e515b0dcfbb1deef000b9f67e769ad949551adbeb6e683a1d7dafed"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:05.015657-05:00",
+    "usage": {
+      "inputTokens": 6799,
+      "outputTokens": 817,
+      "totalTokens": 7616,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12278
+    },
+    "requestId": "c5f41277-104b-4240-865c-b9d1f4edd01e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head fills the left half, its interior packed with tangled pink, yellow, and teal lines, topped by spiky black-and-yellow hair and wearing blocky red glasses with three rectangular openings.\",\n    \"A small orange figure in the lower right holds up a sign marked with heart symbols; it wears its own pair of red rectangular glasses, echoing the larger head.\",\n    \"Short pale blue dashes scatter across the bright blue background, while two pizza-slice shapes with red toppings float near the upper right corner.\"\n  ],\n  \"reading\": \"The oversized head lunges forward with bared teeth and a raised hand, its interior a tangle of competing colors that reads as frantic or overstimulated. Two floating pizza slices and the small sign-holding companion add a cartoonish narrative layer. The doubling of the red glasses—large and small figure—creates a visual echo that can feel affectionate or absurd. Scattered blue dashes lend an atmospheric softness unusual among this artist's works in the collection.\",\n  \"contextAngle\": \"In the owned subset, this piece sits next to \\\"pizza pizza pizza day\\\" and \\\"nnxyz #48\\\" by recorded creation order, suggesting a cluster of pizza-titled works. Its readable figures and open staging contrast with the denser, more abstract faces across the nnotb holdings.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\",\n      \"reason\": \"Both share a bright blue background and a face built from layered scribbles, but \\\"nnotb #173\\\" fills the frame edge-to-edge while this work isolates its figures in open space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw\",\n      \"reason\": \"Both feature recognizable character-like figures with distinct body outlines, unlike the all-over abstraction in many nnotb works, though \\\"nnotb #9\\\" uses warm tones where this piece relies on blue.\"\n    }\n  ],\n  \"tags\": [\n    \"face with glasses\",\n    \"pizza shapes\",\n    \"paired figures\",\n    \"blue background with dashes\",\n    \"heart symbols\",\n    \"open-mouth expression\"\n  ],\n  \"lookingQuestion\": \"How does the small orange figure at lower right change your reading of the large head—does it seem like a companion, an audience, or something else entirely?\",\n  \"ambiguities\": [\n    \"The floating objects near the upper right appear to be pizza slices consistent with the title, but their shapes are loose enough to be read otherwise.\",\n    \"Whether the pale blue dashes represent rain, confetti, or a purely decorative texture is not determinable from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed three rectangular openings in the red glasses on the large head and matching red glasses on the small orange figure by re-inspecting the image.\",\n    \"Removed draft phrase 'unusual in this artist's work' (implies knowledge of full catalogue) and replaced with 'unusual among this artist's works in the collection.'\",\n    \"Reading trimmed from 80 words to 65 to stay within target range; context trimmed to 38 words.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH/image.png",
+        "imageSHA256": "7b6d1775bbf2ebb96153886c0b42c6e0bd0414a352762a454d20f143688ce7db"
+      },
+      {
+        "artworkId": "QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1/image.png",
+        "imageSHA256": "64b4e4a11370b25f2fce44a13ded0c5cfbde4617845c0be396fcbe6b7c9246e0"
+      },
+      {
+        "artworkId": "QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1/image.png",
+        "imageSHA256": "d147cba4feac5802491e612ac876b161a8146807d2a80b4ddbb847b909f84e94"
+      },
+      {
+        "artworkId": "QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw/image.png",
+        "imageSHA256": "fd29e4090e515b0dcfbb1deef000b9f67e769ad949551adbeb6e683a1d7dafed"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large head dominates the left side, filled with tangled pink, yellow, and teal scribbles, wearing blocky red glasses with three rectangular openings.\", \"A small orange figure in the lower right holds up a sign with heart symbols; it wears its own pair of red rectangular glasses, mirroring the larger head.\", \"Short pale blue dashes scatter across the bright blue background like rain or confetti, while two pizza-slice shapes float near the upper right.\"], \"reading\": \"The oversized head lunges forward with bared teeth and a raised hand, its interior a tangle of competing colors that reads as frantic or overstimulated. Two floating pizza slices and the small sign-holding companion add a cartoonish narrative layer. The doubling of the red glasses—large figure and small—creates a visual echo that can feel affectionate or absurd. Rain-like dashes soften the scene with a sense of atmosphere unusual in this artist's work.\", \"contextAngle\": \"In the owned subset, this piece sits between \\\"pizza pizza pizza day\\\" and \\\"nnxyz #48\\\" by recorded creation order, suggesting a cluster of pizza-titled works. Its readable figures and narrative staging contrast with the denser, more abstract faces found across the nnotb holdings.\", \"connections\": [{\"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\", \"reason\": \"Both share a bright blue background and a face built from layered scribbles, but \\\"nnotb #173\\\" fills the frame edge-to-edge while this work isolates its figures in open space.\"}, {\"targetArtworkId\": \"QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw\", \"reason\": \"Both feature recognizable character-like figures with distinct body outlines, unlike the all-over abstraction in many nnotb works, though \\\"nnotb #9\\\" uses warm tones where this piece relies on blue.\"}], \"tags\": [\"face with glasses\", \"pizza shapes\", \"paired figures\", \"blue background with dashes\", \"heart symbols\", \"open-mouth expression\"], \"lookingQuestion\": \"How does the small orange figure at lower right change your reading of the large head—does it seem like a companion, an audience, or something else entirely?\", \"ambiguities\": [\"The floating objects near the upper right appear to be pizza slices, consistent with the title, but their shapes are loose enough to be read otherwise.\", \"Whether the pale blue dashes represent rain, confetti, or a purely decorative texture is not determinable from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

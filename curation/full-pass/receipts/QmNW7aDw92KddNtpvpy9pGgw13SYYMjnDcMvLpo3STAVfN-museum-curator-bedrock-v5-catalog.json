@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:45.380351-05:00",
+    "usage": {
+      "inputTokens": 6270,
+      "outputTokens": 726,
+      "totalTokens": 6996,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12731
+    },
+    "requestId": "489c3f41-0b94-4570-9185-f456b6757764",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded rectangular outline, doubled in rust-orange and blue, frames the central face shape against a dark teal-grey background with loose black marks at the edges.\",\n    \"Two eye forms sit in the upper half, each ringed by short radiating spikes in light blue; amber-orange irises glow at their centers against white.\",\n    \"A lower rectangular block holds four white vertical bars suggesting teeth, flanked by yellow lines that drop below the chin and trail off the bottom edge.\"\n  ],\n  \"reading\": \"The face here is built from hard-edged rectangles rather than curves, giving it a locked, mechanical feel that sits uneasily with the warm amber glow at each eye. White arcs and yellow lines run loose behind the structure, as though something fluid is trapped inside a rigid frame. The spiked rings around the eyes read as alert or wary—an emotional charge the rigid geometry keeps at a distance.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #62 and #64. Where #62 uses layered warm tones to build a naturalistic face, #63 replaces that softness with hard outlines and a dark ground, and #64 swings to a saturated lime field—showing the range the collector values.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS\",\n      \"reason\": \"Title neighbor #64 shares the rectangular face outline and white vertical tooth bars, but floods the ground with bright lime rather than dark teal, making the two a direct color-mood contrast on the same structural idea.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7\",\n      \"reason\": \"nnotb #27 uses the same spiked radiating lines around its eye sockets and a similar dark ground, making the spiky eye treatment a point of formal comparison across two different series in the owned collection.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular face outline\",\n    \"spiked eye rings\",\n    \"amber iris\",\n    \"white vertical bars\",\n    \"dark teal ground\",\n    \"layered line work\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical mood\",\n    \"contained tension\"\n  ],\n  \"lookingQuestion\": \"The yellow lines descend from the chin and continue below the face structure—where do they lead, and how does that affect the sense of where the figure ends?\",\n  \"ambiguities\": [\n    \"The lower yellow lines and rectangular block could read as a neck or chin extension, but their exact structural role is unclear from the image alone.\",\n    \"Title-derived and recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency does not confirm sequential making.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN/image.png",
+        "imageSHA256": "83a88763b3c818d726d9202d8bb8a99bf2e7fc101f0007166589ded1732ee166"
+      },
+      {
+        "artworkId": "QmQyf9zyoCxF9oL639RAcXR731S5T56S89rAcaSzNxge8Y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQyf9zyoCxF9oL639RAcXR731S5T56S89rAcaSzNxge8Y/image.png",
+        "imageSHA256": "ea6412d8b796d77170c4a14c2988d6614ea7046970f1b981b3da019e6e4285c3"
+      },
+      {
+        "artworkId": "QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7/image.png",
+        "imageSHA256": "69fbfc56f19af629bff1a818da49ed68641babae3f646917e55a5bd2caa57631"
+      },
+      {
+        "artworkId": "QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS/image.png",
+        "imageSHA256": "b36931cf15e053d6eed1da22cbdacc2c4f9c40c856f7097b3c5306fbe532b440"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:52.247309-05:00",
+    "usage": {
+      "inputTokens": 7018,
+      "outputTokens": 938,
+      "totalTokens": 7956,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6529
+    },
+    "requestId": "7aad3608-fc02-4548-848e-8ff00e00cc57",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded rectangular outline, doubled in rust-orange and blue, frames the central face shape against a dark teal-grey background with loose black marks at the edges.\",\n    \"Two eye forms sit in the upper half, each ringed by short radiating spikes in light blue; amber-orange irises glow at their centers against white.\",\n    \"A lower rectangular block holds four white vertical bars, flanked by yellow lines that drop below the chin and trail off the bottom edge.\"\n  ],\n  \"reading\": \"The face is built from hard-edged rectangles rather than curves, giving it a locked, mechanical feel that sits uneasily with the warm amber glow at each eye. White arcs and yellow lines run loose behind the structure, as though something fluid is trapped inside a rigid frame. The spiked rings around the eyes read as alert or wary—an emotional charge the rigid geometry keeps at a distance.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #62 and #64. Where #62 uses layered warm tones to build a naturalistic face, #63 replaces that softness with hard outlines and a dark ground, and #64 swings to saturated lime—showing the tonal range the collector values.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS\",\n      \"reason\": \"Title neighbor #64 shares the rectangular face outline and white vertical tooth bars, but floods the ground with bright lime rather than dark teal, making the two a direct color-mood contrast on the same structural idea.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7\",\n      \"reason\": \"nnotb #27 uses spiked radiating lines around its eye sockets and a similarly dark ground, making the spiky eye treatment a point of formal comparison across two series in the owned collection.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular face outline\",\n    \"spiked eye rings\",\n    \"amber iris\",\n    \"white vertical bars\",\n    \"dark teal ground\",\n    \"layered line work\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical mood\",\n    \"contained tension\"\n  ],\n  \"lookingQuestion\": \"The yellow lines descend from the chin and continue below the face structure—where do they lead, and how does that affect the sense of where the figure ends?\",\n  \"ambiguities\": [\n    \"The lower yellow lines and rectangular block could read as a neck or chin extension, but their exact structural role is unclear from the image alone.\",\n    \"Title-derived and recorded-creation order align for this work, but gaps exist elsewhere in the owned subset, so adjacency does not confirm sequential making.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: rust-orange and blue double outline, spiked blue eye rings with amber irises, and white vertical bars with trailing yellow lines are all visible.\",\n    \"Comparison with QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS (#64) confirmed: rectangular face outline and white tooth bars present in both; lime ground versus dark teal contrast is accurate.\",\n    \"Comparison with QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7 (nnotb #27) confirmed: spiked radiating lines around eye sockets and dark ground are visible in that image; no unsupported intent or subject identity added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN/image.png",
+        "imageSHA256": "83a88763b3c818d726d9202d8bb8a99bf2e7fc101f0007166589ded1732ee166"
+      },
+      {
+        "artworkId": "QmQyf9zyoCxF9oL639RAcXR731S5T56S89rAcaSzNxge8Y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQyf9zyoCxF9oL639RAcXR731S5T56S89rAcaSzNxge8Y/image.png",
+        "imageSHA256": "ea6412d8b796d77170c4a14c2988d6614ea7046970f1b981b3da019e6e4285c3"
+      },
+      {
+        "artworkId": "QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7/image.png",
+        "imageSHA256": "69fbfc56f19af629bff1a818da49ed68641babae3f646917e55a5bd2caa57631"
+      },
+      {
+        "artworkId": "QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS/image.png",
+        "imageSHA256": "b36931cf15e053d6eed1da22cbdacc2c4f9c40c856f7097b3c5306fbe532b440"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A rounded rectangular outline, doubled in rust-orange and blue, frames the central face shape against a dark teal-grey background with loose black marks at the edges.\", \"Two eye forms sit in the upper half, each ringed by short radiating spikes in light blue; amber-orange irises glow at their centers against white.\", \"A lower rectangular block holds four white vertical bars suggesting teeth, flanked by yellow lines that drop below the chin and trail off the bottom edge.\"], \"reading\": \"The face here is built from hard-edged rectangles rather than curves, giving it a locked, mechanical feel that sits uneasily with the warm amber glow at each eye. White arcs and yellow lines run loose behind the structure, as though something fluid is trapped inside a rigid frame. The spiked rings around the eyes read as alert or wary—an emotional charge the rigid geometry keeps at a distance.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #62 and #64. Where #62 uses layered warm tones to build a naturalistic face, #63 replaces that softness with hard outlines and a dark ground, and #64 swings to a saturated lime field—showing the range the collector values.\", \"connections\": [{\"targetArtworkId\": \"QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS\", \"reason\": \"Title neighbor #64 shares the rectangular face outline and white vertical tooth bars, but floods the ground with bright lime rather than dark teal, making the two a direct color-mood contrast on the same structural idea.\"}, {\"targetArtworkId\": \"QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7\", \"reason\": \"nnotb #27 uses the same spiked radiating lines around its eye sockets and a similar dark ground, making the spiky eye treatment a point of formal comparison across two different series in the owned collection.\"}], \"tags\": [\"rectangular face outline\", \"spiked eye rings\", \"amber iris\", \"white vertical bars\", \"dark teal ground\", \"layered line work\"], \"interpretiveTags\": [\"mechanical mood\", \"contained tension\"], \"lookingQuestion\": \"The yellow lines descend from the chin and continue below the face structure—where do they lead, and how does that affect the sense of where the figure ends?\", \"ambiguities\": [\"The lower yellow lines and rectangular block could read as a neck or chin extension, but their exact structural role is unclear from the image alone.\", \"Title-derived and recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency does not confirm sequential making.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

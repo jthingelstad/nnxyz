@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:06.048249-05:00",
+    "usage": {
+      "inputTokens": 6273,
+      "outputTokens": 801,
+      "totalTokens": 7074,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13318
+    },
+    "requestId": "08098323-e97c-4516-a1e5-3488a23dd9a3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large flat-edged head shape sits against saturated yellow, split down the center into warm red-brown on the left and cool teal-blue on the right, with a white outline separating the form from the background.\",\n    \"Both eye positions are marked by looping pink crossed-oval lines over white circles; a row of small yellow-and-black ringed dots arcs across the forehead and continues down the nose bridge.\",\n    \"In the lower right, a separate small emblem — a dark heart-like shape with crossed X marks and dripping red lines — floats on a thin stem, distinct from the main head.\"\n  ],\n  \"reading\": \"The face splits cleanly into two color fields — warm earth tones on one side, cool blue-green on the other — held together by a shared white border. The looping pink eye marks read as both decorative and unsettling, while the scattered dot row gives the forehead a measured, almost ceremonial feel. The small dripping emblem at lower right sits apart, suggesting a second, quieter presence alongside the main form.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #114 and nnxyz nifty faces #116 in both title order and recorded creation order. Where #114 builds its head from dense overlapping scribble marks on a grey field, #115 uses flat color blocks and a clean white silhouette edge.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmd6CvHq39KJnTAtgzaKubhrfjMaT6f7PF1p8SAjnUjwWD\",\n      \"reason\": \"Both works place crossed-X eye marks at the center of a head form, but #114 buries them inside dense dark scribble texture while #115 floats them as clean pink loops over flat color fields — a direct contrast in surface treatment.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK\",\n      \"reason\": \"nnxyz nifty faces #116 shares the white-outline silhouette approach and a single crossed-X eye mark, but shifts to a magenta field and a tilted, heavily scribbled head mass, showing how the same structural device carries a different weight.\"\n    }\n  ],\n  \"tags\": [\n    \"split-color face\",\n    \"looping crossed-oval eye marks\",\n    \"dot row across forehead\",\n    \"white silhouette outline\",\n    \"floating emblem with drip lines\",\n    \"yellow ground\"\n  ],\n  \"interpretiveTags\": [\n    \"ceremonial feeling\",\n    \"dual presence\"\n  ],\n  \"lookingQuestion\": \"The row of ringed dots runs from the forehead down toward the chin — where exactly does it stop, and does its path follow the color split or cross it?\",\n  \"ambiguities\": [\n    \"The small lower-right emblem contains lettering that reads as 'YAAK' or similar; treated here as image content, not a verified text.\",\n    \"The nnotb #83 comparison image shows no formal overlap with this work's flat-color and dot-row structure, so it was excluded from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcxfKzVygJmpqR9Wr2qnmecW9ieyQqqKnL2SYwh9CrFZU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcxfKzVygJmpqR9Wr2qnmecW9ieyQqqKnL2SYwh9CrFZU/image.png",
+        "imageSHA256": "017ed5b3cade0482c0280c025c2dd05587e654d9e5c8f13b144f56c6ce6bbe85"
+      },
+      {
+        "artworkId": "Qmd6CvHq39KJnTAtgzaKubhrfjMaT6f7PF1p8SAjnUjwWD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd6CvHq39KJnTAtgzaKubhrfjMaT6f7PF1p8SAjnUjwWD/image.png",
+        "imageSHA256": "c8e47d47380cf093ad96cafe7753c17dde5c2f487682c9e82688034df9808df2"
+      },
+      {
+        "artworkId": "Qmf2PcD2Y71i8jrN9GuL7HrW4JVUzMAYcvUShQjhHwXAkm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf2PcD2Y71i8jrN9GuL7HrW4JVUzMAYcvUShQjhHwXAkm/image.png",
+        "imageSHA256": "99b5fb3ae930f91a8924c7705b6cbf15cdc55182ee58a4746d9c5da310828601"
+      },
+      {
+        "artworkId": "QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK/image.png",
+        "imageSHA256": "787af10d727472001660fdcc59524af7a602e97d3f544d798b65485175021278"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:12.814720-05:00",
+    "usage": {
+      "inputTokens": 7096,
+      "outputTokens": 977,
+      "totalTokens": 8073,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6688
+    },
+    "requestId": "e6b7c472-92bb-451a-9125-2553be70dadf",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large flat-edged head shape sits against saturated yellow, split down the center into warm red-brown on the left and cool teal-blue on the right, with a white outline separating the form from the background.\",\n    \"Both eye positions carry looping pink crossed-oval lines over white circles; a row of small yellow-and-black ringed dots arcs across the forehead and continues down the nose bridge toward the chin.\",\n    \"In the lower right, a separate small dark heart-like emblem with crossed X marks and dripping red lines floats on a thin stem, distinct from the main head form.\"\n  ],\n  \"reading\": \"The face divides into two color fields — warm earth tones on one side, cool blue-green on the other — held together by a shared white border. The looping pink eye marks read as both decorative and unsettling, while the dot row gives the forehead a measured, almost ceremonial quality. The small dripping emblem at lower right sits apart, a second quieter presence alongside the main form.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #114 and nnxyz nifty faces #116 in both title and recorded creation order. Where #114 builds its head from dense overlapping scribble marks on a grey field, #115 uses flat color blocks and a clean white silhouette edge.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmd6CvHq39KJnTAtgzaKubhrfjMaT6f7PF1p8SAjnUjwWD\",\n      \"reason\": \"Both works place crossed-X eye marks at the center of a head form, but #114 buries them in dense dark scribble texture while #115 floats them as clean pink loops over flat color fields — a direct contrast in surface treatment.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK\",\n      \"reason\": \"#116 shares the white-outline silhouette and a single crossed-X eye mark, but shifts to a magenta field and a heavily scribbled head mass, showing how the same structural device carries a different visual weight.\"\n    }\n  ],\n  \"tags\": [\n    \"split-color face\",\n    \"looping crossed-oval eye marks\",\n    \"dot row across forehead\",\n    \"white silhouette outline\",\n    \"floating emblem with drip lines\",\n    \"yellow ground\"\n  ],\n  \"interpretiveTags\": [\n    \"ceremonial feeling\",\n    \"dual presence\"\n  ],\n  \"lookingQuestion\": \"The row of ringed dots runs from the forehead downward — where exactly does it stop, and does its path follow the color split or cross it?\",\n  \"ambiguities\": [\n    \"The small lower-right emblem contains lettering that reads as 'YAAK' or similar; treated as image content, not verified text.\",\n    \"nnotb #83 shows no formal overlap with this work's flat-color and dot-row structure and was excluded from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: split warm/cool color fields, pink looped eye marks over white circles, dot row, white outline, and lower-right dripping emblem are all visibly present.\",\n    \"Comparison with Qmd6CvHq39KJnTAtgzaKubhrfjMaT6f7PF1p8SAjnUjwWD confirmed: crossed-X eye marks visible in both works; contrast in surface treatment (scribble vs. flat) is accurate.\",\n    \"Comparison with QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK confirmed: white silhouette outline and single crossed-X eye mark present; magenta field and scribbled mass accurately described; no invented claims added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcxfKzVygJmpqR9Wr2qnmecW9ieyQqqKnL2SYwh9CrFZU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcxfKzVygJmpqR9Wr2qnmecW9ieyQqqKnL2SYwh9CrFZU/image.png",
+        "imageSHA256": "017ed5b3cade0482c0280c025c2dd05587e654d9e5c8f13b144f56c6ce6bbe85"
+      },
+      {
+        "artworkId": "Qmd6CvHq39KJnTAtgzaKubhrfjMaT6f7PF1p8SAjnUjwWD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd6CvHq39KJnTAtgzaKubhrfjMaT6f7PF1p8SAjnUjwWD/image.png",
+        "imageSHA256": "c8e47d47380cf093ad96cafe7753c17dde5c2f487682c9e82688034df9808df2"
+      },
+      {
+        "artworkId": "Qmf2PcD2Y71i8jrN9GuL7HrW4JVUzMAYcvUShQjhHwXAkm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf2PcD2Y71i8jrN9GuL7HrW4JVUzMAYcvUShQjhHwXAkm/image.png",
+        "imageSHA256": "99b5fb3ae930f91a8924c7705b6cbf15cdc55182ee58a4746d9c5da310828601"
+      },
+      {
+        "artworkId": "QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK/image.png",
+        "imageSHA256": "787af10d727472001660fdcc59524af7a602e97d3f544d798b65485175021278"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large flat-edged head shape sits against saturated yellow, split down the center into warm red-brown on the left and cool teal-blue on the right, with a white outline separating the form from the background.\", \"Both eye positions are marked by looping pink crossed-oval lines over white circles; a row of small yellow-and-black ringed dots arcs across the forehead and continues down the nose bridge.\", \"In the lower right, a separate small emblem — a dark heart-like shape with crossed X marks and dripping red lines — floats on a thin stem, distinct from the main head.\"], \"reading\": \"The face splits cleanly into two color fields — warm earth tones on one side, cool blue-green on the other — held together by a shared white border. The looping pink eye marks read as both decorative and unsettling, while the scattered dot row gives the forehead a measured, almost ceremonial feel. The small dripping emblem at lower right sits apart, suggesting a second, quieter presence alongside the main form.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #114 and nnxyz nifty faces #116 in both title order and recorded creation order. Where #114 builds its head from dense overlapping scribble marks on a grey field, #115 uses flat color blocks and a clean white silhouette edge.\", \"connections\": [{\"targetArtworkId\": \"Qmd6CvHq39KJnTAtgzaKubhrfjMaT6f7PF1p8SAjnUjwWD\", \"reason\": \"Both works place crossed-X eye marks at the center of a head form, but #114 buries them inside dense dark scribble texture while #115 floats them as clean pink loops over flat color fields — a direct contrast in surface treatment.\"}, {\"targetArtworkId\": \"QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK\", \"reason\": \"nnxyz nifty faces #116 shares the white-outline silhouette approach and a single crossed-X eye mark, but shifts to a magenta field and a tilted, heavily scribbled head mass, showing how the same structural device carries a different weight.\"}], \"tags\": [\"split-color face\", \"looping crossed-oval eye marks\", \"dot row across forehead\", \"white silhouette outline\", \"floating emblem with drip lines\", \"yellow ground\"], \"interpretiveTags\": [\"ceremonial feeling\", \"dual presence\"], \"lookingQuestion\": \"The row of ringed dots runs from the forehead down toward the chin — where exactly does it stop, and does its path follow the color split or cross it?\", \"ambiguities\": [\"The small lower-right emblem contains lettering that reads as 'YAAK' or similar; treated here as image content, not a verified text.\", \"The nnotb #83 comparison image shows no formal overlap with this work's flat-color and dot-row structure, so it was excluded from connections.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:07.515467-05:00",
+    "usage": {
+      "inputTokens": 6003,
+      "outputTokens": 858,
+      "totalTokens": 6861,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13460
+    },
+    "requestId": "2870117e-4972-498f-955c-2e8057b0f88d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pink outline encloses a flat frontal head shape; the left eye socket holds a red concentric spiral, while the right socket contains a yellow sun-burst ring with a crossed circle at its center.\",\n    \"Yellow, red, and light-blue zigzag lines run along the top and bottom edges of the head, and a coiled pink tendril extends from the right side; a horizontal white spiral rod projects outward from the mouth area.\",\n    \"The mouth zone shows white block teeth set against red zigzag borders, with a sky-blue lower jaw; a small pink grid block sits below the chin at lower right, and a dark artist mark appears at lower left.\"\n  ],\n  \"reading\": \"Two mismatched eye forms — one a tight red spiral, one a sun ring with a crossed center — pull the gaze in opposite directions across a flat blue-and-pink face. The zigzag borders that frame the mouth read as both decoration and agitation. A coiled rod extending from the lips adds a mechanical note that sits uneasily beside the organic spiral eye. The overall mood feels wired and slightly absurd rather than threatening.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #277 and nnxyz nnotb #279. Where #277 works almost entirely in dark silhouette against a green field, #278 floods the same frontal head format with high-key pink, blue, and yellow — a sharp tonal reversal between adjacent titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY\",\n      \"reason\": \"nnxyz nnotb #279 shares the frontal head format, a sun-burst eye motif, and red spiral eye, but replaces the slate-blue ground with a dense warm-yellow and purple field, making the two a direct color-temperature contrast on the same structural template.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZasmAXaFJcaszAXWDrS7gGrwTUZ13KWze6hcgHn9dU2A\",\n      \"reason\": \"nnxyz nnotb #277 uses the same zigzag line vocabulary along facial edges but confines it to a near-black silhouette, so the two works show how the same mark type reads very differently depending on whether it sits against dark or saturated-light grounds.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal head form\",\n    \"concentric spiral eye\",\n    \"sun-burst ring\",\n    \"zigzag border lines\",\n    \"coiled rod projection\",\n    \"block teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"wired\",\n    \"absurd\",\n    \"mechanical-organic tension\"\n  ],\n  \"lookingQuestion\": \"The two eye forms use completely different shapes — what does the difference in their internal line patterns do to how you move between the left and right sides of the face?\",\n  \"ambiguities\": [\n    \"The white horizontal coiled element at the mouth could be read as a tool, a tongue extension, or a purely abstract mark; no supplied evidence resolves which reading is supported.\",\n    \"The rawblocks #40 comparison image shows a denser, more layered composition with a pink ground; the formal overlap with #278 is limited to shared pink tones and a frontal head, which is too weak a basis for a meaningful connection, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC/image.png",
+        "imageSHA256": "47e4c6ae75fcb52b87f4c2c76c541d54413c8b99f314c97d1aa8d19e514404e3"
+      },
+      {
+        "artworkId": "QmZasmAXaFJcaszAXWDrS7gGrwTUZ13KWze6hcgHn9dU2A",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZasmAXaFJcaszAXWDrS7gGrwTUZ13KWze6hcgHn9dU2A/image.png",
+        "imageSHA256": "56bd33f466ab85c97b48a074bbd20c5fe461390f23afbf36b82f6a134f52d48f"
+      },
+      {
+        "artworkId": "QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe/image.png",
+        "imageSHA256": "4432232fae9ee81bd00fa0e245871284775ab1e78693658130f4560f53083d2f"
+      },
+      {
+        "artworkId": "QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY/image.png",
+        "imageSHA256": "4d131bb431f780e0f4262e10fed6568a5a6b1ef92ae7fe783f2e51b74aafbf28"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:14.584835-05:00",
+    "usage": {
+      "inputTokens": 6881,
+      "outputTokens": 985,
+      "totalTokens": 7866,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7011
+    },
+    "requestId": "7244280a-c005-44aa-b0c4-4e6c604ba8cb",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pink outline encloses a flat frontal head shape; the left eye socket holds a red concentric spiral, while the right socket contains a yellow sun-burst ring with a crossed circle at its center.\",\n    \"Yellow, red, and light-blue zigzag lines run along the top and bottom edges of the head, and a coiled pink tendril extends from the right side; a horizontal white coiled rod projects outward from the mouth area at right.\",\n    \"The mouth zone shows white block teeth set against red zigzag borders with a sky-blue lower jaw; a small pink grid block sits below the chin at lower right, and a dark artist mark appears at lower left.\"\n  ],\n  \"reading\": \"Two mismatched eye forms — a tight red spiral on the left, a sun ring with a crossed center on the right — pull attention in opposite directions across a flat blue-and-pink face. Zigzag borders framing the mouth read as both decoration and agitation. A coiled white rod extending from the lips adds a mechanical note that sits uneasily beside the organic spiral eye. The mood feels wired and slightly absurd.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #277 and nnxyz nnotb #279. Where #277 works almost entirely in dark silhouette against a green field, #278 floods the same frontal head format with high-key pink, blue, and yellow — a sharp tonal reversal between adjacent titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY\",\n      \"reason\": \"nnxyz nnotb #279 shares the frontal head format and both a sun-burst eye and a red spiral eye, but replaces the slate-blue ground with a dense warm-yellow and purple field, making the two a direct color-temperature contrast on the same structural template.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZasmAXaFJcaszAXWDrS7gGrwTUZ13KWze6hcgHn9dU2A\",\n      \"reason\": \"nnxyz nnotb #277 uses the same zigzag line vocabulary along facial edges but confines it to a near-black silhouette, showing how the same mark type reads very differently against dark versus saturated-light grounds.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal head form\",\n    \"concentric spiral eye\",\n    \"sun-burst ring\",\n    \"zigzag border lines\",\n    \"coiled rod projection\",\n    \"block teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"wired\",\n    \"absurd\",\n    \"mechanical-organic tension\"\n  ],\n  \"lookingQuestion\": \"The two eye forms use completely different internal line patterns — what does that difference do to how you move between the left and right sides of the face?\",\n  \"ambiguities\": [\n    \"The white horizontal coiled element at the mouth could be read as a tool, a tongue extension, or a purely abstract mark; no supplied evidence resolves this.\",\n    \"rawblocks #40 was inspected and omitted: its formal overlap with #278 is limited to shared pink tones and a frontal head, too weak for a meaningful connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed against primary image: red spiral left eye, yellow sun-burst right eye, zigzag borders, coiled pink tendril right side, white coiled rod at mouth, sky-blue jaw, pink grid block lower right — all visible and accurately described.\",\n    \"Comparison #279 confirmed: frontal head, sun-burst eye, red spiral eye, and warm-yellow/purple ground visible in that image, supporting the color-temperature contrast claim.\",\n    \"Comparison #277 confirmed: near-black silhouette on green ground with yellow zigzag edges visible; zigzag contrast claim is supported. rawblocks #40 correctly excluded as connection too weak.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC/image.png",
+        "imageSHA256": "47e4c6ae75fcb52b87f4c2c76c541d54413c8b99f314c97d1aa8d19e514404e3"
+      },
+      {
+        "artworkId": "QmZasmAXaFJcaszAXWDrS7gGrwTUZ13KWze6hcgHn9dU2A",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZasmAXaFJcaszAXWDrS7gGrwTUZ13KWze6hcgHn9dU2A/image.png",
+        "imageSHA256": "56bd33f466ab85c97b48a074bbd20c5fe461390f23afbf36b82f6a134f52d48f"
+      },
+      {
+        "artworkId": "QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe/image.png",
+        "imageSHA256": "4432232fae9ee81bd00fa0e245871284775ab1e78693658130f4560f53083d2f"
+      },
+      {
+        "artworkId": "QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY/image.png",
+        "imageSHA256": "4d131bb431f780e0f4262e10fed6568a5a6b1ef92ae7fe783f2e51b74aafbf28"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A pink outline encloses a flat frontal head shape; the left eye socket holds a red concentric spiral, while the right socket contains a yellow sun-burst ring with a crossed circle at its center.\", \"Yellow, red, and light-blue zigzag lines run along the top and bottom edges of the head, and a coiled pink tendril extends from the right side; a horizontal white spiral rod projects outward from the mouth area.\", \"The mouth zone shows white block teeth set against red zigzag borders, with a sky-blue lower jaw; a small pink grid block sits below the chin at lower right, and a dark artist mark appears at lower left.\"], \"reading\": \"Two mismatched eye forms — one a tight red spiral, one a sun ring with a crossed center — pull the gaze in opposite directions across a flat blue-and-pink face. The zigzag borders that frame the mouth read as both decoration and agitation. A coiled rod extending from the lips adds a mechanical note that sits uneasily beside the organic spiral eye. The overall mood feels wired and slightly absurd rather than threatening.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #277 and nnxyz nnotb #279. Where #277 works almost entirely in dark silhouette against a green field, #278 floods the same frontal head format with high-key pink, blue, and yellow — a sharp tonal reversal between adjacent titles.\", \"connections\": [{\"targetArtworkId\": \"QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY\", \"reason\": \"nnxyz nnotb #279 shares the frontal head format, a sun-burst eye motif, and red spiral eye, but replaces the slate-blue ground with a dense warm-yellow and purple field, making the two a direct color-temperature contrast on the same structural template.\"}, {\"targetArtworkId\": \"QmZasmAXaFJcaszAXWDrS7gGrwTUZ13KWze6hcgHn9dU2A\", \"reason\": \"nnxyz nnotb #277 uses the same zigzag line vocabulary along facial edges but confines it to a near-black silhouette, so the two works show how the same mark type reads very differently depending on whether it sits against dark or saturated-light grounds.\"}], \"tags\": [\"frontal head form\", \"concentric spiral eye\", \"sun-burst ring\", \"zigzag border lines\", \"coiled rod projection\", \"block teeth\"], \"interpretiveTags\": [\"wired\", \"absurd\", \"mechanical-organic tension\"], \"lookingQuestion\": \"The two eye forms use completely different shapes — what does the difference in their internal line patterns do to how you move between the left and right sides of the face?\", \"ambiguities\": [\"The white horizontal coiled element at the mouth could be read as a tool, a tongue extension, or a purely abstract mark; no supplied evidence resolves which reading is supported.\", \"The rawblocks #40 comparison image shows a denser, more layered composition with a pink ground; the formal overlap with #278 is limited to shared pink tones and a frontal head, which is too weak a basis for a meaningful connection, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

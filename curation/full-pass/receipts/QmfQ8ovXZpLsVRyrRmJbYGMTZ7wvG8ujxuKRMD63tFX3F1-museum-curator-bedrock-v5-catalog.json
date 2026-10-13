@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:56.173111-05:00",
+    "usage": {
+      "inputTokens": 5903,
+      "outputTokens": 626,
+      "totalTokens": 6529,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11996
+    },
+    "requestId": "32e2e7ca-b70e-4c27-b41b-3a6bc32fd090",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A saturated amber-orange field fills the entire background, crossed by thick diagonal bands of sky blue and a single horizontal white stripe in the lower third.\",\n    \"Large rounded black forms cluster in the center and lower half, dotted with small white circles; scattered spots of teal, magenta, olive, red, and orange-brown break the black masses.\",\n    \"Thin looping yellow lines and finer black scribble-loops layer over everything, running in multiple directions without resolving into a single focal point.\"\n  ],\n  \"reading\": \"The amber ground pushes forward while the black masses press back, creating a tension that reads as noise rather than calm. Blue bands cut across at angles, offering the eye a brief path before the looping yellow lines dissolve it. The scattered dots—white, teal, magenta—feel less like decoration and more like interruptions, keeping any settled reading from forming. The overall mood is loud and unresolved.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #126 and nnxyz nnotb #128. Those two works use sparse pink and dark gold fields respectively—making #127's dense, multi-color layering a marked contrast in the owned sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy\",\n      \"reason\": \"Both works share a saturated amber-orange ground with black marks and scattered blue and teal accents, making the color field the clearest visual link across the two images inspected.\"\n    }\n  ],\n  \"tags\": [\n    \"abstract composition\",\n    \"diagonal banding\",\n    \"looping line overlay\",\n    \"scattered dot pattern\",\n    \"high-saturation orange ground\",\n    \"layered black forms\"\n  ],\n  \"lookingQuestion\": \"Where does your eye land first—on the blue diagonal bands, the white dots inside the black forms, or the looping yellow lines—and what pulls it away from that spot?\",\n  \"ambiguities\": [\n    \"The small mark cluster in the lower-left corner may be a signature or incidental marks; image resolution does not confirm which.\",\n    \"Comparison candidate Qmagk8AdA4SVfb1pw82pg9uzW7xzTVYLAKmPGoC1SK4zfe (#126) shares only title-family proximity; its sparse pink field offers no strong formal connection to #127, so it was omitted from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfQ8ovXZpLsVRyrRmJbYGMTZ7wvG8ujxuKRMD63tFX3F1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfQ8ovXZpLsVRyrRmJbYGMTZ7wvG8ujxuKRMD63tFX3F1/image.png",
+        "imageSHA256": "1eab0de4bc260a3023e5186795b6bff5f81edb36b132148f7b202f92ec82bd2b"
+      },
+      {
+        "artworkId": "Qmagk8AdA4SVfb1pw82pg9uzW7xzTVYLAKmPGoC1SK4zfe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmagk8AdA4SVfb1pw82pg9uzW7xzTVYLAKmPGoC1SK4zfe/image.png",
+        "imageSHA256": "8f3b17673b4cdc5bd3684ce5a1db32e4f957f8f7ace16d463232e50ea8d2ac0f"
+      },
+      {
+        "artworkId": "QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy/image.png",
+        "imageSHA256": "4ca20c7ade799c7191840571757d0af5e11b54e62f585eae8a4eaf3d319ed49b"
+      },
+      {
+        "artworkId": "QmboksMXMDHxaLB6xxdUWvXTLjJV9NmvnzYZbZDbcGXeKU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmboksMXMDHxaLB6xxdUWvXTLjJV9NmvnzYZbZDbcGXeKU/image.png",
+        "imageSHA256": "b5a0b0994d2e998f7393ef7d207005a25bff56ca40e6f73686959ebc2f2fba2f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:01.706568-05:00",
+    "usage": {
+      "inputTokens": 6570,
+      "outputTokens": 820,
+      "totalTokens": 7390,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5471
+    },
+    "requestId": "030b1ae5-9a3e-41a6-bd13-a6adbdbafd32",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A saturated amber-orange field fills the entire background, crossed by thick diagonal bands of sky blue and a single horizontal white stripe in the lower third.\",\n    \"Large rounded black forms cluster in the center and lower half, dotted with small white circles; scattered spots of teal, magenta, olive, red, and orange-brown break the black masses.\",\n    \"Thin looping yellow lines and finer black scribble-loops layer over everything, running in multiple directions without resolving into a single focal point.\"\n  ],\n  \"reading\": \"The amber ground pushes forward while the black masses press back, creating a tension that reads as noise rather than calm. Blue bands cut across at angles, offering the eye a brief path before the looping yellow lines dissolve it. The scattered dots—white, teal, magenta—feel less like decoration and more like interruptions, keeping any settled reading from forming. The overall mood is loud and unresolved.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #126 and nnxyz nnotb #128. Those two works use a sparse pink field and a dark gold-to-black field respectively, making #127's dense multi-color layering a marked contrast in the owned sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy\",\n      \"reason\": \"Both works share a saturated amber-orange ground with heavy black marks and scattered blue and teal accents, making the color field the clearest visual link across the two inspected images.\"\n    }\n  ],\n  \"tags\": [\n    \"abstract composition\",\n    \"diagonal banding\",\n    \"looping line overlay\",\n    \"scattered dot pattern\",\n    \"high-saturation orange ground\",\n    \"layered black forms\"\n  ],\n  \"lookingQuestion\": \"Where does your eye land first—on the blue diagonal bands, the white dots inside the black forms, or the looping yellow lines—and what pulls it away from that spot?\",\n  \"ambiguities\": [\n    \"The small mark cluster in the lower-left corner may be a signature or incidental marks; image resolution does not confirm which.\",\n    \"Comparison candidate Qmagk8AdA4SVfb1pw82pg9uzW7xzTVYLAKmPGoC1SK4zfe (#126) shares only title-family proximity; its sparse pink field offers no strong formal connection to #127, so it was omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"Context angle corrected: #128 inspected image shows a dark gold-to-black field with a creature form, not simply 'dark gold'—description tightened to 'dark gold-to-black field' for accuracy.\",\n    \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy connection confirmed against inspected image: amber-orange ground, heavy black marks, and blue-teal accents are all visibly present in both works.\",\n    \"No invented subject identities, unsupported intent, or stock metaphors detected in draft; word counts for reading (68 words) and contextAngle (44 words) confirmed within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfQ8ovXZpLsVRyrRmJbYGMTZ7wvG8ujxuKRMD63tFX3F1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfQ8ovXZpLsVRyrRmJbYGMTZ7wvG8ujxuKRMD63tFX3F1/image.png",
+        "imageSHA256": "1eab0de4bc260a3023e5186795b6bff5f81edb36b132148f7b202f92ec82bd2b"
+      },
+      {
+        "artworkId": "Qmagk8AdA4SVfb1pw82pg9uzW7xzTVYLAKmPGoC1SK4zfe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmagk8AdA4SVfb1pw82pg9uzW7xzTVYLAKmPGoC1SK4zfe/image.png",
+        "imageSHA256": "8f3b17673b4cdc5bd3684ce5a1db32e4f957f8f7ace16d463232e50ea8d2ac0f"
+      },
+      {
+        "artworkId": "QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy/image.png",
+        "imageSHA256": "4ca20c7ade799c7191840571757d0af5e11b54e62f585eae8a4eaf3d319ed49b"
+      },
+      {
+        "artworkId": "QmboksMXMDHxaLB6xxdUWvXTLjJV9NmvnzYZbZDbcGXeKU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmboksMXMDHxaLB6xxdUWvXTLjJV9NmvnzYZbZDbcGXeKU/image.png",
+        "imageSHA256": "b5a0b0994d2e998f7393ef7d207005a25bff56ca40e6f73686959ebc2f2fba2f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A saturated amber-orange field fills the entire background, crossed by thick diagonal bands of sky blue and a single horizontal white stripe in the lower third.\", \"Large rounded black forms cluster in the center and lower half, dotted with small white circles; scattered spots of teal, magenta, olive, red, and orange-brown break the black masses.\", \"Thin looping yellow lines and finer black scribble-loops layer over everything, running in multiple directions without resolving into a single focal point.\"], \"reading\": \"The amber ground pushes forward while the black masses press back, creating a tension that reads as noise rather than calm. Blue bands cut across at angles, offering the eye a brief path before the looping yellow lines dissolve it. The scattered dots—white, teal, magenta—feel less like decoration and more like interruptions, keeping any settled reading from forming. The overall mood is loud and unresolved.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #126 and nnxyz nnotb #128. Those two works use sparse pink and dark gold fields respectively—making #127's dense, multi-color layering a marked contrast in the owned sequence.\", \"connections\": [{\"targetArtworkId\": \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy\", \"reason\": \"Both works share a saturated amber-orange ground with black marks and scattered blue and teal accents, making the color field the clearest visual link across the two images inspected.\"}], \"tags\": [\"abstract composition\", \"diagonal banding\", \"looping line overlay\", \"scattered dot pattern\", \"high-saturation orange ground\", \"layered black forms\"], \"lookingQuestion\": \"Where does your eye land first—on the blue diagonal bands, the white dots inside the black forms, or the looping yellow lines—and what pulls it away from that spot?\", \"ambiguities\": [\"The small mark cluster in the lower-left corner may be a signature or incidental marks; image resolution does not confirm which.\", \"Comparison candidate Qmagk8AdA4SVfb1pw82pg9uzW7xzTVYLAKmPGoC1SK4zfe (#126) shares only title-family proximity; its sparse pink field offers no strong formal connection to #127, so it was omitted from connections.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

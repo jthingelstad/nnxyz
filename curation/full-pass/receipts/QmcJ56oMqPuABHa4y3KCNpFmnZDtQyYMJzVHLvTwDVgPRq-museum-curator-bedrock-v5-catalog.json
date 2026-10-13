@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:07.749722-05:00",
+    "usage": {
+      "inputTokens": 6287,
+      "outputTokens": 793,
+      "totalTokens": 7080,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13127
+    },
+    "requestId": "0747f938-6cc4-45a0-8ec9-19d1ca998ed3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape sits against a flat saturated yellow background, its surface covered in overlapping lines in green, blue, red, purple, gray, and black that leave no area of white unpatterned.\",\n    \"Two eye sockets are outlined in thick green loops; each contains a white rectangle with a short red horizontal mark at center, giving both eyes the same flat, inward-facing quality.\",\n    \"A wide open mouth near the bottom shows a row of white rectangular teeth outlined in black, framed by a red lip line, with the lower jaw slightly offset to the left of the face's vertical axis.\"\n  ],\n  \"reading\": \"Dense overlapping lines in a dozen colors pack the face's surface until the underlying form reads more as a container than a volume. The two eyes, identical in their red-mark-on-white construction, suggest a mask worn rather than a face inhabited. That wide tooth-filled mouth reads as a grin or a grimace depending on how long you look — the yellow field around it stays warm and loud, refusing to settle the question.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #80 and nnxyz nifty faces #82. Where #80 uses broad color fills and rounded scalloped edges, #81 replaces those calm zones with wall-to-wall line density. The collector links this visual layering to scrimshaw's engraved surface quality.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM\",\n      \"reason\": \"Both works share a frontal face structure with rectangular eye sockets and a tooth-row mouth, but #80 uses large flat color fills and a scalloped outer edge where #81 replaces those calm zones with dense overlapping line work.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3\",\n      \"reason\": \"Title neighbor #82 also uses rectangular eye frames with cross marks inside them, but its near-black face mass against pink creates a stark contrast that #81's multicolor line density does not share.\"\n    }\n  ],\n  \"tags\": [\n    \"dense overlapping line work\",\n    \"rectangular eye sockets\",\n    \"tooth-row mouth\",\n    \"flat saturated yellow background\",\n    \"multi-color mark layering\",\n    \"frontal face structure\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like ambiguity\",\n    \"grin-or-grimace tension\"\n  ],\n  \"lookingQuestion\": \"The two eye marks are nearly identical — does that sameness make the face feel more symmetrical or more unsettled to you?\",\n  \"ambiguities\": [\n    \"The nnotb #30 comparison image shows a full skeletal figure on a teal ground with no close formal parallel to this face-only composition; no connection was selected for it.\",\n    \"Title order and recorded creation order align here, but the metadata notes gaps may exist elsewhere in the owned subset, so adjacency is not confirmed as making sequence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq/image.png",
+        "imageSHA256": "5912247f74da27c048f9ff89ed18c216f975d92f9901c96b057059d9b52efba9"
+      },
+      {
+        "artworkId": "Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM/image.png",
+        "imageSHA256": "eb9f7f0662797170061168cc9ca04144557ec18b30bd12a04c9fb3311b4abeb0"
+      },
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:15.214023-05:00",
+    "usage": {
+      "inputTokens": 7102,
+      "outputTokens": 1000,
+      "totalTokens": 8102,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7209
+    },
+    "requestId": "a9f3d7ac-1e25-4464-948b-a91d953e4af1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape sits against a flat saturated yellow background, its surface covered in overlapping lines in green, blue, red, purple, gray, and black that leave almost no white area unpatterned.\",\n    \"Two eye sockets are outlined in thick green loops; each contains a white rectangle with a short red horizontal mark at center, giving both eyes the same flat, forward-facing quality.\",\n    \"A wide open mouth near the bottom shows a row of white rectangular teeth outlined in black, framed by a red lip line, with the lower jaw visibly offset slightly left of the face's vertical center.\"\n  ],\n  \"reading\": \"Dense overlapping lines in many colors pack the face's surface until the underlying form reads more as a container than a volume. The two eyes, identical in their red-mark-on-white construction, suggest a mask worn rather than a face inhabited. That wide tooth-filled mouth reads as a grin or a grimace depending on how long you look — the yellow field around it stays warm and loud, refusing to settle the question.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #80 and nnxyz nifty faces #82. Where #80 uses broad color fills and a scalloped outer edge, #81 replaces those calmer zones with wall-to-wall line density — the quality the collector links to scrimshaw's engraved surface.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM\",\n      \"reason\": \"Both works use a frontal face with rectangular eye sockets and a tooth-row mouth, but #80 relies on large flat color fills and a scalloped outer edge where #81 covers the same structure with dense overlapping line work.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3\",\n      \"reason\": \"Title neighbor #82 also places rectangular eye frames with cross marks on a flat ground, but its near-black face mass against pink produces a stark two-tone contrast that #81's multicolor line density does not share.\"\n    }\n  ],\n  \"tags\": [\n    \"dense overlapping line work\",\n    \"rectangular eye sockets\",\n    \"tooth-row mouth\",\n    \"flat saturated yellow background\",\n    \"multi-color mark layering\",\n    \"frontal face structure\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like ambiguity\",\n    \"grin-or-grimace tension\"\n  ],\n  \"lookingQuestion\": \"The two eye marks are nearly identical in construction — does that sameness make the face feel more symmetrical or more unsettled to you?\",\n  \"ambiguities\": [\n    \"The nnotb #30 comparison image shows a full skeletal figure on a teal ground with no close formal parallel to this face-only composition; no connection was selected.\",\n    \"Title order and recorded creation order align for this work, but the metadata notes gaps may exist elsewhere in the owned subset, so adjacency is not confirmed as a making sequence.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form observations confirmed against the primary image: green eye-socket loops, red horizontal eye marks, red lip line, yellow ground, and leftward jaw offset are all visible.\",\n    \"Comparison with Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM confirmed: #80 shows scalloped outer edge and broad flat fills — contrast with #81's line density is accurate.\",\n    \"Comparison with QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3 confirmed: #82 shows near-black face on pink with rectangular eye frames and cross marks — two-tone contrast claim is supported; no invented details added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq/image.png",
+        "imageSHA256": "5912247f74da27c048f9ff89ed18c216f975d92f9901c96b057059d9b52efba9"
+      },
+      {
+        "artworkId": "Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM/image.png",
+        "imageSHA256": "eb9f7f0662797170061168cc9ca04144557ec18b30bd12a04c9fb3311b4abeb0"
+      },
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape sits against a flat saturated yellow background, its surface covered in overlapping lines in green, blue, red, purple, gray, and black that leave no area of white unpatterned.\", \"Two eye sockets are outlined in thick green loops; each contains a white rectangle with a short red horizontal mark at center, giving both eyes the same flat, inward-facing quality.\", \"A wide open mouth near the bottom shows a row of white rectangular teeth outlined in black, framed by a red lip line, with the lower jaw slightly offset to the left of the face's vertical axis.\"], \"reading\": \"Dense overlapping lines in a dozen colors pack the face's surface until the underlying form reads more as a container than a volume. The two eyes, identical in their red-mark-on-white construction, suggest a mask worn rather than a face inhabited. That wide tooth-filled mouth reads as a grin or a grimace depending on how long you look — the yellow field around it stays warm and loud, refusing to settle the question.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #80 and nnxyz nifty faces #82. Where #80 uses broad color fills and rounded scalloped edges, #81 replaces those calm zones with wall-to-wall line density. The collector links this visual layering to scrimshaw's engraved surface quality.\", \"connections\": [{\"targetArtworkId\": \"Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM\", \"reason\": \"Both works share a frontal face structure with rectangular eye sockets and a tooth-row mouth, but #80 uses large flat color fills and a scalloped outer edge where #81 replaces those calm zones with dense overlapping line work.\"}, {\"targetArtworkId\": \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3\", \"reason\": \"Title neighbor #82 also uses rectangular eye frames with cross marks inside them, but its near-black face mass against pink creates a stark contrast that #81's multicolor line density does not share.\"}], \"tags\": [\"dense overlapping line work\", \"rectangular eye sockets\", \"tooth-row mouth\", \"flat saturated yellow background\", \"multi-color mark layering\", \"frontal face structure\"], \"interpretiveTags\": [\"mask-like ambiguity\", \"grin-or-grimace tension\"], \"lookingQuestion\": \"The two eye marks are nearly identical — does that sameness make the face feel more symmetrical or more unsettled to you?\", \"ambiguities\": [\"The nnotb #30 comparison image shows a full skeletal figure on a teal ground with no close formal parallel to this face-only composition; no connection was selected for it.\", \"Title order and recorded creation order align here, but the metadata notes gaps may exist elsewhere in the owned subset, so adjacency is not confirmed as making sequence.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:00.296268-05:00",
+    "usage": {
+      "inputTokens": 6874,
+      "outputTokens": 856,
+      "totalTokens": 7730,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11965
+    },
+    "requestId": "6e1242a4-729e-4e56-ac6f-6afecb1f0fde",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"A large rounded head shape sits against a flat saturated yellow background, its surface covered in overlapping lines in green, blue, red, purple, gray, and black that leave almost no white area unpatterned.\",\n    \"Two eye sockets are outlined in thick green loops; each contains a white rectangle with a short red horizontal mark at center, giving both eyes the same flat, forward-facing quality.\",\n    \"A wide open mouth near the bottom shows a row of white rectangular teeth outlined in black, framed by a red lip line, with the lower jaw visibly offset slightly left of the face's vertical center.\"\n  ],\n  \"reading\": \"Dense overlapping lines in many colors pack the face's surface until the underlying form reads more as a container than a volume. The two eyes, identical in their red-mark-on-white construction, suggest a mask worn rather than a face inhabited. That wide tooth-filled mouth reads as a grin or a grimace depending on how long you look — the yellow field around it stays warm and loud, refusing to settle the question.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #80 and #82. Where #80 uses broad color fills and a scalloped outer edge, #81 replaces those calmer zones with wall-to-wall line density — the quality the collector links to scrimshaw's tightly worked surfaces.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM\",\n      \"reason\": \"Both works use a frontal face with rectangular eye sockets and a tooth-row mouth, but #80 relies on large flat color fills and a scalloped outer edge where #81 covers the same structure with dense overlapping line work.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3\",\n      \"reason\": \"Title neighbor #82 also places rectangular eye frames with cross marks on a flat ground, but its near-black face mass against pink produces a stark two-tone contrast that #81's multicolor line density does not share.\"\n    }\n  ],\n  \"tags\": [\n    \"dense overlapping line work\",\n    \"rectangular eye sockets\",\n    \"tooth-row mouth\",\n    \"flat saturated yellow background\",\n    \"multi-color mark layering\",\n    \"frontal face structure\"\n  ],\n  \"lookingQuestion\": \"The two eye marks are nearly identical in construction — does that sameness make the face feel more symmetrical or more unsettled to you?\",\n  \"ambiguities\": [\n    \"The nnotb #30 comparison image shows a full skeletal figure on a teal ground with no close formal parallel to this face-only composition; no connection was selected.\",\n    \"Title order and recorded creation order align for this work, but the metadata notes gaps may exist elsewhere in the owned subset, so adjacency is not confirmed as a making sequence.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'engraved surface' in contextAngle with 'tightly worked surfaces' to remove the named-media term flagged by the rule.\",\n    \"Mouth description retained as 'wide open' — visible dark opening between the red lip line and the tooth row confirms the jaw is separated from the upper face, not merely showing teeth through a closed mouth.\",\n    \"Reading word count and context word count verified within required ranges.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq/image.png",
+        "imageSHA256": "5912247f74da27c048f9ff89ed18c216f975d92f9901c96b057059d9b52efba9"
+      },
+      {
+        "artworkId": "Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM/image.png",
+        "imageSHA256": "eb9f7f0662797170061168cc9ca04144557ec18b30bd12a04c9fb3311b4abeb0"
+      },
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large rounded head shape sits against a flat saturated yellow background, its surface covered in overlapping lines in green, blue, red, purple, gray, and black that leave almost no white area unpatterned.\", \"Two eye sockets are outlined in thick green loops; each contains a white rectangle with a short red horizontal mark at center, giving both eyes the same flat, forward-facing quality.\", \"A wide open mouth near the bottom shows a row of white rectangular teeth outlined in black, framed by a red lip line, with the lower jaw visibly offset slightly left of the face's vertical center.\"], \"reading\": \"Dense overlapping lines in many colors pack the face's surface until the underlying form reads more as a container than a volume. The two eyes, identical in their red-mark-on-white construction, suggest a mask worn rather than a face inhabited. That wide tooth-filled mouth reads as a grin or a grimace depending on how long you look — the yellow field around it stays warm and loud, refusing to settle the question.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #80 and nnxyz nifty faces #82. Where #80 uses broad color fills and a scalloped outer edge, #81 replaces those calmer zones with wall-to-wall line density — the quality the collector links to scrimshaw's engraved surface.\", \"connections\": [{\"targetArtworkId\": \"Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM\", \"reason\": \"Both works use a frontal face with rectangular eye sockets and a tooth-row mouth, but #80 relies on large flat color fills and a scalloped outer edge where #81 covers the same structure with dense overlapping line work.\"}, {\"targetArtworkId\": \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3\", \"reason\": \"Title neighbor #82 also places rectangular eye frames with cross marks on a flat ground, but its near-black face mass against pink produces a stark two-tone contrast that #81's multicolor line density does not share.\"}], \"tags\": [\"dense overlapping line work\", \"rectangular eye sockets\", \"tooth-row mouth\", \"flat saturated yellow background\", \"multi-color mark layering\", \"frontal face structure\"], \"lookingQuestion\": \"The two eye marks are nearly identical in construction — does that sameness make the face feel more symmetrical or more unsettled to you?\", \"ambiguities\": [\"The nnotb #30 comparison image shows a full skeletal figure on a teal ground with no close formal parallel to this face-only composition; no connection was selected.\", \"Title order and recorded creation order align for this work, but the metadata notes gaps may exist elsewhere in the owned subset, so adjacency is not confirmed as a making sequence.\"]}\nFLAGS:\n[{\"artworkId\": \"QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq\", \"field\": \"contextAngle\", \"rule\": \"named-media\", \"matches\": [\"engraved\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:58.361713-05:00",
+    "usage": {
+      "inputTokens": 5786,
+      "outputTokens": 775,
+      "totalTokens": 6561,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12983
+    },
+    "requestId": "48e89291-6325-4df1-862a-ea709a1cdf8e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two upright figures occupy the dark field, their outlines traced in looping red and magenta lines over dark, muted body masses, with spiked crowns of red marks rising from each head.\",\n    \"Two broad diagonal bands of deep gold cut from upper-left to lower-right across both figures, lighting the torsos and faces while leaving the surrounding field near-black.\",\n    \"Each figure carries two glowing yellow-orange discs where eyes would be; the larger right-hand figure leans forward, arms wrapping around the smaller left-hand figure in a close hold.\"\n  ],\n  \"reading\": \"Two spiked figures hold each other inside a near-black space, their bodies traced in restless red and magenta loops that never quite settle into solid form. Gold light cuts across them in wide diagonal bands, catching the bright disc-eyes and the grinning mouths below. The embrace reads as tender and uneasy at once — warmth suggested by the gold, tension carried by the jagged crown-lines and the scribbled, unresolved edges.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #271 and nnxyz nnotb #273. Where #271 fills its space with dense, flat color and a single frontal head, #272 pulls back into darkness and stages two figures in relation to each other.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\",\n      \"reason\": \"Scrimshaw 41 shares the black-field setting and glowing amber face-mass lit against darkness, offering a direct contrast to #272's dual-figure gold diagonals versus that work's single frontal form.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46\",\n      \"reason\": \"nnxyz nnotb #271 uses the same spiked-crown mark and magenta scribble lines as #272, but deploys them on a warm brown ground with a single head rather than two figures in a dark field.\"\n    }\n  ],\n  \"tags\": [\n    \"dual figures\",\n    \"diagonal gold bands\",\n    \"spiked crown marks\",\n    \"glowing disc eyes\",\n    \"red-magenta outline loops\",\n    \"dark field\"\n  ],\n  \"interpretiveTags\": [\n    \"uneasy tenderness\",\n    \"confrontation or embrace ambiguity\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the gold diagonal bands touch each figure's body, and does that contact change how you read the relationship between the two forms?\",\n  \"ambiguities\": [\n    \"The third, smaller shadowed form between the two main figures may be a partial third figure or a cast shadow; the image does not resolve this clearly.\",\n    \"The nnxyz nnotb #273 comparison image shows a strongly different palette and subject and offers no useful formal connection to #272 beyond title adjacency.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK/image.png",
+        "imageSHA256": "224149ccd6455455f032e00b81f08df4f2664678fa4b6eec983af4ead695269d"
+      },
+      {
+        "artworkId": "QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46/image.png",
+        "imageSHA256": "82de67868a115b65394b2e7066639878c43684f2ebb169087ee9c41efb386e35"
+      },
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      },
+      {
+        "artworkId": "QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3/image.png",
+        "imageSHA256": "1181b29db5ee2bd016e0f2ac4e1b200dff1914cf960daf64767cf585d3b66867"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:04.218943-05:00",
+    "usage": {
+      "inputTokens": 6583,
+      "outputTokens": 884,
+      "totalTokens": 7467,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5790
+    },
+    "requestId": "9e003e7b-5dbf-4967-8080-a59c57087221",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two upright figures occupy the near-black field, their outlines traced in looping red and magenta lines over dark, muted body masses, with spiked red marks rising from each head.\",\n    \"Two broad diagonal bands of deep gold cut from upper-left to lower-right across both figures, lighting the torsos and faces while leaving the surrounding field near-black.\",\n    \"Each figure carries two glowing yellow-orange discs where eyes would be; the larger right-hand figure leans forward, arms wrapping around the smaller left-hand figure in a close hold.\"\n  ],\n  \"reading\": \"Two spiked figures hold each other inside a near-black space, their bodies traced in restless red and magenta loops that never quite settle into solid form. Gold light cuts across them in wide diagonal bands, catching the bright disc-eyes and the grinning mouths below. The embrace reads as tender and uneasy at once — warmth suggested by the gold, tension carried by the jagged crown-lines and the scribbled, unresolved edges.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #271 and nnxyz nnotb #273. Where #271 fills its space with dense flat color and a single frontal head, #272 pulls back into darkness and stages two figures in relation to each other.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\",\n      \"reason\": \"Scrimshaw 41 shares the black-field setting and a glowing amber face-mass lit against darkness, offering a direct contrast to #272's dual-figure gold diagonals versus that work's single frontal form.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46\",\n      \"reason\": \"nnxyz nnotb #271 uses the same spiked-crown marks and magenta scribble lines as #272, but deploys them on a warm brown ground with a single head rather than two figures in a dark field.\"\n    }\n  ],\n  \"tags\": [\n    \"dual figures\",\n    \"diagonal gold bands\",\n    \"spiked crown marks\",\n    \"glowing disc eyes\",\n    \"red-magenta outline loops\",\n    \"dark field\"\n  ],\n  \"interpretiveTags\": [\n    \"uneasy tenderness\",\n    \"embrace or confrontation ambiguity\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the gold diagonal bands touch each figure's body, and does that contact change how you read the relationship between the two forms?\",\n  \"ambiguities\": [\n    \"A smaller shadowed form visible between the two main figures may be a partial third figure or a cast shadow; the image does not resolve this clearly.\",\n    \"nnxyz nnotb #273 shows a strongly different palette and subject and offers no useful formal connection to #272 beyond title adjacency.\"\n  ],\n  \"reviewFindings\": [\n    \"Color check confirmed: spiked marks on heads are red, not a distinct second color; draft description 'crowns of red marks' is accurate and retained.\",\n    \"Scrimshaw 41 black-field and amber face-mass confirmed against inspected image; connection retained as formally grounded.\",\n    \"nnxyz nnotb #273 inspected and confirmed as offering no meaningful formal parallel; correctly excluded from connections and noted in ambiguities.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK/image.png",
+        "imageSHA256": "224149ccd6455455f032e00b81f08df4f2664678fa4b6eec983af4ead695269d"
+      },
+      {
+        "artworkId": "QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46/image.png",
+        "imageSHA256": "82de67868a115b65394b2e7066639878c43684f2ebb169087ee9c41efb386e35"
+      },
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      },
+      {
+        "artworkId": "QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3/image.png",
+        "imageSHA256": "1181b29db5ee2bd016e0f2ac4e1b200dff1914cf960daf64767cf585d3b66867"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two upright figures occupy the dark field, their outlines traced in looping red and magenta lines over dark, muted body masses, with spiked crowns of red marks rising from each head.\", \"Two broad diagonal bands of deep gold cut from upper-left to lower-right across both figures, lighting the torsos and faces while leaving the surrounding field near-black.\", \"Each figure carries two glowing yellow-orange discs where eyes would be; the larger right-hand figure leans forward, arms wrapping around the smaller left-hand figure in a close hold.\"], \"reading\": \"Two spiked figures hold each other inside a near-black space, their bodies traced in restless red and magenta loops that never quite settle into solid form. Gold light cuts across them in wide diagonal bands, catching the bright disc-eyes and the grinning mouths below. The embrace reads as tender and uneasy at once — warmth suggested by the gold, tension carried by the jagged crown-lines and the scribbled, unresolved edges.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #271 and nnxyz nnotb #273. Where #271 fills its space with dense, flat color and a single frontal head, #272 pulls back into darkness and stages two figures in relation to each other.\", \"connections\": [{\"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\", \"reason\": \"Scrimshaw 41 shares the black-field setting and glowing amber face-mass lit against darkness, offering a direct contrast to #272's dual-figure gold diagonals versus that work's single frontal form.\"}, {\"targetArtworkId\": \"QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46\", \"reason\": \"nnxyz nnotb #271 uses the same spiked-crown mark and magenta scribble lines as #272, but deploys them on a warm brown ground with a single head rather than two figures in a dark field.\"}], \"tags\": [\"dual figures\", \"diagonal gold bands\", \"spiked crown marks\", \"glowing disc eyes\", \"red-magenta outline loops\", \"dark field\"], \"interpretiveTags\": [\"uneasy tenderness\", \"confrontation or embrace ambiguity\"], \"lookingQuestion\": \"Where exactly do the gold diagonal bands touch each figure's body, and does that contact change how you read the relationship between the two forms?\", \"ambiguities\": [\"The third, smaller shadowed form between the two main figures may be a partial third figure or a cast shadow; the image does not resolve this clearly.\", \"The nnxyz nnotb #273 comparison image shows a strongly different palette and subject and offers no useful formal connection to #272 beyond title adjacency.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

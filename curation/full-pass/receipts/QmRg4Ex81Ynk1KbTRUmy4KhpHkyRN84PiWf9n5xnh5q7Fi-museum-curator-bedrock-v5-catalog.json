@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:31.059421-05:00",
+    "usage": {
+      "inputTokens": 6086,
+      "outputTokens": 749,
+      "totalTokens": 6835,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11840
+    },
+    "requestId": "4403960d-7750-42ff-97e0-073b449a56ed",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal face-like form fills the canvas; a bold red X crosses the right cheek area, outlined in white against a pink field, drawing the eye to the center-right.\",\n    \"Yellow looping lines radiate outward from the top of the head like a spiky halo, while a flat yellow horizontal band with white zigzag stitching cuts across the left mid-section.\",\n    \"The mouth zone is built from stacked rectangular shapes with white zigzag lines and red oval forms below, sitting against a dark lower face layered with blue, teal, and black scribbled lines.\"\n  ],\n  \"reading\": \"The face-like form holds its ground through sheer density: lines pile onto lines, yet the red X and yellow halo keep pulling focus back to two fixed points. The zigzag bands read as something between stitching and static. Tension sits in the gap between the locked, rectangular eye socket on the left and the open, crossed-out cheek on the right — one contained, one cancelled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #183 and nnxyz nnotb #185 both use a close-cropped face-like structure with layered scribble fields, but #184 is the most compressed, pushing the form to the canvas edge on all sides.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYJ6kmAA3voC4jn1iBdAhtTkq5f4DeiAAFfN8D3KnnoZP\",\n      \"reason\": \"nnxyz nnotb #185 shares the close-cropped single face format and yellow-dominant line halo, but swaps the multicolor background for a black ground, making the contrast starker.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv\",\n      \"reason\": \"nnxyz nnotb #183 uses the same zigzag-mouth construction and layered scribble field, but distributes multiple face-like figures across the canvas rather than locking one form to the frame.\"\n    }\n  ],\n  \"tags\": [\n    \"face-like form\",\n    \"X mark\",\n    \"zigzag line bands\",\n    \"yellow radiating loops\",\n    \"rectangular eye socket\",\n    \"layered scribble field\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"cancelled\",\n    \"compressed tension\"\n  ],\n  \"lookingQuestion\": \"The red X and the rectangular eye socket on the opposite side of the face pull in different directions — what does your eye do between those two points?\",\n  \"ambiguities\": [\n    \"The small signature mark in the lower-right corner is visible but not fully legible at this resolution.\",\n    \"The nnotb title-number order and recorded-creation order align for this work in the owned subset, but gaps elsewhere in the series mean neither confirms a strict making sequence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRg4Ex81Ynk1KbTRUmy4KhpHkyRN84PiWf9n5xnh5q7Fi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRg4Ex81Ynk1KbTRUmy4KhpHkyRN84PiWf9n5xnh5q7Fi/image.png",
+        "imageSHA256": "71a2da9a55dff5dcbde746a8a840dd7f27a1fe1cf3144c5743168df6efd1a931"
+      },
+      {
+        "artworkId": "QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv/image.png",
+        "imageSHA256": "282ce0ee862f63a052f87f069a0acb48587321e03d60d227234b8a5e06b5a1f0"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmYJ6kmAA3voC4jn1iBdAhtTkq5f4DeiAAFfN8D3KnnoZP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYJ6kmAA3voC4jn1iBdAhtTkq5f4DeiAAFfN8D3KnnoZP/image.png",
+        "imageSHA256": "864e9eef9ac85a06f8884f3ce9f9f64922b0f455ab3797115444eaffc9d8fd64"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:38.345009-05:00",
+    "usage": {
+      "inputTokens": 6855,
+      "outputTokens": 895,
+      "totalTokens": 7750,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7199
+    },
+    "requestId": "32fc9742-899f-48da-8532-67260725a67c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal face-like form fills the canvas; a bold red X crosses the right cheek area, outlined in white against a pink field, drawing the eye to center-right.\",\n    \"Yellow looping lines radiate from the top of the form, while a flat yellow horizontal band with white zigzag lines cuts across the left mid-section.\",\n    \"The mouth zone is built from stacked rectangular shapes with white zigzag lines and red oval forms below, set against a dark lower area layered with blue, teal, and black scribbled lines.\"\n  ],\n  \"reading\": \"The face-like form holds its ground through density: lines pile onto lines, yet the red X and yellow loops keep pulling focus back to two fixed points. The zigzag bands read as something between stitching and static. Tension sits in the gap between the locked rectangular eye socket on the left and the open, crossed-out cheek on the right — one contained, one cancelled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #183 and nnxyz nnotb #185 both use close-cropped face-like structures with layered scribble fields, but #184 pushes its single form to the canvas edge on all sides.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYJ6kmAA3voC4jn1iBdAhtTkq5f4DeiAAFfN8D3KnnoZP\",\n      \"reason\": \"nnxyz nnotb #185 shares the close-cropped single face format and yellow-dominant radiating loops, but sets them against a black ground rather than a multicolor layered field, sharpening the contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv\",\n      \"reason\": \"nnxyz nnotb #183 uses the same zigzag-mouth construction and layered scribble field but distributes multiple face-like figures across the canvas rather than locking one form to the frame.\"\n    }\n  ],\n  \"tags\": [\n    \"face-like form\",\n    \"X mark\",\n    \"zigzag line bands\",\n    \"yellow radiating loops\",\n    \"rectangular eye socket\",\n    \"layered scribble field\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"compressed tension\"\n  ],\n  \"lookingQuestion\": \"The red X and the rectangular eye socket sit on opposite sides of the face — what does your eye do in the space between them?\",\n  \"ambiguities\": [\n    \"The small signature mark in the lower-right corner is visible but not fully legible at this resolution.\",\n    \"Title-number order and recorded-creation order align for this work in the owned subset, but gaps elsewhere in the series mean neither confirms a strict making sequence.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: red X on pink field, yellow loops at top, yellow horizontal band with white zigzag, stacked rectangular mouth zone with red ovals and teal/blue scribble field — all visible.\",\n    \"Removed 'cancelled' from interpretiveTags as it duplicates the reading's prose and implies intent; retained 'confrontational' and 'compressed tension' as collector-perspective mood tags only.\",\n    \"Both comparison claims verified against inspected images: #185 does show a black ground with yellow loops around a single face form; #183 does show multiple face-like figures with zigzag mouths and layered scribble fields — comparisons are accurate and specific.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRg4Ex81Ynk1KbTRUmy4KhpHkyRN84PiWf9n5xnh5q7Fi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRg4Ex81Ynk1KbTRUmy4KhpHkyRN84PiWf9n5xnh5q7Fi/image.png",
+        "imageSHA256": "71a2da9a55dff5dcbde746a8a840dd7f27a1fe1cf3144c5743168df6efd1a931"
+      },
+      {
+        "artworkId": "QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv/image.png",
+        "imageSHA256": "282ce0ee862f63a052f87f069a0acb48587321e03d60d227234b8a5e06b5a1f0"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmYJ6kmAA3voC4jn1iBdAhtTkq5f4DeiAAFfN8D3KnnoZP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYJ6kmAA3voC4jn1iBdAhtTkq5f4DeiAAFfN8D3KnnoZP/image.png",
+        "imageSHA256": "864e9eef9ac85a06f8884f3ce9f9f64922b0f455ab3797115444eaffc9d8fd64"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large frontal face-like form fills the canvas; a bold red X crosses the right cheek area, outlined in white against a pink field, drawing the eye to the center-right.\", \"Yellow looping lines radiate outward from the top of the head like a spiky halo, while a flat yellow horizontal band with white zigzag stitching cuts across the left mid-section.\", \"The mouth zone is built from stacked rectangular shapes with white zigzag lines and red oval forms below, sitting against a dark lower face layered with blue, teal, and black scribbled lines.\"], \"reading\": \"The face-like form holds its ground through sheer density: lines pile onto lines, yet the red X and yellow halo keep pulling focus back to two fixed points. The zigzag bands read as something between stitching and static. Tension sits in the gap between the locked, rectangular eye socket on the left and the open, crossed-out cheek on the right — one contained, one cancelled.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #183 and nnxyz nnotb #185 both use a close-cropped face-like structure with layered scribble fields, but #184 is the most compressed, pushing the form to the canvas edge on all sides.\", \"connections\": [{\"targetArtworkId\": \"QmYJ6kmAA3voC4jn1iBdAhtTkq5f4DeiAAFfN8D3KnnoZP\", \"reason\": \"nnxyz nnotb #185 shares the close-cropped single face format and yellow-dominant line halo, but swaps the multicolor background for a black ground, making the contrast starker.\"}, {\"targetArtworkId\": \"QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv\", \"reason\": \"nnxyz nnotb #183 uses the same zigzag-mouth construction and layered scribble field, but distributes multiple face-like figures across the canvas rather than locking one form to the frame.\"}], \"tags\": [\"face-like form\", \"X mark\", \"zigzag line bands\", \"yellow radiating loops\", \"rectangular eye socket\", \"layered scribble field\"], \"interpretiveTags\": [\"confrontational\", \"cancelled\", \"compressed tension\"], \"lookingQuestion\": \"The red X and the rectangular eye socket on the opposite side of the face pull in different directions — what does your eye do between those two points?\", \"ambiguities\": [\"The small signature mark in the lower-right corner is visible but not fully legible at this resolution.\", \"The nnotb title-number order and recorded-creation order align for this work in the owned subset, but gaps elsewhere in the series mean neither confirms a strict making sequence.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

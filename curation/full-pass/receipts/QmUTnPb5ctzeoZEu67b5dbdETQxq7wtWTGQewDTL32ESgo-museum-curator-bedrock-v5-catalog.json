@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:00.620956-05:00",
+    "usage": {
+      "inputTokens": 6724,
+      "outputTokens": 753,
+      "totalTokens": 7477,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12031
+    },
+    "requestId": "b1e85660-94df-49e4-a3aa-5c1a77b59d8b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A standing figure with a wide rectangular head occupies the center; black and off-white fill the torso in vertical stripes, with dark shadow shapes pooling beneath the arms and feet.\",\n    \"Yellow and red lines run as separate, loose loops across the entire canvas, forming small rectangular detours in the background that echo the figure's blocky head without touching it.\",\n    \"Two circular eye forms near the top of the head are outlined in yellow with red spirals inside; the open mouth below them is a dark void framed by the same yellow-red line system.\"\n  ],\n  \"reading\": \"A blocky standing figure is held together by two independent line systems—yellow and red—that wander the background as rectangular loops before converging on the face. The striped torso reads as both solid and hollow at once, the dark voids at the eyes and mouth pulling against the off-white fill. That tension between structure and gap gives the image an unsettled, watchful feeling.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #15—a layered, flowing composition in warm blues and golds with no standing figure—and nnxyz nnotb #17, which shares the same sage-green ground and a frontal skeletal figure. The shift from #15's fluid forms to this rigid grid is sharp.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmexue8BAjdc2vqjE7pGusim49mU5g8awW2B32AhzYG4zd\",\n      \"reason\": \"nnxyz nnotb #17 shares the same sage-green ground and a frontal figure built from exposed structural lines, making the two a direct pair in the owned nnotb subset despite their different line colors and silhouettes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\",\n      \"reason\": \"nnxyz nifty faces #96 uses the same stacked rectangular head structure with boxed eye zones and an open-tooth mouth, offering a close formal parallel to the head in this work, though on a flat orange ground without a full body.\"\n    }\n  ],\n  \"tags\": [\n    \"standing figure\",\n    \"rectangular head\",\n    \"looping background lines\",\n    \"striped torso\",\n    \"circular eye forms\",\n    \"sage-green ground\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the yellow and red line loops touch or avoid the figure's outline—and does that boundary hold consistently across the whole image?\",\n  \"ambiguities\": [\n    \"The relationship between the background rectangular loops and the figure's contour is visually ambiguous in places; it is unclear whether they share anchor points or run fully independent.\",\n    \"nnxyz nnotb #15 offers no useful formal connection to this work beyond title adjacency, so it was not selected as a comparison.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUTnPb5ctzeoZEu67b5dbdETQxq7wtWTGQewDTL32ESgo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUTnPb5ctzeoZEu67b5dbdETQxq7wtWTGQewDTL32ESgo/image.png",
+        "imageSHA256": "86a6afac4dd097be0c6b00a7f4bd7571bab3c7d61e04897a107afe364eb24e89"
+      },
+      {
+        "artworkId": "QmezWfegKE2TrUNsLTYVseGvcHUq4CV7KmJmnoi98LJp63",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmezWfegKE2TrUNsLTYVseGvcHUq4CV7KmJmnoi98LJp63/image.png",
+        "imageSHA256": "f169c31ec334d473b9e1b023a4012b3f9cf1f099cf218a0f7fcdd241051235d0"
+      },
+      {
+        "artworkId": "QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2/image.png",
+        "imageSHA256": "a8c39c99721e0c1034f741de062fa3c16d37b8c2cd005617085e3df3c23ef4ac"
+      },
+      {
+        "artworkId": "Qmexue8BAjdc2vqjE7pGusim49mU5g8awW2B32AhzYG4zd",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmexue8BAjdc2vqjE7pGusim49mU5g8awW2B32AhzYG4zd/image.png",
+        "imageSHA256": "63e8d13ec45db72560f8e6ca939da3467073e73e9171701ece2f6b2d415506a9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:07.532506-05:00",
+    "usage": {
+      "inputTokens": 7499,
+      "outputTokens": 958,
+      "totalTokens": 8457,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6816
+    },
+    "requestId": "4fd9584e-7863-49d3-8aac-19e9aff262ed",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A standing figure with a wide rectangular head occupies the center; black and off-white fill the torso in vertical stripes, with dark shadow shapes pooling beneath the arms and feet.\",\n    \"Yellow and red lines run as separate loose loops across the entire canvas, forming small rectangular detours in the background that echo the figure's blocky head without consistently touching it.\",\n    \"Two circular eye forms near the top of the head are outlined in yellow with red spirals inside; the open mouth below is a dark void framed by the same yellow-red line system.\"\n  ],\n  \"reading\": \"A blocky standing figure is held together by two independent line systems—yellow and red—that wander the background as rectangular loops before converging on the face. The striped torso reads as both solid and hollow at once, the dark voids at the eyes and mouth pulling against the off-white fill. That tension between structure and gap gives the image an unsettled, watchful feeling.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #15—a layered flowing composition in warm blues and golds with no standing figure—and nnxyz nnotb #17, which shares the same sage-green ground and a frontal figure built from exposed structural lines.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmexue8BAjdc2vqjE7pGusim49mU5g8awW2B32AhzYG4zd\",\n      \"reason\": \"nnxyz nnotb #17 shares the same sage-green ground and a frontal figure built from exposed structural lines, making the two a direct formal pair in the owned nnotb subset despite different line colors and silhouettes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\",\n      \"reason\": \"nnxyz nifty faces #96 uses a stacked rectangular head with boxed eye zones and an open-tooth mouth, offering a close formal parallel to the head here, though on a flat orange ground without a full body.\"\n    }\n  ],\n  \"tags\": [\n    \"standing figure\",\n    \"rectangular head\",\n    \"looping background lines\",\n    \"striped torso\",\n    \"circular eye forms\",\n    \"sage-green ground\"\n  ],\n  \"interpretiveTags\": [\"watchful\", \"unsettled\"],\n  \"lookingQuestion\": \"Where exactly do the yellow and red line loops touch or avoid the figure's outline—and does that boundary hold consistently across the whole image?\",\n  \"ambiguities\": [\n    \"The relationship between the background rectangular loops and the figure's contour is visually ambiguous in places; it is unclear whether they share anchor points or run fully independent.\",\n    \"nnxyz nnotb #15 offers no useful formal connection to this work beyond title adjacency and was not selected as a comparison.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: sage-green ground, vertical black-and-off-white torso stripes, yellow-outlined circular eyes with red spirals, and dark mouth void all verified against the primary image.\",\n    \"Comparison with QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2 confirmed: stacked rectangular head, boxed eye zones with X-cross marks, and open-tooth mouth are visible in that image, supporting the formal parallel; orange ground and absence of a body noted as contrast.\",\n    \"Comparison with Qmexue8BAjdc2vqjE7pGusim49mU5g8awW2B32AhzYG4zd confirmed: sage-green ground and frontal figure with exposed structural lines visible; line color difference (red/pink vs yellow/red) and differing silhouette noted as stated in the reason.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUTnPb5ctzeoZEu67b5dbdETQxq7wtWTGQewDTL32ESgo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUTnPb5ctzeoZEu67b5dbdETQxq7wtWTGQewDTL32ESgo/image.png",
+        "imageSHA256": "86a6afac4dd097be0c6b00a7f4bd7571bab3c7d61e04897a107afe364eb24e89"
+      },
+      {
+        "artworkId": "QmezWfegKE2TrUNsLTYVseGvcHUq4CV7KmJmnoi98LJp63",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmezWfegKE2TrUNsLTYVseGvcHUq4CV7KmJmnoi98LJp63/image.png",
+        "imageSHA256": "f169c31ec334d473b9e1b023a4012b3f9cf1f099cf218a0f7fcdd241051235d0"
+      },
+      {
+        "artworkId": "QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2/image.png",
+        "imageSHA256": "a8c39c99721e0c1034f741de062fa3c16d37b8c2cd005617085e3df3c23ef4ac"
+      },
+      {
+        "artworkId": "Qmexue8BAjdc2vqjE7pGusim49mU5g8awW2B32AhzYG4zd",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmexue8BAjdc2vqjE7pGusim49mU5g8awW2B32AhzYG4zd/image.png",
+        "imageSHA256": "63e8d13ec45db72560f8e6ca939da3467073e73e9171701ece2f6b2d415506a9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A standing figure with a wide rectangular head occupies the center; black and off-white fill the torso in vertical stripes, with dark shadow shapes pooling beneath the arms and feet.\", \"Yellow and red lines run as separate, loose loops across the entire canvas, forming small rectangular detours in the background that echo the figure's blocky head without touching it.\", \"Two circular eye forms near the top of the head are outlined in yellow with red spirals inside; the open mouth below them is a dark void framed by the same yellow-red line system.\"], \"reading\": \"A blocky standing figure is held together by two independent line systems—yellow and red—that wander the background as rectangular loops before converging on the face. The striped torso reads as both solid and hollow at once, the dark voids at the eyes and mouth pulling against the off-white fill. That tension between structure and gap gives the image an unsettled, watchful feeling.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #15—a layered, flowing composition in warm blues and golds with no standing figure—and nnxyz nnotb #17, which shares the same sage-green ground and a frontal skeletal figure. The shift from #15's fluid forms to this rigid grid is sharp.\", \"connections\": [{\"targetArtworkId\": \"Qmexue8BAjdc2vqjE7pGusim49mU5g8awW2B32AhzYG4zd\", \"reason\": \"nnxyz nnotb #17 shares the same sage-green ground and a frontal figure built from exposed structural lines, making the two a direct pair in the owned nnotb subset despite their different line colors and silhouettes.\"}, {\"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\", \"reason\": \"nnxyz nifty faces #96 uses the same stacked rectangular head structure with boxed eye zones and an open-tooth mouth, offering a close formal parallel to the head in this work, though on a flat orange ground without a full body.\"}], \"tags\": [\"standing figure\", \"rectangular head\", \"looping background lines\", \"striped torso\", \"circular eye forms\", \"sage-green ground\"], \"interpretiveTags\": [\"watchful\", \"unsettled\"], \"lookingQuestion\": \"Where exactly do the yellow and red line loops touch or avoid the figure's outline—and does that boundary hold consistently across the whole image?\", \"ambiguities\": [\"The relationship between the background rectangular loops and the figure's contour is visually ambiguous in places; it is unclear whether they share anchor points or run fully independent.\", \"nnxyz nnotb #15 offers no useful formal connection to this work beyond title adjacency, so it was not selected as a comparison.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

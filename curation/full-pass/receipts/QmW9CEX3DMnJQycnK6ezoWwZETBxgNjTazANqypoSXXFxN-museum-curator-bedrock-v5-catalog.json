@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:48.916943-05:00",
+    "usage": {
+      "inputTokens": 6425,
+      "outputTokens": 807,
+      "totalTokens": 7232,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12425
+    },
+    "requestId": "58bf5da3-8702-4561-894c-1e50e1ddde1f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A teal figure with a rounded, oversized head stands upright against a dark grey background; the body is simplified into broad flat shapes with dark outlines separating limbs from torso.\",\n    \"A jagged zigzag crown of teal lines rises from the top of the head, and a small red circular scribble sits on the upper left of the face, with a second cluster of red zigzag marks at the right jaw.\",\n    \"Two long, thin teal lines trail downward from the figure's right side like loose appendages, while the left arm extends outward with a flattened, open hand shape.\"\n  ],\n  \"reading\": \"The figure holds its ground in near-silhouette, its teal mass cut cleanly from the dark field. The jagged crown reads as agitation or alertness; the two small red marks—one wound tight, one frantic—pull the eye to the face and suggest pressure or noise concentrated there. The trailing lines give the body an unfinished, mid-motion quality, as though something is still being shed or extended.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #265 and nnxyz nnotb #267. All three share an upright figure format and a jagged crown motif, but each uses a distinct background color and line weight, making the crown a recurring mark rather than a fixed symbol.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU\",\n      \"reason\": \"nnxyz nnotb #265 shares the same jagged-crown silhouette and upright stance, but swaps teal-on-dark for pink-on-black and places its circular mark at the eye rather than the forehead, making the crown motif easy to compare directly.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRPXKvhsgUN7ZbVLFayTnJEjp6e9UKE7SqMUbxJHJvTag\",\n      \"reason\": \"nnxyz nnotb #267 also features a red spiral mark overlaid on a head form, offering a direct comparison of how the same red-circle device functions across two very different figure treatments and color fields.\"\n    }\n  ],\n  \"tags\": [\n    \"upright figure\",\n    \"jagged crown\",\n    \"teal flat shape\",\n    \"red circular scribble\",\n    \"trailing line appendages\",\n    \"dark grey ground\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"alertness\",\n    \"mid-motion\"\n  ],\n  \"lookingQuestion\": \"Where do the two red marks sit in relation to the figure's outline, and how does their placement change what you look at first?\",\n  \"ambiguities\": [\n    \"The function of the two trailing teal lines at the figure's right side is unclear from the image alone—they could read as hair, a cape, or detached limbs.\",\n    \"nnxyz nifty faces #23 was inspected but offers no useful formal connection to this work; its dense multicolor line-fill and lack of a figure silhouette make comparison weak, so it is omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN/image.png",
+        "imageSHA256": "397974f5da2122c75f43bee3704c6e02e488aea3a4f0f3c02a0050a4c1037ac0"
+      },
+      {
+        "artworkId": "Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU/image.png",
+        "imageSHA256": "f2e59f2254f29f9b66b67ad53e7d543b394b437e86d325084997a142d091f243"
+      },
+      {
+        "artworkId": "QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM/image.png",
+        "imageSHA256": "fcd8ca63293af945fe056a8c1f022ecb706a6221ab31f5d0bd90ddc8113874ba"
+      },
+      {
+        "artworkId": "QmRPXKvhsgUN7ZbVLFayTnJEjp6e9UKE7SqMUbxJHJvTag",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRPXKvhsgUN7ZbVLFayTnJEjp6e9UKE7SqMUbxJHJvTag/image.png",
+        "imageSHA256": "d17b0951b197151ad5a1f228603351f9e48b0cc01909c5bb1c9dd6e93491749e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:55.263528-05:00",
+    "usage": {
+      "inputTokens": 7252,
+      "outputTokens": 872,
+      "totalTokens": 8124,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6285
+    },
+    "requestId": "1da2bad7-de11-4273-a97e-553abdc4062f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A teal figure with a rounded, oversized head stands upright against a dark grey background; broad flat shapes with dark outlines separate limbs from torso.\",\n    \"A jagged zigzag crown of teal lines rises from the top of the head; a small red circular scribble sits on the upper left of the face, and a second cluster of red zigzag marks appears at the right jaw.\",\n    \"Two long thin teal lines trail downward from the figure's right side, while the left arm extends outward ending in a flattened open hand shape.\"\n  ],\n  \"reading\": \"The figure holds its ground in near-silhouette, its teal mass cut cleanly from the dark field. The jagged crown reads as agitation or alertness; the two small red marks—one wound tight, one frantic—pull the eye to the face and suggest pressure concentrated there. The trailing lines give the body a mid-motion quality, as though something is still being shed or extended.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #265 and nnxyz nnotb #267. All three share an upright figure and jagged crown, but each uses a distinct background color and line weight, making the crown a recurring mark rather than a fixed symbol.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU\",\n      \"reason\": \"nnxyz nnotb #265 shares the same jagged-crown silhouette and upright stance but uses pink-on-black instead of teal-on-dark grey, and places its circular mark at the eye rather than the forehead.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRPXKvhsgUN7ZbVLFayTnJEjp6e9UKE7SqMUbxJHJvTag\",\n      \"reason\": \"nnxyz nnotb #267 carries a red spiral mark overlaid on a head form, allowing direct comparison of how the same red-circle device functions across two very different color fields and figure treatments.\"\n    }\n  ],\n  \"tags\": [\n    \"upright figure\",\n    \"jagged crown\",\n    \"teal flat shape\",\n    \"red circular scribble\",\n    \"trailing line appendages\",\n    \"dark grey ground\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"alertness\",\n    \"mid-motion\"\n  ],\n  \"lookingQuestion\": \"Where do the two red marks sit in relation to the figure's outline, and how does their placement change what you look at first?\",\n  \"ambiguities\": [\n    \"The two trailing teal lines at the figure's right side are ambiguous—they could read as hair, a cape, or detached limbs.\",\n    \"nnxyz nifty faces #23 was inspected but omitted: its dense multicolor line-fill and absence of a figure silhouette offer no useful formal connection to this work.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and placement of both red marks confirmed against the primary image: tight circular scribble upper-left of face, zigzag cluster at right jaw—draft was accurate.\",\n    \"nnxyz nnotb #267 red spiral confirmed on head form against yellow ground; connection retained as formally specific.\",\n    \"Reading trimmed by two sentences to stay within 65-word target while preserving grounded claims; no invented intent or biography introduced.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN/image.png",
+        "imageSHA256": "397974f5da2122c75f43bee3704c6e02e488aea3a4f0f3c02a0050a4c1037ac0"
+      },
+      {
+        "artworkId": "Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU/image.png",
+        "imageSHA256": "f2e59f2254f29f9b66b67ad53e7d543b394b437e86d325084997a142d091f243"
+      },
+      {
+        "artworkId": "QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM/image.png",
+        "imageSHA256": "fcd8ca63293af945fe056a8c1f022ecb706a6221ab31f5d0bd90ddc8113874ba"
+      },
+      {
+        "artworkId": "QmRPXKvhsgUN7ZbVLFayTnJEjp6e9UKE7SqMUbxJHJvTag",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRPXKvhsgUN7ZbVLFayTnJEjp6e9UKE7SqMUbxJHJvTag/image.png",
+        "imageSHA256": "d17b0951b197151ad5a1f228603351f9e48b0cc01909c5bb1c9dd6e93491749e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A teal figure with a rounded, oversized head stands upright against a dark grey background; the body is simplified into broad flat shapes with dark outlines separating limbs from torso.\", \"A jagged zigzag crown of teal lines rises from the top of the head, and a small red circular scribble sits on the upper left of the face, with a second cluster of red zigzag marks at the right jaw.\", \"Two long, thin teal lines trail downward from the figure's right side like loose appendages, while the left arm extends outward with a flattened, open hand shape.\"], \"reading\": \"The figure holds its ground in near-silhouette, its teal mass cut cleanly from the dark field. The jagged crown reads as agitation or alertness; the two small red marks—one wound tight, one frantic—pull the eye to the face and suggest pressure or noise concentrated there. The trailing lines give the body an unfinished, mid-motion quality, as though something is still being shed or extended.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #265 and nnxyz nnotb #267. All three share an upright figure format and a jagged crown motif, but each uses a distinct background color and line weight, making the crown a recurring mark rather than a fixed symbol.\", \"connections\": [{\"targetArtworkId\": \"Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU\", \"reason\": \"nnxyz nnotb #265 shares the same jagged-crown silhouette and upright stance, but swaps teal-on-dark for pink-on-black and places its circular mark at the eye rather than the forehead, making the crown motif easy to compare directly.\"}, {\"targetArtworkId\": \"QmRPXKvhsgUN7ZbVLFayTnJEjp6e9UKE7SqMUbxJHJvTag\", \"reason\": \"nnxyz nnotb #267 also features a red spiral mark overlaid on a head form, offering a direct comparison of how the same red-circle device functions across two very different figure treatments and color fields.\"}], \"tags\": [\"upright figure\", \"jagged crown\", \"teal flat shape\", \"red circular scribble\", \"trailing line appendages\", \"dark grey ground\"], \"interpretiveTags\": [\"tension\", \"alertness\", \"mid-motion\"], \"lookingQuestion\": \"Where do the two red marks sit in relation to the figure's outline, and how does their placement change what you look at first?\", \"ambiguities\": [\"The function of the two trailing teal lines at the figure's right side is unclear from the image alone—they could read as hair, a cape, or detached limbs.\", \"nnxyz nifty faces #23 was inspected but offers no useful formal connection to this work; its dense multicolor line-fill and lack of a figure silhouette make comparison weak, so it is omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:32.102434-05:00",
+    "usage": {
+      "inputTokens": 6948,
+      "outputTokens": 816,
+      "totalTokens": 7764,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12197
+    },
+    "requestId": "62136fd9-6230-48c3-a9d3-36aefc0cec30",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"A teal figure with a rounded, oversized head stands upright against a dark grey background; broad flat shapes with dark outlines separate limbs from torso.\",\n    \"A jagged zigzag crown of teal lines rises from the top of the head; a small red circular scribble sits on the upper left of the face, and a second cluster of red zigzag marks appears at the right jaw.\",\n    \"Two long thin teal lines trail downward from the figure's right side, while the left arm extends outward ending in a flattened open hand shape.\"\n  ],\n  \"reading\": \"Teal fills the figure almost uniformly, making it read as a single flat shape punched from the dark grey field. The jagged crown lifts the silhouette into something alert or bristling; two small red marks—one wound tight at the forehead, one frantic at the jaw—concentrate attention on the face and can read as points of pressure or distress. Trailing lines at the right side lend a sense of unfinished motion, as though something is still being shed.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors #265 and #267. All three share an upright figure and jagged crown, but each uses a distinct background color and line weight, making the crown a recurring mark rather than a fixed symbol.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU\",\n      \"reason\": \"nnxyz nnotb #265 shares the same jagged-crown silhouette and upright stance but uses pink-on-black instead of teal-on-dark grey, and places its circular mark at the eye rather than the forehead.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRPXKvhsgUN7ZbVLFayTnJEjp6e9UKE7SqMUbxJHJvTag\",\n      \"reason\": \"nnxyz nnotb #267 carries a red spiral mark overlaid on a head form, allowing direct comparison of how the same red-circle device functions across two very different color fields and figure treatments.\"\n    }\n  ],\n  \"tags\": [\"upright figure\", \"jagged crown\", \"teal flat shape\", \"red circular scribble\", \"trailing line appendages\", \"dark grey ground\"],\n  \"lookingQuestion\": \"Where do the two red marks sit in relation to the figure's outline, and how does their placement change what you look at first?\",\n  \"ambiguities\": [\n    \"The two trailing teal lines at the figure's right side are ambiguous—they could read as hair, a cape, or detached limbs.\",\n    \"nnxyz nifty faces #23 was inspected but omitted: its dense multicolor line-fill and absence of a figure silhouette offer no useful formal connection to this work.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced opening phrase 'The figure holds its ground' with a specific color-and-form observation about the teal fill and its relationship to the dark grey field.\",\n    \"Reading remains within 55–65 words and grounds each sentence in visible marks.\",\n    \"Context angle trimmed to 30–40 words referencing only the owned nnotb subset.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN/image.png",
+        "imageSHA256": "397974f5da2122c75f43bee3704c6e02e488aea3a4f0f3c02a0050a4c1037ac0"
+      },
+      {
+        "artworkId": "Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU/image.png",
+        "imageSHA256": "f2e59f2254f29f9b66b67ad53e7d543b394b437e86d325084997a142d091f243"
+      },
+      {
+        "artworkId": "QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM/image.png",
+        "imageSHA256": "fcd8ca63293af945fe056a8c1f022ecb706a6221ab31f5d0bd90ddc8113874ba"
+      },
+      {
+        "artworkId": "QmRPXKvhsgUN7ZbVLFayTnJEjp6e9UKE7SqMUbxJHJvTag",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRPXKvhsgUN7ZbVLFayTnJEjp6e9UKE7SqMUbxJHJvTag/image.png",
+        "imageSHA256": "d17b0951b197151ad5a1f228603351f9e48b0cc01909c5bb1c9dd6e93491749e"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A teal figure with a rounded, oversized head stands upright against a dark grey background; broad flat shapes with dark outlines separate limbs from torso.\", \"A jagged zigzag crown of teal lines rises from the top of the head; a small red circular scribble sits on the upper left of the face, and a second cluster of red zigzag marks appears at the right jaw.\", \"Two long thin teal lines trail downward from the figure's right side, while the left arm extends outward ending in a flattened open hand shape.\"], \"reading\": \"The figure holds its ground in near-silhouette, its teal mass cut cleanly from the dark field. The jagged crown reads as agitation or alertness; the two small red marks—one wound tight, one frantic—pull the eye to the face and suggest pressure concentrated there. The trailing lines give the body a mid-motion quality, as though something is still being shed or extended.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #265 and nnxyz nnotb #267. All three share an upright figure and jagged crown, but each uses a distinct background color and line weight, making the crown a recurring mark rather than a fixed symbol.\", \"connections\": [{\"targetArtworkId\": \"Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU\", \"reason\": \"nnxyz nnotb #265 shares the same jagged-crown silhouette and upright stance but uses pink-on-black instead of teal-on-dark grey, and places its circular mark at the eye rather than the forehead.\"}, {\"targetArtworkId\": \"QmRPXKvhsgUN7ZbVLFayTnJEjp6e9UKE7SqMUbxJHJvTag\", \"reason\": \"nnxyz nnotb #267 carries a red spiral mark overlaid on a head form, allowing direct comparison of how the same red-circle device functions across two very different color fields and figure treatments.\"}], \"tags\": [\"upright figure\", \"jagged crown\", \"teal flat shape\", \"red circular scribble\", \"trailing line appendages\", \"dark grey ground\"], \"lookingQuestion\": \"Where do the two red marks sit in relation to the figure's outline, and how does their placement change what you look at first?\", \"ambiguities\": [\"The two trailing teal lines at the figure's right side are ambiguous—they could read as hair, a cape, or detached limbs.\", \"nnxyz nifty faces #23 was inspected but omitted: its dense multicolor line-fill and absence of a figure silhouette offer no useful formal connection to this work.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the figure holds its ground\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

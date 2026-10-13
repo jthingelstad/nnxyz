@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:18.749566-05:00",
+    "usage": {
+      "inputTokens": 4898,
+      "outputTokens": 734,
+      "totalTokens": 5632,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20098
+    },
+    "requestId": "f3994ff4-d22f-4875-ab69-4c8b24973c2d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Concentric oval loops in blue, teal, and yellow dominate the upper-left area, forming two nested eye-like shapes of different sizes.\",\n    \"A rectangular mouth region in the lower center contains dark purple zigzag teeth bordered by teal and green lines, framed by a rounded blue outline.\",\n    \"Vertical and wavy lines in pale blue, teal, and white stream down both sides of the composition, creating a curtain-like layering over a saturated blue field.\"\n  ],\n  \"reading\": \"A skull-like arrangement emerges from dense, overlapping loops—two mismatched orbital hollows stare out from a tangle of blue and teal. The zigzag teeth below read as both grin and grimace, lending the face an unsettled duality. Pale vertical lines drape across the whole surface like rain or static, partially dissolving the form back into pattern. The mood sits between confrontation and cartoon humor, never settling on either.\",\n  \"contextAngle\": \"Sitting between Scrimshaw1 and Scrimshaw3 in the owned numbered family, this work fills its composition far more densely than Scrimshaw1's open pastel background and single bold contour line. Scrimshaw3 shifts to thick black outlines and multiple heads, making this piece a middle ground of layered color without dominant black strokes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVNZF7YMfLP93bnKcUB1bdyQp5v59uxyGWdt74vQH4DVm\",\n      \"reason\": \"Both use concentric loops for eyes and zigzag marks for teeth, but Scrimshaw1 relies on a single blue contour over soft washes while this work buries the same motifs under dozens of overlapping colored lines.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS\",\n      \"reason\": \"Scrimshaw3 foregrounds thick black outlines to separate multiple rounded heads, whereas here no single line weight dominates—the face dissolves into competing strands of blue, teal, and yellow.\"\n    }\n  ],\n  \"tags\": [\n    \"layered loops\",\n    \"zigzag teeth\",\n    \"skull-like form\",\n    \"blue-teal palette\",\n    \"vertical streaming lines\",\n    \"dense overlapping strokes\"\n  ],\n  \"lookingQuestion\": \"Where does the boundary between the face and the background actually fall—can you trace a single closed outline, or do the streaming vertical lines prevent the form from ever fully separating from its surroundings?\",\n  \"ambiguities\": [\n    \"Whether the small spiral shape at the right edge is a second eye or a separate motif is unclear from the overlapping lines.\",\n    \"The nnxyz #8 comparison shares teal background tones but its figurative style and clean outlines offer limited formal overlap with this work.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz/image.png",
+        "imageSHA256": "83424605a7f8b7ad869db57cb69de2d55ce5ed9899d6ba0f79fd9da846ba5dde"
+      },
+      {
+        "artworkId": "QmVNZF7YMfLP93bnKcUB1bdyQp5v59uxyGWdt74vQH4DVm",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVNZF7YMfLP93bnKcUB1bdyQp5v59uxyGWdt74vQH4DVm/image.png",
+        "imageSHA256": "941042786b1bffb4b29863416eba7adb257306e59329fbaf960815e81c885a91"
+      },
+      {
+        "artworkId": "QmSkHfHUDJGBWfQFo4EoijVqZd2rqem8rEJJfcrVN4sCGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSkHfHUDJGBWfQFo4EoijVqZd2rqem8rEJJfcrVN4sCGy/image.png",
+        "imageSHA256": "594404a3076f13971206235745048fce49d6406063337713d20d0afe68af0dc8"
+      },
+      {
+        "artworkId": "QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS/image.png",
+        "imageSHA256": "43c49550dc0d40ff447b72187ab46a80b771dfd444b1e5495196bffc64aae4fb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:29.970113-05:00",
+    "usage": {
+      "inputTokens": 5664,
+      "outputTokens": 867,
+      "totalTokens": 6531,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11008
+    },
+    "requestId": "10a47536-6694-4c10-af6f-41e36937225f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Concentric oval loops in blue, teal, and yellow fill the upper-left quadrant, forming two nested hollow shapes of unequal size.\",\n    \"A rounded rectangular region in the lower center contains dark purple zigzag marks bordered by teal and green lines, sitting inside a blue outline.\",\n    \"Vertical and wavy lines in pale blue, teal, and white run down both sides, layering over a saturated blue field and partially obscuring the central forms.\"\n  ],\n  \"reading\": \"A skull-like arrangement surfaces from dense, overlapping loops—two mismatched hollow shapes peer out from tangled blue and teal. The zigzag marks below read as both grin and grimace, lending the face an unsettled duality. Pale vertical lines drape across the surface like rain or static, partially dissolving the form back into pattern. The mood hovers between confrontation and cartoon humor.\",\n  \"contextAngle\": \"Between Scrimshaw1 and Scrimshaw3 in the owned numbered family, this work fills its surface far more densely than Scrimshaw1's open pastel background and single bold contour. Scrimshaw3 shifts to thick black outlines and multiple rounded heads, making this piece a middle ground of layered color without dominant black strokes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVNZF7YMfLP93bnKcUB1bdyQp5v59uxyGWdt74vQH4DVm\",\n      \"reason\": \"Both use concentric loops for hollows and zigzag marks for teeth, but Scrimshaw1 relies on a single blue contour over soft washes while this work buries the same motifs under dozens of overlapping colored lines.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS\",\n      \"reason\": \"Scrimshaw3 foregrounds thick black outlines to separate multiple rounded heads, whereas here no single line weight dominates and the face dissolves into competing strands of blue, teal, and yellow.\"\n    }\n  ],\n  \"tags\": [\n    \"layered loops\",\n    \"zigzag teeth\",\n    \"skull-like form\",\n    \"blue-teal palette\",\n    \"vertical streaming lines\",\n    \"dense overlapping strokes\"\n  ],\n  \"lookingQuestion\": \"Where does the boundary between the face and the background actually fall—can you trace a single closed outline, or do the streaming vertical lines prevent the form from ever fully separating from its surroundings?\",\n  \"ambiguities\": [\n    \"Whether the small spiral shape at the right edge is a second eye or a separate motif is unclear from the overlapping lines.\",\n    \"The nnxyz #8 comparison shares teal tones but its clean outlines and figurative style offer limited formal overlap with this work.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed concentric loops in upper-left and zigzag marks in lower-center match the image; replaced 'eye-like' and 'mouth region' with less identity-assuming terms where possible.\",\n    \"Removed 'orbital hollows stare out' phrasing to reduce unsupported subject identification; replaced with 'hollow shapes peer out' as a softer visual reading.\",\n    \"Verified Scrimshaw1 comparison: its pastel background and single blue contour line contrast with this work's dense layering; Scrimshaw3 comparison confirmed—thick black outlines and multiple heads visible.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz/image.png",
+        "imageSHA256": "83424605a7f8b7ad869db57cb69de2d55ce5ed9899d6ba0f79fd9da846ba5dde"
+      },
+      {
+        "artworkId": "QmVNZF7YMfLP93bnKcUB1bdyQp5v59uxyGWdt74vQH4DVm",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVNZF7YMfLP93bnKcUB1bdyQp5v59uxyGWdt74vQH4DVm/image.png",
+        "imageSHA256": "941042786b1bffb4b29863416eba7adb257306e59329fbaf960815e81c885a91"
+      },
+      {
+        "artworkId": "QmSkHfHUDJGBWfQFo4EoijVqZd2rqem8rEJJfcrVN4sCGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSkHfHUDJGBWfQFo4EoijVqZd2rqem8rEJJfcrVN4sCGy/image.png",
+        "imageSHA256": "594404a3076f13971206235745048fce49d6406063337713d20d0afe68af0dc8"
+      },
+      {
+        "artworkId": "QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS/image.png",
+        "imageSHA256": "43c49550dc0d40ff447b72187ab46a80b771dfd444b1e5495196bffc64aae4fb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Concentric oval loops in blue, teal, and yellow dominate the upper-left area, forming two nested eye-like shapes of different sizes.\", \"A rectangular mouth region in the lower center contains dark purple zigzag teeth bordered by teal and green lines, framed by a rounded blue outline.\", \"Vertical and wavy lines in pale blue, teal, and white stream down both sides of the composition, creating a curtain-like layering over a saturated blue field.\"], \"reading\": \"A skull-like arrangement emerges from dense, overlapping loops—two mismatched orbital hollows stare out from a tangle of blue and teal. The zigzag teeth below read as both grin and grimace, lending the face an unsettled duality. Pale vertical lines drape across the whole surface like rain or static, partially dissolving the form back into pattern. The mood sits between confrontation and cartoon humor, never settling on either.\", \"contextAngle\": \"Sitting between Scrimshaw1 and Scrimshaw3 in the owned numbered family, this work fills its composition far more densely than Scrimshaw1's open pastel background and single bold contour line. Scrimshaw3 shifts to thick black outlines and multiple heads, making this piece a middle ground of layered color without dominant black strokes.\", \"connections\": [{\"targetArtworkId\": \"QmVNZF7YMfLP93bnKcUB1bdyQp5v59uxyGWdt74vQH4DVm\", \"reason\": \"Both use concentric loops for eyes and zigzag marks for teeth, but Scrimshaw1 relies on a single blue contour over soft washes while this work buries the same motifs under dozens of overlapping colored lines.\"}, {\"targetArtworkId\": \"QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS\", \"reason\": \"Scrimshaw3 foregrounds thick black outlines to separate multiple rounded heads, whereas here no single line weight dominates—the face dissolves into competing strands of blue, teal, and yellow.\"}], \"tags\": [\"layered loops\", \"zigzag teeth\", \"skull-like form\", \"blue-teal palette\", \"vertical streaming lines\", \"dense overlapping strokes\"], \"lookingQuestion\": \"Where does the boundary between the face and the background actually fall—can you trace a single closed outline, or do the streaming vertical lines prevent the form from ever fully separating from its surroundings?\", \"ambiguities\": [\"Whether the small spiral shape at the right edge is a second eye or a separate motif is unclear from the overlapping lines.\", \"The nnxyz #8 comparison shares teal background tones but its figurative style and clean outlines offer limited formal overlap with this work.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

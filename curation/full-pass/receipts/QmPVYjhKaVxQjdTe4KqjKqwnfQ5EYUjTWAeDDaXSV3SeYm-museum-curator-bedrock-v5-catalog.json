@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:44.098963-05:00",
+    "usage": {
+      "inputTokens": 6124,
+      "outputTokens": 744,
+      "totalTokens": 6868,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11880
+    },
+    "requestId": "72f894e7-9826-4779-9894-6ac7f7fabd45",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark red silhouette of a rounded, bulky figure fills the center-left of a flat yellow field, leaning back with one oversized rounded head tilted far right and thin branching lines rising from the top.\",\n    \"Yellow outline strokes trace internal body divisions—torso, limbs, a dangling rounded foot—visible against the dark red fill, creating a double-edge effect where figure and ground colors swap roles.\",\n    \"A small jagged mark sits on the large rounded head shape at right, and a lower-left corner signature in dark red matches the artist mark seen across the owned subset.\"\n  ],\n  \"reading\": \"The figure leans back hard, weight dropping through the lower body while the oversized head swings wide to the right. Thin forked lines at the top read as antennae or bare branches—light against yellow, unattached to the solid mass below. The two-color scheme keeps the image flat and high-contrast, and the yellow outline strokes inside the silhouette suggest a body under pressure rather than at rest.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #262 and nnxyz nnotb #264. All three use a two-color figure-on-ground structure, but #263 strips the field to near-silence compared to the dense layering in #262.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3\",\n      \"reason\": \"Both #263 and #264 place a single solid-fill figure on a plain ground using only two colors, and both figures lean or reach with arms extended away from the body's center mass.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7\",\n      \"reason\": \"#114 shares the same yellow ground and a dark silhouetted figure with radiating thin lines extending outward from the body, offering a direct formal echo to the branching lines above #263's head.\"\n    }\n  ],\n  \"tags\": [\n    \"two-color silhouette\",\n    \"yellow ground\",\n    \"branching line forms\",\n    \"figure lean\",\n    \"internal outline strokes\",\n    \"rounded limb shapes\"\n  ],\n  \"interpretiveTags\": [\n    \"off-balance mood\",\n    \"tension or release\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the thin branching lines at the top connect to—or fail to connect to—the solid mass of the figure below?\",\n  \"ambiguities\": [\n    \"The jagged mark on the large rounded head shape could be a face detail or an incidental mark; the image resolution does not resolve this clearly.\",\n    \"Title-derived order and recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency does not confirm sequential making.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPVYjhKaVxQjdTe4KqjKqwnfQ5EYUjTWAeDDaXSV3SeYm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPVYjhKaVxQjdTe4KqjKqwnfQ5EYUjTWAeDDaXSV3SeYm/image.png",
+        "imageSHA256": "5cda5e07f359d77c51becc66f1cd0130a233031ca169c228f60fc17652fd47c5"
+      },
+      {
+        "artworkId": "QmNrQxAA3torKL4ytYofLF7vdAeBqRQ95ANTBo4BmdVqE7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrQxAA3torKL4ytYofLF7vdAeBqRQ95ANTBo4BmdVqE7/image.png",
+        "imageSHA256": "85a1d363abc37a42750256c0ae285cf842669cbeb3e1b2f5a44f17f74c2cd6f5"
+      },
+      {
+        "artworkId": "QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3/image.png",
+        "imageSHA256": "4f8a70ae92d9194fe188d0c6c602157397e389fccb813bffda471915b715e69b"
+      },
+      {
+        "artworkId": "QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7/image.png",
+        "imageSHA256": "c8dca195b5c88229ede9ba146288f5acf245a8bee5049def62a5dc336ee272cc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:51.285785-05:00",
+    "usage": {
+      "inputTokens": 6890,
+      "outputTokens": 975,
+      "totalTokens": 7865,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7140
+    },
+    "requestId": "00284533-2762-4009-9913-43c307489975",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark red silhouette of a bulky rounded figure occupies the center-left of a flat yellow field, leaning back with an oversized rounded head shape tilted far to the right.\",\n    \"Yellow outline strokes trace internal divisions—torso, limbs, a dangling rounded foot—visible against the dark red fill, so figure and ground colors swap roles along those edges.\",\n    \"Thin forked lines rise from the top of the figure into open yellow space, unattached to the solid mass below; a small jagged mark sits on the large rounded head at right.\"\n  ],\n  \"reading\": \"The figure leans back hard, weight dropping through the lower body while the oversized head swings wide to the right. Thin forked lines at the top float free of the solid mass below. The two-color scheme keeps the image flat and high-contrast, and the yellow outline strokes inside the silhouette suggest a body under strain rather than at rest.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #262 and nnxyz nnotb #264. All three use a two-color figure-on-ground structure, but #263 strips the field to near-silence compared to the dense layering visible in #262.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3\",\n      \"reason\": \"Both #263 and #264 place a single solid-fill figure on a plain ground using two colors, and both figures lean with limbs extended away from the body's center mass.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7\",\n      \"reason\": \"#114 shares the same yellow ground and a dark silhouetted figure with thin radiating lines extending outward, offering a direct formal parallel to the forked lines above #263's figure.\"\n    }\n  ],\n  \"tags\": [\n    \"two-color silhouette\",\n    \"yellow ground\",\n    \"forked line forms\",\n    \"figure lean\",\n    \"internal outline strokes\",\n    \"rounded limb shapes\"\n  ],\n  \"interpretiveTags\": [\n    \"off-balance\",\n    \"tension\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the thin forked lines at the top connect to—or fail to connect to—the solid mass of the figure below?\",\n  \"ambiguities\": [\n    \"The jagged mark on the large rounded head shape may be a face detail or an incidental mark; image resolution does not resolve this clearly.\",\n    \"Title-derived order and recorded-creation order align for this work, but gaps exist elsewhere in the owned subset, so adjacency does not confirm sequential making.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: forked lines at top are visually detached from the solid silhouette mass—draft description was accurate; changed 'branching' to 'forked' for precision.\",\n    \"Confirmed: #264 (QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3) shows a single solid-fill figure on a plain dark red ground with limbs extended—two-color figure-ground comparison holds; noted ground color differs (red vs yellow) but structure comparison remains valid and no overclaim made.\",\n    \"Confirmed: #114 (QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7) shows yellow ground with dark silhouette and radiating thin lines—formal echo to #263 is visually supported; removed draft phrase 'direct formal echo' and replaced with 'direct formal parallel' to avoid stock phrasing.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPVYjhKaVxQjdTe4KqjKqwnfQ5EYUjTWAeDDaXSV3SeYm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPVYjhKaVxQjdTe4KqjKqwnfQ5EYUjTWAeDDaXSV3SeYm/image.png",
+        "imageSHA256": "5cda5e07f359d77c51becc66f1cd0130a233031ca169c228f60fc17652fd47c5"
+      },
+      {
+        "artworkId": "QmNrQxAA3torKL4ytYofLF7vdAeBqRQ95ANTBo4BmdVqE7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrQxAA3torKL4ytYofLF7vdAeBqRQ95ANTBo4BmdVqE7/image.png",
+        "imageSHA256": "85a1d363abc37a42750256c0ae285cf842669cbeb3e1b2f5a44f17f74c2cd6f5"
+      },
+      {
+        "artworkId": "QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3/image.png",
+        "imageSHA256": "4f8a70ae92d9194fe188d0c6c602157397e389fccb813bffda471915b715e69b"
+      },
+      {
+        "artworkId": "QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7/image.png",
+        "imageSHA256": "c8dca195b5c88229ede9ba146288f5acf245a8bee5049def62a5dc336ee272cc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dark red silhouette of a rounded, bulky figure fills the center-left of a flat yellow field, leaning back with one oversized rounded head tilted far right and thin branching lines rising from the top.\", \"Yellow outline strokes trace internal body divisions—torso, limbs, a dangling rounded foot—visible against the dark red fill, creating a double-edge effect where figure and ground colors swap roles.\", \"A small jagged mark sits on the large rounded head shape at right, and a lower-left corner signature in dark red matches the artist mark seen across the owned subset.\"], \"reading\": \"The figure leans back hard, weight dropping through the lower body while the oversized head swings wide to the right. Thin forked lines at the top read as antennae or bare branches—light against yellow, unattached to the solid mass below. The two-color scheme keeps the image flat and high-contrast, and the yellow outline strokes inside the silhouette suggest a body under pressure rather than at rest.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #262 and nnxyz nnotb #264. All three use a two-color figure-on-ground structure, but #263 strips the field to near-silence compared to the dense layering in #262.\", \"connections\": [{\"targetArtworkId\": \"QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3\", \"reason\": \"Both #263 and #264 place a single solid-fill figure on a plain ground using only two colors, and both figures lean or reach with arms extended away from the body's center mass.\"}, {\"targetArtworkId\": \"QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7\", \"reason\": \"#114 shares the same yellow ground and a dark silhouetted figure with radiating thin lines extending outward from the body, offering a direct formal echo to the branching lines above #263's head.\"}], \"tags\": [\"two-color silhouette\", \"yellow ground\", \"branching line forms\", \"figure lean\", \"internal outline strokes\", \"rounded limb shapes\"], \"interpretiveTags\": [\"off-balance mood\", \"tension or release\"], \"lookingQuestion\": \"Where exactly do the thin branching lines at the top connect to—or fail to connect to—the solid mass of the figure below?\", \"ambiguities\": [\"The jagged mark on the large rounded head shape could be a face detail or an incidental mark; the image resolution does not resolve this clearly.\", \"Title-derived order and recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency does not confirm sequential making.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

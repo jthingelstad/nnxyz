@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:40.774879-05:00",
+    "usage": {
+      "inputTokens": 5910,
+      "outputTokens": 746,
+      "totalTokens": 6656,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13319
+    },
+    "requestId": "5807b435-6151-432f-add1-7f63f91f4fe4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the pink field, outlined in thick black with a jagged black spike-fringe running across the top edge.\",\n    \"The left eye area is a white oval crossed by bold red lines forming an X; the open mouth below shows red-lined teeth against white, both framed by layered black outlines.\",\n    \"Loose scribbled lines in cyan, magenta, yellow, and lime green spread across the face interior, while the lettering ABI NINJA sits in white near the lower center.\"\n  ],\n  \"reading\": \"The head pushes close to all four edges, leaving only a flat pink border. Crossed lines mark the eye like a target, and the open-toothed mouth reads as a shout or a snarl — the image holds both at once. Scribbled color loops over the solid forms without settling into calm, giving the face a layered, unresolved tension that the pink ground does nothing to soften.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between recorded-creation neighbors nnxyz #48 and nnxyz #64 and carries no numbered title family. The collector links nnxyz works to scrimshaw through shared pattern density — the spike fringe and crossed-line eye here echo that quality.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3\",\n      \"reason\": \"Both works place a large dark-outlined head on a flat pink ground with rectangular eye zones marked by yellow X crosses and a teeth-baring mouth, making the structural parallel direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\",\n      \"reason\": \"Both heads are packed with overlapping scribbled color lines that run across solid forms, and both feature an open mouth with visible teeth, though the dark background of nnotb #210 makes the density feel heavier by contrast.\"\n    }\n  ],\n  \"tags\": [\n    \"head form\",\n    \"X-cross eye mark\",\n    \"spike fringe\",\n    \"open mouth with teeth\",\n    \"overlapping scribble lines\",\n    \"flat pink ground\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"unresolved tension\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first — toward the crossed lines of the eye, the open teeth of the mouth, or the spike fringe at the top — and what does that path suggest about how the forms compete for attention?\",\n  \"ambiguities\": [\n    \"The second circular form at the right of the face is partially obscured; it may be a second eye or an ear, and the image does not resolve this clearly.\",\n    \"The nnotb #29 comparison (robot figure on grey ground) shares no strong formal parallel with this work and was not selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u/image.png",
+        "imageSHA256": "60fcbef398fd369b44012fe211ef4ff5bb42ed7478818d96903421ba36af089a"
+      },
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      },
+      {
+        "artworkId": "QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t/image.png",
+        "imageSHA256": "8ab4959fa95189edf040b46be1e07fe4ed6681ab12c1acf49f05e9dea96bdd33"
+      },
+      {
+        "artworkId": "QmNmGbXLfrqN546FbEDh71UTvfKhtuj67S6EVufLGSD7in",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNmGbXLfrqN546FbEDh71UTvfKhtuj67S6EVufLGSD7in/image.png",
+        "imageSHA256": "7952157a58e285db216716a8521da9e09ae6462bf74fb30336c9861872bb5ef2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:46.982499-05:00",
+    "usage": {
+      "inputTokens": 6678,
+      "outputTokens": 952,
+      "totalTokens": 7630,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6140
+    },
+    "requestId": "abccee19-6244-4beb-af5d-f003db6fa402",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the pink field, outlined in thick black with a jagged black spike-fringe running across the top edge.\",\n    \"The left eye area is a white oval crossed by bold red lines forming an X; the open mouth below shows red-lined teeth against white, both framed by layered black outlines.\",\n    \"Loose scribbled lines in cyan, magenta, yellow, and lime green spread across the face interior, while the lettering ABI NINJA sits in white near the lower center.\"\n  ],\n  \"reading\": \"The head pushes close to all four edges, leaving only a flat pink border. Crossed lines mark one eye like a target, and the open-toothed mouth reads as a shout or a snarl — the image holds both at once. Scribbled color loops over the solid forms without settling, giving the face a layered, unresolved tension that the pink ground does nothing to soften.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between recorded-creation neighbors nnxyz #48 and nnxyz #64 and carries no numbered title family. The collector links nnxyz works to scrimshaw through shared pattern density — the spike fringe and crossed-line eye echo that quality.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3\",\n      \"reason\": \"Both works place a large dark-outlined head on a flat pink ground with rectangular eye zones marked by yellow X crosses and a teeth-baring mouth, making the structural parallel direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\",\n      \"reason\": \"Both heads are packed with overlapping scribbled color lines running across solid forms, and both feature an open mouth with visible teeth, though the dark background of nnotb #210 makes the density feel heavier by contrast.\"\n    }\n  ],\n  \"tags\": [\n    \"head form\",\n    \"X-cross eye mark\",\n    \"spike fringe\",\n    \"open mouth with teeth\",\n    \"overlapping scribble lines\",\n    \"flat pink ground\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"unresolved tension\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first — toward the crossed lines of the eye, the open teeth of the mouth, or the spike fringe at the top — and what does that path suggest about how the forms compete for attention?\",\n  \"ambiguities\": [\n    \"The circular form at the right of the face is partially obscured; it may be a second eye or an ear, and the image does not resolve this clearly.\",\n    \"nnotb #29 (robot figure on grey ground) shares no strong formal parallel with this work and was correctly excluded.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: pink ground, black spike fringe, red X on white oval eye, red-lined teeth, cyan/magenta/yellow/lime scribbles, and white ABI NINJA lettering all verified against the primary image.\",\n    \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3 confirmed: pink ground, dark-outlined head, rectangular eye zones with yellow X marks, and teeth-baring mouth are all visible in that image — parallel holds.\",\n    \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t confirmed: dense overlapping scribble lines over solid forms and open mouth with teeth visible; dark background contrast noted accurately; no invented claims added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u/image.png",
+        "imageSHA256": "60fcbef398fd369b44012fe211ef4ff5bb42ed7478818d96903421ba36af089a"
+      },
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      },
+      {
+        "artworkId": "QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t/image.png",
+        "imageSHA256": "8ab4959fa95189edf040b46be1e07fe4ed6681ab12c1acf49f05e9dea96bdd33"
+      },
+      {
+        "artworkId": "QmNmGbXLfrqN546FbEDh71UTvfKhtuj67S6EVufLGSD7in",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNmGbXLfrqN546FbEDh71UTvfKhtuj67S6EVufLGSD7in/image.png",
+        "imageSHA256": "7952157a58e285db216716a8521da9e09ae6462bf74fb30336c9861872bb5ef2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape fills most of the pink field, outlined in thick black with a jagged black spike-fringe running across the top edge.\", \"The left eye area is a white oval crossed by bold red lines forming an X; the open mouth below shows red-lined teeth against white, both framed by layered black outlines.\", \"Loose scribbled lines in cyan, magenta, yellow, and lime green spread across the face interior, while the lettering ABI NINJA sits in white near the lower center.\"], \"reading\": \"The head pushes close to all four edges, leaving only a flat pink border. Crossed lines mark the eye like a target, and the open-toothed mouth reads as a shout or a snarl — the image holds both at once. Scribbled color loops over the solid forms without settling into calm, giving the face a layered, unresolved tension that the pink ground does nothing to soften.\", \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between recorded-creation neighbors nnxyz #48 and nnxyz #64 and carries no numbered title family. The collector links nnxyz works to scrimshaw through shared pattern density — the spike fringe and crossed-line eye here echo that quality.\", \"connections\": [{\"targetArtworkId\": \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3\", \"reason\": \"Both works place a large dark-outlined head on a flat pink ground with rectangular eye zones marked by yellow X crosses and a teeth-baring mouth, making the structural parallel direct and visible.\"}, {\"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\", \"reason\": \"Both heads are packed with overlapping scribbled color lines that run across solid forms, and both feature an open mouth with visible teeth, though the dark background of nnotb #210 makes the density feel heavier by contrast.\"}], \"tags\": [\"head form\", \"X-cross eye mark\", \"spike fringe\", \"open mouth with teeth\", \"overlapping scribble lines\", \"flat pink ground\"], \"interpretiveTags\": [\"confrontational mood\", \"unresolved tension\"], \"lookingQuestion\": \"Where does your eye move first — toward the crossed lines of the eye, the open teeth of the mouth, or the spike fringe at the top — and what does that path suggest about how the forms compete for attention?\", \"ambiguities\": [\"The second circular form at the right of the face is partially obscured; it may be a second eye or an ear, and the image does not resolve this clearly.\", \"The nnotb #29 comparison (robot figure on grey ground) shares no strong formal parallel with this work and was not selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

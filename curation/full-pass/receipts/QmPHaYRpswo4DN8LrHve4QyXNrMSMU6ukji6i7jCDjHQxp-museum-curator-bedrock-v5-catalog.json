@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:29.198512-05:00",
+    "usage": {
+      "inputTokens": 6362,
+      "outputTokens": 769,
+      "totalTokens": 7131,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13849
+    },
+    "requestId": "b80cc405-3ef1-4573-a072-41441121c1e1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large circular eye forms dominate the upper half, each containing a green iris with a red X-cross mark at center, ringed by dense black spiral lines.\",\n    \"The face sits against a flat burnt-orange background; the head form tapers to two pointed ear-like peaks at the top corners, outlined in white against the orange.\",\n    \"A rectangular open mouth at the bottom shows vertical black lines across white, resembling a barred or gated opening; loose yellow scribble lines trail down the left edge.\"\n  ],\n  \"reading\": \"The two X-marked eyes pull attention immediately — green fields crossed in red, wound tight with black spirals that read as pressure or alarm. The barred mouth below adds a sense of something caged or held open. Blue, pink, and purple lines layer across the face without settling into smooth form, keeping the surface restless. The flat orange ground pushes the whole figure forward.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors are nifty faces #92 and nifty faces #94. The collector links nnxyz's work to scrimshaw through shared qualities of dense line-over-line patterning — visible here in the spiral eye rings and the layered face marks.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L\",\n      \"reason\": \"nifty faces #92 also uses X-cross marks inside circular eye forms, but frames them in hard rectangles on an olive ground rather than the loose spirals and warm orange seen here — same motif, opposite structural approach.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya\",\n      \"reason\": \"nnotb #135 shares an open-mouth form at lower right and a similarly layered, multi-color line surface, offering a cross-collection comparison of how the same face-building vocabulary appears on a black rather than orange ground.\"\n    }\n  ],\n  \"tags\": [\n    \"X-mark eye motif\",\n    \"spiral line rings\",\n    \"barred rectangular mouth\",\n    \"flat single-color background\",\n    \"pointed ear-like peaks\",\n    \"multi-color layered line surface\"\n  ],\n  \"interpretiveTags\": [\n    \"alarm or pressure reading\",\n    \"caged or constrained mood\"\n  ],\n  \"lookingQuestion\": \"What does the difference in line density between the tightly wound spiral rings around the eyes and the looser scribble lines along the edges do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The title neighbor order (title-derived) and the recorded creation order align here, but the metadata notes gaps may exist elsewhere in the family — no making sequence can be confirmed.\",\n    \"nifty faces #94 shows a dark, heavily armored form with no visible X-eye or open-mouth motif; no meaningful formal connection to this work was found, so it was omitted despite title adjacency.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPHaYRpswo4DN8LrHve4QyXNrMSMU6ukji6i7jCDjHQxp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPHaYRpswo4DN8LrHve4QyXNrMSMU6ukji6i7jCDjHQxp/image.png",
+        "imageSHA256": "8d60876882352af92ed943b8f9edd14bfe779a63779a13fe6ba45b327890fe5e"
+      },
+      {
+        "artworkId": "QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L/image.png",
+        "imageSHA256": "4febcf90aad6d497861f904d5749a5883bdbf0a9f2f5154e7ff9ee93db9b9aa6"
+      },
+      {
+        "artworkId": "QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya/image.png",
+        "imageSHA256": "f83374faee1d16e7280fe3788a1cf11b481fe6703ebca51fc7ff94da66c6ec99"
+      },
+      {
+        "artworkId": "QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2/image.png",
+        "imageSHA256": "a4557f5831b04f804d5d17743263cec0af16bb02bdf1b69256c1a92e27be7326"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:35.816585-05:00",
+    "usage": {
+      "inputTokens": 7153,
+      "outputTokens": 919,
+      "totalTokens": 8072,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6509
+    },
+    "requestId": "4477d5ec-cf6f-4bad-82b3-adc3a3733097",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large circular eye forms dominate the upper half, each containing a green iris with a red X-cross mark at center, ringed by dense black spiral lines.\",\n    \"The head tapers to two pointed ear-like peaks at the top corners, outlined in white against a flat burnt-orange background that fills the entire field.\",\n    \"A rectangular open mouth at the bottom shows vertical black lines across white; loose yellow scribble lines trail down the left edge and across the lower face.\"\n  ],\n  \"reading\": \"The two X-marked eyes pull attention first — green fields crossed in red, wound tight with black spirals that read as pressure or alarm. The barred mouth below adds a sense of something held open rather than speaking. Blue, pink, and purple lines layer across the face without settling into smooth form, keeping the surface restless. The flat orange ground pushes the whole figure forward.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors are nifty faces #92 and nifty faces #94. The collector links nnxyz's work to scrimshaw through dense line-over-line patterning — visible here in the spiral eye rings and layered face marks.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L\",\n      \"reason\": \"nifty faces #92 also uses X-cross marks inside circular eye forms, but frames them in hard black rectangles on an olive ground rather than the loose spirals and warm orange seen here — same motif, opposite structural approach.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya\",\n      \"reason\": \"nnotb #135 shows an open-mouth form at lower right and a similarly layered multi-color line surface, offering a cross-collection comparison of the same face-building vocabulary on a black rather than orange ground.\"\n    }\n  ],\n  \"tags\": [\n    \"X-mark eye motif\",\n    \"spiral line rings\",\n    \"barred rectangular mouth\",\n    \"flat single-color background\",\n    \"pointed ear-like peaks\",\n    \"multi-color layered line surface\"\n  ],\n  \"interpretiveTags\": [\n    \"alarm or pressure reading\",\n    \"caged or constrained mood\"\n  ],\n  \"lookingQuestion\": \"What does the difference in line density between the tightly wound spiral rings around the eyes and the looser scribble lines along the edges do to how you move through the image?\",\n  \"ambiguities\": [\n    \"Title-derived neighbor order and recorded creation order align for this work, but metadata notes gaps may exist elsewhere in the family — no making sequence can be confirmed.\",\n    \"nifty faces #94 shows a dark, heavily enclosed form with no visible X-eye or open-mouth motif; no meaningful formal connection was found, so it was omitted despite title adjacency.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: green irises with red X-marks, black spirals, burnt-orange ground, white-outlined peaks, barred rectangular mouth, and yellow edge scribbles are all visible.\",\n    \"nifty faces #92 comparison confirmed: X-cross marks inside circular forms are visible in that image, framed by hard rectangles on an olive ground — contrast with #93's loose spirals and orange ground is accurate.\",\n    \"nnotb #135 comparison confirmed: an open-mouth form and dense multi-color layered lines are visible on a black ground — cross-collection contrast is supported by inspected images; no invented subject identities or unsupported intent found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPHaYRpswo4DN8LrHve4QyXNrMSMU6ukji6i7jCDjHQxp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPHaYRpswo4DN8LrHve4QyXNrMSMU6ukji6i7jCDjHQxp/image.png",
+        "imageSHA256": "8d60876882352af92ed943b8f9edd14bfe779a63779a13fe6ba45b327890fe5e"
+      },
+      {
+        "artworkId": "QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L/image.png",
+        "imageSHA256": "4febcf90aad6d497861f904d5749a5883bdbf0a9f2f5154e7ff9ee93db9b9aa6"
+      },
+      {
+        "artworkId": "QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya/image.png",
+        "imageSHA256": "f83374faee1d16e7280fe3788a1cf11b481fe6703ebca51fc7ff94da66c6ec99"
+      },
+      {
+        "artworkId": "QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2/image.png",
+        "imageSHA256": "a4557f5831b04f804d5d17743263cec0af16bb02bdf1b69256c1a92e27be7326"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two large circular eye forms dominate the upper half, each containing a green iris with a red X-cross mark at center, ringed by dense black spiral lines.\", \"The face sits against a flat burnt-orange background; the head form tapers to two pointed ear-like peaks at the top corners, outlined in white against the orange.\", \"A rectangular open mouth at the bottom shows vertical black lines across white, resembling a barred or gated opening; loose yellow scribble lines trail down the left edge.\"], \"reading\": \"The two X-marked eyes pull attention immediately — green fields crossed in red, wound tight with black spirals that read as pressure or alarm. The barred mouth below adds a sense of something caged or held open. Blue, pink, and purple lines layer across the face without settling into smooth form, keeping the surface restless. The flat orange ground pushes the whole figure forward.\", \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors are nifty faces #92 and nifty faces #94. The collector links nnxyz's work to scrimshaw through shared qualities of dense line-over-line patterning — visible here in the spiral eye rings and the layered face marks.\", \"connections\": [{\"targetArtworkId\": \"QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L\", \"reason\": \"nifty faces #92 also uses X-cross marks inside circular eye forms, but frames them in hard rectangles on an olive ground rather than the loose spirals and warm orange seen here — same motif, opposite structural approach.\"}, {\"targetArtworkId\": \"QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya\", \"reason\": \"nnotb #135 shares an open-mouth form at lower right and a similarly layered, multi-color line surface, offering a cross-collection comparison of how the same face-building vocabulary appears on a black rather than orange ground.\"}], \"tags\": [\"X-mark eye motif\", \"spiral line rings\", \"barred rectangular mouth\", \"flat single-color background\", \"pointed ear-like peaks\", \"multi-color layered line surface\"], \"interpretiveTags\": [\"alarm or pressure reading\", \"caged or constrained mood\"], \"lookingQuestion\": \"What does the difference in line density between the tightly wound spiral rings around the eyes and the looser scribble lines along the edges do to how you move through the image?\", \"ambiguities\": [\"The title neighbor order (title-derived) and the recorded creation order align here, but the metadata notes gaps may exist elsewhere in the family — no making sequence can be confirmed.\", \"nifty faces #94 shows a dark, heavily armored form with no visible X-eye or open-mouth motif; no meaningful formal connection to this work was found, so it was omitted despite title adjacency.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

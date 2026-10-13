@@ -1,0 +1,46 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:46.924807-05:00",
+    "usage": {
+      "inputTokens": 6074,
+      "outputTokens": 808,
+      "totalTokens": 6882,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13680
+    },
+    "requestId": "e6c71b6e-1c56-48dd-9e48-5012e8286462",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large open-mouthed figure with red-framed rectangular glasses dominates the left two-thirds, its face layered with overlapping pink, red, and yellow scribbled lines against a flat sky-blue background scattered with pale blue dash marks.\",\n    \"A pizza slice rendered in yellow, orange, and red floats upper-right, while a small squat orange figure in the lower-right holds a sign bearing two red hearts, mirroring the large figure's red glasses.\",\n    \"The large figure's raised right hand and the small figure's upraised arm create a loose diagonal echo across the composition, with a dark cape-like form sweeping left from the large figure's shoulders.\"\n  ],\n  \"reading\": \"The large figure grins wide, glasses catching white highlights, while a floating pizza and a small companion with a heart-marked sign orbit it. The repeated glasses motif links the two figures without explaining their relationship. The scribbled lines layered across the face read as noise or static rather than shadow. The sky-blue field and dash marks give the scene an open, slightly unreal atmosphere that sits somewhere between celebration and agitation.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between the recorded-creation neighbor 'pizza pizza pizza day' and 'nnxyz #48.' The companion figure's red glasses and heart sign echo mark-making patterns visible across the owned nnotb works, though this piece uses a more open, figure-and-object staging than the dense all-over line fields common there.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\",\n      \"reason\": \"Both works place a wide-open toothed mouth at center on a flat sky-blue ground, with multicolored scribbled lines layered across the face area, though nnotb #173 fills the frame edge-to-edge while the primary work leaves open space around its figures.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw\",\n      \"reason\": \"nnotb #9 similarly stages two distinct figures in a shared field with a scribbled background, offering a contrast in mood: the warm pink-gold ground and fluid forms there feel looser than the primary work's hard sky-blue and angular glasses.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"rectangular glasses\",\n    \"floating food object\",\n    \"two-figure composition\",\n    \"scribbled line overlay\",\n    \"flat blue ground\"\n  ],\n  \"interpretiveTags\": [\n    \"celebratory\",\n    \"agitated\",\n    \"absurdist\"\n  ],\n  \"lookingQuestion\": \"What does the repeated glasses shape on both the large and small figures do to the sense of distance between them?\",\n  \"ambiguities\": [\n    \"The object upper-left behind the large figure's head is partially cropped and unclear — it may be a second food item or an unrelated form.\",\n    \"nnotb #239 was inspected but its dense horizontal-stripe structure and single eye motif share no specific formal element with the primary work strong enough to support a useful connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH/image.png",
+        "imageSHA256": "7b6d1775bbf2ebb96153886c0b42c6e0bd0414a352762a454d20f143688ce7db"
+      },
+      {
+        "artworkId": "QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1/image.png",
+        "imageSHA256": "64b4e4a11370b25f2fce44a13ded0c5cfbde4617845c0be396fcbe6b7c9246e0"
+      },
+      {
+        "artworkId": "QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1/image.png",
+        "imageSHA256": "d147cba4feac5802491e612ac876b161a8146807d2a80b4ddbb847b909f84e94"
+      },
+      {
+        "artworkId": "QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw/image.png",
+        "imageSHA256": "fd29e4090e515b0dcfbb1deef000b9f67e769ad949551adbeb6e683a1d7dafed"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

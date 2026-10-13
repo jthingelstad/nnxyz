@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:06:54.353892-05:00",
+    "usage": {
+      "inputTokens": 6236,
+      "outputTokens": 724,
+      "totalTokens": 6960,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20950
+    },
+    "requestId": "712c8c23-3731-4b7a-9217-30ec6f9bfff1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills the center, outlined in white and light blue, with a row of small red triangles crowning the top against a yellow background patch.\",\n    \"Two eye-like forms sit asymmetrically: the left marked by a bold red X over a crosshatch circle, the right by a smaller red cross, both ringed in black with yellow and white fills.\",\n    \"Teal horizontal bars stack along the right edge, overlaid with red and white zigzag lines, while lime-green diagonal strokes and vertical brown-yellow stripes fill the left margin.\"\n  ],\n  \"reading\": \"The head looms off-center, its brown and orange fill broken by competing marks—crossed-out eyes, bared white teeth, blue dashes running down one cheek like stitches. Surrounding bands of teal, lime, and vertical stripes press inward, giving the composition a boxed-in feeling. The red triangle crown reads as both ornament and warning. The overall effect can feel confrontational, even comic, as if the figure is caught between a grin and a grimace.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #3\\\" and \\\"nnxyz rawblocks #5\\\" by title number. Compared to #3's smooth, rounded head and soft teal background, #4 packs the surface with competing line systems and a much denser color range, marking a sharp shift in density within these neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW\",\n      \"reason\": \"Both share a crowned head with small triangles along the top, but #3's single smooth yellow mass contrasts with #4's fractured, heavily layered surface.\"\n    },\n    {\n      \"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\",\n      \"reason\": \"The crossed-out eye motif and exposed-teeth mouth in #4 closely echo the red-gridded eyes and long vertical teeth in this nifty faces work, linking the two across different title families.\"\n    }\n  ],\n  \"tags\": [\n    \"bared teeth\",\n    \"crossed-out eyes\",\n    \"triangle crown\",\n    \"teal horizontal bars\",\n    \"dense layered lines\",\n    \"head form\"\n  ],\n  \"lookingQuestion\": \"How do the blue dashes running down the right side of the face change your reading of the expression compared to the red marks on the left?\",\n  \"ambiguities\": [\n    \"Small marks near the lower left may be a signature or additional drawn elements; their role is unclear at this scale.\",\n    \"Whether the white zigzag line crossing the full width is part of the head or the background cannot be determined from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd/image.png",
+        "imageSHA256": "c87b2817581249389b145b1d5339b83253578268f557651c561c49cad7b88c63"
+      },
+      {
+        "artworkId": "QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW/image.png",
+        "imageSHA256": "41e1ffd72020f4a1357ef598a9ec4651781ef4ac7786564dc841031c93439dee"
+      },
+      {
+        "artworkId": "QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS/image.png",
+        "imageSHA256": "64c4f51006df02d6fa50d6ee1c8aaa0bb1f8a2f4175e9fcf89c0cd85e115fe49"
+      },
+      {
+        "artworkId": "QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA/image.png",
+        "imageSHA256": "27994cde95f0a8f0a08e9479f8b9452fb0d25a533e99c857aec67b74a43aaa36"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:05.275866-05:00",
+    "usage": {
+      "inputTokens": 6992,
+      "outputTokens": 805,
+      "totalTokens": 7797,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10832
+    },
+    "requestId": "b5e0fc0f-3c6f-40ca-b012-71fd2e69cbac",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills the center, outlined in white and light blue, with a row of small red triangles crowning the top against a yellow background patch.\",\n    \"Two eye-like forms sit asymmetrically: the left marked by a bold red X over a crosshatch circle, the right by a smaller red cross, both set against yellow and white fills.\",\n    \"Teal horizontal bars stack along the right edge, overlaid with red and white zigzag lines, while lime-green diagonal strokes and vertical brown-yellow stripes fill the left margin.\"\n  ],\n  \"reading\": \"The head looms off-center, its brown and orange fill broken by competing marks—crossed-out eyes, bared white teeth, blue dashes running down one cheek. Surrounding bands of teal, lime, and vertical stripes press inward, giving the composition a boxed-in quality. The red triangle crown reads as both ornament and warning. The overall effect can feel confrontational, even comic, as if caught between a grin and a grimace.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #3\\\" and \\\"nnxyz rawblocks #5\\\" by title number. Compared to #3's smooth, rounded head and soft teal background, #4 packs the surface with competing line systems and a much denser color range.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW\",\n      \"reason\": \"Both share a crowned head with small triangles along the top, but #3's single smooth yellow mass contrasts sharply with #4's fractured, heavily layered surface.\"\n    },\n    {\n      \"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\",\n      \"reason\": \"The crossed-out eye motif and exposed-teeth mouth in #4 closely echo the red-gridded eyes and long vertical teeth in this nifty faces work.\"\n    }\n  ],\n  \"tags\": [\n    \"bared teeth\",\n    \"crossed-out eyes\",\n    \"triangle crown\",\n    \"teal horizontal bars\",\n    \"dense layered lines\",\n    \"head form\"\n  ],\n  \"lookingQuestion\": \"How do the blue dashes running down the right side of the face change your reading of the expression compared to the red marks on the left?\",\n  \"ambiguities\": [\n    \"Small marks near the lower left may be a signature or additional drawn elements; their role is unclear at this scale.\",\n    \"Whether the white zigzag line crossing the full width is part of the head or the background cannot be determined from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed red triangle crown visible at top of head in primary image; yellow patch behind matches observation.\",\n    \"Removed 'like stitches' simile from reading as unsupported; trimmed reading from 82 to 74 words to stay within limit.\",\n    \"Cross-checked nifty faces #67 comparison: red grid/cross marks in eyes and vertical white teeth confirmed in that image, supporting the connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd/image.png",
+        "imageSHA256": "c87b2817581249389b145b1d5339b83253578268f557651c561c49cad7b88c63"
+      },
+      {
+        "artworkId": "QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW/image.png",
+        "imageSHA256": "41e1ffd72020f4a1357ef598a9ec4651781ef4ac7786564dc841031c93439dee"
+      },
+      {
+        "artworkId": "QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS/image.png",
+        "imageSHA256": "64c4f51006df02d6fa50d6ee1c8aaa0bb1f8a2f4175e9fcf89c0cd85e115fe49"
+      },
+      {
+        "artworkId": "QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA/image.png",
+        "imageSHA256": "27994cde95f0a8f0a08e9479f8b9452fb0d25a533e99c857aec67b74a43aaa36"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape fills the center, outlined in white and light blue, with a row of small red triangles crowning the top against a yellow background patch.\", \"Two eye-like forms sit asymmetrically: the left marked by a bold red X over a crosshatch circle, the right by a smaller red cross, both ringed in black with yellow and white fills.\", \"Teal horizontal bars stack along the right edge, overlaid with red and white zigzag lines, while lime-green diagonal strokes and vertical brown-yellow stripes fill the left margin.\"], \"reading\": \"The head looms off-center, its brown and orange fill broken by competing marks—crossed-out eyes, bared white teeth, blue dashes running down one cheek like stitches. Surrounding bands of teal, lime, and vertical stripes press inward, giving the composition a boxed-in feeling. The red triangle crown reads as both ornament and warning. The overall effect can feel confrontational, even comic, as if the figure is caught between a grin and a grimace.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #3\\\" and \\\"nnxyz rawblocks #5\\\" by title number. Compared to #3's smooth, rounded head and soft teal background, #4 packs the surface with competing line systems and a much denser color range, marking a sharp shift in density within these neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW\", \"reason\": \"Both share a crowned head with small triangles along the top, but #3's single smooth yellow mass contrasts with #4's fractured, heavily layered surface.\"}, {\"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\", \"reason\": \"The crossed-out eye motif and exposed-teeth mouth in #4 closely echo the red-gridded eyes and long vertical teeth in this nifty faces work, linking the two across different title families.\"}], \"tags\": [\"bared teeth\", \"crossed-out eyes\", \"triangle crown\", \"teal horizontal bars\", \"dense layered lines\", \"head form\"], \"lookingQuestion\": \"How do the blue dashes running down the right side of the face change your reading of the expression compared to the red marks on the left?\", \"ambiguities\": [\"Small marks near the lower left may be a signature or additional drawn elements; their role is unclear at this scale.\", \"Whether the white zigzag line crossing the full width is part of the head or the background cannot be determined from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

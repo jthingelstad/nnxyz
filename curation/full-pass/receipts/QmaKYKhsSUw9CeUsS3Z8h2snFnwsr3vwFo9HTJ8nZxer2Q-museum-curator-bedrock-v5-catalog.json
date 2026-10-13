@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:47.694887-05:00",
+    "usage": {
+      "inputTokens": 6824,
+      "outputTokens": 662,
+      "totalTokens": 7486,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11717
+    },
+    "requestId": "ba3d6a09-5681-4308-bbf9-f21da1ab5490",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Seven upright figures stand shoulder to shoulder across the full width; each has an oval head densely filled with red, black, and white scribble-lines, and a narrow elongated body outlined in black and white over broad vertical color strokes.\",\n    \"The upper third is dominated by a horizontal band of orange-yellow radiating from each head, overlaid with loose black scrawl lines and a purple-grey sky strip; red scratch marks cross several faces.\",\n    \"The lower two-thirds uses wide vertical sweeps of yellow, blue, green, and magenta as the ground behind the figures, with white highlight lines running down the bodies and pooling at the feet.\"\n  ],\n  \"reading\": \"A row of figures presses forward, their scribbled heads blazing with orange-yellow against a purple sky. The red marks crossing each face read as agitation or strain rather than decoration. Bodies are little more than tall color columns, making the heads carry almost all the weight. The crowding and the shared upward flare give the group a collective charge that feels closer to noise than calm.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbor nnxyz nnotb #11 is fully non-figurative — a warm amber field of crossing marks with no body forms — making #12's shift to grouped figures a sharp change in approach between these two owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN\",\n      \"reason\": \"nnxyz nnotb #13 also places multiple scribble-filled rounded heads on elongated bodies against a dark ground, but uses a black background and tighter orange line-fill where #12 uses open color sweeps and a lit sky band.\"\n    }\n  ],\n  \"tags\": [\n    \"grouped figures\",\n    \"oval scribbled heads\",\n    \"vertical color sweeps\",\n    \"red cross-marks on faces\",\n    \"black outline on white highlight\",\n    \"orange-yellow head flare\"\n  ],\n  \"interpretiveTags\": [\n    \"collective tension\",\n    \"agitation\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the shared orange flare across the top, on one particular head, or on the gaps between the figures — and what draws it there?\",\n  \"ambiguities\": [\n    \"The rawblocks #1 comparison image shows dense geometric loop patterns with no figurative overlap; no useful formal connection to #12 was found, so it was omitted.\",\n    \"The scrawled lettering at lower right reads as a signature but is treated here as image content only, not verified text.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q/image.png",
+        "imageSHA256": "46a2c0397cccfc11dafd353183a2a061eea49786129d599082de77484e2e1f16"
+      },
+      {
+        "artworkId": "QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew/image.png",
+        "imageSHA256": "437edaca3ffff994406d54fb7653f5913cdc871917332d7cddd0f16928992e18"
+      },
+      {
+        "artworkId": "QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr/image.png",
+        "imageSHA256": "e2a24a8191cd92c60aefc9a7731e85e6e5e0cecc9ef4d9d92ec11141dd57905e"
+      },
+      {
+        "artworkId": "QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN/image.png",
+        "imageSHA256": "cfacef9d146ece01267c60cd62c616171bf6b86e8578379a4ea7c5fbc7f38a61"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:54.798176-05:00",
+    "usage": {
+      "inputTokens": 7517,
+      "outputTokens": 794,
+      "totalTokens": 8311,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6760
+    },
+    "requestId": "3caab438-46bd-47fc-a931-e09b182bcbf6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Seven upright figures stand shoulder to shoulder across the full width; each has an oval head densely filled with red, black, and white scribble-lines, and a narrow elongated body outlined in black and white over broad vertical color strokes.\",\n    \"The upper third carries a horizontal band of orange-yellow radiating from each head, overlaid with loose black scrawl lines and a purple-grey strip; red scratch marks cross several faces.\",\n    \"The lower two-thirds uses wide vertical sweeps of yellow, blue, green, and magenta as the ground behind the figures, with white highlight lines running down the bodies and gathering at the feet.\"\n  ],\n  \"reading\": \"A row of figures presses across the full width, their scribbled heads blazing orange-yellow against a purple-grey upper band. Red marks crossing each face read as agitation rather than decoration. Bodies are tall color columns, leaving the heads to carry most of the visual weight. The crowding and shared upward flare give the group a collective charge that feels closer to noise than calm.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #11 is fully non-figurative — a warm amber field of crossing marks with no body forms — making #12's shift to grouped figures a sharp contrast between these two owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN\",\n      \"reason\": \"nnxyz nnotb #13 also places multiple scribble-filled rounded heads on elongated bodies, but uses a flat black background and tighter orange line-fill where #12 uses open vertical color sweeps and a lit upper band.\"\n    }\n  ],\n  \"tags\": [\n    \"grouped figures\",\n    \"oval scribbled heads\",\n    \"vertical color sweeps\",\n    \"red cross-marks on faces\",\n    \"white highlight lines on bodies\",\n    \"orange-yellow head flare\"\n  ],\n  \"interpretiveTags\": [\n    \"collective tension\",\n    \"agitation\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the shared orange flare across the top, on one particular head, or on the gaps between the figures — and what draws it there?\",\n  \"ambiguities\": [\n    \"The rawblocks #1 comparison image shows dense geometric loop patterns with no figurative overlap; no useful formal connection to #12 was found, so it was omitted.\",\n    \"The scrawled marks at lower right appear to be a signature but are treated as image content only, not verified text.\"\n  ],\n  \"reviewFindings\": [\n    \"All seven figures, oval scribbled heads, vertical color sweeps, red face marks, and orange-yellow upper band confirmed against the primary image; no invented forms found.\",\n    \"nnotb #11 confirmed as fully non-figurative amber field — contrast claim in contextAngle is accurate; nnotb #13 black background and tighter orange fill confirmed, comparison retained.\",\n    \"Word counts checked: reading 63 words, contextAngle 38 words, both within limits; 'deliberately/intentional/purposeful/carefully/evolving/usual' absent from prose.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q/image.png",
+        "imageSHA256": "46a2c0397cccfc11dafd353183a2a061eea49786129d599082de77484e2e1f16"
+      },
+      {
+        "artworkId": "QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew/image.png",
+        "imageSHA256": "437edaca3ffff994406d54fb7653f5913cdc871917332d7cddd0f16928992e18"
+      },
+      {
+        "artworkId": "QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr/image.png",
+        "imageSHA256": "e2a24a8191cd92c60aefc9a7731e85e6e5e0cecc9ef4d9d92ec11141dd57905e"
+      },
+      {
+        "artworkId": "QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN/image.png",
+        "imageSHA256": "cfacef9d146ece01267c60cd62c616171bf6b86e8578379a4ea7c5fbc7f38a61"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Seven upright figures stand shoulder to shoulder across the full width; each has an oval head densely filled with red, black, and white scribble-lines, and a narrow elongated body outlined in black and white over broad vertical color strokes.\", \"The upper third is dominated by a horizontal band of orange-yellow radiating from each head, overlaid with loose black scrawl lines and a purple-grey sky strip; red scratch marks cross several faces.\", \"The lower two-thirds uses wide vertical sweeps of yellow, blue, green, and magenta as the ground behind the figures, with white highlight lines running down the bodies and pooling at the feet.\"], \"reading\": \"A row of figures presses forward, their scribbled heads blazing with orange-yellow against a purple sky. The red marks crossing each face read as agitation or strain rather than decoration. Bodies are little more than tall color columns, making the heads carry almost all the weight. The crowding and the shared upward flare give the group a collective charge that feels closer to noise than calm.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbor nnxyz nnotb #11 is fully non-figurative — a warm amber field of crossing marks with no body forms — making #12's shift to grouped figures a sharp change in approach between these two owned works.\", \"connections\": [{\"targetArtworkId\": \"QmPChqBiTWCf5vt2vzNcwUZcwmKVbJqeVGSq5V5wFCTDaN\", \"reason\": \"nnxyz nnotb #13 also places multiple scribble-filled rounded heads on elongated bodies against a dark ground, but uses a black background and tighter orange line-fill where #12 uses open color sweeps and a lit sky band.\"}], \"tags\": [\"grouped figures\", \"oval scribbled heads\", \"vertical color sweeps\", \"red cross-marks on faces\", \"black outline on white highlight\", \"orange-yellow head flare\"], \"interpretiveTags\": [\"collective tension\", \"agitation\"], \"lookingQuestion\": \"Where does your eye settle first — on the shared orange flare across the top, on one particular head, or on the gaps between the figures — and what draws it there?\", \"ambiguities\": [\"The rawblocks #1 comparison image shows dense geometric loop patterns with no figurative overlap; no useful formal connection to #12 was found, so it was omitted.\", \"The scrawled lettering at lower right reads as a signature but is treated here as image content only, not verified text.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

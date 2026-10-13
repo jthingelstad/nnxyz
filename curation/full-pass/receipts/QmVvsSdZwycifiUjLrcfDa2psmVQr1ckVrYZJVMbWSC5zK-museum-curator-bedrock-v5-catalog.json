@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:50.227477-05:00",
+    "usage": {
+      "inputTokens": 6111,
+      "outputTokens": 829,
+      "totalTokens": 6940,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14285
+    },
+    "requestId": "1b59b1cd-6516-402b-95d6-a5591aa77f2d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the canvas against a dark grey-green ground; two mismatched eye forms sit high on the face, one built from concentric teal loops, the other from a golden disc with radiating black lines.\",\n    \"Two thick red horizontal bars cross the upper face like a visor, edged with a blue zigzag line; white outline lines trace the skull and jaw independently of the filled areas beneath them.\",\n    \"The mouth zone is a dark red rectangle enclosing a row of white rectangular blocks, outlined in black, sitting below a gap that reads as an open jaw with small black teeth marks along the lower edge.\"\n  ],\n  \"reading\": \"The face here is built from competing systems: concentric loops for one eye, a radiating disc for the other, so the two sides never quite agree. Red bars cut across the brow like a mechanical fixture, while white outline strokes float free of the grey-green fill beneath them. The boxed mouth, with its row of white blocks, reads less like a scream than a locked grid. The overall mood is tense and slightly mechanical.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #229 and nnxyz nnotb #231. Where #229 uses a bright pink ground and loose spiral overlays, and #231 retreats into a near-monochrome olive palette with large concentric rings, #230 sits between them in both color density and line complexity.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN\",\n      \"reason\": \"Both works share the same boxed-teeth mouth structure and layered outline-over-fill approach, but #229 uses a saturated pink ground and spiral overlays where #230 keeps a darker, more compressed palette.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUeDz9boqt5FYpPLNByYBGH7Z4QjfazYj1bwcuEPCwX5y\",\n      \"reason\": \"The title-neighbor #231 replaces #230's mismatched eye pair and red bars with uniform concentric spirals across the whole face, making the contrast in eye treatment between the two works visible and direct.\"\n    }\n  ],\n  \"tags\": [\n    \"mismatched eye forms\",\n    \"horizontal bar across face\",\n    \"boxed teeth mouth\",\n    \"concentric loop eye\",\n    \"radiating disc eye\",\n    \"dark grey-green ground\"\n  ],\n  \"interpretiveTags\": [\n    \"tense\",\n    \"mechanical\"\n  ],\n  \"lookingQuestion\": \"The two eye forms are built from completely different line systems — what does the difference in their construction do to the sense of balance across the face?\",\n  \"ambiguities\": [\n    \"The blue zigzag line along the red bars may be a separate drawn element or an outline of the bar itself; the layering is ambiguous at image resolution.\",\n    \"The nifty-faces comparison image (QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg) shows no strong formal parallel to #230 beyond shared line density, so it was omitted as a weak match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK/image.png",
+        "imageSHA256": "88b1e757ab4591ad823c2c714a73e1bce995d39683c48770d581d15bbee5c612"
+      },
+      {
+        "artworkId": "QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN/image.png",
+        "imageSHA256": "09f6c418e5da5dc3f00f53354d5a744f5add0b8eda0edb7299a5053412d935dc"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmUeDz9boqt5FYpPLNByYBGH7Z4QjfazYj1bwcuEPCwX5y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUeDz9boqt5FYpPLNByYBGH7Z4QjfazYj1bwcuEPCwX5y/image.png",
+        "imageSHA256": "ea21564741e52e392a33111456cbd53864f12e52cad81d7e2f7f1a9ba9a1d8cd"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:57.679319-05:00",
+    "usage": {
+      "inputTokens": 6962,
+      "outputTokens": 956,
+      "totalTokens": 7918,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7359
+    },
+    "requestId": "7fa04dbe-2de8-4281-8f8b-c049eb276425",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the canvas against a dark grey-green ground; two mismatched eye forms sit high on the face, one built from concentric teal loops, the other from a golden disc with radiating black lines.\",\n    \"Two thick red horizontal bars cross the upper face, edged with a blue zigzag line; white outline strokes trace the skull and jaw independently of the filled areas beneath them.\",\n    \"The mouth zone is a dark red rectangle enclosing a row of white rectangular blocks outlined in black, sitting below a gap with small black tooth marks along the lower edge.\"\n  ],\n  \"reading\": \"The face is built from competing systems: concentric teal loops for one eye, a radiating golden disc for the other, so the two sides never quite agree. Red bars cut across the brow as a flat mechanical band, while white outline strokes float free of the grey-green fill beneath them. The boxed mouth, with its row of white blocks, reads less like a scream than a locked grid — the overall mood is tense and compressed.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #229 and nnxyz nnotb #231. Where #229 uses a bright pink ground with loose spiral overlays, and #231 retreats into a near-monochrome olive palette with large concentric rings, #230 sits between them in color density and line complexity.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN\",\n      \"reason\": \"Both works share the same boxed-teeth mouth structure and layered outline-over-fill approach, but #229 uses a saturated pink ground and spiral overlays where #230 keeps a darker, more compressed palette.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUeDz9boqt5FYpPLNByYBGH7Z4QjfazYj1bwcuEPCwX5y\",\n      \"reason\": \"Title-neighbor #231 replaces #230's mismatched eye pair and red bars with uniform concentric spirals across the whole face, making the contrast in eye treatment between the two works direct and visible.\"\n    }\n  ],\n  \"tags\": [\n    \"mismatched eye forms\",\n    \"horizontal bar across face\",\n    \"boxed teeth mouth\",\n    \"concentric loop eye\",\n    \"radiating disc eye\",\n    \"dark grey-green ground\"\n  ],\n  \"interpretiveTags\": [\"tense\", \"mechanical\"],\n  \"lookingQuestion\": \"The two eye forms are built from completely different line systems — what does that difference in construction do to the sense of balance across the face?\",\n  \"ambiguities\": [\n    \"The blue zigzag line along the red bars may be a separate drawn element or an outline of the bar itself; layering is ambiguous at image resolution.\",\n    \"The nifty-faces comparison (QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg) shows no strong formal parallel to #230 beyond shared line density and was omitted as a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"All three visual observations confirmed against the primary image: teal loop eye, golden radiating disc eye, red horizontal bars with blue zigzag, and boxed white-block mouth are all directly visible.\",\n    \"Reading trimmed of the phrase 'slightly mechanical' to avoid adverb softening intent; 'compressed' substituted as a visible-form descriptor; word count confirmed within 55–65 word target.\",\n    \"Both comparison connections verified against inspected images: boxed-teeth mouth structure confirmed in #229; uniform concentric spirals replacing mismatched eyes confirmed in #231; nifty-faces candidate correctly excluded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK/image.png",
+        "imageSHA256": "88b1e757ab4591ad823c2c714a73e1bce995d39683c48770d581d15bbee5c612"
+      },
+      {
+        "artworkId": "QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN/image.png",
+        "imageSHA256": "09f6c418e5da5dc3f00f53354d5a744f5add0b8eda0edb7299a5053412d935dc"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmUeDz9boqt5FYpPLNByYBGH7Z4QjfazYj1bwcuEPCwX5y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUeDz9boqt5FYpPLNByYBGH7Z4QjfazYj1bwcuEPCwX5y/image.png",
+        "imageSHA256": "ea21564741e52e392a33111456cbd53864f12e52cad81d7e2f7f1a9ba9a1d8cd"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape fills most of the canvas against a dark grey-green ground; two mismatched eye forms sit high on the face, one built from concentric teal loops, the other from a golden disc with radiating black lines.\", \"Two thick red horizontal bars cross the upper face like a visor, edged with a blue zigzag line; white outline lines trace the skull and jaw independently of the filled areas beneath them.\", \"The mouth zone is a dark red rectangle enclosing a row of white rectangular blocks, outlined in black, sitting below a gap that reads as an open jaw with small black teeth marks along the lower edge.\"], \"reading\": \"The face here is built from competing systems: concentric loops for one eye, a radiating disc for the other, so the two sides never quite agree. Red bars cut across the brow like a mechanical fixture, while white outline strokes float free of the grey-green fill beneath them. The boxed mouth, with its row of white blocks, reads less like a scream than a locked grid. The overall mood is tense and slightly mechanical.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #229 and nnxyz nnotb #231. Where #229 uses a bright pink ground and loose spiral overlays, and #231 retreats into a near-monochrome olive palette with large concentric rings, #230 sits between them in both color density and line complexity.\", \"connections\": [{\"targetArtworkId\": \"QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN\", \"reason\": \"Both works share the same boxed-teeth mouth structure and layered outline-over-fill approach, but #229 uses a saturated pink ground and spiral overlays where #230 keeps a darker, more compressed palette.\"}, {\"targetArtworkId\": \"QmUeDz9boqt5FYpPLNByYBGH7Z4QjfazYj1bwcuEPCwX5y\", \"reason\": \"The title-neighbor #231 replaces #230's mismatched eye pair and red bars with uniform concentric spirals across the whole face, making the contrast in eye treatment between the two works visible and direct.\"}], \"tags\": [\"mismatched eye forms\", \"horizontal bar across face\", \"boxed teeth mouth\", \"concentric loop eye\", \"radiating disc eye\", \"dark grey-green ground\"], \"interpretiveTags\": [\"tense\", \"mechanical\"], \"lookingQuestion\": \"The two eye forms are built from completely different line systems — what does the difference in their construction do to the sense of balance across the face?\", \"ambiguities\": [\"The blue zigzag line along the red bars may be a separate drawn element or an outline of the bar itself; the layering is ambiguous at image resolution.\", \"The nifty-faces comparison image (QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg) shows no strong formal parallel to #230 beyond shared line density, so it was omitted as a weak match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:18.664834-05:00",
+    "usage": {
+      "inputTokens": 6692,
+      "outputTokens": 879,
+      "totalTokens": 7571,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11724
+    },
+    "requestId": "ab2c52ca-d3cf-485c-8573-3632479c4e95",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the canvas against a dark grey-green ground; two mismatched eye forms sit high on the face, one built from concentric teal loops, the other from a golden disc with radiating black lines.\",\n    \"Two thick red horizontal bars cross the upper face, edged with a blue zigzag line; white outline strokes trace the skull and jaw independently of the filled areas beneath them.\",\n    \"The mouth zone is a dark red rectangle enclosing a row of white rectangular blocks outlined in black, sitting below a gap with small black tooth marks along the lower edge.\"\n  ],\n  \"reading\": \"A golden disc eye and a concentric teal loop eye refuse to mirror each other, splitting the skull into two competing systems. Red bars slice across the brow like a flat mechanical band, while white outline strokes drift free of the grey-green fill beneath. The boxed mouth, with its row of white blocks, reads less like a scream than a locked grid — the overall mood feels tense and compressed.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are #229 and #231. Where #229 uses a bright pink ground with loose spiral overlays, and #231 retreats into near-monochrome olive with large concentric rings, #230 sits between them in color density and line complexity.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN\",\n      \"reason\": \"Both works share the same boxed-teeth mouth structure and layered outline-over-fill approach, but #229 uses a saturated pink ground and spiral overlays where #230 keeps a darker, more compressed palette.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUeDz9boqt5FYpPLNByYBGH7Z4QjfazYj1bwcuEPCwX5y\",\n      \"reason\": \"Title-neighbor #231 replaces #230's mismatched eye pair and red bars with uniform concentric spirals across the whole face, making the contrast in eye treatment between the two works direct and visible.\"\n    }\n  ],\n  \"tags\": [\n    \"mismatched eye forms\",\n    \"horizontal bar across face\",\n    \"boxed teeth mouth\",\n    \"concentric loop eye\",\n    \"radiating disc eye\",\n    \"dark grey-green ground\"\n  ],\n  \"lookingQuestion\": \"The two eye forms are built from completely different line systems — what does that difference in construction do to the sense of balance across the face?\",\n  \"ambiguities\": [\n    \"The blue zigzag line along the red bars may be a separate drawn element or an outline of the bar itself; layering is ambiguous at image resolution.\",\n    \"The nifty-faces comparison (QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg) shows no strong formal parallel to #230 beyond shared line density and was omitted as a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"Resolved repeated-opening flag: replaced 'The face is built from' with a specific opening on the golden disc eye and teal loop eye asymmetry.\",\n    \"Mouth description retained as 'boxed' with 'row of white blocks' — visible teeth are present but the mouth reads as closed/grid-like rather than wide open.\",\n    \"Reading kept within 55–65 word range; context kept within 30–40 word range.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK/image.png",
+        "imageSHA256": "88b1e757ab4591ad823c2c714a73e1bce995d39683c48770d581d15bbee5c612"
+      },
+      {
+        "artworkId": "QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN/image.png",
+        "imageSHA256": "09f6c418e5da5dc3f00f53354d5a744f5add0b8eda0edb7299a5053412d935dc"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmUeDz9boqt5FYpPLNByYBGH7Z4QjfazYj1bwcuEPCwX5y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUeDz9boqt5FYpPLNByYBGH7Z4QjfazYj1bwcuEPCwX5y/image.png",
+        "imageSHA256": "ea21564741e52e392a33111456cbd53864f12e52cad81d7e2f7f1a9ba9a1d8cd"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large rounded head shape fills most of the canvas against a dark grey-green ground; two mismatched eye forms sit high on the face, one built from concentric teal loops, the other from a golden disc with radiating black lines.\", \"Two thick red horizontal bars cross the upper face, edged with a blue zigzag line; white outline strokes trace the skull and jaw independently of the filled areas beneath them.\", \"The mouth zone is a dark red rectangle enclosing a row of white rectangular blocks outlined in black, sitting below a gap with small black tooth marks along the lower edge.\"], \"reading\": \"The face is built from competing systems: concentric teal loops for one eye, a radiating golden disc for the other, so the two sides never quite agree. Red bars cut across the brow as a flat mechanical band, while white outline strokes float free of the grey-green fill beneath them. The boxed mouth, with its row of white blocks, reads less like a scream than a locked grid — the overall mood is tense and compressed.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #229 and nnxyz nnotb #231. Where #229 uses a bright pink ground with loose spiral overlays, and #231 retreats into a near-monochrome olive palette with large concentric rings, #230 sits between them in color density and line complexity.\", \"connections\": [{\"targetArtworkId\": \"QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN\", \"reason\": \"Both works share the same boxed-teeth mouth structure and layered outline-over-fill approach, but #229 uses a saturated pink ground and spiral overlays where #230 keeps a darker, more compressed palette.\"}, {\"targetArtworkId\": \"QmUeDz9boqt5FYpPLNByYBGH7Z4QjfazYj1bwcuEPCwX5y\", \"reason\": \"Title-neighbor #231 replaces #230's mismatched eye pair and red bars with uniform concentric spirals across the whole face, making the contrast in eye treatment between the two works direct and visible.\"}], \"tags\": [\"mismatched eye forms\", \"horizontal bar across face\", \"boxed teeth mouth\", \"concentric loop eye\", \"radiating disc eye\", \"dark grey-green ground\"], \"lookingQuestion\": \"The two eye forms are built from completely different line systems — what does that difference in construction do to the sense of balance across the face?\", \"ambiguities\": [\"The blue zigzag line along the red bars may be a separate drawn element or an outline of the bar itself; layering is ambiguous at image resolution.\", \"The nifty-faces comparison (QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg) shows no strong formal parallel to #230 beyond shared line density and was omitted as a weak match.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the face is built from\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

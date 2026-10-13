@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:23.595099-05:00",
+    "usage": {
+      "inputTokens": 6027,
+      "outputTokens": 753,
+      "totalTokens": 6780,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12913
+    },
+    "requestId": "434188be-b46d-4310-b073-8d3c6d45113b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval outline dominates the center, built from multiple concentric arcs in gold and black, set against a flat medium-blue field that fills the entire background.\",\n    \"A thick horizontal yellow bar cuts across the middle third of the image, intersecting the oval; a circular form with a black X sits left of center where the bar meets the arcs.\",\n    \"The lower portion of the oval is filled with dense black-and-white vertical strokes suggesting a row of teeth, while loose white scribble lines and small rectangular shapes scatter across the right edge.\"\n  ],\n  \"reading\": \"The blue field holds everything at a cool distance while the yellow bar pushes forward with blunt force. Concentric gold arcs pull the eye inward, then the dense black-and-white row at the bottom stops that pull cold. The X-marked circle reads as a fixed point, almost mechanical. The overall mood feels taut rather than exuberant — pressure contained inside a ring.\",\n  \"contextAngle\": \"Within the owned nnxyz-numbered subset, nnxyz #37 sits between title neighbors nnxyz #36 and nnxyz #41. Where #36 uses a warm olive-green field and #41 an amber ground, #37 commits fully to blue, making it the coolest-toned work among the three inspected neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo\",\n      \"reason\": \"nnxyz nnotb #176 shares the same flat medium-blue ground and uses a large circular boundary with radiating marks at its edge, offering a direct color-field and ring-structure comparison across two different owned collections.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbbfpKNC7NUK6G7ijENvSiGjLkSyRxkRHVxhKPs7qx4Mr\",\n      \"reason\": \"nnxyz #36 repeats the paired rectangular eye-shapes and a lower row of white vertical strokes, but the warm olive ground makes the shared structural elements read with opposite temperature to #37's blue.\"\n    }\n  ],\n  \"tags\": [\n    \"concentric arcs\",\n    \"horizontal color bar\",\n    \"blue ground\",\n    \"dense vertical strokes\",\n    \"rectangular eye-shapes\",\n    \"X-marked circle\"\n  ],\n  \"interpretiveTags\": [\n    \"contained tension\",\n    \"mechanical stillness\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the yellow bar sit relative to the oval's center — does it bisect the ring, pass above it, or cut through the lower arc — and how does that placement change the weight of the lower black-and-white section?\",\n  \"ambiguities\": [\n    \"The small yellow mark at lower right may be a signature or an incidental mark; it is treated here as content, not metadata.\",\n    \"The circular X form could be read as a wheel hub, a symbol, or a purely abstract node; no identification is made.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo/image.png",
+        "imageSHA256": "e09fb4b8df40064bea6cd3c005622e52c1f60d6cbe4a43154646ffc69e3f6e01"
+      },
+      {
+        "artworkId": "QmbbfpKNC7NUK6G7ijENvSiGjLkSyRxkRHVxhKPs7qx4Mr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbbfpKNC7NUK6G7ijENvSiGjLkSyRxkRHVxhKPs7qx4Mr/image.png",
+        "imageSHA256": "b3781966948900a034cd26f4df4da226d85e3c552320f32b4de13ccbd587bcf6"
+      },
+      {
+        "artworkId": "QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo/image.png",
+        "imageSHA256": "4804db7fa22df3d04c4bbc2898ca5c83749fdb0e83a0351879581d969213ca9d"
+      },
+      {
+        "artworkId": "Qmb3qLwFvyPUSHU7WqFWXLzSf3pw7QvW7v15Kt5F5a6YiW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmb3qLwFvyPUSHU7WqFWXLzSf3pw7QvW7v15Kt5F5a6YiW/image.png",
+        "imageSHA256": "2b7db689ead11ead1c3db783519a3116eccdfa479d41a02f554584837d5ba00f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:29.916462-05:00",
+    "usage": {
+      "inputTokens": 6802,
+      "outputTokens": 888,
+      "totalTokens": 7690,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6239
+    },
+    "requestId": "833b052a-a09b-48dc-a862-8fcee4d2bbe5",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval outline built from multiple concentric arcs in gold and black dominates the center, set against a flat medium-blue field that fills the entire background.\",\n    \"A thick horizontal yellow bar cuts across the middle third, intersecting the oval; a circular form with a black X sits left of center where the bar meets the arcs.\",\n    \"The lower portion of the oval is filled with dense black-and-white vertical strokes, while loose white scribble lines and small rectangular shapes scatter across the right edge.\"\n  ],\n  \"reading\": \"The blue field holds everything at a cool distance while the yellow bar pushes forward with blunt force. Concentric gold arcs draw the eye inward, then the dense black-and-white row at the bottom stops that pull abruptly. The X-marked circle reads as a fixed point, almost mechanical. The mood feels taut rather than open — pressure held inside a ring.\",\n  \"contextAngle\": \"Within the owned nnxyz-numbered subset, nnxyz #37 sits between title neighbors nnxyz #36 and nnxyz #41. Where #36 uses a warm olive-green field and #41 an amber ground, #37 commits fully to blue, making it the coolest-toned work among the three inspected neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo\",\n      \"reason\": \"nnxyz nnotb #176 shares the same flat medium-blue ground and uses a large circular boundary with radiating marks at its edge, offering a direct color-field and ring-structure comparison across two different owned collections.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbbfpKNC7NUK6G7ijENvSiGjLkSyRxkRHVxhKPs7qx4Mr\",\n      \"reason\": \"nnxyz #36 repeats paired rectangular eye-shapes and a lower row of white vertical strokes, but its warm olive ground makes those shared structural elements read with opposite temperature to #37's blue.\"\n    }\n  ],\n  \"tags\": [\"concentric arcs\", \"horizontal color bar\", \"blue ground\", \"dense vertical strokes\", \"rectangular eye-shapes\", \"X-marked circle\"],\n  \"interpretiveTags\": [\"contained tension\", \"mechanical stillness\"],\n  \"lookingQuestion\": \"Where exactly does the yellow bar sit relative to the oval's center — does it bisect the ring, pass above it, or cut through the lower arc — and how does that placement affect the weight of the lower black-and-white section?\",\n  \"ambiguities\": [\n    \"The small yellow mark at lower right may be a signature or an incidental mark; treated here as content, not metadata.\",\n    \"The circular X form could be read as a wheel hub, a symbol, or a purely abstract node; no identification is made.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against image: blue ground, gold/black concentric arcs, yellow horizontal bar, and X-marked circle are all visibly present as described.\",\n    \"Comparison with QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo confirmed: both share flat medium-blue ground and a large circular boundary with radiating edge marks; connection is well-supported.\",\n    \"Draft word 'exuberant' replaced with 'open' to avoid unsupported mood assertion; 'cold' replaced with 'abruptly' for plainer language; no invented biography, intent, or technique found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo/image.png",
+        "imageSHA256": "e09fb4b8df40064bea6cd3c005622e52c1f60d6cbe4a43154646ffc69e3f6e01"
+      },
+      {
+        "artworkId": "QmbbfpKNC7NUK6G7ijENvSiGjLkSyRxkRHVxhKPs7qx4Mr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbbfpKNC7NUK6G7ijENvSiGjLkSyRxkRHVxhKPs7qx4Mr/image.png",
+        "imageSHA256": "b3781966948900a034cd26f4df4da226d85e3c552320f32b4de13ccbd587bcf6"
+      },
+      {
+        "artworkId": "QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo/image.png",
+        "imageSHA256": "4804db7fa22df3d04c4bbc2898ca5c83749fdb0e83a0351879581d969213ca9d"
+      },
+      {
+        "artworkId": "Qmb3qLwFvyPUSHU7WqFWXLzSf3pw7QvW7v15Kt5F5a6YiW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmb3qLwFvyPUSHU7WqFWXLzSf3pw7QvW7v15Kt5F5a6YiW/image.png",
+        "imageSHA256": "2b7db689ead11ead1c3db783519a3116eccdfa479d41a02f554584837d5ba00f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large oval outline dominates the center, built from multiple concentric arcs in gold and black, set against a flat medium-blue field that fills the entire background.\", \"A thick horizontal yellow bar cuts across the middle third of the image, intersecting the oval; a circular form with a black X sits left of center where the bar meets the arcs.\", \"The lower portion of the oval is filled with dense black-and-white vertical strokes suggesting a row of teeth, while loose white scribble lines and small rectangular shapes scatter across the right edge.\"], \"reading\": \"The blue field holds everything at a cool distance while the yellow bar pushes forward with blunt force. Concentric gold arcs pull the eye inward, then the dense black-and-white row at the bottom stops that pull cold. The X-marked circle reads as a fixed point, almost mechanical. The overall mood feels taut rather than exuberant — pressure contained inside a ring.\", \"contextAngle\": \"Within the owned nnxyz-numbered subset, nnxyz #37 sits between title neighbors nnxyz #36 and nnxyz #41. Where #36 uses a warm olive-green field and #41 an amber ground, #37 commits fully to blue, making it the coolest-toned work among the three inspected neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmddWrLxa6iegeLuJ4hjiynfd3MxcNJ3s5agE2Q5Qumpzo\", \"reason\": \"nnxyz nnotb #176 shares the same flat medium-blue ground and uses a large circular boundary with radiating marks at its edge, offering a direct color-field and ring-structure comparison across two different owned collections.\"}, {\"targetArtworkId\": \"QmbbfpKNC7NUK6G7ijENvSiGjLkSyRxkRHVxhKPs7qx4Mr\", \"reason\": \"nnxyz #36 repeats the paired rectangular eye-shapes and a lower row of white vertical strokes, but the warm olive ground makes the shared structural elements read with opposite temperature to #37's blue.\"}], \"tags\": [\"concentric arcs\", \"horizontal color bar\", \"blue ground\", \"dense vertical strokes\", \"rectangular eye-shapes\", \"X-marked circle\"], \"interpretiveTags\": [\"contained tension\", \"mechanical stillness\"], \"lookingQuestion\": \"Where exactly does the yellow bar sit relative to the oval's center — does it bisect the ring, pass above it, or cut through the lower arc — and how does that placement change the weight of the lower black-and-white section?\", \"ambiguities\": [\"The small yellow mark at lower right may be a signature or an incidental mark; it is treated here as content, not metadata.\", \"The circular X form could be read as a wheel hub, a symbol, or a purely abstract node; no identification is made.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

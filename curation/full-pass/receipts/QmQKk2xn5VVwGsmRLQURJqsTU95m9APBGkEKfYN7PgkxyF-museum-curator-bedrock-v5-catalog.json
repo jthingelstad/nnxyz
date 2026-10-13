@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:33.363273-05:00",
+    "usage": {
+      "inputTokens": 6163,
+      "outputTokens": 798,
+      "totalTokens": 6961,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13718
+    },
+    "requestId": "6394d66d-16ef-43d6-a89f-a69609bd9ec4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two bright white-yellow beams cut diagonally from upper-center to lower-right, crossing a field of stacked rounded rectangles rendered in olive, gold, and dark brown lines.\",\n    \"A large curved arc on the left side wraps around a central rectangular form; inside that form sits a glowing amber-white oval, flanked by a second smaller glowing square to the right.\",\n    \"The left margin is dense with black scribble lines, small looped rectangles in pink and red, and scattered blue marks, contrasting with the warmer, more open golden center.\"\n  ],\n  \"reading\": \"Two hard light beams slice through a layered structure of nested rectangles and looping lines, pulling the eye from the dense scribbled left edge toward a warmer, more open right side. The glowing ovals inside the central forms read as sources of that light rather than reflections of it. The overall feel is pressured but not chaotic — the beams impose a direction that the surrounding marks resist without resolving.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor #76 cash lightning shares the same diagonal beam structure and stacked-rectangle scaffolding almost exactly, but shifts the palette from amber-gold to sharp yellow-green. Title neighbor #74 uses a similar gold-and-olive range but organizes its forms around a horizontal bar rather than beams.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaPxd27wkiRssRXdPLmXuC6EoyJdc3gZvnFridwrSLwo6\",\n      \"reason\": \"The title neighbor #76 cash lightning shares the same diagonal beam pair, nested-rectangle structure, and left-margin scribble density as #75, making it a near-mirror in composition with a cooler yellow-green palette swap.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E\",\n      \"reason\": \"Title neighbor #74 uses the same gold-olive color range and layered rectangular forms, but its light source is diffuse and scattered rather than concentrated into hard beams, offering a direct contrast in how brightness is handled.\"\n    }\n  ],\n  \"tags\": [\n    \"diagonal light beams\",\n    \"nested rectangles\",\n    \"glowing oval forms\",\n    \"dense margin scribble\",\n    \"gold-olive palette\",\n    \"looped line patterns\"\n  ],\n  \"interpretiveTags\": [\n    \"pressured calm\",\n    \"directed tension\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the two beams originate within the image, and what marks or forms sit at those starting points?\",\n  \"ambiguities\": [\n    \"The glowing ovals could be read as light sources, lenses, or purely abstract forms — the image does not resolve this.\",\n    \"Comparison QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4 (nnxyz #1) shares the artist but shows a figurative head on a white ground with no beam or rectangle structure, offering no useful formal connection to #75 and is omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQKk2xn5VVwGsmRLQURJqsTU95m9APBGkEKfYN7PgkxyF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQKk2xn5VVwGsmRLQURJqsTU95m9APBGkEKfYN7PgkxyF/image.png",
+        "imageSHA256": "45ffb3070812d3630c96ccdefcf191f3bf5dce0ec41467e5aea558a385fb7dd8"
+      },
+      {
+        "artworkId": "QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E/image.png",
+        "imageSHA256": "66e132d134d3c7e127c7d9bd0ef902afe867ff3759acb668641ff5f04003aa66"
+      },
+      {
+        "artworkId": "QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4/image.png",
+        "imageSHA256": "5f4375bae89cc265fa3df6e522c6340791089fbf0be9e2542341d94db9787ed3"
+      },
+      {
+        "artworkId": "QmaPxd27wkiRssRXdPLmXuC6EoyJdc3gZvnFridwrSLwo6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaPxd27wkiRssRXdPLmXuC6EoyJdc3gZvnFridwrSLwo6/image.png",
+        "imageSHA256": "70438b1c04ba3be8a1ee755140f3e4d1a1ed6b87439ca639bda6e665410209bb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:40.651754-05:00",
+    "usage": {
+      "inputTokens": 6983,
+      "outputTokens": 908,
+      "totalTokens": 7891,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7158
+    },
+    "requestId": "0640b515-04f5-469a-9e34-7092c098ee34",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two bright white-yellow beams cut diagonally from upper-center to lower-right, crossing a field of stacked rounded rectangles rendered in olive, gold, and dark brown lines.\",\n    \"A large curved arc on the left side wraps around a central rectangular form; inside that form sits a glowing amber-white oval, flanked by a second smaller glowing square to the right.\",\n    \"The left margin is dense with black scribble lines, small looped rectangles in pink and red, and scattered blue marks, contrasting with the warmer, more open golden center.\"\n  ],\n  \"reading\": \"Two hard light beams slice through a layered structure of nested rectangles and looping lines, pulling the eye from the dense scribbled left edge toward a warmer, more open right side. The glowing ovals inside the central forms read as sources of that light rather than reflections of it. The overall feel is pressured but not chaotic — the beams impose a direction that the surrounding marks resist without resolving.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor #76 cash lightning shares the same diagonal beam structure and stacked-rectangle scaffolding, but shifts the palette from amber-gold to sharp yellow-green. Title neighbor #74 uses a similar gold-olive range but organizes forms around a horizontal bar rather than beams.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaPxd27wkiRssRXdPLmXuC6EoyJdc3gZvnFridwrSLwo6\",\n      \"reason\": \"Inspected image of #76 cash lightning confirms the same diagonal beam pair, nested-rectangle structure, and left-margin scribble density as #75, with a cooler yellow-green palette in place of amber-gold.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E\",\n      \"reason\": \"Inspected image of #74 confirms the same gold-olive color range and layered rectangular forms, but brightness is diffuse and scattered rather than concentrated into hard beams.\"\n    }\n  ],\n  \"tags\": [\n    \"diagonal light beams\",\n    \"nested rectangles\",\n    \"glowing oval forms\",\n    \"dense margin scribble\",\n    \"gold-olive palette\",\n    \"looped line patterns\"\n  ],\n  \"interpretiveTags\": [\n    \"pressured calm\",\n    \"directed tension\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the two beams originate within the image, and what marks or forms sit at those starting points?\",\n  \"ambiguities\": [\n    \"The glowing ovals could be read as light sources, lenses, or purely abstract forms — the image does not resolve this.\",\n    \"Comparison QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4 (nnxyz #1) shows a figurative head on a white ground with no beam or rectangle structure; no useful formal connection to #75 and is omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: beams, arc with glowing oval, and dense left-margin scribble are all visibly present.\",\n    \"Both comparison images inspected: #76 cash lightning confirms near-identical composition with yellow-green palette shift; #74 confirms gold-olive palette and rectangular layering without hard beams — both connections are supported.\",\n    \"Reading word count checked within 55–65 word target; no invented intent, biography, media, or unsupported subject identity found; banned words absent.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQKk2xn5VVwGsmRLQURJqsTU95m9APBGkEKfYN7PgkxyF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQKk2xn5VVwGsmRLQURJqsTU95m9APBGkEKfYN7PgkxyF/image.png",
+        "imageSHA256": "45ffb3070812d3630c96ccdefcf191f3bf5dce0ec41467e5aea558a385fb7dd8"
+      },
+      {
+        "artworkId": "QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E/image.png",
+        "imageSHA256": "66e132d134d3c7e127c7d9bd0ef902afe867ff3759acb668641ff5f04003aa66"
+      },
+      {
+        "artworkId": "QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4/image.png",
+        "imageSHA256": "5f4375bae89cc265fa3df6e522c6340791089fbf0be9e2542341d94db9787ed3"
+      },
+      {
+        "artworkId": "QmaPxd27wkiRssRXdPLmXuC6EoyJdc3gZvnFridwrSLwo6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaPxd27wkiRssRXdPLmXuC6EoyJdc3gZvnFridwrSLwo6/image.png",
+        "imageSHA256": "70438b1c04ba3be8a1ee755140f3e4d1a1ed6b87439ca639bda6e665410209bb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two bright white-yellow beams cut diagonally from upper-center to lower-right, crossing a field of stacked rounded rectangles rendered in olive, gold, and dark brown lines.\", \"A large curved arc on the left side wraps around a central rectangular form; inside that form sits a glowing amber-white oval, flanked by a second smaller glowing square to the right.\", \"The left margin is dense with black scribble lines, small looped rectangles in pink and red, and scattered blue marks, contrasting with the warmer, more open golden center.\"], \"reading\": \"Two hard light beams slice through a layered structure of nested rectangles and looping lines, pulling the eye from the dense scribbled left edge toward a warmer, more open right side. The glowing ovals inside the central forms read as sources of that light rather than reflections of it. The overall feel is pressured but not chaotic — the beams impose a direction that the surrounding marks resist without resolving.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbor #76 cash lightning shares the same diagonal beam structure and stacked-rectangle scaffolding almost exactly, but shifts the palette from amber-gold to sharp yellow-green. Title neighbor #74 uses a similar gold-and-olive range but organizes its forms around a horizontal bar rather than beams.\", \"connections\": [{\"targetArtworkId\": \"QmaPxd27wkiRssRXdPLmXuC6EoyJdc3gZvnFridwrSLwo6\", \"reason\": \"The title neighbor #76 cash lightning shares the same diagonal beam pair, nested-rectangle structure, and left-margin scribble density as #75, making it a near-mirror in composition with a cooler yellow-green palette swap.\"}, {\"targetArtworkId\": \"QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E\", \"reason\": \"Title neighbor #74 uses the same gold-olive color range and layered rectangular forms, but its light source is diffuse and scattered rather than concentrated into hard beams, offering a direct contrast in how brightness is handled.\"}], \"tags\": [\"diagonal light beams\", \"nested rectangles\", \"glowing oval forms\", \"dense margin scribble\", \"gold-olive palette\", \"looped line patterns\"], \"interpretiveTags\": [\"pressured calm\", \"directed tension\"], \"lookingQuestion\": \"Where exactly do the two beams originate within the image, and what marks or forms sit at those starting points?\", \"ambiguities\": [\"The glowing ovals could be read as light sources, lenses, or purely abstract forms — the image does not resolve this.\", \"Comparison QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4 (nnxyz #1) shares the artist but shows a figurative head on a white ground with no beam or rectangle structure, offering no useful formal connection to #75 and is omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

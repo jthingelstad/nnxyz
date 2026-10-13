@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:01.994016-05:00",
+    "usage": {
+      "inputTokens": 6161,
+      "outputTokens": 645,
+      "totalTokens": 6806,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11381
+    },
+    "requestId": "0046f3a9-59fe-4303-be45-9dced07383c5",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head-like form fills the center, outlined in thick black and white lines, with a wide open mouth showing rows of white teeth against a dark interior.\",\n    \"The left half of the face is covered in dense red, pink, and dark blue marks that read as a fractured surface, while the right half is dominated by flat yellow-gold with a circular eye shape outlined in purple.\",\n    \"Loose black hatching radiates outward across a yellow-gold background, interrupted by red and gray rectangular blocks on the left edge and scattered cyan, yellow, and purple loops near the bottom corners.\"\n  ],\n  \"reading\": \"The face splits down the middle: one side dense with red and dark marks, the other open and yellow, the two halves held together by a single white outline. The wide-open mouth, packed with teeth, sits below mismatched eyes and pulls the image toward something raw and exposed. The surrounding hatching presses inward, giving the head nowhere to recede.\",\n  \"contextAngle\": \"Within the owned numbered subset, nnxyz #13 shares the large centered face and visible teeth, but its dominant greens and teal diagonals make a clear contrast to the yellow-gold and red of nnxyz #15. The title-derived neighbor order matches the recorded creation order for these two works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj\",\n      \"reason\": \"Both works place a large outlined face at center with a row of white teeth visible in an open mouth, but nnxyz #13 uses deep greens and teal diagonals where nnxyz #15 uses yellow-gold and red, making the tonal contrast between the two faces sharp.\"\n    }\n  ],\n  \"tags\": [\n    \"split-face composition\",\n    \"open mouth with teeth\",\n    \"black hatching on yellow ground\",\n    \"mismatched eye forms\",\n    \"red and pink surface marks\",\n    \"white outline on dark interior\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the white outline of the head break or overlap, and what does that interruption do to the boundary between the face and the background?\",\n  \"ambiguities\": [\n    \"The circular form near the center of the face could be read as an eye, a lens, or an unrelated mark; the image does not resolve this clearly.\",\n    \"nnxyz nifty faces #0000 and nnxyz #18 were inspected but offer no strong formal connection to nnxyz #15 beyond shared artist; omitting them avoids a weak match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN/image.png",
+        "imageSHA256": "a62c677efc3e03ff2fd9f39ff71589291cbb41ce54b00fe3c29dfe2836887260"
+      },
+      {
+        "artworkId": "QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj/image.png",
+        "imageSHA256": "ef34d6ab4a3e369e0b8479e99373fa80cfdf2079734946abcd10be932b23457a"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb/image.png",
+        "imageSHA256": "19be552d74ed548d256a01f4c2e1aba8ec129476630166dbfaf427bf4a459be1"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:09.225571-05:00",
+    "usage": {
+      "inputTokens": 6847,
+      "outputTokens": 779,
+      "totalTokens": 7626,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6892
+    },
+    "requestId": "dc5af552-12a0-4664-b7c3-e5b9a86a7b07",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head-like form fills the center, outlined in thick black and white lines, with a wide open mouth showing rows of white teeth against a dark interior.\",\n    \"The left half of the face carries dense red, pink, and dark blue marks that read as a fractured surface, while the right half is dominated by flat yellow-gold with a circular eye shape outlined in purple.\",\n    \"Loose black hatching radiates across a yellow-gold background, interrupted by red and gray rectangular blocks on the left edge and scattered cyan, yellow, and purple loops near the bottom corners.\"\n  ],\n  \"reading\": \"The face splits down the middle: one side dense with red and dark marks, the other open and yellow, both held by a single white outline. The wide-open mouth, packed with teeth, sits below mismatched eye forms and pulls the image toward something raw and exposed. Surrounding hatching presses inward, leaving the head no room to recede into the background.\",\n  \"contextAngle\": \"Within the owned numbered subset, nnxyz #13 shares the large centered face and visible teeth, but its dominant greens and teal diagonals contrast sharply with the yellow-gold and red here. Title-derived neighbor order matches recorded creation order for these two works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj\",\n      \"reason\": \"Both works center a large outlined face with a row of white teeth in an open mouth, but nnxyz #13 is built on deep greens and teal diagonals against black, making the tonal shift to yellow-gold and red in nnxyz #15 a clear contrast.\"\n    }\n  ],\n  \"tags\": [\n    \"split-face composition\",\n    \"open mouth with teeth\",\n    \"black hatching on yellow ground\",\n    \"mismatched eye forms\",\n    \"red and pink surface marks\",\n    \"white outline on dark interior\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the white outline of the head break or overlap, and what does that interruption do to the boundary between the face and the background?\",\n  \"ambiguities\": [\n    \"The circular form near the center of the face could be read as an eye, a lens, or an unrelated mark; the image does not resolve this clearly.\",\n    \"nnxyz nifty faces #0000 and nnxyz #18 were inspected but offer no strong formal connection beyond shared artist; both are omitted to avoid a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: split coloring, teeth, hatching, rectangular blocks, and scattered loops are all visible.\",\n    \"Reading checked: removed one borderline intent phrase ('gives the head nowhere to recede' reworded to 'leaving the head no room to recede') and confirmed word count falls within 55–80 words.\",\n    \"nnxyz #18 inspected: warm orange field with a single bowed figure and no prominent teeth or split-face structure; correctly excluded. nnxyz nifty faces #0000 inspected: geometric and abstract, no face-centered parallel; correctly excluded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN/image.png",
+        "imageSHA256": "a62c677efc3e03ff2fd9f39ff71589291cbb41ce54b00fe3c29dfe2836887260"
+      },
+      {
+        "artworkId": "QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj/image.png",
+        "imageSHA256": "ef34d6ab4a3e369e0b8479e99373fa80cfdf2079734946abcd10be932b23457a"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb/image.png",
+        "imageSHA256": "19be552d74ed548d256a01f4c2e1aba8ec129476630166dbfaf427bf4a459be1"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head-like form fills the center, outlined in thick black and white lines, with a wide open mouth showing rows of white teeth against a dark interior.\", \"The left half of the face is covered in dense red, pink, and dark blue marks that read as a fractured surface, while the right half is dominated by flat yellow-gold with a circular eye shape outlined in purple.\", \"Loose black hatching radiates outward across a yellow-gold background, interrupted by red and gray rectangular blocks on the left edge and scattered cyan, yellow, and purple loops near the bottom corners.\"], \"reading\": \"The face splits down the middle: one side dense with red and dark marks, the other open and yellow, the two halves held together by a single white outline. The wide-open mouth, packed with teeth, sits below mismatched eyes and pulls the image toward something raw and exposed. The surrounding hatching presses inward, giving the head nowhere to recede.\", \"contextAngle\": \"Within the owned numbered subset, nnxyz #13 shares the large centered face and visible teeth, but its dominant greens and teal diagonals make a clear contrast to the yellow-gold and red of nnxyz #15. The title-derived neighbor order matches the recorded creation order for these two works.\", \"connections\": [{\"targetArtworkId\": \"QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj\", \"reason\": \"Both works place a large outlined face at center with a row of white teeth visible in an open mouth, but nnxyz #13 uses deep greens and teal diagonals where nnxyz #15 uses yellow-gold and red, making the tonal contrast between the two faces sharp.\"}], \"tags\": [\"split-face composition\", \"open mouth with teeth\", \"black hatching on yellow ground\", \"mismatched eye forms\", \"red and pink surface marks\", \"white outline on dark interior\"], \"lookingQuestion\": \"Where exactly does the white outline of the head break or overlap, and what does that interruption do to the boundary between the face and the background?\", \"ambiguities\": [\"The circular form near the center of the face could be read as an eye, a lens, or an unrelated mark; the image does not resolve this clearly.\", \"nnxyz nifty faces #0000 and nnxyz #18 were inspected but offer no strong formal connection to nnxyz #15 beyond shared artist; omitting them avoids a weak match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:06:46.072366-05:00",
+    "usage": {
+      "inputTokens": 6614,
+      "outputTokens": 735,
+      "totalTokens": 7349,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11377
+    },
+    "requestId": "9c64cd32-4b70-44e1-8806-26536b217a76",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head-like form fills the center, outlined in thick black and white lines, with a mouth showing rows of white teeth against a dark red interior and a visible dark gap between upper and lower rows.\",\n    \"The left half of the face carries dense red, pink, and dark blue marks that read as a fractured surface, while the right half is dominated by flat yellow-gold with a circular eye shape outlined in purple.\",\n    \"Loose black hatching radiates across a yellow-gold background, interrupted by red and gray rectangular blocks on the left edge and scattered cyan, yellow, and purple loops near the bottom corners.\"\n  ],\n  \"reading\": \"The face splits down the middle: one side dense with red and dark marks, the other open and yellow, both held by a single white outline. The mouth, packed with vertical white teeth separated by a dark gap, sits below mismatched eye forms and pulls the image toward something raw and exposed. Surrounding hatching presses inward, leaving the head no room to recede into the background.\",\n  \"contextAngle\": \"Within the owned numbered subset, nnxyz #13 shares the large centered face and visible teeth, but its dominant greens and teal diagonals contrast sharply with the yellow-gold and red here. Title-derived neighbor order matches recorded creation order for these two works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj\",\n      \"reason\": \"Both works center a large outlined face with a row of white teeth in a dark mouth, but nnxyz #13 is built on deep greens and teal diagonals against black, making the tonal shift to yellow-gold and red in nnxyz #15 a clear contrast.\"\n    }\n  ],\n  \"tags\": [\n    \"split-face composition\",\n    \"teeth and dark mouth gap\",\n    \"black hatching on yellow ground\",\n    \"mismatched eye forms\",\n    \"red and pink surface marks\",\n    \"white outline on dark interior\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the white outline of the head break or overlap, and what does that interruption do to the boundary between the face and the background?\",\n  \"ambiguities\": [\n    \"The circular form near the center of the face could be read as an eye, a lens, or an unrelated mark; the image does not resolve this clearly.\",\n    \"nnxyz nifty faces #0000 and nnxyz #18 were inspected but offer no strong formal connection beyond shared artist; both are omitted to avoid a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open mouth' with a description grounded in visible evidence: vertical white teeth separated by a dark gap between rows, without asserting the degree of openness beyond what the tooth rows and dark interior show.\",\n    \"Reading remains within 55–65 words after revision.\",\n    \"No other flagged issues; all other fields verified against visible content and supplied metadata.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN/image.png",
+        "imageSHA256": "a62c677efc3e03ff2fd9f39ff71589291cbb41ce54b00fe3c29dfe2836887260"
+      },
+      {
+        "artworkId": "QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj/image.png",
+        "imageSHA256": "ef34d6ab4a3e369e0b8479e99373fa80cfdf2079734946abcd10be932b23457a"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb/image.png",
+        "imageSHA256": "19be552d74ed548d256a01f4c2e1aba8ec129476630166dbfaf427bf4a459be1"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large rounded head-like form fills the center, outlined in thick black and white lines, with a wide open mouth showing rows of white teeth against a dark interior.\", \"The left half of the face carries dense red, pink, and dark blue marks that read as a fractured surface, while the right half is dominated by flat yellow-gold with a circular eye shape outlined in purple.\", \"Loose black hatching radiates across a yellow-gold background, interrupted by red and gray rectangular blocks on the left edge and scattered cyan, yellow, and purple loops near the bottom corners.\"], \"reading\": \"The face splits down the middle: one side dense with red and dark marks, the other open and yellow, both held by a single white outline. The wide-open mouth, packed with teeth, sits below mismatched eye forms and pulls the image toward something raw and exposed. Surrounding hatching presses inward, leaving the head no room to recede into the background.\", \"contextAngle\": \"Within the owned numbered subset, nnxyz #13 shares the large centered face and visible teeth, but its dominant greens and teal diagonals contrast sharply with the yellow-gold and red here. Title-derived neighbor order matches recorded creation order for these two works.\", \"connections\": [{\"targetArtworkId\": \"QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj\", \"reason\": \"Both works center a large outlined face with a row of white teeth in an open mouth, but nnxyz #13 is built on deep greens and teal diagonals against black, making the tonal shift to yellow-gold and red in nnxyz #15 a clear contrast.\"}], \"tags\": [\"split-face composition\", \"open mouth with teeth\", \"black hatching on yellow ground\", \"mismatched eye forms\", \"red and pink surface marks\", \"white outline on dark interior\"], \"lookingQuestion\": \"Where exactly does the white outline of the head break or overlap, and what does that interruption do to the boundary between the face and the background?\", \"ambiguities\": [\"The circular form near the center of the face could be read as an eye, a lens, or an unrelated mark; the image does not resolve this clearly.\", \"nnxyz nifty faces #0000 and nnxyz #18 were inspected but offer no strong formal connection beyond shared artist; both are omitted to avoid a weak match.\"]}\nFLAGS:\n[{\"artworkId\": \"QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

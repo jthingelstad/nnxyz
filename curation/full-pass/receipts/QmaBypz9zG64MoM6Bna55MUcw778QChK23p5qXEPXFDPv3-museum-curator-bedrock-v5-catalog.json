@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:04.059204-05:00",
+    "usage": {
+      "inputTokens": 5994,
+      "outputTokens": 771,
+      "totalTokens": 6765,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13726
+    },
+    "requestId": "49c4dc7e-f029-4571-a171-882744527d98",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly symmetrical assembled form sits on a five-wheeled base; its upper section contains a large circular element with a dark X shape crossed by a horizontal white-and-black striped bar extending left.\",\n    \"A wide horizontal red band crosses the right side at mid-height, while a yellow zigzag bar runs along the top edge; both use dense saw-tooth line patterns that repeat across the image.\",\n    \"The lower body is dominated by a dark-bordered rectangle filled with layered yellow and red zigzag bands, outlined in red and black, sitting above the wheeled base drawn in thin blue lines.\"\n  ],\n  \"reading\": \"The assembled form reads as a machine or appliance built from stacked rectangular and circular parts, each zone packed with repeating saw-tooth and zigzag lines that give the flat lavender field a buzzing tension. The circular X on the left and the wide red bar on the right pull against each other across the body. The wheeled base below keeps the whole thing grounded, almost mundane, which sits oddly against the visual noise above.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work shares its lavender ground and X-marked circular element with the cross-collection comparison nnxyz nifty faces #76, which uses the same background color and circled letter forms. The nnotb title neighbors #272 and #274 use black and deep blue grounds, making this lavender pairing across collections a notable contrast.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\",\n      \"reason\": \"Both works share a lavender ground, circled X motifs in dark outlines, and yellow horizontal banding, making the visual echo across the two collections concrete and specific.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97\",\n      \"reason\": \"The title-adjacent #274 uses a dense blue ground and a wide open mouth with white teeth, contrasting sharply with #273's lavender field and machine body, showing how quickly the palette and subject shift between neighbors.\"\n    }\n  ],\n  \"tags\": [\n    \"zigzag line pattern\",\n    \"circular X motif\",\n    \"wheeled base\",\n    \"horizontal banding\",\n    \"saw-tooth edge\",\n    \"lavender ground\"\n  ],\n  \"lookingQuestion\": \"The saw-tooth lines appear in at least four separate zones of the image — where do they change scale or density, and does that change affect how each zone reads against the others?\",\n  \"ambiguities\": [\n    \"The assembled form could be read as a robot, an appliance, or an abstract stack of parts; no supplied metadata confirms subject identity.\",\n    \"The comparison with QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK (#272) was inspected but offers no strong formal link beyond title adjacency, so it was omitted from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3/image.png",
+        "imageSHA256": "1181b29db5ee2bd016e0f2ac4e1b200dff1914cf960daf64767cf585d3b66867"
+      },
+      {
+        "artworkId": "QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK/image.png",
+        "imageSHA256": "224149ccd6455455f032e00b81f08df4f2664678fa4b6eec983af4ead695269d"
+      },
+      {
+        "artworkId": "QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD/image.png",
+        "imageSHA256": "71e1fb501a6f6a17291b51862a87a9a99d25a5fe5a454d229ee3b3b88f9c12d1"
+      },
+      {
+        "artworkId": "Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97/image.png",
+        "imageSHA256": "3d2d6bf5dc0ab3216659316d69b4aecafea7bf07846bb431ba4a6f8976212b67"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:11.372965-05:00",
+    "usage": {
+      "inputTokens": 6797,
+      "outputTokens": 984,
+      "totalTokens": 7781,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7255
+    },
+    "requestId": "16c9a963-9e90-4123-b77a-e594f5c00190",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly symmetrical assembled form sits on a five-wheeled base; its upper section contains a large circular element with a dark X shape, crossed by a horizontal white-and-black striped bar extending left.\",\n    \"A wide horizontal red band crosses the right side at mid-height, while a yellow zigzag bar runs along the top edge; both use dense saw-tooth line patterns that repeat across the image.\",\n    \"The lower body is dominated by a dark-bordered rectangle filled with layered yellow and red zigzag bands outlined in red and black, sitting above the wheeled base drawn in thin blue lines.\"\n  ],\n  \"reading\": \"The assembled form reads as a stack of rectangular and circular parts, each zone packed with repeating saw-tooth and zigzag lines that give the flat lavender field a buzzing tension. The circular X on the left and the wide red bar on the right pull against each other across the body. The thin blue wheeled base below keeps the whole thing grounded, which sits oddly against the visual noise above.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #272 and nnxyz nnotb #274 use black and deep blue grounds respectively. The lavender field here recurs in cross-collection comparison nnxyz nifty faces #76, where circled letter forms and yellow banding appear on the same background color.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\",\n      \"reason\": \"Both works share a lavender ground, circled X motifs in dark outlines, and yellow horizontal banding, making the visual echo across the two collections concrete and specific.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97\",\n      \"reason\": \"Title-adjacent #274 uses a dense blue ground and a wide open form with white teeth, contrasting sharply with #273's lavender field and stacked machine body, showing how quickly palette and form shift between neighbors.\"\n    }\n  ],\n  \"tags\": [\n    \"zigzag line pattern\",\n    \"circular X motif\",\n    \"wheeled base\",\n    \"horizontal banding\",\n    \"saw-tooth edge\",\n    \"lavender ground\"\n  ],\n  \"lookingQuestion\": \"The saw-tooth lines appear in at least four separate zones — where do they change scale or density, and does that change affect how each zone reads against the others?\",\n  \"ambiguities\": [\n    \"The assembled form could be read as a robot, an appliance, or an abstract stack of parts; no supplied metadata confirms subject identity.\",\n    \"Comparison QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK (#272) was inspected but its black ground and figure-based forms offer no strong formal link beyond title adjacency, so it was omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"All colors, forms and placements confirmed against the primary image: lavender ground, circular X, striped horizontal bar, red band, yellow zigzag top bar, dark-bordered lower rectangle, and five-wheeled blue base are all visible.\",\n    \"Draft reading phrase 'almost mundane' removed as interpretive overreach not grounded in a specific visual observation; replaced with neutral phrasing.\",\n    \"Both comparison images inspected: QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD confirms lavender ground, circled X forms, and yellow banding; Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97 confirms deep blue ground and white-tooth open form, supporting the contrast claim.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3/image.png",
+        "imageSHA256": "1181b29db5ee2bd016e0f2ac4e1b200dff1914cf960daf64767cf585d3b66867"
+      },
+      {
+        "artworkId": "QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK/image.png",
+        "imageSHA256": "224149ccd6455455f032e00b81f08df4f2664678fa4b6eec983af4ead695269d"
+      },
+      {
+        "artworkId": "QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD/image.png",
+        "imageSHA256": "71e1fb501a6f6a17291b51862a87a9a99d25a5fe5a454d229ee3b3b88f9c12d1"
+      },
+      {
+        "artworkId": "Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97/image.png",
+        "imageSHA256": "3d2d6bf5dc0ab3216659316d69b4aecafea7bf07846bb431ba4a6f8976212b67"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A roughly symmetrical assembled form sits on a five-wheeled base; its upper section contains a large circular element with a dark X shape crossed by a horizontal white-and-black striped bar extending left.\", \"A wide horizontal red band crosses the right side at mid-height, while a yellow zigzag bar runs along the top edge; both use dense saw-tooth line patterns that repeat across the image.\", \"The lower body is dominated by a dark-bordered rectangle filled with layered yellow and red zigzag bands, outlined in red and black, sitting above the wheeled base drawn in thin blue lines.\"], \"reading\": \"The assembled form reads as a machine or appliance built from stacked rectangular and circular parts, each zone packed with repeating saw-tooth and zigzag lines that give the flat lavender field a buzzing tension. The circular X on the left and the wide red bar on the right pull against each other across the body. The wheeled base below keeps the whole thing grounded, almost mundane, which sits oddly against the visual noise above.\", \"contextAngle\": \"Within the owned nnotb subset, this work shares its lavender ground and X-marked circular element with the cross-collection comparison nnxyz nifty faces #76, which uses the same background color and circled letter forms. The nnotb title neighbors #272 and #274 use black and deep blue grounds, making this lavender pairing across collections a notable contrast.\", \"connections\": [{\"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\", \"reason\": \"Both works share a lavender ground, circled X motifs in dark outlines, and yellow horizontal banding, making the visual echo across the two collections concrete and specific.\"}, {\"targetArtworkId\": \"Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97\", \"reason\": \"The title-adjacent #274 uses a dense blue ground and a wide open mouth with white teeth, contrasting sharply with #273's lavender field and machine body, showing how quickly the palette and subject shift between neighbors.\"}], \"tags\": [\"zigzag line pattern\", \"circular X motif\", \"wheeled base\", \"horizontal banding\", \"saw-tooth edge\", \"lavender ground\"], \"lookingQuestion\": \"The saw-tooth lines appear in at least four separate zones of the image — where do they change scale or density, and does that change affect how each zone reads against the others?\", \"ambiguities\": [\"The assembled form could be read as a robot, an appliance, or an abstract stack of parts; no supplied metadata confirms subject identity.\", \"The comparison with QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK (#272) was inspected but offers no strong formal link beyond title adjacency, so it was omitted from connections.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:37.411006-05:00",
+    "usage": {
+      "inputTokens": 6575,
+      "outputTokens": 857,
+      "totalTokens": 7432,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5609
+    },
+    "requestId": "8c989e14-bdf7-4548-8f37-7d57da534dfd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly symmetrical assembled form sits on a five-wheeled base; its upper section contains a large circular element with a dark X shape, crossed by a horizontal white-and-black striped bar extending left.\",\n    \"A wide horizontal red band crosses the right side at mid-height, while a yellow zigzag bar runs along the top edge; both use dense saw-tooth line patterns that repeat across the image.\",\n    \"The lower body is dominated by a dark-bordered rectangle filled with layered yellow and red zigzag bands outlined in red and black, sitting above the wheeled base drawn in thin blue lines.\"\n  ],\n  \"reading\": \"The assembled form reads as a stack of rectangular and circular parts, each zone packed with repeating saw-tooth and zigzag lines that give the flat lavender field a buzzing tension. The circular X on the left and the wide red bar on the right pull against each other across the body. The thin blue wheeled base below keeps the whole thing grounded, which sits oddly against the visual noise above.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #272 and nnxyz nnotb #274 use black and deep blue grounds respectively. The lavender field here recurs in cross-collection comparison nnxyz nifty faces #76, where circled letter forms and yellow banding appear on the same background color.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\",\n      \"reason\": \"Both works share a lavender ground, circled X motifs in dark outlines, and yellow horizontal banding, making the visual echo across the two collections concrete and specific.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97\",\n      \"reason\": \"Title-adjacent #274 uses a dense blue ground and a face form with a visible tooth row in a red-outlined mouth, contrasting sharply with #273's lavender field and stacked machine body, showing how quickly palette and form shift between neighbors.\"\n    }\n  ],\n  \"tags\": [\"zigzag line pattern\", \"circular X motif\", \"wheeled base\", \"horizontal banding\", \"saw-tooth edge\", \"lavender ground\"],\n  \"lookingQuestion\": \"The saw-tooth lines appear in at least four separate zones — where do they change scale or density, and does that change affect how each zone reads against the others?\",\n  \"ambiguities\": [\n    \"The assembled form could be read as a robot, an appliance, or an abstract stack of parts; no supplied metadata confirms subject identity.\",\n    \"Comparison QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK (#272) was inspected but its black ground and figure-based forms offer no strong formal link beyond title adjacency, so it was omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"Removed 'wide open' mouth claim from the #274 connection sentence; the image shows a visible tooth row within a red-outlined form, not a demonstrably wide-open mouth, and the revised sentence reflects only what is visible.\",\n    \"Reading word count confirmed within 55–65 word target; no other prose changes were required.\",\n    \"All other flags resolved; no new ambiguities introduced.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3/image.png",
+        "imageSHA256": "1181b29db5ee2bd016e0f2ac4e1b200dff1914cf960daf64767cf585d3b66867"
+      },
+      {
+        "artworkId": "QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK/image.png",
+        "imageSHA256": "224149ccd6455455f032e00b81f08df4f2664678fa4b6eec983af4ead695269d"
+      },
+      {
+        "artworkId": "QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD/image.png",
+        "imageSHA256": "71e1fb501a6f6a17291b51862a87a9a99d25a5fe5a454d229ee3b3b88f9c12d1"
+      },
+      {
+        "artworkId": "Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97/image.png",
+        "imageSHA256": "3d2d6bf5dc0ab3216659316d69b4aecafea7bf07846bb431ba4a6f8976212b67"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A roughly symmetrical assembled form sits on a five-wheeled base; its upper section contains a large circular element with a dark X shape, crossed by a horizontal white-and-black striped bar extending left.\", \"A wide horizontal red band crosses the right side at mid-height, while a yellow zigzag bar runs along the top edge; both use dense saw-tooth line patterns that repeat across the image.\", \"The lower body is dominated by a dark-bordered rectangle filled with layered yellow and red zigzag bands outlined in red and black, sitting above the wheeled base drawn in thin blue lines.\"], \"reading\": \"The assembled form reads as a stack of rectangular and circular parts, each zone packed with repeating saw-tooth and zigzag lines that give the flat lavender field a buzzing tension. The circular X on the left and the wide red bar on the right pull against each other across the body. The thin blue wheeled base below keeps the whole thing grounded, which sits oddly against the visual noise above.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #272 and nnxyz nnotb #274 use black and deep blue grounds respectively. The lavender field here recurs in cross-collection comparison nnxyz nifty faces #76, where circled letter forms and yellow banding appear on the same background color.\", \"connections\": [{\"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\", \"reason\": \"Both works share a lavender ground, circled X motifs in dark outlines, and yellow horizontal banding, making the visual echo across the two collections concrete and specific.\"}, {\"targetArtworkId\": \"Qmen9nCdpFW1U5TY27nEHC3Ty1DsqHyphUxwVV1CE5WQ97\", \"reason\": \"Title-adjacent #274 uses a dense blue ground and a wide open form with white teeth, contrasting sharply with #273's lavender field and stacked machine body, showing how quickly palette and form shift between neighbors.\"}], \"tags\": [\"zigzag line pattern\", \"circular X motif\", \"wheeled base\", \"horizontal banding\", \"saw-tooth edge\", \"lavender ground\"], \"lookingQuestion\": \"The saw-tooth lines appear in at least four separate zones — where do they change scale or density, and does that change affect how each zone reads against the others?\", \"ambiguities\": [\"The assembled form could be read as a robot, an appliance, or an abstract stack of parts; no supplied metadata confirms subject identity.\", \"Comparison QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK (#272) was inspected but its black ground and figure-based forms offer no strong formal link beyond title adjacency, so it was omitted from connections.\"]}\nFLAGS:\n[{\"artworkId\": \"QmaBypz9zG64MoM6Bna55MUcw778QChK23p5qXEPXFDPv3\", \"field\": \"connections\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

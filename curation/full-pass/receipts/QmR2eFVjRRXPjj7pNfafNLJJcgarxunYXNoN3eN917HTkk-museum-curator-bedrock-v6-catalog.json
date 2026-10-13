@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:11:37.869914-05:00",
+    "usage": {
+      "inputTokens": 6440,
+      "outputTokens": 688,
+      "totalTokens": 7128,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 18730
+    },
+    "requestId": "e3eeeb79-313e-4222-b71c-e405391c135a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A yellow-toned figure fills the frame in a wide-legged stance, one fist raised, outlined in thick white and black strokes against a dark purple rectangle.\",\n    \"Bone-shaped forms radiate from the figure's head like a crown, rendered in white with simple crossed ends, floating above cyan and pink scribbled hatching.\",\n    \"Layered cyan, magenta, and white scratch lines cover the background and overlap the figure's body, creating a dense scrim that blurs the boundary between form and ground.\"\n  ],\n  \"reading\": \"The figure reads as caught mid-leap or mid-shout, its raised fist and spread legs pressing outward against the framing rectangle. Bone shapes hovering above the head lend a cartoonish menace, while the yellow fill gives the body a solid, almost golden weight. Surrounding scratch lines in cyan and pink feel like static or interference, as though the figure is broadcasting something loud enough to distort its own image.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between nnxyz rawblocks #56 and nnxyz rawblocks #58. Where those title neighbors center on dense, face-filling compositions, #57 stands apart with its full-body figure and open negative space inside the purple frame.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se\",\n      \"reason\": \"Both share layered cyan and magenta scratch lines over dark backgrounds, but #56 packs them into a tight face while #57 spreads them across an open body in motion.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPW4unigvh4jigEMxL83DEwnVJdS4dPhpP8x7gijXvC8w\",\n      \"reason\": \"nnotb #193 uses a similar bone-and-skull vocabulary with heavy black outlines, but buries its forms under far denser line tangles than #57's relatively legible figure.\"\n    }\n  ],\n  \"tags\": [\n    \"full-body figure\",\n    \"bone motifs\",\n    \"yellow fill\",\n    \"layered scratch lines\",\n    \"framed rectangle\",\n    \"raised fist\"\n  ],\n  \"lookingQuestion\": \"How do the bone shapes above the head change your reading of the figure—do they feel like decoration, threat, or something the body is shedding?\",\n  \"ambiguities\": [\n    \"The nnotb #193 comparison ID may contain a typo in the supplied metadata; connection is based on the inspected image showing skull and bone forms.\",\n    \"Whether the purple rectangle is a background layer or a depicted frame-within-frame cannot be confirmed from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk/image.png",
+        "imageSHA256": "2c4d6e30021e364daf33d8236a880a0ed40c9ed2aeb6b0110feb490249b104ec"
+      },
+      {
+        "artworkId": "QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se/image.png",
+        "imageSHA256": "041b50f10e8a2234b6a4e0d756c48168242a34eea2a2e2bfd14f958f9dbd6b10"
+      },
+      {
+        "artworkId": "QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w/image.png",
+        "imageSHA256": "526a36144be11d7301b32cdd65b29d9ddfb9503a84b10b400264afdfe6e40d34"
+      },
+      {
+        "artworkId": "QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk/image.png",
+        "imageSHA256": "5e26d479672f50c0c604cb73545b9af164479e2dd8d3b855ed9378e6564a03ad"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:11:51.206755-05:00",
+    "usage": {
+      "inputTokens": 7160,
+      "outputTokens": 823,
+      "totalTokens": 7983,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13255
+    },
+    "requestId": "7757729b-fd21-40e3-9c77-6989fd1b8df0",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A yellow-toned figure in a wide-legged stance fills the center, one fist raised, outlined in thick white and black lines against a dark purple rectangle.\",\n    \"White bone-shaped forms radiate from the figure's head, each with crossed ends, floating above dense cyan and pink hatched scribbles in the upper left.\",\n    \"Cyan, magenta, and white scratch lines layer across the background and overlap the figure's torso and limbs, blurring where the body ends and the ground begins.\"\n  ],\n  \"reading\": \"The figure reads as caught mid-leap or mid-shout, its raised fist and spread legs pressing outward against the framing rectangle. Bone shapes hovering above the head lend a cartoonish menace, while the yellow fill gives the body a solid, almost golden weight. Surrounding scratch lines in cyan and pink feel like static, as though the figure is broadcasting something loud enough to distort its own image.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between nnxyz rawblocks #56 and nnxyz rawblocks #58. Where those title neighbors center on dense, face-filling compositions, #57 stands apart with its full-body figure and open negative space inside the purple frame.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se\",\n      \"reason\": \"Both share layered cyan and magenta scratch lines over dark backgrounds, but #56 packs them into a tight face while #57 spreads them across an open body in motion.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk\",\n      \"reason\": \"Rawblocks #58 also features bone-like and skull-adjacent motifs with heavy black outlines, but fills the frame with a dense frontal face rather than a full figure.\"\n    }\n  ],\n  \"tags\": [\n    \"full-body figure\",\n    \"bone motifs\",\n    \"yellow fill\",\n    \"layered scratch lines\",\n    \"framed rectangle\",\n    \"raised fist\"\n  ],\n  \"lookingQuestion\": \"How do the bone shapes above the head change your reading of the figure—do they feel like decoration, threat, or something the body is shedding?\",\n  \"ambiguities\": [\n    \"Whether the purple rectangle functions as a background layer or a depicted frame-within-frame cannot be confirmed from the image alone.\",\n    \"The draft referenced nnotb #193 with an incorrect artwork ID; replaced with the verified rawblocks #58 comparison whose image was inspected.\"\n  ],\n  \"reviewFindings\": [\n    \"Draft connection to nnotb #193 used an ID (ending ...XvC8w) that does not match the supplied candidate ID (ending ...vC8w vs ...XvC8w); replaced with rawblocks #58 whose image and ID were verified.\",\n    \"Confirmed bone shapes, yellow body fill, cyan/magenta scratch lines, dark purple rectangle, and raised fist are all visible in the primary image.\",\n    \"Reading trimmed from 80 to 65 words to sit within the preferred 55–65 range.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk/image.png",
+        "imageSHA256": "2c4d6e30021e364daf33d8236a880a0ed40c9ed2aeb6b0110feb490249b104ec"
+      },
+      {
+        "artworkId": "QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se/image.png",
+        "imageSHA256": "041b50f10e8a2234b6a4e0d756c48168242a34eea2a2e2bfd14f958f9dbd6b10"
+      },
+      {
+        "artworkId": "QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w/image.png",
+        "imageSHA256": "526a36144be11d7301b32cdd65b29d9ddfb9503a84b10b400264afdfe6e40d34"
+      },
+      {
+        "artworkId": "QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk/image.png",
+        "imageSHA256": "5e26d479672f50c0c604cb73545b9af164479e2dd8d3b855ed9378e6564a03ad"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A yellow-toned figure fills the frame in a wide-legged stance, one fist raised, outlined in thick white and black strokes against a dark purple rectangle.\", \"Bone-shaped forms radiate from the figure's head like a crown, rendered in white with simple crossed ends, floating above cyan and pink scribbled hatching.\", \"Layered cyan, magenta, and white scratch lines cover the background and overlap the figure's body, creating a dense scrim that blurs the boundary between form and ground.\"], \"reading\": \"The figure reads as caught mid-leap or mid-shout, its raised fist and spread legs pressing outward against the framing rectangle. Bone shapes hovering above the head lend a cartoonish menace, while the yellow fill gives the body a solid, almost golden weight. Surrounding scratch lines in cyan and pink feel like static or interference, as though the figure is broadcasting something loud enough to distort its own image.\", \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between nnxyz rawblocks #56 and nnxyz rawblocks #58. Where those title neighbors center on dense, face-filling compositions, #57 stands apart with its full-body figure and open negative space inside the purple frame.\", \"connections\": [{\"targetArtworkId\": \"QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se\", \"reason\": \"Both share layered cyan and magenta scratch lines over dark backgrounds, but #56 packs them into a tight face while #57 spreads them across an open body in motion.\"}, {\"targetArtworkId\": \"QmPW4unigvh4jigEMxL83DEwnVJdS4dPhpP8x7gijXvC8w\", \"reason\": \"nnotb #193 uses a similar bone-and-skull vocabulary with heavy black outlines, but buries its forms under far denser line tangles than #57's relatively legible figure.\"}], \"tags\": [\"full-body figure\", \"bone motifs\", \"yellow fill\", \"layered scratch lines\", \"framed rectangle\", \"raised fist\"], \"lookingQuestion\": \"How do the bone shapes above the head change your reading of the figure—do they feel like decoration, threat, or something the body is shedding?\", \"ambiguities\": [\"The nnotb #193 comparison ID may contain a typo in the supplied metadata; connection is based on the inspected image showing skull and bone forms.\", \"Whether the purple rectangle is a background layer or a depicted frame-within-frame cannot be confirmed from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:30.021575-05:00",
+    "usage": {
+      "inputTokens": 6156,
+      "outputTokens": 819,
+      "totalTokens": 6975,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14505
+    },
+    "requestId": "867fcb7b-03da-4763-be14-2948c9194387",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head fills most of the frame against a black ground; the left eye socket holds a red X-crossed circle while the right shows a single dark pupil with a blue iris, both ringed in thick yellow loops.\",\n    \"A wide open mouth dominates the lower half, its teeth rendered as white rectangles cross-hatched with red lines, framed by deep red lips and a dark interior.\",\n    \"Blue oval dashes form a loose vertical chain down the left edge; pink splayed marks appear at lower left and lower right corners; a horizontal blue band cuts across the mid-left background.\"\n  ],\n  \"reading\": \"The face pushes close to the picture edge, leaving almost no breathing room. Its two eyes read differently—one sealed with crossing lines, one open and watching—giving the image an off-balance feeling that the symmetrical yellow rings around each socket cannot resolve. The wide, grid-toothed mouth sits somewhere between a grin and a grimace. Surrounding marks in blue, pink, and yellow feel less like decoration than like noise crowding in from every side.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #251 and #253 share the close-cropped face format and layered line work. #251 uses a pale open ground; #253 pulls back to a cooler, sparser field. #252 is the darkest of the three, with black filling nearly all negative space.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\",\n      \"reason\": \"Both works place a large face close to center with yellow-looped eye rings and a teeth-filled mouth, but #251 opens onto a light ground while #252 presses the same structure into near-total black.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj\",\n      \"reason\": \"Title neighbor #253 shares the yellow zigzag stitching lines and asymmetric eye treatment, but its pale grey-blue ground makes the face feel exposed where #252 feels enclosed.\"\n    }\n  ],\n  \"tags\": [\n    \"black ground\",\n    \"asymmetric eyes\",\n    \"yellow loop outlines\",\n    \"cross-hatched teeth\",\n    \"blue oval dash marks\",\n    \"close-cropped face\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled\",\n    \"confrontational proximity\"\n  ],\n  \"lookingQuestion\": \"The two eyes are built differently—one crossed out, one open with a visible pupil. Where else in the image do you notice a similar pairing of closed and open forms?\",\n  \"ambiguities\": [\n    \"The collector's scrimshaw connection is noted as a visual quality comparison; no specific formal element in this image has been confirmed as the basis for that link.\",\n    \"QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs (#7, nnxyz-other) shares a dense layered-line face format but belongs to a different owned title family and the formal overlap is not specific enough to warrant a connection entry.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSgS4g434zVvsFSBUsVqDAxd3QCBAJPFGekTjexe25fVh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSgS4g434zVvsFSBUsVqDAxd3QCBAJPFGekTjexe25fVh/image.png",
+        "imageSHA256": "187260cd7096f9d096c7f2321db6537a09861914369e6544880b0ac07ba1280f"
+      },
+      {
+        "artworkId": "QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j/image.png",
+        "imageSHA256": "4e39544e62e9642ae5a225337d1a5bbdbcb0cfd44294b8870a520f42f373de92"
+      },
+      {
+        "artworkId": "QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs/image.png",
+        "imageSHA256": "b35c263462562ca153f147842fca5152f5ec350e79ba77bd47dc74f94004747f"
+      },
+      {
+        "artworkId": "QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj/image.png",
+        "imageSHA256": "920c896233b4cf731077081d16e52b36e2d8afe6abcfa0e66ccb9ea3d80ec892"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:36.427187-05:00",
+    "usage": {
+      "inputTokens": 6997,
+      "outputTokens": 1049,
+      "totalTokens": 8046,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6333
+    },
+    "requestId": "26c5f934-fc46-45e9-b063-eb6fc88e0210",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head fills most of the frame against a black ground; the left eye socket holds a red X-crossed circle while the right shows a single dark pupil with a blue iris, both ringed in thick yellow loops.\",\n    \"A wide open mouth dominates the lower half, its teeth rendered as white rectangles cross-hatched with red lines, framed by deep red lips and a dark interior.\",\n    \"Blue oval dashes form a loose vertical chain down the left edge; pink splayed marks appear at lower left and lower right corners; a horizontal blue band cuts across the mid-left background.\"\n  ],\n  \"reading\": \"The face pushes close to the picture edge, leaving almost no breathing room. Its two eyes read differently—one sealed with crossing lines, one open and watching—giving the image an off-balance feeling that the symmetrical yellow rings around each socket cannot resolve. The wide, grid-toothed mouth sits somewhere between a grin and a grimace. Surrounding marks in blue, pink, and yellow feel less like decoration than like noise crowding in from every side.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #251 and #253 share the close-cropped face format and layered line work. #251 uses a pale open ground; #253 pulls back to a cooler, sparser field. #252 is the darkest of the three, with black filling nearly all negative space.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\",\n      \"reason\": \"Both works place a large face close to center with yellow-looped eye rings and a teeth-filled mouth, but #251 opens onto a light ground while #252 presses the same structure into near-total black.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj\",\n      \"reason\": \"Title neighbor #253 shares yellow zigzag stitching lines and an asymmetric eye treatment, but its pale grey-blue ground makes the face feel exposed where #252 feels enclosed.\"\n    }\n  ],\n  \"tags\": [\n    \"black ground\",\n    \"asymmetric eyes\",\n    \"yellow loop outlines\",\n    \"cross-hatched teeth\",\n    \"blue oval dash marks\",\n    \"close-cropped face\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled\",\n    \"confrontational proximity\"\n  ],\n  \"lookingQuestion\": \"The two eyes are built differently—one crossed out, one open with a visible pupil. Where else in the image do you notice a similar pairing of closed and open forms?\",\n  \"ambiguities\": [\n    \"The collector's scrimshaw connection is noted as a visual quality comparison; no specific formal element in this image has been confirmed as the basis for that link.\",\n    \"QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs (#7, nnxyz-other) shares a dense layered-line face format but belongs to a different owned title family and the formal overlap is not specific enough to warrant a connection entry.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: asymmetric eyes with yellow rings, red-crosshatched white teeth, blue oval dashes on left edge, pink marks at lower corners, and horizontal blue band mid-left are all visible.\",\n    \"Comparison with QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j confirmed: #251 does show yellow-looped eye rings, a teeth-filled mouth, and a light ground—contrast with #252's black ground is accurate.\",\n    \"Comparison with QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj confirmed: #253 shows yellow zigzag stitching lines, asymmetric eye treatment, and a pale grey-blue ground; no material corrections required to draft connections or reading.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSgS4g434zVvsFSBUsVqDAxd3QCBAJPFGekTjexe25fVh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSgS4g434zVvsFSBUsVqDAxd3QCBAJPFGekTjexe25fVh/image.png",
+        "imageSHA256": "187260cd7096f9d096c7f2321db6537a09861914369e6544880b0ac07ba1280f"
+      },
+      {
+        "artworkId": "QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j/image.png",
+        "imageSHA256": "4e39544e62e9642ae5a225337d1a5bbdbcb0cfd44294b8870a520f42f373de92"
+      },
+      {
+        "artworkId": "QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs/image.png",
+        "imageSHA256": "b35c263462562ca153f147842fca5152f5ec350e79ba77bd47dc74f94004747f"
+      },
+      {
+        "artworkId": "QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj/image.png",
+        "imageSHA256": "920c896233b4cf731077081d16e52b36e2d8afe6abcfa0e66ccb9ea3d80ec892"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head fills most of the frame against a black ground; the left eye socket holds a red X-crossed circle while the right shows a single dark pupil with a blue iris, both ringed in thick yellow loops.\", \"A wide open mouth dominates the lower half, its teeth rendered as white rectangles cross-hatched with red lines, framed by deep red lips and a dark interior.\", \"Blue oval dashes form a loose vertical chain down the left edge; pink splayed marks appear at lower left and lower right corners; a horizontal blue band cuts across the mid-left background.\"], \"reading\": \"The face pushes close to the picture edge, leaving almost no breathing room. Its two eyes read differently—one sealed with crossing lines, one open and watching—giving the image an off-balance feeling that the symmetrical yellow rings around each socket cannot resolve. The wide, grid-toothed mouth sits somewhere between a grin and a grimace. Surrounding marks in blue, pink, and yellow feel less like decoration than like noise crowding in from every side.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors #251 and #253 share the close-cropped face format and layered line work. #251 uses a pale open ground; #253 pulls back to a cooler, sparser field. #252 is the darkest of the three, with black filling nearly all negative space.\", \"connections\": [{\"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\", \"reason\": \"Both works place a large face close to center with yellow-looped eye rings and a teeth-filled mouth, but #251 opens onto a light ground while #252 presses the same structure into near-total black.\"}, {\"targetArtworkId\": \"QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj\", \"reason\": \"Title neighbor #253 shares the yellow zigzag stitching lines and asymmetric eye treatment, but its pale grey-blue ground makes the face feel exposed where #252 feels enclosed.\"}], \"tags\": [\"black ground\", \"asymmetric eyes\", \"yellow loop outlines\", \"cross-hatched teeth\", \"blue oval dash marks\", \"close-cropped face\"], \"interpretiveTags\": [\"unsettled\", \"confrontational proximity\"], \"lookingQuestion\": \"The two eyes are built differently—one crossed out, one open with a visible pupil. Where else in the image do you notice a similar pairing of closed and open forms?\", \"ambiguities\": [\"The collector's scrimshaw connection is noted as a visual quality comparison; no specific formal element in this image has been confirmed as the basis for that link.\", \"QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs (#7, nnxyz-other) shares a dense layered-line face format but belongs to a different owned title family and the formal overlap is not specific enough to warrant a connection entry.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:36.642849-05:00",
+    "usage": {
+      "inputTokens": 6741,
+      "outputTokens": 928,
+      "totalTokens": 7669,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12518
+    },
+    "requestId": "f9914418-b414-486d-ab1d-11b270026071",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head fills most of the frame against a black ground; the left eye socket holds a red X-crossed circle while the right shows a single dark pupil with a blue iris, both ringed in thick yellow loops.\",\n    \"A wide mouth dominates the lower half, its teeth rendered as white rectangles cross-hatched with red lines, framed by deep red lips and a visible dark interior between the rows.\",\n    \"Blue oval dashes form a loose vertical chain down the left edge; pink splayed marks appear at lower left and lower right corners; a horizontal blue band cuts across the mid-left background.\"\n  ],\n  \"reading\": \"Black swallows nearly every gap between the yellow loops, blue dashes, and red crosshatching, pressing the face forward with nowhere to retreat. The two eyes read differently—one sealed with crossing lines, one open and watching—giving the image an off-balance quality the symmetrical yellow rings cannot resolve. The grid-toothed mouth, its red lips parted just enough to expose a dark interior, sits somewhere between a grin and a grimace. Surrounding marks in blue, pink, and yellow feel less like decoration than noise crowding in.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #251 and #253 share the close-cropped face format and layered line work. #251 uses a pale open ground; #253 pulls back to a cooler, sparser field. #252 is the darkest of the three, with black filling nearly all negative space.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\",\n      \"reason\": \"Both works place a large face close to center with yellow-looped eye rings and a teeth-filled mouth, but #251 opens onto a light ground while #252 presses the same structure into near-total black.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj\",\n      \"reason\": \"Title neighbor #253 shares yellow zigzag stitching lines and an asymmetric eye treatment, but its pale grey-blue ground makes the face feel exposed where #252 feels enclosed.\"\n    }\n  ],\n  \"tags\": [\n    \"black ground\",\n    \"asymmetric eyes\",\n    \"yellow loop outlines\",\n    \"cross-hatched teeth\",\n    \"blue oval dash marks\",\n    \"close-cropped face\"\n  ],\n  \"lookingQuestion\": \"The two eyes are built differently—one crossed out, one open with a visible pupil. Where else in the image do you notice a similar pairing of closed and open forms?\",\n  \"ambiguities\": [\n    \"The collector's scrimshaw connection is noted as a visual quality comparison; no specific formal element in this image has been confirmed as the basis for that link.\",\n    \"QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs (#7, nnxyz-other) shares a dense layered-line face format but belongs to a different owned title family and the formal overlap is not specific enough to warrant a connection entry.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced opening sentence to lead with the dominant black ground and its visual effect rather than a repeated 'face pushes close' construction.\",\n    \"Mouth description revised: teeth rows and dark interior are visible, but the opening is moderate rather than wide-open; wording now says 'parted just enough to expose a dark interior' instead of 'wide open.'\",\n    \"Reading runs 78 words, context 40 words, both within range.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSgS4g434zVvsFSBUsVqDAxd3QCBAJPFGekTjexe25fVh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSgS4g434zVvsFSBUsVqDAxd3QCBAJPFGekTjexe25fVh/image.png",
+        "imageSHA256": "187260cd7096f9d096c7f2321db6537a09861914369e6544880b0ac07ba1280f"
+      },
+      {
+        "artworkId": "QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j/image.png",
+        "imageSHA256": "4e39544e62e9642ae5a225337d1a5bbdbcb0cfd44294b8870a520f42f373de92"
+      },
+      {
+        "artworkId": "QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs/image.png",
+        "imageSHA256": "b35c263462562ca153f147842fca5152f5ec350e79ba77bd47dc74f94004747f"
+      },
+      {
+        "artworkId": "QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj/image.png",
+        "imageSHA256": "920c896233b4cf731077081d16e52b36e2d8afe6abcfa0e66ccb9ea3d80ec892"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large rounded head fills most of the frame against a black ground; the left eye socket holds a red X-crossed circle while the right shows a single dark pupil with a blue iris, both ringed in thick yellow loops.\", \"A wide open mouth dominates the lower half, its teeth rendered as white rectangles cross-hatched with red lines, framed by deep red lips and a dark interior.\", \"Blue oval dashes form a loose vertical chain down the left edge; pink splayed marks appear at lower left and lower right corners; a horizontal blue band cuts across the mid-left background.\"], \"reading\": \"The face pushes close to the picture edge, leaving almost no breathing room. Its two eyes read differently—one sealed with crossing lines, one open and watching—giving the image an off-balance feeling that the symmetrical yellow rings around each socket cannot resolve. The wide, grid-toothed mouth sits somewhere between a grin and a grimace. Surrounding marks in blue, pink, and yellow feel less like decoration than like noise crowding in from every side.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors #251 and #253 share the close-cropped face format and layered line work. #251 uses a pale open ground; #253 pulls back to a cooler, sparser field. #252 is the darkest of the three, with black filling nearly all negative space.\", \"connections\": [{\"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\", \"reason\": \"Both works place a large face close to center with yellow-looped eye rings and a teeth-filled mouth, but #251 opens onto a light ground while #252 presses the same structure into near-total black.\"}, {\"targetArtworkId\": \"QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj\", \"reason\": \"Title neighbor #253 shares yellow zigzag stitching lines and an asymmetric eye treatment, but its pale grey-blue ground makes the face feel exposed where #252 feels enclosed.\"}], \"tags\": [\"black ground\", \"asymmetric eyes\", \"yellow loop outlines\", \"cross-hatched teeth\", \"blue oval dash marks\", \"close-cropped face\"], \"lookingQuestion\": \"The two eyes are built differently—one crossed out, one open with a visible pupil. Where else in the image do you notice a similar pairing of closed and open forms?\", \"ambiguities\": [\"The collector's scrimshaw connection is noted as a visual quality comparison; no specific formal element in this image has been confirmed as the basis for that link.\", \"QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs (#7, nnxyz-other) shares a dense layered-line face format but belongs to a different owned title family and the formal overlap is not specific enough to warrant a connection entry.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the face pushes close to\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:47.777320-05:00",
+    "usage": {
+      "inputTokens": 6885,
+      "outputTokens": 887,
+      "totalTokens": 7772,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11053
+    },
+    "requestId": "3df8c39c-ddb5-4466-9433-104b7148532a",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"A large rounded head fills most of the frame against a black ground; the left eye socket holds a red X-crossed circle while the right shows a single dark pupil with a blue iris, both ringed in thick yellow loops.\",\n    \"A wide mouth dominates the lower half, its teeth rendered as white rectangles cross-hatched with red lines, framed by deep red lips and a visible dark interior between the rows.\",\n    \"Blue oval dashes form a loose vertical chain down the left edge; pink splayed marks appear at lower left and lower right corners; a horizontal blue band cuts across the mid-left background.\"\n  ],\n  \"reading\": \"Black swallows nearly every gap between the yellow loops, blue dashes, and red crosshatching, pressing the face forward with nowhere to retreat. The two eyes read differently—one sealed with crossing lines, one open and watching—lending an off-balance quality the symmetrical yellow rings cannot resolve. The grid-toothed mouth, red lips parted enough to expose a dark interior, sits somewhere between grin and grimace. Surrounding marks in blue, pink, and yellow feel less like decoration than noise crowding in.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #251 and #253 share the close-cropped face format and layered line work. #252 is the darkest of the three, with black filling nearly all negative space where its neighbors open onto lighter grounds.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\",\n      \"reason\": \"Both works place a large face close to center with yellow-looped eye rings and a teeth-filled mouth, but #251 opens onto a light ground while #252 presses the same structure into near-total black.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj\",\n      \"reason\": \"Title neighbor #253 shares yellow zigzag stitching lines and an asymmetric eye treatment, but its pale grey-blue ground makes the face feel exposed where #252 feels enclosed.\"\n    }\n  ],\n  \"tags\": [\n    \"black ground\",\n    \"asymmetric eyes\",\n    \"yellow loop outlines\",\n    \"cross-hatched teeth\",\n    \"blue oval dash marks\",\n    \"close-cropped face\"\n  ],\n  \"lookingQuestion\": \"The two eyes are built differently—one crossed out, one open with a visible pupil. Where else in the image do you notice a similar pairing of closed and open forms?\",\n  \"ambiguities\": [\n    \"The collector's scrimshaw connection is noted as a visual quality comparison; no specific formal element in this image has been confirmed as the basis for that link.\",\n    \"QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs (#7, nnxyz-other) shares a dense layered-line face format but belongs to a different owned title family and the formal overlap is not specific enough to warrant a connection entry.\"\n  ],\n  \"reviewFindings\": [\n    \"Opening now leads with the dominant black ground and its visual compression effect, avoiding the flagged 'face pushes close to' phrasing.\",\n    \"Reading trimmed to 76 words, within the 45–80 word range.\",\n    \"Mouth description retained as 'parted enough to expose a dark interior'—moderate opening consistent with visible evidence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSgS4g434zVvsFSBUsVqDAxd3QCBAJPFGekTjexe25fVh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSgS4g434zVvsFSBUsVqDAxd3QCBAJPFGekTjexe25fVh/image.png",
+        "imageSHA256": "187260cd7096f9d096c7f2321db6537a09861914369e6544880b0ac07ba1280f"
+      },
+      {
+        "artworkId": "QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j/image.png",
+        "imageSHA256": "4e39544e62e9642ae5a225337d1a5bbdbcb0cfd44294b8870a520f42f373de92"
+      },
+      {
+        "artworkId": "QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs/image.png",
+        "imageSHA256": "b35c263462562ca153f147842fca5152f5ec350e79ba77bd47dc74f94004747f"
+      },
+      {
+        "artworkId": "QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj/image.png",
+        "imageSHA256": "920c896233b4cf731077081d16e52b36e2d8afe6abcfa0e66ccb9ea3d80ec892"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large rounded head fills most of the frame against a black ground; the left eye socket holds a red X-crossed circle while the right shows a single dark pupil with a blue iris, both ringed in thick yellow loops.\", \"A wide mouth dominates the lower half, its teeth rendered as white rectangles cross-hatched with red lines, framed by deep red lips and a visible dark interior between the rows.\", \"Blue oval dashes form a loose vertical chain down the left edge; pink splayed marks appear at lower left and lower right corners; a horizontal blue band cuts across the mid-left background.\"], \"reading\": \"Black swallows nearly every gap between the yellow loops, blue dashes, and red crosshatching, pressing the face forward with nowhere to retreat. The two eyes read differently—one sealed with crossing lines, one open and watching—giving the image an off-balance quality the symmetrical yellow rings cannot resolve. The grid-toothed mouth, its red lips parted just enough to expose a dark interior, sits somewhere between a grin and a grimace. Surrounding marks in blue, pink, and yellow feel less like decoration than noise crowding in.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors #251 and #253 share the close-cropped face format and layered line work. #251 uses a pale open ground; #253 pulls back to a cooler, sparser field. #252 is the darkest of the three, with black filling nearly all negative space.\", \"connections\": [{\"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\", \"reason\": \"Both works place a large face close to center with yellow-looped eye rings and a teeth-filled mouth, but #251 opens onto a light ground while #252 presses the same structure into near-total black.\"}, {\"targetArtworkId\": \"QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj\", \"reason\": \"Title neighbor #253 shares yellow zigzag stitching lines and an asymmetric eye treatment, but its pale grey-blue ground makes the face feel exposed where #252 feels enclosed.\"}], \"tags\": [\"black ground\", \"asymmetric eyes\", \"yellow loop outlines\", \"cross-hatched teeth\", \"blue oval dash marks\", \"close-cropped face\"], \"lookingQuestion\": \"The two eyes are built differently—one crossed out, one open with a visible pupil. Where else in the image do you notice a similar pairing of closed and open forms?\", \"ambiguities\": [\"The collector's scrimshaw connection is noted as a visual quality comparison; no specific formal element in this image has been confirmed as the basis for that link.\", \"QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs (#7, nnxyz-other) shares a dense layered-line face format but belongs to a different owned title family and the formal overlap is not specific enough to warrant a connection entry.\"], \"reviewFindings\": [\"Replaced opening sentence to lead with the dominant black ground and its visual effect rather than a repeated 'face pushes close' construction.\", \"Mouth description revised: teeth rows and dark interior are visible, but the opening is moderate rather than wide-open; wording now says 'parted just enough to expose a dark interior' instead of 'wide open.'\", \"Reading runs 78 words, context 40 words, both within range.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the face pushes close to\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}, {\"rule\": \"validation\", \"detail\": \"reading must be 45-80 words\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

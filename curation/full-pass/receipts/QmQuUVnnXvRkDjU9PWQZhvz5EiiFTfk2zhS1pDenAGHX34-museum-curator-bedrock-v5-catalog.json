@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:32.796274-05:00",
+    "usage": {
+      "inputTokens": 6216,
+      "outputTokens": 651,
+      "totalTokens": 6867,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10791
+    },
+    "requestId": "4f807e20-b707-4c49-aec4-260202895a2c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid black silhouette of a round-bodied figure with a curved neck rises from a hard-edged diagonal black ground that cuts across the lower third of the image.\",\n    \"Short jagged lines radiate outward from the figure's small head against a flat, saturated green field, fanning left and upward in roughly horizontal rows.\",\n    \"Two small yellow X marks and a stitched yellow line form a face on the head, the only color break in the otherwise all-black silhouette.\"\n  ],\n  \"reading\": \"The image splits into three zones: black ground, green field, black figure. The silhouette reads as both grounded and unstable, its round base barely clearing the diagonal slope. Yellow X-eyes and a sewn mouth give the otherwise opaque form a single point of expression. The radiating jagged lines suggest agitation or noise without specifying a cause. The reading is one of contained unease.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #111 and nnxyz nnotb #113. Those two works use dense layered color and packed line work; this piece strips back to a two-tone field with one silhouette, making it a notable contrast in the owned run.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU\",\n      \"reason\": \"Both works place a single outlined creature silhouette against a flat, unmodulated dark or saturated ground, using minimal color and a small circular eye detail as the sole facial marker.\"\n    }\n  ],\n  \"tags\": [\n    \"silhouette\",\n    \"two-tone ground\",\n    \"radiating jagged lines\",\n    \"yellow mark face\",\n    \"diagonal horizon\",\n    \"flat saturated green\"\n  ],\n  \"interpretiveTags\": [\n    \"contained unease\",\n    \"agitation\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the radiating lines begin relative to the figure's head, and does their spacing change as they move away from it?\",\n  \"ambiguities\": [\n    \"The title neighbor order and recorded creation order align here, but the metadata notes gaps and variants may exist elsewhere in the owned subset.\",\n    \"The comparison with QmdPNKuc7M7XniKpLJgqWmE2pKW4Ai2o42W717qkWEcVHF (nnotb #113) was inspected but its dense multicolor layering offers no useful formal connection beyond title adjacency, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34/image.png",
+        "imageSHA256": "5018456123a5e902800617437c2e1138da5bbc6d8a4cf9339304348202a6abaf"
+      },
+      {
+        "artworkId": "QmYoS7LGGQUsLhhsewwNoivspxy57y4qyTqSV1DXTapKMr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYoS7LGGQUsLhhsewwNoivspxy57y4qyTqSV1DXTapKMr/image.png",
+        "imageSHA256": "486ee6b69c8df11843de81ebedf0212713395b1f8047ca025edc47cbab23a9e1"
+      },
+      {
+        "artworkId": "QmdPNKuc7M7XniKpLJgqWmE2pKW4Ai2o42W717qkWEcVHF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdPNKuc7M7XniKpLJgqWmE2pKW4Ai2o42W717qkWEcVHF/image.png",
+        "imageSHA256": "924b781b0e6e2c3014a99eb38b7f205762059d002598a900a22feff4a436e376"
+      },
+      {
+        "artworkId": "Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU/image.png",
+        "imageSHA256": "f2e59f2254f29f9b66b67ad53e7d543b394b437e86d325084997a142d091f243"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:39.719483-05:00",
+    "usage": {
+      "inputTokens": 6898,
+      "outputTokens": 832,
+      "totalTokens": 7730,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6867
+    },
+    "requestId": "813b329a-f96f-4b02-84e1-771bac18c923",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid black silhouette of a round-bodied figure with a curved neck rises from a hard-edged diagonal black ground that cuts across the lower third of the image.\",\n    \"Short jagged lines radiate outward from the figure's small head against a flat, saturated green field, fanning left and upward in roughly horizontal rows.\",\n    \"Two small yellow X marks and a stitched yellow line form a face on the head, the only color break in the otherwise all-black silhouette.\"\n  ],\n  \"reading\": \"The image splits into three zones: black ground, green field, black figure. The silhouette's round base barely clears the diagonal slope, giving it an off-balance placement. Yellow X-eyes and a sewn mouth are the sole point of expression in an otherwise opaque form. The radiating jagged lines spread left and upward without touching the figure's body. The overall effect reads as contained unease.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #111 and nnxyz nnotb #113. Both neighbors use dense layered color and packed line work; this piece reduces to a two-tone field with one silhouette, making it a clear contrast in the owned run.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU\",\n      \"reason\": \"Both works place a single creature silhouette against a flat, unmodulated ground and use a small circular or marked eye as the only facial detail, while keeping the surrounding field free of texture.\"\n    }\n  ],\n  \"tags\": [\n    \"silhouette\",\n    \"two-tone ground\",\n    \"radiating jagged lines\",\n    \"yellow mark face\",\n    \"diagonal horizon\",\n    \"flat saturated green\"\n  ],\n  \"interpretiveTags\": [\n    \"contained unease\",\n    \"agitation\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the radiating lines begin relative to the figure's head, and does their spacing change as they move away from it?\",\n  \"ambiguities\": [\n    \"Title neighbor order and recorded creation order align for this work, but metadata notes gaps and variants may exist elsewhere in the owned subset.\",\n    \"Comparison candidate QmdPNKuc7M7XniKpLJgqWmE2pKW4Ai2o42W717qkWEcVHF (nnotb #113) was inspected; its dense multicolor layering offers no useful formal connection beyond title adjacency and was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"Color check confirmed: green field, black silhouette, yellow X-eyes and stitched mouth are all visible in the primary image; no invented colors found in draft.\",\n    \"Comparison with Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU confirmed: pink silhouette on black ground with a small circular eye detail supports the stated formal connection; 'minimal color' refined to avoid implying both works share the same palette.\",\n    \"Reading revised to move 'contained unease' out of the prose body and into interpretiveTags, keeping the reading grounded in visible form; word count verified within 45-80 word limit.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34/image.png",
+        "imageSHA256": "5018456123a5e902800617437c2e1138da5bbc6d8a4cf9339304348202a6abaf"
+      },
+      {
+        "artworkId": "QmYoS7LGGQUsLhhsewwNoivspxy57y4qyTqSV1DXTapKMr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYoS7LGGQUsLhhsewwNoivspxy57y4qyTqSV1DXTapKMr/image.png",
+        "imageSHA256": "486ee6b69c8df11843de81ebedf0212713395b1f8047ca025edc47cbab23a9e1"
+      },
+      {
+        "artworkId": "QmdPNKuc7M7XniKpLJgqWmE2pKW4Ai2o42W717qkWEcVHF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdPNKuc7M7XniKpLJgqWmE2pKW4Ai2o42W717qkWEcVHF/image.png",
+        "imageSHA256": "924b781b0e6e2c3014a99eb38b7f205762059d002598a900a22feff4a436e376"
+      },
+      {
+        "artworkId": "Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU/image.png",
+        "imageSHA256": "f2e59f2254f29f9b66b67ad53e7d543b394b437e86d325084997a142d091f243"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A solid black silhouette of a round-bodied figure with a curved neck rises from a hard-edged diagonal black ground that cuts across the lower third of the image.\", \"Short jagged lines radiate outward from the figure's small head against a flat, saturated green field, fanning left and upward in roughly horizontal rows.\", \"Two small yellow X marks and a stitched yellow line form a face on the head, the only color break in the otherwise all-black silhouette.\"], \"reading\": \"The image splits into three zones: black ground, green field, black figure. The silhouette reads as both grounded and unstable, its round base barely clearing the diagonal slope. Yellow X-eyes and a sewn mouth give the otherwise opaque form a single point of expression. The radiating jagged lines suggest agitation or noise without specifying a cause. The reading is one of contained unease.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #111 and nnxyz nnotb #113. Those two works use dense layered color and packed line work; this piece strips back to a two-tone field with one silhouette, making it a notable contrast in the owned run.\", \"connections\": [{\"targetArtworkId\": \"Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU\", \"reason\": \"Both works place a single outlined creature silhouette against a flat, unmodulated dark or saturated ground, using minimal color and a small circular eye detail as the sole facial marker.\"}], \"tags\": [\"silhouette\", \"two-tone ground\", \"radiating jagged lines\", \"yellow mark face\", \"diagonal horizon\", \"flat saturated green\"], \"interpretiveTags\": [\"contained unease\", \"agitation\"], \"lookingQuestion\": \"Where exactly do the radiating lines begin relative to the figure's head, and does their spacing change as they move away from it?\", \"ambiguities\": [\"The title neighbor order and recorded creation order align here, but the metadata notes gaps and variants may exist elsewhere in the owned subset.\", \"The comparison with QmdPNKuc7M7XniKpLJgqWmE2pKW4Ai2o42W717qkWEcVHF (nnotb #113) was inspected but its dense multicolor layering offers no useful formal connection beyond title adjacency, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

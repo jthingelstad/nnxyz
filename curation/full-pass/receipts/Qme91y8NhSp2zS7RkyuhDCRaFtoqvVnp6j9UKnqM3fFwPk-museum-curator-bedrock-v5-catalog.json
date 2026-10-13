@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:04.918572-05:00",
+    "usage": {
+      "inputTokens": 6492,
+      "outputTokens": 732,
+      "totalTokens": 7224,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12122
+    },
+    "requestId": "3745e614-8c4f-4f00-9cfa-06aee5eebc60",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-brimmed olive and yellow cap dominates the upper half; its crown carries a small dark emblem drawn in blocky marks against the yellow-green fill.\",\n    \"The face below the cap is built from overlapping white loops and red vertical stripes on a dark grey ground, with two squinting eye shapes and a wide open-tooth mouth.\",\n    \"At lower left, loose purple marks form rough letter-like shapes; at lower right, a skeletal hand grips a thin dark rod that rises vertically.\"\n  ],\n  \"reading\": \"A figure assembled from competing layers: the cap reads as solid and weighted while the face beneath it dissolves into white scribble and red stripe. The open-tooth mouth and narrowed eyes sit in tension with each other — one reads as a shout, the other as a squint. Purple marks at the edge feel like an afterthought or an overflow, as if the image kept going past its own boundary.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, title neighbors are nnxyz #18 and nnxyz #25 in title order, which matches recorded creation order here. Where nnxyz #18 fills its field with warm orange atmosphere, this work keeps a flat grey ground and pushes contrast through line density rather than color warmth.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4\",\n      \"reason\": \"Both works center a wide face with a prominent tooth-filled mouth on a grey ground, and both layer white outline loops over dense color fills to build the facial structure.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7\",\n      \"reason\": \"nnxyz #25 shares the grey ground and uses white outline shapes for skull-like heads, offering a contrast in mood: where #20 reads as confrontational, #25 scatters its figures across the field in a more dispersed arrangement.\"\n    }\n  ],\n  \"tags\": [\n    \"figure with hat\",\n    \"open-tooth mouth\",\n    \"white loop lines over dark ground\",\n    \"red vertical stripe fill\",\n    \"skeletal hand holding rod\",\n    \"purple letter-like marks\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"layered tension\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the white looping line begin and end on the face — does it form a closed boundary or does it break open somewhere?\",\n  \"ambiguities\": [\n    \"The small dark emblem on the cap crown resembles a drawn character or glyph but its specific content is unclear at this resolution.\",\n    \"The purple marks at lower left could be letters, a signature fragment, or purely formal marks; treating them as readable text is not supported by the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk/image.png",
+        "imageSHA256": "f8c70935e6fc1ef193d6a7e05f4f206a8b41f8f8951c613b320d89c2e2d2fdbc"
+      },
+      {
+        "artworkId": "QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb/image.png",
+        "imageSHA256": "19be552d74ed548d256a01f4c2e1aba8ec129476630166dbfaf427bf4a459be1"
+      },
+      {
+        "artworkId": "QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4/image.png",
+        "imageSHA256": "19e13d3f2279082f723ab4c6ca2de47cf590d40f33943003b176eb7443abbc42"
+      },
+      {
+        "artworkId": "QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7/image.png",
+        "imageSHA256": "0428a448c9a387e1d60f3793918bf997b0a0d008902bd6e5831e689069da6dd3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:11.372138-05:00",
+    "usage": {
+      "inputTokens": 7246,
+      "outputTokens": 869,
+      "totalTokens": 8115,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6330
+    },
+    "requestId": "d31e4363-f178-4aee-8ea5-80f4e3fa0ec3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-brimmed olive and yellow cap dominates the upper half; its crown carries a small dark emblem drawn in blocky marks against the yellow-green fill.\",\n    \"The face below the cap is built from overlapping white loops and red vertical stripes on a dark grey ground, with two squinting eye shapes and a wide open-tooth mouth.\",\n    \"At lower left, loose purple marks form rough letter-like shapes; at lower right, a skeletal hand grips a thin dark rod that rises vertically.\"\n  ],\n  \"reading\": \"A figure assembled from competing layers: the cap reads as solid and weighted while the face beneath dissolves into white scribble and red stripe. The open-tooth mouth and narrowed eyes sit in tension — one reads as a shout, the other as a squint. Purple marks at the edge feel like an overflow, as if the image kept going past its own boundary.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, title neighbors are nnxyz #18 and nnxyz #25, and recorded creation order matches title order here. Where nnxyz #18 fills its field with warm orange atmosphere, this work keeps a flat grey ground and builds contrast through line density.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4\",\n      \"reason\": \"Both center a wide face with a prominent tooth-filled mouth on a grey ground, layering white outline loops over dense color fills to build facial structure.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7\",\n      \"reason\": \"nnxyz #25 shares the grey ground and uses white outline shapes for skull-like heads, but scatters multiple figures across the field rather than anchoring one dominant form at center.\"\n    }\n  ],\n  \"tags\": [\n    \"figure with wide-brimmed cap\",\n    \"open-tooth mouth\",\n    \"white loop lines over dark ground\",\n    \"red vertical stripe fill\",\n    \"skeletal hand holding rod\",\n    \"purple letter-like marks at edge\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"layered tension\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the white looping line begin and end on the face — does it form a closed boundary or does it break open somewhere?\",\n  \"ambiguities\": [\n    \"The small dark emblem on the cap crown resembles a drawn character or glyph but its specific content is unclear at this resolution.\",\n    \"The purple marks at lower left could be letters, a signature fragment, or purely formal marks; treating them as readable text is not supported by the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: cap color, white loops with red stripes, purple marks lower left, and skeletal hand lower right are all visible.\",\n    \"Comparison with QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4 confirmed: grey ground, tooth-filled mouth, and white loop overlays are present in both inspected images.\",\n    \"Draft reading removed 'afterthought' phrasing (implies intent); replaced with 'overflow' framing grounded in visible placement. Word count checked within 55–80 word limit.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk/image.png",
+        "imageSHA256": "f8c70935e6fc1ef193d6a7e05f4f206a8b41f8f8951c613b320d89c2e2d2fdbc"
+      },
+      {
+        "artworkId": "QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb/image.png",
+        "imageSHA256": "19be552d74ed548d256a01f4c2e1aba8ec129476630166dbfaf427bf4a459be1"
+      },
+      {
+        "artworkId": "QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4/image.png",
+        "imageSHA256": "19e13d3f2279082f723ab4c6ca2de47cf590d40f33943003b176eb7443abbc42"
+      },
+      {
+        "artworkId": "QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7/image.png",
+        "imageSHA256": "0428a448c9a387e1d60f3793918bf997b0a0d008902bd6e5831e689069da6dd3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A wide-brimmed olive and yellow cap dominates the upper half; its crown carries a small dark emblem drawn in blocky marks against the yellow-green fill.\", \"The face below the cap is built from overlapping white loops and red vertical stripes on a dark grey ground, with two squinting eye shapes and a wide open-tooth mouth.\", \"At lower left, loose purple marks form rough letter-like shapes; at lower right, a skeletal hand grips a thin dark rod that rises vertically.\"], \"reading\": \"A figure assembled from competing layers: the cap reads as solid and weighted while the face beneath it dissolves into white scribble and red stripe. The open-tooth mouth and narrowed eyes sit in tension with each other — one reads as a shout, the other as a squint. Purple marks at the edge feel like an afterthought or an overflow, as if the image kept going past its own boundary.\", \"contextAngle\": \"Within the owned nnxyz-other subset, title neighbors are nnxyz #18 and nnxyz #25 in title order, which matches recorded creation order here. Where nnxyz #18 fills its field with warm orange atmosphere, this work keeps a flat grey ground and pushes contrast through line density rather than color warmth.\", \"connections\": [{\"targetArtworkId\": \"QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4\", \"reason\": \"Both works center a wide face with a prominent tooth-filled mouth on a grey ground, and both layer white outline loops over dense color fills to build the facial structure.\"}, {\"targetArtworkId\": \"QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7\", \"reason\": \"nnxyz #25 shares the grey ground and uses white outline shapes for skull-like heads, offering a contrast in mood: where #20 reads as confrontational, #25 scatters its figures across the field in a more dispersed arrangement.\"}], \"tags\": [\"figure with hat\", \"open-tooth mouth\", \"white loop lines over dark ground\", \"red vertical stripe fill\", \"skeletal hand holding rod\", \"purple letter-like marks\"], \"interpretiveTags\": [\"confrontational\", \"layered tension\"], \"lookingQuestion\": \"Where exactly does the white looping line begin and end on the face — does it form a closed boundary or does it break open somewhere?\", \"ambiguities\": [\"The small dark emblem on the cap crown resembles a drawn character or glyph but its specific content is unclear at this resolution.\", \"The purple marks at lower left could be letters, a signature fragment, or purely formal marks; treating them as readable text is not supported by the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

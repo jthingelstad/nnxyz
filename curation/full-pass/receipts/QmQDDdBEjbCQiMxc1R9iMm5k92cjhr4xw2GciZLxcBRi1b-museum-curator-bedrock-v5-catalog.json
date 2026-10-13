@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:26.375718-05:00",
+    "usage": {
+      "inputTokens": 6197,
+      "outputTokens": 755,
+      "totalTokens": 6952,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13364
+    },
+    "requestId": "ed4d8ab1-4030-418c-ba3c-efcd5b346890",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-open mouth dominates the lower center, rendered in looping black lines with white marks suggesting teeth against a dark interior.\",\n    \"Dense yellow scribble lines radiate outward from the face across the cheeks and chin, layered over olive and red color fills, while a broad-brimmed dark hat sits heavily across the upper head.\",\n    \"Two arms extend toward the upper corners of the teal background, their fingers spread open, framing the face with thin, scratchy strokes in ochre and red.\"\n  ],\n  \"reading\": \"The face pushes forward, mouth thrown open and arms flung wide, so the whole composition reads as a single outward thrust. Yellow scribble lines spread across the cheeks like static or heat. The dark hat presses down while the arms pull up and out, setting those two forces against each other. The teal field around the figure is marked with loose horizontal strokes that keep the background from receding entirely.\",\n  \"contextAngle\": \"Within the owned numbered subset, this work sits between nnxyz #43 and nnxyz #64 by title order. The collector links nnxyz work to scrimshaw through shared qualities of dense line-over-color patterning. The teal field here echoes the background in nnxyz nnotb #197 from a separate owned collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx\",\n      \"reason\": \"Both works center a head with a wide-open mouth and dense yellow scribble lines radiating from the face, but #43 uses a saturated red field while #48 uses teal, shifting the emotional temperature between the two.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4\",\n      \"reason\": \"nnxyz nnotb #197 shares the same flat teal background and open-mouth forms, offering a contrast in composition: #48 is tightly focused on a single face, while #197 spreads multiple figures across the field.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"wide-brimmed hat\",\n    \"yellow scribble lines\",\n    \"teal background\",\n    \"outstretched arms\",\n    \"layered line over color fill\"\n  ],\n  \"interpretiveTags\": [\n    \"high intensity\",\n    \"outward thrust\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the dark opening of the mouth, the spreading yellow lines across the cheeks, or the hands at the edges — and what does that path through the image do to how you read the whole?\",\n  \"ambiguities\": [\n    \"The title number (48) and recorded-creation position differ; title order is not confirmed as making order.\",\n    \"The figure's identity cannot be determined from the image; no external reference was supplied to support any identification.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQDDdBEjbCQiMxc1R9iMm5k92cjhr4xw2GciZLxcBRi1b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQDDdBEjbCQiMxc1R9iMm5k92cjhr4xw2GciZLxcBRi1b/image.png",
+        "imageSHA256": "0f9a149c2b9dab06b23b098fc813f5e16316d5f66e119fdbdf44d024890bcb3d"
+      },
+      {
+        "artworkId": "QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx/image.png",
+        "imageSHA256": "627676ccadbbc7fc43e8dd3c294bd70c306ad15e8ef47d8c2cb09ffa89bc5aa6"
+      },
+      {
+        "artworkId": "QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4/image.png",
+        "imageSHA256": "f04d6b2eb90ef8427b9cea0084da2801cf8c3bd25e03cf8d66a21fda1e4cc43b"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:33.152240-05:00",
+    "usage": {
+      "inputTokens": 6974,
+      "outputTokens": 957,
+      "totalTokens": 7931,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6694
+    },
+    "requestId": "5022da0c-c9b8-4e77-84d4-63a262be80ff",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-open mouth dominates the lower center, rendered in looping black lines with white marks suggesting teeth against a dark interior.\",\n    \"Dense yellow scribble lines spread across the cheeks and chin, layered over olive and red color fills, while a broad-brimmed dark hat sits across the upper head.\",\n    \"Two arms extend toward the upper corners against the teal background, fingers spread, framing the face with thin scratchy strokes in ochre and red.\"\n  ],\n  \"reading\": \"The face pushes forward, mouth thrown open and arms flung wide, so the whole composition reads as a single outward thrust. Yellow scribble lines spread across the cheeks like static. The dark hat presses down while the arms pull up and out, setting those two forces against each other. The teal field is marked with loose horizontal strokes that keep the background from fully receding.\",\n  \"contextAngle\": \"Within the owned numbered subset, this work sits between nnxyz #43 and nnxyz #64 by title order, not confirmed creation order. The collector links nnxyz work to scrimshaw through dense line-over-color patterning. The teal field echoes nnxyz nnotb #197 from a separate owned collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx\",\n      \"reason\": \"Both works center a head with a wide-open mouth and dense yellow scribble lines radiating from the face, but #43 uses a saturated red field while #48 uses teal, shifting the feeling between the two.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4\",\n      \"reason\": \"nnxyz nnotb #197 shares the same flat teal background and open-mouth forms, but spreads multiple figures loosely across the field rather than focusing tightly on a single face.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"wide-brimmed hat\",\n    \"yellow scribble lines\",\n    \"teal background\",\n    \"outstretched arms\",\n    \"layered line over color fill\"\n  ],\n  \"interpretiveTags\": [\n    \"high intensity\",\n    \"outward thrust\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the dark opening of the mouth, the spreading yellow lines across the cheeks, or the hands at the edges — and what does that path through the image do to how you read the whole?\",\n  \"ambiguities\": [\n    \"Title number (48) and recorded-creation position differ; title order is not confirmed as making order.\",\n    \"The figure's identity cannot be determined from the image; no external reference was supplied to support any identification.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: open mouth with white tooth marks, yellow scribble lines over olive/red fills, dark hat, teal field with loose horizontal strokes, and ochre/red arm strokes at upper corners.\",\n    \"Comparison with QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx confirmed: #43 shows a head with open mouth, dense yellow scribble lines, and a saturated red background — contrast with teal in #48 is visually grounded.\",\n    \"Comparison with QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4 confirmed: flat teal background and open-mouth forms present; multi-figure spread versus single-face focus is a concrete formal contrast supported by the image.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQDDdBEjbCQiMxc1R9iMm5k92cjhr4xw2GciZLxcBRi1b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQDDdBEjbCQiMxc1R9iMm5k92cjhr4xw2GciZLxcBRi1b/image.png",
+        "imageSHA256": "0f9a149c2b9dab06b23b098fc813f5e16316d5f66e119fdbdf44d024890bcb3d"
+      },
+      {
+        "artworkId": "QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx/image.png",
+        "imageSHA256": "627676ccadbbc7fc43e8dd3c294bd70c306ad15e8ef47d8c2cb09ffa89bc5aa6"
+      },
+      {
+        "artworkId": "QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4/image.png",
+        "imageSHA256": "f04d6b2eb90ef8427b9cea0084da2801cf8c3bd25e03cf8d66a21fda1e4cc43b"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A wide-open mouth dominates the lower center, rendered in looping black lines with white marks suggesting teeth against a dark interior.\", \"Dense yellow scribble lines radiate outward from the face across the cheeks and chin, layered over olive and red color fills, while a broad-brimmed dark hat sits heavily across the upper head.\", \"Two arms extend toward the upper corners of the teal background, their fingers spread open, framing the face with thin, scratchy strokes in ochre and red.\"], \"reading\": \"The face pushes forward, mouth thrown open and arms flung wide, so the whole composition reads as a single outward thrust. Yellow scribble lines spread across the cheeks like static or heat. The dark hat presses down while the arms pull up and out, setting those two forces against each other. The teal field around the figure is marked with loose horizontal strokes that keep the background from receding entirely.\", \"contextAngle\": \"Within the owned numbered subset, this work sits between nnxyz #43 and nnxyz #64 by title order. The collector links nnxyz work to scrimshaw through shared qualities of dense line-over-color patterning. The teal field here echoes the background in nnxyz nnotb #197 from a separate owned collection.\", \"connections\": [{\"targetArtworkId\": \"QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx\", \"reason\": \"Both works center a head with a wide-open mouth and dense yellow scribble lines radiating from the face, but #43 uses a saturated red field while #48 uses teal, shifting the emotional temperature between the two.\"}, {\"targetArtworkId\": \"QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4\", \"reason\": \"nnxyz nnotb #197 shares the same flat teal background and open-mouth forms, offering a contrast in composition: #48 is tightly focused on a single face, while #197 spreads multiple figures across the field.\"}], \"tags\": [\"open mouth\", \"wide-brimmed hat\", \"yellow scribble lines\", \"teal background\", \"outstretched arms\", \"layered line over color fill\"], \"interpretiveTags\": [\"high intensity\", \"outward thrust\"], \"lookingQuestion\": \"Where does your eye settle first — on the dark opening of the mouth, the spreading yellow lines across the cheeks, or the hands at the edges — and what does that path through the image do to how you read the whole?\", \"ambiguities\": [\"The title number (48) and recorded-creation position differ; title order is not confirmed as making order.\", \"The figure's identity cannot be determined from the image; no external reference was supplied to support any identification.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:06:48.009290-05:00",
+    "usage": {
+      "inputTokens": 6722,
+      "outputTokens": 852,
+      "totalTokens": 7574,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13311
+    },
+    "requestId": "d8d88fe4-28e8-4850-b1f3-3ddf94bd0d0b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark-brimmed hat sits across the upper portion of the head, built from overlapping brown, olive, and red strokes with white highlight lines tracing the crown.\",\n    \"Dense yellow scribble lines spread across the cheeks and chin, layered over olive and muted red color fills, while the mouth area shows a dark opening ringed by short white marks suggesting upper and lower tooth rows.\",\n    \"Two arms extend toward the upper corners against the teal background, fingers spread, framing the face with thin scratchy strokes in ochre and red; loose light-blue horizontal marks fill the space around the figure.\"\n  ],\n  \"reading\": \"The face pushes forward, mouth open and arms flung wide, so the composition reads as a single outward thrust. Yellow scribble lines spread across the cheeks like static. The dark hat presses down while the arms pull up and out, setting those two forces against each other. The teal field is marked with loose horizontal strokes that keep the background from fully receding, holding the figure in a shallow space.\",\n  \"contextAngle\": \"Within the owned numbered subset, this work sits between nnxyz #43 and nnxyz #64 by title order, not confirmed creation order. The teal field echoes nnxyz nnotb #197 from a separate owned collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx\",\n      \"reason\": \"Both works center a head with an open mouth showing tooth rows and dense yellow scribble lines radiating from the face, but #43 uses a saturated red field while #48 uses teal, shifting the overall temperature between the two.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4\",\n      \"reason\": \"nnxyz nnotb #197 shares the same flat teal background and exposed-teeth motifs, but distributes multiple figures loosely across the field rather than focusing tightly on a single face.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"wide-brimmed hat\",\n    \"yellow scribble lines\",\n    \"teal background\",\n    \"outstretched arms\",\n    \"layered line over color fill\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the dark opening of the mouth, the spreading yellow lines across the cheeks, or the hands at the edges — and what does that path through the image do to how you read the whole?\",\n  \"ambiguities\": [\n    \"Title number (48) and recorded-creation position differ; title order is not confirmed as making order.\",\n    \"The figure's identity cannot be determined from the image; no external reference was supplied to support any identification.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open mouth' with 'open mouth' and 'mouth open' throughout; the image shows a dark opening with upper and lower tooth rows visible, but the degree of openness does not clearly warrant 'wide-open.'\",\n    \"Retained both connections after re-inspecting comparison images: #43 and nnotb #197 each show visible tooth rows and share specific formal features with #48.\",\n    \"Reading trimmed to 62 words; context trimmed to 31 words referencing only the owned subset.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQDDdBEjbCQiMxc1R9iMm5k92cjhr4xw2GciZLxcBRi1b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQDDdBEjbCQiMxc1R9iMm5k92cjhr4xw2GciZLxcBRi1b/image.png",
+        "imageSHA256": "0f9a149c2b9dab06b23b098fc813f5e16316d5f66e119fdbdf44d024890bcb3d"
+      },
+      {
+        "artworkId": "QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx/image.png",
+        "imageSHA256": "627676ccadbbc7fc43e8dd3c294bd70c306ad15e8ef47d8c2cb09ffa89bc5aa6"
+      },
+      {
+        "artworkId": "QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4/image.png",
+        "imageSHA256": "f04d6b2eb90ef8427b9cea0084da2801cf8c3bd25e03cf8d66a21fda1e4cc43b"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A wide-open mouth dominates the lower center, rendered in looping black lines with white marks suggesting teeth against a dark interior.\", \"Dense yellow scribble lines spread across the cheeks and chin, layered over olive and red color fills, while a broad-brimmed dark hat sits across the upper head.\", \"Two arms extend toward the upper corners against the teal background, fingers spread, framing the face with thin scratchy strokes in ochre and red.\"], \"reading\": \"The face pushes forward, mouth thrown open and arms flung wide, so the whole composition reads as a single outward thrust. Yellow scribble lines spread across the cheeks like static. The dark hat presses down while the arms pull up and out, setting those two forces against each other. The teal field is marked with loose horizontal strokes that keep the background from fully receding.\", \"contextAngle\": \"Within the owned numbered subset, this work sits between nnxyz #43 and nnxyz #64 by title order, not confirmed creation order. The collector links nnxyz work to scrimshaw through dense line-over-color patterning. The teal field echoes nnxyz nnotb #197 from a separate owned collection.\", \"connections\": [{\"targetArtworkId\": \"QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx\", \"reason\": \"Both works center a head with a wide-open mouth and dense yellow scribble lines radiating from the face, but #43 uses a saturated red field while #48 uses teal, shifting the feeling between the two.\"}, {\"targetArtworkId\": \"QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4\", \"reason\": \"nnxyz nnotb #197 shares the same flat teal background and open-mouth forms, but spreads multiple figures loosely across the field rather than focusing tightly on a single face.\"}], \"tags\": [\"open mouth\", \"wide-brimmed hat\", \"yellow scribble lines\", \"teal background\", \"outstretched arms\", \"layered line over color fill\"], \"lookingQuestion\": \"Where does your eye settle first — on the dark opening of the mouth, the spreading yellow lines across the cheeks, or the hands at the edges — and what does that path through the image do to how you read the whole?\", \"ambiguities\": [\"Title number (48) and recorded-creation position differ; title order is not confirmed as making order.\", \"The figure's identity cannot be determined from the image; no external reference was supplied to support any identification.\"]}\nFLAGS:\n[{\"artworkId\": \"QmQDDdBEjbCQiMxc1R9iMm5k92cjhr4xw2GciZLxcBRi1b\", \"field\": \"connections\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

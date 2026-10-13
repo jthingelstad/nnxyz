@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:05.420547-05:00",
+    "usage": {
+      "inputTokens": 6124,
+      "outputTokens": 778,
+      "totalTokens": 6902,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11830
+    },
+    "requestId": "eae7c89e-7ab4-4104-b54f-1124ebbe7dff",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A side-facing head rendered in solid black fill is outlined by a single continuous pink-mauve line; a jagged yellow line traces the crown and back of the skull, spiking outward like teeth.\",\n    \"One eye area holds a small tight cluster of blue and white looping lines against the black mass, the only interior detail on the face; a short red zigzag marks the mouth.\",\n    \"The lower body is outlined in blue against the dark teal background, with the same zigzag line behavior repeated across the torso; a small blue artist mark sits in the lower-left corner.\"\n  ],\n  \"reading\": \"The figure is mostly darkness—a black silhouette held together by a thin pink contour and a jagged yellow edge that bristles along the top. Against that near-total absence, the small blue-white eye cluster and the red mouth read as sparks rather than features. The blue body outline below carries the same restless zigzag rhythm, suggesting the agitation is not confined to the face.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #276 and nnxyz nnotb #278. Where #276 layers dense color fills and #278 uses bright flat pinks and blues, #277 strips the figure to black mass and sparse accent lines, making it the quietest in color of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC\",\n      \"reason\": \"Both works use the same jagged zigzag line as a repeated border element, but #278 deploys it across bright pink and blue fills while #277 sets it against near-total black, sharpening the contrast between the two approaches.\"\n    },\n    {\n      \"targetArtworkId\": \"QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ\",\n      \"reason\": \"Both #277 and #290 build a head form from a dark filled mass with sparse bright line accents on top, though #290 layers translucent color planes inside the skull where #277 leaves the interior almost entirely empty.\"\n    }\n  ],\n  \"tags\": [\n    \"black silhouette fill\",\n    \"yellow jagged crown line\",\n    \"pink-mauve contour outline\",\n    \"blue zigzag body outline\",\n    \"sparse interior line cluster\",\n    \"dark teal background\"\n  ],\n  \"interpretiveTags\": [\n    \"restrained tension\",\n    \"isolation of detail\"\n  ],\n  \"lookingQuestion\": \"What does the placement of the blue-white eye cluster—the only interior mark on the black face—draw your attention toward or away from?\",\n  \"ambiguities\": [\n    \"The small blue mark in the lower-left corner resembles a recurring artist signature seen in comparison images but cannot be confirmed as identical from this image alone.\",\n    \"The title neighbor and recorded-creation neighbor orders align here, but gaps exist elsewhere in the owned nnotb subset, so adjacency does not confirm sequential making.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZasmAXaFJcaszAXWDrS7gGrwTUZ13KWze6hcgHn9dU2A",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZasmAXaFJcaszAXWDrS7gGrwTUZ13KWze6hcgHn9dU2A/image.png",
+        "imageSHA256": "56bd33f466ab85c97b48a074bbd20c5fe461390f23afbf36b82f6a134f52d48f"
+      },
+      {
+        "artworkId": "QmVzAeY6jaNPHrdH8z4PrD3nu6xMwDcK4G1D9z8MugtUXf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVzAeY6jaNPHrdH8z4PrD3nu6xMwDcK4G1D9z8MugtUXf/image.png",
+        "imageSHA256": "2d040af943b612302770ef8f2037b8bea0a03897f590236b8efd8a20fd2a533d"
+      },
+      {
+        "artworkId": "QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC/image.png",
+        "imageSHA256": "47e4c6ae75fcb52b87f4c2c76c541d54413c8b99f314c97d1aa8d19e514404e3"
+      },
+      {
+        "artworkId": "QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ/image.png",
+        "imageSHA256": "0306e87bba6fc0bbbb2411f7ec95b04ada4349d53eb76c69760f2580850afe79"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:11.451079-05:00",
+    "usage": {
+      "inputTokens": 6924,
+      "outputTokens": 975,
+      "totalTokens": 7899,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5979
+    },
+    "requestId": "6af8afc7-0ede-4a4b-a8bd-0ca9fea2c4db",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A side-facing head rendered in solid black fill is outlined by a thin pink-mauve contour line; a jagged yellow line traces the crown and back of the skull, spiking outward in short sharp points.\",\n    \"One eye area holds a small tight cluster of blue and white looping lines against the black mass, the only interior detail on the face; a short red zigzag marks the mouth.\",\n    \"The lower body is outlined in blue against the dark teal background, with zigzag line behavior repeated across the torso; a small blue mark sits in the lower-left corner.\"\n  ],\n  \"reading\": \"The figure is mostly darkness—a black mass held by a thin pink contour and a jagged yellow edge that bristles along the top. Against that near-total absence, the small blue-white eye cluster and the red mouth read as sparks rather than features. The blue body outline below carries the same restless zigzag rhythm, so the agitation is not confined to the face.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #276 and nnxyz nnotb #278. Where #276 layers dense color fills and #278 uses bright flat pinks and blues, #277 strips the figure to black mass and sparse accent lines.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC\",\n      \"reason\": \"Both works use the same jagged zigzag line as a repeated border element, but #278 deploys it across bright pink and blue fills while #277 sets it against near-total black, sharpening the contrast between the two approaches.\"\n    },\n    {\n      \"targetArtworkId\": \"QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ\",\n      \"reason\": \"Both works build a head form from a dark filled mass with sparse bright line accents, though #290 layers translucent color planes inside the skull where #277 leaves the interior almost entirely empty.\"\n    }\n  ],\n  \"tags\": [\n    \"black silhouette fill\",\n    \"yellow jagged crown line\",\n    \"pink-mauve contour outline\",\n    \"blue zigzag body outline\",\n    \"sparse interior line cluster\",\n    \"dark teal background\"\n  ],\n  \"interpretiveTags\": [\n    \"restrained tension\",\n    \"isolation of detail\"\n  ],\n  \"lookingQuestion\": \"What does the placement of the blue-white eye cluster—the only interior mark on the black face—draw your attention toward or away from?\",\n  \"ambiguities\": [\n    \"The small blue mark in the lower-left corner resembles a recurring artist mark seen in comparison images but cannot be confirmed as identical from this image alone.\",\n    \"Title neighbor and recorded-creation neighbor orders align for this work, but gaps exist elsewhere in the owned nnotb subset, so adjacency does not confirm sequential making.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: black fill, pink-mauve contour, jagged yellow crown line, blue-white eye cluster, red zigzag mouth, and blue body outline all verified against the primary image.\",\n    \"Draft phrase 'suggesting the agitation is not confined' implied intent; revised to 'so the agitation is not confined' to keep it observational rather than attributing purpose.\",\n    \"Both comparison connections verified against inspected images: zigzag contrast with QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC and dark-mass-with-sparse-accents contrast with QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ are supported by visible evidence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZasmAXaFJcaszAXWDrS7gGrwTUZ13KWze6hcgHn9dU2A",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZasmAXaFJcaszAXWDrS7gGrwTUZ13KWze6hcgHn9dU2A/image.png",
+        "imageSHA256": "56bd33f466ab85c97b48a074bbd20c5fe461390f23afbf36b82f6a134f52d48f"
+      },
+      {
+        "artworkId": "QmVzAeY6jaNPHrdH8z4PrD3nu6xMwDcK4G1D9z8MugtUXf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVzAeY6jaNPHrdH8z4PrD3nu6xMwDcK4G1D9z8MugtUXf/image.png",
+        "imageSHA256": "2d040af943b612302770ef8f2037b8bea0a03897f590236b8efd8a20fd2a533d"
+      },
+      {
+        "artworkId": "QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC/image.png",
+        "imageSHA256": "47e4c6ae75fcb52b87f4c2c76c541d54413c8b99f314c97d1aa8d19e514404e3"
+      },
+      {
+        "artworkId": "QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ/image.png",
+        "imageSHA256": "0306e87bba6fc0bbbb2411f7ec95b04ada4349d53eb76c69760f2580850afe79"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A side-facing head rendered in solid black fill is outlined by a single continuous pink-mauve line; a jagged yellow line traces the crown and back of the skull, spiking outward like teeth.\", \"One eye area holds a small tight cluster of blue and white looping lines against the black mass, the only interior detail on the face; a short red zigzag marks the mouth.\", \"The lower body is outlined in blue against the dark teal background, with the same zigzag line behavior repeated across the torso; a small blue artist mark sits in the lower-left corner.\"], \"reading\": \"The figure is mostly darkness—a black silhouette held together by a thin pink contour and a jagged yellow edge that bristles along the top. Against that near-total absence, the small blue-white eye cluster and the red mouth read as sparks rather than features. The blue body outline below carries the same restless zigzag rhythm, suggesting the agitation is not confined to the face.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #276 and nnxyz nnotb #278. Where #276 layers dense color fills and #278 uses bright flat pinks and blues, #277 strips the figure to black mass and sparse accent lines, making it the quietest in color of the three.\", \"connections\": [{\"targetArtworkId\": \"QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC\", \"reason\": \"Both works use the same jagged zigzag line as a repeated border element, but #278 deploys it across bright pink and blue fills while #277 sets it against near-total black, sharpening the contrast between the two approaches.\"}, {\"targetArtworkId\": \"QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ\", \"reason\": \"Both #277 and #290 build a head form from a dark filled mass with sparse bright line accents on top, though #290 layers translucent color planes inside the skull where #277 leaves the interior almost entirely empty.\"}], \"tags\": [\"black silhouette fill\", \"yellow jagged crown line\", \"pink-mauve contour outline\", \"blue zigzag body outline\", \"sparse interior line cluster\", \"dark teal background\"], \"interpretiveTags\": [\"restrained tension\", \"isolation of detail\"], \"lookingQuestion\": \"What does the placement of the blue-white eye cluster—the only interior mark on the black face—draw your attention toward or away from?\", \"ambiguities\": [\"The small blue mark in the lower-left corner resembles a recurring artist signature seen in comparison images but cannot be confirmed as identical from this image alone.\", \"The title neighbor and recorded-creation neighbor orders align here, but gaps exist elsewhere in the owned nnotb subset, so adjacency does not confirm sequential making.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

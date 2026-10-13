@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:24.661978-05:00",
+    "usage": {
+      "inputTokens": 5974,
+      "outputTokens": 733,
+      "totalTokens": 6707,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11582
+    },
+    "requestId": "f2445ffd-dfc3-4924-aa25-638230786a8a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A central figure with circular goggle-like eyes and an open rectangular mouth sits mid-image, outlined in thick black lines and filled with red, yellow, and grey.\",\n    \"Large yellow angular shapes frame the figure on the left side, while the background is packed with overlapping handwritten text in white, blue, pink, and black across every zone.\",\n    \"The upper-right quadrant shifts to a warm salmon-pink with stacked cursive lines of text, creating a distinct tonal pocket against the grey and yellow elsewhere.\"\n  ],\n  \"reading\": \"The figure at the center holds the image together while text crowds every edge, competing for the same space. Words like slogans and fragments press against the figure rather than describing it. The warm pink corner feels quieter than the rest, almost like a margin note beside the noise. The yellow framing pulls the eye left, then back to the goggle stare, which reads as flat and unreadable rather than expressive.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #64 sits between nnxyz #48 and nnxyz #66 in title order, and is also their recorded-creation neighbor. All three place a central masked or goggled figure against layered text and color fields, though #64 is the most text-saturated of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX\",\n      \"reason\": \"nnxyz #66 shares the goggled central figure, yellow hat-like shape, and embedded text phrases including 'Memewasher,' making it a direct visual echo of #64's composition and vocabulary.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A\",\n      \"reason\": \"nnxyz nnotb #256 uses the same concentric-ring eye construction and thick black outlines on a dark field, offering a contrast in background tone while sharing the same face-building approach.\"\n    }\n  ],\n  \"tags\": [\n    \"embedded text\",\n    \"goggle eyes\",\n    \"yellow angular framing\",\n    \"layered line work\",\n    \"multi-zone color fields\",\n    \"open rectangular mouth\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded\",\n    \"confrontational\",\n    \"self-referential\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle when the text and the figure compete for the same space, and what draws it there?\",\n  \"ambiguities\": [\n    \"Several text fragments are partially obscured by overlapping lines, making full legibility uncertain without a higher-resolution source.\",\n    \"The warm pink upper-right zone may be a distinct background layer or an overdrawn area; the boundary is not clearly defined in the image.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmQDDdBEjbCQiMxc1R9iMm5k92cjhr4xw2GciZLxcBRi1b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQDDdBEjbCQiMxc1R9iMm5k92cjhr4xw2GciZLxcBRi1b/image.png",
+        "imageSHA256": "0f9a149c2b9dab06b23b098fc813f5e16316d5f66e119fdbdf44d024890bcb3d"
+      },
+      {
+        "artworkId": "QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A/image.png",
+        "imageSHA256": "ccc58afcddbd2d7caf70b2a02ace283ec36639c1cd7e832b9ed6ca81a2387a3c"
+      },
+      {
+        "artworkId": "QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX/image.png",
+        "imageSHA256": "01484a87d1870e31995de4a02485192394121cd8eb07b5910adb1841d6f766c6"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:31.913672-05:00",
+    "usage": {
+      "inputTokens": 6727,
+      "outputTokens": 977,
+      "totalTokens": 7704,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7179
+    },
+    "requestId": "abc63a84-1f84-4363-b9a3-351a4501dd31",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A central figure with circular goggle-like eyes and an open rectangular mouth sits mid-image, outlined in thick black lines and filled with red, yellow, and grey.\",\n    \"Large yellow angular shapes frame the figure on the left side, while the background is packed with overlapping handwritten text in white, blue, pink, and black across every zone.\",\n    \"The upper-right quadrant shifts to a warm salmon-pink with stacked cursive lines of text, creating a distinct tonal pocket against the grey and yellow elsewhere.\"\n  ],\n  \"reading\": \"The figure at center holds the image together while text crowds every edge, competing for the same space. Words and fragments press against the figure rather than describing it. The warm pink corner reads quieter than the rest, almost a margin note beside the surrounding noise. The yellow framing pulls the eye left, then back to the goggle stare, which reads as flat and unreadable rather than open.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #64 sits between nnxyz #48 and nnxyz #66 in both title order and recorded-creation order. All three place a central masked or goggled figure against layered text and color fields, though #64 carries the densest text coverage of the three inspected works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX\",\n      \"reason\": \"nnxyz #66 shares the goggled central figure, a yellow hat-like shape overhead, and embedded text phrases including 'Memewasher,' making it a direct visual echo of #64's composition and word placement.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A\",\n      \"reason\": \"nnxyz nnotb #256 uses the same concentric-ring eye construction and thick black outlines, but sets them against a near-black field rather than #64's grey and text-filled ground, sharpening the contrast in mood.\"\n    }\n  ],\n  \"tags\": [\n    \"embedded text\",\n    \"goggle eyes\",\n    \"yellow angular framing\",\n    \"layered line work\",\n    \"multi-zone color fields\",\n    \"open rectangular mouth\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded\",\n    \"confrontational\",\n    \"self-referential\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle when the text and the figure compete for the same space, and what draws it there?\",\n  \"ambiguities\": [\n    \"Several text fragments are partially obscured by overlapping lines, making full legibility uncertain without a higher-resolution source.\",\n    \"The warm pink upper-right zone may be a distinct background layer or an overdrawn area; the boundary is not clearly defined in the image.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: goggle eyes, rectangular mouth, yellow angular left framing, and salmon-pink upper-right pocket are all visible.\",\n    \"Connection to QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX confirmed: nnxyz #66 image shows goggled figure, yellow overhead shape, and 'Memewasher' text matching #64's vocabulary; reason tightened to remove vague 'echo' language.\",\n    \"Connection to QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A confirmed: nnotb #256 image shows concentric-ring eyes and thick black outlines on a dark field; contrast with #64's lighter, text-saturated ground is a meaningful formal distinction, not a generic similarity.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmQDDdBEjbCQiMxc1R9iMm5k92cjhr4xw2GciZLxcBRi1b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQDDdBEjbCQiMxc1R9iMm5k92cjhr4xw2GciZLxcBRi1b/image.png",
+        "imageSHA256": "0f9a149c2b9dab06b23b098fc813f5e16316d5f66e119fdbdf44d024890bcb3d"
+      },
+      {
+        "artworkId": "QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A/image.png",
+        "imageSHA256": "ccc58afcddbd2d7caf70b2a02ace283ec36639c1cd7e832b9ed6ca81a2387a3c"
+      },
+      {
+        "artworkId": "QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX/image.png",
+        "imageSHA256": "01484a87d1870e31995de4a02485192394121cd8eb07b5910adb1841d6f766c6"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A central figure with circular goggle-like eyes and an open rectangular mouth sits mid-image, outlined in thick black lines and filled with red, yellow, and grey.\", \"Large yellow angular shapes frame the figure on the left side, while the background is packed with overlapping handwritten text in white, blue, pink, and black across every zone.\", \"The upper-right quadrant shifts to a warm salmon-pink with stacked cursive lines of text, creating a distinct tonal pocket against the grey and yellow elsewhere.\"], \"reading\": \"The figure at the center holds the image together while text crowds every edge, competing for the same space. Words like slogans and fragments press against the figure rather than describing it. The warm pink corner feels quieter than the rest, almost like a margin note beside the noise. The yellow framing pulls the eye left, then back to the goggle stare, which reads as flat and unreadable rather than expressive.\", \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #64 sits between nnxyz #48 and nnxyz #66 in title order, and is also their recorded-creation neighbor. All three place a central masked or goggled figure against layered text and color fields, though #64 is the most text-saturated of the three.\", \"connections\": [{\"targetArtworkId\": \"QmcnP1RHhoAMswzDcVfo6DLKXHkXmA3ArG3gmbchnsA8LX\", \"reason\": \"nnxyz #66 shares the goggled central figure, yellow hat-like shape, and embedded text phrases including 'Memewasher,' making it a direct visual echo of #64's composition and vocabulary.\"}, {\"targetArtworkId\": \"QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A\", \"reason\": \"nnxyz nnotb #256 uses the same concentric-ring eye construction and thick black outlines on a dark field, offering a contrast in background tone while sharing the same face-building approach.\"}], \"tags\": [\"embedded text\", \"goggle eyes\", \"yellow angular framing\", \"layered line work\", \"multi-zone color fields\", \"open rectangular mouth\"], \"interpretiveTags\": [\"crowded\", \"confrontational\", \"self-referential\"], \"lookingQuestion\": \"Where does your eye settle when the text and the figure compete for the same space, and what draws it there?\", \"ambiguities\": [\"Several text fragments are partially obscured by overlapping lines, making full legibility uncertain without a higher-resolution source.\", \"The warm pink upper-right zone may be a distinct background layer or an overdrawn area; the boundary is not clearly defined in the image.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

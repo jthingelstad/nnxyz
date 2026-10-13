@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:38.702005-05:00",
+    "usage": {
+      "inputTokens": 6411,
+      "outputTokens": 807,
+      "totalTokens": 7218,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13979
+    },
+    "requestId": "5266f1ed-6d02-4984-8a02-bb6401ae68e8",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Dozens of red lines fall vertically from a wide, flat-topped form near the upper center, creating a curtain effect that nearly fills the lower half of the black field.\",\n    \"Inside the curtain, a compact cluster of yellow, gold, and white looping lines forms a smaller figure-like shape, with spiral coils at roughly eye level and a ruffled band below.\",\n    \"The upper form is built from overlapping red, white, and black horizontal strokes with yellow accents, giving it a banded, layered surface distinct from the loose lines below.\"\n  ],\n  \"reading\": \"Red lines drop from a wide banded canopy and enclose a smaller looping form beneath it, so the eye moves from broad structure down to tight coil. The black ground makes both zones feel suspended rather than grounded. That containment reads as pressure — something held inside rather than displayed. The yellow spirals at center push back against the enclosure with a different kind of energy.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #151 and #153 both use dense layered line on colored grounds with full-bleed compositions. #152 is the outlier: a black void with a single contained structure, making the surrounding emptiness part of the image rather than background.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u\",\n      \"reason\": \"nnotb #151 shares the yellow-and-red line palette and a stacked vertical structure, but fills the entire field with color, making the black void in #152 a sharp formal contrast between the two title neighbors.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmbe6MuAhhUWZeTGTxDKXocAYcM37AkjbMGjJ6Tr4KS1cN\",\n      \"reason\": \"nifty faces #44 also uses tight spiral coils at roughly eye level inside a bounded form; the collector's link between scrimshaw line quality and nnxyz is visible in both works' dense looping marks against a dark surround.\"\n    }\n  ],\n  \"tags\": [\n    \"vertical falling lines\",\n    \"curtain or fringe structure\",\n    \"spiral coil forms\",\n    \"black ground\",\n    \"red and yellow line contrast\",\n    \"enclosed inner figure\"\n  ],\n  \"interpretiveTags\": [\n    \"containment\",\n    \"pressure\",\n    \"suspended\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the falling red lines begin — do they originate from the edge of the upper banded form, or do some start above it — and does that change how the two zones relate to each other?\",\n  \"ambiguities\": [\n    \"The inner looping cluster reads as a figure-like form but contains no unambiguous anatomical markers; identification as a face or body is a reading, not a confirmed subject.\",\n    \"nnotb #153 (QmUkNrNaGWGhc2ZxYbRDQCwrs4ryp7EAthpRpPXK4dvTvi) uses a fully colored ground and dense overlapping marks with no structural parallel to #152's curtain device, so it was excluded as a weak match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmb4AmCH4NX7CcX8NKwHHSmf8UNyYDud68w6enCjCCD2oa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmb4AmCH4NX7CcX8NKwHHSmf8UNyYDud68w6enCjCCD2oa/image.png",
+        "imageSHA256": "f9dd545b4052dd7c9a6a3c70ec4f61e7338f4d74b727bf713913856656c2a134"
+      },
+      {
+        "artworkId": "QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u/image.png",
+        "imageSHA256": "3843dda3caf4765d8ea51c08d7ac122348b06d8a0e85b14c89f71371692ffd29"
+      },
+      {
+        "artworkId": "Qmbe6MuAhhUWZeTGTxDKXocAYcM37AkjbMGjJ6Tr4KS1cN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmbe6MuAhhUWZeTGTxDKXocAYcM37AkjbMGjJ6Tr4KS1cN/image.png",
+        "imageSHA256": "42ca5ba9fb0fd919e529b09cc3ff492d2fdf164426d828cfef3e92ce1bca5efd"
+      },
+      {
+        "artworkId": "QmUkNrNaGWGhc2ZxYbRDQCwrs4ryp7EAthpRpPXK4dvTvi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUkNrNaGWGhc2ZxYbRDQCwrs4ryp7EAthpRpPXK4dvTvi/image.png",
+        "imageSHA256": "d6ae85116132de2f3d2d4be09e7e120bc8e61218e05dd12a1e181e8538c6f28c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:45.823690-05:00",
+    "usage": {
+      "inputTokens": 7238,
+      "outputTokens": 908,
+      "totalTokens": 8146,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7032
+    },
+    "requestId": "cd3c98e0-a396-4523-892d-6aab5a350c3d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Dozens of red lines fall vertically from the underside of a wide, flat-topped banded form near upper center, forming a curtain that occupies most of the lower black field.\",\n    \"Inside the curtain, a compact cluster of yellow, gold, and white looping lines builds a smaller form, with tight spiral coils at roughly mid-height and a ruffled looping band below them.\",\n    \"The upper form is built from overlapping red, white, and black horizontal strokes with yellow accents, giving it a banded, layered surface clearly distinct from the loose falling lines beneath.\"\n  ],\n  \"reading\": \"Red lines drop from a wide banded canopy and enclose a smaller looping form beneath, pulling the eye from broad structure down to tight coil. The black ground makes both zones feel suspended. That containment reads as pressure — something held inside rather than displayed. The yellow spirals at center push back against the enclosure with a different density of mark.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #151 and #153 both use dense layered line on colored grounds with full-bleed compositions. #152 is the outlier: a black void with one contained structure, making surrounding emptiness part of the image rather than mere background.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u\",\n      \"reason\": \"nnotb #151 shares the yellow-and-red line palette and a stacked vertical structure, but floods the entire field with color, making #152's black void a sharp formal contrast between the two title neighbors.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmbe6MuAhhUWZeTGTxDKXocAYcM37AkjbMGjJ6Tr4KS1cN\",\n      \"reason\": \"nifty faces #44 also places tight spiral coils at roughly eye level inside a bounded form; both works share dense looping marks against a dark surround, the quality the collector links to scrimshaw line work.\"\n    }\n  ],\n  \"tags\": [\n    \"vertical falling lines\",\n    \"curtain or fringe structure\",\n    \"spiral coil forms\",\n    \"black ground\",\n    \"red and yellow line contrast\",\n    \"enclosed inner form\"\n  ],\n  \"interpretiveTags\": [\n    \"containment\",\n    \"pressure\",\n    \"suspended\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the falling red lines begin — do they originate from the edge of the upper banded form, or do some start above it — and does that change how the two zones relate to each other?\",\n  \"ambiguities\": [\n    \"The inner looping cluster reads as a figure-like form but contains no unambiguous anatomical markers; identification as a face or body is a reading, not a confirmed subject.\",\n    \"nnotb #153 uses a fully colored ground and dense overlapping marks with no structural parallel to #152's curtain device and was excluded as a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: red vertical lines do originate from the underside of the upper banded form; yellow and white spiral coils are visible inside the curtain at mid-height; black ground is confirmed throughout.\",\n    \"nnotb #151 image confirmed: full-field colored ground with yellow and red lines and stacked vertical structure — contrast with #152's black void is accurate and specific.\",\n    \"nifty faces #44 image confirmed: tight spiral coils at eye level inside a bounded form against a dark surround — collector scrimshaw-line-quality link is grounded in visible looping mark density; no invented intent added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmb4AmCH4NX7CcX8NKwHHSmf8UNyYDud68w6enCjCCD2oa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmb4AmCH4NX7CcX8NKwHHSmf8UNyYDud68w6enCjCCD2oa/image.png",
+        "imageSHA256": "f9dd545b4052dd7c9a6a3c70ec4f61e7338f4d74b727bf713913856656c2a134"
+      },
+      {
+        "artworkId": "QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u/image.png",
+        "imageSHA256": "3843dda3caf4765d8ea51c08d7ac122348b06d8a0e85b14c89f71371692ffd29"
+      },
+      {
+        "artworkId": "Qmbe6MuAhhUWZeTGTxDKXocAYcM37AkjbMGjJ6Tr4KS1cN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmbe6MuAhhUWZeTGTxDKXocAYcM37AkjbMGjJ6Tr4KS1cN/image.png",
+        "imageSHA256": "42ca5ba9fb0fd919e529b09cc3ff492d2fdf164426d828cfef3e92ce1bca5efd"
+      },
+      {
+        "artworkId": "QmUkNrNaGWGhc2ZxYbRDQCwrs4ryp7EAthpRpPXK4dvTvi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUkNrNaGWGhc2ZxYbRDQCwrs4ryp7EAthpRpPXK4dvTvi/image.png",
+        "imageSHA256": "d6ae85116132de2f3d2d4be09e7e120bc8e61218e05dd12a1e181e8538c6f28c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Dozens of red lines fall vertically from a wide, flat-topped form near the upper center, creating a curtain effect that nearly fills the lower half of the black field.\", \"Inside the curtain, a compact cluster of yellow, gold, and white looping lines forms a smaller figure-like shape, with spiral coils at roughly eye level and a ruffled band below.\", \"The upper form is built from overlapping red, white, and black horizontal strokes with yellow accents, giving it a banded, layered surface distinct from the loose lines below.\"], \"reading\": \"Red lines drop from a wide banded canopy and enclose a smaller looping form beneath it, so the eye moves from broad structure down to tight coil. The black ground makes both zones feel suspended rather than grounded. That containment reads as pressure — something held inside rather than displayed. The yellow spirals at center push back against the enclosure with a different kind of energy.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors #151 and #153 both use dense layered line on colored grounds with full-bleed compositions. #152 is the outlier: a black void with a single contained structure, making the surrounding emptiness part of the image rather than background.\", \"connections\": [{\"targetArtworkId\": \"QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u\", \"reason\": \"nnotb #151 shares the yellow-and-red line palette and a stacked vertical structure, but fills the entire field with color, making the black void in #152 a sharp formal contrast between the two title neighbors.\"}, {\"targetArtworkId\": \"Qmbe6MuAhhUWZeTGTxDKXocAYcM37AkjbMGjJ6Tr4KS1cN\", \"reason\": \"nifty faces #44 also uses tight spiral coils at roughly eye level inside a bounded form; the collector's link between scrimshaw line quality and nnxyz is visible in both works' dense looping marks against a dark surround.\"}], \"tags\": [\"vertical falling lines\", \"curtain or fringe structure\", \"spiral coil forms\", \"black ground\", \"red and yellow line contrast\", \"enclosed inner figure\"], \"interpretiveTags\": [\"containment\", \"pressure\", \"suspended\"], \"lookingQuestion\": \"Where exactly do the falling red lines begin — do they originate from the edge of the upper banded form, or do some start above it — and does that change how the two zones relate to each other?\", \"ambiguities\": [\"The inner looping cluster reads as a figure-like form but contains no unambiguous anatomical markers; identification as a face or body is a reading, not a confirmed subject.\", \"nnotb #153 (QmUkNrNaGWGhc2ZxYbRDQCwrs4ryp7EAthpRpPXK4dvTvi) uses a fully colored ground and dense overlapping marks with no structural parallel to #152's curtain device, so it was excluded as a weak match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

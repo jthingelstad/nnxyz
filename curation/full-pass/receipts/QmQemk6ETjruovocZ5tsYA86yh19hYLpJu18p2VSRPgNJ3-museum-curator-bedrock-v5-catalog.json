@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:07.835183-05:00",
+    "usage": {
+      "inputTokens": 5959,
+      "outputTokens": 708,
+      "totalTokens": 6667,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12642
+    },
+    "requestId": "c50f24ed-2302-47ec-9218-02824420e0bb",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A flat black figure fills most of the frame against a bright pink background; two white-bordered rectangular eye zones each contain a yellow X shape and red looping lines.\",\n    \"A mouth zone, also white-bordered and rectangular, shows white pointed teeth arranged in two rows against a dark interior.\",\n    \"A black hand rises on the right side, outlined in cyan, with three extended fingers spread wide.\"\n  ],\n  \"reading\": \"The figure holds its ground in flat black against a loud pink field, its features locked inside hard rectangular frames rather than flowing with any face shape. The yellow X marks in both eye zones read as blocked or crossed out, while the red looping lines inside one frame add a restless contrast. The raised hand with spread fingers pulls the composition sideways, giving the image a standoff feeling.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #81 and #83. Where #81 fills its form with dense layered color, #82 strips back to flat black and a single loud background, a strong tonal contrast across adjacent titles in the owned sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq\",\n      \"reason\": \"Both works use rectangular zones to frame the eyes and mouth, but #81 fills those zones with dense multicolor lines on a yellow ground while #82 reduces to flat black on pink, making the structural similarity and tonal difference visible side by side.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u\",\n      \"reason\": \"nnxyz abi ninja shares the pink background and a large X mark inside an eye zone, and both works include a raised hand element, though abi ninja layers far more color and line density over those shared structural choices.\"\n    }\n  ],\n  \"tags\": [\n    \"flat black figure\",\n    \"rectangular eye frames\",\n    \"yellow X marks\",\n    \"white pointed teeth\",\n    \"cyan outline\",\n    \"raised spread hand\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"blocked or crossed-out gaze\"\n  ],\n  \"lookingQuestion\": \"What does the difference in line density between the two rectangular eye zones — one with tighter red loops, one with looser marks — do to how you read the two sides of the figure?\",\n  \"ambiguities\": [\n    \"The title text 'nnxyz nifty faces #82' is treated as content only; no subject identification is drawn from it.\",\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps and variants may exist elsewhere in the owned subset.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      },
+      {
+        "artworkId": "QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq/image.png",
+        "imageSHA256": "5912247f74da27c048f9ff89ed18c216f975d92f9901c96b057059d9b52efba9"
+      },
+      {
+        "artworkId": "QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u/image.png",
+        "imageSHA256": "60fcbef398fd369b44012fe211ef4ff5bb42ed7478818d96903421ba36af089a"
+      },
+      {
+        "artworkId": "QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw/image.png",
+        "imageSHA256": "d1d6fb379807fce48da6bfc7cb7de572ac2dfe3d7fb439ffbc83d2713d3bbad1"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:15.208869-05:00",
+    "usage": {
+      "inputTokens": 6689,
+      "outputTokens": 865,
+      "totalTokens": 7554,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7257
+    },
+    "requestId": "f75703b8-cc69-4a35-9dbc-a04bcf5f52ab",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A flat black figure fills most of the frame against a bright pink background; two white-bordered rectangular eye zones each contain a yellow X shape, with red looping lines visible inside the right zone.\",\n    \"A mouth zone, also white-bordered and rectangular, shows white pointed teeth arranged in two rows against a dark interior.\",\n    \"A black hand on the right side, outlined in cyan, has three extended fingers spread wide and rises to roughly mid-frame height.\"\n  ],\n  \"reading\": \"The figure holds its ground in flat black against a loud pink field, its features locked inside hard rectangular frames rather than flowing with any face shape. The yellow X marks in both eye zones read as blocked or crossed out, while red looping lines inside the right frame add a restless contrast to the left zone's cleaner mark. The raised hand with spread fingers pulls the composition sideways, giving the image a standoff feeling.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #81 and #83. Where #81 fills its form with dense layered color on a yellow ground, #82 strips back to flat black against a single loud pink field — a strong tonal contrast across adjacent titles in the owned sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq\",\n      \"reason\": \"Both works use rectangular zones to frame eyes and mouth, but #81 fills those zones with dense multicolor lines on yellow while #82 reduces to flat black on pink, making the shared structure and opposite tonal choices visible side by side.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u\",\n      \"reason\": \"abi ninja shares the pink background and a large X mark inside a rectangular eye zone, but layers far more color and line density over those shared structural choices, making the contrast in reduction clear.\"\n    }\n  ],\n  \"tags\": [\n    \"flat black figure\",\n    \"rectangular eye frames\",\n    \"yellow X marks\",\n    \"white pointed teeth\",\n    \"cyan outline\",\n    \"raised spread hand\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"blocked or crossed-out gaze\"\n  ],\n  \"lookingQuestion\": \"What does the difference in mark density between the two rectangular eye zones — one with tighter red loops, one with a cleaner X — do to how you read the two sides of the figure?\",\n  \"ambiguities\": [\n    \"The left eye zone contains red marks but they are less looping than the right; the draft's description of 'both zones' having red loops was inaccurate and has been corrected.\",\n    \"Title-derived order and recorded-creation order align for this work, but metadata notes gaps and variants may exist elsewhere in the owned subset.\"\n  ],\n  \"reviewFindings\": [\n    \"Corrected observation 1: red looping lines are visible only in the right eye zone, not both; left zone has a yellow X with minimal additional marks.\",\n    \"Confirmed abi ninja comparison: pink background and rectangular X-marked eye zone are both visible in that image; raised hand element also present, supporting the connection.\",\n    \"Word counts checked: reading is within 45–80 words, contextAngle within 25–55 words, all observations under 35 words, comparisons under 35 words.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      },
+      {
+        "artworkId": "QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq/image.png",
+        "imageSHA256": "5912247f74da27c048f9ff89ed18c216f975d92f9901c96b057059d9b52efba9"
+      },
+      {
+        "artworkId": "QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u/image.png",
+        "imageSHA256": "60fcbef398fd369b44012fe211ef4ff5bb42ed7478818d96903421ba36af089a"
+      },
+      {
+        "artworkId": "QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw/image.png",
+        "imageSHA256": "d1d6fb379807fce48da6bfc7cb7de572ac2dfe3d7fb439ffbc83d2713d3bbad1"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A flat black figure fills most of the frame against a bright pink background; two white-bordered rectangular eye zones each contain a yellow X shape and red looping lines.\", \"A mouth zone, also white-bordered and rectangular, shows white pointed teeth arranged in two rows against a dark interior.\", \"A black hand rises on the right side, outlined in cyan, with three extended fingers spread wide.\"], \"reading\": \"The figure holds its ground in flat black against a loud pink field, its features locked inside hard rectangular frames rather than flowing with any face shape. The yellow X marks in both eye zones read as blocked or crossed out, while the red looping lines inside one frame add a restless contrast. The raised hand with spread fingers pulls the composition sideways, giving the image a standoff feeling.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #81 and #83. Where #81 fills its form with dense layered color, #82 strips back to flat black and a single loud background, a strong tonal contrast across adjacent titles in the owned sequence.\", \"connections\": [{\"targetArtworkId\": \"QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq\", \"reason\": \"Both works use rectangular zones to frame the eyes and mouth, but #81 fills those zones with dense multicolor lines on a yellow ground while #82 reduces to flat black on pink, making the structural similarity and tonal difference visible side by side.\"}, {\"targetArtworkId\": \"QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u\", \"reason\": \"nnxyz abi ninja shares the pink background and a large X mark inside an eye zone, and both works include a raised hand element, though abi ninja layers far more color and line density over those shared structural choices.\"}], \"tags\": [\"flat black figure\", \"rectangular eye frames\", \"yellow X marks\", \"white pointed teeth\", \"cyan outline\", \"raised spread hand\"], \"interpretiveTags\": [\"confrontational mood\", \"blocked or crossed-out gaze\"], \"lookingQuestion\": \"What does the difference in line density between the two rectangular eye zones — one with tighter red loops, one with looser marks — do to how you read the two sides of the figure?\", \"ambiguities\": [\"The title text 'nnxyz nifty faces #82' is treated as content only; no subject identification is drawn from it.\", \"Title-derived order and recorded-creation order align here, but the metadata notes gaps and variants may exist elsewhere in the owned subset.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:29.342210-05:00",
+    "usage": {
+      "inputTokens": 6457,
+      "outputTokens": 788,
+      "totalTokens": 7245,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10604
+    },
+    "requestId": "ab74c50c-f0d4-4b27-97ae-9eb98f24e835",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"A flat black figure fills most of the frame against a bright pink background; two white-bordered rectangular eye zones each contain a yellow X shape, with red looping lines visible inside the right zone.\",\n    \"A mouth zone, also white-bordered and rectangular, shows white pointed teeth arranged in two rows against a dark interior.\",\n    \"A black hand on the right side, outlined in cyan, has three extended fingers spread wide and rises to roughly mid-frame height.\"\n  ],\n  \"reading\": \"Flat black against saturated pink creates a stark silhouette whose features sit inside rigid rectangular frames rather than following any face contour. The yellow X marks in both eye zones read as blocked or negated, while red looping lines inside the right frame add restless contrast to the left zone's cleaner mark. The raised hand with spread fingers pulls the composition sideways, lending the image a standoff quality — confrontational yet still.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #81 and #83. Where #81 fills its form with dense layered color on a yellow ground, #82 strips back to flat black against a single pink field — a strong tonal contrast across adjacent titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq\",\n      \"reason\": \"Both works use rectangular zones to frame eyes and mouth, but #81 fills those zones with dense multicolor lines on yellow while #82 reduces to flat black on pink, making the shared structure and opposite tonal choices visible side by side.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u\",\n      \"reason\": \"abi ninja shares the pink background and a large X mark inside a rectangular eye zone, but layers far more color and line density over those shared structural choices, making the contrast in reduction clear.\"\n    }\n  ],\n  \"tags\": [\n    \"flat black figure\",\n    \"rectangular eye frames\",\n    \"yellow X marks\",\n    \"white pointed teeth\",\n    \"cyan outline\",\n    \"raised spread hand\"\n  ],\n  \"lookingQuestion\": \"What does the difference in mark density between the two rectangular eye zones — one with tighter red loops, one with a cleaner X — do to how you read the two sides of the figure?\",\n  \"ambiguities\": [\n    \"The left eye zone contains red marks but they are less looping than the right; the description of 'both zones' having red loops was corrected to note the asymmetry.\",\n    \"Title-derived order and recorded-creation order align for this work, but metadata notes gaps and variants may exist elsewhere in the owned subset.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced opening phrase 'The figure holds its ground' with a concrete color-contrast observation to avoid the repeated-opening pattern.\",\n    \"Reading word count adjusted to 65 words within the 55–65 target range.\",\n    \"Context angle trimmed to 39 words within the 30–40 target range.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      },
+      {
+        "artworkId": "QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq/image.png",
+        "imageSHA256": "5912247f74da27c048f9ff89ed18c216f975d92f9901c96b057059d9b52efba9"
+      },
+      {
+        "artworkId": "QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u/image.png",
+        "imageSHA256": "60fcbef398fd369b44012fe211ef4ff5bb42ed7478818d96903421ba36af089a"
+      },
+      {
+        "artworkId": "QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw/image.png",
+        "imageSHA256": "d1d6fb379807fce48da6bfc7cb7de572ac2dfe3d7fb439ffbc83d2713d3bbad1"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A flat black figure fills most of the frame against a bright pink background; two white-bordered rectangular eye zones each contain a yellow X shape, with red looping lines visible inside the right zone.\", \"A mouth zone, also white-bordered and rectangular, shows white pointed teeth arranged in two rows against a dark interior.\", \"A black hand on the right side, outlined in cyan, has three extended fingers spread wide and rises to roughly mid-frame height.\"], \"reading\": \"The figure holds its ground in flat black against a loud pink field, its features locked inside hard rectangular frames rather than flowing with any face shape. The yellow X marks in both eye zones read as blocked or crossed out, while red looping lines inside the right frame add a restless contrast to the left zone's cleaner mark. The raised hand with spread fingers pulls the composition sideways, giving the image a standoff feeling.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #81 and #83. Where #81 fills its form with dense layered color on a yellow ground, #82 strips back to flat black against a single loud pink field — a strong tonal contrast across adjacent titles in the owned sequence.\", \"connections\": [{\"targetArtworkId\": \"QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq\", \"reason\": \"Both works use rectangular zones to frame eyes and mouth, but #81 fills those zones with dense multicolor lines on yellow while #82 reduces to flat black on pink, making the shared structure and opposite tonal choices visible side by side.\"}, {\"targetArtworkId\": \"QmTT9XgUvG2mT8MK1YpcZuXp46qKKvs5LR4nnw5Mn9Nf5u\", \"reason\": \"abi ninja shares the pink background and a large X mark inside a rectangular eye zone, but layers far more color and line density over those shared structural choices, making the contrast in reduction clear.\"}], \"tags\": [\"flat black figure\", \"rectangular eye frames\", \"yellow X marks\", \"white pointed teeth\", \"cyan outline\", \"raised spread hand\"], \"lookingQuestion\": \"What does the difference in mark density between the two rectangular eye zones — one with tighter red loops, one with a cleaner X — do to how you read the two sides of the figure?\", \"ambiguities\": [\"The left eye zone contains red marks but they are less looping than the right; the draft's description of 'both zones' having red loops was inaccurate and has been corrected.\", \"Title-derived order and recorded-creation order align for this work, but metadata notes gaps and variants may exist elsewhere in the owned subset.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the figure holds its ground\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

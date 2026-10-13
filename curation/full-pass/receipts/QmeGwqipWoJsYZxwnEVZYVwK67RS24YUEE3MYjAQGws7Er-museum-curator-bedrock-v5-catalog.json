@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:33.226506-05:00",
+    "usage": {
+      "inputTokens": 6202,
+      "outputTokens": 759,
+      "totalTokens": 6961,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11998
+    },
+    "requestId": "7c88c5e3-1ba6-40c5-be79-2bc7b465400a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark-green arched form dominates the upper center, outlined in deep red, with concentric white circles and a star-like red shape nested inside it against a blue field.\",\n    \"A horizontal band of dense black-and-white zigzag lines cuts across the lower middle, flanked by parallel pink zigzag lines, creating a strong visual break between upper and lower zones.\",\n    \"The lower-left corner holds stacked horizontal blue wave lines on a light ground, while loose yellow, green, and red vertical strokes fill the left edge, producing a patchwork of distinct color zones.\"\n  ],\n  \"reading\": \"The image splits into competing zones — an arched dark mass above, a jagged band across the middle, scattered color patches below — that resist settling into a single read. The concentric circles inside the arch pull the eye inward while the zigzag band pushes it sideways. The overall feeling is crowded tension rather than resolution, with no zone clearly winning the viewer's attention.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #149 and nnxyz nnotb #151 share the zigzag band motif and nested spiral forms, suggesting these marks recur across this part of the collection. Title order and recorded creation order align here, though gaps exist elsewhere in the owned set.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXVPUVacusFka4ZrTytQDF9JESziNbyxFKCyoXF3S1w8k\",\n      \"reason\": \"nnxyz nnotb #149 shares the horizontal zigzag band across its lower half and uses nested circular forms at similar scale, making the motif visible across both works in the owned nnotb subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u\",\n      \"reason\": \"nnxyz nnotb #151 repeats the paired concentric-spiral forms and a zigzag band in roughly the same vertical position, offering a direct before-and-after look at how these marks shift across title neighbors.\"\n    }\n  ],\n  \"tags\": [\n    \"arched form\",\n    \"concentric circles\",\n    \"zigzag band\",\n    \"color zone patchwork\",\n    \"nested star shape\",\n    \"stacked wave lines\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded tension\",\n    \"fragmented space\"\n  ],\n  \"lookingQuestion\": \"Where does your eye land first — inside the concentric circles, along the zigzag band, or in one of the color patches at the edges — and what keeps it from staying there?\",\n  \"ambiguities\": [\n    \"The arched dark-green form and the shapes within it could be read as a constructed object or as an abstract arrangement; no supplied evidence resolves this.\",\n    \"The nifty-faces #73 comparison image shows a very different palette and spatial approach with no shared motifs visible on inspection, so it was excluded as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeGwqipWoJsYZxwnEVZYVwK67RS24YUEE3MYjAQGws7Er",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeGwqipWoJsYZxwnEVZYVwK67RS24YUEE3MYjAQGws7Er/image.png",
+        "imageSHA256": "a57bb9d3d364ef063ca8c740e7f572da4ee0da3b0e500eede6e1334fe45c9e5e"
+      },
+      {
+        "artworkId": "QmXVPUVacusFka4ZrTytQDF9JESziNbyxFKCyoXF3S1w8k",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXVPUVacusFka4ZrTytQDF9JESziNbyxFKCyoXF3S1w8k/image.png",
+        "imageSHA256": "171482f58d8732518e157349e3f529800817e3ff52ecabb80f5eb3544beebb01"
+      },
+      {
+        "artworkId": "Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib/image.png",
+        "imageSHA256": "16322745b72186c499d967540e0eaa0274f496da4150183bb5f6a98f0218106b"
+      },
+      {
+        "artworkId": "QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u/image.png",
+        "imageSHA256": "3843dda3caf4765d8ea51c08d7ac122348b06d8a0e85b14c89f71371692ffd29"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:40.080046-05:00",
+    "usage": {
+      "inputTokens": 6983,
+      "outputTokens": 922,
+      "totalTokens": 7905,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6789
+    },
+    "requestId": "db7a321f-5797-43d2-8e5e-ec2853fe867a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark-green arched form dominates the upper center, outlined in deep red, with concentric white circles and a star-like red shape nested inside it against a blue field.\",\n    \"A horizontal band of dense black-and-white zigzag lines cuts across the lower middle, flanked by parallel pink zigzag lines, creating a strong visual break between upper and lower zones.\",\n    \"The lower-left corner holds stacked horizontal blue wave lines on a light ground, while loose yellow, green, and red vertical strokes fill the left edge, producing a patchwork of distinct color zones.\"\n  ],\n  \"reading\": \"The image splits into competing zones — a large arched dark mass above, a jagged band across the middle, scattered color patches below — that resist settling into a single read. The concentric circles inside the arch pull the eye inward while the zigzag band pushes it sideways. The overall feeling is crowded tension rather than resolution, with no zone clearly holding the viewer's attention.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #149 and nnxyz nnotb #151 share the zigzag band motif and nested spiral forms, suggesting these marks recur across this part of the collection. Title order and recorded creation order align for these three works, though gaps exist elsewhere in the owned set.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXVPUVacusFka4ZrTytQDF9JESziNbyxFKCyoXF3S1w8k\",\n      \"reason\": \"nnxyz nnotb #149 shows a horizontal zigzag band across its lower half and nested circular forms at similar scale, making the motif directly comparable across both works in the owned nnotb subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u\",\n      \"reason\": \"nnxyz nnotb #151 repeats paired concentric-spiral forms and a zigzag band in roughly the same vertical position, offering a close look at how these marks shift across title neighbors.\"\n    }\n  ],\n  \"tags\": [\n    \"arched form\",\n    \"concentric circles\",\n    \"zigzag band\",\n    \"color zone patchwork\",\n    \"nested star shape\",\n    \"stacked wave lines\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded tension\",\n    \"fragmented space\"\n  ],\n  \"lookingQuestion\": \"Where does your eye land first — inside the concentric circles, along the zigzag band, or in one of the color patches at the edges — and what keeps it from staying there?\",\n  \"ambiguities\": [\n    \"The arched dark-green form and the shapes within it could be read as a constructed object or as an abstract arrangement; no supplied evidence resolves this.\",\n    \"nnxyz nifty faces #73 shows a very different palette and spatial approach with no shared motifs visible on inspection and was excluded as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: arched green form with red outline and concentric circles verified upper center; zigzag band with pink flanking lines verified mid-image; stacked blue waves lower-left and vertical color strokes left edge verified.\",\n    \"Reading revised one phrase ('clearly winning' changed to 'holding') to avoid implied contest framing; all other claims remain grounded in visible observations with no invented subject identity or intent added.\",\n    \"Both comparison connections confirmed against inspected images: #149 zigzag band and nested circles visible; #151 paired concentric spirals and zigzag band visible; nifty faces #73 correctly excluded as no shared motifs found on inspection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeGwqipWoJsYZxwnEVZYVwK67RS24YUEE3MYjAQGws7Er",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeGwqipWoJsYZxwnEVZYVwK67RS24YUEE3MYjAQGws7Er/image.png",
+        "imageSHA256": "a57bb9d3d364ef063ca8c740e7f572da4ee0da3b0e500eede6e1334fe45c9e5e"
+      },
+      {
+        "artworkId": "QmXVPUVacusFka4ZrTytQDF9JESziNbyxFKCyoXF3S1w8k",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXVPUVacusFka4ZrTytQDF9JESziNbyxFKCyoXF3S1w8k/image.png",
+        "imageSHA256": "171482f58d8732518e157349e3f529800817e3ff52ecabb80f5eb3544beebb01"
+      },
+      {
+        "artworkId": "Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib/image.png",
+        "imageSHA256": "16322745b72186c499d967540e0eaa0274f496da4150183bb5f6a98f0218106b"
+      },
+      {
+        "artworkId": "QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u/image.png",
+        "imageSHA256": "3843dda3caf4765d8ea51c08d7ac122348b06d8a0e85b14c89f71371692ffd29"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large dark-green arched form dominates the upper center, outlined in deep red, with concentric white circles and a star-like red shape nested inside it against a blue field.\", \"A horizontal band of dense black-and-white zigzag lines cuts across the lower middle, flanked by parallel pink zigzag lines, creating a strong visual break between upper and lower zones.\", \"The lower-left corner holds stacked horizontal blue wave lines on a light ground, while loose yellow, green, and red vertical strokes fill the left edge, producing a patchwork of distinct color zones.\"], \"reading\": \"The image splits into competing zones — an arched dark mass above, a jagged band across the middle, scattered color patches below — that resist settling into a single read. The concentric circles inside the arch pull the eye inward while the zigzag band pushes it sideways. The overall feeling is crowded tension rather than resolution, with no zone clearly winning the viewer's attention.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #149 and nnxyz nnotb #151 share the zigzag band motif and nested spiral forms, suggesting these marks recur across this part of the collection. Title order and recorded creation order align here, though gaps exist elsewhere in the owned set.\", \"connections\": [{\"targetArtworkId\": \"QmXVPUVacusFka4ZrTytQDF9JESziNbyxFKCyoXF3S1w8k\", \"reason\": \"nnxyz nnotb #149 shares the horizontal zigzag band across its lower half and uses nested circular forms at similar scale, making the motif visible across both works in the owned nnotb subset.\"}, {\"targetArtworkId\": \"QmNnLFK4YikDLfSsDh2ztVeeAfcGJUm2vhptySDu36F93u\", \"reason\": \"nnxyz nnotb #151 repeats the paired concentric-spiral forms and a zigzag band in roughly the same vertical position, offering a direct before-and-after look at how these marks shift across title neighbors.\"}], \"tags\": [\"arched form\", \"concentric circles\", \"zigzag band\", \"color zone patchwork\", \"nested star shape\", \"stacked wave lines\"], \"interpretiveTags\": [\"crowded tension\", \"fragmented space\"], \"lookingQuestion\": \"Where does your eye land first — inside the concentric circles, along the zigzag band, or in one of the color patches at the edges — and what keeps it from staying there?\", \"ambiguities\": [\"The arched dark-green form and the shapes within it could be read as a constructed object or as an abstract arrangement; no supplied evidence resolves this.\", \"The nifty-faces #73 comparison image shows a very different palette and spatial approach with no shared motifs visible on inspection, so it was excluded as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

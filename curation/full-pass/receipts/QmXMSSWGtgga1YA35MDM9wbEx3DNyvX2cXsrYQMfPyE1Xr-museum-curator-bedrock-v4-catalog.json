@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v4",
+    "timeCentral": "2026-10-13T09:46:28.955898-05:00",
+    "usage": {
+      "inputTokens": 6537,
+      "outputTokens": 771,
+      "totalTokens": 7308,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13106
+    },
+    "requestId": "4d1ecc62-8d73-4949-b7c8-db8e14e12865",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pair of rectangular eyeglass frames, drawn in white and black lines, sits across the middle of the image and anchors the face structure beneath a dense tangle of yellow, red, and green marks at the top.\",\n    \"The mouth area is built from overlapping red, black, and yellow lines that splay open toward the lower center, with white lines suggesting teeth against a dark interior.\",\n    \"Loose black scribble loops extend beyond the face edges at upper right and lower left, while a purple-grey field occupies the left background and yellow dominates the right, creating an uneven color split behind the figure.\"\n  ],\n  \"reading\": \"The eyeglass frames are the one calm horizontal in an otherwise restless surface—everything above and below them breaks into competing marks. Red and yellow lines push forward while the purple-grey background recedes, giving the face an unsettled, forward-leaning feeling. The open mouth reads as loud or urgent rather than simply expressive. Scribble loops that escape the face boundary suggest the energy here is not fully contained.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors 'nnxyz nifty faces #1' and 'nnxyz nifty faces #3.' Title order and recorded creation order align for these three. The collector links the layered line patterns here to the scrimshaw interest noted across the collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H\",\n      \"reason\": \"Both works center a face with a wide-open mouth and visible teeth built from white lines, but #1 uses a cool green-dominant palette with teal eye details, while #2 shifts to warm yellow-red with the added specificity of eyeglass frames.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaB3cyBxnm8syhiEHSh599MGbdBpnbHVmnpmY86cFa5s3\",\n      \"reason\": \"In #3 a single eye is ringed by tight concentric lines that create a focal point of stillness, a contrast to #2 where the eyeglass frames perform a similar anchoring role but through a horizontal geometric shape rather than a spiral.\"\n    }\n  ],\n  \"tags\": [\n    \"eyeglass frames\",\n    \"open mouth\",\n    \"layered line scribble\",\n    \"yellow-red warm field\",\n    \"purple-grey background split\",\n    \"loose border loops\"\n  ],\n  \"interpretiveTags\": [\n    \"urgent\",\n    \"contained energy\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the eyeglass frames begin and end, and what lines underneath them are doing the work of describing the nose and cheeks?\",\n  \"ambiguities\": [\n    \"The dense mark layering makes it unclear whether some colored areas are filled shapes or accumulated overlapping strokes.\",\n    \"The nnotb #44 comparison image shows no face structure or shared formal element with this work; it was inspected and excluded as no useful connection was found.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXMSSWGtgga1YA35MDM9wbEx3DNyvX2cXsrYQMfPyE1Xr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMSSWGtgga1YA35MDM9wbEx3DNyvX2cXsrYQMfPyE1Xr/image.png",
+        "imageSHA256": "db3c037aeb3e4d89c775349e8f1af4a5e33bf9634ee8418184232db9638925fe"
+      },
+      {
+        "artworkId": "QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H/image.png",
+        "imageSHA256": "889cb733bdc7e17d929e83a4dcc2e339bc8fd3b8ee1e86afb2dadb5e7779584e"
+      },
+      {
+        "artworkId": "QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7/image.png",
+        "imageSHA256": "76a270058058b364793dec7d644f35871484b9a91718331ed10c1a5f53634e8c"
+      },
+      {
+        "artworkId": "QmaB3cyBxnm8syhiEHSh599MGbdBpnbHVmnpmY86cFa5s3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaB3cyBxnm8syhiEHSh599MGbdBpnbHVmnpmY86cFa5s3/image.png",
+        "imageSHA256": "0555f79c058caaaefefe267cc4e6a465d01ed9406003b82be8a0e81e6d08d038"
+      }
+    ],
+    "systemPromptSHA256": "8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now.",
+    "systemPromptPath": "curation/full-pass/prompts/8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v4",
+    "timeCentral": "2026-10-13T09:46:37.235572-05:00",
+    "usage": {
+      "inputTokens": 7318,
+      "outputTokens": 876,
+      "totalTokens": 8194,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 8124
+    },
+    "requestId": "d1e97879-c3e3-46f3-a791-ebf2872b5849",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pair of rectangular eyeglass frames drawn in white and black lines sits horizontally across the middle of the image, forming the clearest geometric anchor in an otherwise dense tangle of marks.\",\n    \"The mouth area is built from overlapping red, black, and yellow lines that splay open toward the lower center, with white lines suggesting teeth against a dark interior.\",\n    \"Loose black scribble loops extend beyond the face edges at upper right and lower left, while a purple-grey field occupies the left background and yellow dominates the right, creating an uneven color split behind the figure.\"\n  ],\n  \"reading\": \"The eyeglass frames are the one steady horizontal in an otherwise restless surface—everything above and below them breaks into competing marks. Red and yellow lines push forward while the purple-grey background recedes, giving the face a forward-leaning feeling. The open mouth reads as loud or urgent. Scribble loops that escape the face boundary suggest the energy here is not fully contained.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors 'nnxyz nifty faces #1' and 'nnxyz nifty faces #3'; title order and recorded creation order align for these three. The collector links the layered line patterns here to the scrimshaw interest noted across the collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H\",\n      \"reason\": \"Both works center a face with a wide-open mouth and white lines suggesting teeth, but #1 uses a cool green-dominant palette with teal eye details, while #2 shifts to warm yellow-red and adds the horizontal specificity of eyeglass frames.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaB3cyBxnm8syhiEHSh599MGbdBpnbHVmnpmY86cFa5s3\",\n      \"reason\": \"In #3 a single eye is ringed by tight concentric lines that create a focal point of stillness; in #2 the eyeglass frames perform a similar anchoring role but through a horizontal geometric shape rather than a spiral.\"\n    }\n  ],\n  \"tags\": [\n    \"eyeglass frames\",\n    \"open mouth\",\n    \"layered line scribble\",\n    \"yellow-red warm field\",\n    \"purple-grey background split\",\n    \"loose border loops\"\n  ],\n  \"interpretiveTags\": [\"urgent\", \"contained energy\"],\n  \"lookingQuestion\": \"Where exactly do the eyeglass frames begin and end, and what lines beneath them are doing the work of describing the nose and cheeks?\",\n  \"ambiguities\": [\n    \"The dense mark layering makes it unclear whether some colored areas are filled shapes or accumulated overlapping strokes.\",\n    \"The nnotb #44 comparison image shows no face structure or shared formal element with this work and was excluded; no useful connection was found.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: eyeglass frames, open-mouth construction, and purple-grey left / yellow right background split are all directly visible.\",\n    \"The nnotb #44 image was inspected and correctly excluded from connections; its soft bokeh background and upright organic forms share no meaningful formal element with the face structure here.\",\n    \"Word counts checked: reading is within 45–80 words; contextAngle is within 25–55 words; no numerical technical facts, CIDs, or ordinal positions appear in public prose fields.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXMSSWGtgga1YA35MDM9wbEx3DNyvX2cXsrYQMfPyE1Xr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMSSWGtgga1YA35MDM9wbEx3DNyvX2cXsrYQMfPyE1Xr/image.png",
+        "imageSHA256": "db3c037aeb3e4d89c775349e8f1af4a5e33bf9634ee8418184232db9638925fe"
+      },
+      {
+        "artworkId": "QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H/image.png",
+        "imageSHA256": "889cb733bdc7e17d929e83a4dcc2e339bc8fd3b8ee1e86afb2dadb5e7779584e"
+      },
+      {
+        "artworkId": "QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7/image.png",
+        "imageSHA256": "76a270058058b364793dec7d644f35871484b9a91718331ed10c1a5f53634e8c"
+      },
+      {
+        "artworkId": "QmaB3cyBxnm8syhiEHSh599MGbdBpnbHVmnpmY86cFa5s3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaB3cyBxnm8syhiEHSh599MGbdBpnbHVmnpmY86cFa5s3/image.png",
+        "imageSHA256": "0555f79c058caaaefefe267cc4e6a465d01ed9406003b82be8a0e81e6d08d038"
+      }
+    ],
+    "systemPromptSHA256": "8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A pair of rectangular eyeglass frames, drawn in white and black lines, sits across the middle of the image and anchors the face structure beneath a dense tangle of yellow, red, and green marks at the top.\", \"The mouth area is built from overlapping red, black, and yellow lines that splay open toward the lower center, with white lines suggesting teeth against a dark interior.\", \"Loose black scribble loops extend beyond the face edges at upper right and lower left, while a purple-grey field occupies the left background and yellow dominates the right, creating an uneven color split behind the figure.\"], \"reading\": \"The eyeglass frames are the one calm horizontal in an otherwise restless surface—everything above and below them breaks into competing marks. Red and yellow lines push forward while the purple-grey background recedes, giving the face an unsettled, forward-leaning feeling. The open mouth reads as loud or urgent rather than simply expressive. Scribble loops that escape the face boundary suggest the energy here is not fully contained.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors 'nnxyz nifty faces #1' and 'nnxyz nifty faces #3.' Title order and recorded creation order align for these three. The collector links the layered line patterns here to the scrimshaw interest noted across the collection.\", \"connections\": [{\"targetArtworkId\": \"QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H\", \"reason\": \"Both works center a face with a wide-open mouth and visible teeth built from white lines, but #1 uses a cool green-dominant palette with teal eye details, while #2 shifts to warm yellow-red with the added specificity of eyeglass frames.\"}, {\"targetArtworkId\": \"QmaB3cyBxnm8syhiEHSh599MGbdBpnbHVmnpmY86cFa5s3\", \"reason\": \"In #3 a single eye is ringed by tight concentric lines that create a focal point of stillness, a contrast to #2 where the eyeglass frames perform a similar anchoring role but through a horizontal geometric shape rather than a spiral.\"}], \"tags\": [\"eyeglass frames\", \"open mouth\", \"layered line scribble\", \"yellow-red warm field\", \"purple-grey background split\", \"loose border loops\"], \"interpretiveTags\": [\"urgent\", \"contained energy\"], \"lookingQuestion\": \"Where exactly do the eyeglass frames begin and end, and what lines underneath them are doing the work of describing the nose and cheeks?\", \"ambiguities\": [\"The dense mark layering makes it unclear whether some colored areas are filled shapes or accumulated overlapping strokes.\", \"The nnotb #44 comparison image shows no face structure or shared formal element with this work; it was inspected and excluded as no useful connection was found.\"]}",
+    "systemPromptPath": "curation/full-pass/prompts/8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:28.945054-05:00",
+    "usage": {
+      "inputTokens": 7159,
+      "outputTokens": 860,
+      "totalTokens": 8019,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5992
+    },
+    "requestId": "52b60884-5f35-4443-976e-78c7390f0b49",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pair of rectangular eyeglass frames drawn in white and black lines sits horizontally across the middle of the image, forming the clearest geometric anchor in an otherwise dense tangle of marks.\",\n    \"The mouth area is built from overlapping red, black, and yellow lines that splay outward toward the lower center, with a row of white lines suggesting teeth against a darker interior gap.\",\n    \"Loose black scribble loops extend beyond the face edges at upper right and lower left, while a purple-grey field occupies the left background and yellow dominates the right, creating an uneven color split behind the figure.\"\n  ],\n  \"reading\": \"The eyeglass frames are the one steady horizontal in an otherwise restless surface—everything above and below them breaks into competing marks. Red and yellow lines push forward while the purple-grey background recedes, giving the face a forward-leaning feeling. The tooth row and dark interior gap at the mouth read as loud or urgent. Scribble loops that escape the face boundary suggest the energy here is not fully contained.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors 'nnxyz nifty faces #1' and 'nnxyz nifty faces #3'; title order and recorded creation order align for these three. The collector links the layered line patterns here to the scrimshaw interest noted across the collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H\",\n      \"reason\": \"Both works center a face with a visible tooth row and dark interior gap at the mouth, but #1 uses a cool green-dominant palette with teal eye details, while #2 shifts to warm yellow-red and adds the horizontal specificity of eyeglass frames.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaB3cyBxnm8syhiEHSh599MGbdBpnbHVmnpmY86cFa5s3\",\n      \"reason\": \"In #3 a single eye is ringed by tight concentric lines that create a focal point of stillness; in #2 the eyeglass frames perform a similar anchoring role but through a horizontal geometric shape rather than a spiral.\"\n    }\n  ],\n  \"tags\": [\"eyeglass frames\", \"tooth row\", \"layered line scribble\", \"yellow-red warm field\", \"purple-grey background split\", \"loose border loops\"],\n  \"lookingQuestion\": \"Where exactly do the eyeglass frames begin and end, and what lines beneath them are doing the work of describing the nose and cheeks?\",\n  \"ambiguities\": [\n    \"The dense mark layering makes it unclear whether some colored areas are filled shapes or accumulated overlapping strokes.\",\n    \"The nnotb #44 comparison image shows no face structure or shared formal element with this work and was excluded; no useful connection was found.\"\n  ],\n  \"reviewFindings\": [\n    \"mouth-openness-check resolved: 'wide-open' removed; claim now rests on the visible tooth row and dark interior gap, not an assertion of degree of openness.\",\n    \"Reading reworded to reference the tooth row and dark interior gap directly rather than characterizing the mouth as wide-open.\",\n    \"Connection reason for QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H updated to match the same specific evidence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXMSSWGtgga1YA35MDM9wbEx3DNyvX2cXsrYQMfPyE1Xr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMSSWGtgga1YA35MDM9wbEx3DNyvX2cXsrYQMfPyE1Xr/image.png",
+        "imageSHA256": "db3c037aeb3e4d89c775349e8f1af4a5e33bf9634ee8418184232db9638925fe"
+      },
+      {
+        "artworkId": "QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H/image.png",
+        "imageSHA256": "889cb733bdc7e17d929e83a4dcc2e339bc8fd3b8ee1e86afb2dadb5e7779584e"
+      },
+      {
+        "artworkId": "QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7/image.png",
+        "imageSHA256": "76a270058058b364793dec7d644f35871484b9a91718331ed10c1a5f53634e8c"
+      },
+      {
+        "artworkId": "QmaB3cyBxnm8syhiEHSh599MGbdBpnbHVmnpmY86cFa5s3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaB3cyBxnm8syhiEHSh599MGbdBpnbHVmnpmY86cFa5s3/image.png",
+        "imageSHA256": "0555f79c058caaaefefe267cc4e6a465d01ed9406003b82be8a0e81e6d08d038"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A pair of rectangular eyeglass frames drawn in white and black lines sits horizontally across the middle of the image, forming the clearest geometric anchor in an otherwise dense tangle of marks.\", \"The mouth area is built from overlapping red, black, and yellow lines that splay open toward the lower center, with white lines suggesting teeth against a dark interior.\", \"Loose black scribble loops extend beyond the face edges at upper right and lower left, while a purple-grey field occupies the left background and yellow dominates the right, creating an uneven color split behind the figure.\"], \"reading\": \"The eyeglass frames are the one steady horizontal in an otherwise restless surface—everything above and below them breaks into competing marks. Red and yellow lines push forward while the purple-grey background recedes, giving the face a forward-leaning feeling. The open mouth reads as loud or urgent. Scribble loops that escape the face boundary suggest the energy here is not fully contained.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors 'nnxyz nifty faces #1' and 'nnxyz nifty faces #3'; title order and recorded creation order align for these three. The collector links the layered line patterns here to the scrimshaw interest noted across the collection.\", \"connections\": [{\"targetArtworkId\": \"QmQfFLRZRsfH2txa3e9uUNFCd8FeHWPPLhFBYQkuNQ1d9H\", \"reason\": \"Both works center a face with a wide-open mouth and white lines suggesting teeth, but #1 uses a cool green-dominant palette with teal eye details, while #2 shifts to warm yellow-red and adds the horizontal specificity of eyeglass frames.\"}, {\"targetArtworkId\": \"QmaB3cyBxnm8syhiEHSh599MGbdBpnbHVmnpmY86cFa5s3\", \"reason\": \"In #3 a single eye is ringed by tight concentric lines that create a focal point of stillness; in #2 the eyeglass frames perform a similar anchoring role but through a horizontal geometric shape rather than a spiral.\"}], \"tags\": [\"eyeglass frames\", \"open mouth\", \"layered line scribble\", \"yellow-red warm field\", \"purple-grey background split\", \"loose border loops\"], \"lookingQuestion\": \"Where exactly do the eyeglass frames begin and end, and what lines beneath them are doing the work of describing the nose and cheeks?\", \"ambiguities\": [\"The dense mark layering makes it unclear whether some colored areas are filled shapes or accumulated overlapping strokes.\", \"The nnotb #44 comparison image shows no face structure or shared formal element with this work and was excluded; no useful connection was found.\"]}\nFLAGS:\n[{\"artworkId\": \"QmXMSSWGtgga1YA35MDM9wbEx3DNyvX2cXsrYQMfPyE1Xr\", \"field\": \"connections\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

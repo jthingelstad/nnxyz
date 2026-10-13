@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:09.237668-05:00",
+    "usage": {
+      "inputTokens": 6291,
+      "outputTokens": 725,
+      "totalTokens": 7016,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12155
+    },
+    "requestId": "8c1ad0aa-7096-4f72-8a63-4f3a12740a25",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Three tall dark columns dominate the center, their edges outlined in white with black drips running downward; gold-ochre and deep purple fill the interior planes.\",\n    \"On the left, a loose tangle of cyan lines and two small red marks sit against a black mass that bleeds downward off the composition.\",\n    \"Lower right holds a smaller angular form with a red cross mark and open jagged lines suggesting teeth or spines, set against the warm peach-lavender background wash.\"\n  ],\n  \"reading\": \"Three columnar forms press upward, their dripping black edges giving weight to what might otherwise read as abstract slabs. The red marks on left and right act as small alarms inside a mostly cool-and-gold palette. A pale lavender wash behind everything softens the image just enough to hold the tension between the heavy central mass and the looser, more fragmented forms at the edges.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #82 and nnxyz nifty faces #84 in both title order and recorded creation order. Where #82 uses flat black against saturated pink and #84 works in dense olive scribble, #83 opens the palette to ochre and lavender with drip-heavy outlines.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE\",\n      \"reason\": \"Both works use white outline against dark fill with black drips at the edges, but #84 compresses everything into a single dense olive mass while #83 separates its forms into distinct columns.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3\",\n      \"reason\": \"Both works place small red accent marks inside a larger dark form, but #82 uses them as eye-socket markers on a legible face while #83 scatters them as isolated signals with no clear facial anchor.\"\n    }\n  ],\n  \"tags\": [\n    \"drip lines\",\n    \"columnar forms\",\n    \"ochre and purple fill\",\n    \"cyan line cluster\",\n    \"red accent marks\",\n    \"fragmented edge forms\"\n  ],\n  \"interpretiveTags\": [\n    \"weighted\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the white outlines stop following the dark columns, and what happens to the image at those gaps?\",\n  \"ambiguities\": [\n    \"The lower-right angular form with teeth-like lines may be a secondary face or an unrelated structural fragment; the image does not resolve this clearly.\",\n    \"The nnotb #104 comparison was inspected but offers no strong formal connection to #83 beyond shared artist; it is omitted from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw/image.png",
+        "imageSHA256": "d1d6fb379807fce48da6bfc7cb7de572ac2dfe3d7fb439ffbc83d2713d3bbad1"
+      },
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      },
+      {
+        "artworkId": "QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h/image.png",
+        "imageSHA256": "b1370d52a9d8bedf3794f2a6294e80a60934081fb195a0bf4d576164420b4a7b"
+      },
+      {
+        "artworkId": "Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE/image.png",
+        "imageSHA256": "d7e2b334061b3fa475290ff89d5f5a56b684f06de85ff9926f2d45edd26a6ef9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:15.941466-05:00",
+    "usage": {
+      "inputTokens": 7038,
+      "outputTokens": 859,
+      "totalTokens": 7897,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6634
+    },
+    "requestId": "c71ab1a3-d1af-4ed6-8e52-190a44dbe426",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Three tall dark columns dominate the center, their edges outlined in white with black drips running downward; gold-ochre and deep purple fill the interior planes.\",\n    \"On the left, a loose tangle of cyan lines and two small red marks sit against a black mass that bleeds downward off the lower edge.\",\n    \"Lower right holds a smaller angular form with a red cross mark and open jagged lines, set against a warm peach background with a soft lavender wash.\"\n  ],\n  \"reading\": \"Three columnar forms press upward, their dripping black edges giving weight to what might otherwise read as abstract slabs. Small red marks on the left and lower right act as sharp accents inside a mostly gold-and-cool palette. A pale lavender wash behind everything softens the image just enough to hold the tension between the heavy central mass and the looser, fragmented forms at the edges.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #82 and nnxyz nifty faces #84 in both title order and recorded creation order. Where #82 uses flat black against saturated pink and #84 works in dense olive scribble, #83 opens to ochre and lavender with drip-heavy outlines.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE\",\n      \"reason\": \"Both use white outline against dark fill with black drips at the edges, but #84 compresses into a single dense olive mass while #83 separates its forms into distinct columns.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3\",\n      \"reason\": \"Both place small red accent marks inside larger dark forms, but in #82 they anchor rectangular eye sockets on a legible face, while in #83 they appear as isolated signals without a clear facial structure.\"\n    }\n  ],\n  \"tags\": [\n    \"drip lines\",\n    \"columnar forms\",\n    \"ochre and purple fill\",\n    \"cyan line cluster\",\n    \"red accent marks\",\n    \"fragmented edge forms\"\n  ],\n  \"interpretiveTags\": [\"weighted\", \"unsettled\"],\n  \"lookingQuestion\": \"Where exactly do the white outlines stop following the dark columns, and what happens to the image at those gaps?\",\n  \"ambiguities\": [\n    \"The lower-right angular form with jagged lines may be a secondary face or an unrelated structural fragment; the image does not resolve this clearly.\",\n    \"nnotb #104 was inspected but offers no strong formal connection to #83 beyond shared artist; it is omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: three central columns with ochre/purple fill, white outlines, black drips, cyan cluster left, red marks left and lower-right all verified against the primary image.\",\n    \"Comparison checks confirmed: #84 shows single olive mass with white outline and drips; #82 shows flat black on pink with red rectangular eye markers — both contrast descriptions accurate.\",\n    \"Removed 'bleeding downward off the composition' (draft said 'off the composition'; corrected to 'off the lower edge' for precision); no invented subject identities, intent language, or unsupported technique claims found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw/image.png",
+        "imageSHA256": "d1d6fb379807fce48da6bfc7cb7de572ac2dfe3d7fb439ffbc83d2713d3bbad1"
+      },
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      },
+      {
+        "artworkId": "QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h/image.png",
+        "imageSHA256": "b1370d52a9d8bedf3794f2a6294e80a60934081fb195a0bf4d576164420b4a7b"
+      },
+      {
+        "artworkId": "Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE/image.png",
+        "imageSHA256": "d7e2b334061b3fa475290ff89d5f5a56b684f06de85ff9926f2d45edd26a6ef9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Three tall dark columns dominate the center, their edges outlined in white with black drips running downward; gold-ochre and deep purple fill the interior planes.\", \"On the left, a loose tangle of cyan lines and two small red marks sit against a black mass that bleeds downward off the composition.\", \"Lower right holds a smaller angular form with a red cross mark and open jagged lines suggesting teeth or spines, set against the warm peach-lavender background wash.\"], \"reading\": \"Three columnar forms press upward, their dripping black edges giving weight to what might otherwise read as abstract slabs. The red marks on left and right act as small alarms inside a mostly cool-and-gold palette. A pale lavender wash behind everything softens the image just enough to hold the tension between the heavy central mass and the looser, more fragmented forms at the edges.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #82 and nnxyz nifty faces #84 in both title order and recorded creation order. Where #82 uses flat black against saturated pink and #84 works in dense olive scribble, #83 opens the palette to ochre and lavender with drip-heavy outlines.\", \"connections\": [{\"targetArtworkId\": \"Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE\", \"reason\": \"Both works use white outline against dark fill with black drips at the edges, but #84 compresses everything into a single dense olive mass while #83 separates its forms into distinct columns.\"}, {\"targetArtworkId\": \"QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3\", \"reason\": \"Both works place small red accent marks inside a larger dark form, but #82 uses them as eye-socket markers on a legible face while #83 scatters them as isolated signals with no clear facial anchor.\"}], \"tags\": [\"drip lines\", \"columnar forms\", \"ochre and purple fill\", \"cyan line cluster\", \"red accent marks\", \"fragmented edge forms\"], \"interpretiveTags\": [\"weighted\", \"unsettled\"], \"lookingQuestion\": \"Where exactly do the white outlines stop following the dark columns, and what happens to the image at those gaps?\", \"ambiguities\": [\"The lower-right angular form with teeth-like lines may be a secondary face or an unrelated structural fragment; the image does not resolve this clearly.\", \"The nnotb #104 comparison was inspected but offers no strong formal connection to #83 beyond shared artist; it is omitted from connections.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

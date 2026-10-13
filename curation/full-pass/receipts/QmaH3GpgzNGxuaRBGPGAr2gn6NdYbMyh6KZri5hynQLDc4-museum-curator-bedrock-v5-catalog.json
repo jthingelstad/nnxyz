@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:03.301349-05:00",
+    "usage": {
+      "inputTokens": 6054,
+      "outputTokens": 783,
+      "totalTokens": 6837,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12593
+    },
+    "requestId": "18a91071-754b-43dc-95ac-ec3fb141e394",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large white-outlined oval forms sit side by side near the top center, each filled with black scribble lines, against a teal background with blue, pink, and brown color blocks behind them.\",\n    \"Below the oval forms, a wide rectangular zone is filled with dense vertical black lines on white, framed by a loose white outline and flanked by orange-brown and blue strokes on either side.\",\n    \"A horizontal tangle of white, black, and yellow lines runs across the very top of the image, extending beyond the central form, while a separate white rectangular shape with yellow and black marks floats to the right.\"\n  ],\n  \"reading\": \"Two dark-filled oval forms anchor the upper half, reading as eyes though their interiors are dense scribble rather than clear pupils. Below them, vertical black lines packed into a white rectangle suggest teeth or a grid, giving the lower face a mechanical quality. The teal field keeps the layered color blocks—pink, brown, blue, yellow—from collapsing into noise. The overall effect feels blunt and slightly unsettled.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, #75 sits between title neighbors #74 and #76. Where #74 uses deep warm reds and a single large dark void, #75 switches to a cool teal field with a busier multi-color scaffold—a strong tonal contrast across adjacent titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\",\n      \"reason\": \"Both #75 and #76 share a teal background, paired rectangular eye zones, and vertical-line mouth grids, making them the clearest structural pair in the owned subset's inspected neighbors.\"\n    },\n    {\n      \"targetArtworkId\": \"QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH\",\n      \"reason\": \"nnotb #98 shares the same teal ground color as #75, and the collector's noted link between scrimshaw and nnxyz finds a visual echo in both works' use of dark marks on a flat light field.\"\n    }\n  ],\n  \"tags\": [\n    \"teal background\",\n    \"oval eye forms\",\n    \"vertical line grid\",\n    \"multi-color layered blocks\",\n    \"loose white outline\",\n    \"horizontal line tangle\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical quality\",\n    \"unsettled mood\"\n  ],\n  \"lookingQuestion\": \"What happens to your reading of the two oval forms when you follow the dense scribble lines inside them—do they stay as eyes, or does the interior mark-making pull them toward something else?\",\n  \"ambiguities\": [\n    \"The floating white rectangle to the right of the main form has unclear spatial relationship to the central figure—attachment or separate element is not resolvable from the image alone.\",\n    \"Title-derived order and recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency to #74 and #76 is a title relationship, not a confirmed making sequence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4/image.png",
+        "imageSHA256": "301ba5add6cada5ef518bead7e8ad2490a703ce67940b12bcf4eccf1eb140b1c"
+      },
+      {
+        "artworkId": "QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH/image.png",
+        "imageSHA256": "bb61acbe5f679b4856b0e3f8575add40902e77f3a8a86ef97a8bb3aafb793ce2"
+      },
+      {
+        "artworkId": "QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH/image.png",
+        "imageSHA256": "1185289e43b141f855504519d9dd7f86fde06ac8d74de6ea677202a7ea2dda94"
+      },
+      {
+        "artworkId": "QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD/image.png",
+        "imageSHA256": "71e1fb501a6f6a17291b51862a87a9a99d25a5fe5a454d229ee3b3b88f9c12d1"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:10.683054-05:00",
+    "usage": {
+      "inputTokens": 6859,
+      "outputTokens": 1009,
+      "totalTokens": 7868,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7326
+    },
+    "requestId": "5c6a651d-a63f-4e4a-bb18-e0d25ec8210b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large white-outlined oval forms sit side by side near the top center, each filled with dense black scribble lines, set against a teal background with blue, pink, and brown color blocks behind them.\",\n    \"Below the oval forms, a wide rectangular zone is packed with dense vertical black lines on white, enclosed by a loose white outline and flanked by orange-brown and blue strokes on either side.\",\n    \"A horizontal tangle of white, black, and yellow lines crosses the very top of the image beyond the central form, while a separate white rectangular shape with yellow and black marks sits to the right of the main structure.\"\n  ],\n  \"reading\": \"Two dark-filled oval forms anchor the upper half; their interiors are dense scribble rather than clear pupils. Below them, vertical black lines packed into a white rectangle give the lower section a grid-like, mechanical quality. The teal field holds the layered color blocks—pink, brown, blue, yellow—apart from one another. The overall effect reads as blunt and slightly unsettled.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, #75 sits between title neighbors #74 and #76. Where #74 fills its field with deep warm reds and a single large dark void, #75 switches to a cool teal ground with a busier multi-color scaffold—a strong tonal contrast across adjacent titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\",\n      \"reason\": \"Both #75 and #76 share a teal background, paired rectangular eye zones, and vertical-line grids in the lower section, making them the clearest structural pair among the inspected owned neighbors.\"\n    },\n    {\n      \"targetArtworkId\": \"QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH\",\n      \"reason\": \"nnotb #98 shares the same flat teal ground as #75, and both works place dark, mark-filled forms against that field—the visual quality the collector links to scrimshaw's dark marks on a light surface.\"\n    }\n  ],\n  \"tags\": [\n    \"teal background\",\n    \"oval eye forms\",\n    \"vertical line grid\",\n    \"multi-color layered blocks\",\n    \"loose white outline\",\n    \"horizontal line tangle\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical quality\",\n    \"unsettled mood\"\n  ],\n  \"lookingQuestion\": \"What happens to your reading of the two oval forms when you follow the dense scribble lines inside them—do they hold as eyes, or does the interior mark-making pull them toward something else?\",\n  \"ambiguities\": [\n    \"The white rectangular shape to the right of the main form has an unclear spatial relationship to the central structure—whether it is attached or a separate floating element is not resolvable from the image alone.\",\n    \"Title-derived order and recorded-creation order align for this work, but gaps exist elsewhere in the owned subset, so adjacency to #74 and #76 is a title relationship, not a confirmed making sequence.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: teal background, paired oval scribble forms, vertical-line white rectangle, and horizontal top tangle are all visible in the primary image as described.\",\n    \"Comparison with QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD (#76) confirmed: teal ground, paired rectangular eye zones, and vertical-line lower grid are visible in that image, supporting the structural comparison.\",\n    \"Comparison with QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH (nnotb #98) confirmed: flat teal ground and dark mark-filled form on light field are visible; collector's scrimshaw link is stated as collector perspective, not artist intent—no correction needed.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4/image.png",
+        "imageSHA256": "301ba5add6cada5ef518bead7e8ad2490a703ce67940b12bcf4eccf1eb140b1c"
+      },
+      {
+        "artworkId": "QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH/image.png",
+        "imageSHA256": "bb61acbe5f679b4856b0e3f8575add40902e77f3a8a86ef97a8bb3aafb793ce2"
+      },
+      {
+        "artworkId": "QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH/image.png",
+        "imageSHA256": "1185289e43b141f855504519d9dd7f86fde06ac8d74de6ea677202a7ea2dda94"
+      },
+      {
+        "artworkId": "QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD/image.png",
+        "imageSHA256": "71e1fb501a6f6a17291b51862a87a9a99d25a5fe5a454d229ee3b3b88f9c12d1"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two large white-outlined oval forms sit side by side near the top center, each filled with black scribble lines, against a teal background with blue, pink, and brown color blocks behind them.\", \"Below the oval forms, a wide rectangular zone is filled with dense vertical black lines on white, framed by a loose white outline and flanked by orange-brown and blue strokes on either side.\", \"A horizontal tangle of white, black, and yellow lines runs across the very top of the image, extending beyond the central form, while a separate white rectangular shape with yellow and black marks floats to the right.\"], \"reading\": \"Two dark-filled oval forms anchor the upper half, reading as eyes though their interiors are dense scribble rather than clear pupils. Below them, vertical black lines packed into a white rectangle suggest teeth or a grid, giving the lower face a mechanical quality. The teal field keeps the layered color blocks—pink, brown, blue, yellow—from collapsing into noise. The overall effect feels blunt and slightly unsettled.\", \"contextAngle\": \"Within the owned nifty-faces subset, #75 sits between title neighbors #74 and #76. Where #74 uses deep warm reds and a single large dark void, #75 switches to a cool teal field with a busier multi-color scaffold—a strong tonal contrast across adjacent titles.\", \"connections\": [{\"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\", \"reason\": \"Both #75 and #76 share a teal background, paired rectangular eye zones, and vertical-line mouth grids, making them the clearest structural pair in the owned subset's inspected neighbors.\"}, {\"targetArtworkId\": \"QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH\", \"reason\": \"nnotb #98 shares the same teal ground color as #75, and the collector's noted link between scrimshaw and nnxyz finds a visual echo in both works' use of dark marks on a flat light field.\"}], \"tags\": [\"teal background\", \"oval eye forms\", \"vertical line grid\", \"multi-color layered blocks\", \"loose white outline\", \"horizontal line tangle\"], \"interpretiveTags\": [\"mechanical quality\", \"unsettled mood\"], \"lookingQuestion\": \"What happens to your reading of the two oval forms when you follow the dense scribble lines inside them—do they stay as eyes, or does the interior mark-making pull them toward something else?\", \"ambiguities\": [\"The floating white rectangle to the right of the main form has unclear spatial relationship to the central figure—attachment or separate element is not resolvable from the image alone.\", \"Title-derived order and recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency to #74 and #76 is a title relationship, not a confirmed making sequence.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

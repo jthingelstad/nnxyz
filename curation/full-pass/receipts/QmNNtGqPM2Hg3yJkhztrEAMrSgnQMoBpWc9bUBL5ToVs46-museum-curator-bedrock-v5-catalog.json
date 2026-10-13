@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:57.336405-05:00",
+    "usage": {
+      "inputTokens": 6097,
+      "outputTokens": 710,
+      "totalTokens": 6807,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12341
+    },
+    "requestId": "560ae711-c47c-47e6-b379-63a73ac120fe",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal head shape fills most of the canvas, outlined in thick black and white lines against a warm brown field, with one eye rendered as concentric circles and the other as crossed marks inside a dark rounded socket.\",\n    \"Zigzag and wave lines in black, blue, and white run in horizontal bands across the lower half and upper edge, while loose spiral scribbles in yellow and cyan float in the upper-right corner and across the chin area.\",\n    \"The background is divided into flat blocks of orange, purple, pink, and yellow-green, with small rectangular forms stacked on the left edge and a dense cluster of short parallel lines on the right side.\"\n  ],\n  \"reading\": \"One eye is open wide, ringed in pink and yellow; the other is crossed out. The contrast reads as alertness on one side and refusal on the other. Zigzag bands above and below the head press inward, while loose spirals drift free of the main form. The warm brown field holds the whole arrangement steady, giving the busy surface a grounded, almost contained feeling.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #270 and nnxyz nnotb #272. Both title order and recorded creation order place #271 between those two works. The brown ground here contrasts with the deep purple field of #270 and the near-black of #272.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn\",\n      \"reason\": \"Both works center a large head with exposed teeth and layered scribble lines over flat color blocks, but #270 uses a saturated purple ground and a single large circular eye, while #271 splits the eyes into two distinct treatments against brown.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal head form\",\n    \"asymmetric eyes\",\n    \"zigzag line bands\",\n    \"flat color blocks\",\n    \"loose spiral scribbles\",\n    \"exposed teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between openness and closure\",\n    \"contained energy\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the two eye treatments — one open and ringed, one crossed and closed — do to how you move across the face?\",\n  \"ambiguities\": [\n    \"The nifty-faces comparison (QmWShPTyQQ2AZEm7DYAr6grvPbzVg581Vn8btyzNRG8YKY) shares teeth and layered line work but its blocky form and grey ground differ enough that no strong formal connection was identified; it was omitted.\",\n    \"Title order and recorded creation order align here, but gaps may exist elsewhere in the nnotb family, so neither sequence is treated as a complete making chronology.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46/image.png",
+        "imageSHA256": "82de67868a115b65394b2e7066639878c43684f2ebb169087ee9c41efb386e35"
+      },
+      {
+        "artworkId": "QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn/image.png",
+        "imageSHA256": "ed40d42b65c35310f62bddd6eb33c8705e7500b0e92b5ce45afba13b3dcfea94"
+      },
+      {
+        "artworkId": "QmWShPTyQQ2AZEm7DYAr6grvPbzVg581Vn8btyzNRG8YKY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWShPTyQQ2AZEm7DYAr6grvPbzVg581Vn8btyzNRG8YKY/image.png",
+        "imageSHA256": "e382ebad4a4fcd78df30c01cc8dd535c603c549b8ff8aabe766b62ebbb73485c"
+      },
+      {
+        "artworkId": "QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK/image.png",
+        "imageSHA256": "224149ccd6455455f032e00b81f08df4f2664678fa4b6eec983af4ead695269d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:03.883407-05:00",
+    "usage": {
+      "inputTokens": 6838,
+      "outputTokens": 930,
+      "totalTokens": 7768,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6472
+    },
+    "requestId": "ae9ade97-f427-4d55-8ce3-2b77b5fff8a8",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal head shape fills most of the canvas, outlined in thick black and white lines against a warm brown field, with one eye rendered as concentric circles and the other as crossed marks inside a dark rounded socket.\",\n    \"Zigzag and wave lines in black, blue, and white run in horizontal bands across the lower half and upper edge, while loose spiral scribbles in yellow and cyan float in the upper-right corner and across the chin area.\",\n    \"The background is divided into flat blocks of orange, purple, pink, and yellow-green, with small rectangular forms stacked on the left edge and a dense cluster of short parallel lines on the right side.\"\n  ],\n  \"reading\": \"One eye is open wide, ringed in pink and yellow; the other is crossed out. That contrast reads as alertness on one side and refusal on the other. Zigzag bands above and below the head press inward, while loose spirals drift free of the main form. The warm brown field holds the whole arrangement steady, giving the busy surface a grounded, almost contained feeling.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #270 and nnxyz nnotb #272. Title order and recorded creation order both place #271 between those two works. The brown ground here contrasts with the deep purple field of #270 and the near-black of #272.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn\",\n      \"reason\": \"Both works center a large head with exposed teeth and layered scribble lines over flat color blocks, but #270 uses a saturated purple ground and a single large circular eye, while #271 splits the eyes into two distinct treatments against brown.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal head form\",\n    \"asymmetric eyes\",\n    \"zigzag line bands\",\n    \"flat color blocks\",\n    \"loose spiral scribbles\",\n    \"exposed teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between openness and closure\",\n    \"contained energy\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the two eye treatments — one open and ringed, one crossed and closed — do to how you move across the face?\",\n  \"ambiguities\": [\n    \"The nifty-faces comparison (QmWShPTyQQ2AZEm7DYAr6grvPbzVg581Vn8btyzNRG8YKY) shares teeth and layered line work but its blocky form and grey ground differ enough that no strong formal connection was identified; it was omitted.\",\n    \"Title order and recorded creation order align here, but gaps may exist elsewhere in the nnotb family, so neither sequence is treated as a complete making chronology.\"\n  ],\n  \"reviewFindings\": [\n    \"All color and form observations confirmed against the primary image: brown ground, concentric-circle eye, crossed-mark eye, zigzag bands, spiral scribbles, flat color blocks, and stacked rectangles at left edge are all visible.\",\n    \"Comparison with QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn confirmed: purple ground, single large circular eye, exposed teeth, and layered scribble lines are visible in that image, supporting the stated contrast.\",\n    \"QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK (#272) shows full-body figures on a near-black ground with no dominant head-filling composition; no useful formal connection to #271 was found, so it was correctly omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46/image.png",
+        "imageSHA256": "82de67868a115b65394b2e7066639878c43684f2ebb169087ee9c41efb386e35"
+      },
+      {
+        "artworkId": "QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn/image.png",
+        "imageSHA256": "ed40d42b65c35310f62bddd6eb33c8705e7500b0e92b5ce45afba13b3dcfea94"
+      },
+      {
+        "artworkId": "QmWShPTyQQ2AZEm7DYAr6grvPbzVg581Vn8btyzNRG8YKY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWShPTyQQ2AZEm7DYAr6grvPbzVg581Vn8btyzNRG8YKY/image.png",
+        "imageSHA256": "e382ebad4a4fcd78df30c01cc8dd535c603c549b8ff8aabe766b62ebbb73485c"
+      },
+      {
+        "artworkId": "QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxWJnV1EP4nuidyeRYdshxMpojcs37S1whSk89rAFfjK/image.png",
+        "imageSHA256": "224149ccd6455455f032e00b81f08df4f2664678fa4b6eec983af4ead695269d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large frontal head shape fills most of the canvas, outlined in thick black and white lines against a warm brown field, with one eye rendered as concentric circles and the other as crossed marks inside a dark rounded socket.\", \"Zigzag and wave lines in black, blue, and white run in horizontal bands across the lower half and upper edge, while loose spiral scribbles in yellow and cyan float in the upper-right corner and across the chin area.\", \"The background is divided into flat blocks of orange, purple, pink, and yellow-green, with small rectangular forms stacked on the left edge and a dense cluster of short parallel lines on the right side.\"], \"reading\": \"One eye is open wide, ringed in pink and yellow; the other is crossed out. The contrast reads as alertness on one side and refusal on the other. Zigzag bands above and below the head press inward, while loose spirals drift free of the main form. The warm brown field holds the whole arrangement steady, giving the busy surface a grounded, almost contained feeling.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #270 and nnxyz nnotb #272. Both title order and recorded creation order place #271 between those two works. The brown ground here contrasts with the deep purple field of #270 and the near-black of #272.\", \"connections\": [{\"targetArtworkId\": \"QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn\", \"reason\": \"Both works center a large head with exposed teeth and layered scribble lines over flat color blocks, but #270 uses a saturated purple ground and a single large circular eye, while #271 splits the eyes into two distinct treatments against brown.\"}], \"tags\": [\"frontal head form\", \"asymmetric eyes\", \"zigzag line bands\", \"flat color blocks\", \"loose spiral scribbles\", \"exposed teeth\"], \"interpretiveTags\": [\"tension between openness and closure\", \"contained energy\"], \"lookingQuestion\": \"What does the difference between the two eye treatments — one open and ringed, one crossed and closed — do to how you move across the face?\", \"ambiguities\": [\"The nifty-faces comparison (QmWShPTyQQ2AZEm7DYAr6grvPbzVg581Vn8btyzNRG8YKY) shares teeth and layered line work but its blocky form and grey ground differ enough that no strong formal connection was identified; it was omitted.\", \"Title order and recorded creation order align here, but gaps may exist elsewhere in the nnotb family, so neither sequence is treated as a complete making chronology.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

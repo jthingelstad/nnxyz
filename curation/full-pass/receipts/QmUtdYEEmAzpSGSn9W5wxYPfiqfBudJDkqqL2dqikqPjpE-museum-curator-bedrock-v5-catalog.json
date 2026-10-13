@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:27.658334-05:00",
+    "usage": {
+      "inputTokens": 6453,
+      "outputTokens": 814,
+      "totalTokens": 7267,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13301
+    },
+    "requestId": "58459d28-010b-4e25-9e53-f3f63426f3f6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A lean, open-mouthed figure occupies the center against a flat olive-green ground; its wide, dark-shadowed eye sockets and bared teeth face the viewer directly.\",\n    \"Layered lines in yellow, pink, teal, and white trace the torso and limbs, leaving the forms semi-transparent so the olive background reads through the body.\",\n    \"Both arms extend outward and a leg kicks forward, with splayed finger-like digits at each extremity; large cast shadows anchor the figure to the lower left and right.\"\n  ],\n  \"reading\": \"The figure lunges forward, arms wide and mouth open, yet the layered lines keep it weightless rather than threatening. Yellow and pink loops suggest muscle or tendon without resolving into anatomy. The olive ground holds steady while the body seems to flicker, caught between solid form and loose outline. That tension—between urgency and transparency—gives the image its unsettled charge.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #31 and nnxyz nnotb #33. #31 uses a warm amber ground with a striding figure; #33 shifts to a black ground with a compact, crouching form. #32 sits between those two in both palette weight and spatial openness.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw\",\n      \"reason\": \"Both works show a full-body figure in mid-motion with limbs extended, but #31 uses a saturated amber ground and denser color fills, while #32 keeps the body more open and line-dominant against olive.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNRVycagc5bYJBDqUugVjx3ahcuyZrmLTm88tde27xYmh\",\n      \"reason\": \"Both figures share bared teeth and dark, hollow eye treatment, but #33 compresses the body into a squat shape on black, whereas #32 stretches the limbs wide on a mid-tone ground.\"\n    }\n  ],\n  \"tags\": [\n    \"full-body figure\",\n    \"open mouth with teeth\",\n    \"layered semi-transparent line work\",\n    \"extended limbs with splayed digits\",\n    \"olive-green ground\",\n    \"cast shadow\"\n  ],\n  \"interpretiveTags\": [\n    \"urgency\",\n    \"unsettled energy\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the layered lines overlap enough to read as solid form, and where do they stay open so the ground shows through—and does that shift happen evenly across the body or concentrate in one area?\",\n  \"ambiguities\": [\n    \"The collector's stated connection between scrimshaw and nnxyz works rests on visual pattern qualities; no artist statement confirms this reading.\",\n    \"nnxyz nifty faces #119 (QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC) was inspected but shares only a dark ground and tooth-like marks with #32; the formal overlap is too limited to support a useful connection over the direct title neighbors.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE/image.png",
+        "imageSHA256": "b1cddd99e2295dbc68eaae197fe29808e49433e253c23d7c575c21a682106b66"
+      },
+      {
+        "artworkId": "QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw/image.png",
+        "imageSHA256": "2f3fcc1a40f64ab10707d8bbea0c925fc8a8f3fd97721b7542b6796d545d1c7f"
+      },
+      {
+        "artworkId": "QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC/image.png",
+        "imageSHA256": "4d920123eed7b43e2b6d90aa90570f89bf57f142e368535c17571c67938c6084"
+      },
+      {
+        "artworkId": "QmNRVycagc5bYJBDqUugVjx3ahcuyZrmLTm88tde27xYmh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNRVycagc5bYJBDqUugVjx3ahcuyZrmLTm88tde27xYmh/image.png",
+        "imageSHA256": "958f813d792f65a5c0c0a4dd239cb9d362b49a8c0086f83aea648c5dc7a55850"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:34.753849-05:00",
+    "usage": {
+      "inputTokens": 7289,
+      "outputTokens": 958,
+      "totalTokens": 8247,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6760
+    },
+    "requestId": "3b519487-9f13-40e7-8783-bd4e7eb697ac",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A lean, open-mouthed figure occupies the center against a flat olive-green ground; wide dark-shadowed eye sockets and bared teeth face the viewer directly.\",\n    \"Layered lines in yellow, pink, teal, and white trace the torso and limbs, leaving forms semi-transparent so the olive ground reads through the body.\",\n    \"Both arms extend outward and one leg kicks forward, with splayed digit clusters at each extremity; large cast shadows anchor the figure to the lower left and right.\"\n  ],\n  \"reading\": \"The figure lunges forward, arms wide and mouth open, yet the layered lines keep it weightless rather than solid. Yellow and pink loops suggest muscle or tendon without resolving into anatomy. The olive ground holds steady while the body flickers between outline and form. That tension—between urgency and transparency—gives the image its unsettled charge.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #31 and nnxyz nnotb #33. #31 uses a warm amber ground with a striding figure; #33 shifts to black with a compact crouching form. #32 sits between those two in palette weight and spatial openness.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw\",\n      \"reason\": \"Both show a full-body figure in mid-motion with limbs extended, but #31 uses a saturated amber ground with denser color fills, while #32 keeps the body more open and line-dominant against olive.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNRVycagc5bYJBDqUugVjx3ahcuyZrmLTm88tde27xYmh\",\n      \"reason\": \"Both figures show bared teeth and dark hollow eye treatment, but #33 compresses the body into a squat shape on black, whereas #32 stretches limbs wide on a mid-tone ground.\"\n    }\n  ],\n  \"tags\": [\n    \"full-body figure\",\n    \"open mouth with teeth\",\n    \"layered semi-transparent line work\",\n    \"extended limbs with splayed digits\",\n    \"olive-green ground\",\n    \"cast shadow\"\n  ],\n  \"interpretiveTags\": [\n    \"urgency\",\n    \"unsettled energy\"\n  ],\n  \"lookingQuestion\": \"Where do the layered lines overlap enough to read as solid form, and where do they stay open so the ground shows through—does that shift happen evenly across the body or concentrate in one area?\",\n  \"ambiguities\": [\n    \"The collector's stated connection between scrimshaw and nnxyz works rests on visual pattern qualities; no artist statement confirms this reading.\",\n    \"nnxyz nifty faces #119 was inspected but shares only a dark ground and tooth-like marks with #32; the formal overlap is too limited to support a useful connection over the direct title neighbors.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: yellow, pink, teal, white lines on olive ground with cast shadows are visible as described.\",\n    \"Comparison with QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw confirmed: amber ground and denser fills in #31 versus open line work on olive in #32—contrast is accurate.\",\n    \"Comparison with QmNRVycagc5bYJBDqUugVjx3ahcuyZrmLTm88tde27xYmh confirmed: #33 shows a compact squat figure on black with red-marked eyes and bared teeth; body-shape and ground contrast with #32 is accurate and the connection is retained.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUtdYEEmAzpSGSn9W5wxYPfiqfBudJDkqqL2dqikqPjpE/image.png",
+        "imageSHA256": "b1cddd99e2295dbc68eaae197fe29808e49433e253c23d7c575c21a682106b66"
+      },
+      {
+        "artworkId": "QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw/image.png",
+        "imageSHA256": "2f3fcc1a40f64ab10707d8bbea0c925fc8a8f3fd97721b7542b6796d545d1c7f"
+      },
+      {
+        "artworkId": "QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC/image.png",
+        "imageSHA256": "4d920123eed7b43e2b6d90aa90570f89bf57f142e368535c17571c67938c6084"
+      },
+      {
+        "artworkId": "QmNRVycagc5bYJBDqUugVjx3ahcuyZrmLTm88tde27xYmh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNRVycagc5bYJBDqUugVjx3ahcuyZrmLTm88tde27xYmh/image.png",
+        "imageSHA256": "958f813d792f65a5c0c0a4dd239cb9d362b49a8c0086f83aea648c5dc7a55850"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A lean, open-mouthed figure occupies the center against a flat olive-green ground; its wide, dark-shadowed eye sockets and bared teeth face the viewer directly.\", \"Layered lines in yellow, pink, teal, and white trace the torso and limbs, leaving the forms semi-transparent so the olive background reads through the body.\", \"Both arms extend outward and a leg kicks forward, with splayed finger-like digits at each extremity; large cast shadows anchor the figure to the lower left and right.\"], \"reading\": \"The figure lunges forward, arms wide and mouth open, yet the layered lines keep it weightless rather than threatening. Yellow and pink loops suggest muscle or tendon without resolving into anatomy. The olive ground holds steady while the body seems to flicker, caught between solid form and loose outline. That tension—between urgency and transparency—gives the image its unsettled charge.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #31 and nnxyz nnotb #33. #31 uses a warm amber ground with a striding figure; #33 shifts to a black ground with a compact, crouching form. #32 sits between those two in both palette weight and spatial openness.\", \"connections\": [{\"targetArtworkId\": \"QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw\", \"reason\": \"Both works show a full-body figure in mid-motion with limbs extended, but #31 uses a saturated amber ground and denser color fills, while #32 keeps the body more open and line-dominant against olive.\"}, {\"targetArtworkId\": \"QmNRVycagc5bYJBDqUugVjx3ahcuyZrmLTm88tde27xYmh\", \"reason\": \"Both figures share bared teeth and dark, hollow eye treatment, but #33 compresses the body into a squat shape on black, whereas #32 stretches the limbs wide on a mid-tone ground.\"}], \"tags\": [\"full-body figure\", \"open mouth with teeth\", \"layered semi-transparent line work\", \"extended limbs with splayed digits\", \"olive-green ground\", \"cast shadow\"], \"interpretiveTags\": [\"urgency\", \"unsettled energy\"], \"lookingQuestion\": \"Where exactly do the layered lines overlap enough to read as solid form, and where do they stay open so the ground shows through—and does that shift happen evenly across the body or concentrate in one area?\", \"ambiguities\": [\"The collector's stated connection between scrimshaw and nnxyz works rests on visual pattern qualities; no artist statement confirms this reading.\", \"nnxyz nifty faces #119 (QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC) was inspected but shares only a dark ground and tooth-like marks with #32; the formal overlap is too limited to support a useful connection over the direct title neighbors.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:47.143919-05:00",
+    "usage": {
+      "inputTokens": 6563,
+      "outputTokens": 738,
+      "totalTokens": 7301,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12867
+    },
+    "requestId": "fcdc0f41-89b0-40b9-8461-172529f07f75",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"On the left, a figure with a wide flared skirt and layered ruffled shoulders stands upright, its open-mouthed face built from overlapping loops of blue, red, and pink line over warm gold fill.\",\n    \"On the right, a compact bird-like figure with a flat beak and frowning brow is densely hatched in orange-brown and deep purple, its right arm extended stiffly upward ending in a small fist.\",\n    \"Behind both figures, loose yellow arcs and pink diagonal lines sweep across a muted mauve-grey ground, with no single focal point anchoring the background marks.\"\n  ],\n  \"reading\": \"Two figures face each other across an open middle ground, one expansive and open-mouthed, the other compact and scowling. The contrast in posture—spread skirt against tight feathered body—reads as confrontation or standoff. The background lines do not resolve into a setting; they press forward as noise or weather. The mood feels charged but unresolved, the outcome genuinely unclear.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #8 and nnxyz nnotb #10 in both title order and recorded creation order. Where #8 fills the frame with interlocking animal forms and a dense white outline, #9 opens space between two distinct figures on a looser ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmf8ohKxZdwEwWMrX6LVkgTKwJArKskHtYbfLYyVXzLbp9\",\n      \"reason\": \"nnxyz nnotb #8 uses the same warm gold and deep purple range but packs forms edge to edge with a continuous white outline, making the open gap between #9's two figures a direct structural contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH\",\n      \"reason\": \"pizza pizza pizza pizza day shares the device of a large expressive figure paired with a smaller secondary figure at lower right, both works using that size difference to suggest an unequal relationship.\"\n    }\n  ],\n  \"tags\": [\n    \"two-figure composition\",\n    \"open negative space between figures\",\n    \"bird-like beak form\",\n    \"flared skirt silhouette\",\n    \"loose background line sweeps\",\n    \"warm gold and deep purple contrast\"\n  ],\n  \"lookingQuestion\": \"What does the gap of empty background between the two figures do to your sense of whether they are moving toward or away from each other?\",\n  \"ambiguities\": [\n    \"The left figure's head ornament reads as layered ruffles or a hat; the exact form is not resolved in the image.\",\n    \"The connection to pizza pizza pizza pizza day rests on a single compositional device and is a weaker match than the #8 comparison.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw/image.png",
+        "imageSHA256": "fd29e4090e515b0dcfbb1deef000b9f67e769ad949551adbeb6e683a1d7dafed"
+      },
+      {
+        "artworkId": "Qmf8ohKxZdwEwWMrX6LVkgTKwJArKskHtYbfLYyVXzLbp9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf8ohKxZdwEwWMrX6LVkgTKwJArKskHtYbfLYyVXzLbp9/image.png",
+        "imageSHA256": "31663d2d9d7c76d6fca2478c8ead57ee36b1dd2b72821b682070d0e601ea13cf"
+      },
+      {
+        "artworkId": "QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH/image.png",
+        "imageSHA256": "7b6d1775bbf2ebb96153886c0b42c6e0bd0414a352762a454d20f143688ce7db"
+      },
+      {
+        "artworkId": "Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt/image.png",
+        "imageSHA256": "e8283ca46fc1a96e8d73f492eefc2730226a0411da6b715305e42acc8c45e704"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:54.661538-05:00",
+    "usage": {
+      "inputTokens": 7333,
+      "outputTokens": 894,
+      "totalTokens": 8227,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7414
+    },
+    "requestId": "84802e92-4c5c-468e-bbf6-38c9057267e4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"On the left, a figure with a wide flared skirt and layered ruffled shoulders stands upright, its open-mouthed face built from overlapping loops of blue, red, and pink line over warm gold fill.\",\n    \"On the right, a compact bird-like figure with a flat beak and frowning brow is densely hatched in orange-brown and deep purple, its right arm extended stiffly upward ending in a small fist.\",\n    \"Behind both figures, loose yellow arcs and pink diagonal lines sweep across a muted mauve-grey ground, with no single focal point anchoring the background marks.\"\n  ],\n  \"reading\": \"Two figures face each other across an open middle ground, one expansive and open-mouthed, the other compact and scowling. The contrast in posture—spread skirt against tight feathered body—reads as confrontation or standoff. The background lines do not resolve into a setting; they press forward as noise or weather. The mood feels charged but unresolved, the outcome genuinely unclear.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #8 and nnxyz nnotb #10 in both title and recorded creation order. Where #8 fills the frame with interlocking forms and a dense white outline, #9 opens space between two distinct figures on a looser ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmf8ohKxZdwEwWMrX6LVkgTKwJArKskHtYbfLYyVXzLbp9\",\n      \"reason\": \"nnxyz nnotb #8 uses the same warm gold and deep purple range but packs forms edge to edge with a continuous white outline, making the open gap between #9's two figures a direct structural contrast.\"\n    }\n  ],\n  \"tags\": [\n    \"two-figure composition\",\n    \"open negative space between figures\",\n    \"bird-like beak form\",\n    \"flared skirt silhouette\",\n    \"loose background line sweeps\",\n    \"warm gold and deep purple contrast\"\n  ],\n  \"lookingQuestion\": \"What does the gap of empty background between the two figures do to your sense of whether they are moving toward or away from each other?\",\n  \"ambiguities\": [\n    \"The left figure's head ornament reads as layered ruffles or a hat; the exact form is not resolved in the image.\",\n    \"The pizza pizza pizza pizza day connection was dropped: the large-plus-small figure device is present in that image but the color, line density, and ground differ enough that the comparison adds little beyond a generic compositional note.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: gold fill with blue-red-pink loops on left figure, orange-brown and deep purple hatching on right figure, yellow arcs and pink diagonals on mauve-grey ground.\",\n    \"Connection to Qmf8ohKxZdwEwWMrX6LVkgTKwJArKskHtYbfLYyVXzLbp9 confirmed: #8 image shows edge-to-edge interlocking forms with prominent white outline, making the spatial contrast with #9 concrete and specific.\",\n    \"Connection to QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH removed: inspected image shows a bright flat blue ground, single dominant head, and a small secondary figure, but the color palette and line structure differ substantially; the shared device of size contrast is too generic to support a meaningful formal comparison.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw/image.png",
+        "imageSHA256": "fd29e4090e515b0dcfbb1deef000b9f67e769ad949551adbeb6e683a1d7dafed"
+      },
+      {
+        "artworkId": "Qmf8ohKxZdwEwWMrX6LVkgTKwJArKskHtYbfLYyVXzLbp9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf8ohKxZdwEwWMrX6LVkgTKwJArKskHtYbfLYyVXzLbp9/image.png",
+        "imageSHA256": "31663d2d9d7c76d6fca2478c8ead57ee36b1dd2b72821b682070d0e601ea13cf"
+      },
+      {
+        "artworkId": "QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH/image.png",
+        "imageSHA256": "7b6d1775bbf2ebb96153886c0b42c6e0bd0414a352762a454d20f143688ce7db"
+      },
+      {
+        "artworkId": "Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt/image.png",
+        "imageSHA256": "e8283ca46fc1a96e8d73f492eefc2730226a0411da6b715305e42acc8c45e704"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"On the left, a figure with a wide flared skirt and layered ruffled shoulders stands upright, its open-mouthed face built from overlapping loops of blue, red, and pink line over warm gold fill.\", \"On the right, a compact bird-like figure with a flat beak and frowning brow is densely hatched in orange-brown and deep purple, its right arm extended stiffly upward ending in a small fist.\", \"Behind both figures, loose yellow arcs and pink diagonal lines sweep across a muted mauve-grey ground, with no single focal point anchoring the background marks.\"], \"reading\": \"Two figures face each other across an open middle ground, one expansive and open-mouthed, the other compact and scowling. The contrast in posture—spread skirt against tight feathered body—reads as confrontation or standoff. The background lines do not resolve into a setting; they press forward as noise or weather. The mood feels charged but unresolved, the outcome genuinely unclear.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #8 and nnxyz nnotb #10 in both title order and recorded creation order. Where #8 fills the frame with interlocking animal forms and a dense white outline, #9 opens space between two distinct figures on a looser ground.\", \"connections\": [{\"targetArtworkId\": \"Qmf8ohKxZdwEwWMrX6LVkgTKwJArKskHtYbfLYyVXzLbp9\", \"reason\": \"nnxyz nnotb #8 uses the same warm gold and deep purple range but packs forms edge to edge with a continuous white outline, making the open gap between #9's two figures a direct structural contrast.\"}, {\"targetArtworkId\": \"QmPUh78P4Nya2eYnTHxbhRARSkAUm7AuhCTmtcAs7RZfgH\", \"reason\": \"pizza pizza pizza pizza day shares the device of a large expressive figure paired with a smaller secondary figure at lower right, both works using that size difference to suggest an unequal relationship.\"}], \"tags\": [\"two-figure composition\", \"open negative space between figures\", \"bird-like beak form\", \"flared skirt silhouette\", \"loose background line sweeps\", \"warm gold and deep purple contrast\"], \"lookingQuestion\": \"What does the gap of empty background between the two figures do to your sense of whether they are moving toward or away from each other?\", \"ambiguities\": [\"The left figure's head ornament reads as layered ruffles or a hat; the exact form is not resolved in the image.\", \"The connection to pizza pizza pizza pizza day rests on a single compositional device and is a weaker match than the #8 comparison.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

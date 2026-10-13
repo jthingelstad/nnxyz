@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:42.462241-05:00",
+    "usage": {
+      "inputTokens": 5798,
+      "outputTokens": 791,
+      "totalTokens": 6589,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12475
+    },
+    "requestId": "c1e3001b-0eeb-4877-98d7-f9ca41c37c6a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A round yellow head wearing dark headphones and X-marked sunglasses sits atop a white T-shirt printed with the text 'NIFTY INK'; arms extend wide against a flat teal background.\",\n    \"The word 'WAGMI' appears three times in loose hand-drawn lettering across the upper field, surrounded by small music-note symbols and white wavy lines that radiate outward from the figure.\",\n    \"A thick horizontal yellow bar cuts across the lower third of the image, and a single yellow vertical stroke drops from the figure's torso toward the bottom edge, anchoring the otherwise airborne pose.\"\n  ],\n  \"reading\": \"The figure's arms flung wide and feet lifted off the ground give the pose a buoyant, suspended quality. Wavy white lines and scattered music notes fill the teal field around it, reading as sound made visible. The repeated 'WAGMI' text functions as both caption and pattern, its loose lettering matching the energy of the lines. The yellow head and limbs against the flat background keep the figure readable while the surrounding marks stay loose.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between the recorded-creation neighbors 'nnxyz nifty summer night ink' and 'nnxyz 300 nifties.' The same flat teal ground and yellow-dominant figure appear in the owned nnotb works, suggesting a recurring color pairing across the collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs\",\n      \"reason\": \"Both works place a yellow-accented figure with wide-spread arms against the same flat teal ground, but nnotb #30 layers dense multicolor marks over the body while the primary work keeps its surface clean and spare.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW\",\n      \"reason\": \"Scrimshaw13 uses tight spiral lines to build its circular eye forms, a looping line behavior the collector links visually to the wavy radiating lines surrounding the dancing figure here.\"\n    }\n  ],\n  \"tags\": [\n    \"figure with outstretched arms\",\n    \"flat teal background\",\n    \"yellow circular head\",\n    \"repeated hand-lettered text\",\n    \"wavy radiating lines\",\n    \"music-note symbols\"\n  ],\n  \"interpretiveTags\": [\n    \"celebratory mood\",\n    \"sound-as-pattern\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first — toward the outstretched arms, the repeated text, or the horizontal yellow bar — and what does that path suggest about how the marks are weighted across the image?\",\n  \"ambiguities\": [\n    \"The nnotb #197 comparison image is dense with overlapping marks and does not share a clear formal parallel with the primary work's spare composition; it was not selected as a connection.\",\n    \"Whether the wavy white lines represent sound waves or a different kind of motion cannot be confirmed from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmayAHxG78z89NTBfThyJxZZJsQQcRPQNHHKHgbc7EueER",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmayAHxG78z89NTBfThyJxZZJsQQcRPQNHHKHgbc7EueER/image.png",
+        "imageSHA256": "080c6205f195096858d2363c3d1f3d04be3f3a3261a054b386be51ef95118798"
+      },
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4/image.png",
+        "imageSHA256": "f04d6b2eb90ef8427b9cea0084da2801cf8c3bd25e03cf8d66a21fda1e4cc43b"
+      },
+      {
+        "artworkId": "QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW/image.png",
+        "imageSHA256": "bd4be3a44b4396052d57b395bd2cd4751c5721ee0ad5a827a5352045229cc2cc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:49.841180-05:00",
+    "usage": {
+      "inputTokens": 6611,
+      "outputTokens": 943,
+      "totalTokens": 7554,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7308
+    },
+    "requestId": "5aaf6842-846c-4b91-9df2-8e7c45469215",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A round yellow head with dark headphones and X-marked sunglasses sits atop a white T-shirt printed with the text 'NIFTY INK'; arms extend wide against a flat teal background.\",\n    \"The word 'WAGMI' appears three times in loose hand-drawn lettering across the upper field, alongside small music-note symbols and white wavy lines that spread outward from the figure.\",\n    \"A thick horizontal yellow bar crosses the lower third of the image, and a single yellow vertical stroke descends from the figure's torso toward the bottom edge, leaving the figure's feet clear of the ground.\"\n  ],\n  \"reading\": \"The figure's arms flung wide and feet lifted give the pose a suspended, buoyant quality. White wavy lines and scattered music-note marks fill the teal field, reading as sound made visible. The repeated 'WAGMI' text acts as both caption and pattern, its loose lettering matching the surrounding marks. Yellow head and limbs against the flat ground keep the figure legible while everything around it stays loose and open.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between recorded-creation neighbors 'nnxyz nifty summer night ink' and 'nnxyz 300 nifties.' The same flat teal ground and yellow-dominant figure recur in owned nnotb works, marking a consistent color pairing across the collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs\",\n      \"reason\": \"Both works place a yellow-accented figure with wide-spread arms against the same flat teal ground, but nnotb #30 layers dense multicolor marks over the body while the primary work keeps its surface spare.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW\",\n      \"reason\": \"Scrimshaw13 builds its circular eye forms from tight spiral lines; the collector links that looping line behavior visually to the wavy lines radiating around the figure here.\"\n    }\n  ],\n  \"tags\": [\n    \"figure with outstretched arms\",\n    \"flat teal background\",\n    \"yellow circular head\",\n    \"repeated hand-lettered text\",\n    \"wavy radiating lines\",\n    \"music-note symbols\"\n  ],\n  \"interpretiveTags\": [\n    \"celebratory mood\",\n    \"sound-as-pattern\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first — toward the outstretched arms, the repeated text, or the horizontal yellow bar — and what does that path suggest about how the marks are weighted across the image?\",\n  \"ambiguities\": [\n    \"The nnotb #197 comparison image is dense with overlapping marks and shares no clear formal parallel with the primary work's spare composition; it was not selected as a connection.\",\n    \"Whether the white wavy lines represent sound, motion, or another kind of mark cannot be confirmed from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the image: yellow head with headphones and X sunglasses, 'NIFTY INK' T-shirt text, three 'WAGMI' instances, music-note symbols, white wavy lines, horizontal yellow bar, and vertical yellow stroke are all visible.\",\n    \"nnotb #30 comparison confirmed: flat teal ground and wide-armed yellow figure match; dense multicolor body marks in #30 versus spare surface in primary work is a supported contrast.\",\n    \"Scrimshaw13 spiral-line observation confirmed against that image; collector-perspective framing retained and clearly attributed; no unsupported intent or invented biography found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmayAHxG78z89NTBfThyJxZZJsQQcRPQNHHKHgbc7EueER",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmayAHxG78z89NTBfThyJxZZJsQQcRPQNHHKHgbc7EueER/image.png",
+        "imageSHA256": "080c6205f195096858d2363c3d1f3d04be3f3a3261a054b386be51ef95118798"
+      },
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVkxcgmGdn96FtVuZznZRDg38bB7wEt3tPjULbaRevoH4/image.png",
+        "imageSHA256": "f04d6b2eb90ef8427b9cea0084da2801cf8c3bd25e03cf8d66a21fda1e4cc43b"
+      },
+      {
+        "artworkId": "QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW/image.png",
+        "imageSHA256": "bd4be3a44b4396052d57b395bd2cd4751c5721ee0ad5a827a5352045229cc2cc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A round yellow head wearing dark headphones and X-marked sunglasses sits atop a white T-shirt printed with the text 'NIFTY INK'; arms extend wide against a flat teal background.\", \"The word 'WAGMI' appears three times in loose hand-drawn lettering across the upper field, surrounded by small music-note symbols and white wavy lines that radiate outward from the figure.\", \"A thick horizontal yellow bar cuts across the lower third of the image, and a single yellow vertical stroke drops from the figure's torso toward the bottom edge, anchoring the otherwise airborne pose.\"], \"reading\": \"The figure's arms flung wide and feet lifted off the ground give the pose a buoyant, suspended quality. Wavy white lines and scattered music notes fill the teal field around it, reading as sound made visible. The repeated 'WAGMI' text functions as both caption and pattern, its loose lettering matching the energy of the lines. The yellow head and limbs against the flat background keep the figure readable while the surrounding marks stay loose.\", \"contextAngle\": \"Within the owned nnxyz-other subset, this work sits between the recorded-creation neighbors 'nnxyz nifty summer night ink' and 'nnxyz 300 nifties.' The same flat teal ground and yellow-dominant figure appear in the owned nnotb works, suggesting a recurring color pairing across the collection.\", \"connections\": [{\"targetArtworkId\": \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs\", \"reason\": \"Both works place a yellow-accented figure with wide-spread arms against the same flat teal ground, but nnotb #30 layers dense multicolor marks over the body while the primary work keeps its surface clean and spare.\"}, {\"targetArtworkId\": \"QmTnM4aS4kEkasXGEFVRHCfv4o5GN9qzRhvztZQBTMF8cW\", \"reason\": \"Scrimshaw13 uses tight spiral lines to build its circular eye forms, a looping line behavior the collector links visually to the wavy radiating lines surrounding the dancing figure here.\"}], \"tags\": [\"figure with outstretched arms\", \"flat teal background\", \"yellow circular head\", \"repeated hand-lettered text\", \"wavy radiating lines\", \"music-note symbols\"], \"interpretiveTags\": [\"celebratory mood\", \"sound-as-pattern\"], \"lookingQuestion\": \"Where does your eye move first — toward the outstretched arms, the repeated text, or the horizontal yellow bar — and what does that path suggest about how the marks are weighted across the image?\", \"ambiguities\": [\"The nnotb #197 comparison image is dense with overlapping marks and does not share a clear formal parallel with the primary work's spare composition; it was not selected as a connection.\", \"Whether the wavy white lines represent sound waves or a different kind of motion cannot be confirmed from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

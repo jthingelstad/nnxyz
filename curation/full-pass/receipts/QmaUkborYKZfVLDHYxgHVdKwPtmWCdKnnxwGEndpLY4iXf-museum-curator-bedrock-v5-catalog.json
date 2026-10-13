@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:45.923029-05:00",
+    "usage": {
+      "inputTokens": 7044,
+      "outputTokens": 751,
+      "totalTokens": 7795,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12950
+    },
+    "requestId": "54d989ec-f6c2-4226-8052-ef7e08ce9767",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad rectangular face fills the canvas, built from nested black outlines layered over dense vertical yellow and red stripes, with two spiral-filled oval eye sockets near center.\",\n    \"Jagged zigzag lines run horizontally above and below the eye zone, and a bold V-shape sits open at the lower center, outlined in black over red and orange fills.\",\n    \"Small rectangular ear-like forms flank the face at mid-height, each containing a spiral; a band of repeating wave marks runs along the top edge against a red border.\"\n  ],\n  \"reading\": \"The face here is a flat, gridded structure — stripes, rectangles, and spirals stacked in rows rather than modeled in depth. The zigzag bands read as teeth or static, giving the expression an edge that sits somewhere between a grin and a grimace. White looping lines drift across the whole surface, softening the hard geometry without resolving it. The V-mouth holds the tension open.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #25 and #27. Where #25 dissolves its face into radiating strokes and #27 crops tightly on a dark ground, #26 keeps the full figure visible inside a busy but bounded frame.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z\",\n      \"reason\": \"Both #26 and #27 use stacked rectangular zones and zigzag-tooth bands to build a face, but #27 crops the form against a dark background while #26 keeps the full figure in a bright, open field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm\",\n      \"reason\": \"nnotb #159 shares the collector's noted visual link to scrimshaw through repeated spiral forms and dense nested outlines, a quality visible in both that work's square-within-square eye shapes and the spiral ear forms in #26.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular face structure\",\n    \"spiral eye forms\",\n    \"zigzag line bands\",\n    \"V-shaped mouth\",\n    \"vertical stripe fill\",\n    \"flanking ear rectangles\"\n  ],\n  \"interpretiveTags\": [\n    \"tense expression\",\n    \"mechanical affect\"\n  ],\n  \"lookingQuestion\": \"Where do the white looping lines cross the hard black outlines, and what happens to the sense of depth at those points?\",\n  \"ambiguities\": [\n    \"The collector's scrimshaw connection is a stated perspective on visual qualities, not a confirmed influence or technique; no making-process evidence is available.\",\n    \"nnotb #159 is from a different owned series; the spiral-outline resemblance supports the collector's cross-series pattern interest but the formal match is moderate rather than strong.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf/image.png",
+        "imageSHA256": "ede3560c9c1e93a94569db035f467613fe7c4604548f45f4108ca4b025c95143"
+      },
+      {
+        "artworkId": "QmV8UybASXWtrDbQEKHFJa8oMSLehb8PqkLKrHjQtxPycJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV8UybASXWtrDbQEKHFJa8oMSLehb8PqkLKrHjQtxPycJ/image.png",
+        "imageSHA256": "86d2d84bd0000096832f2d1ff990673cf27f3d192db1b3c9364426c76fdc27d4"
+      },
+      {
+        "artworkId": "QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm/image.png",
+        "imageSHA256": "e655b42ebb3ad083e6d5d37577451d747c3e12779a4ad2d21bd64593a22d3c67"
+      },
+      {
+        "artworkId": "QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z/image.png",
+        "imageSHA256": "744efef32aee219a31e484899b92fdfc2df49806fa14663d812c18d5032d01c0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:53.723632-05:00",
+    "usage": {
+      "inputTokens": 7817,
+      "outputTokens": 982,
+      "totalTokens": 8799,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7583
+    },
+    "requestId": "7868f39b-8400-4eda-bb4d-9d511ddf8836",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad rectangular face fills the canvas, built from nested black outlines over dense vertical yellow and red stripes, with two spiral-filled oval eye sockets placed near center.\",\n    \"Jagged zigzag lines run horizontally above and below the eye zone; a bold V-shape sits open at the lower center, outlined in black over red and orange fills.\",\n    \"Small rectangular ear-like forms flank the face at mid-height, each containing a spiral; a band of repeating wave marks runs along the top edge against a red border.\"\n  ],\n  \"reading\": \"The face is a flat, gridded structure — stripes, rectangles, and spirals stacked in rows rather than modeled in depth. The zigzag bands carry an edge that sits somewhere between a grin and a grimace. White looping lines drift across the whole surface, softening the hard geometry without resolving it. The open V-mouth holds that tension in place.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #25 and #27. Where #25 dissolves its face into radiating strokes on a warm ground, and #27 crops tightly against dark, #26 keeps the full figure visible inside a busy but bounded frame.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z\",\n      \"reason\": \"Both #26 and #27 use stacked rectangular zones and zigzag-tooth bands to build a face, but #27 crops hard against a dark ground while #26 holds the full figure in a bright, open field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm\",\n      \"reason\": \"nnotb #159 shares repeated spiral forms and dense nested outlines visible in its square-within-square eye shapes, echoing the spiral ear forms and layered outlines in #26 — the collector's noted cross-series pattern interest.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular face structure\",\n    \"spiral eye forms\",\n    \"zigzag line bands\",\n    \"V-shaped mouth\",\n    \"vertical stripe fill\",\n    \"flanking ear rectangles\"\n  ],\n  \"interpretiveTags\": [\n    \"tense expression\",\n    \"mechanical affect\"\n  ],\n  \"lookingQuestion\": \"Where do the white looping lines cross the hard black outlines, and what happens to the sense of depth at those points?\",\n  \"ambiguities\": [\n    \"The collector's scrimshaw connection is a stated perspective on visual qualities, not a confirmed influence or technique; no making-process evidence is available.\",\n    \"nnotb #159 is from a different owned series; the spiral-outline resemblance supports the collector's cross-series pattern interest but the formal match is moderate rather than strong.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: rectangular face with nested outlines, vertical stripe fill, spiral ovals, zigzag bands, V-mouth, flanking ear rectangles with spirals, and top-edge wave band are all visible.\",\n    \"Comparison with QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z (#27) confirmed: stacked rectangular zones and zigzag-tooth bands present in both; dark background contrast with #26's bright field is accurate.\",\n    \"Comparison with QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm (nnotb #159) confirmed: nested square outlines and spiral forms visible in that image; connection framed as collector's pattern interest, not asserted influence; no invented intent or technique added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf/image.png",
+        "imageSHA256": "ede3560c9c1e93a94569db035f467613fe7c4604548f45f4108ca4b025c95143"
+      },
+      {
+        "artworkId": "QmV8UybASXWtrDbQEKHFJa8oMSLehb8PqkLKrHjQtxPycJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV8UybASXWtrDbQEKHFJa8oMSLehb8PqkLKrHjQtxPycJ/image.png",
+        "imageSHA256": "86d2d84bd0000096832f2d1ff990673cf27f3d192db1b3c9364426c76fdc27d4"
+      },
+      {
+        "artworkId": "QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm/image.png",
+        "imageSHA256": "e655b42ebb3ad083e6d5d37577451d747c3e12779a4ad2d21bd64593a22d3c67"
+      },
+      {
+        "artworkId": "QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z/image.png",
+        "imageSHA256": "744efef32aee219a31e484899b92fdfc2df49806fa14663d812c18d5032d01c0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad rectangular face fills the canvas, built from nested black outlines layered over dense vertical yellow and red stripes, with two spiral-filled oval eye sockets near center.\", \"Jagged zigzag lines run horizontally above and below the eye zone, and a bold V-shape sits open at the lower center, outlined in black over red and orange fills.\", \"Small rectangular ear-like forms flank the face at mid-height, each containing a spiral; a band of repeating wave marks runs along the top edge against a red border.\"], \"reading\": \"The face here is a flat, gridded structure — stripes, rectangles, and spirals stacked in rows rather than modeled in depth. The zigzag bands read as teeth or static, giving the expression an edge that sits somewhere between a grin and a grimace. White looping lines drift across the whole surface, softening the hard geometry without resolving it. The V-mouth holds the tension open.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #25 and #27. Where #25 dissolves its face into radiating strokes and #27 crops tightly on a dark ground, #26 keeps the full figure visible inside a busy but bounded frame.\", \"connections\": [{\"targetArtworkId\": \"QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z\", \"reason\": \"Both #26 and #27 use stacked rectangular zones and zigzag-tooth bands to build a face, but #27 crops the form against a dark background while #26 keeps the full figure in a bright, open field.\"}, {\"targetArtworkId\": \"QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm\", \"reason\": \"nnotb #159 shares the collector's noted visual link to scrimshaw through repeated spiral forms and dense nested outlines, a quality visible in both that work's square-within-square eye shapes and the spiral ear forms in #26.\"}], \"tags\": [\"rectangular face structure\", \"spiral eye forms\", \"zigzag line bands\", \"V-shaped mouth\", \"vertical stripe fill\", \"flanking ear rectangles\"], \"interpretiveTags\": [\"tense expression\", \"mechanical affect\"], \"lookingQuestion\": \"Where do the white looping lines cross the hard black outlines, and what happens to the sense of depth at those points?\", \"ambiguities\": [\"The collector's scrimshaw connection is a stated perspective on visual qualities, not a confirmed influence or technique; no making-process evidence is available.\", \"nnotb #159 is from a different owned series; the spiral-outline resemblance supports the collector's cross-series pattern interest but the formal match is moderate rather than strong.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

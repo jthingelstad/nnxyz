@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:39.574327-05:00",
+    "usage": {
+      "inputTokens": 6285,
+      "outputTokens": 693,
+      "totalTokens": 6978,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20847
+    },
+    "requestId": "93688290-dc0f-4e78-8794-8519d455fcff",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large white X mark sits over the right side of the face, its thick strokes cutting across olive and teal lines beneath.\",\n    \"A red oval mouth shape near the bottom center contains jagged yellow-green teeth-like marks, framed by a bright pink lip outline.\",\n    \"Lime-green and yellow hatched lines radiate outward from the top of the head, layered over purple framing lines that loosely define the skull shape.\"\n  ],\n  \"reading\": \"The face reads as split between containment and overflow. Heavy black lines carve out a nose bridge and brow, but color escapes everywhere—cyan spirals at the throat, magenta edges along the jaw, yellow bursts above the crown. The white X over one eye socket can feel like a cancellation or a wound. The open red mouth, with its crude teeth, holds something between a shout and a grin, leaving the mood unsettled.\",\n  \"contextAngle\": \"In the owned Scrimshaw subset, this sits between \\\"Scrimshaw 33\\\" and \\\"Scrimshaw 41\\\" by title number. Both neighbors use dense overlapping lines to build head-like forms, but this work stands out for its flat gray background, which isolates the figure more starkly than the dark fields of its neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\",\n      \"reason\": \"Both show bared teeth inside a red-outlined mouth, but Scrimshaw 41 uses white zigzag teeth against a dark ground while this work uses yellow-green marks against pink.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV\",\n      \"reason\": \"Both place a face on a matching gray background with crossed-out eye areas; the nnxyz work uses red X hatching in squared sockets, while this work uses a single bold white X.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth with teeth\",\n    \"white X mark\",\n    \"dense overlapping lines\",\n    \"gray flat background\",\n    \"multicolor hatching\",\n    \"head-like form\"\n  ],\n  \"lookingQuestion\": \"Where do the purple framing lines begin and end—do they outline the whole head, or do they break apart in places, and what happens to the figure where they disappear?\",\n  \"ambiguities\": [\n    \"Whether the white X functions as an eye or as an overlay mark placed on top of the face cannot be determined from the image alone.\",\n    \"The teal spiral cluster at the lower throat area may represent a separate element or simply extend from the face's line network.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd/image.png",
+        "imageSHA256": "ac0065d1817a032625a2400fd56070f2cc8f5fee5c9da9da48500a21919945c1"
+      },
+      {
+        "artworkId": "QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX/image.png",
+        "imageSHA256": "f7641c94baea961e0c705ce405e70b57d0dba484bd3c3bd49f0f168e47cc8a4e"
+      },
+      {
+        "artworkId": "QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV/image.png",
+        "imageSHA256": "e55a6cae552483214e63fe56234fb274efbd223ccd2717c133227622f43be760"
+      },
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:51.871168-05:00",
+    "usage": {
+      "inputTokens": 7010,
+      "outputTokens": 831,
+      "totalTokens": 7841,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12230
+    },
+    "requestId": "fce1808f-da8a-4fcf-a1a9-794cacbe8658",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A thick white X sits over the right side of the face, crossing olive-green and teal lines that fill that area.\",\n    \"A red oval mouth near the bottom center holds jagged yellow-green tooth-like marks, outlined by a bright pink lip shape.\",\n    \"Lime-green and yellow hatched lines spray outward from the top of the head, layered over purple lines that loosely frame the skull shape.\"\n  ],\n  \"reading\": \"Heavy black lines carve a nose bridge and brow, but color escapes everywhere—cyan curls at the throat, magenta along the jaw, yellow above the crown. The white X over one eye area can read as a cancellation or a wound. The open red mouth, with its crude teeth, holds something between a shout and a grin, leaving the mood unresolved. A flat gray field isolates the figure starkly.\",\n  \"contextAngle\": \"In the owned Scrimshaw subset, this sits between \\\"Scrimshaw 33\\\" and \\\"Scrimshaw 41\\\" by title number. Both neighbors build head-like forms from dense overlapping lines, but this work's flat gray background isolates the figure more sharply than the dark fields surrounding its neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\",\n      \"reason\": \"Both show bared teeth inside a red-outlined mouth, but Scrimshaw 41 uses white zigzag teeth on a dark ground while this work uses yellow-green marks against pink.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV\",\n      \"reason\": \"Both place a face on a gray background with crossed-out eye areas; the nnxyz work uses red X hatching in squared sockets, while this work uses a single bold white X.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth with teeth\",\n    \"white X mark\",\n    \"dense overlapping lines\",\n    \"gray flat background\",\n    \"multicolor hatching\",\n    \"head-like form\"\n  ],\n  \"lookingQuestion\": \"Where do the purple framing lines begin and end—do they outline the whole head, or do they break apart, and what happens to the figure where they disappear?\",\n  \"ambiguities\": [\n    \"Whether the white X functions as an eye or as an overlay mark placed on top of the face cannot be determined from the image alone.\",\n    \"The teal spiral cluster at the lower throat area may be a separate element or an extension of the face's line network.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed white X on right side, red oval mouth with yellow-green teeth, and lime-green hatching at top—all match the image.\",\n    \"Trimmed reading from 82 words to 65 to meet the limit; removed 'cyan spirals' phrasing and replaced with 'cyan curls' after checking the throat area shows looping teal lines, not tight spirals.\",\n    \"Checked both comparisons against images: Scrimshaw 41 does show white zigzag teeth on dark ground, and nnxyz #101 does share a gray background with red X-hatched eye sockets—both hold.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd/image.png",
+        "imageSHA256": "ac0065d1817a032625a2400fd56070f2cc8f5fee5c9da9da48500a21919945c1"
+      },
+      {
+        "artworkId": "QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX/image.png",
+        "imageSHA256": "f7641c94baea961e0c705ce405e70b57d0dba484bd3c3bd49f0f168e47cc8a4e"
+      },
+      {
+        "artworkId": "QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV/image.png",
+        "imageSHA256": "e55a6cae552483214e63fe56234fb274efbd223ccd2717c133227622f43be760"
+      },
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large white X mark sits over the right side of the face, its thick strokes cutting across olive and teal lines beneath.\", \"A red oval mouth shape near the bottom center contains jagged yellow-green teeth-like marks, framed by a bright pink lip outline.\", \"Lime-green and yellow hatched lines radiate outward from the top of the head, layered over purple framing lines that loosely define the skull shape.\"], \"reading\": \"The face reads as split between containment and overflow. Heavy black lines carve out a nose bridge and brow, but color escapes everywhere—cyan spirals at the throat, magenta edges along the jaw, yellow bursts above the crown. The white X over one eye socket can feel like a cancellation or a wound. The open red mouth, with its crude teeth, holds something between a shout and a grin, leaving the mood unsettled.\", \"contextAngle\": \"In the owned Scrimshaw subset, this sits between \\\"Scrimshaw 33\\\" and \\\"Scrimshaw 41\\\" by title number. Both neighbors use dense overlapping lines to build head-like forms, but this work stands out for its flat gray background, which isolates the figure more starkly than the dark fields of its neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\", \"reason\": \"Both show bared teeth inside a red-outlined mouth, but Scrimshaw 41 uses white zigzag teeth against a dark ground while this work uses yellow-green marks against pink.\"}, {\"targetArtworkId\": \"QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV\", \"reason\": \"Both place a face on a matching gray background with crossed-out eye areas; the nnxyz work uses red X hatching in squared sockets, while this work uses a single bold white X.\"}], \"tags\": [\"open mouth with teeth\", \"white X mark\", \"dense overlapping lines\", \"gray flat background\", \"multicolor hatching\", \"head-like form\"], \"lookingQuestion\": \"Where do the purple framing lines begin and end—do they outline the whole head, or do they break apart in places, and what happens to the figure where they disappear?\", \"ambiguities\": [\"Whether the white X functions as an eye or as an overlay mark placed on top of the face cannot be determined from the image alone.\", \"The teal spiral cluster at the lower throat area may represent a separate element or simply extend from the face's line network.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

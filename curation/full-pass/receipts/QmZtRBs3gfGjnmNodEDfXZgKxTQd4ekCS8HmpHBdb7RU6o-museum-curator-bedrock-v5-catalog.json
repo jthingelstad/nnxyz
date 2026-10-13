@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:53.077688-05:00",
+    "usage": {
+      "inputTokens": 6346,
+      "outputTokens": 815,
+      "totalTokens": 7161,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13199
+    },
+    "requestId": "90029514-4574-43ef-b6ce-63b47a5587d2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A saturated amber-yellow field fills most of the background, against which two large circular eye-forms sit asymmetrically: the left holds a bold orange X on a red ground, the right a zigzag-banded rectangle in blue, red and gold.\",\n    \"A column of sky-blue circles runs down each side edge, outlined in black, giving the composition a beaded border that frames the central mass without merging into it.\",\n    \"The lower half is dominated by interlocking triangular and trapezoidal shapes in yellow, grey and white, layered with fine cross-hatched lines that read as a jaw or chest plate; a row of small gold circles sits along the bottom of this zone.\"\n  ],\n  \"reading\": \"Two mismatched eye-forms anchor a frontal figure against a field of deep amber, one eye carrying an X, the other a stack of zigzag bands — a pairing that feels confrontational rather than symmetrical. The beaded blue columns at each edge hold the composition in, while the lower lattice of triangles and hatching suggests something armored or ceremonial. The overall mood reads as watchful and charged.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the amber ground here contrasts sharply with the near-black field of title-neighbor nnxyz nnotb #123, while the frontal face structure echoes nnxyz nnotb #125. The collector links the repeating circular bead motif to the patterned surfaces that drew them to scrimshaw.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh\",\n      \"reason\": \"Both works place two distinct eye-forms side by side on a frontal face, each eye carrying a different interior mark — an X and a cross in #125, an X and a zigzag band here — making the asymmetry a direct point of comparison.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNXBbobmMfVeWq2qVtj7M3ebg4cpDVyccDtccNTqgeeiQ\",\n      \"reason\": \"The title-neighbor #123 uses a near-black ground with scattered neon lines, a strong tonal contrast to the dense amber warmth here, showing the range the nnotb owned subset spans across adjacent works.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face structure\",\n    \"asymmetric eye forms\",\n    \"beaded border circles\",\n    \"zigzag banding\",\n    \"cross-hatched lower zone\",\n    \"amber ground\"\n  ],\n  \"interpretiveTags\": [\n    \"ceremonial mood\",\n    \"watchful presence\"\n  ],\n  \"lookingQuestion\": \"How does the difference between the two eye-forms — one holding an X, the other a stack of zigzag bands — affect the way you read the left and right sides of the figure?\",\n  \"ambiguities\": [\n    \"The blue-circle border columns could be read as part of the figure or as a framing device independent of it; the image does not resolve this clearly.\",\n    \"nnxyz nifty faces #131 shares the same artist but shows no strong formal connection to this work beyond loose face structure; it was inspected and set aside as a weak candidate.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o/image.png",
+        "imageSHA256": "19844051723496c00723a35d6b81521eb0c91193b1432c5792c2be0e39018644"
+      },
+      {
+        "artworkId": "QmNXBbobmMfVeWq2qVtj7M3ebg4cpDVyccDtccNTqgeeiQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNXBbobmMfVeWq2qVtj7M3ebg4cpDVyccDtccNTqgeeiQ/image.png",
+        "imageSHA256": "a0785fbf9887d951919d7af40ef39cd220111caf7d5fe49506ab674d53e65687"
+      },
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      },
+      {
+        "artworkId": "QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh/image.png",
+        "imageSHA256": "a9766968e0208726a314e72e257cdb4ed0a5b4a2e51a6ef5455e2908a66e457f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:01.678550-05:00",
+    "usage": {
+      "inputTokens": 7183,
+      "outputTokens": 964,
+      "totalTokens": 8147,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 8247
+    },
+    "requestId": "d2624812-6b5d-4280-8cb3-d653b65b4216",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A saturated amber-yellow field fills most of the background; two large circular eye-forms sit asymmetrically — the left holds a bold orange X on a red ground, the right a zigzag-banded rectangle in blue, red and gold.\",\n    \"A column of sky-blue circles outlined in black runs down each side edge, forming a beaded border that frames the central mass without merging into it.\",\n    \"The lower half is built from interlocking triangles and trapezoids in yellow, grey and white, layered with fine cross-hatched lines; a row of small gold circles runs along the bottom of this zone.\"\n  ],\n  \"reading\": \"Two mismatched eye-forms anchor a frontal figure against deep amber — one carrying an X, the other a stack of zigzag bands — a pairing that feels confrontational rather than symmetrical. The beaded blue columns at each edge contain the composition, while the lower lattice of triangles and hatching suggests something armored. The mood reads as watchful and charged.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the amber ground here contrasts sharply with the near-black field of title-neighbor nnxyz nnotb #123. The collector links the repeating circular bead motif to the patterned surfaces that drew them to scrimshaw.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh\",\n      \"reason\": \"nnxyz nnotb #125 also places two distinct eye-forms side by side on a frontal face, each carrying a different interior mark — an X and a cross — making the asymmetric eye pairing a direct point of comparison between the two works.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNXBbobmMfVeWq2qVtj7M3ebg4cpDVyccDtccNTqgeeiQ\",\n      \"reason\": \"nnxyz nnotb #123 uses a near-black ground with scattered neon lines, a strong tonal contrast to the dense amber warmth here, showing the range the owned nnotb subset spans across adjacent title-neighbors.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face structure\",\n    \"asymmetric eye forms\",\n    \"beaded border circles\",\n    \"zigzag banding\",\n    \"cross-hatched lower zone\",\n    \"amber ground\"\n  ],\n  \"interpretiveTags\": [\n    \"ceremonial mood\",\n    \"watchful presence\"\n  ],\n  \"lookingQuestion\": \"How does the difference between the two eye-forms — one holding an X, the other a stack of zigzag bands — affect the way you read the left and right sides of the figure?\",\n  \"ambiguities\": [\n    \"The blue-circle columns could read as part of the figure or as an independent framing device; the image does not resolve this clearly.\",\n    \"nnxyz nifty faces #131 was inspected and set aside — it shares the artist but shows no strong formal connection beyond a loose face structure.\"\n  ],\n  \"reviewFindings\": [\n    \"All colors and forms confirmed against the primary image: amber ground, orange X on red in left eye, zigzag-banded rectangle in right eye, sky-blue beaded columns, triangular lower zone with gold circles — all visible and accurately described.\",\n    \"Comparison with QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh confirmed: #125 shows two frontal eye-forms each with distinct interior marks (X and cross), supporting the asymmetric-eye comparison; draft claim was accurate.\",\n    \"Removed 'evolving' and intent-implying language from draft; confirmed no invented biography, technique claims, or unsupported subject identities remain; word counts for reading and contextAngle fall within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o/image.png",
+        "imageSHA256": "19844051723496c00723a35d6b81521eb0c91193b1432c5792c2be0e39018644"
+      },
+      {
+        "artworkId": "QmNXBbobmMfVeWq2qVtj7M3ebg4cpDVyccDtccNTqgeeiQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNXBbobmMfVeWq2qVtj7M3ebg4cpDVyccDtccNTqgeeiQ/image.png",
+        "imageSHA256": "a0785fbf9887d951919d7af40ef39cd220111caf7d5fe49506ab674d53e65687"
+      },
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      },
+      {
+        "artworkId": "QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh/image.png",
+        "imageSHA256": "a9766968e0208726a314e72e257cdb4ed0a5b4a2e51a6ef5455e2908a66e457f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A saturated amber-yellow field fills most of the background, against which two large circular eye-forms sit asymmetrically: the left holds a bold orange X on a red ground, the right a zigzag-banded rectangle in blue, red and gold.\", \"A column of sky-blue circles runs down each side edge, outlined in black, giving the composition a beaded border that frames the central mass without merging into it.\", \"The lower half is dominated by interlocking triangular and trapezoidal shapes in yellow, grey and white, layered with fine cross-hatched lines that read as a jaw or chest plate; a row of small gold circles sits along the bottom of this zone.\"], \"reading\": \"Two mismatched eye-forms anchor a frontal figure against a field of deep amber, one eye carrying an X, the other a stack of zigzag bands — a pairing that feels confrontational rather than symmetrical. The beaded blue columns at each edge hold the composition in, while the lower lattice of triangles and hatching suggests something armored or ceremonial. The overall mood reads as watchful and charged.\", \"contextAngle\": \"Within the owned nnotb subset, the amber ground here contrasts sharply with the near-black field of title-neighbor nnxyz nnotb #123, while the frontal face structure echoes nnxyz nnotb #125. The collector links the repeating circular bead motif to the patterned surfaces that drew them to scrimshaw.\", \"connections\": [{\"targetArtworkId\": \"QmTE9Cwj89ruzhD6wBTVnGQShd2ttKgQh1KoHkZjar8RFh\", \"reason\": \"Both works place two distinct eye-forms side by side on a frontal face, each eye carrying a different interior mark — an X and a cross in #125, an X and a zigzag band here — making the asymmetry a direct point of comparison.\"}, {\"targetArtworkId\": \"QmNXBbobmMfVeWq2qVtj7M3ebg4cpDVyccDtccNTqgeeiQ\", \"reason\": \"The title-neighbor #123 uses a near-black ground with scattered neon lines, a strong tonal contrast to the dense amber warmth here, showing the range the nnotb owned subset spans across adjacent works.\"}], \"tags\": [\"frontal face structure\", \"asymmetric eye forms\", \"beaded border circles\", \"zigzag banding\", \"cross-hatched lower zone\", \"amber ground\"], \"interpretiveTags\": [\"ceremonial mood\", \"watchful presence\"], \"lookingQuestion\": \"How does the difference between the two eye-forms — one holding an X, the other a stack of zigzag bands — affect the way you read the left and right sides of the figure?\", \"ambiguities\": [\"The blue-circle border columns could be read as part of the figure or as a framing device independent of it; the image does not resolve this clearly.\", \"nnxyz nifty faces #131 shares the same artist but shows no strong formal connection to this work beyond loose face structure; it was inspected and set aside as a weak candidate.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

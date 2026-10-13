@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:28.826558-05:00",
+    "usage": {
+      "inputTokens": 6184,
+      "outputTokens": 752,
+      "totalTokens": 6936,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13025
+    },
+    "requestId": "5603e7cd-0e15-40d9-ba28-d11173e26e51",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head fills most of the frame, tilted slightly downward, with layered gold, olive, and purple tones built up from overlapping color washes beneath dense scribbled lines.\",\n    \"Rectangular glasses sit askew across the face — one lens higher on the forehead, one lower near the eye — rendered in thick black outlines with small reflective highlights inside each frame.\",\n    \"Short, tangled marks in yellow, white, and purple radiate outward from the hair mass against a flat sky-blue background, while a partial hand appears at the lower right edge.\"\n  ],\n  \"reading\": \"The head presses close to the picture edge, glasses riding at two different heights as if mid-slip. Scribbled lines in yellow and purple cross the face without settling into smooth contour, giving the skin a restless, layered quality. The open mouth shows teeth, and the downward tilt reads as either weariness or concentration — the image holds both possibilities without resolving them.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #130 and #132. Where #130 uses a yellow-green ground and compresses the head into a rounder, darker mass, #131 opens onto flat blue and lets the figure breathe outward into loose hair marks.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN\",\n      \"reason\": \"Both works place a large head against a single flat color field and use layered gold-olive washes under scribbled lines, but #130's olive-green ground and compressed, hat-topped form contrast with #131's open blue space and loose hair mass.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdwkU2REbPAP5zP5bVoa9xP2tHkSg9L6CHabU3aoPooHB\",\n      \"reason\": \"Both share the same flat sky-blue background and use circular or lens-like forms as focal points within the face, though nnotb #175 surrounds its forms with decorative dot borders while #131 keeps its glasses plain and off-axis.\"\n    }\n  ],\n  \"tags\": [\n    \"askew glasses\",\n    \"layered color washes\",\n    \"scribbled line texture\",\n    \"flat blue background\",\n    \"close-cropped head\",\n    \"visible teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"weighted mood\",\n    \"unresolved tension\"\n  ],\n  \"lookingQuestion\": \"The two lenses of the glasses sit at noticeably different heights on the face — what does that misalignment do to how you read the expression?\",\n  \"ambiguities\": [\n    \"The partial form at the lower right edge may be a hand or a collar; the image crops it before it resolves.\",\n    \"Title-derived order and recorded-creation order align here, but gaps exist elsewhere in the owned nifty-faces subset, so adjacency does not confirm sequential making.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      },
+      {
+        "artworkId": "QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN/image.png",
+        "imageSHA256": "2689cdcd26fc8bd4633189b8cc68558e73c4318cdc8a428d260090c2859c3946"
+      },
+      {
+        "artworkId": "QmdwkU2REbPAP5zP5bVoa9xP2tHkSg9L6CHabU3aoPooHB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdwkU2REbPAP5zP5bVoa9xP2tHkSg9L6CHabU3aoPooHB/image.png",
+        "imageSHA256": "33a2386c5c150b99d978471d7794e6fd8aca7c21b6163f69bf527459d8ada067"
+      },
+      {
+        "artworkId": "QmZrvtsQy3N4zBqiqcSH6Wk5GxbAjBVvBvwmi22sCPXxE6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZrvtsQy3N4zBqiqcSH6Wk5GxbAjBVvBvwmi22sCPXxE6/image.png",
+        "imageSHA256": "7e884b603b60cf502f4f25077ca0c3e5134666490e07fcde4d080c3e9b929239"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:35.024530-05:00",
+    "usage": {
+      "inputTokens": 6958,
+      "outputTokens": 884,
+      "totalTokens": 7842,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6108
+    },
+    "requestId": "ef731975-3353-43e7-b576-4e237607cdbd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head fills most of the frame, tilted slightly downward, with layered gold, olive, and purple tones built up from overlapping color washes beneath dense scribbled lines.\",\n    \"Rectangular glasses sit askew across the face — one lens higher on the forehead, one lower near the eye — rendered in thick black outlines with small reflective highlights inside each frame.\",\n    \"Short, tangled marks in yellow, white, and purple radiate outward from the hair mass against a flat sky-blue background, while a partial form appears at the lower right edge.\"\n  ],\n  \"reading\": \"The head presses close to the picture edge, glasses riding at two different heights as if mid-slip. Scribbled lines in yellow and purple cross the face without settling into smooth contour, giving the skin a restless, layered quality. The open mouth shows teeth, and the downward tilt reads as either weariness or concentration — the image holds both possibilities without resolving them.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #130 and #132. Where #130 uses a yellow-green ground and compresses the head into a rounder, darker mass, #131 opens onto flat blue and lets the figure extend outward into loose hair marks.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN\",\n      \"reason\": \"Both place a large head against a single flat color field with layered gold-olive washes under scribbled lines, but #130's olive-green ground and compressed, hat-topped form contrast with #131's open blue space and loose hair mass.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdwkU2REbPAP5zP5bVoa9xP2tHkSg9L6CHabU3aoPooHB\",\n      \"reason\": \"Both share a flat sky-blue background and use lens-like enclosed forms as focal points within the face, though nnotb #175 surrounds its forms with decorative dot borders while #131 keeps its glasses plain and off-axis.\"\n    }\n  ],\n  \"tags\": [\n    \"askew glasses\",\n    \"layered color washes\",\n    \"scribbled line texture\",\n    \"flat blue background\",\n    \"close-cropped head\",\n    \"visible teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"weighted mood\",\n    \"unresolved tension\"\n  ],\n  \"lookingQuestion\": \"The two lenses of the glasses sit at noticeably different heights on the face — what does that misalignment do to how you read the expression?\",\n  \"ambiguities\": [\n    \"The partial form at the lower right edge may be a hand or a collar; the image crops it before it resolves.\",\n    \"Title-derived order and recorded-creation order align for this work, but gaps exist elsewhere in the owned nifty-faces subset, so adjacency does not confirm sequential making.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: glasses asymmetry, gold-olive-purple washes, flat sky-blue ground, and loose hair marks are all directly visible in the primary image.\",\n    \"Corrected 'partial hand' to 'partial form' in observation 3 — the crop does not resolve the shape clearly enough to name it as a hand.\",\n    \"Both comparison connections verified against inspected images: #130 confirms olive-green ground and compressed rounded head; nnotb #175 confirms matching sky-blue background and lens-like enclosed forms with dot borders.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      },
+      {
+        "artworkId": "QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN/image.png",
+        "imageSHA256": "2689cdcd26fc8bd4633189b8cc68558e73c4318cdc8a428d260090c2859c3946"
+      },
+      {
+        "artworkId": "QmdwkU2REbPAP5zP5bVoa9xP2tHkSg9L6CHabU3aoPooHB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdwkU2REbPAP5zP5bVoa9xP2tHkSg9L6CHabU3aoPooHB/image.png",
+        "imageSHA256": "33a2386c5c150b99d978471d7794e6fd8aca7c21b6163f69bf527459d8ada067"
+      },
+      {
+        "artworkId": "QmZrvtsQy3N4zBqiqcSH6Wk5GxbAjBVvBvwmi22sCPXxE6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZrvtsQy3N4zBqiqcSH6Wk5GxbAjBVvBvwmi22sCPXxE6/image.png",
+        "imageSHA256": "7e884b603b60cf502f4f25077ca0c3e5134666490e07fcde4d080c3e9b929239"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large head fills most of the frame, tilted slightly downward, with layered gold, olive, and purple tones built up from overlapping color washes beneath dense scribbled lines.\", \"Rectangular glasses sit askew across the face — one lens higher on the forehead, one lower near the eye — rendered in thick black outlines with small reflective highlights inside each frame.\", \"Short, tangled marks in yellow, white, and purple radiate outward from the hair mass against a flat sky-blue background, while a partial hand appears at the lower right edge.\"], \"reading\": \"The head presses close to the picture edge, glasses riding at two different heights as if mid-slip. Scribbled lines in yellow and purple cross the face without settling into smooth contour, giving the skin a restless, layered quality. The open mouth shows teeth, and the downward tilt reads as either weariness or concentration — the image holds both possibilities without resolving them.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #130 and #132. Where #130 uses a yellow-green ground and compresses the head into a rounder, darker mass, #131 opens onto flat blue and lets the figure breathe outward into loose hair marks.\", \"connections\": [{\"targetArtworkId\": \"QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN\", \"reason\": \"Both works place a large head against a single flat color field and use layered gold-olive washes under scribbled lines, but #130's olive-green ground and compressed, hat-topped form contrast with #131's open blue space and loose hair mass.\"}, {\"targetArtworkId\": \"QmdwkU2REbPAP5zP5bVoa9xP2tHkSg9L6CHabU3aoPooHB\", \"reason\": \"Both share the same flat sky-blue background and use circular or lens-like forms as focal points within the face, though nnotb #175 surrounds its forms with decorative dot borders while #131 keeps its glasses plain and off-axis.\"}], \"tags\": [\"askew glasses\", \"layered color washes\", \"scribbled line texture\", \"flat blue background\", \"close-cropped head\", \"visible teeth\"], \"interpretiveTags\": [\"weighted mood\", \"unresolved tension\"], \"lookingQuestion\": \"The two lenses of the glasses sit at noticeably different heights on the face — what does that misalignment do to how you read the expression?\", \"ambiguities\": [\"The partial form at the lower right edge may be a hand or a collar; the image crops it before it resolves.\", \"Title-derived order and recorded-creation order align here, but gaps exist elsewhere in the owned nifty-faces subset, so adjacency does not confirm sequential making.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

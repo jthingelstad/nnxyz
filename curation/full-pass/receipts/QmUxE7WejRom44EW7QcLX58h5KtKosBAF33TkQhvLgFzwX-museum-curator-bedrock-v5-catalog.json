@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:44.381396-05:00",
+    "usage": {
+      "inputTokens": 6578,
+      "outputTokens": 658,
+      "totalTokens": 7236,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11893
+    },
+    "requestId": "70be9ae1-fea2-4a26-947c-23676f277c59",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded head shape fills the center, built from overlapping yellow and orange hatched lines, topped by a teal flat-brimmed cap outlined in dark strokes.\",\n    \"Hot-pink lettering spelling 'NM / xyz' sits across the face where eyes would be, drawn in thick looping lines that read as both text and mask.\",\n    \"The dark background is covered edge-to-edge in crossing red, green, and pink diagonal strokes, leaving almost no bare ground visible.\"\n  ],\n  \"reading\": \"The face pushes forward, its yellow-orange surface made entirely of layered hatching rather than solid fill. The pink lettering sits where eyes should be, turning the face into a kind of billboard. Around it, the background crackles with red and green crosshatching that reads as noise or static. The grin below the lettered zone is wide and tooth-lined, giving the image a charged, unsettled feeling.\",\n  \"contextAngle\": \"This work sits first in the artist's recorded-creation archive within the owned subset. The comparison pieces come from the separate nifty-faces numbered title family. The collector links this image to scrimshaw through its dense line-over-line surface, where marks accumulate into form the way engraved lines build tone on bone.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq\",\n      \"reason\": \"Both works center a face-like form on a dark ground and use spiral or looping lines as eye-stand-ins, but nifty faces #29 replaces hatched fill with large concentric coils, making the pattern logic explicit where the primary work keeps it compressed.\"\n    }\n  ],\n  \"tags\": [\n    \"hatched-fill\",\n    \"embedded-lettering\",\n    \"flat-brimmed-cap\",\n    \"dense-crosshatch-background\",\n    \"wide-grin\",\n    \"face-as-surface\"\n  ],\n  \"interpretiveTags\": [\n    \"charged\",\n    \"unsettled\",\n    \"confrontational\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the pink lettering end and the face's features begin, and what happens to your reading of the image at that boundary?\",\n  \"ambiguities\": [\n    \"The nifty faces #23 and #56 comparison images show no strong formal overlap with the primary work's hatched-face-plus-cap structure, so they were not selected as connections.\",\n    \"The white handwritten 'NM xyz 2017' in the top-left corner appears to be a date, but dates are not confirmed by the validated metadata supplied.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX/image.png",
+        "imageSHA256": "fa7b1d2d6f943cfc153c6bf88506c3475ec60168cb9b5bfe3a27e17273ef43fe"
+      },
+      {
+        "artworkId": "QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq/image.png",
+        "imageSHA256": "f07b5f51d4006ce11485f0af29b1c0a5a07678858f4c54dff7d41d90ae8556df"
+      },
+      {
+        "artworkId": "QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM/image.png",
+        "imageSHA256": "fcd8ca63293af945fe056a8c1f022ecb706a6221ab31f5d0bd90ddc8113874ba"
+      },
+      {
+        "artworkId": "QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa/image.png",
+        "imageSHA256": "6a7259a7debff91b2fd51f30950c0721127640cc46d7ed781471cdf09fdc96f2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:51.622376-05:00",
+    "usage": {
+      "inputTokens": 7265,
+      "outputTokens": 839,
+      "totalTokens": 8104,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7116
+    },
+    "requestId": "08d8ed30-8476-42ee-9c8d-976d34f5bdf2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded head shape fills the center, built from overlapping yellow and orange hatched lines, topped by a teal flat-brimmed cap outlined in dark strokes.\",\n    \"Hot-pink lettering spelling 'NM / xyz' sits across the face where eyes would be, drawn in thick looping lines that read as both text and mask.\",\n    \"The dark background is covered edge-to-edge in crossing red, green, and pink diagonal strokes, leaving almost no bare ground visible.\"\n  ],\n  \"reading\": \"The face pushes forward, its yellow-orange surface made entirely of layered hatching rather than solid fill. The pink lettering sits where eyes would be, turning the face into a kind of billboard. Around it, the background crackles with red and green crosshatching that reads as noise or static. A wide, tooth-lined grin below the lettered zone gives the image a charged, unsettled feeling.\",\n  \"contextAngle\": \"This work sits first in the recorded-creation archive within the owned subset. The comparison pieces come from the separate nifty-faces numbered title family. The collector links this image to scrimshaw through its dense line-over-line surface, where marks accumulate into form the way engraved lines build tone.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq\",\n      \"reason\": \"Both center a face-like form on a dark ground and use looping lines as eye-stand-ins, but nifty faces #29 replaces hatched fill with large concentric coils, making the pattern logic explicit where the primary work keeps it compressed.\"\n    }\n  ],\n  \"tags\": [\n    \"hatched-fill\",\n    \"embedded-lettering\",\n    \"flat-brimmed-cap\",\n    \"dense-crosshatch-background\",\n    \"wide-grin\",\n    \"face-as-surface\"\n  ],\n  \"interpretiveTags\": [\n    \"charged\",\n    \"unsettled\",\n    \"confrontational\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the pink lettering end and the face's features begin, and what happens to your reading of the image at that boundary?\",\n  \"ambiguities\": [\n    \"The nifty faces #23 and #56 comparison images show no strong formal overlap with the primary work's hatched-face-plus-cap structure, so they were not selected as connections.\",\n    \"The white handwritten text in the top-left corner appears to include a year, but this is not confirmed by the validated metadata supplied.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: teal cap, yellow-orange hatched face, pink looping lettering across the eye zone, and edge-to-edge red/green/pink crosshatch background are all visible.\",\n    \"Reading revised minimally: 'should be' changed to 'would be' to avoid implying a normative face structure; 'giving' replaced with 'gives' for consistency; no invented intent or biography present.\",\n    \"Comparison with QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq confirmed: concentric coil eyes on dark ground versus compressed hatched fill is a concrete formal contrast, not a vague similarity; nifty faces #23 and #56 correctly excluded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX/image.png",
+        "imageSHA256": "fa7b1d2d6f943cfc153c6bf88506c3475ec60168cb9b5bfe3a27e17273ef43fe"
+      },
+      {
+        "artworkId": "QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq/image.png",
+        "imageSHA256": "f07b5f51d4006ce11485f0af29b1c0a5a07678858f4c54dff7d41d90ae8556df"
+      },
+      {
+        "artworkId": "QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM/image.png",
+        "imageSHA256": "fcd8ca63293af945fe056a8c1f022ecb706a6221ab31f5d0bd90ddc8113874ba"
+      },
+      {
+        "artworkId": "QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa/image.png",
+        "imageSHA256": "6a7259a7debff91b2fd51f30950c0721127640cc46d7ed781471cdf09fdc96f2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A rounded head shape fills the center, built from overlapping yellow and orange hatched lines, topped by a teal flat-brimmed cap outlined in dark strokes.\", \"Hot-pink lettering spelling 'NM / xyz' sits across the face where eyes would be, drawn in thick looping lines that read as both text and mask.\", \"The dark background is covered edge-to-edge in crossing red, green, and pink diagonal strokes, leaving almost no bare ground visible.\"], \"reading\": \"The face pushes forward, its yellow-orange surface made entirely of layered hatching rather than solid fill. The pink lettering sits where eyes should be, turning the face into a kind of billboard. Around it, the background crackles with red and green crosshatching that reads as noise or static. The grin below the lettered zone is wide and tooth-lined, giving the image a charged, unsettled feeling.\", \"contextAngle\": \"This work sits first in the artist's recorded-creation archive within the owned subset. The comparison pieces come from the separate nifty-faces numbered title family. The collector links this image to scrimshaw through its dense line-over-line surface, where marks accumulate into form the way engraved lines build tone on bone.\", \"connections\": [{\"targetArtworkId\": \"QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq\", \"reason\": \"Both works center a face-like form on a dark ground and use spiral or looping lines as eye-stand-ins, but nifty faces #29 replaces hatched fill with large concentric coils, making the pattern logic explicit where the primary work keeps it compressed.\"}], \"tags\": [\"hatched-fill\", \"embedded-lettering\", \"flat-brimmed-cap\", \"dense-crosshatch-background\", \"wide-grin\", \"face-as-surface\"], \"interpretiveTags\": [\"charged\", \"unsettled\", \"confrontational\"], \"lookingQuestion\": \"Where exactly does the pink lettering end and the face's features begin, and what happens to your reading of the image at that boundary?\", \"ambiguities\": [\"The nifty faces #23 and #56 comparison images show no strong formal overlap with the primary work's hatched-face-plus-cap structure, so they were not selected as connections.\", \"The white handwritten 'NM xyz 2017' in the top-left corner appears to be a date, but dates are not confirmed by the validated metadata supplied.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:06:57.811215-05:00",
+    "usage": {
+      "inputTokens": 7017,
+      "outputTokens": 697,
+      "totalTokens": 7714,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10344
+    },
+    "requestId": "ff5adffc-16d3-4b7f-97ed-0a50adc6e7a6",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"A rounded head shape fills the center, built from overlapping yellow and orange hatched lines, topped by a teal flat-brimmed cap outlined in dark strokes.\",\n    \"Hot-pink lettering sits across the face where eyes would be, drawn in thick looping lines that read as both text and mask.\",\n    \"The dark background is covered edge-to-edge in crossing red, green, and pink diagonal strokes, leaving almost no bare ground visible.\"\n  ],\n  \"reading\": \"The face pushes forward, its yellow-orange surface made entirely of layered hatching rather than solid fill. The pink lettering sits where eyes would be, turning the face into a kind of billboard. Around it, the background crackles with red and green crosshatching that reads as noise or static. A wide, tooth-lined grin below the lettered zone gives the image a charged, unsettled feeling.\",\n  \"contextAngle\": \"This work sits first in the recorded-creation archive within the owned subset. The comparison pieces come from the separate nifty-faces numbered title family. The collector links this image to scrimshaw through its dense line-over-line surface, where marks accumulate into form the way scored lines build tone.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq\",\n      \"reason\": \"Both center a face-like form on a dark ground and use looping lines as eye-stand-ins, but nifty faces #29 replaces hatched fill with large concentric coils, making the pattern logic explicit where the primary work keeps it compressed.\"\n    }\n  ],\n  \"tags\": [\n    \"hatched-fill\",\n    \"embedded-lettering\",\n    \"flat-brimmed-cap\",\n    \"dense-crosshatch-background\",\n    \"wide-grin\",\n    \"face-as-surface\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the pink lettering end and the face's features begin, and what happens to your reading of the image at that boundary?\",\n  \"ambiguities\": [\n    \"The nifty faces #23 and #56 comparison images show no strong formal overlap with the primary work's hatched-face-plus-cap structure, so they were not selected as connections.\",\n    \"The white handwritten text in the top-left corner appears to include a year, but this is not confirmed by the validated metadata supplied.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'engraved lines' in contextAngle with 'scored lines' to avoid implying a specific physical medium not supported by the supplied evidence.\",\n    \"Retained the single connection to nifty faces #29 as the strongest formal comparison among inspected candidates.\",\n    \"No other flagged issues found; all other fields within word-count and content constraints.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX/image.png",
+        "imageSHA256": "fa7b1d2d6f943cfc153c6bf88506c3475ec60168cb9b5bfe3a27e17273ef43fe"
+      },
+      {
+        "artworkId": "QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq/image.png",
+        "imageSHA256": "f07b5f51d4006ce11485f0af29b1c0a5a07678858f4c54dff7d41d90ae8556df"
+      },
+      {
+        "artworkId": "QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM/image.png",
+        "imageSHA256": "fcd8ca63293af945fe056a8c1f022ecb706a6221ab31f5d0bd90ddc8113874ba"
+      },
+      {
+        "artworkId": "QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdZ3sqrjGEZcaBsjyBNjNT7LTBh9t16XiAPcZL1aH85Sa/image.png",
+        "imageSHA256": "6a7259a7debff91b2fd51f30950c0721127640cc46d7ed781471cdf09fdc96f2"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A rounded head shape fills the center, built from overlapping yellow and orange hatched lines, topped by a teal flat-brimmed cap outlined in dark strokes.\", \"Hot-pink lettering spelling 'NM / xyz' sits across the face where eyes would be, drawn in thick looping lines that read as both text and mask.\", \"The dark background is covered edge-to-edge in crossing red, green, and pink diagonal strokes, leaving almost no bare ground visible.\"], \"reading\": \"The face pushes forward, its yellow-orange surface made entirely of layered hatching rather than solid fill. The pink lettering sits where eyes would be, turning the face into a kind of billboard. Around it, the background crackles with red and green crosshatching that reads as noise or static. A wide, tooth-lined grin below the lettered zone gives the image a charged, unsettled feeling.\", \"contextAngle\": \"This work sits first in the recorded-creation archive within the owned subset. The comparison pieces come from the separate nifty-faces numbered title family. The collector links this image to scrimshaw through its dense line-over-line surface, where marks accumulate into form the way engraved lines build tone.\", \"connections\": [{\"targetArtworkId\": \"QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq\", \"reason\": \"Both center a face-like form on a dark ground and use looping lines as eye-stand-ins, but nifty faces #29 replaces hatched fill with large concentric coils, making the pattern logic explicit where the primary work keeps it compressed.\"}], \"tags\": [\"hatched-fill\", \"embedded-lettering\", \"flat-brimmed-cap\", \"dense-crosshatch-background\", \"wide-grin\", \"face-as-surface\"], \"lookingQuestion\": \"Where exactly does the pink lettering end and the face's features begin, and what happens to your reading of the image at that boundary?\", \"ambiguities\": [\"The nifty faces #23 and #56 comparison images show no strong formal overlap with the primary work's hatched-face-plus-cap structure, so they were not selected as connections.\", \"The white handwritten text in the top-left corner appears to include a year, but this is not confirmed by the validated metadata supplied.\"]}\nFLAGS:\n[{\"artworkId\": \"QmUxE7WejRom44EW7QcLX58h5KtKosBAF33TkQhvLgFzwX\", \"field\": \"contextAngle\", \"rule\": \"named-media\", \"matches\": [\"engraved\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

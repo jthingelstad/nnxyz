@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:38.944961-05:00",
+    "usage": {
+      "inputTokens": 6253,
+      "outputTokens": 750,
+      "totalTokens": 7003,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12066
+    },
+    "requestId": "77760b83-e7f1-47ee-8bdd-72c338c266ba",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded head form sits left of center against a flat sky-blue field; dense black hatching covers the face while pink, blue, and orange marks layer beneath.\",\n    \"A thick yellow loop arcs from lower-left up and around the right side of the composition, punctuated by white dash clusters and a loose magenta scribble trail.\",\n    \"The mouth area shows a row of small rectangular teeth rendered in white and gold, framed by heavy black lines; the eyes are suggested by dark recessed patches with thin colored strokes crossing them.\"\n  ],\n  \"reading\": \"The head sits in open blue space, its surface buried under overlapping black hatching that lets pink and amber show through in patches. The yellow loop outside the form pulls the eye around the figure rather than into it, creating a push-pull between the crowded face and the spare background. The visible teeth give the expression a fixed, ambiguous quality — neither clearly hostile nor welcoming.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #188 and nnxyz nnotb #190. Where #188 uses a dark olive ground packed with bold flat shapes, and #190 sets a similar head on deep purple, #189 opens the background to flat sky-blue, giving the looping yellow mark unusual room.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both #189 and #190 place a heavily cross-hatched head form on a single flat-color ground, but #190 replaces the open blue with dense purple and adds a large spiral over one eye, tightening the surface where #189 leaves space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z\",\n      \"reason\": \"#188 shares the looping yellow band and visible teeth motif with #189, but surrounds them with a dark, pattern-filled ground rather than open sky-blue, making the yellow feel contained rather than free-floating.\"\n    }\n  ],\n  \"tags\": [\n    \"head form\",\n    \"flat color ground\",\n    \"cross-hatching\",\n    \"looping yellow band\",\n    \"visible teeth\",\n    \"layered line marks\"\n  ],\n  \"interpretiveTags\": [\n    \"ambiguous expression\",\n    \"tension between open space and dense surface\"\n  ],\n  \"lookingQuestion\": \"Where does the yellow loop begin and end relative to the head, and how does that path change what you notice first?\",\n  \"ambiguities\": [\n    \"The white dash clusters in the background could be read as deliberate texture marks or as a separate layer; their relationship to the yellow loop is unclear from the image alone.\",\n    \"The small form at the lower-left edge with white curved marks is not clearly resolved — it may be a hand, a secondary figure, or an abstract mark.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVexPrzs4W7J5szkpLgPbAoVwDure8zbux8nxJyyt1MnL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVexPrzs4W7J5szkpLgPbAoVwDure8zbux8nxJyyt1MnL/image.png",
+        "imageSHA256": "0837b7c7c85ae69443536a6385e1f633d3c9ba77092725152e5953b01f184632"
+      },
+      {
+        "artworkId": "QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z/image.png",
+        "imageSHA256": "3c7196c3a8e2d8f39ee43d25c9b3f5c895e644d8a7d6b0c09700fe24e515623e"
+      },
+      {
+        "artworkId": "QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7/image.png",
+        "imageSHA256": "0428a448c9a387e1d60f3793918bf997b0a0d008902bd6e5831e689069da6dd3"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:47.516012-05:00",
+    "usage": {
+      "inputTokens": 7025,
+      "outputTokens": 1020,
+      "totalTokens": 8045,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 8487
+    },
+    "requestId": "52f2f8e7-61a9-422e-86e4-86718aa94e4f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded head form sits left of center against a flat sky-blue field; dense black hatching covers the face while pink, blue, and amber marks layer beneath.\",\n    \"A thick yellow loop arcs from lower-left up and around the right side of the composition, punctuated by white dash clusters and a loose magenta scribble trail.\",\n    \"The mouth area shows a row of small rectangular teeth in white and gold, framed by heavy black lines; the eyes are suggested by dark recessed patches with thin colored strokes crossing them.\"\n  ],\n  \"reading\": \"The head sits in open blue space, its surface buried under overlapping black hatching that lets pink and amber show through in patches. The yellow loop outside the form pulls attention around the figure rather than into it, setting up a push-pull between the crowded face and the spare background. The visible teeth give the expression a fixed, ambiguous quality — neither clearly hostile nor welcoming.\",\n  \"contextAngle\": \"Within the owned nnotb subset, immediate title neighbors are nnxyz nnotb #188 and nnxyz nnotb #190. Where #188 packs a dark olive ground with bold flat shapes and #190 sets a similar head on deep purple, #189 opens to flat sky-blue, giving the looping yellow mark unusual room.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both place a heavily cross-hatched head on a single flat-color ground, but #190 replaces open blue with dense purple and adds a large white spiral over one eye, tightening the surface where #189 leaves space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z\",\n      \"reason\": \"#188 shares a looping yellow band and visible teeth row with #189, but surrounds them with a dark pattern-filled ground rather than open sky-blue, making the yellow feel contained rather than free-floating.\"\n    }\n  ],\n  \"tags\": [\"head form\", \"flat color ground\", \"cross-hatching\", \"looping yellow band\", \"visible teeth\", \"layered line marks\"],\n  \"interpretiveTags\": [\"ambiguous expression\", \"tension between open space and dense surface\"],\n  \"lookingQuestion\": \"Where does the yellow loop begin and end relative to the head, and how does that path change what you notice first?\",\n  \"ambiguities\": [\n    \"The white dash clusters in the background may be a separate texture layer or part of the yellow loop's framing; their relationship is not resolved from the image alone.\",\n    \"The small form at the lower-left edge with white curved marks is not clearly resolved — it may be a hand, a secondary figure, or an abstract mark.\"\n  ],\n  \"reviewFindings\": [\n    \"Color check confirmed: 'orange' in observation 1 corrected to 'amber' to match the warmer, less saturated tone visible beneath the hatching; sky-blue ground, yellow loop, magenta trail, and white dash clusters all verified against the primary image.\",\n    \"Comparison evidence confirmed: #190 (QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi) shows a white spiral over one eye on a purple ground — specific detail verified in image; #188 (QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z) shows a yellow looping band and a row of white teeth on a dark olive ground — both confirmed.\",\n    \"No invented biography, intent, technique duration, or unsupported subject identity found in draft; QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7 (nnxyz #25) was a candidate but shares only a dark ground and scattered skull forms with no direct formal link to #189's specific yellow loop or blue field, so it was correctly omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVexPrzs4W7J5szkpLgPbAoVwDure8zbux8nxJyyt1MnL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVexPrzs4W7J5szkpLgPbAoVwDure8zbux8nxJyyt1MnL/image.png",
+        "imageSHA256": "0837b7c7c85ae69443536a6385e1f633d3c9ba77092725152e5953b01f184632"
+      },
+      {
+        "artworkId": "QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z/image.png",
+        "imageSHA256": "3c7196c3a8e2d8f39ee43d25c9b3f5c895e644d8a7d6b0c09700fe24e515623e"
+      },
+      {
+        "artworkId": "QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7/image.png",
+        "imageSHA256": "0428a448c9a387e1d60f3793918bf997b0a0d008902bd6e5831e689069da6dd3"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A rounded head form sits left of center against a flat sky-blue field; dense black hatching covers the face while pink, blue, and orange marks layer beneath.\", \"A thick yellow loop arcs from lower-left up and around the right side of the composition, punctuated by white dash clusters and a loose magenta scribble trail.\", \"The mouth area shows a row of small rectangular teeth rendered in white and gold, framed by heavy black lines; the eyes are suggested by dark recessed patches with thin colored strokes crossing them.\"], \"reading\": \"The head sits in open blue space, its surface buried under overlapping black hatching that lets pink and amber show through in patches. The yellow loop outside the form pulls the eye around the figure rather than into it, creating a push-pull between the crowded face and the spare background. The visible teeth give the expression a fixed, ambiguous quality — neither clearly hostile nor welcoming.\", \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #188 and nnxyz nnotb #190. Where #188 uses a dark olive ground packed with bold flat shapes, and #190 sets a similar head on deep purple, #189 opens the background to flat sky-blue, giving the looping yellow mark unusual room.\", \"connections\": [{\"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\", \"reason\": \"Both #189 and #190 place a heavily cross-hatched head form on a single flat-color ground, but #190 replaces the open blue with dense purple and adds a large spiral over one eye, tightening the surface where #189 leaves space.\"}, {\"targetArtworkId\": \"QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z\", \"reason\": \"#188 shares the looping yellow band and visible teeth motif with #189, but surrounds them with a dark, pattern-filled ground rather than open sky-blue, making the yellow feel contained rather than free-floating.\"}], \"tags\": [\"head form\", \"flat color ground\", \"cross-hatching\", \"looping yellow band\", \"visible teeth\", \"layered line marks\"], \"interpretiveTags\": [\"ambiguous expression\", \"tension between open space and dense surface\"], \"lookingQuestion\": \"Where does the yellow loop begin and end relative to the head, and how does that path change what you notice first?\", \"ambiguities\": [\"The white dash clusters in the background could be read as deliberate texture marks or as a separate layer; their relationship to the yellow loop is unclear from the image alone.\", \"The small form at the lower-left edge with white curved marks is not clearly resolved — it may be a hand, a secondary figure, or an abstract mark.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

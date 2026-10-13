@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:49.986561-05:00",
+    "usage": {
+      "inputTokens": 6942,
+      "outputTokens": 772,
+      "totalTokens": 7714,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14064
+    },
+    "requestId": "c8ff026b-8750-4ad8-bb74-52a8cb2db61a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A saturated amber-gold field fills the entire background, against which vertical and horizontal marks in white, red, blue, brown, pink, and olive-green cross and overlap across the full surface.\",\n    \"White marks form loose cross and bracket shapes scattered at irregular intervals from edge to edge, sitting above rather than blending into the denser colored strokes beneath them.\",\n    \"Blue strokes cluster in two loose vertical bands left of center and near the right edge, while dark brown and red marks concentrate in the lower-left quadrant, creating uneven weight across the composition.\"\n  ],\n  \"reading\": \"Amber fills every corner, and the eye finds no single anchor—marks in a dozen colors run vertically, cut horizontally, and pile up without resolving into a scene. White cross-shapes surface and sink across the field, readable as structure one moment and as noise the next. The density feels pressured in places, open in others, and that shift between crowding and breathing is where the image holds attention.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #10—which organizes marks around a central figured form on an olive ground—and nnxyz nnotb #12, whose vertical figures stand against a multi-color field. This piece is the most fully non-figurative of the three owned neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q\",\n      \"reason\": \"nnxyz nnotb #12 shares the same warm amber-yellow ground and vertical stroke rhythm, but organizes those strokes into legible upright figures, making the contrast between structured and unstructured mark-making direct and visible.\"\n    }\n  ],\n  \"tags\": [\n    \"all-over mark distribution\",\n    \"amber ground\",\n    \"cross and bracket shapes\",\n    \"vertical and horizontal stroke layering\",\n    \"multi-color overlap\",\n    \"non-figurative\"\n  ],\n  \"interpretiveTags\": [\n    \"pressured density\",\n    \"oscillating order and noise\"\n  ],\n  \"lookingQuestion\": \"Where on the surface do the white marks feel like they are on top, and where do they seem to be buried—and what is it in the image that produces that difference?\",\n  \"ambiguities\": [\n    \"Candidate Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt (nnxyz nnotb #10) and QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN (nnxyz #15) both use white outline marks, but their dominant grounds and figuration differ enough that no specific formal connection to the primary is stronger than the nnotb #12 comparison selected.\",\n    \"Title-derived order and recorded-creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this alignment cannot be assumed to hold across the full collection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew/image.png",
+        "imageSHA256": "437edaca3ffff994406d54fb7653f5913cdc871917332d7cddd0f16928992e18"
+      },
+      {
+        "artworkId": "Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt/image.png",
+        "imageSHA256": "e8283ca46fc1a96e8d73f492eefc2730226a0411da6b715305e42acc8c45e704"
+      },
+      {
+        "artworkId": "QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN/image.png",
+        "imageSHA256": "a62c677efc3e03ff2fd9f39ff71589291cbb41ce54b00fe3c29dfe2836887260"
+      },
+      {
+        "artworkId": "QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q/image.png",
+        "imageSHA256": "46a2c0397cccfc11dafd353183a2a061eea49786129d599082de77484e2e1f16"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:57.069502-05:00",
+    "usage": {
+      "inputTokens": 7745,
+      "outputTokens": 957,
+      "totalTokens": 8702,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6967
+    },
+    "requestId": "50889d72-834b-4824-b940-b91438c9426a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A saturated amber-gold field fills the entire background, against which vertical and horizontal marks in white, red, blue, brown, pink, and olive-green cross and overlap across the full surface.\",\n    \"White marks form loose cross and bracket shapes scattered at irregular intervals from edge to edge, sitting above the denser colored strokes beneath them.\",\n    \"Blue strokes cluster in two loose vertical bands left of center and near the right edge, while dark brown and red marks concentrate in the lower-left quadrant, creating uneven weight across the composition.\"\n  ],\n  \"reading\": \"Amber fills every corner, and the eye finds no single anchor—marks in a dozen colors run vertically, cut horizontally, and pile up without resolving into a scene. White cross-shapes surface and sink across the field, readable as structure one moment and as noise the next. The density feels pressured in places, open in others, and that shift between crowding and breathing is where the image holds attention.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #10—which organizes marks around a central figured form on an olive ground—and nnxyz nnotb #12, whose vertical figures stand against a multi-color field. This piece is the most fully non-figurative of the three owned neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q\",\n      \"reason\": \"nnxyz nnotb #12 shares a warm amber-yellow ground and vertical stroke rhythm, but organizes those strokes into legible upright figures, making the contrast between structured and unstructured mark-making direct and visible.\"\n    }\n  ],\n  \"tags\": [\n    \"all-over mark distribution\",\n    \"amber ground\",\n    \"cross and bracket shapes\",\n    \"vertical and horizontal stroke layering\",\n    \"multi-color overlap\",\n    \"non-figurative\"\n  ],\n  \"interpretiveTags\": [\n    \"pressured density\",\n    \"oscillating order and noise\"\n  ],\n  \"lookingQuestion\": \"Where on the surface do the white marks feel like they are on top, and where do they seem buried—and what is it in the image that produces that difference?\",\n  \"ambiguities\": [\n    \"Candidates Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt (nnxyz nnotb #10) and QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN (nnxyz #15) both use white outline marks, but their dominant grounds and figuration differ enough that no specific formal connection to the primary is stronger than the nnotb #12 comparison selected.\",\n    \"Title-derived order and recorded-creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this alignment cannot be assumed to hold across the full collection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: amber-gold ground, white cross/bracket marks sitting visibly above denser strokes, and blue vertical clustering left-of-center and right edge with brown/red weight in lower-left.\",\n    \"Reading removed no invented content; 'pressured' and 'breathing' retained as readings of visible density variation, not asserted intent—word count confirmed within 55–65 word target.\",\n    \"Connection to QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q confirmed by inspecting nnotb #12 image: amber-yellow ground and vertical rhythm are visible, figures are legible, contrast with primary's non-figurative surface is concrete and specific.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew/image.png",
+        "imageSHA256": "437edaca3ffff994406d54fb7653f5913cdc871917332d7cddd0f16928992e18"
+      },
+      {
+        "artworkId": "Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt/image.png",
+        "imageSHA256": "e8283ca46fc1a96e8d73f492eefc2730226a0411da6b715305e42acc8c45e704"
+      },
+      {
+        "artworkId": "QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN/image.png",
+        "imageSHA256": "a62c677efc3e03ff2fd9f39ff71589291cbb41ce54b00fe3c29dfe2836887260"
+      },
+      {
+        "artworkId": "QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q/image.png",
+        "imageSHA256": "46a2c0397cccfc11dafd353183a2a061eea49786129d599082de77484e2e1f16"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A saturated amber-gold field fills the entire background, against which vertical and horizontal marks in white, red, blue, brown, pink, and olive-green cross and overlap across the full surface.\", \"White marks form loose cross and bracket shapes scattered at irregular intervals from edge to edge, sitting above rather than blending into the denser colored strokes beneath them.\", \"Blue strokes cluster in two loose vertical bands left of center and near the right edge, while dark brown and red marks concentrate in the lower-left quadrant, creating uneven weight across the composition.\"], \"reading\": \"Amber fills every corner, and the eye finds no single anchor—marks in a dozen colors run vertically, cut horizontally, and pile up without resolving into a scene. White cross-shapes surface and sink across the field, readable as structure one moment and as noise the next. The density feels pressured in places, open in others, and that shift between crowding and breathing is where the image holds attention.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #10—which organizes marks around a central figured form on an olive ground—and nnxyz nnotb #12, whose vertical figures stand against a multi-color field. This piece is the most fully non-figurative of the three owned neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmaKYKhsSUw9CeUsS3Z8h2snFnwsr3vwFo9HTJ8nZxer2Q\", \"reason\": \"nnxyz nnotb #12 shares the same warm amber-yellow ground and vertical stroke rhythm, but organizes those strokes into legible upright figures, making the contrast between structured and unstructured mark-making direct and visible.\"}], \"tags\": [\"all-over mark distribution\", \"amber ground\", \"cross and bracket shapes\", \"vertical and horizontal stroke layering\", \"multi-color overlap\", \"non-figurative\"], \"interpretiveTags\": [\"pressured density\", \"oscillating order and noise\"], \"lookingQuestion\": \"Where on the surface do the white marks feel like they are on top, and where do they seem to be buried—and what is it in the image that produces that difference?\", \"ambiguities\": [\"Candidate Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt (nnxyz nnotb #10) and QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN (nnxyz #15) both use white outline marks, but their dominant grounds and figuration differ enough that no specific formal connection to the primary is stronger than the nnotb #12 comparison selected.\", \"Title-derived order and recorded-creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this alignment cannot be assumed to hold across the full collection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

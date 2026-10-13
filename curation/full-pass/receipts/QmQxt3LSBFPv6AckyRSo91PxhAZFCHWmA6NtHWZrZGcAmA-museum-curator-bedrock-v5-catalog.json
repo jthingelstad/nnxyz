@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:45.547878-05:00",
+    "usage": {
+      "inputTokens": 7695,
+      "outputTokens": 718,
+      "totalTokens": 8413,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12501
+    },
+    "requestId": "21c1fb94-015a-446f-b8f9-8f44c7f54986",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dense mass of looping yellow and white lines fills the upper half and left edge, surrounding a central face-like structure built from stacked rectangular blocks in black, teal, and red.\",\n    \"The lower central block contains a wide white rectangle edged in red and dark lines, with short vertical black marks inside suggesting teeth or a grid.\",\n    \"The right background is layered flat shapes in teal, dark green, orange, and grey-brown, contrasting with the hot-pink field that dominates the left and center background.\"\n  ],\n  \"reading\": \"Looping yellow lines radiate outward like static or unraveling wire, while the face below holds its stacked-block structure with surprising firmness. The wide white rectangle at the bottom reads as an open mouth, and the effect can feel like a shout caught mid-frame. The flat layered shapes at the right edge cool the temperature slightly, giving the hot-pink field something to push against.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors #29 and #31 share the stacked-block face format. #29 uses spiral eyes on a dark ground; #31 shifts to a dark background with contained scribble. #30 stands apart through its explosive yellow halo and the flat decorative band at the right edge.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj\",\n      \"reason\": \"Both works use the same stacked rectangular block structure for the face, but #31 places it on a dark ground with contained scribble, while #30 surrounds the identical form with an erupting yellow line mass and a hot-pink field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX\",\n      \"reason\": \"The collector links nnxyz to scrimshaw through visual qualities; both works layer dense looping lines over flat color-blocked forms, though Scrimshaw 33 uses broad purple outlines on a near-black ground where #30 uses thin yellow loops on hot pink.\"\n    }\n  ],\n  \"tags\": [\n    \"looping line mass\",\n    \"stacked rectangular blocks\",\n    \"hot pink background\",\n    \"flat layered shapes\",\n    \"white rectangle with vertical marks\",\n    \"yellow scribble halo\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the yellow line mass end and the face structure begin, and what holds that boundary in place?\",\n  \"ambiguities\": [\n    \"The flat layered band at the right edge reads as background decoration, but its relationship to the face structure is not fully resolved by the image alone.\",\n    \"Title-derived order and recorded-creation order align for this work, but neither confirms making sequence within the broader artist catalogue.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA/image.png",
+        "imageSHA256": "ff51a915ef3a7d23e9c89685138aad1c0e0a41b17063df921fab4d4e955d0b44"
+      },
+      {
+        "artworkId": "QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq/image.png",
+        "imageSHA256": "f07b5f51d4006ce11485f0af29b1c0a5a07678858f4c54dff7d41d90ae8556df"
+      },
+      {
+        "artworkId": "QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX/image.png",
+        "imageSHA256": "f7641c94baea961e0c705ce405e70b57d0dba484bd3c3bd49f0f168e47cc8a4e"
+      },
+      {
+        "artworkId": "QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj/image.png",
+        "imageSHA256": "deb9b31cfa305a30c9c9f939e3903e77310cc9c8b8f2ad044c9ef6ee71ab4dd2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:52.341295-05:00",
+    "usage": {
+      "inputTokens": 8445,
+      "outputTokens": 859,
+      "totalTokens": 9304,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6547
+    },
+    "requestId": "c77f29dd-a0cf-4a1c-9da3-5758b737cf70",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dense mass of looping yellow and white lines fills the upper half and left edge, surrounding a central face-like structure built from stacked rectangular blocks in black, teal, and red.\",\n    \"The lower central block contains a wide white rectangle edged in red and dark lines, with short vertical black marks inside suggesting a grid or row of forms.\",\n    \"The right background is layered flat shapes in teal, dark green, orange, and grey-brown, contrasting with the hot-pink field that dominates the left and center background.\"\n  ],\n  \"reading\": \"Looping yellow lines spread outward like unraveling wire, while the face below holds its stacked-block structure with surprising firmness. The wide white rectangle at the bottom reads as an open mouth, and the effect can feel like a shout caught mid-frame. The flat layered shapes at the right edge cool the temperature slightly, giving the hot-pink field something to push against.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors #29 and #31 share the stacked-block face format. #29 uses spiral eyes on a dark ground; #31 places a similar block face on dark blue with contained scribble. #30 stands apart through its explosive yellow halo and the flat decorative band at the right edge.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj\",\n      \"reason\": \"Both works use stacked rectangular blocks for the face, but #31 sits on a dark blue ground with contained scribble, while #30 surrounds the same form with an erupting yellow line mass and a hot-pink field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX\",\n      \"reason\": \"The collector links nnxyz to scrimshaw through visual qualities; both layer dense looping lines over flat color-blocked forms, though Scrimshaw 33 uses broad purple outlines on a near-black ground where #30 uses thin yellow loops on hot pink.\"\n    }\n  ],\n  \"tags\": [\n    \"looping line mass\",\n    \"stacked rectangular blocks\",\n    \"hot pink background\",\n    \"flat layered shapes\",\n    \"white rectangle with vertical marks\",\n    \"yellow scribble halo\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the yellow line mass end and the face structure begin, and what holds that boundary in place?\",\n  \"ambiguities\": [\n    \"The flat layered band at the right edge reads as background decoration, but its spatial relationship to the face structure is not fully resolved by the image alone.\",\n    \"Title-derived order and recorded-creation order align for this work, but neither confirms making sequence within the broader artist catalogue.\"\n  ],\n  \"reviewFindings\": [\n    \"Dark background in #31 confirmed as dark blue-grey, not black; draft corrected to 'dark blue' for accuracy.\",\n    \"Draft phrase 'static or unraveling wire' replaced with 'unraveling wire' only, removing the unsupported 'static' metaphor; 'teeth' removed from observation 2 and replaced with neutral 'grid or row of forms' since the marks are ambiguous.\",\n    \"All candidate IDs, color descriptions, and structural observations verified against inspected images; no invented subject identities or unsupported intent found in final version.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA/image.png",
+        "imageSHA256": "ff51a915ef3a7d23e9c89685138aad1c0e0a41b17063df921fab4d4e955d0b44"
+      },
+      {
+        "artworkId": "QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvfSwy1wuNEuursofLmH3BVM7JRogjZWYiB3ay5zwUNq/image.png",
+        "imageSHA256": "f07b5f51d4006ce11485f0af29b1c0a5a07678858f4c54dff7d41d90ae8556df"
+      },
+      {
+        "artworkId": "QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX/image.png",
+        "imageSHA256": "f7641c94baea961e0c705ce405e70b57d0dba484bd3c3bd49f0f168e47cc8a4e"
+      },
+      {
+        "artworkId": "QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj/image.png",
+        "imageSHA256": "deb9b31cfa305a30c9c9f939e3903e77310cc9c8b8f2ad044c9ef6ee71ab4dd2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dense mass of looping yellow and white lines fills the upper half and left edge, surrounding a central face-like structure built from stacked rectangular blocks in black, teal, and red.\", \"The lower central block contains a wide white rectangle edged in red and dark lines, with short vertical black marks inside suggesting teeth or a grid.\", \"The right background is layered flat shapes in teal, dark green, orange, and grey-brown, contrasting with the hot-pink field that dominates the left and center background.\"], \"reading\": \"Looping yellow lines radiate outward like static or unraveling wire, while the face below holds its stacked-block structure with surprising firmness. The wide white rectangle at the bottom reads as an open mouth, and the effect can feel like a shout caught mid-frame. The flat layered shapes at the right edge cool the temperature slightly, giving the hot-pink field something to push against.\", \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors #29 and #31 share the stacked-block face format. #29 uses spiral eyes on a dark ground; #31 shifts to a dark background with contained scribble. #30 stands apart through its explosive yellow halo and the flat decorative band at the right edge.\", \"connections\": [{\"targetArtworkId\": \"QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj\", \"reason\": \"Both works use the same stacked rectangular block structure for the face, but #31 places it on a dark ground with contained scribble, while #30 surrounds the identical form with an erupting yellow line mass and a hot-pink field.\"}, {\"targetArtworkId\": \"QmR1U8DCiSXFPoyiqrVJ45zacgzpAk4ggXCSm5BqEvXcYX\", \"reason\": \"The collector links nnxyz to scrimshaw through visual qualities; both works layer dense looping lines over flat color-blocked forms, though Scrimshaw 33 uses broad purple outlines on a near-black ground where #30 uses thin yellow loops on hot pink.\"}], \"tags\": [\"looping line mass\", \"stacked rectangular blocks\", \"hot pink background\", \"flat layered shapes\", \"white rectangle with vertical marks\", \"yellow scribble halo\"], \"lookingQuestion\": \"Where exactly does the yellow line mass end and the face structure begin, and what holds that boundary in place?\", \"ambiguities\": [\"The flat layered band at the right edge reads as background decoration, but its relationship to the face structure is not fully resolved by the image alone.\", \"Title-derived order and recorded-creation order align for this work, but neither confirms making sequence within the broader artist catalogue.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

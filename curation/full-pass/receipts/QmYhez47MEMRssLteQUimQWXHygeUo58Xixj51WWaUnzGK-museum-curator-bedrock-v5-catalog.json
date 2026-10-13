@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:05.714891-05:00",
+    "usage": {
+      "inputTokens": 6248,
+      "outputTokens": 702,
+      "totalTokens": 6950,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11634
+    },
+    "requestId": "5f26cb8d-9215-449e-b398-305b51cd0473",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head form fills most of the frame, tilted slightly right, with a wide flat shape extending from the top like a brim or hood, rendered in muted gold, brown, and purple strokes against a flat magenta background.\",\n    \"The left eye socket holds a red lattice of crossing lines; the right socket is darker and more closed, creating a strong asymmetry across the face's center.\",\n    \"The mouth area shows a wide horizontal band of dark marks with small repeated tooth-like shapes inside, and loose black scribble lines radiate outward across the cheeks and chin.\"\n  ],\n  \"reading\": \"The face sits low in the frame, its brim-like top pushing toward the upper edge while the chin barely clears the bottom. One eye burns red through a grid of crossing lines; the other sits dim and shut. That asymmetry pulls the mood toward unease rather than confrontation. The scribbled lines across the cheeks read less as detail than as pressure—something held in rather than released.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #115 and nnxyz nifty faces #117 in both title order and recorded creation order. Where #115 uses a saturated yellow field and clean color blocks, #116 pulls toward a darker, more compressed palette with heavier layered scribbling.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy\",\n      \"reason\": \"Both #116 and #117 place a large animal-adjacent head against a flat single-color ground and use dense crossing lines inside the eye sockets, but #117's palette is high-contrast primary colors while #116 stays in muted purples and browns.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye treatment\",\n    \"crossing-line eye fill\",\n    \"flat single-color background\",\n    \"brim or hood form\",\n    \"tooth-pattern mouth band\",\n    \"radiating scribble lines\"\n  ],\n  \"lookingQuestion\": \"The two eye sockets are treated very differently—one filled with a red grid, one left dark and closed. Where else in the image do you notice a similar split between something lit and something withheld?\",\n  \"ambiguities\": [\n    \"The wide flat shape extending from the top of the head could read as a hat brim, a hood, or an abstracted ear form; the image does not resolve this clearly.\",\n    \"QmVqfEeSkvRvszVhE4Kzx9JgjStDU5iEBakSzE9AUiougv (nnotb #205) was inspected but offers no specific formal connection beyond shared scribble density; it was omitted to avoid a weak match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK/image.png",
+        "imageSHA256": "787af10d727472001660fdcc59524af7a602e97d3f544d798b65485175021278"
+      },
+      {
+        "artworkId": "QmcxfKzVygJmpqR9Wr2qnmecW9ieyQqqKnL2SYwh9CrFZU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcxfKzVygJmpqR9Wr2qnmecW9ieyQqqKnL2SYwh9CrFZU/image.png",
+        "imageSHA256": "017ed5b3cade0482c0280c025c2dd05587e654d9e5c8f13b144f56c6ce6bbe85"
+      },
+      {
+        "artworkId": "QmVqfEeSkvRvszVhE4Kzx9JgjStDU5iEBakSzE9AUiougv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVqfEeSkvRvszVhE4Kzx9JgjStDU5iEBakSzE9AUiougv/image.png",
+        "imageSHA256": "0f8300038ca908969b90787214030e70f302c75fa755cf74b900c95bb979969d"
+      },
+      {
+        "artworkId": "QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy/image.png",
+        "imageSHA256": "b78b35ca0d53c98a8552b0b373bef6bcda35e7490e6e5f7b9221ba4888d132d3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:11.864215-05:00",
+    "usage": {
+      "inputTokens": 6991,
+      "outputTokens": 871,
+      "totalTokens": 7862,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6076
+    },
+    "requestId": "446cf9ea-9cd9-4b3b-9f4b-babebc3dc1fa",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head form fills most of the frame, tilted slightly right, with a wide flat shape extending from the top rendered in muted gold, brown, and purple strokes against a flat magenta background.\",\n    \"The left eye socket holds a red lattice of crossing lines; the right socket is darker and more closed, creating a strong asymmetry across the face's center.\",\n    \"The mouth area shows a wide horizontal band of dark marks with small repeated tooth-like shapes inside, and loose black scribble lines radiate outward across the cheeks and chin.\"\n  ],\n  \"reading\": \"The face sits low in the frame, its flat top shape pressing toward the upper edge while the chin barely clears the bottom. One eye burns red through a grid of crossing lines; the other sits dim and closed. That asymmetry pulls the mood toward unease rather than confrontation. The scribbled lines across the cheeks read less as detail than as pressure—something held in rather than released.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #115 and nnxyz nifty faces #117 in both title and recorded creation order. Where #115 uses a saturated yellow field and clean color blocks, #116 pulls toward a darker, compressed palette with heavier layered scribbling.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy\",\n      \"reason\": \"Both #116 and #117 place a large head against a flat single-color ground and use dense crossing lines inside the eye sockets, but #117's palette runs to high-contrast reds and yellows while #116 stays in muted purples and browns.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye treatment\",\n    \"crossing-line eye fill\",\n    \"flat single-color background\",\n    \"wide flat top form\",\n    \"tooth-pattern mouth band\",\n    \"radiating scribble lines\"\n  ],\n  \"lookingQuestion\": \"The two eye sockets are treated very differently—one filled with a red grid, one left dark and closed. Where else in the image do you notice a similar split between something lit and something withheld?\",\n  \"ambiguities\": [\n    \"The wide flat shape extending from the top of the head could read as a hat brim, a hood, or an abstracted ear form; the image does not resolve this clearly.\",\n    \"QmVqfEeSkvRvszVhE4Kzx9JgjStDU5iEBakSzE9AUiougv (nnotb #205) was inspected but offers no specific formal connection beyond shared scribble density; omitted to avoid a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"Draft tag 'brim or hood form' replaced with 'wide flat top form' to avoid asserting an unresolved identity flagged in ambiguities.\",\n    \"Color and form descriptions confirmed against primary image: magenta background, red lattice left eye, dark closed right eye, tooth-band mouth, and radiating scribble lines all visually verified.\",\n    \"Comparison with QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy (#117) confirmed: flat teal ground, dense crossing lines in eye sockets, and high-contrast red/yellow palette contrast with #116's muted purples and browns—connection retained as meaningful contrast.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK/image.png",
+        "imageSHA256": "787af10d727472001660fdcc59524af7a602e97d3f544d798b65485175021278"
+      },
+      {
+        "artworkId": "QmcxfKzVygJmpqR9Wr2qnmecW9ieyQqqKnL2SYwh9CrFZU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcxfKzVygJmpqR9Wr2qnmecW9ieyQqqKnL2SYwh9CrFZU/image.png",
+        "imageSHA256": "017ed5b3cade0482c0280c025c2dd05587e654d9e5c8f13b144f56c6ce6bbe85"
+      },
+      {
+        "artworkId": "QmVqfEeSkvRvszVhE4Kzx9JgjStDU5iEBakSzE9AUiougv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVqfEeSkvRvszVhE4Kzx9JgjStDU5iEBakSzE9AUiougv/image.png",
+        "imageSHA256": "0f8300038ca908969b90787214030e70f302c75fa755cf74b900c95bb979969d"
+      },
+      {
+        "artworkId": "QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy/image.png",
+        "imageSHA256": "b78b35ca0d53c98a8552b0b373bef6bcda35e7490e6e5f7b9221ba4888d132d3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head form fills most of the frame, tilted slightly right, with a wide flat shape extending from the top like a brim or hood, rendered in muted gold, brown, and purple strokes against a flat magenta background.\", \"The left eye socket holds a red lattice of crossing lines; the right socket is darker and more closed, creating a strong asymmetry across the face's center.\", \"The mouth area shows a wide horizontal band of dark marks with small repeated tooth-like shapes inside, and loose black scribble lines radiate outward across the cheeks and chin.\"], \"reading\": \"The face sits low in the frame, its brim-like top pushing toward the upper edge while the chin barely clears the bottom. One eye burns red through a grid of crossing lines; the other sits dim and shut. That asymmetry pulls the mood toward unease rather than confrontation. The scribbled lines across the cheeks read less as detail than as pressure—something held in rather than released.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #115 and nnxyz nifty faces #117 in both title order and recorded creation order. Where #115 uses a saturated yellow field and clean color blocks, #116 pulls toward a darker, more compressed palette with heavier layered scribbling.\", \"connections\": [{\"targetArtworkId\": \"QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy\", \"reason\": \"Both #116 and #117 place a large animal-adjacent head against a flat single-color ground and use dense crossing lines inside the eye sockets, but #117's palette is high-contrast primary colors while #116 stays in muted purples and browns.\"}], \"tags\": [\"asymmetric eye treatment\", \"crossing-line eye fill\", \"flat single-color background\", \"brim or hood form\", \"tooth-pattern mouth band\", \"radiating scribble lines\"], \"lookingQuestion\": \"The two eye sockets are treated very differently—one filled with a red grid, one left dark and closed. Where else in the image do you notice a similar split between something lit and something withheld?\", \"ambiguities\": [\"The wide flat shape extending from the top of the head could read as a hat brim, a hood, or an abstracted ear form; the image does not resolve this clearly.\", \"QmVqfEeSkvRvszVhE4Kzx9JgjStDU5iEBakSzE9AUiougv (nnotb #205) was inspected but offers no specific formal connection beyond shared scribble density; it was omitted to avoid a weak match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

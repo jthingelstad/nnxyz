@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:48.356698-05:00",
+    "usage": {
+      "inputTokens": 5398,
+      "outputTokens": 690,
+      "totalTokens": 6088,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 18730
+    },
+    "requestId": "03f53ebc-996d-4f18-b2cc-3f8b06d8a654",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pink-lavender spiral sits at the upper left of the head, with radiating dark and red lines fanning outward like spokes across the full width of the image.\",\n    \"Two large oval eye shapes contain concentric rings of green, purple, and white, flanking a vertical teal stripe that runs down the center of the face.\",\n    \"A wide open mouth at the bottom shows jagged white triangular teeth between red lips, with scattered angular purple and pink marks filling the surrounding background.\"\n  ],\n  \"reading\": \"The face stares outward through layered rings of color, its spiral crown pulling the eye upward while the bared teeth anchor the composition below. The teal nose-stripe splits the image into halves that don't quite mirror each other—one eye wider, one more buried in overlapping lines. The effect reads as alarm or confrontation, a face caught mid-shout against a field of clashing yellows, pinks, and blues.\",\n  \"contextAngle\": \"In the owned Scrimshaw numbered family, this sits between Scrimshaw6 and Scrimshaw8. Scrimshaw6 uses a quieter yellow ground with looser blue outlines; Scrimshaw7 packs the frame more densely and introduces the spiral motif and exposed teeth not seen in its neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp\",\n      \"reason\": \"Both center a face on a warm ground, but Scrimshaw6 leaves open yellow space around its blue outlines while Scrimshaw7 fills nearly every gap with radiating lines and saturated marks.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR\",\n      \"reason\": \"Both show bared zigzag teeth and asymmetric eye shapes built from overlapping colored outlines, linking the collector's cross-collection interest in shared visual intensity.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral form\",\n    \"bared teeth\",\n    \"radiating lines\",\n    \"layered face\",\n    \"dense overlapping marks\",\n    \"teal vertical stripe\"\n  ],\n  \"lookingQuestion\": \"How does the pink spiral at the top of the head relate to the concentric rings inside the eyes—do they seem to echo each other, or does the spiral suggest a different kind of motion?\",\n  \"ambiguities\": [\n    \"Small angular shapes in the background (triangles, rectangles) may be secondary faces or abstract marks; their role is unclear.\",\n    \"Whether the teal vertical stripe reads as a nose or a dividing boundary depends on viewing distance.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH/image.png",
+        "imageSHA256": "30c897acb60f720e36113b6ac820280895f839aced2f21524c42e5b1da47666a"
+      },
+      {
+        "artworkId": "QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp/image.png",
+        "imageSHA256": "0ca4a88a11e4bc7a87daea94cb47751bb8a7039eb28e79379ec6339792639625"
+      },
+      {
+        "artworkId": "QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR/image.png",
+        "imageSHA256": "9231b0bc375701689ab74b5540fd74b3fb1e2c3d64361ffafc64d2386ac39ada"
+      },
+      {
+        "artworkId": "QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9/image.png",
+        "imageSHA256": "55b3c0f660ba734711080f7789a1ca827d66434132e7eea017056e9fc4c83394"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:59.966953-05:00",
+    "usage": {
+      "inputTokens": 6120,
+      "outputTokens": 825,
+      "totalTokens": 6945,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11520
+    },
+    "requestId": "854a39d1-c306-403e-abbd-47e228d08ddf",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pink-lavender spiral sits upper-left on the head, with radiating dark, red, and gray lines fanning outward across the full width of the image.\",\n    \"Two large oval eye shapes contain concentric rings of green, purple, and white, flanking a vertical teal stripe running down the center of the face.\",\n    \"A wide open mouth at the bottom shows jagged white triangular teeth between red lips, with scattered angular purple and pink marks filling the surrounding background.\"\n  ],\n  \"reading\": \"The face stares out through layered rings of color, its spiral crown pulling the eye upward while bared teeth anchor the composition below. The teal stripe splits the image into halves that don't quite mirror each other—one eye wider, one more buried in overlapping lines. The effect reads as alarm or confrontation, a face caught mid-shout against clashing yellows, pinks, and blues.\",\n  \"contextAngle\": \"In the owned Scrimshaw numbered family, this sits between Scrimshaw6 and Scrimshaw8. Scrimshaw6 uses a quieter yellow ground with looser blue outlines; Scrimshaw7 packs the frame more densely and introduces the spiral motif and exposed teeth absent from that neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp\",\n      \"reason\": \"Both center a face on a warm ground, but Scrimshaw6 leaves open yellow space around blue outlines while Scrimshaw7 fills nearly every gap with radiating lines and saturated marks.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR\",\n      \"reason\": \"Both show bared zigzag teeth and asymmetric eye shapes built from overlapping colored outlines, linking the collector's cross-collection interest in shared visual intensity.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral form\",\n    \"bared teeth\",\n    \"radiating lines\",\n    \"layered face\",\n    \"dense overlapping marks\",\n    \"teal vertical stripe\"\n  ],\n  \"lookingQuestion\": \"How does the pink spiral at the top of the head relate to the concentric rings inside the eyes—do they seem to echo each other, or does the spiral suggest a different kind of motion?\",\n  \"ambiguities\": [\n    \"Small angular shapes in the background (triangles, rectangles) may be secondary faces or abstract marks; their role is unclear.\",\n    \"Whether the teal vertical stripe reads as a nose or a dividing boundary depends on viewing distance.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed spiral is pink-lavender, positioned upper-left of the head; radiating lines include gray strands alongside dark and red, corrected from draft which omitted gray.\",\n    \"Checked nnxyz nifty faces #6: zigzag teeth and asymmetric layered eye outlines are visible in both images, supporting the cross-collection comparison.\",\n    \"Scrimshaw8 comparison was considered but omitted; its purple-dominant palette and denser scribble obscure the face more than Scrimshaw7, making the Scrimshaw6 contrast more informative.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH/image.png",
+        "imageSHA256": "30c897acb60f720e36113b6ac820280895f839aced2f21524c42e5b1da47666a"
+      },
+      {
+        "artworkId": "QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp/image.png",
+        "imageSHA256": "0ca4a88a11e4bc7a87daea94cb47751bb8a7039eb28e79379ec6339792639625"
+      },
+      {
+        "artworkId": "QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR/image.png",
+        "imageSHA256": "9231b0bc375701689ab74b5540fd74b3fb1e2c3d64361ffafc64d2386ac39ada"
+      },
+      {
+        "artworkId": "QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9/image.png",
+        "imageSHA256": "55b3c0f660ba734711080f7789a1ca827d66434132e7eea017056e9fc4c83394"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A pink-lavender spiral sits at the upper left of the head, with radiating dark and red lines fanning outward like spokes across the full width of the image.\", \"Two large oval eye shapes contain concentric rings of green, purple, and white, flanking a vertical teal stripe that runs down the center of the face.\", \"A wide open mouth at the bottom shows jagged white triangular teeth between red lips, with scattered angular purple and pink marks filling the surrounding background.\"], \"reading\": \"The face stares outward through layered rings of color, its spiral crown pulling the eye upward while the bared teeth anchor the composition below. The teal nose-stripe splits the image into halves that don't quite mirror each other—one eye wider, one more buried in overlapping lines. The effect reads as alarm or confrontation, a face caught mid-shout against a field of clashing yellows, pinks, and blues.\", \"contextAngle\": \"In the owned Scrimshaw numbered family, this sits between Scrimshaw6 and Scrimshaw8. Scrimshaw6 uses a quieter yellow ground with looser blue outlines; Scrimshaw7 packs the frame more densely and introduces the spiral motif and exposed teeth not seen in its neighbor.\", \"connections\": [{\"targetArtworkId\": \"QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp\", \"reason\": \"Both center a face on a warm ground, but Scrimshaw6 leaves open yellow space around its blue outlines while Scrimshaw7 fills nearly every gap with radiating lines and saturated marks.\"}, {\"targetArtworkId\": \"QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR\", \"reason\": \"Both show bared zigzag teeth and asymmetric eye shapes built from overlapping colored outlines, linking the collector's cross-collection interest in shared visual intensity.\"}], \"tags\": [\"spiral form\", \"bared teeth\", \"radiating lines\", \"layered face\", \"dense overlapping marks\", \"teal vertical stripe\"], \"lookingQuestion\": \"How does the pink spiral at the top of the head relate to the concentric rings inside the eyes—do they seem to echo each other, or does the spiral suggest a different kind of motion?\", \"ambiguities\": [\"Small angular shapes in the background (triangles, rectangles) may be secondary faces or abstract marks; their role is unclear.\", \"Whether the teal vertical stripe reads as a nose or a dividing boundary depends on viewing distance.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

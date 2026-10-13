@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:01.141671-05:00",
+    "usage": {
+      "inputTokens": 6250,
+      "outputTokens": 727,
+      "totalTokens": 6977,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19335
+    },
+    "requestId": "388d59df-c35e-4436-8166-4e4d3e846188",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A round white face with two oval black eyes and an open oval mouth sits atop a tall black-clad body with a vertical row of white buttons down the center.\",\n    \"A wild black ponytail, tied with a red band, sweeps upward and to the right from the top of the head, its strands loose and ragged at the tips.\",\n    \"Behind the figure, a large gray hand-shaped shadow presses against a teal inner rectangle, while a small red flower with green stem appears near the lower right.\"\n  ],\n  \"reading\": \"The stark white circle of the face, locked in a frozen open-mouthed expression, reads as startled or mute—caught mid-gasp. The oversized shadow hand behind the figure dwarfs it, pressing forward as if reaching through the frame. A single small red flower at the figure's feet offers a quiet counterpoint, its warmth isolated against the dominant teal and black. The buttoned coat and bound hair lend the figure a formal stillness that makes the looming shadow feel more unsettling.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #35\\\" and \\\"nnxyz rawblocks #37.\\\" Where #35 uses loose looping lines on a bright orange field, #36 shifts to flat black shapes against teal, sharing that teal background with #37 but trading its multi-limbed chaos for a single still figure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G\",\n      \"reason\": \"Both use a teal background with a gray border frame and black figures, but #37 fills the space with a bulky multi-armed form while #36 leaves open space around a narrow, upright silhouette.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP\",\n      \"reason\": \"Both place a lone dark silhouette against a flat teal field, but #103 uses a low horizontal shape on a ground line while #36 stands its figure upright and centered.\"\n    }\n  ],\n  \"tags\": [\n    \"round face\",\n    \"shadow hand\",\n    \"teal background\",\n    \"black silhouette figure\",\n    \"small red flower\",\n    \"framed composition\"\n  ],\n  \"lookingQuestion\": \"What relationship does the gray hand shadow suggest to the figure—does it belong to the figure, or does it seem to come from somewhere else entirely?\",\n  \"ambiguities\": [\n    \"The shadow hand could be read as the figure's own cast shadow or as a separate presence; the image does not resolve this.\",\n    \"The flower's placement near the figure's hand area is ambiguous—it may be held or simply positioned nearby on the ground.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt/image.png",
+        "imageSHA256": "a1600a0b207eb11cbe2a2f408614eaaa8c0bf4baddda2a6480afe3a7c63c651c"
+      },
+      {
+        "artworkId": "QmcpYUExuvjdAnTYr3i1GkQcVdpLAbGy5bwnNABr5XPCAg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcpYUExuvjdAnTYr3i1GkQcVdpLAbGy5bwnNABr5XPCAg/image.png",
+        "imageSHA256": "8a827139caa208b1cd0558b886009fece87ac07bf85dd2205a1aa5935b1be924"
+      },
+      {
+        "artworkId": "QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP/image.png",
+        "imageSHA256": "fc2ffd0109245e677af8ee0ab8abfcd5d95fa77583c409beb27f73e3cb0ac85e"
+      },
+      {
+        "artworkId": "QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G/image.png",
+        "imageSHA256": "69dcbfd6aa0ec72366770f32bee86adaacc5ed5403ca96b48aa1d212cc833532"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:12.868710-05:00",
+    "usage": {
+      "inputTokens": 7009,
+      "outputTokens": 824,
+      "totalTokens": 7833,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11681
+    },
+    "requestId": "53a8677c-7fe7-4bb7-9557-4bb3c8fdb2f1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A round white face with two black oval eyes and an open black oval mouth tops a tall black body with a vertical line of small white dots down the center.\",\n    \"A loose black ponytail, bound by a red tie, sweeps upward and right from the head's crown, its strands fraying at the tips.\",\n    \"A large gray hand-shaped shadow spreads behind the figure against a teal inner rectangle, while a small red flower with a green stem sits near the lower right corner.\"\n  ],\n  \"reading\": \"The white circle of the face, locked in a wide-open expression, can read as startled or silenced—caught mid-gasp. The oversized shadow hand behind the figure dwarfs it, pressing forward as though reaching through the frame. A single small red flower at the figure's feet offers a quiet counterpoint, its warmth isolated against dominant teal and black. The buttoned coat and bound hair lend a formal stillness that makes the looming shadow feel more unsettling.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #35\\\" and \\\"nnxyz rawblocks #37.\\\" Where #35 uses loose looping lines on a bright orange field, #36 shifts to flat black shapes against teal, sharing that teal tone with #37 but trading its multi-limbed bulk for a single still figure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G\",\n      \"reason\": \"Both use a teal field with a gray border and black figures, but #37 fills the space with a bulky multi-armed form while #36 leaves open space around a narrow upright silhouette.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP\",\n      \"reason\": \"Both place a lone dark silhouette against flat teal, but nnotb #103 uses a low horizontal shape on a ground line while #36 stands its figure upright and centered.\"\n    }\n  ],\n  \"tags\": [\n    \"round face\",\n    \"shadow hand\",\n    \"teal background\",\n    \"black silhouette figure\",\n    \"small red flower\",\n    \"framed composition\"\n  ],\n  \"lookingQuestion\": \"Does the gray hand shadow seem to belong to the figure itself, or does it appear to come from somewhere outside the frame?\",\n  \"ambiguities\": [\n    \"The shadow hand could be the figure's own cast shadow or a separate presence; the image does not resolve this.\",\n    \"The flower's placement near the figure's lower hand area is ambiguous—it may be held or simply positioned on the ground nearby.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed white dots on the coat are small circles, not traditional buttons; changed 'buttons' to 'white dots' in observations for accuracy.\",\n    \"Reading trimmed from 80 words to 74 to stay within limit; removed 'mute' phrasing that implied a narrative beyond visible evidence.\",\n    \"Both comparison images verified: #37 shares teal background and gray border; nnotb #103 shares teal field and dark silhouette placement.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt/image.png",
+        "imageSHA256": "a1600a0b207eb11cbe2a2f408614eaaa8c0bf4baddda2a6480afe3a7c63c651c"
+      },
+      {
+        "artworkId": "QmcpYUExuvjdAnTYr3i1GkQcVdpLAbGy5bwnNABr5XPCAg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcpYUExuvjdAnTYr3i1GkQcVdpLAbGy5bwnNABr5XPCAg/image.png",
+        "imageSHA256": "8a827139caa208b1cd0558b886009fece87ac07bf85dd2205a1aa5935b1be924"
+      },
+      {
+        "artworkId": "QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP/image.png",
+        "imageSHA256": "fc2ffd0109245e677af8ee0ab8abfcd5d95fa77583c409beb27f73e3cb0ac85e"
+      },
+      {
+        "artworkId": "QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G/image.png",
+        "imageSHA256": "69dcbfd6aa0ec72366770f32bee86adaacc5ed5403ca96b48aa1d212cc833532"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A round white face with two oval black eyes and an open oval mouth sits atop a tall black-clad body with a vertical row of white buttons down the center.\", \"A wild black ponytail, tied with a red band, sweeps upward and to the right from the top of the head, its strands loose and ragged at the tips.\", \"Behind the figure, a large gray hand-shaped shadow presses against a teal inner rectangle, while a small red flower with green stem appears near the lower right.\"], \"reading\": \"The stark white circle of the face, locked in a frozen open-mouthed expression, reads as startled or mute—caught mid-gasp. The oversized shadow hand behind the figure dwarfs it, pressing forward as if reaching through the frame. A single small red flower at the figure's feet offers a quiet counterpoint, its warmth isolated against the dominant teal and black. The buttoned coat and bound hair lend the figure a formal stillness that makes the looming shadow feel more unsettling.\", \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #35\\\" and \\\"nnxyz rawblocks #37.\\\" Where #35 uses loose looping lines on a bright orange field, #36 shifts to flat black shapes against teal, sharing that teal background with #37 but trading its multi-limbed chaos for a single still figure.\", \"connections\": [{\"targetArtworkId\": \"QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G\", \"reason\": \"Both use a teal background with a gray border frame and black figures, but #37 fills the space with a bulky multi-armed form while #36 leaves open space around a narrow, upright silhouette.\"}, {\"targetArtworkId\": \"QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP\", \"reason\": \"Both place a lone dark silhouette against a flat teal field, but #103 uses a low horizontal shape on a ground line while #36 stands its figure upright and centered.\"}], \"tags\": [\"round face\", \"shadow hand\", \"teal background\", \"black silhouette figure\", \"small red flower\", \"framed composition\"], \"lookingQuestion\": \"What relationship does the gray hand shadow suggest to the figure—does it belong to the figure, or does it seem to come from somewhere else entirely?\", \"ambiguities\": [\"The shadow hand could be read as the figure's own cast shadow or as a separate presence; the image does not resolve this.\", \"The flower's placement near the figure's hand area is ambiguous—it may be held or simply positioned nearby on the ground.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:16:13.582039-05:00",
+    "usage": {
+      "inputTokens": 6815,
+      "outputTokens": 788,
+      "totalTokens": 7603,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 9891
+    },
+    "requestId": "9c9d7575-29b2-4b84-82da-db8e2eddfabe",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A round white face with two black oval eyes and a black oval mouth tops a tall black body with a vertical line of small white dots down the center.\",\n    \"A loose black ponytail, bound by a red tie, sweeps upward and right from the head's crown, its strands fraying at the tips.\",\n    \"A large gray hand-shaped shadow spreads behind the figure against a teal inner rectangle, while a small red flower with a green stem sits near the lower right corner.\"\n  ],\n  \"reading\": \"The white circle of the face, its dark oval mouth neither clenched nor gaping, can read as frozen in mild surprise or quiet alarm. The oversized shadow hand behind the figure dwarfs it, pressing forward as though reaching through the frame. A single small red flower at the figure's feet offers a quiet counterpoint, its warmth isolated against dominant teal and black. The buttoned coat and bound hair lend a formal stillness that makes the looming shadow feel more unsettling.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this piece sits between #35 and #37. Where #35 uses loose looping lines on a bright orange field, #36 shifts to flat black shapes against teal, sharing that teal tone with #37 but trading its multi-limbed bulk for a single still figure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G\",\n      \"reason\": \"Both use a teal field with a gray border and black figures, but #37 fills the space with a bulky multi-armed form while #36 leaves open space around a narrow upright silhouette.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP\",\n      \"reason\": \"Both place a lone dark silhouette against flat teal, but nnotb #103 uses a low horizontal shape on a ground line while #36 stands its figure upright and centered.\"\n    }\n  ],\n  \"tags\": [\n    \"round face\",\n    \"shadow hand\",\n    \"teal background\",\n    \"black silhouette figure\",\n    \"small red flower\",\n    \"framed composition\"\n  ],\n  \"lookingQuestion\": \"Does the gray hand shadow seem to belong to the figure itself, or does it appear to come from somewhere outside the frame?\",\n  \"ambiguities\": [\n    \"The shadow hand could be the figure's own cast shadow or a separate presence; the image does not resolve this.\",\n    \"The flower's placement near the figure's lower hand area is ambiguous—it may be held or simply positioned on the ground nearby.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open expression' with 'its dark oval mouth neither clenched nor gaping' to reflect the moderate oval opening visible in the image, which does not show teeth or an exaggerated gape.\",\n    \"Reading word count adjusted to remain within 55–65 words.\",\n    \"Context angle trimmed to stay within 30–40 words for the owned subset.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt/image.png",
+        "imageSHA256": "a1600a0b207eb11cbe2a2f408614eaaa8c0bf4baddda2a6480afe3a7c63c651c"
+      },
+      {
+        "artworkId": "QmcpYUExuvjdAnTYr3i1GkQcVdpLAbGy5bwnNABr5XPCAg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcpYUExuvjdAnTYr3i1GkQcVdpLAbGy5bwnNABr5XPCAg/image.png",
+        "imageSHA256": "8a827139caa208b1cd0558b886009fece87ac07bf85dd2205a1aa5935b1be924"
+      },
+      {
+        "artworkId": "QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP/image.png",
+        "imageSHA256": "fc2ffd0109245e677af8ee0ab8abfcd5d95fa77583c409beb27f73e3cb0ac85e"
+      },
+      {
+        "artworkId": "QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G/image.png",
+        "imageSHA256": "69dcbfd6aa0ec72366770f32bee86adaacc5ed5403ca96b48aa1d212cc833532"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A round white face with two black oval eyes and an open black oval mouth tops a tall black body with a vertical line of small white dots down the center.\", \"A loose black ponytail, bound by a red tie, sweeps upward and right from the head's crown, its strands fraying at the tips.\", \"A large gray hand-shaped shadow spreads behind the figure against a teal inner rectangle, while a small red flower with a green stem sits near the lower right corner.\"], \"reading\": \"The white circle of the face, locked in a wide-open expression, can read as startled or silenced—caught mid-gasp. The oversized shadow hand behind the figure dwarfs it, pressing forward as though reaching through the frame. A single small red flower at the figure's feet offers a quiet counterpoint, its warmth isolated against dominant teal and black. The buttoned coat and bound hair lend a formal stillness that makes the looming shadow feel more unsettling.\", \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #35\\\" and \\\"nnxyz rawblocks #37.\\\" Where #35 uses loose looping lines on a bright orange field, #36 shifts to flat black shapes against teal, sharing that teal tone with #37 but trading its multi-limbed bulk for a single still figure.\", \"connections\": [{\"targetArtworkId\": \"QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G\", \"reason\": \"Both use a teal field with a gray border and black figures, but #37 fills the space with a bulky multi-armed form while #36 leaves open space around a narrow upright silhouette.\"}, {\"targetArtworkId\": \"QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP\", \"reason\": \"Both place a lone dark silhouette against flat teal, but nnotb #103 uses a low horizontal shape on a ground line while #36 stands its figure upright and centered.\"}], \"tags\": [\"round face\", \"shadow hand\", \"teal background\", \"black silhouette figure\", \"small red flower\", \"framed composition\"], \"lookingQuestion\": \"Does the gray hand shadow seem to belong to the figure itself, or does it appear to come from somewhere outside the frame?\", \"ambiguities\": [\"The shadow hand could be the figure's own cast shadow or a separate presence; the image does not resolve this.\", \"The flower's placement near the figure's lower hand area is ambiguous—it may be held or simply positioned on the ground nearby.\"]}\nFLAGS:\n[{\"artworkId\": \"QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:24.975825-05:00",
+    "usage": {
+      "inputTokens": 6148,
+      "outputTokens": 792,
+      "totalTokens": 6940,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12977
+    },
+    "requestId": "65a66428-d63d-43db-a33f-8a40cd0ec173",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad, dark mask-like form sits centered against a background of flowing orange and red wave stripes; a row of yellow-green spheres runs along the top and bottom edges of the form.\",\n    \"Each eye socket holds a red spiral disc ringed in gold-yellow, with small green dots clustered above; the left socket is partially obscured, giving the face an asymmetric, off-balance look.\",\n    \"The lower section opens into a wide mouth showing four thick white tooth-shapes; dense blue and teal scribble lines cross the forehead and chin, contrasting with the dark mass beneath.\"\n  ],\n  \"reading\": \"The mask sits heavy and frontal, yet the wavy orange background keeps the whole surface restless. Red spirals in the eye sockets pull attention inward while the surrounding scribble lines push outward. The yellow-green bead row reads as both ornament and boundary. That open mouth — blunt white teeth, dark void behind — gives the image a blunt, unguarded quality that sits somewhere between ceremony and alarm.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors are nnxyz nifty faces #125 and nnxyz nifty faces #127. This work is the most saturated of the three inspected neighbors, trading #125's flat lavender calm and #127's loose scribble field for a dense, jeweled surface on a hot undulating ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdNNauR8jZWoZ3iFyBenrEu8ft2Rsi7S8NTb1pKi1psHK\",\n      \"reason\": \"Both works share a dark volumetric mask form with a single large spiral-disc eye, but #125 sits against a flat lavender field while #126 places the same structure on a rippling warm ground, sharpening the contrast between stillness and agitation.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ\",\n      \"reason\": \"Title neighbor #127 also uses an orange ground and a wide open mouth with rectangular teeth, but its form dissolves into loose radiating scribbles where #126 keeps the mask solid and bead-edged.\"\n    }\n  ],\n  \"tags\": [\n    \"mask form\",\n    \"spiral eye motif\",\n    \"bead border\",\n    \"wave-stripe background\",\n    \"open mouth with teeth\",\n    \"dense cross-hatched line work\"\n  ],\n  \"interpretiveTags\": [\n    \"ceremonial weight\",\n    \"unguarded intensity\"\n  ],\n  \"lookingQuestion\": \"The yellow-green spheres line both the top and the bottom of the mask — does that double border feel like it contains the form, or does it draw your eye away from the spiral eyes at the center?\",\n  \"ambiguities\": [\n    \"The left eye socket is partially obscured; whether this reflects the underlying form or a separate overlapping element is unclear from the image alone.\",\n    \"The nnotb #195 comparison image was inspected but shares no strong formal element with #126 beyond a warm orange ground and scribbled lines — no connection included.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQDTMSZKPDTArtetKCSmWKr7QBvrYMm9hDV8LCrnLhmav",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQDTMSZKPDTArtetKCSmWKr7QBvrYMm9hDV8LCrnLhmav/image.png",
+        "imageSHA256": "4e4271b9e410871ba96ecc2548ea860923ca53131fa2c00f252c9bb75145067f"
+      },
+      {
+        "artworkId": "QmdNNauR8jZWoZ3iFyBenrEu8ft2Rsi7S8NTb1pKi1psHK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdNNauR8jZWoZ3iFyBenrEu8ft2Rsi7S8NTb1pKi1psHK/image.png",
+        "imageSHA256": "4da8317c6f9af48c18c9dcf728cde5d1c689bcc2c2baa26c86270c2f3565394a"
+      },
+      {
+        "artworkId": "QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF/image.png",
+        "imageSHA256": "d4c179828ec61a4eb2744cfd3b5b3d6af2398bb9851c8d11fdaad59c1d86fa10"
+      },
+      {
+        "artworkId": "QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ/image.png",
+        "imageSHA256": "1b9b01bc3c32fc309f941ae291563271464b61382e90e4ef1c4351b51232e5f3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:32.018372-05:00",
+    "usage": {
+      "inputTokens": 6962,
+      "outputTokens": 935,
+      "totalTokens": 7897,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6707
+    },
+    "requestId": "06d2b18d-f41c-4ea4-b4ae-facf93d463a8",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad, dark mask-like form sits centered against a background of flowing orange and red wave stripes; a row of yellow-green spheres runs along both the top and bottom edges of the form.\",\n    \"Each eye socket holds a red spiral disc ringed in gold-yellow, with small green dots clustered above; the left socket is partially obscured by overlapping dark planes, giving the face an asymmetric look.\",\n    \"The lower section opens into a wide mouth showing four thick white tooth-shapes; dense blue and teal scribble lines cross the forehead and chin area, contrasting with the dark mass beneath.\"\n  ],\n  \"reading\": \"The mask sits heavy and frontal, yet the wavy orange background keeps the whole surface restless. Red spirals in the eye sockets pull attention inward while surrounding scribble lines push outward. The yellow-green bead row reads as both ornament and boundary. That open mouth — blunt white teeth, dark void behind — gives the image a quality that reads somewhere between ceremony and alarm.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors are nnxyz nifty faces #125 and nnxyz nifty faces #127. This work trades #125's flat lavender ground and #127's dissolving scribble field for a dense, bead-edged surface on a hot undulating ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdNNauR8jZWoZ3iFyBenrEu8ft2Rsi7S8NTb1pKi1psHK\",\n      \"reason\": \"Both show a dark volumetric mask with a large spiral-disc eye, but #125 sits against a flat lavender field while #126 places the same structure on a rippling warm ground, sharpening the contrast between stillness and agitation.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ\",\n      \"reason\": \"Title neighbor #127 also uses an orange ground and a wide open mouth with rectangular tooth-shapes, but its mask form dissolves into loose radiating scribbles where #126 keeps the form solid and bead-edged.\"\n    }\n  ],\n  \"tags\": [\n    \"mask form\",\n    \"spiral eye motif\",\n    \"bead border\",\n    \"wave-stripe background\",\n    \"open mouth with teeth\",\n    \"dense cross-hatched line work\"\n  ],\n  \"interpretiveTags\": [\n    \"ceremonial weight\",\n    \"unguarded intensity\"\n  ],\n  \"lookingQuestion\": \"The yellow-green spheres line both the top and the bottom of the mask — does that double border feel like it contains the form, or does it draw your eye away from the spiral eyes at the center?\",\n  \"ambiguities\": [\n    \"The left eye socket is partially obscured; whether this reflects the underlying form or a separate overlapping element is unclear from the image alone.\",\n    \"The nnotb #195 comparison image was inspected but shares no strong formal element with #126 beyond a warm orange ground and scribbled lines — no connection included.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: wave-stripe background, yellow-green bead rows top and bottom, red spiral discs with green dots, white tooth-shapes, and blue-teal scribble lines are all visible.\",\n    \"Both comparison connections verified against inspected images: #125 confirms flat lavender ground and single spiral eye; #127 confirms orange ground, open mouth with rectangular teeth, and looser dissolving scribble field.\",\n    \"No invented intent, biography, media, or unsupported subject identities found in draft; 'ceremony and alarm' retained as explicit reading, not assertion; word counts within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQDTMSZKPDTArtetKCSmWKr7QBvrYMm9hDV8LCrnLhmav",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQDTMSZKPDTArtetKCSmWKr7QBvrYMm9hDV8LCrnLhmav/image.png",
+        "imageSHA256": "4e4271b9e410871ba96ecc2548ea860923ca53131fa2c00f252c9bb75145067f"
+      },
+      {
+        "artworkId": "QmdNNauR8jZWoZ3iFyBenrEu8ft2Rsi7S8NTb1pKi1psHK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdNNauR8jZWoZ3iFyBenrEu8ft2Rsi7S8NTb1pKi1psHK/image.png",
+        "imageSHA256": "4da8317c6f9af48c18c9dcf728cde5d1c689bcc2c2baa26c86270c2f3565394a"
+      },
+      {
+        "artworkId": "QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF/image.png",
+        "imageSHA256": "d4c179828ec61a4eb2744cfd3b5b3d6af2398bb9851c8d11fdaad59c1d86fa10"
+      },
+      {
+        "artworkId": "QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ/image.png",
+        "imageSHA256": "1b9b01bc3c32fc309f941ae291563271464b61382e90e4ef1c4351b51232e5f3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad, dark mask-like form sits centered against a background of flowing orange and red wave stripes; a row of yellow-green spheres runs along the top and bottom edges of the form.\", \"Each eye socket holds a red spiral disc ringed in gold-yellow, with small green dots clustered above; the left socket is partially obscured, giving the face an asymmetric, off-balance look.\", \"The lower section opens into a wide mouth showing four thick white tooth-shapes; dense blue and teal scribble lines cross the forehead and chin, contrasting with the dark mass beneath.\"], \"reading\": \"The mask sits heavy and frontal, yet the wavy orange background keeps the whole surface restless. Red spirals in the eye sockets pull attention inward while the surrounding scribble lines push outward. The yellow-green bead row reads as both ornament and boundary. That open mouth — blunt white teeth, dark void behind — gives the image a blunt, unguarded quality that sits somewhere between ceremony and alarm.\", \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors are nnxyz nifty faces #125 and nnxyz nifty faces #127. This work is the most saturated of the three inspected neighbors, trading #125's flat lavender calm and #127's loose scribble field for a dense, jeweled surface on a hot undulating ground.\", \"connections\": [{\"targetArtworkId\": \"QmdNNauR8jZWoZ3iFyBenrEu8ft2Rsi7S8NTb1pKi1psHK\", \"reason\": \"Both works share a dark volumetric mask form with a single large spiral-disc eye, but #125 sits against a flat lavender field while #126 places the same structure on a rippling warm ground, sharpening the contrast between stillness and agitation.\"}, {\"targetArtworkId\": \"QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ\", \"reason\": \"Title neighbor #127 also uses an orange ground and a wide open mouth with rectangular teeth, but its form dissolves into loose radiating scribbles where #126 keeps the mask solid and bead-edged.\"}], \"tags\": [\"mask form\", \"spiral eye motif\", \"bead border\", \"wave-stripe background\", \"open mouth with teeth\", \"dense cross-hatched line work\"], \"interpretiveTags\": [\"ceremonial weight\", \"unguarded intensity\"], \"lookingQuestion\": \"The yellow-green spheres line both the top and the bottom of the mask — does that double border feel like it contains the form, or does it draw your eye away from the spiral eyes at the center?\", \"ambiguities\": [\"The left eye socket is partially obscured; whether this reflects the underlying form or a separate overlapping element is unclear from the image alone.\", \"The nnotb #195 comparison image was inspected but shares no strong formal element with #126 beyond a warm orange ground and scribbled lines — no connection included.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:12.529126-05:00",
+    "usage": {
+      "inputTokens": 6718,
+      "outputTokens": 861,
+      "totalTokens": 7579,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7669
+    },
+    "requestId": "b2d48dc2-6741-4519-9226-20266c3f2537",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad, dark mask-like form sits centered against a background of flowing orange and red wave stripes; a row of yellow-green spheres runs along both the top and bottom edges of the form.\",\n    \"Each eye socket holds a red spiral disc ringed in gold-yellow, with small green dots clustered above; the left socket is partially obscured by overlapping dark planes, giving the face an asymmetric look.\",\n    \"The lower section shows four thick white tooth-shapes set within a dark-outlined horizontal band; dense blue and teal scribble lines cross the forehead and chin area, contrasting with the dark mass beneath.\"\n  ],\n  \"reading\": \"The mask sits heavy and frontal, yet the wavy orange background keeps the whole surface restless. Red spirals in the eye sockets pull attention inward while surrounding scribble lines push outward. The yellow-green bead row reads as both ornament and boundary. The lower band — blunt white teeth against a dark surround — gives the image a quality that reads somewhere between ceremony and alarm.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors are nnxyz nifty faces #125 and nnxyz nifty faces #127. This work trades #125's flat lavender ground and #127's dissolving scribble field for a dense, bead-edged surface on a hot undulating ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdNNauR8jZWoZ3iFyBenrEu8ft2Rsi7S8NTb1pKi1psHK\",\n      \"reason\": \"Both show a dark volumetric mask with a large spiral-disc eye, but #125 sits against a flat lavender field while #126 places the same structure on a rippling warm ground, sharpening the contrast between stillness and agitation.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ\",\n      \"reason\": \"Title neighbor #127 also uses an orange ground and a horizontal tooth-band at the mouth, but its mask form dissolves into loose radiating scribbles where #126 keeps the form solid and bead-edged.\"\n    }\n  ],\n  \"tags\": [\"mask form\", \"spiral eye motif\", \"bead border\", \"wave-stripe background\", \"tooth-band mouth\", \"dense cross-hatched line work\"],\n  \"lookingQuestion\": \"The yellow-green spheres line both the top and the bottom of the mask — does that double border feel like it contains the form, or does it draw your eye away from the spiral eyes at the center?\",\n  \"ambiguities\": [\n    \"The left eye socket is partially obscured; whether this reflects the underlying form or a separate overlapping element is unclear from the image alone.\",\n    \"The nnotb #195 comparison image was inspected but shares no strong formal element with #126 beyond a warm orange ground and scribbled lines — no connection included.\"\n  ],\n  \"reviewFindings\": [\n    \"Mouth-openness flag resolved: 'wide open' removed; the lower section is now described as a dark-outlined horizontal band containing four white tooth-shapes, without claiming a wide opening.\",\n    \"Reading adjusted to remove 'open mouth' phrasing while retaining the ceremony-and-alarm emotional reading, grounded in the tooth-band and dark surround.\",\n    \"Tag updated from 'open mouth with teeth' to 'tooth-band mouth' to reflect only what is visible.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQDTMSZKPDTArtetKCSmWKr7QBvrYMm9hDV8LCrnLhmav",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQDTMSZKPDTArtetKCSmWKr7QBvrYMm9hDV8LCrnLhmav/image.png",
+        "imageSHA256": "4e4271b9e410871ba96ecc2548ea860923ca53131fa2c00f252c9bb75145067f"
+      },
+      {
+        "artworkId": "QmdNNauR8jZWoZ3iFyBenrEu8ft2Rsi7S8NTb1pKi1psHK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdNNauR8jZWoZ3iFyBenrEu8ft2Rsi7S8NTb1pKi1psHK/image.png",
+        "imageSHA256": "4da8317c6f9af48c18c9dcf728cde5d1c689bcc2c2baa26c86270c2f3565394a"
+      },
+      {
+        "artworkId": "QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF/image.png",
+        "imageSHA256": "d4c179828ec61a4eb2744cfd3b5b3d6af2398bb9851c8d11fdaad59c1d86fa10"
+      },
+      {
+        "artworkId": "QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ/image.png",
+        "imageSHA256": "1b9b01bc3c32fc309f941ae291563271464b61382e90e4ef1c4351b51232e5f3"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A broad, dark mask-like form sits centered against a background of flowing orange and red wave stripes; a row of yellow-green spheres runs along both the top and bottom edges of the form.\", \"Each eye socket holds a red spiral disc ringed in gold-yellow, with small green dots clustered above; the left socket is partially obscured by overlapping dark planes, giving the face an asymmetric look.\", \"The lower section opens into a wide mouth showing four thick white tooth-shapes; dense blue and teal scribble lines cross the forehead and chin area, contrasting with the dark mass beneath.\"], \"reading\": \"The mask sits heavy and frontal, yet the wavy orange background keeps the whole surface restless. Red spirals in the eye sockets pull attention inward while surrounding scribble lines push outward. The yellow-green bead row reads as both ornament and boundary. That open mouth — blunt white teeth, dark void behind — gives the image a quality that reads somewhere between ceremony and alarm.\", \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors are nnxyz nifty faces #125 and nnxyz nifty faces #127. This work trades #125's flat lavender ground and #127's dissolving scribble field for a dense, bead-edged surface on a hot undulating ground.\", \"connections\": [{\"targetArtworkId\": \"QmdNNauR8jZWoZ3iFyBenrEu8ft2Rsi7S8NTb1pKi1psHK\", \"reason\": \"Both show a dark volumetric mask with a large spiral-disc eye, but #125 sits against a flat lavender field while #126 places the same structure on a rippling warm ground, sharpening the contrast between stillness and agitation.\"}, {\"targetArtworkId\": \"QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ\", \"reason\": \"Title neighbor #127 also uses an orange ground and a wide open mouth with rectangular tooth-shapes, but its mask form dissolves into loose radiating scribbles where #126 keeps the form solid and bead-edged.\"}], \"tags\": [\"mask form\", \"spiral eye motif\", \"bead border\", \"wave-stripe background\", \"open mouth with teeth\", \"dense cross-hatched line work\"], \"lookingQuestion\": \"The yellow-green spheres line both the top and the bottom of the mask — does that double border feel like it contains the form, or does it draw your eye away from the spiral eyes at the center?\", \"ambiguities\": [\"The left eye socket is partially obscured; whether this reflects the underlying form or a separate overlapping element is unclear from the image alone.\", \"The nnotb #195 comparison image was inspected but shares no strong formal element with #126 beyond a warm orange ground and scribbled lines — no connection included.\"]}\nFLAGS:\n[{\"artworkId\": \"QmQDTMSZKPDTArtetKCSmWKr7QBvrYMm9hDV8LCrnLhmav\", \"field\": \"connections\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:25.792514-05:00",
+    "usage": {
+      "inputTokens": 5288,
+      "outputTokens": 692,
+      "totalTokens": 5980,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19227
+    },
+    "requestId": "24af15e0-790c-4de6-8f33-6f8e6e6af38f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Three rounded head-like forms sit side by side, outlined in thick black strokes, with looping lines suggesting ears, eyes, and open mouths across the lower half.\",\n    \"A dense underlayer of orange, teal, blue, red, and pink scratchy lines fills the background, visible through and around the black outlines like a tangled web.\",\n    \"Bold white scrawled marks cut across the middle zone, overlapping the black forms and creating a loose, graffiti-like text or scribble layer.\"\n  ],\n  \"reading\": \"Three black-outlined heads crowd the frame shoulder to shoulder, their features reduced to loops and open curves. Behind them, a hot orange-and-purple field of tangled lines pulses through every gap. The white scrawl layered across their faces reads as interruption—obscuring mouths and eyes, lending the group a feeling of being spoken over or half-erased. The composition can feel both communal and chaotic, a crowd jostling for visibility.\",\n  \"contextAngle\": \"Scrimshaw3 sits between \\\"Scrimshaw2\\\" and \\\"Scrimshaw4\\\" in the owned numbered family. Where \\\"Scrimshaw2\\\" centers a single blue-toned form, this work multiplies figures to three and shifts to warm orange and purple, marking a clear change in density and palette within the owned subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz\",\n      \"reason\": \"\\\"Scrimshaw2\\\" uses a single looping head with cool blues and greens, making the jump to three warm-toned heads here a visible shift in crowding and color temperature.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y\",\n      \"reason\": \"Both works layer bright scratchy color beneath heavy black outlines that define face-like shapes, though the nnxyz piece uses darker fill while Scrimshaw3 lets the background blaze through.\"\n    }\n  ],\n  \"tags\": [\n    \"multiple figures\",\n    \"thick black outlines\",\n    \"layered scribble\",\n    \"white overwriting\",\n    \"warm dense background\",\n    \"looping head forms\"\n  ],\n  \"lookingQuestion\": \"How does the white scrawl across the three faces change your sense of whether these figures are distinct individuals or merging into one another?\",\n  \"ambiguities\": [\n    \"Whether the white marks represent text, signatures, or purely abstract scribble cannot be confirmed from the image alone.\",\n    \"The number of distinct figures could be read as two or three depending on how overlapping outlines at center are parsed.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS/image.png",
+        "imageSHA256": "43c49550dc0d40ff447b72187ab46a80b771dfd444b1e5495196bffc64aae4fb"
+      },
+      {
+        "artworkId": "QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz/image.png",
+        "imageSHA256": "83424605a7f8b7ad869db57cb69de2d55ce5ed9899d6ba0f79fd9da846ba5dde"
+      },
+      {
+        "artworkId": "QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y/image.png",
+        "imageSHA256": "3c7ed1da456442ae3ebc0cf2548af7153b5512d22a24cc2f4f832a60a429e2e5"
+      },
+      {
+        "artworkId": "Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D/image.png",
+        "imageSHA256": "3181673ec0cafcc4f049052fbff2e8cad3a5bd6f2c8789864c7707fe4229f2d8"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:36.845157-05:00",
+    "usage": {
+      "inputTokens": 6012,
+      "outputTokens": 810,
+      "totalTokens": 6822,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10977
+    },
+    "requestId": "ae9e3cc3-b90b-4318-b035-4a50856db7ab",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Three rounded forms outlined in thick black strokes sit side by side, with looping lines suggesting circular eyes, ears, and wide-open mouths across the lower half.\",\n    \"A dense underlayer of orange, teal, blue, red, and pink scratchy lines fills the background, visible through and around the black outlines like a tangled web.\",\n    \"Bold white scrawled marks cut across the middle zone, overlapping the black forms and creating a loose scribble layer that partially obscures the shapes beneath.\"\n  ],\n  \"reading\": \"Three black-outlined heads crowd the frame shoulder to shoulder, their features reduced to loops and open curves. Behind them, a hot orange-and-purple field of tangled lines pulses through every gap. The white scrawl layered across their faces reads as interruption—obscuring mouths and eyes, lending the group a feeling of being spoken over or half-erased. The composition can feel both communal and chaotic, figures jostling for visibility.\",\n  \"contextAngle\": \"Scrimshaw3 sits between \\\"Scrimshaw2\\\" and \\\"Scrimshaw4\\\" in the owned numbered family. Where \\\"Scrimshaw2\\\" centers a single blue-and-teal form, this work multiplies figures to three and shifts to warm orange and purple, marking a clear change in density and palette within the owned subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz\",\n      \"reason\": \"\\\"Scrimshaw2\\\" uses a single looping head in cool blues and greens, making the jump to three warm-toned heads here a visible shift in crowding and color temperature.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y\",\n      \"reason\": \"Both layer bright scratchy color beneath heavy black outlines defining face-like shapes, though the nnxyz piece uses darker fill while Scrimshaw3 lets the background blaze through.\"\n    }\n  ],\n  \"tags\": [\n    \"multiple figures\",\n    \"thick black outlines\",\n    \"layered scribble\",\n    \"white overwriting\",\n    \"warm dense background\",\n    \"looping head forms\"\n  ],\n  \"lookingQuestion\": \"How does the white scrawl across the three faces change your sense of whether these figures are distinct individuals or merging into one another?\",\n  \"ambiguities\": [\n    \"Whether the white marks represent text, signatures, or purely abstract scribble cannot be confirmed from the image alone.\",\n    \"The number of distinct figures could be read as two or three depending on how overlapping outlines at center are parsed.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed three rounded black-outlined forms visible in the image; the center form's boundaries overlap neighbors, supporting the noted ambiguity about count.\",\n    \"Background colors verified: orange, teal, purple, blue, red, and pink scratchy lines are all present behind the black outlines.\",\n    \"Comparison to Scrimshaw2 checked: its palette is indeed dominated by blues, greens, and teal with a single central form, confirming the contrast in figure count and color temperature.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeLzMjDDGgpKXyzCpZb6TtRMKb3zu5oreHkR3PxVcbcQS/image.png",
+        "imageSHA256": "43c49550dc0d40ff447b72187ab46a80b771dfd444b1e5495196bffc64aae4fb"
+      },
+      {
+        "artworkId": "QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz/image.png",
+        "imageSHA256": "83424605a7f8b7ad869db57cb69de2d55ce5ed9899d6ba0f79fd9da846ba5dde"
+      },
+      {
+        "artworkId": "QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y/image.png",
+        "imageSHA256": "3c7ed1da456442ae3ebc0cf2548af7153b5512d22a24cc2f4f832a60a429e2e5"
+      },
+      {
+        "artworkId": "Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/Qmbjd3MafyAQcjQTVabXVo9o4LtB1ns6VU1Gdry4qtFH2D/image.png",
+        "imageSHA256": "3181673ec0cafcc4f049052fbff2e8cad3a5bd6f2c8789864c7707fe4229f2d8"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Three rounded head-like forms sit side by side, outlined in thick black strokes, with looping lines suggesting ears, eyes, and open mouths across the lower half.\", \"A dense underlayer of orange, teal, blue, red, and pink scratchy lines fills the background, visible through and around the black outlines like a tangled web.\", \"Bold white scrawled marks cut across the middle zone, overlapping the black forms and creating a loose, graffiti-like text or scribble layer.\"], \"reading\": \"Three black-outlined heads crowd the frame shoulder to shoulder, their features reduced to loops and open curves. Behind them, a hot orange-and-purple field of tangled lines pulses through every gap. The white scrawl layered across their faces reads as interruption—obscuring mouths and eyes, lending the group a feeling of being spoken over or half-erased. The composition can feel both communal and chaotic, a crowd jostling for visibility.\", \"contextAngle\": \"Scrimshaw3 sits between \\\"Scrimshaw2\\\" and \\\"Scrimshaw4\\\" in the owned numbered family. Where \\\"Scrimshaw2\\\" centers a single blue-toned form, this work multiplies figures to three and shifts to warm orange and purple, marking a clear change in density and palette within the owned subset.\", \"connections\": [{\"targetArtworkId\": \"QmaLhkeuDBNKTBF91pVwGr2dYW8XCQdrBEF87JfxcbPvtz\", \"reason\": \"\\\"Scrimshaw2\\\" uses a single looping head with cool blues and greens, making the jump to three warm-toned heads here a visible shift in crowding and color temperature.\"}, {\"targetArtworkId\": \"QmYhPK6Fmy9ZDCVPLMaNASbt8mogfwFrbbiB2eZdbwef4y\", \"reason\": \"Both works layer bright scratchy color beneath heavy black outlines that define face-like shapes, though the nnxyz piece uses darker fill while Scrimshaw3 lets the background blaze through.\"}], \"tags\": [\"multiple figures\", \"thick black outlines\", \"layered scribble\", \"white overwriting\", \"warm dense background\", \"looping head forms\"], \"lookingQuestion\": \"How does the white scrawl across the three faces change your sense of whether these figures are distinct individuals or merging into one another?\", \"ambiguities\": [\"Whether the white marks represent text, signatures, or purely abstract scribble cannot be confirmed from the image alone.\", \"The number of distinct figures could be read as two or three depending on how overlapping outlines at center are parsed.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

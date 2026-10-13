@@ -1,0 +1,46 @@
+{
+  "name": "nnxyz-gallery",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assets": "python3 tools/build-web-assets.py",
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "npm run assets && astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "astro check",
+    "test": "node --test tests/*.test.mjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:browser": "node tools/check-gallery.mjs",
+    "lint": "eslint src tools tests *.mjs --max-warnings 0",
+    "format": "prettier --write src tools tests infra .github *.mjs *.json .prettierrc.json README.md AGENTS.md docs",
+    "format:check": "prettier --check src tools tests infra .github *.mjs *.json .prettierrc.json README.md AGENTS.md docs",
+    "validate:collection": "python3 tools/verify-collection.py",
+    "validate:curation": "python3 tools/verify-curation-catalog.py",
+    "validate:site": "python3 tools/validate-site.py",
+    "test:ci-browser": "node tools/test-built-site.mjs",
+    "hydrate": "node tools/hydrate-collection.mjs",
+    "deploy": "node tools/deploy.mjs",
+    "revision": "node tools/write-revision.mjs",
+    "validate:infra": "node tools/validate-infra.mjs"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "astro": "^7.3.8",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-cloudfront": "3.1150.0",
+    "@aws-sdk/client-s3": "3.1150.0",
+    "@aws-sdk/client-sts": "3.1150.0",
+    "@eslint/js": "10.0.1",
+    "eslint": "10.12.0",
+    "eslint-plugin-astro": "3.2.1",
+    "globals": "17.13.0",
+    "playwright": "^1.64.0",
+    "prettier": "3.9.10",
+    "prettier-plugin-astro": "1.1.1",
+    "typescript-eslint": "8.71.2"
+  },
+  "engines": {
+    "node": ">=24 <27"
+  }
+}

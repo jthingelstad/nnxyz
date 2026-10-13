@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:53.342844-05:00",
+    "usage": {
+      "inputTokens": 5810,
+      "outputTokens": 698,
+      "totalTokens": 6508,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19185
+    },
+    "requestId": "8e97a470-3007-4672-82a8-ee26b9ea0266",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A figure shown in profile leans forward against a deep purple background, with a flat-brimmed hat carrying cyan and orange marks on its crown.\",\n    \"A thin red-pink horizontal line crosses the left eye area, while vertical stripes of teal, pink, and orange fall from the chin down the neck and chest.\",\n    \"Loose black contour lines tangle with patches of warm orange, olive, and cool teal across the skin, punctuated by soft white bokeh-like circles.\"\n  ],\n  \"reading\": \"The figure tilts into the frame as though caught mid-thought, its profile built from overlapping color patches that never fully settle into solid form. A single red line cuts across the face, reading as a flash of tension or exposure. Vertical stripes drape from the jaw like a loose garment or afterimage, while scattered white circles soften the surrounding purple field, lending the scene a hazy, nocturnal weight.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #11\\\" and \\\"nnxyz rawblocks #13.\\\" All three share tangled black outlines over flat color fields, but this piece stands apart with its deep purple ground and strong profile orientation, where its neighbors favor frontal or three-quarter views.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVVYH6nbJiZJ1xX9S7VAwampr6GmafFkpvf5Gk495Hi9T\",\n      \"reason\": \"Both use dense black scribble lines to define a head, but #11's teal background and polka-dot patterned covering contrast sharply with #12's purple field and bare profile.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9\",\n      \"reason\": \"Scrimshaw8 shares the purple-dominant palette and layered line density over a face, though its lines radiate outward while #12 keeps them contained within the figure's silhouette.\"\n    }\n  ],\n  \"tags\": [\n    \"profile view\",\n    \"purple field\",\n    \"tangled contour lines\",\n    \"vertical stripes\",\n    \"scattered light circles\",\n    \"hat\"\n  ],\n  \"lookingQuestion\": \"Where does the red-pink horizontal line begin and end, and how does it change the way you read the figure's face compared to the rest of the tangled marks?\",\n  \"ambiguities\": [\n    \"The vertical stripes below the chin could represent clothing, a dripping effect, or a separate compositional layer—the image does not resolve this.\",\n    \"The soft white circles appear both on the figure and the background, making it unclear whether they belong to the scene or sit on top of it.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD/image.png",
+        "imageSHA256": "0431fbef46d3493e70a572bb28c2e78a1ac47e510797d33265c8e3c5529fda3e"
+      },
+      {
+        "artworkId": "QmVVYH6nbJiZJ1xX9S7VAwampr6GmafFkpvf5Gk495Hi9T",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVVYH6nbJiZJ1xX9S7VAwampr6GmafFkpvf5Gk495Hi9T/image.png",
+        "imageSHA256": "d3ce5b4446d3ed4239673984a032f213a56a67128485f32fe2428e58f20145e9"
+      },
+      {
+        "artworkId": "QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9/image.png",
+        "imageSHA256": "55b3c0f660ba734711080f7789a1ca827d66434132e7eea017056e9fc4c83394"
+      },
+      {
+        "artworkId": "QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7/image.png",
+        "imageSHA256": "7d372d48c923f3ce75bf290f3d85b7dfb3c6f4785801543f943250f4bc8667a3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:05.309773-05:00",
+    "usage": {
+      "inputTokens": 6540,
+      "outputTokens": 838,
+      "totalTokens": 7378,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11900
+    },
+    "requestId": "9c272b07-cde3-451c-b82e-3a0c065b00fc",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A figure in profile leans right against a deep purple background, wearing a flat-brimmed hat marked with cyan dots and orange scribbles on its crown.\",\n    \"A thin red-pink horizontal line crosses the left eye area from the left edge, while vertical stripes of teal, pink, magenta, and orange descend from the chin through the neck.\",\n    \"Loose black contour lines overlap with patches of warm orange, olive, and teal across the figure, punctuated by soft white circular shapes scattered on both figure and ground.\"\n  ],\n  \"reading\": \"The figure tilts into the frame as though caught mid-thought, its profile built from overlapping color patches that never settle into solid form. A single red line cuts across the face, reading as a flash of tension or exposure. Vertical stripes drape from the jaw like a loose garment or afterimage, while scattered white circles soften the surrounding purple field, lending the scene a hazy, nocturnal weight.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #11\\\" and \\\"nnxyz rawblocks #13.\\\" All three share tangled black outlines over flat color fields, but this piece stands apart with its deep purple ground and strong profile orientation, where its neighbors favor more frontal views.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVVYH6nbJiZJ1xX9S7VAwampr6GmafFkpvf5Gk495Hi9T\",\n      \"reason\": \"Both build a head from dense black scribble lines, but #11's teal ground and yellow-dotted blue covering contrast with #12's purple field and bare profile.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9\",\n      \"reason\": \"Scrimshaw8 shares a purple-dominant palette and layered lines over a face, though its marks radiate outward while #12 keeps them contained within the silhouette.\"\n    }\n  ],\n  \"tags\": [\n    \"profile view\",\n    \"purple field\",\n    \"tangled contour lines\",\n    \"vertical stripes\",\n    \"scattered light circles\",\n    \"hat\"\n  ],\n  \"lookingQuestion\": \"Where does the red-pink horizontal line begin and end, and how does it change the way you read the figure's face compared to the surrounding tangled marks?\",\n  \"ambiguities\": [\n    \"The vertical stripes below the chin could represent clothing, a dripping effect, or a separate compositional layer—the image does not resolve this.\",\n    \"The soft white circles appear on both the figure and the background, making it unclear whether they belong to the scene or sit above it.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed red-pink line originates at the left edge and crosses the eye area; it does not extend to the right edge, so 'horizontal line' is accurate but 'from the left edge' added for precision.\",\n    \"Checked #11 image: background is teal, covering is blue with yellow dots and white lines—draft description of 'polka-dot patterned covering' revised to 'yellow-dotted blue covering' for accuracy.\",\n    \"Verified #13 uses a yellow-orange ground with a more frontal head, supporting the claim that neighbors favor less strict profile views.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD/image.png",
+        "imageSHA256": "0431fbef46d3493e70a572bb28c2e78a1ac47e510797d33265c8e3c5529fda3e"
+      },
+      {
+        "artworkId": "QmVVYH6nbJiZJ1xX9S7VAwampr6GmafFkpvf5Gk495Hi9T",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVVYH6nbJiZJ1xX9S7VAwampr6GmafFkpvf5Gk495Hi9T/image.png",
+        "imageSHA256": "d3ce5b4446d3ed4239673984a032f213a56a67128485f32fe2428e58f20145e9"
+      },
+      {
+        "artworkId": "QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9/image.png",
+        "imageSHA256": "55b3c0f660ba734711080f7789a1ca827d66434132e7eea017056e9fc4c83394"
+      },
+      {
+        "artworkId": "QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7/image.png",
+        "imageSHA256": "7d372d48c923f3ce75bf290f3d85b7dfb3c6f4785801543f943250f4bc8667a3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A figure shown in profile leans forward against a deep purple background, with a flat-brimmed hat carrying cyan and orange marks on its crown.\", \"A thin red-pink horizontal line crosses the left eye area, while vertical stripes of teal, pink, and orange fall from the chin down the neck and chest.\", \"Loose black contour lines tangle with patches of warm orange, olive, and cool teal across the skin, punctuated by soft white bokeh-like circles.\"], \"reading\": \"The figure tilts into the frame as though caught mid-thought, its profile built from overlapping color patches that never fully settle into solid form. A single red line cuts across the face, reading as a flash of tension or exposure. Vertical stripes drape from the jaw like a loose garment or afterimage, while scattered white circles soften the surrounding purple field, lending the scene a hazy, nocturnal weight.\", \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #11\\\" and \\\"nnxyz rawblocks #13.\\\" All three share tangled black outlines over flat color fields, but this piece stands apart with its deep purple ground and strong profile orientation, where its neighbors favor frontal or three-quarter views.\", \"connections\": [{\"targetArtworkId\": \"QmVVYH6nbJiZJ1xX9S7VAwampr6GmafFkpvf5Gk495Hi9T\", \"reason\": \"Both use dense black scribble lines to define a head, but #11's teal background and polka-dot patterned covering contrast sharply with #12's purple field and bare profile.\"}, {\"targetArtworkId\": \"QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9\", \"reason\": \"Scrimshaw8 shares the purple-dominant palette and layered line density over a face, though its lines radiate outward while #12 keeps them contained within the figure's silhouette.\"}], \"tags\": [\"profile view\", \"purple field\", \"tangled contour lines\", \"vertical stripes\", \"scattered light circles\", \"hat\"], \"lookingQuestion\": \"Where does the red-pink horizontal line begin and end, and how does it change the way you read the figure's face compared to the rest of the tangled marks?\", \"ambiguities\": [\"The vertical stripes below the chin could represent clothing, a dripping effect, or a separate compositional layer—the image does not resolve this.\", \"The soft white circles appear both on the figure and the background, making it unclear whether they belong to the scene or sit on top of it.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

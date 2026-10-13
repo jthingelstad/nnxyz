@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:07.935259-05:00",
+    "usage": {
+      "inputTokens": 6228,
+      "outputTokens": 766,
+      "totalTokens": 6994,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13873
+    },
+    "requestId": "ca66c8d1-419f-4caf-b8f5-a3ae9f6585c0",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A flat black silhouette with a wide, stepped body sits low against an olive-yellow field; two rounded protrusions rise from its top, each containing a small oval eye drawn in yellow line.\",\n    \"A zigzag yellow line runs across the silhouette's face as a mouth; radiating wavy and jagged yellow lines spread outward from the figure across the background in all directions.\",\n    \"A thick black band fills the lower quarter of the image; the artist's small tag mark sits in the lower-left corner of that band.\"\n  ],\n  \"reading\": \"The black shape holds the center with a squat, blocky weight, its stepped shoulders and paired eye-bumps giving it a fixed, frontal stare. The zigzag mouth reads as a snarl or grin depending on the moment. Yellow lines pulse outward like static or heat, making the stillness of the silhouette feel charged rather than calm. The olive field absorbs that energy without resolving it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, nnxyz nnotb #60 sits between title neighbors nnxyz nnotb #59 and nnxyz nnotb #61. All three share the two-tone silhouette-plus-radiating-lines format, but #60 uses the most compressed, architectural body shape of the three inspected works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmd48ZUEEnwXTV3z2gZyQ9LhNDRbwd3Pp4jKyVDGqQPykE\",\n      \"reason\": \"nnxyz nnotb #61 uses the same flat black silhouette, radiating wavy lines, and two-tone background structure, but shifts to lime green and dark red lines, making the color contrast sharper and the figure rounder.\"\n    },\n    {\n      \"targetArtworkId\": \"QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY\",\n      \"reason\": \"nnxyz rawblocks #14 shares the same olive-yellow background tone as #60, connecting the collector's noted interest in nnxyz's color range across different owned collections.\"\n    }\n  ],\n  \"tags\": [\n    \"black silhouette\",\n    \"radiating wavy lines\",\n    \"zigzag mouth\",\n    \"oval eyes\",\n    \"olive-yellow ground\",\n    \"two-tone composition\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational presence\",\n    \"charged stillness\"\n  ],\n  \"lookingQuestion\": \"Where do the radiating lines change from smooth waves to sharp zigzags, and does that shift follow any pattern around the figure?\",\n  \"ambiguities\": [\n    \"The stepped, blocky lower body could read as a vehicle, a throne, or an abstract base; no supplied evidence resolves which reading was intended.\",\n    \"nnxyz nnotb #59 uses a dense multi-color mark-making style that differs strongly from #60's flat line approach, making it a weak formal comparison despite being the immediate recorded-creation neighbor.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXgMSxtaH5PUPxzYrgvJTG7mQb72fddCxKvSqyi8ToFw8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXgMSxtaH5PUPxzYrgvJTG7mQb72fddCxKvSqyi8ToFw8/image.png",
+        "imageSHA256": "e6e19a9c4f0f0294cc67857d34a0d7fefd1fa3a6ce11231e1192ddabb8b68fef"
+      },
+      {
+        "artworkId": "QmZizo31NdAzZpN7gNctgqG97wx5o6fZAc1GTcWApmMVvS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZizo31NdAzZpN7gNctgqG97wx5o6fZAc1GTcWApmMVvS/image.png",
+        "imageSHA256": "09978211718373c875fb2b435a7fc4ce22e61eb8d08d18bf96fe1a614a7c385d"
+      },
+      {
+        "artworkId": "QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY/image.png",
+        "imageSHA256": "f76de33fd65fbd9399a1edd27b6d12441f4103ce82029b84dfc5bc563f93240f"
+      },
+      {
+        "artworkId": "Qmd48ZUEEnwXTV3z2gZyQ9LhNDRbwd3Pp4jKyVDGqQPykE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd48ZUEEnwXTV3z2gZyQ9LhNDRbwd3Pp4jKyVDGqQPykE/image.png",
+        "imageSHA256": "ca525dea60c2bf9b88de427258e58bb068fc489bb894577da998bebd45942dab"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:15.237110-05:00",
+    "usage": {
+      "inputTokens": 7016,
+      "outputTokens": 774,
+      "totalTokens": 7790,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7144
+    },
+    "requestId": "fcc3db6c-813f-437e-a038-5fbfa998a16d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A flat black silhouette with a wide, stepped body sits low against an olive-yellow field; two rounded protrusions rise from its top, each containing a small oval eye drawn in yellow line.\",\n    \"A zigzag yellow line runs across the silhouette's face as a mouth; radiating wavy and jagged yellow lines spread outward from the figure across the background in all directions.\",\n    \"A thick black band fills the lower quarter of the image; a small tag mark sits in the lower-left corner of that band.\"\n  ],\n  \"reading\": \"The black shape holds the center with a squat, blocky weight, its stepped shoulders and paired eye-bumps giving it a fixed, frontal stare. The zigzag mouth reads as a snarl or grin depending on the moment. Yellow lines pulse outward like static or heat, making the stillness of the silhouette feel charged rather than calm. The olive field absorbs that energy without resolving it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #59 and nnxyz nnotb #61. All three share a silhouette-plus-radiating-lines format, but this figure has the most compressed, stepped body of the three inspected works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmd48ZUEEnwXTV3z2gZyQ9LhNDRbwd3Pp4jKyVDGqQPykE\",\n      \"reason\": \"nnxyz nnotb #61 uses the same flat black silhouette and radiating wavy lines against a two-tone ground, but shifts to lime green with dark red lines and a rounder, more compact body shape.\"\n    }\n  ],\n  \"tags\": [\n    \"black silhouette\",\n    \"radiating wavy lines\",\n    \"zigzag mouth\",\n    \"oval eyes\",\n    \"olive-yellow ground\",\n    \"two-tone composition\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational presence\",\n    \"charged stillness\"\n  ],\n  \"lookingQuestion\": \"Where do the radiating lines change from smooth waves to sharp zigzags, and does that shift follow any pattern around the figure?\",\n  \"ambiguities\": [\n    \"The stepped, blocky lower body could read as a vehicle, a throne, or an abstract base; no supplied evidence resolves the reading.\",\n    \"nnxyz rawblocks #14 was dropped as a connection: shared background tone alone is not a meaningful formal comparison, and the figure structure and line approach differ substantially.\"\n  ],\n  \"reviewFindings\": [\n    \"Color check confirmed: primary artwork background is olive-yellow, mouth and radiating lines are yellow, lower band is black — all observations accurate.\",\n    \"nnxyz rawblocks #14 connection removed; olive background overlap is a weak basis and the collector's color-range interest is an interpretive frame, not a formal visual comparison between the inspected images.\",\n    \"nnxyz nnotb #59 correctly excluded from connections; its dense multi-color mark-making contrasts strongly with #60's flat two-tone line approach, confirming the draft ambiguity note.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXgMSxtaH5PUPxzYrgvJTG7mQb72fddCxKvSqyi8ToFw8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXgMSxtaH5PUPxzYrgvJTG7mQb72fddCxKvSqyi8ToFw8/image.png",
+        "imageSHA256": "e6e19a9c4f0f0294cc67857d34a0d7fefd1fa3a6ce11231e1192ddabb8b68fef"
+      },
+      {
+        "artworkId": "QmZizo31NdAzZpN7gNctgqG97wx5o6fZAc1GTcWApmMVvS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZizo31NdAzZpN7gNctgqG97wx5o6fZAc1GTcWApmMVvS/image.png",
+        "imageSHA256": "09978211718373c875fb2b435a7fc4ce22e61eb8d08d18bf96fe1a614a7c385d"
+      },
+      {
+        "artworkId": "QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY/image.png",
+        "imageSHA256": "f76de33fd65fbd9399a1edd27b6d12441f4103ce82029b84dfc5bc563f93240f"
+      },
+      {
+        "artworkId": "Qmd48ZUEEnwXTV3z2gZyQ9LhNDRbwd3Pp4jKyVDGqQPykE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd48ZUEEnwXTV3z2gZyQ9LhNDRbwd3Pp4jKyVDGqQPykE/image.png",
+        "imageSHA256": "ca525dea60c2bf9b88de427258e58bb068fc489bb894577da998bebd45942dab"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A flat black silhouette with a wide, stepped body sits low against an olive-yellow field; two rounded protrusions rise from its top, each containing a small oval eye drawn in yellow line.\", \"A zigzag yellow line runs across the silhouette's face as a mouth; radiating wavy and jagged yellow lines spread outward from the figure across the background in all directions.\", \"A thick black band fills the lower quarter of the image; the artist's small tag mark sits in the lower-left corner of that band.\"], \"reading\": \"The black shape holds the center with a squat, blocky weight, its stepped shoulders and paired eye-bumps giving it a fixed, frontal stare. The zigzag mouth reads as a snarl or grin depending on the moment. Yellow lines pulse outward like static or heat, making the stillness of the silhouette feel charged rather than calm. The olive field absorbs that energy without resolving it.\", \"contextAngle\": \"Within the owned nnotb subset, nnxyz nnotb #60 sits between title neighbors nnxyz nnotb #59 and nnxyz nnotb #61. All three share the two-tone silhouette-plus-radiating-lines format, but #60 uses the most compressed, architectural body shape of the three inspected works.\", \"connections\": [{\"targetArtworkId\": \"Qmd48ZUEEnwXTV3z2gZyQ9LhNDRbwd3Pp4jKyVDGqQPykE\", \"reason\": \"nnxyz nnotb #61 uses the same flat black silhouette, radiating wavy lines, and two-tone background structure, but shifts to lime green and dark red lines, making the color contrast sharper and the figure rounder.\"}, {\"targetArtworkId\": \"QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY\", \"reason\": \"nnxyz rawblocks #14 shares the same olive-yellow background tone as #60, connecting the collector's noted interest in nnxyz's color range across different owned collections.\"}], \"tags\": [\"black silhouette\", \"radiating wavy lines\", \"zigzag mouth\", \"oval eyes\", \"olive-yellow ground\", \"two-tone composition\"], \"interpretiveTags\": [\"confrontational presence\", \"charged stillness\"], \"lookingQuestion\": \"Where do the radiating lines change from smooth waves to sharp zigzags, and does that shift follow any pattern around the figure?\", \"ambiguities\": [\"The stepped, blocky lower body could read as a vehicle, a throne, or an abstract base; no supplied evidence resolves which reading was intended.\", \"nnxyz nnotb #59 uses a dense multi-color mark-making style that differs strongly from #60's flat line approach, making it a weak formal comparison despite being the immediate recorded-creation neighbor.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:23.492979-05:00",
+    "usage": {
+      "inputTokens": 6163,
+      "outputTokens": 775,
+      "totalTokens": 6938,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11941
+    },
+    "requestId": "88767f06-d928-4cc2-a2d7-09107e71a395",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal face-like form fills the frame; heart-shaped lenses sit in dark-framed sunglasses across the center, with a row of small rectangular marks along the lower mouth area.\",\n    \"Looping coil lines in black and yellow repeat across the upper half and right edge, while flat rectangular blocks of red, blue, and white overlap behind the face form.\",\n    \"A concentric-ring target in red and yellow occupies the lower left corner, isolated from the face cluster by a gap of blue.\"\n  ],\n  \"reading\": \"The face pushes to every edge, leaving almost no neutral space. Heart shapes appear twice—once in the lens frames, once as a smaller outline upper right—giving the same motif two different weights. The coil lines and rectangular blocks compete for the same layer, so the face reads as assembled from colliding parts rather than drawn as a whole. The row of small marks at the mouth reads as teeth or text, hovering between the two.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #106 and nnxyz nnotb #108. #106 uses a flat blue field with minimal marks; #107 packs every zone with overlapping color. #108 shares the close-cropped face format and looping coil lines, making those two the tighter formal pair in this owned subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdFu8rS8Pez6mddrG21bgUmPSTipVteu8ALw6EDM1iyr8\",\n      \"reason\": \"nnxyz nnotb #108 repeats the close-cropped face format, eyewear motif, and dense coil lines at the edges, making it the nearest formal echo in the owned nnotb subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp\",\n      \"reason\": \"rawblocks #0000 shares the same all-over layering of rectangular blocks, coil lines, and face-like forms against a busy field, contrasting with #106's spare blue ground.\"\n    }\n  ],\n  \"tags\": [\n    \"face-filling-frame\",\n    \"heart-lens-eyewear\",\n    \"coil-line-repeat\",\n    \"concentric-ring-corner\",\n    \"rectangular-block-overlap\",\n    \"tooth-or-text-row\"\n  ],\n  \"interpretiveTags\": [\n    \"high-tension\",\n    \"confrontational-gaze\"\n  ],\n  \"lookingQuestion\": \"The heart shape appears at two different sizes and positions in the image—what changes, if anything, in how each instance reads against the marks surrounding it?\",\n  \"ambiguities\": [\n    \"The row of small rectangular marks along the lower mouth zone could be stylized teeth, lettering, or a decorative border; the image does not resolve this.\",\n    \"The concentric-ring form in the lower left sits apart from the face cluster; whether it functions as a separate object or as part of the face composition is unclear from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfWE2HDR98MrhrHjXf4X8LVENeUWY4iUDGWvCFbTxPCKm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWE2HDR98MrhrHjXf4X8LVENeUWY4iUDGWvCFbTxPCKm/image.png",
+        "imageSHA256": "a0db263f014e8a36f5e5c6b69d93739e7041c6ca4fb3823c2e9db47bc8d0780e"
+      },
+      {
+        "artworkId": "Qmf1cZGRpxoJqXCxB9NDHvzW4m7hVenyCRDdYxcxjRfe3x",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf1cZGRpxoJqXCxB9NDHvzW4m7hVenyCRDdYxcxjRfe3x/image.png",
+        "imageSHA256": "120d8dd70ae844a0f305992c4d94f87221f836072a5780a29a46fcf22669e73e"
+      },
+      {
+        "artworkId": "QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp/image.png",
+        "imageSHA256": "ab6febb004e49d10ab9740ed086dc2562d51f14eeaa82dd68f451f6400955192"
+      },
+      {
+        "artworkId": "QmdFu8rS8Pez6mddrG21bgUmPSTipVteu8ALw6EDM1iyr8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdFu8rS8Pez6mddrG21bgUmPSTipVteu8ALw6EDM1iyr8/image.png",
+        "imageSHA256": "61335f4db9418c8f58aec6135ef78d3844148a6de7df45631ca402892631f1ae"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:29.713067-05:00",
+    "usage": {
+      "inputTokens": 6960,
+      "outputTokens": 964,
+      "totalTokens": 7924,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6157
+    },
+    "requestId": "9f0c4756-4d80-4552-9c52-2ccab1600b95",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal face-like form fills the frame; heart-shaped lenses sit in dark-framed sunglasses across the center, with a row of small rectangular marks along the lower mouth area.\",\n    \"Looping coil lines in black and yellow repeat across the upper half and right edge, while flat rectangular blocks of red, blue, and white overlap behind the face form.\",\n    \"A concentric-ring target in red and yellow occupies the lower left corner, separated from the face cluster by a gap of blue.\"\n  ],\n  \"reading\": \"The face pushes to every edge, leaving almost no neutral space. Heart shapes appear twice—once in the lens frames, once as a smaller outline upper right—giving the same motif two different weights. Coil lines and rectangular blocks compete across the same layer, so the face reads as assembled from colliding parts rather than drawn whole. The row of small marks at the mouth hovers between teeth and text.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #106 and nnxyz nnotb #108. #106 uses a flat blue field with sparse marks, a strong contrast to #107's packed zones. #108 shares the close-cropped face format and edge coil lines, making those two the tighter formal pair in this owned subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdFu8rS8Pez6mddrG21bgUmPSTipVteu8ALw6EDM1iyr8\",\n      \"reason\": \"nnxyz nnotb #108 repeats the close-cropped face format, eyewear motif, and dense coil lines at the edges, making it the nearest formal echo in the owned nnotb subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp\",\n      \"reason\": \"rawblocks #0000 shares all-over layering of rectangular blocks, coil lines, and face-like forms against a busy field, contrasting with #106's spare blue ground.\"\n    }\n  ],\n  \"tags\": [\n    \"face-filling-frame\",\n    \"heart-lens-eyewear\",\n    \"coil-line-repeat\",\n    \"concentric-ring-corner\",\n    \"rectangular-block-overlap\",\n    \"tooth-or-text-row\"\n  ],\n  \"interpretiveTags\": [\n    \"high-tension\",\n    \"confrontational-gaze\"\n  ],\n  \"lookingQuestion\": \"The heart shape appears at two different sizes and positions in the image—what changes, if anything, in how each instance reads against the marks surrounding it?\",\n  \"ambiguities\": [\n    \"The row of small rectangular marks along the lower mouth zone could be stylized teeth, lettering, or a decorative border; the image does not resolve this.\",\n    \"The concentric-ring form in the lower left sits apart from the face cluster; whether it functions as a separate object or as part of the face composition is unclear from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"All color and form observations confirmed against the primary image: heart lenses, coil lines, concentric-ring corner, and rectangular blocks are all visibly present as described.\",\n    \"Comparison with QmdFu8rS8Pez6mddrG21bgUmPSTipVteu8ALw6EDM1iyr8 confirmed: #108 shows a close-cropped face, eyewear, and edge coil lines matching the stated reason; connection retained.\",\n    \"Comparison with QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp confirmed: rawblocks #0000 shows dense rectangular blocks, coil lines, and face-like forms; contrast with #106's spare blue field is accurate; connection retained.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfWE2HDR98MrhrHjXf4X8LVENeUWY4iUDGWvCFbTxPCKm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWE2HDR98MrhrHjXf4X8LVENeUWY4iUDGWvCFbTxPCKm/image.png",
+        "imageSHA256": "a0db263f014e8a36f5e5c6b69d93739e7041c6ca4fb3823c2e9db47bc8d0780e"
+      },
+      {
+        "artworkId": "Qmf1cZGRpxoJqXCxB9NDHvzW4m7hVenyCRDdYxcxjRfe3x",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf1cZGRpxoJqXCxB9NDHvzW4m7hVenyCRDdYxcxjRfe3x/image.png",
+        "imageSHA256": "120d8dd70ae844a0f305992c4d94f87221f836072a5780a29a46fcf22669e73e"
+      },
+      {
+        "artworkId": "QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp/image.png",
+        "imageSHA256": "ab6febb004e49d10ab9740ed086dc2562d51f14eeaa82dd68f451f6400955192"
+      },
+      {
+        "artworkId": "QmdFu8rS8Pez6mddrG21bgUmPSTipVteu8ALw6EDM1iyr8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdFu8rS8Pez6mddrG21bgUmPSTipVteu8ALw6EDM1iyr8/image.png",
+        "imageSHA256": "61335f4db9418c8f58aec6135ef78d3844148a6de7df45631ca402892631f1ae"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large frontal face-like form fills the frame; heart-shaped lenses sit in dark-framed sunglasses across the center, with a row of small rectangular marks along the lower mouth area.\", \"Looping coil lines in black and yellow repeat across the upper half and right edge, while flat rectangular blocks of red, blue, and white overlap behind the face form.\", \"A concentric-ring target in red and yellow occupies the lower left corner, isolated from the face cluster by a gap of blue.\"], \"reading\": \"The face pushes to every edge, leaving almost no neutral space. Heart shapes appear twice—once in the lens frames, once as a smaller outline upper right—giving the same motif two different weights. The coil lines and rectangular blocks compete for the same layer, so the face reads as assembled from colliding parts rather than drawn as a whole. The row of small marks at the mouth reads as teeth or text, hovering between the two.\", \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #106 and nnxyz nnotb #108. #106 uses a flat blue field with minimal marks; #107 packs every zone with overlapping color. #108 shares the close-cropped face format and looping coil lines, making those two the tighter formal pair in this owned subset.\", \"connections\": [{\"targetArtworkId\": \"QmdFu8rS8Pez6mddrG21bgUmPSTipVteu8ALw6EDM1iyr8\", \"reason\": \"nnxyz nnotb #108 repeats the close-cropped face format, eyewear motif, and dense coil lines at the edges, making it the nearest formal echo in the owned nnotb subset.\"}, {\"targetArtworkId\": \"QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp\", \"reason\": \"rawblocks #0000 shares the same all-over layering of rectangular blocks, coil lines, and face-like forms against a busy field, contrasting with #106's spare blue ground.\"}], \"tags\": [\"face-filling-frame\", \"heart-lens-eyewear\", \"coil-line-repeat\", \"concentric-ring-corner\", \"rectangular-block-overlap\", \"tooth-or-text-row\"], \"interpretiveTags\": [\"high-tension\", \"confrontational-gaze\"], \"lookingQuestion\": \"The heart shape appears at two different sizes and positions in the image—what changes, if anything, in how each instance reads against the marks surrounding it?\", \"ambiguities\": [\"The row of small rectangular marks along the lower mouth zone could be stylized teeth, lettering, or a decorative border; the image does not resolve this.\", \"The concentric-ring form in the lower left sits apart from the face cluster; whether it functions as a separate object or as part of the face composition is unclear from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

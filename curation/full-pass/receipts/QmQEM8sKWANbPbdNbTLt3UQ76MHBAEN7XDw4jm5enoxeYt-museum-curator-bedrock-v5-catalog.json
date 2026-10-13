@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:48.541420-05:00",
+    "usage": {
+      "inputTokens": 6259,
+      "outputTokens": 817,
+      "totalTokens": 7076,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13742
+    },
+    "requestId": "cd9b9139-adbb-41c9-8ca9-d48208044184",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face-like form built from thick black outlines occupies the center, with two dark rectangular eye areas and a small mouth shape rendered in yellow and white against a warm amber-gold ground.\",\n    \"Loose blue scribble lines arc across the upper half and left edge, sitting visibly above the warm amber wash, creating a layered effect where cool lines float over the heated background.\",\n    \"The neck and lower face taper into two vertical strokes that suggest a collar or crossed hands, while short dense hatch marks cluster around the jaw and chin area.\"\n  ],\n  \"reading\": \"The face holds its ground in amber and gold, the heavy black outlines giving it a solidity that the scattered blue scribbles seem to test from outside. Those cool lines don't build the form — they drift across it, and the tension between the two reads as something unresolved, maybe wary. The small, closed mouth and downward-set eyes add to a mood that feels guarded rather than open.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #104 and #106. Where #104 uses a cool dark ground with red and white scribbles in a profile view, and #106 fills its face with flat yellow-green and bold rectangular eyes, #105 occupies a warmer middle ground with a more contained, frontal stillness.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26\",\n      \"reason\": \"Both works layer loose scribble lines over a painted ground to build a face, but #104 uses a cool dark blue field with high-contrast white and red lines in profile, while #105 works in warm amber with a frontal, more contained form — a clear tonal and compositional contrast within the same approach.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD\",\n      \"reason\": \"Title neighbor #106 shares the rectangular eye-block structure visible in #105, but replaces the warm amber ground and restrained scribble layer with a saturated yellow-green field and dense multicolor hatching, making the structural similarity easy to track against a very different emotional register.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face form\",\n    \"black outline construction\",\n    \"amber and gold ground\",\n    \"floating blue scribble lines\",\n    \"hatch marks at jaw\",\n    \"vertical neck strokes\"\n  ],\n  \"interpretiveTags\": [\n    \"guarded mood\",\n    \"tension between cool and warm layers\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the blue scribble lines cross the black outlines of the face, and what happens to the sense of the form at those crossing points?\",\n  \"ambiguities\": [\n    \"The layering order of the blue scribble lines relative to the amber wash is visually ambiguous — they appear to sit above the warm ground but their relationship to the black outlines is not fully resolved in the image.\",\n    \"The nnotb #183 comparison image shows a multi-figure scene with a very different structure; no meaningful formal connection to #105 was found, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt/image.png",
+        "imageSHA256": "91c731b737adf7142f583ada3857fb2fd519ff2afa42b15520a3f0ec773fb7b2"
+      },
+      {
+        "artworkId": "QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26/image.png",
+        "imageSHA256": "47ad867ec4d9fef8f64a5b4ea19da43061e06d009b2d4349bc55232e11511a41"
+      },
+      {
+        "artworkId": "QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv/image.png",
+        "imageSHA256": "282ce0ee862f63a052f87f069a0acb48587321e03d60d227234b8a5e06b5a1f0"
+      },
+      {
+        "artworkId": "QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD/image.png",
+        "imageSHA256": "fd938c33934d2483b96900fe86b17ea40b6e0084fec70b90b37e5c69f642ec9a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:55.310193-05:00",
+    "usage": {
+      "inputTokens": 7098,
+      "outputTokens": 930,
+      "totalTokens": 8028,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6677
+    },
+    "requestId": "b955c082-e1f1-401b-b949-9043d9f0208b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face-like form built from thick black outlines occupies the center, with two dark rectangular eye areas and a small closed mouth shape rendered in yellow and white against a warm amber-gold ground.\",\n    \"Loose blue scribble lines arc across the upper half and left edge, sitting visibly above the warm amber wash, floating over rather than building the underlying form.\",\n    \"The lower face and neck taper into two vertical strokes, while short dense hatch marks cluster around the jaw and chin area.\"\n  ],\n  \"reading\": \"The face holds its ground in amber and gold, the heavy black outlines giving it a solidity that the scattered blue scribbles seem to test from outside. Those cool lines don't build the form — they drift across it, and the tension between the two reads as something unresolved, possibly wary. The small closed mouth and downward-set eyes contribute to a mood that feels guarded rather than open.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #104 and #106. Where #104 uses a cool dark ground with a profile view, and #106 fills its face with flat yellow-green and bold rectangular eyes, #105 holds a warmer, more contained frontal stillness.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26\",\n      \"reason\": \"Both works layer loose scribble lines over a painted ground to build a face, but #104 uses a cool dark blue field with high-contrast white and red lines in profile, while #105 works in warm amber with a frontal, more contained form — a clear tonal and compositional contrast within the same approach.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD\",\n      \"reason\": \"Title neighbor #106 shares the rectangular eye-block structure visible in #105, but replaces the warm amber ground and restrained scribble layer with a saturated yellow-green field and dense multicolor hatching, making the structural similarity easy to track against a very different tonal result.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face form\",\n    \"black outline construction\",\n    \"amber and gold ground\",\n    \"floating blue scribble lines\",\n    \"hatch marks at jaw\",\n    \"vertical neck strokes\"\n  ],\n  \"interpretiveTags\": [\n    \"guarded mood\",\n    \"tension between cool and warm layers\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the blue scribble lines cross the black outlines of the face, and what happens to the sense of the form at those crossing points?\",\n  \"ambiguities\": [\n    \"The layering order of the blue scribble lines relative to the black outlines is visually ambiguous — they appear above the warm ground but their precise relationship to the black construction lines is not fully resolved in the image.\",\n    \"nnotb #183 shows a multi-figure scene with a structurally unrelated composition; no meaningful formal connection to #105 was found and it was omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: amber-gold ground, dark rectangular eye areas, closed mouth in yellow-white, blue scribble arcs, and jaw hatch marks all verified against the primary image.\",\n    \"Removed 'intentional' and 'deliberately' from draft phrasing; replaced with descriptions of visible result only.\",\n    \"Both comparison images inspected: #104 profile-view and cool-dark ground confirmed; #106 yellow-green ground and rectangular eye blocks confirmed; nnotb #183 correctly excluded as structurally unrelated.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt/image.png",
+        "imageSHA256": "91c731b737adf7142f583ada3857fb2fd519ff2afa42b15520a3f0ec773fb7b2"
+      },
+      {
+        "artworkId": "QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26/image.png",
+        "imageSHA256": "47ad867ec4d9fef8f64a5b4ea19da43061e06d009b2d4349bc55232e11511a41"
+      },
+      {
+        "artworkId": "QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXb6CpcUseJS54mVqPZ3H3o4ABzJj7UGGxzhVamda2ZBv/image.png",
+        "imageSHA256": "282ce0ee862f63a052f87f069a0acb48587321e03d60d227234b8a5e06b5a1f0"
+      },
+      {
+        "artworkId": "QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD/image.png",
+        "imageSHA256": "fd938c33934d2483b96900fe86b17ea40b6e0084fec70b90b37e5c69f642ec9a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A face-like form built from thick black outlines occupies the center, with two dark rectangular eye areas and a small mouth shape rendered in yellow and white against a warm amber-gold ground.\", \"Loose blue scribble lines arc across the upper half and left edge, sitting visibly above the warm amber wash, creating a layered effect where cool lines float over the heated background.\", \"The neck and lower face taper into two vertical strokes that suggest a collar or crossed hands, while short dense hatch marks cluster around the jaw and chin area.\"], \"reading\": \"The face holds its ground in amber and gold, the heavy black outlines giving it a solidity that the scattered blue scribbles seem to test from outside. Those cool lines don't build the form — they drift across it, and the tension between the two reads as something unresolved, maybe wary. The small, closed mouth and downward-set eyes add to a mood that feels guarded rather than open.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #104 and #106. Where #104 uses a cool dark ground with red and white scribbles in a profile view, and #106 fills its face with flat yellow-green and bold rectangular eyes, #105 occupies a warmer middle ground with a more contained, frontal stillness.\", \"connections\": [{\"targetArtworkId\": \"QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26\", \"reason\": \"Both works layer loose scribble lines over a painted ground to build a face, but #104 uses a cool dark blue field with high-contrast white and red lines in profile, while #105 works in warm amber with a frontal, more contained form — a clear tonal and compositional contrast within the same approach.\"}, {\"targetArtworkId\": \"QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD\", \"reason\": \"Title neighbor #106 shares the rectangular eye-block structure visible in #105, but replaces the warm amber ground and restrained scribble layer with a saturated yellow-green field and dense multicolor hatching, making the structural similarity easy to track against a very different emotional register.\"}], \"tags\": [\"frontal face form\", \"black outline construction\", \"amber and gold ground\", \"floating blue scribble lines\", \"hatch marks at jaw\", \"vertical neck strokes\"], \"interpretiveTags\": [\"guarded mood\", \"tension between cool and warm layers\"], \"lookingQuestion\": \"Where exactly do the blue scribble lines cross the black outlines of the face, and what happens to the sense of the form at those crossing points?\", \"ambiguities\": [\"The layering order of the blue scribble lines relative to the amber wash is visually ambiguous — they appear to sit above the warm ground but their relationship to the black outlines is not fully resolved in the image.\", \"The nnotb #183 comparison image shows a multi-figure scene with a very different structure; no meaningful formal connection to #105 was found, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

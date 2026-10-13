@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:25.394778-05:00",
+    "usage": {
+      "inputTokens": 6433,
+      "outputTokens": 726,
+      "totalTokens": 7159,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20505
+    },
+    "requestId": "6206e242-bc2c-4249-bbd0-2f21e04474d6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A figure fills the left half, wearing a dark garment covered in a loose white grid of crossing lines, set against a muted mauve and dark brown background.\",\n    \"The head carries layered patches of bright coral-red and teal over olive-green skin tones, with two small bright blue marks placed where eyes would sit.\",\n    \"A dark vertical silhouette behind the figure's right shoulder rises like a column or tall cactus shape, its edges soft against the brown-to-mauve gradient.\"\n  ],\n  \"reading\": \"The figure reads as guarded, its face half-dissolved under competing color fields—coral and teal pressing against olive as though the surface can't settle. Black lines scratch across the torso in a grid that suggests clothing but also confinement. The two blue eye-marks stare out from deep shadow, small and fixed. Against the still, warm background, the figure's layered unrest feels contained rather than released.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #7\\\" and \\\"nnxyz rawblocks #9.\\\" Where #7 explodes outward with orange scribble and bared teeth, and #9 slumps inward in cool blues, #8 holds a middle tension—upright, watchful, neither shouting nor collapsing.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB\",\n      \"reason\": \"Both show a single seated or standing figure against a flat background, but #9's bright blue shirt and downward gaze contrast sharply with #8's dark grid garment and level stare.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7\",\n      \"reason\": \"Both use a red-lipped open mouth and dark scribbled outlines, but nnotb #27 pushes those marks into a full-body eruption while #8 keeps them compressed within the face.\"\n    }\n  ],\n  \"tags\": [\n    \"single figure\",\n    \"grid pattern clothing\",\n    \"layered color fields\",\n    \"blue eye marks\",\n    \"dark silhouette background\",\n    \"coral and teal\"\n  ],\n  \"lookingQuestion\": \"How does the tight white grid over the torso change the way you read the looser, overlapping color patches on the head—do they feel like the same surface or two different states?\",\n  \"ambiguities\": [\n    \"The tall dark shape behind the figure could be read as architectural, organic, or purely abstract; nothing in the supplied data confirms a subject.\",\n    \"Whether the coral-red and teal on the head represent hair, a covering, or pure color layering is not determinable from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy/image.png",
+        "imageSHA256": "366f9fee10b634fa20c04fe2fd7571c1125049e75353d6cc3aee9a9dc8e748ee"
+      },
+      {
+        "artworkId": "QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o/image.png",
+        "imageSHA256": "3b91ffcd894da9628b3310d34c6843d0f1b92bd9dac28d72acfab3b069513155"
+      },
+      {
+        "artworkId": "QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7/image.png",
+        "imageSHA256": "69fbfc56f19af629bff1a818da49ed68641babae3f646917e55a5bd2caa57631"
+      },
+      {
+        "artworkId": "QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB/image.png",
+        "imageSHA256": "12ebe604c64e5cbdd03cac57bcebde8e6e350b6dc7a9a7488b8140a450208aaf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:36.847784-05:00",
+    "usage": {
+      "inputTokens": 7191,
+      "outputTokens": 826,
+      "totalTokens": 8017,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11374
+    },
+    "requestId": "2a130e61-3496-40f9-87c0-0c6d49855924",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A figure fills the left half, wearing a dark garment covered in a loose white grid of crossing lines, set against a muted mauve and dark brown background.\",\n    \"The head carries layered patches of bright coral-red and teal over olive-green tones, with two small bright blue marks placed where eyes would sit.\",\n    \"A dark vertical silhouette behind the figure's right shoulder rises with soft edges against the brown-to-mauve gradient.\"\n  ],\n  \"reading\": \"The figure reads as guarded, its face half-dissolved under competing color fields—coral and teal pressing against olive as though the surface can't settle. Black lines scratch across the torso in a grid that suggests clothing but also confinement. The two blue eye-marks stare out from deep shadow, small and fixed. Against the still, warm background, the figure's layered unrest feels contained rather than released.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #7\\\" and \\\"nnxyz rawblocks #9.\\\" Where #7 explodes outward with orange scribble and bared teeth, and #9 slumps inward in cool blues, #8 holds a middle tension—upright, watchful, neither shouting nor collapsing.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB\",\n      \"reason\": \"Both show a single figure against a flat background, but #9's bright blue shirt and downward gaze contrast with #8's dark grid garment and level stare.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7\",\n      \"reason\": \"Both use red at the mouth and dark scribbled outlines, but nnotb #27 pushes those marks into a full-body eruption while #8 keeps them compressed within the face.\"\n    }\n  ],\n  \"tags\": [\n    \"single figure\",\n    \"grid pattern clothing\",\n    \"layered color fields\",\n    \"blue eye marks\",\n    \"dark silhouette background\",\n    \"coral and teal\"\n  ],\n  \"lookingQuestion\": \"How does the tight white grid over the torso change the way you read the looser, overlapping color patches on the head—do they feel like the same surface or two different states?\",\n  \"ambiguities\": [\n    \"The tall dark shape behind the figure could be architectural, organic, or purely abstract; nothing in the supplied data confirms a subject.\",\n    \"Whether the coral-red and teal on the head represent hair, a covering, or pure color layering is not determinable from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed coral-red and teal patches on the head, olive-green face tones, and two small blue marks at eye positions match the image.\",\n    \"Removed 'seated or standing' from #9 comparison—#9 figure appears seated/hunched while #8 figure is upright; revised to 'single figure' for accuracy.\",\n    \"Dark vertical silhouette verified at right side; removed speculative 'cactus' label from observation as unsupported.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy/image.png",
+        "imageSHA256": "366f9fee10b634fa20c04fe2fd7571c1125049e75353d6cc3aee9a9dc8e748ee"
+      },
+      {
+        "artworkId": "QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o/image.png",
+        "imageSHA256": "3b91ffcd894da9628b3310d34c6843d0f1b92bd9dac28d72acfab3b069513155"
+      },
+      {
+        "artworkId": "QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7/image.png",
+        "imageSHA256": "69fbfc56f19af629bff1a818da49ed68641babae3f646917e55a5bd2caa57631"
+      },
+      {
+        "artworkId": "QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB/image.png",
+        "imageSHA256": "12ebe604c64e5cbdd03cac57bcebde8e6e350b6dc7a9a7488b8140a450208aaf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A figure fills the left half, wearing a dark garment covered in a loose white grid of crossing lines, set against a muted mauve and dark brown background.\", \"The head carries layered patches of bright coral-red and teal over olive-green skin tones, with two small bright blue marks placed where eyes would sit.\", \"A dark vertical silhouette behind the figure's right shoulder rises like a column or tall cactus shape, its edges soft against the brown-to-mauve gradient.\"], \"reading\": \"The figure reads as guarded, its face half-dissolved under competing color fields—coral and teal pressing against olive as though the surface can't settle. Black lines scratch across the torso in a grid that suggests clothing but also confinement. The two blue eye-marks stare out from deep shadow, small and fixed. Against the still, warm background, the figure's layered unrest feels contained rather than released.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #7\\\" and \\\"nnxyz rawblocks #9.\\\" Where #7 explodes outward with orange scribble and bared teeth, and #9 slumps inward in cool blues, #8 holds a middle tension—upright, watchful, neither shouting nor collapsing.\", \"connections\": [{\"targetArtworkId\": \"QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB\", \"reason\": \"Both show a single seated or standing figure against a flat background, but #9's bright blue shirt and downward gaze contrast sharply with #8's dark grid garment and level stare.\"}, {\"targetArtworkId\": \"QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7\", \"reason\": \"Both use a red-lipped open mouth and dark scribbled outlines, but nnotb #27 pushes those marks into a full-body eruption while #8 keeps them compressed within the face.\"}], \"tags\": [\"single figure\", \"grid pattern clothing\", \"layered color fields\", \"blue eye marks\", \"dark silhouette background\", \"coral and teal\"], \"lookingQuestion\": \"How does the tight white grid over the torso change the way you read the looser, overlapping color patches on the head—do they feel like the same surface or two different states?\", \"ambiguities\": [\"The tall dark shape behind the figure could be read as architectural, organic, or purely abstract; nothing in the supplied data confirms a subject.\", \"Whether the coral-red and teal on the head represent hair, a covering, or pure color layering is not determinable from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

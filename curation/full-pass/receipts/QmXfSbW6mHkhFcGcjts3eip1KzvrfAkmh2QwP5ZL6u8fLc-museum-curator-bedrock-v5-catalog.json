@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:53.880503-05:00",
+    "usage": {
+      "inputTokens": 6235,
+      "outputTokens": 798,
+      "totalTokens": 7033,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14205
+    },
+    "requestId": "eaaaacda-0830-44da-b189-9a83386b545d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape dominates the center, filled with overlapping flat color zones of gold, teal, yellow, red, and purple, with a heart-like double-lobed crown at the top.\",\n    \"Two eyes are each drawn as tight concentric spiral coils in white and gold, with small radiating lines suggesting lashes; a rectangular mouth area shows short vertical marks resembling teeth.\",\n    \"A dense border of loose gray looping lines runs along all four edges of the gold-brown background, separate from the central figure and distinct in color and weight from the multicolored marks inside.\"\n  ],\n  \"reading\": \"The rounded form holds its ground against a restless interior: spiral eyes pull attention inward while the layered color zones—gold, teal, red, purple—push outward in every direction. The tight coils read as intensity or vigilance; the slack gray loops at the edges feel like static or noise held just outside. The face is composed but crowded, as if containing more than it can easily hold.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #160 and nnxyz nnotb #162. Where #160 sets a dense face against black, #161 uses a warm gold field, and #162 shifts to an olive ground with more angular framing—three distinct background strategies across three consecutive titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf\",\n      \"reason\": \"Both works center a large face with spiral-coil eyes and a visible tooth row, but #160 uses a black ground with neon-bright lines while #161 builds the same features over warm gold, making the contrast in mood between the two directly visible.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmb37ZSZuu6BD5s7StAFb9YdDCVAyiDon1oofdyvuXmE3a\",\n      \"reason\": \"nnxyz nifty faces #123 also pairs circular spiral eye forms with a tooth-filled mouth on a flat ground, but its teal field and clean line separation contrast with #161's layered color fill and scribbled overdrawing.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral eyes\",\n    \"lobed crown form\",\n    \"gold ground\",\n    \"border loop marks\",\n    \"layered color zones\",\n    \"tooth row\"\n  ],\n  \"interpretiveTags\": [\n    \"contained intensity\",\n    \"vigilance\",\n    \"crowded interiority\"\n  ],\n  \"lookingQuestion\": \"The gray looping border and the multicolored marks inside the figure use very different line weights and rhythms—what happens to your reading of the face when you track where one zone ends and the other begins?\",\n  \"ambiguities\": [\n    \"The heart-like double lobe at the top of the head could be read as a crown, ears, or a separate overlapping form; the image does not resolve this clearly.\",\n    \"The nnotb title sequence and the recorded creation sequence align here, but the metadata notes gaps and variants exist elsewhere in the owned subset, so consecutive title numbers are not confirmed as consecutive creation events.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXfSbW6mHkhFcGcjts3eip1KzvrfAkmh2QwP5ZL6u8fLc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXfSbW6mHkhFcGcjts3eip1KzvrfAkmh2QwP5ZL6u8fLc/image.png",
+        "imageSHA256": "47a739f43efb1bb19fe86cb1d2a0db4d9df9566c58995f489dc03e882fd9d8ea"
+      },
+      {
+        "artworkId": "QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf/image.png",
+        "imageSHA256": "74faf9943832dc3fc35c08638afcd9e6aa02d1c2089289c399ac74c14c83cd41"
+      },
+      {
+        "artworkId": "Qmb37ZSZuu6BD5s7StAFb9YdDCVAyiDon1oofdyvuXmE3a",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmb37ZSZuu6BD5s7StAFb9YdDCVAyiDon1oofdyvuXmE3a/image.png",
+        "imageSHA256": "05bd6d5d45f15ea9440455694df5063546b86df3b307a45580eab68ea15c6518"
+      },
+      {
+        "artworkId": "QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU/image.png",
+        "imageSHA256": "2fae9d653a729143a32eeb88eb4b7590fa9b90295a2af4a5aacb39e3236b5d77"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:00.700305-05:00",
+    "usage": {
+      "inputTokens": 7053,
+      "outputTokens": 950,
+      "totalTokens": 8003,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6735
+    },
+    "requestId": "564feb26-d9d1-4555-9570-9e72f684cdfd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape dominates the center, filled with overlapping flat color zones of gold, teal, yellow, red, and purple, with a double-lobed form rising from the top.\",\n    \"Two eyes are each drawn as tight concentric spiral coils in white and gold, with small radiating lines around them; a rectangular mouth area shows short vertical marks resembling teeth.\",\n    \"A dense border of loose gray looping lines runs along all four edges of the gold-brown background, visually separate from the central figure and distinct in color and weight from the multicolored marks inside.\"\n  ],\n  \"reading\": \"The rounded form holds its ground against a restless interior: spiral eyes pull attention inward while layered color zones—gold, teal, red, purple—push outward in every direction. The tight coils read as intensity or vigilance; the slack gray loops at the edges feel like static held just outside. The face is composed but crowded, as if containing more than it can easily hold.\",\n  \"contextAngle\": \"Within the owned nnotb subset, immediate title neighbors are nnxyz nnotb #160 and nnxyz nnotb #162. Where #160 sets a dense face against black, #161 uses a warm gold field, and #162 shifts to an olive ground with angular framing—three distinct background strategies across three consecutive titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf\",\n      \"reason\": \"Both works center a large face with spiral-coil eyes and a visible tooth row, but #160 builds those features over a black ground with neon-bright lines while #161 uses warm gold, making the mood contrast directly visible.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmb37ZSZuu6BD5s7StAFb9YdDCVAyiDon1oofdyvuXmE3a\",\n      \"reason\": \"nnxyz nifty faces #123 also pairs circular spiral eye forms with a tooth-filled mouth on a flat ground, but its teal field and clean line separation contrast with #161's layered color fill and scribbled overdrawing.\"\n    }\n  ],\n  \"tags\": [\"spiral eyes\", \"double-lobed crown form\", \"gold ground\", \"border loop marks\", \"layered color zones\", \"tooth row\"],\n  \"interpretiveTags\": [\"contained intensity\", \"vigilance\", \"crowded interiority\"],\n  \"lookingQuestion\": \"The gray looping border and the multicolored marks inside the figure use very different line weights and rhythms—what happens to your reading of the face when you track where one zone ends and the other begins?\",\n  \"ambiguities\": [\n    \"The double-lobed form at the top of the head could be read as a crown, ears, or a separate overlapping shape; the image does not resolve this clearly.\",\n    \"Title sequence and recorded creation sequence align for this work, but metadata notes gaps and variants exist elsewhere in the owned subset, so consecutive title numbers are not confirmed as consecutive creation events.\"\n  ],\n  \"reviewFindings\": [\n    \"Draft called the double lobe 'heart-like'—removed interpretive label; visible form confirmed as two rounded lobes but shape identity is ambiguous, now described neutrally.\",\n    \"All color observations (gold, teal, yellow, red, purple, gray border) verified against the primary image; no invented colors found.\",\n    \"Both comparison connections verified against inspected images: spiral eyes and tooth rows confirmed in QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf; spiral eye forms and tooth row on flat ground confirmed in Qmb37ZSZuu6BD5s7StAFb9YdDCVAyiDon1oofdyvuXmE3a.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXfSbW6mHkhFcGcjts3eip1KzvrfAkmh2QwP5ZL6u8fLc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXfSbW6mHkhFcGcjts3eip1KzvrfAkmh2QwP5ZL6u8fLc/image.png",
+        "imageSHA256": "47a739f43efb1bb19fe86cb1d2a0db4d9df9566c58995f489dc03e882fd9d8ea"
+      },
+      {
+        "artworkId": "QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf/image.png",
+        "imageSHA256": "74faf9943832dc3fc35c08638afcd9e6aa02d1c2089289c399ac74c14c83cd41"
+      },
+      {
+        "artworkId": "Qmb37ZSZuu6BD5s7StAFb9YdDCVAyiDon1oofdyvuXmE3a",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmb37ZSZuu6BD5s7StAFb9YdDCVAyiDon1oofdyvuXmE3a/image.png",
+        "imageSHA256": "05bd6d5d45f15ea9440455694df5063546b86df3b307a45580eab68ea15c6518"
+      },
+      {
+        "artworkId": "QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVE7WSEYUbtvJaUexaXcJmFfw1u2RSupjz13ukTDLFYkU/image.png",
+        "imageSHA256": "2fae9d653a729143a32eeb88eb4b7590fa9b90295a2af4a5aacb39e3236b5d77"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape dominates the center, filled with overlapping flat color zones of gold, teal, yellow, red, and purple, with a heart-like double-lobed crown at the top.\", \"Two eyes are each drawn as tight concentric spiral coils in white and gold, with small radiating lines suggesting lashes; a rectangular mouth area shows short vertical marks resembling teeth.\", \"A dense border of loose gray looping lines runs along all four edges of the gold-brown background, separate from the central figure and distinct in color and weight from the multicolored marks inside.\"], \"reading\": \"The rounded form holds its ground against a restless interior: spiral eyes pull attention inward while the layered color zones—gold, teal, red, purple—push outward in every direction. The tight coils read as intensity or vigilance; the slack gray loops at the edges feel like static or noise held just outside. The face is composed but crowded, as if containing more than it can easily hold.\", \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #160 and nnxyz nnotb #162. Where #160 sets a dense face against black, #161 uses a warm gold field, and #162 shifts to an olive ground with more angular framing—three distinct background strategies across three consecutive titles.\", \"connections\": [{\"targetArtworkId\": \"QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf\", \"reason\": \"Both works center a large face with spiral-coil eyes and a visible tooth row, but #160 uses a black ground with neon-bright lines while #161 builds the same features over warm gold, making the contrast in mood between the two directly visible.\"}, {\"targetArtworkId\": \"Qmb37ZSZuu6BD5s7StAFb9YdDCVAyiDon1oofdyvuXmE3a\", \"reason\": \"nnxyz nifty faces #123 also pairs circular spiral eye forms with a tooth-filled mouth on a flat ground, but its teal field and clean line separation contrast with #161's layered color fill and scribbled overdrawing.\"}], \"tags\": [\"spiral eyes\", \"lobed crown form\", \"gold ground\", \"border loop marks\", \"layered color zones\", \"tooth row\"], \"interpretiveTags\": [\"contained intensity\", \"vigilance\", \"crowded interiority\"], \"lookingQuestion\": \"The gray looping border and the multicolored marks inside the figure use very different line weights and rhythms—what happens to your reading of the face when you track where one zone ends and the other begins?\", \"ambiguities\": [\"The heart-like double lobe at the top of the head could be read as a crown, ears, or a separate overlapping form; the image does not resolve this clearly.\", \"The nnotb title sequence and the recorded creation sequence align here, but the metadata notes gaps and variants exist elsewhere in the owned subset, so consecutive title numbers are not confirmed as consecutive creation events.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

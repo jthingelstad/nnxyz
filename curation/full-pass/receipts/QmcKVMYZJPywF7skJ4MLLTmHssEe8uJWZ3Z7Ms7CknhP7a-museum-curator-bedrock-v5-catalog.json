@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:46.358789-05:00",
+    "usage": {
+      "inputTokens": 6228,
+      "outputTokens": 787,
+      "totalTokens": 7015,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12324
+    },
+    "requestId": "d9f32a8e-df52-4fa9-a6e4-cd41478dcd22",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A four-limbed figure fills most of the frame, arms raised and splayed outward, built entirely from dense overlapping loops of white, yellow, red, blue, and black line against a grey wave-patterned background.\",\n    \"The face is the darkest zone: two large square eye sockets hold concentric rings of red, yellow, and white, and a wide open mouth shows a row of sharp white teeth outlined heavily in black.\",\n    \"A cast shadow falls directly behind the figure onto the grey background, and a faint red partial shape is visible in the upper right corner, partially obscured by the dark edge.\"\n  ],\n  \"reading\": \"The figure throws its limbs outward in all directions, and the tangled lines that build its body feel loose and agitated against the smoother grey waves behind it. The face anchors the chaos: those squared eye sockets and the open-toothed mouth read as alarm or a shout. The shadow doubles the form without repeating its color, adding a second, quieter presence beneath the noise.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #46 and nnxyz nnotb #48. All three show upright figures with raised limbs and open mouths, but #47 is the most densely layered in line color and the only one to use a cast shadow as a structural element.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv\",\n      \"reason\": \"nnxyz nnotb #46 shares the raised-arm pose and toothed open mouth, but its lines are sparser and darker against a flat teal ground, making the contrast with #47's pale, multi-color density direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7\",\n      \"reason\": \"nnxyz nnotb #27 also centers a wide-mouthed figure with red-ringed eyes on a grey blurred background, offering a close formal parallel to #47's face structure despite the very different body treatment.\"\n    }\n  ],\n  \"tags\": [\n    \"tangled line construction\",\n    \"raised limbs\",\n    \"open toothed mouth\",\n    \"cast shadow\",\n    \"multi-color loops on grey ground\",\n    \"concentric eye rings\"\n  ],\n  \"interpretiveTags\": [\n    \"alarm or agitation reading\",\n    \"confrontational presence\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the open mouth, the splayed hands, or the shadow — and what does that order suggest about how the lines direct attention across the image?\",\n  \"ambiguities\": [\n    \"The partial red shape in the upper right corner is not clearly resolved as a separate drawn element or a background layer bleed.\",\n    \"nnxyz nnotb #48 uses a very different visual language (scattered dots, smooth color fields) and offers no useful formal connection to #47 beyond title adjacency.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a/image.png",
+        "imageSHA256": "40530a2a28e6cb948685ca956a5efc46d97df0975d3f0dc5735754505756f594"
+      },
+      {
+        "artworkId": "QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv/image.png",
+        "imageSHA256": "ac1ab5a2464cf7c3d7b9e534904498eaf7f2ab45857899ca46cc1dc72fa41c0a"
+      },
+      {
+        "artworkId": "QmRhk2fy4ZKjzqokPxTqUGEJzWxD8cV6eQS6ZS6aBx6jEv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRhk2fy4ZKjzqokPxTqUGEJzWxD8cV6eQS6ZS6aBx6jEv/image.png",
+        "imageSHA256": "9fe2e3a38f9fa3c97b85894246c4d5a234dab1b14bf43de9a9717e9c90ae91fb"
+      },
+      {
+        "artworkId": "QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7/image.png",
+        "imageSHA256": "69fbfc56f19af629bff1a818da49ed68641babae3f646917e55a5bd2caa57631"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:52.818959-05:00",
+    "usage": {
+      "inputTokens": 7037,
+      "outputTokens": 962,
+      "totalTokens": 7999,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6367
+    },
+    "requestId": "7fbe3ae3-8042-4aad-bb84-1c612d8936de",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A four-limbed figure fills most of the frame, arms raised and splayed outward, built from dense overlapping loops of white, yellow, red, blue, and black line against a grey wave-patterned background.\",\n    \"The face is the darkest zone: two large square eye sockets hold concentric rings of red, yellow, and white, and a wide open mouth shows a row of sharp white teeth outlined heavily in black.\",\n    \"A cast shadow falls directly behind the figure onto the grey background, and a faint red partial arc is visible in the upper right corner, partially obscured by the dark edge.\"\n  ],\n  \"reading\": \"The figure throws its limbs outward in all directions, and the tangled lines building its body feel loose and agitated against the smoother grey waves behind it. The face anchors the chaos: squared eye sockets and an open-toothed mouth read as alarm or a shout. The shadow doubles the form without repeating its color, adding a quieter second presence beneath the noise.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #46 and nnxyz nnotb #48. Of the three, #47 is the most densely layered in line color and the only one to use a cast shadow as a structural element.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv\",\n      \"reason\": \"nnxyz nnotb #46 shares the raised-arm pose and toothed open mouth, but its lines are sparser and darker against a flat teal ground, making the contrast with #47's pale multi-color density direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7\",\n      \"reason\": \"nnxyz nnotb #27 centers a wide-mouthed figure with red-ringed eyes on a grey blurred background, offering a close formal parallel to #47's face structure despite the very different body treatment.\"\n    }\n  ],\n  \"tags\": [\n    \"tangled line construction\",\n    \"raised limbs\",\n    \"open toothed mouth\",\n    \"cast shadow\",\n    \"multi-color loops on grey ground\",\n    \"concentric eye rings\"\n  ],\n  \"interpretiveTags\": [\n    \"alarm or agitation reading\",\n    \"confrontational presence\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the open mouth, the splayed hands, or the shadow — and what does that order suggest about how the lines direct attention across the image?\",\n  \"ambiguities\": [\n    \"The partial red arc in the upper right corner is not clearly resolved as a separate drawn element or a background layer bleed.\",\n    \"nnxyz nnotb #48 uses scattered dots and smooth color fields with no structural parallel to #47, so it was excluded from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form observations confirmed against the primary image: concentric eye rings, toothed mouth, cast shadow, and wave-patterned grey background all visibly present.\",\n    \"Comparison with QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv confirmed: teal ground, sparser darker lines, raised arm, and toothed mouth visible in #46 image.\",\n    \"Comparison with QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7 confirmed: grey blurred background, red-ringed eyes, and wide open mouth visible in #27 image; connection retained as formally grounded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a/image.png",
+        "imageSHA256": "40530a2a28e6cb948685ca956a5efc46d97df0975d3f0dc5735754505756f594"
+      },
+      {
+        "artworkId": "QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv/image.png",
+        "imageSHA256": "ac1ab5a2464cf7c3d7b9e534904498eaf7f2ab45857899ca46cc1dc72fa41c0a"
+      },
+      {
+        "artworkId": "QmRhk2fy4ZKjzqokPxTqUGEJzWxD8cV6eQS6ZS6aBx6jEv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRhk2fy4ZKjzqokPxTqUGEJzWxD8cV6eQS6ZS6aBx6jEv/image.png",
+        "imageSHA256": "9fe2e3a38f9fa3c97b85894246c4d5a234dab1b14bf43de9a9717e9c90ae91fb"
+      },
+      {
+        "artworkId": "QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7/image.png",
+        "imageSHA256": "69fbfc56f19af629bff1a818da49ed68641babae3f646917e55a5bd2caa57631"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A four-limbed figure fills most of the frame, arms raised and splayed outward, built entirely from dense overlapping loops of white, yellow, red, blue, and black line against a grey wave-patterned background.\", \"The face is the darkest zone: two large square eye sockets hold concentric rings of red, yellow, and white, and a wide open mouth shows a row of sharp white teeth outlined heavily in black.\", \"A cast shadow falls directly behind the figure onto the grey background, and a faint red partial shape is visible in the upper right corner, partially obscured by the dark edge.\"], \"reading\": \"The figure throws its limbs outward in all directions, and the tangled lines that build its body feel loose and agitated against the smoother grey waves behind it. The face anchors the chaos: those squared eye sockets and the open-toothed mouth read as alarm or a shout. The shadow doubles the form without repeating its color, adding a second, quieter presence beneath the noise.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #46 and nnxyz nnotb #48. All three show upright figures with raised limbs and open mouths, but #47 is the most densely layered in line color and the only one to use a cast shadow as a structural element.\", \"connections\": [{\"targetArtworkId\": \"QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv\", \"reason\": \"nnxyz nnotb #46 shares the raised-arm pose and toothed open mouth, but its lines are sparser and darker against a flat teal ground, making the contrast with #47's pale, multi-color density direct and visible.\"}, {\"targetArtworkId\": \"QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7\", \"reason\": \"nnxyz nnotb #27 also centers a wide-mouthed figure with red-ringed eyes on a grey blurred background, offering a close formal parallel to #47's face structure despite the very different body treatment.\"}], \"tags\": [\"tangled line construction\", \"raised limbs\", \"open toothed mouth\", \"cast shadow\", \"multi-color loops on grey ground\", \"concentric eye rings\"], \"interpretiveTags\": [\"alarm or agitation reading\", \"confrontational presence\"], \"lookingQuestion\": \"Where does your eye settle first — on the open mouth, the splayed hands, or the shadow — and what does that order suggest about how the lines direct attention across the image?\", \"ambiguities\": [\"The partial red shape in the upper right corner is not clearly resolved as a separate drawn element or a background layer bleed.\", \"nnxyz nnotb #48 uses a very different visual language (scattered dots, smooth color fields) and offers no useful formal connection to #47 beyond title adjacency.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:16:24.437282-05:00",
+    "usage": {
+      "inputTokens": 6820,
+      "outputTokens": 841,
+      "totalTokens": 7661,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10702
+    },
+    "requestId": "b3554355-c6bc-4068-85c6-6444c7203e2d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A four-limbed figure fills most of the frame, arms raised and splayed outward, built from dense overlapping loops of white, yellow, red, blue, and black line against a grey wave-patterned background.\",\n    \"The face is the darkest zone: two large square eye sockets hold concentric rings of red, yellow, and white, and a wide open mouth shows a row of sharp white teeth outlined heavily in black.\",\n    \"A cast shadow falls directly behind the figure onto the grey background, and a faint red partial arc is visible in the upper right corner, partially obscured by the dark edge.\"\n  ],\n  \"reading\": \"The figure throws its limbs outward in all directions, and the tangled lines building its body feel loose and agitated against the smoother grey waves behind it. The face anchors the chaos: squared eye sockets and an open-toothed mouth read as alarm or a shout. The shadow doubles the form without repeating its color, adding a quieter second presence beneath the noise.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors #46 and #48. Compared to those two, #47 layers more line colors across the body and is the only one of the three to use a cast shadow as a structural element.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv\",\n      \"reason\": \"nnxyz nnotb #46 shares the raised-arm pose and toothed open mouth, but its lines are sparser and darker against a flat teal ground, making the contrast with #47's pale multi-color density direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7\",\n      \"reason\": \"nnxyz nnotb #27 centers a wide-mouthed figure with red-ringed eyes on a grey blurred background, offering a close formal parallel to #47's face structure despite the very different body treatment.\"\n    }\n  ],\n  \"tags\": [\n    \"tangled line construction\",\n    \"raised limbs\",\n    \"open toothed mouth\",\n    \"cast shadow\",\n    \"multi-color loops on grey ground\",\n    \"concentric eye rings\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the open mouth, the splayed hands, or the shadow — and what does that order suggest about how the lines direct attention across the image?\",\n  \"ambiguities\": [\n    \"The partial red arc in the upper right corner is not clearly resolved as a separate drawn element or a background layer bleed.\",\n    \"nnxyz nnotb #48 uses scattered dots and smooth color fields with no structural parallel to #47, so it was excluded from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'the most densely layered in line color' with a scoped comparative ('layers more line colors across the body') to remove the unscoped superlative.\",\n    \"Retained both connections after re-inspecting images: #46 and #27 each share specific facial and postural features with #47.\",\n    \"Mouth-openness confirmed: dark interior cavity is visible between the upper and lower tooth rows, supporting the 'wide open mouth' description.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a/image.png",
+        "imageSHA256": "40530a2a28e6cb948685ca956a5efc46d97df0975d3f0dc5735754505756f594"
+      },
+      {
+        "artworkId": "QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv/image.png",
+        "imageSHA256": "ac1ab5a2464cf7c3d7b9e534904498eaf7f2ab45857899ca46cc1dc72fa41c0a"
+      },
+      {
+        "artworkId": "QmRhk2fy4ZKjzqokPxTqUGEJzWxD8cV6eQS6ZS6aBx6jEv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRhk2fy4ZKjzqokPxTqUGEJzWxD8cV6eQS6ZS6aBx6jEv/image.png",
+        "imageSHA256": "9fe2e3a38f9fa3c97b85894246c4d5a234dab1b14bf43de9a9717e9c90ae91fb"
+      },
+      {
+        "artworkId": "QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7/image.png",
+        "imageSHA256": "69fbfc56f19af629bff1a818da49ed68641babae3f646917e55a5bd2caa57631"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A four-limbed figure fills most of the frame, arms raised and splayed outward, built from dense overlapping loops of white, yellow, red, blue, and black line against a grey wave-patterned background.\", \"The face is the darkest zone: two large square eye sockets hold concentric rings of red, yellow, and white, and a wide open mouth shows a row of sharp white teeth outlined heavily in black.\", \"A cast shadow falls directly behind the figure onto the grey background, and a faint red partial arc is visible in the upper right corner, partially obscured by the dark edge.\"], \"reading\": \"The figure throws its limbs outward in all directions, and the tangled lines building its body feel loose and agitated against the smoother grey waves behind it. The face anchors the chaos: squared eye sockets and an open-toothed mouth read as alarm or a shout. The shadow doubles the form without repeating its color, adding a quieter second presence beneath the noise.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #46 and nnxyz nnotb #48. Of the three, #47 is the most densely layered in line color and the only one to use a cast shadow as a structural element.\", \"connections\": [{\"targetArtworkId\": \"QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv\", \"reason\": \"nnxyz nnotb #46 shares the raised-arm pose and toothed open mouth, but its lines are sparser and darker against a flat teal ground, making the contrast with #47's pale multi-color density direct and visible.\"}, {\"targetArtworkId\": \"QmXRDRnGSt1cBhXMRC2j38LbheZceMrzt4dZENFP1j2uP7\", \"reason\": \"nnxyz nnotb #27 centers a wide-mouthed figure with red-ringed eyes on a grey blurred background, offering a close formal parallel to #47's face structure despite the very different body treatment.\"}], \"tags\": [\"tangled line construction\", \"raised limbs\", \"open toothed mouth\", \"cast shadow\", \"multi-color loops on grey ground\", \"concentric eye rings\"], \"lookingQuestion\": \"Where does your eye settle first — on the open mouth, the splayed hands, or the shadow — and what does that order suggest about how the lines direct attention across the image?\", \"ambiguities\": [\"The partial red arc in the upper right corner is not clearly resolved as a separate drawn element or a background layer bleed.\", \"nnxyz nnotb #48 uses scattered dots and smooth color fields with no structural parallel to #47, so it was excluded from connections.\"]}\nFLAGS:\n[{\"artworkId\": \"QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a\", \"field\": \"contextAngle\", \"rule\": \"unscoped-superlative\", \"matches\": [\"most densely\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

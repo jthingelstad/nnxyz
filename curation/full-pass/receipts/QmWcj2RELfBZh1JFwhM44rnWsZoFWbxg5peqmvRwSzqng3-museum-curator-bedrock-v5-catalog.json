@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:40.707378-05:00",
+    "usage": {
+      "inputTokens": 6219,
+      "outputTokens": 802,
+      "totalTokens": 7021,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13940
+    },
+    "requestId": "50dd93dd-ecec-4508-af78-25ff48166075",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large black-outlined circle dominates the center, enclosing a face-like arrangement with a spiral yellow form upper-left, a red horizontal bar crossing mid-circle, and a row of white rectangular shapes along the lower interior.\",\n    \"Bold yellow dashes appear at upper-right and left-center outside the circle, while red, pink, and green short marks scatter across a warm brown background, creating a busy surround that presses against the circle's edge.\",\n    \"Inside the circle, layered lines in blue, red, green, and yellow overlap the main forms, and a cluster of blue dash-marks sits below the spiral, adding a second zone of concentrated detail within the lower-center interior.\"\n  ],\n  \"reading\": \"A thick black ring holds a crowded interior: a coiled yellow form sits opposite a red-orange bar, and white rectangular blocks line the lower arc like keys or teeth. The layering feels pressurized, as if the circle is barely containing what is inside. Outside, yellow slabs and scattered short marks read as noise or static—something the boundary has not quite shut out.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title-neighbor nnxyz nnotb #225 shares the brown field and a toothed mouth form but spreads its marks across open space rather than compressing them inside a single ring. nnxyz nnotb #227 returns to a circular skull structure with a similar mouth zone, making #226 a pivot between open and enclosed compositions.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk\",\n      \"reason\": \"rawblocks #58 shares the same brown ground, a circular head outline, a row of white rectangular tooth-like blocks at the mouth, and yellow horizontal bands—making it the closest formal echo across the two owned collections.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRe87masy143Q3RGF4mUcisS8mfr9oX3ECTJGELpjfRbV\",\n      \"reason\": \"nnotb #227 repeats the circular skull boundary and a compressed mouth-and-teeth zone, but replaces the yellow exterior marks with a red scribble field, showing how the same structural idea shifts in color weight.\"\n    }\n  ],\n  \"tags\": [\n    \"circular enclosure\",\n    \"row of rectangular blocks\",\n    \"spiral form\",\n    \"horizontal bar crossing center\",\n    \"layered line clusters\",\n    \"yellow dash marks\"\n  ],\n  \"interpretiveTags\": [\n    \"pressurized interior\",\n    \"contained noise\"\n  ],\n  \"lookingQuestion\": \"What happens to your reading of the white rectangular row when you trace the red horizontal bar that crosses it—does the bar feel like it divides the interior or connects the two sides?\",\n  \"ambiguities\": [\n    \"The white rectangular forms along the lower arc could be read as teeth, keys, or abstract blocks; no external evidence resolves which, if any, reading was intended.\",\n    \"The collector's noted connection between scrimshaw and nnxyz rests on visual pattern qualities described in the collector perspective; no material or technique evidence in the supplied record confirms or denies a formal link.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWcj2RELfBZh1JFwhM44rnWsZoFWbxg5peqmvRwSzqng3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWcj2RELfBZh1JFwhM44rnWsZoFWbxg5peqmvRwSzqng3/image.png",
+        "imageSHA256": "7b05a70a294fde8e5810851e011913e02c6877d846a58f315c025eed2586e286"
+      },
+      {
+        "artworkId": "QmZtzDmwLmDbnUDDcsEUPP4qu2dYeGWxGPuZ11e1iBmxap",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZtzDmwLmDbnUDDcsEUPP4qu2dYeGWxGPuZ11e1iBmxap/image.png",
+        "imageSHA256": "7d19c58d0ecbbcbe21cc0b991cbbe6a2b272c7926f2bfc9041393bdb1202aad5"
+      },
+      {
+        "artworkId": "QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk/image.png",
+        "imageSHA256": "5e26d479672f50c0c604cb73545b9af164479e2dd8d3b855ed9378e6564a03ad"
+      },
+      {
+        "artworkId": "QmRe87masy143Q3RGF4mUcisS8mfr9oX3ECTJGELpjfRbV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRe87masy143Q3RGF4mUcisS8mfr9oX3ECTJGELpjfRbV/image.png",
+        "imageSHA256": "f53ae0b4bbc9e3caf93024671be7424d21500cb38831694e42a04957b2fc06b9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:47.922357-05:00",
+    "usage": {
+      "inputTokens": 7043,
+      "outputTokens": 937,
+      "totalTokens": 7980,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7140
+    },
+    "requestId": "f6e01ba4-225b-492a-9693-d3dbaeb5cafe",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large black-outlined circle dominates the center, enclosing a face-like arrangement with a coiled yellow form upper-left, a red-orange horizontal bar crossing mid-circle, and a row of white rectangular blocks along the lower interior arc.\",\n    \"Bold yellow dashes appear at upper-right and left-center outside the circle, while red, pink, and green short marks scatter across a warm brown background, pressing against the circle's edge.\",\n    \"Inside the circle, layered lines in blue, red, green, and yellow overlap the main forms; a cluster of blue dash-marks sits below the coiled yellow form, adding a second zone of concentrated detail in the lower-center interior.\"\n  ],\n  \"reading\": \"A thick black ring holds a crowded interior: a coiled yellow form sits opposite a red-orange bar, and white rectangular blocks line the lower arc. The layering reads as pressurized, the circle barely containing what is inside. Outside, yellow slabs and scattered short marks suggest noise or static—something the boundary has not shut out. The brown field anchors both zones without resolving the tension between them.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title-neighbor nnxyz nnotb #225 shares the brown field and a toothed mouth form but spreads marks across open space rather than compressing them inside a ring. Title-neighbor nnxyz nnotb #227 returns to a circular boundary with a similar mouth zone, placing #226 between those two approaches.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk\",\n      \"reason\": \"rawblocks #58 shares the same brown ground, a circular head outline, a row of white rectangular tooth-like blocks at the mouth, and yellow horizontal bands—the closest formal echo across the two owned collections.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRe87masy143Q3RGF4mUcisS8mfr9oX3ECTJGELpjfRbV\",\n      \"reason\": \"nnotb #227 repeats the circular boundary and a compressed mouth-and-teeth zone but replaces the yellow exterior marks with a red scribble field, shifting the same structure into a different color weight.\"\n    }\n  ],\n  \"tags\": [\n    \"circular enclosure\",\n    \"row of rectangular blocks\",\n    \"coiled yellow form\",\n    \"horizontal bar crossing center\",\n    \"layered line clusters\",\n    \"yellow dash marks\"\n  ],\n  \"interpretiveTags\": [\n    \"pressurized interior\",\n    \"contained noise\"\n  ],\n  \"lookingQuestion\": \"When you trace the red-orange horizontal bar crossing the interior, does it read as dividing the circle's upper and lower zones or as connecting the two sides?\",\n  \"ambiguities\": [\n    \"The white rectangular forms along the lower arc could be read as teeth, keys, or abstract blocks; no supplied evidence resolves which reading, if any, was intended.\",\n    \"The collector's noted connection between scrimshaw and nnxyz rests on visual pattern qualities in the collector perspective; no material or technique evidence in the supplied record confirms a formal link.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: coiled yellow form upper-left, red-orange horizontal bar mid-circle, and white rectangular blocks on lower arc are all directly visible in the primary image—no invented forms found.\",\n    \"Confirmed: rawblocks #58 image shows brown ground, circular outline, white rectangular tooth row, and yellow bands—formal comparison is supported by inspection, not just color overlap.\",\n    \"Corrected 'spiral' to 'coiled' in observation 1 and tags to avoid implying a precise geometric form; the yellow mark reads as a loose coil rather than a strict spiral.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWcj2RELfBZh1JFwhM44rnWsZoFWbxg5peqmvRwSzqng3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWcj2RELfBZh1JFwhM44rnWsZoFWbxg5peqmvRwSzqng3/image.png",
+        "imageSHA256": "7b05a70a294fde8e5810851e011913e02c6877d846a58f315c025eed2586e286"
+      },
+      {
+        "artworkId": "QmZtzDmwLmDbnUDDcsEUPP4qu2dYeGWxGPuZ11e1iBmxap",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZtzDmwLmDbnUDDcsEUPP4qu2dYeGWxGPuZ11e1iBmxap/image.png",
+        "imageSHA256": "7d19c58d0ecbbcbe21cc0b991cbbe6a2b272c7926f2bfc9041393bdb1202aad5"
+      },
+      {
+        "artworkId": "QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk/image.png",
+        "imageSHA256": "5e26d479672f50c0c604cb73545b9af164479e2dd8d3b855ed9378e6564a03ad"
+      },
+      {
+        "artworkId": "QmRe87masy143Q3RGF4mUcisS8mfr9oX3ECTJGELpjfRbV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRe87masy143Q3RGF4mUcisS8mfr9oX3ECTJGELpjfRbV/image.png",
+        "imageSHA256": "f53ae0b4bbc9e3caf93024671be7424d21500cb38831694e42a04957b2fc06b9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large black-outlined circle dominates the center, enclosing a face-like arrangement with a spiral yellow form upper-left, a red horizontal bar crossing mid-circle, and a row of white rectangular shapes along the lower interior.\", \"Bold yellow dashes appear at upper-right and left-center outside the circle, while red, pink, and green short marks scatter across a warm brown background, creating a busy surround that presses against the circle's edge.\", \"Inside the circle, layered lines in blue, red, green, and yellow overlap the main forms, and a cluster of blue dash-marks sits below the spiral, adding a second zone of concentrated detail within the lower-center interior.\"], \"reading\": \"A thick black ring holds a crowded interior: a coiled yellow form sits opposite a red-orange bar, and white rectangular blocks line the lower arc like keys or teeth. The layering feels pressurized, as if the circle is barely containing what is inside. Outside, yellow slabs and scattered short marks read as noise or static—something the boundary has not quite shut out.\", \"contextAngle\": \"Within the owned nnotb subset, title-neighbor nnxyz nnotb #225 shares the brown field and a toothed mouth form but spreads its marks across open space rather than compressing them inside a single ring. nnxyz nnotb #227 returns to a circular skull structure with a similar mouth zone, making #226 a pivot between open and enclosed compositions.\", \"connections\": [{\"targetArtworkId\": \"QmPLqoPsJ7LVjZ6tmgj8Z4fDLdyiPqoJwDDkJQJBwFyHBk\", \"reason\": \"rawblocks #58 shares the same brown ground, a circular head outline, a row of white rectangular tooth-like blocks at the mouth, and yellow horizontal bands—making it the closest formal echo across the two owned collections.\"}, {\"targetArtworkId\": \"QmRe87masy143Q3RGF4mUcisS8mfr9oX3ECTJGELpjfRbV\", \"reason\": \"nnotb #227 repeats the circular skull boundary and a compressed mouth-and-teeth zone, but replaces the yellow exterior marks with a red scribble field, showing how the same structural idea shifts in color weight.\"}], \"tags\": [\"circular enclosure\", \"row of rectangular blocks\", \"spiral form\", \"horizontal bar crossing center\", \"layered line clusters\", \"yellow dash marks\"], \"interpretiveTags\": [\"pressurized interior\", \"contained noise\"], \"lookingQuestion\": \"What happens to your reading of the white rectangular row when you trace the red horizontal bar that crosses it—does the bar feel like it divides the interior or connects the two sides?\", \"ambiguities\": [\"The white rectangular forms along the lower arc could be read as teeth, keys, or abstract blocks; no external evidence resolves which, if any, reading was intended.\", \"The collector's noted connection between scrimshaw and nnxyz rests on visual pattern qualities described in the collector perspective; no material or technique evidence in the supplied record confirms or denies a formal link.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

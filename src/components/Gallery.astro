@@ -1,0 +1,80 @@
+---
+import {
+  collections,
+  galleryOrder,
+  artworkPath,
+  collectionPath,
+  displayTitle,
+  collectionTitle,
+  thumbnailPath,
+} from '../lib/catalog';
+import Kudos from './Kudos.astro';
+interface Props {
+  selected?: string;
+}
+const { selected } = Astro.props;
+const works = selected
+  ? galleryOrder.filter((work) => work.collectionId === selected)
+  : galleryOrder;
+---
+
+<h1 class="sr-only">
+  {selected ? collectionTitle(selected) : 'A collection of nnxyz'}
+</h1>
+<nav class="collection-nav" aria-label="Artwork collections">
+  <a href="/" aria-current={!selected ? 'page' : undefined}>
+    All works
+  </a>
+  {collections.map((c) => (
+    <a
+      href={collectionPath(c.id)}
+      aria-current={selected === c.id ? 'page' : undefined}
+    >
+      {c.id === 'nifty-faces'
+        ? 'Faces'
+        : c.id === 'nnxyz-other'
+          ? 'Other nnxyz'
+          : c.name}
+    </a>
+  ))}
+</nav>
+<div class="gallery-grid">
+  {works.map((work, index) => (
+    <article class="art-card">
+      <a
+        class="art-link"
+        href={artworkPath(work.inkId)}
+        aria-label={`View ${displayTitle(work)} by ${work.artistName}`}
+      >
+        <img
+          src={thumbnailPath(work)}
+          alt={displayTitle(work)}
+          width={work.width}
+          height={work.height}
+          loading={index < 3 ? 'eager' : 'lazy'}
+          decoding="async"
+          fetchpriority={index < 3 ? 'high' : 'auto'}
+        />
+      </a>
+      <div class="card-caption">
+        <a href={artworkPath(work.inkId)}>{displayTitle(work)}</a>
+        <Kudos
+          path={artworkPath(work.inkId)}
+          title={displayTitle(work)}
+          compact
+        />
+      </div>
+      <p class="card-artist">{work.artistName}</p>
+    </article>
+  ))}
+</div>
+<footer class="collection-footer">
+  <p>{works.length} works in this owned collection.</p>
+  <p>
+    My eye kept returning to these works. I found myself looking for patterns,
+    and for the feeling in each image. Some seemed joyous; others felt angry.
+    That range kept me looking.
+  </p>
+  <a href="/about/">About the collection</a>
+  <a href="/walks/">Curated walks</a>
+</footer>

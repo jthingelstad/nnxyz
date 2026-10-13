@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:59.236624-05:00",
+    "usage": {
+      "inputTokens": 6010,
+      "outputTokens": 729,
+      "totalTokens": 6739,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19029
+    },
+    "requestId": "c6933b77-e146-4782-ba1b-b6720cb9cef0",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A head fills most of the frame, angled in three-quarter view, wearing a blue-and-teal cap with a button on top and a zigzag brim line drawn in black.\",\n    \"The background is a flat olive-yellow field covered with evenly spaced white polka dots, creating a strong pattern contrast against the loosely rendered figure.\",\n    \"An orange-brown beard is built from short hatched strokes, and a small cigarette with a glowing orange tip sits between parted pink lips at the right edge of the face.\"\n  ],\n  \"reading\": \"The white polka-dot field pushes the figure forward like a cut-out pasted onto wrapping paper, giving the image a flat, pop quality. Coiled black lines stand in for hair, and the oversized lavender-tinted sunglasses hide any readable expression, so the cigarette and the tilt of the cap carry most of the attitude. The muted camouflage patches across the skin feel almost incidental beneath all the bold outlines, a quiet layer under louder marks.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #16\\\" and \\\"nnxyz rawblocks #18.\\\" All three share a similar head-and-shoulders framing, oversized sunglasses, spiral earring, and bold outline style, but each swaps background pattern, headwear, and color temperature.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXgyzvgy8eU19TZEBjuFjM9Zmgt5XWazQNLfiYoggw5Cm\",\n      \"reason\": \"Both use the same olive-yellow background hue and spiral earring, but #16 replaces the polka dots with a flat field and swaps the cap for wild multicolor hair strokes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk\",\n      \"reason\": \"#18 shifts to soft translucent circles in the background instead of hard-edged polka dots, trading the cool blue cap for a warm red-brown beret and adding rainbow skin tones.\"\n    }\n  ],\n  \"tags\": [\n    \"polka-dot background\",\n    \"oversized sunglasses\",\n    \"bold black outlines\",\n    \"cigarette\",\n    \"baseball cap\",\n    \"spiral earring\"\n  ],\n  \"lookingQuestion\": \"How does the rigid, repeating polka-dot grid behind the figure interact with the loose, uneven lines that build the hair and beard?\",\n  \"ambiguities\": [\n    \"The mottled patches on the skin could be camouflage patterning or overlapping color fills; the image alone does not confirm which reading is supported.\",\n    \"The headphone-like white loop around the neck may be headphones or a collar detail; its form is ambiguous.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw/image.png",
+        "imageSHA256": "ba798aa01f9bdc057fd37e59a29eeda4aa52edd08baf1b692bb80f4c029d57a9"
+      },
+      {
+        "artworkId": "QmXgyzvgy8eU19TZEBjuFjM9Zmgt5XWazQNLfiYoggw5Cm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXgyzvgy8eU19TZEBjuFjM9Zmgt5XWazQNLfiYoggw5Cm/image.png",
+        "imageSHA256": "9bfcb04d167f6a97ff9d0887a25e9e2f48472d7265c7888d65fa6454a7d51d39"
+      },
+      {
+        "artworkId": "QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG/image.png",
+        "imageSHA256": "0e30d7f28bccbc06b4194e1656409b552461098aeac2d57f392a0723a9e37d46"
+      },
+      {
+        "artworkId": "QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk/image.png",
+        "imageSHA256": "ede0a62fe791701cd934d701c92bcfb9711020ec4a9532fcb026f7086c91ae1a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:10.901225-05:00",
+    "usage": {
+      "inputTokens": 6771,
+      "outputTokens": 797,
+      "totalTokens": 7568,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11589
+    },
+    "requestId": "94a84266-06fe-483e-a326-9be516d1d5e7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A head fills most of the frame in three-quarter view, wearing a blue-teal cap with a button on top and a zigzag black line along the brim.\",\n    \"The background is a flat olive-yellow field covered with evenly spaced white polka dots, creating a strong pattern contrast against the loosely rendered figure.\",\n    \"An orange-brown beard is built from short hatched strokes, and a small cigarette with a glowing orange tip sits between parted pink lips at the right edge of the face.\"\n  ],\n  \"reading\": \"The white polka-dot field pushes the figure forward like a cut-out pasted onto wrapping paper, giving the image a flat, pop quality. Coiled black lines stand in for hair, and oversized lavender-tinted sunglasses hide any readable expression, so the cigarette and the tilt of the cap carry most of the attitude. Mottled color patches across the skin sit as a quiet layer beneath bold outlines.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #16\\\" and \\\"nnxyz rawblocks #18.\\\" All three share head-and-shoulders framing, oversized sunglasses, a spiral earring, and bold outline style, but each swaps background pattern, headwear, and color temperature.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXgyzvgy8eU19TZEBjuFjM9Zmgt5XWazQNLfiYoggw5Cm\",\n      \"reason\": \"Both use the same olive-yellow background and spiral earring, but #16 replaces polka dots with a flat field and swaps the cap for wild multicolor hair strokes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk\",\n      \"reason\": \"#18 shifts to soft translucent circles instead of hard-edged polka dots, trading the cool blue cap for a warm beret and adding rainbow-striped skin tones.\"\n    }\n  ],\n  \"tags\": [\n    \"polka-dot background\",\n    \"oversized sunglasses\",\n    \"bold black outlines\",\n    \"cigarette\",\n    \"baseball cap\",\n    \"spiral earring\"\n  ],\n  \"lookingQuestion\": \"How does the rigid, repeating polka-dot grid behind the figure interact with the loose, uneven lines that build the hair and beard?\",\n  \"ambiguities\": [\n    \"The mottled patches on the skin could be overlapping color fills or a pattern; the image alone does not confirm which reading is supported.\",\n    \"The white loop around the neck may be headphones or a collar detail; its form is ambiguous.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed spiral earring visible in all three rawblocks neighbors; draft claim accurate.\",\n    \"Draft reading trimmed from 80 words to 58 to stay within target range; removed 'camouflage' label since that implies a specific pattern source.\",\n    \"Checked #16 background: it is indeed a flat olive-yellow field without polka dots, confirming the comparison contrast.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw/image.png",
+        "imageSHA256": "ba798aa01f9bdc057fd37e59a29eeda4aa52edd08baf1b692bb80f4c029d57a9"
+      },
+      {
+        "artworkId": "QmXgyzvgy8eU19TZEBjuFjM9Zmgt5XWazQNLfiYoggw5Cm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXgyzvgy8eU19TZEBjuFjM9Zmgt5XWazQNLfiYoggw5Cm/image.png",
+        "imageSHA256": "9bfcb04d167f6a97ff9d0887a25e9e2f48472d7265c7888d65fa6454a7d51d39"
+      },
+      {
+        "artworkId": "QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG/image.png",
+        "imageSHA256": "0e30d7f28bccbc06b4194e1656409b552461098aeac2d57f392a0723a9e37d46"
+      },
+      {
+        "artworkId": "QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk/image.png",
+        "imageSHA256": "ede0a62fe791701cd934d701c92bcfb9711020ec4a9532fcb026f7086c91ae1a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A head fills most of the frame, angled in three-quarter view, wearing a blue-and-teal cap with a button on top and a zigzag brim line drawn in black.\", \"The background is a flat olive-yellow field covered with evenly spaced white polka dots, creating a strong pattern contrast against the loosely rendered figure.\", \"An orange-brown beard is built from short hatched strokes, and a small cigarette with a glowing orange tip sits between parted pink lips at the right edge of the face.\"], \"reading\": \"The white polka-dot field pushes the figure forward like a cut-out pasted onto wrapping paper, giving the image a flat, pop quality. Coiled black lines stand in for hair, and the oversized lavender-tinted sunglasses hide any readable expression, so the cigarette and the tilt of the cap carry most of the attitude. The muted camouflage patches across the skin feel almost incidental beneath all the bold outlines, a quiet layer under louder marks.\", \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #16\\\" and \\\"nnxyz rawblocks #18.\\\" All three share a similar head-and-shoulders framing, oversized sunglasses, spiral earring, and bold outline style, but each swaps background pattern, headwear, and color temperature.\", \"connections\": [{\"targetArtworkId\": \"QmXgyzvgy8eU19TZEBjuFjM9Zmgt5XWazQNLfiYoggw5Cm\", \"reason\": \"Both use the same olive-yellow background hue and spiral earring, but #16 replaces the polka dots with a flat field and swaps the cap for wild multicolor hair strokes.\"}, {\"targetArtworkId\": \"QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk\", \"reason\": \"#18 shifts to soft translucent circles in the background instead of hard-edged polka dots, trading the cool blue cap for a warm red-brown beret and adding rainbow skin tones.\"}], \"tags\": [\"polka-dot background\", \"oversized sunglasses\", \"bold black outlines\", \"cigarette\", \"baseball cap\", \"spiral earring\"], \"lookingQuestion\": \"How does the rigid, repeating polka-dot grid behind the figure interact with the loose, uneven lines that build the hair and beard?\", \"ambiguities\": [\"The mottled patches on the skin could be camouflage patterning or overlapping color fills; the image alone does not confirm which reading is supported.\", \"The headphone-like white loop around the neck may be headphones or a collar detail; its form is ambiguous.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

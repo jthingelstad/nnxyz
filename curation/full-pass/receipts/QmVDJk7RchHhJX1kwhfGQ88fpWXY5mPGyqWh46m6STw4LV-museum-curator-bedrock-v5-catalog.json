@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:21.786908-05:00",
+    "usage": {
+      "inputTokens": 6100,
+      "outputTokens": 772,
+      "totalTokens": 6872,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12080
+    },
+    "requestId": "653ba9ca-27b6-4b1a-be79-a585e3844a5e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A stick-limbed figure in pink and mauve stands against a black ground, arms bent at the elbows, legs spread wide, rendered in loose dark-outlined strokes.\",\n    \"Seven overlapping translucent circles — alternating deep purple and warm gold — fan out behind the figure's upper body like a halo or bloom, their edges softened by layering.\",\n    \"Where the figure's head would be sits a bright yellow disc ringed by jagged radiating points, with a darker interior cluster of angular marks at its center.\"\n  ],\n  \"reading\": \"A thin-limbed figure holds a wide, planted stance while a cluster of overlapping circles spreads behind it — purple and gold discs that read as both backdrop and pressure. The disc-head blazes yellow with sharp points and a dark, tangled core. The body below is sketchy pink, almost casual, which makes the radiant weight above feel like something the figure is carrying rather than celebrating.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #212 — a flat silhouette with scattered yellow marks on open blue — and nnxyz nnotb #214, a close-cropped yellow head on black. This work sits between open space and compressed close-up, using the full figure format that neither neighbor shares.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf\",\n      \"reason\": \"Both works place a dark silhouette or outlined figure against a single-color ground and use scattered yellow marks to suggest energy radiating from the head area, but #212 uses flat fill and open sky while #213 layers translucent circles for depth.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXQ5sqnQx4JMVE6tqe8hn1CNTY5EKfX5mn9GyttoJ1vox\",\n      \"reason\": \"Both #213 and #214 place a large yellow disc-like head at center against black, with angular interior marks, but #214 crops to the head alone and surrounds it with scattered white fragments rather than overlapping circles.\"\n    }\n  ],\n  \"tags\": [\n    \"overlapping circles\",\n    \"stick figure\",\n    \"radiating disc\",\n    \"black ground\",\n    \"pink and mauve fill\",\n    \"yellow and purple contrast\"\n  ],\n  \"interpretiveTags\": [\n    \"weighted radiance\",\n    \"carried burden or crown\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the loose, sketchy body below and the dense layered circles above tell you about where the visual weight of this image actually sits?\",\n  \"ambiguities\": [\n    \"The overlapping circles could read as a halo, a flower form, or an atmospheric glow — the image does not resolve which, and no supplied metadata clarifies the subject.\",\n    \"The rawblocks #52 comparison image shows a densely layered close-up head on black with purple and gold marks, which shares a color family, but the formal structure differs enough that no strong connection was selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVDJk7RchHhJX1kwhfGQ88fpWXY5mPGyqWh46m6STw4LV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVDJk7RchHhJX1kwhfGQ88fpWXY5mPGyqWh46m6STw4LV/image.png",
+        "imageSHA256": "1597ffea6f0d63dfbd20b8451447501363ccf49a130508fe5e2f354d6fc59041"
+      },
+      {
+        "artworkId": "QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf/image.png",
+        "imageSHA256": "e4f39d115c6f3d6e6c84a9148809a0c68d435d28ad43547ac2e42849f43576e2"
+      },
+      {
+        "artworkId": "QmaZYZ9pHoVxgy7j2QomhxFbCXmC3CrgLhm6LNJzjuvRHP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaZYZ9pHoVxgy7j2QomhxFbCXmC3CrgLhm6LNJzjuvRHP/image.png",
+        "imageSHA256": "102d002601cd1eaf39b0177a21cfd36473864db446c7822e247c289164ff5b4c"
+      },
+      {
+        "artworkId": "QmXQ5sqnQx4JMVE6tqe8hn1CNTY5EKfX5mn9GyttoJ1vox",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXQ5sqnQx4JMVE6tqe8hn1CNTY5EKfX5mn9GyttoJ1vox/image.png",
+        "imageSHA256": "f54de2b533cf5c6f8d7d82c580428ca5592a760faaf41d232517b4426e0cf4af"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:28.659971-05:00",
+    "usage": {
+      "inputTokens": 6894,
+      "outputTokens": 891,
+      "totalTokens": 7785,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6821
+    },
+    "requestId": "bb5b37b7-c4bf-4864-9b11-67aff9b22148",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A stick-limbed figure in pink and mauve stands against a black ground, arms bent at the elbows, legs spread wide, rendered in loose dark-outlined strokes.\",\n    \"Seven overlapping translucent circles — alternating deep purple and warm gold — fan out behind the figure's upper body, their edges softened by layering.\",\n    \"Where the figure's head would be sits a bright yellow disc ringed by jagged radiating points, with a darker interior cluster of angular marks at its center.\"\n  ],\n  \"reading\": \"A thin-limbed figure holds a wide, planted stance while overlapping circles — purple and gold discs — spread behind it as both backdrop and pressure. The disc-head blazes yellow with sharp points and a dark, tangled core. The body below is sketchy pink, almost casual, which makes the radiant weight above feel like something the figure is carrying rather than celebrating.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #212 — a flat silhouette with scattered yellow marks on open blue — and nnxyz nnotb #214, a close-cropped yellow head on black. This work uses a full-figure format that neither neighbor shares.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf\",\n      \"reason\": \"Both place an outlined figure against a solid ground and use scattered yellow marks radiating from the head, but #212 uses flat fill on open blue while #213 layers translucent circles for depth.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXQ5sqnQx4JMVE6tqe8hn1CNTY5EKfX5mn9GyttoJ1vox\",\n      \"reason\": \"Both #213 and #214 place a large yellow disc-like head against black with angular interior marks, but #214 crops to the head alone and surrounds it with scattered white fragments rather than overlapping circles.\"\n    }\n  ],\n  \"tags\": [\n    \"overlapping circles\",\n    \"stick figure\",\n    \"radiating disc\",\n    \"black ground\",\n    \"pink and mauve fill\",\n    \"yellow and purple contrast\"\n  ],\n  \"interpretiveTags\": [\n    \"weighted radiance\",\n    \"carried burden or crown\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the loose, sketchy body below and the dense layered circles above tell you about where the visual weight of this image actually sits?\",\n  \"ambiguities\": [\n    \"The overlapping circles could read as a halo, a flower form, or an atmospheric glow — the image does not resolve which, and no supplied metadata clarifies the subject.\",\n    \"The rawblocks #52 comparison shares a black ground and purple-gold color family but its dense close-up structure differs enough from #213 that no formal connection was selected.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: stick figure with pink/mauve fill, seven translucent overlapping circles in purple and gold, yellow disc-head with jagged points and dark angular interior — no invented details found.\",\n    \"Both comparison connections verified against inspected images: #212 confirmed flat silhouette on blue with scattered yellow marks; #214 confirmed yellow disc-head on black with white scattered fragments and no overlapping circles — contrast claims accurate.\",\n    \"Reading removed 'almost casual' as a mild intent inference but retained it as a visible-contrast observation; word count confirmed within 55–80 limit; no banned vocabulary, unsupported biography, or media claims present.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVDJk7RchHhJX1kwhfGQ88fpWXY5mPGyqWh46m6STw4LV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVDJk7RchHhJX1kwhfGQ88fpWXY5mPGyqWh46m6STw4LV/image.png",
+        "imageSHA256": "1597ffea6f0d63dfbd20b8451447501363ccf49a130508fe5e2f354d6fc59041"
+      },
+      {
+        "artworkId": "QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf/image.png",
+        "imageSHA256": "e4f39d115c6f3d6e6c84a9148809a0c68d435d28ad43547ac2e42849f43576e2"
+      },
+      {
+        "artworkId": "QmaZYZ9pHoVxgy7j2QomhxFbCXmC3CrgLhm6LNJzjuvRHP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaZYZ9pHoVxgy7j2QomhxFbCXmC3CrgLhm6LNJzjuvRHP/image.png",
+        "imageSHA256": "102d002601cd1eaf39b0177a21cfd36473864db446c7822e247c289164ff5b4c"
+      },
+      {
+        "artworkId": "QmXQ5sqnQx4JMVE6tqe8hn1CNTY5EKfX5mn9GyttoJ1vox",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXQ5sqnQx4JMVE6tqe8hn1CNTY5EKfX5mn9GyttoJ1vox/image.png",
+        "imageSHA256": "f54de2b533cf5c6f8d7d82c580428ca5592a760faaf41d232517b4426e0cf4af"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A stick-limbed figure in pink and mauve stands against a black ground, arms bent at the elbows, legs spread wide, rendered in loose dark-outlined strokes.\", \"Seven overlapping translucent circles — alternating deep purple and warm gold — fan out behind the figure's upper body like a halo or bloom, their edges softened by layering.\", \"Where the figure's head would be sits a bright yellow disc ringed by jagged radiating points, with a darker interior cluster of angular marks at its center.\"], \"reading\": \"A thin-limbed figure holds a wide, planted stance while a cluster of overlapping circles spreads behind it — purple and gold discs that read as both backdrop and pressure. The disc-head blazes yellow with sharp points and a dark, tangled core. The body below is sketchy pink, almost casual, which makes the radiant weight above feel like something the figure is carrying rather than celebrating.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #212 — a flat silhouette with scattered yellow marks on open blue — and nnxyz nnotb #214, a close-cropped yellow head on black. This work sits between open space and compressed close-up, using the full figure format that neither neighbor shares.\", \"connections\": [{\"targetArtworkId\": \"QmUKWhBAyteKTEDQuex2yPvCiHv8oXwebNMiwUNNBNRfqf\", \"reason\": \"Both works place a dark silhouette or outlined figure against a single-color ground and use scattered yellow marks to suggest energy radiating from the head area, but #212 uses flat fill and open sky while #213 layers translucent circles for depth.\"}, {\"targetArtworkId\": \"QmXQ5sqnQx4JMVE6tqe8hn1CNTY5EKfX5mn9GyttoJ1vox\", \"reason\": \"Both #213 and #214 place a large yellow disc-like head at center against black, with angular interior marks, but #214 crops to the head alone and surrounds it with scattered white fragments rather than overlapping circles.\"}], \"tags\": [\"overlapping circles\", \"stick figure\", \"radiating disc\", \"black ground\", \"pink and mauve fill\", \"yellow and purple contrast\"], \"interpretiveTags\": [\"weighted radiance\", \"carried burden or crown\"], \"lookingQuestion\": \"What does the relationship between the loose, sketchy body below and the dense layered circles above tell you about where the visual weight of this image actually sits?\", \"ambiguities\": [\"The overlapping circles could read as a halo, a flower form, or an atmospheric glow — the image does not resolve which, and no supplied metadata clarifies the subject.\", \"The rawblocks #52 comparison image shows a densely layered close-up head on black with purple and gold marks, which shares a color family, but the formal structure differs enough that no strong connection was selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:13.900532-05:00",
+    "usage": {
+      "inputTokens": 6174,
+      "outputTokens": 774,
+      "totalTokens": 6948,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13341
+    },
+    "requestId": "b524e38c-8fbf-459d-a8da-751adb36d1e6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A black ground holds two large face-like forms side by side: the left built around concentric orange-and-red rings with a single eye at center, the right showing an open-mouthed form with visible teeth at lower right.\",\n    \"Yellow zigzag borders run along the top and bottom edges; vertical blue bands frame the left and right sides, creating a flat rectangular border that contains the interior tangle.\",\n    \"Loose white line loops, brown scribble hatching, and pink and blue color blocks layer over and between the two face-like forms, with a column of small blue circles descending near the image center.\"\n  ],\n  \"reading\": \"Two face-like forms share a black field without merging—one eye stares from inside a ring target, the other form opens wide at the lower right. The yellow border holds the whole composition in a tight frame, while brown scribble lines and loose white loops fill the space between, giving the image a crowded, pressured feeling. The open mouth reads as a shout; the ringed eye reads as a fixed, unblinking watch.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #134 uses a single close-up face on a dark ground with dense scribble lines, while this work splits attention across two forms and adds a flat color border—a shift in spatial arrangement visible across these two consecutive owned titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS\",\n      \"reason\": \"nnxyz nnotb #134 shares the black ground and layered scribble lines over face-like forms, but concentrates on one face filling the frame where #135 divides the space between two distinct forms.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg\",\n      \"reason\": \"nnxyz #64 also places a ringed, target-like eye structure at its center against a dense layered ground, offering a direct formal echo to the concentric ring eye in #135.\"\n    }\n  ],\n  \"tags\": [\n    \"concentric rings\",\n    \"open mouth with teeth\",\n    \"zigzag border\",\n    \"black ground\",\n    \"layered scribble lines\",\n    \"split face forms\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"pressured\",\n    \"watchful\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the ringed eye on the left and the open mouth on the right suggest about how these two forms are communicating—or not—with each other?\",\n  \"ambiguities\": [\n    \"The column of small blue circles near center may be a separate form or part of the left face structure; their role in the composition is unclear from the image alone.\",\n    \"nnxyz nnotb #136 comparison image shows a yellow-ground figure scene with no strong formal overlap with #135, so it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya/image.png",
+        "imageSHA256": "f83374faee1d16e7280fe3788a1cf11b481fe6703ebca51fc7ff94da66c6ec99"
+      },
+      {
+        "artworkId": "QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS/image.png",
+        "imageSHA256": "8c44b94fb71f3879a1d3dfdbe6bf2363b13ac4efbec400c0ab542cae608595ed"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj/image.png",
+        "imageSHA256": "c1af397d412424fb83bb5937458a1af76fdf9c51056294b37a4b8e38e5f8973a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:21.147074-05:00",
+    "usage": {
+      "inputTokens": 6968,
+      "outputTokens": 926,
+      "totalTokens": 7894,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7168
+    },
+    "requestId": "522ab4aa-9772-4900-a63b-953be300ae30",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A black ground holds two large face-like forms side by side: the left built around concentric orange-and-red rings with a single eye at center, the right showing an open-mouthed form with visible teeth at lower right.\",\n    \"Yellow zigzag borders run along the top and bottom edges; vertical blue bands frame the left and right sides, creating a flat rectangular border that contains the interior tangle.\",\n    \"Loose white line loops, brown scribble hatching, and pink and blue color blocks layer over and between the two face-like forms, with a column of small blue circles descending near the image center.\"\n  ],\n  \"reading\": \"Two face-like forms share a black field without merging—one eye sits inside a ring target on the left, the other form opens wide at lower right with visible teeth. A yellow zigzag border holds the composition in a tight frame while brown scribble lines and loose white loops fill the space between. The ringed eye reads as fixed and unblinking; the open mouth reads as a shout.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #134 places a single face close against a dark ground with dense scribble lines. This work splits attention across two forms and adds a flat color border—a visible shift in spatial arrangement between these two consecutive owned titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS\",\n      \"reason\": \"nnxyz nnotb #134 shares the black ground and layered scribble lines over face-like forms, but one face fills the frame where #135 divides space between two distinct forms.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg\",\n      \"reason\": \"nnxyz #64 places a ringed, target-like eye structure at its center against a dense layered ground, a direct formal echo to the concentric ring eye visible in #135.\"\n    }\n  ],\n  \"tags\": [\"concentric rings\", \"open mouth with teeth\", \"zigzag border\", \"black ground\", \"layered scribble lines\", \"split face forms\"],\n  \"interpretiveTags\": [\"confrontational\", \"pressured\", \"watchful\"],\n  \"lookingQuestion\": \"How does the placement of the ringed eye on the left and the open-mouthed form on the right affect where your attention settles, and does either form seem to acknowledge the other?\",\n  \"ambiguities\": [\n    \"The column of small blue circles near center may be a separate form or part of the left face structure; their role is unclear from the image alone.\",\n    \"nnxyz nnotb #136 shows a yellow-ground figure scene with no strong formal overlap with #135 and was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: concentric rings with central eye, zigzag yellow borders with blue vertical bands, and white loops with brown hatching and blue circles are all visible.\",\n    \"Looking question revised to remove implied emotional directive ('communicating—or not') and redirect to visible placement evidence.\",\n    \"Both comparison images inspected: QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS confirms black ground and scribble-over-face structure; QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg confirms a ringed eye target form at center—both connections retained as formally grounded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya/image.png",
+        "imageSHA256": "f83374faee1d16e7280fe3788a1cf11b481fe6703ebca51fc7ff94da66c6ec99"
+      },
+      {
+        "artworkId": "QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS/image.png",
+        "imageSHA256": "8c44b94fb71f3879a1d3dfdbe6bf2363b13ac4efbec400c0ab542cae608595ed"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj/image.png",
+        "imageSHA256": "c1af397d412424fb83bb5937458a1af76fdf9c51056294b37a4b8e38e5f8973a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A black ground holds two large face-like forms side by side: the left built around concentric orange-and-red rings with a single eye at center, the right showing an open-mouthed form with visible teeth at lower right.\", \"Yellow zigzag borders run along the top and bottom edges; vertical blue bands frame the left and right sides, creating a flat rectangular border that contains the interior tangle.\", \"Loose white line loops, brown scribble hatching, and pink and blue color blocks layer over and between the two face-like forms, with a column of small blue circles descending near the image center.\"], \"reading\": \"Two face-like forms share a black field without merging—one eye stares from inside a ring target, the other form opens wide at the lower right. The yellow border holds the whole composition in a tight frame, while brown scribble lines and loose white loops fill the space between, giving the image a crowded, pressured feeling. The open mouth reads as a shout; the ringed eye reads as a fixed, unblinking watch.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #134 uses a single close-up face on a dark ground with dense scribble lines, while this work splits attention across two forms and adds a flat color border—a shift in spatial arrangement visible across these two consecutive owned titles.\", \"connections\": [{\"targetArtworkId\": \"QmVeVe2qC1KqDJ67LAtGH2Rvvf2w41dn9cG5aDFSSSyHeS\", \"reason\": \"nnxyz nnotb #134 shares the black ground and layered scribble lines over face-like forms, but concentrates on one face filling the frame where #135 divides the space between two distinct forms.\"}, {\"targetArtworkId\": \"QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg\", \"reason\": \"nnxyz #64 also places a ringed, target-like eye structure at its center against a dense layered ground, offering a direct formal echo to the concentric ring eye in #135.\"}], \"tags\": [\"concentric rings\", \"open mouth with teeth\", \"zigzag border\", \"black ground\", \"layered scribble lines\", \"split face forms\"], \"interpretiveTags\": [\"confrontational\", \"pressured\", \"watchful\"], \"lookingQuestion\": \"What does the relationship between the ringed eye on the left and the open mouth on the right suggest about how these two forms are communicating—or not—with each other?\", \"ambiguities\": [\"The column of small blue circles near center may be a separate form or part of the left face structure; their role in the composition is unclear from the image alone.\", \"nnxyz nnotb #136 comparison image shows a yellow-ground figure scene with no strong formal overlap with #135, so it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

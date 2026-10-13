@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:08.990940-05:00",
+    "usage": {
+      "inputTokens": 7056,
+      "outputTokens": 757,
+      "totalTokens": 7813,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14173
+    },
+    "requestId": "4ef0b79a-a419-49d5-8f96-cf9ffb19103c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad flat-topped form fills the center, with two X-marked eye shapes set inside rectangular outlines and a jagged zigzag band running across the upper forehead area.\",\n    \"The background is a flat mid-blue broken by loose vertical green strokes, while the central form layers yellow, pink, red, purple, and white lines over a warm tan-gold base.\",\n    \"A rectangular mouth zone in the lower center shows stacked white horizontal bars, flanked by sharp zigzag lines that splay outward to both lower corners.\"\n  ],\n  \"reading\": \"The face here reads less as flesh than as a constructed object — flat planes stacked like panels, eyes marked with Xs rather than drawn as open. The cool blue field holds the form at a distance, while the dense layering of warm lines inside the outline creates a pressure that the closed, crossed eyes seem to contain rather than release. The zigzag edges suggest something held at a tense boundary.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #45 and #47. Where #45 uses a hot red field and spiral eyes that push outward, #46 pulls inward — closed marks, cooler ground, a more compressed structure. The collector's interest in emotional range finds a clear contrast here.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYWDb4nSskdJ8GVhorqg73YBZvyxmgtnJsQ4YYtRai8H6\",\n      \"reason\": \"Both works use a wide flat-topped face structure with a visible tooth row, but #45's red ground and outward-spiraling eyes read as open and loud where #46's blue ground and X-marked eyes read as sealed.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\",\n      \"reason\": \"Both share the same flat sky-blue background tone that the collector links to nnxyz's visual range, but nnotb #173 fills its face with a circular outline and symbol-like eye substitutes rather than the rectangular panel structure here.\"\n    }\n  ],\n  \"tags\": [\n    \"X-marked eyes\",\n    \"rectangular face panels\",\n    \"zigzag edge lines\",\n    \"flat blue ground\",\n    \"stacked white bars\",\n    \"layered warm line fill\"\n  ],\n  \"interpretiveTags\": [\n    \"contained tension\",\n    \"mask-like closure\"\n  ],\n  \"lookingQuestion\": \"The two eye zones are marked with Xs and the mouth shows stacked bars — what does the relationship between those two closed or blocked areas do to how you read the rest of the face?\",\n  \"ambiguities\": [\n    \"The upper form with pointed projections could be read as a crown, horns, or ears; no supplied evidence resolves which reading the artist intended.\",\n    \"nifty-faces #47 was inspected but its dense multicolor scribble over a brown ground offered no specific formal parallel stronger than the #45 contrast already captured.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbreZNHwiBWndCUfgEu9TzCMJdFVcxViEUFkYUDVN9ywY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbreZNHwiBWndCUfgEu9TzCMJdFVcxViEUFkYUDVN9ywY/image.png",
+        "imageSHA256": "a75b104a71810e56a957b38b8758cf62a38766050949af6b9fe109a7f6446bcb"
+      },
+      {
+        "artworkId": "QmYWDb4nSskdJ8GVhorqg73YBZvyxmgtnJsQ4YYtRai8H6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYWDb4nSskdJ8GVhorqg73YBZvyxmgtnJsQ4YYtRai8H6/image.png",
+        "imageSHA256": "39fb66548636e11ebc7389ea80099e2b32127ef915d9a6485c18a3414a62550d"
+      },
+      {
+        "artworkId": "QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1/image.png",
+        "imageSHA256": "64b4e4a11370b25f2fce44a13ded0c5cfbde4617845c0be396fcbe6b7c9246e0"
+      },
+      {
+        "artworkId": "QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5/image.png",
+        "imageSHA256": "06d63399707eb3df70361affe34d0be3094aab1c7d030fc5ee661e39b171a3a9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:16.105455-05:00",
+    "usage": {
+      "inputTokens": 7835,
+      "outputTokens": 926,
+      "totalTokens": 8761,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7008
+    },
+    "requestId": "de9b283f-f1ae-4049-ad2d-ae9e8e88b2ce",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad flat-topped form fills the center, with two X-marked eye shapes set inside rectangular outlines and a jagged zigzag band running across the upper forehead area.\",\n    \"The background is a flat mid-blue broken by loose vertical green strokes, while the central form layers yellow, pink, red, purple, and white lines over a warm tan-gold base.\",\n    \"A rectangular mouth zone in the lower center shows stacked white horizontal bars, flanked by sharp zigzag lines that splay outward to both lower corners.\"\n  ],\n  \"reading\": \"The face reads less as flesh than as a constructed object — flat planes stacked like panels, eyes marked with Xs rather than drawn open. The cool blue field holds the form at a distance, while dense warm lines inside the outline build a pressure the closed, crossed eyes seem to contain. The zigzag edges mark a tense outer boundary.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #45 and #47. Where #45 uses a hot red field and outward-spiraling eyes, #46 pulls inward — closed marks, cooler ground, compressed structure. The collector's interest in emotional range finds a clear contrast here.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYWDb4nSskdJ8GVhorqg73YBZvyxmgtnJsQ4YYtRai8H6\",\n      \"reason\": \"Both use a wide flat-topped face with a visible tooth row, but #45's red ground and outward-spiraling eyes read as open where #46's blue ground and X-marked eyes read as sealed.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\",\n      \"reason\": \"Both share a flat sky-blue ground the collector links across collections, but nnotb #173 uses a circular face outline and symbol-substituted eyes rather than the rectangular panel structure here.\"\n    }\n  ],\n  \"tags\": [\n    \"X-marked eyes\",\n    \"rectangular face panels\",\n    \"zigzag edge lines\",\n    \"flat blue ground\",\n    \"stacked white bars\",\n    \"layered warm line fill\"\n  ],\n  \"interpretiveTags\": [\n    \"contained tension\",\n    \"mask-like closure\"\n  ],\n  \"lookingQuestion\": \"The two eye zones are marked with Xs and the mouth shows stacked bars — what does the relationship between those two closed or blocked areas do to how you read the rest of the face?\",\n  \"ambiguities\": [\n    \"The upper pointed projections could be read as a crown, horns, or ears; no supplied evidence resolves the intended reading.\",\n    \"nifty-faces #47's dense multicolor scribble over a brown ground offered no specific formal parallel stronger than the #45 contrast already captured.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: mid-blue ground with green verticals, tan-gold warm core, stacked white bars in mouth zone — no corrections needed.\",\n    \"Comparison with QmYWDb4nSskdJ8GVhorqg73YBZvyxmgtnJsQ4YYtRai8H6 confirmed: red ground and spiral eyes in #45 versus blue ground and X eyes in #46 — contrast is visually grounded, not generic.\",\n    \"Comparison with QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1 confirmed: sky-blue ground match is visible; circular vs. rectangular face structure contrast is accurate — collector-perspective link to shared blue noted as collector reading, not artist intent.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbreZNHwiBWndCUfgEu9TzCMJdFVcxViEUFkYUDVN9ywY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbreZNHwiBWndCUfgEu9TzCMJdFVcxViEUFkYUDVN9ywY/image.png",
+        "imageSHA256": "a75b104a71810e56a957b38b8758cf62a38766050949af6b9fe109a7f6446bcb"
+      },
+      {
+        "artworkId": "QmYWDb4nSskdJ8GVhorqg73YBZvyxmgtnJsQ4YYtRai8H6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYWDb4nSskdJ8GVhorqg73YBZvyxmgtnJsQ4YYtRai8H6/image.png",
+        "imageSHA256": "39fb66548636e11ebc7389ea80099e2b32127ef915d9a6485c18a3414a62550d"
+      },
+      {
+        "artworkId": "QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1/image.png",
+        "imageSHA256": "64b4e4a11370b25f2fce44a13ded0c5cfbde4617845c0be396fcbe6b7c9246e0"
+      },
+      {
+        "artworkId": "QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5/image.png",
+        "imageSHA256": "06d63399707eb3df70361affe34d0be3094aab1c7d030fc5ee661e39b171a3a9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad flat-topped form fills the center, with two X-marked eye shapes set inside rectangular outlines and a jagged zigzag band running across the upper forehead area.\", \"The background is a flat mid-blue broken by loose vertical green strokes, while the central form layers yellow, pink, red, purple, and white lines over a warm tan-gold base.\", \"A rectangular mouth zone in the lower center shows stacked white horizontal bars, flanked by sharp zigzag lines that splay outward to both lower corners.\"], \"reading\": \"The face here reads less as flesh than as a constructed object — flat planes stacked like panels, eyes marked with Xs rather than drawn as open. The cool blue field holds the form at a distance, while the dense layering of warm lines inside the outline creates a pressure that the closed, crossed eyes seem to contain rather than release. The zigzag edges suggest something held at a tense boundary.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #45 and #47. Where #45 uses a hot red field and spiral eyes that push outward, #46 pulls inward — closed marks, cooler ground, a more compressed structure. The collector's interest in emotional range finds a clear contrast here.\", \"connections\": [{\"targetArtworkId\": \"QmYWDb4nSskdJ8GVhorqg73YBZvyxmgtnJsQ4YYtRai8H6\", \"reason\": \"Both works use a wide flat-topped face structure with a visible tooth row, but #45's red ground and outward-spiraling eyes read as open and loud where #46's blue ground and X-marked eyes read as sealed.\"}, {\"targetArtworkId\": \"QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1\", \"reason\": \"Both share the same flat sky-blue background tone that the collector links to nnxyz's visual range, but nnotb #173 fills its face with a circular outline and symbol-like eye substitutes rather than the rectangular panel structure here.\"}], \"tags\": [\"X-marked eyes\", \"rectangular face panels\", \"zigzag edge lines\", \"flat blue ground\", \"stacked white bars\", \"layered warm line fill\"], \"interpretiveTags\": [\"contained tension\", \"mask-like closure\"], \"lookingQuestion\": \"The two eye zones are marked with Xs and the mouth shows stacked bars — what does the relationship between those two closed or blocked areas do to how you read the rest of the face?\", \"ambiguities\": [\"The upper form with pointed projections could be read as a crown, horns, or ears; no supplied evidence resolves which reading the artist intended.\", \"nifty-faces #47 was inspected but its dense multicolor scribble over a brown ground offered no specific formal parallel stronger than the #45 contrast already captured.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

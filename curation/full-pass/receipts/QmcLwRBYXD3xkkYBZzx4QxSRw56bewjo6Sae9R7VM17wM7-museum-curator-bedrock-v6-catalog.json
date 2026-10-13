@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:55.167485-05:00",
+    "usage": {
+      "inputTokens": 6213,
+      "outputTokens": 677,
+      "totalTokens": 6890,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19159
+    },
+    "requestId": "35ea7885-5221-4cca-b465-adf73399d055",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two bold X-shaped marks sit where eyes would be, formed by thick black crossed strokes against patches of green, purple, and brown.\",\n    \"The background is saturated golden-yellow filled with overlapping rounded blob shapes in darker amber, covering the entire field around the figure.\",\n    \"The lower body area is outlined by a single loose black contour enclosing pale cream and white blobs, sharply lighter than the surrounding yellow.\"\n  ],\n  \"reading\": \"The crossed-out eyes give the head a sealed, muted quality—a face that refuses to return a gaze. Patches of red, blue, and purple crowd the skull area like bruised light, while the torso below empties into near-white, as if the figure is dissolving downward. The warm yellow field presses close, its rounded shapes almost cellular, making the dark head feel trapped inside a living surface.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #12\\\" and \\\"nnxyz rawblocks #14.\\\" All three feature head-and-shoulder compositions built from loose black outlines over colored fills, but #13 is the only one where the eyes are blocked out rather than drawn open.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD\",\n      \"reason\": \"Both use a single black contour to frame a head against a saturated background, but #12's figure has visible open eyes and a deep purple field, contrasting with #13's sealed X-eyes and golden surround.\"\n    },\n    {\n      \"targetArtworkId\": \"QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY\",\n      \"reason\": \"#14 shares the blob-filled background and loose outline approach but renders defined accessories like glasses, while #13 strips the face down to crossed marks and raw color patches.\"\n    }\n  ],\n  \"tags\": [\n    \"crossed-out eyes\",\n    \"golden-yellow background\",\n    \"head and shoulders\",\n    \"loose black contour\",\n    \"overlapping blob shapes\",\n    \"high color contrast\"\n  ],\n  \"lookingQuestion\": \"How does the sharp brightness shift between the pale torso area and the deep amber-yellow background change the way the dark, multicolored head sits in the composition?\",\n  \"ambiguities\": [\n    \"Whether the X marks over the eyes represent a recurring motif in the wider rawblocks series cannot be confirmed from the supplied comparisons alone.\",\n    \"The rounded blob shapes in the background may be a shared fill technique across nearby works, but only three neighbors were available for inspection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7/image.png",
+        "imageSHA256": "7d372d48c923f3ce75bf290f3d85b7dfb3c6f4785801543f943250f4bc8667a3"
+      },
+      {
+        "artworkId": "QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD/image.png",
+        "imageSHA256": "0431fbef46d3493e70a572bb28c2e78a1ac47e510797d33265c8e3c5529fda3e"
+      },
+      {
+        "artworkId": "QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw/image.png",
+        "imageSHA256": "2f3fcc1a40f64ab10707d8bbea0c925fc8a8f3fd97721b7542b6796d545d1c7f"
+      },
+      {
+        "artworkId": "QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY/image.png",
+        "imageSHA256": "f76de33fd65fbd9399a1edd27b6d12441f4103ce82029b84dfc5bc563f93240f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:06.638368-05:00",
+    "usage": {
+      "inputTokens": 6922,
+      "outputTokens": 792,
+      "totalTokens": 7714,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11398
+    },
+    "requestId": "f04924f7-01cf-423f-873b-d6e5a5b9d0fa",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two bold X-shaped marks sit where eyes would be, formed by thick black crossed strokes against patches of green, purple, and brown.\",\n    \"The background is saturated golden-yellow filled with overlapping rounded blob shapes in darker amber, covering the entire field around the figure.\",\n    \"The lower body area is outlined by a single loose black contour enclosing pale cream and white blobs, sharply lighter than the surrounding yellow.\"\n  ],\n  \"reading\": \"The crossed-out eyes give the head a sealed quality—a face that refuses to return a gaze. Patches of red, blue, and purple crowd the upper skull like bruised light, while the torso below empties into near-white, as if the figure dissolves downward. The warm yellow field presses close, its rounded shapes almost cellular, making the dark head feel trapped inside a living surface.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #12\\\" and \\\"nnxyz rawblocks #14.\\\" All three show head-and-shoulder compositions built from loose black outlines over colored fills, but this is the only one where the eyes are blocked out rather than drawn open.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD\",\n      \"reason\": \"Both frame a head with a single black contour against a saturated field, but #12 has visible open eyes and a deep purple background, contrasting with #13's sealed X-eyes and golden surround.\"\n    },\n    {\n      \"targetArtworkId\": \"QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY\",\n      \"reason\": \"#14 shares the blob-filled background and loose outline approach but renders defined accessories like glasses, while #13 strips the face to crossed marks and raw color patches.\"\n    }\n  ],\n  \"tags\": [\n    \"crossed-out eyes\",\n    \"golden-yellow background\",\n    \"head and shoulders\",\n    \"loose black contour\",\n    \"overlapping blob shapes\",\n    \"high color contrast\"\n  ],\n  \"lookingQuestion\": \"How does the sharp brightness shift between the pale torso area and the deep amber-yellow background change the way the dark, multicolored head sits in the composition?\",\n  \"ambiguities\": [\n    \"Whether the X marks over the eyes represent a recurring motif in the wider rawblocks series cannot be confirmed from the supplied comparisons alone.\",\n    \"The rounded blob shapes in the background may be a shared fill technique across nearby works, but only three neighbors were available for inspection.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed X-shaped eye marks, golden-yellow blob background, and pale torso area all visible in the primary image; no color or form claims were invented.\",\n    \"Removed the word 'muted' from reading to avoid implying intent; replaced with plain description of sealed quality.\",\n    \"Verified #12 comparison: its background is indeed deep purple with visible open eyes, and #14 shows defined glasses with a blob-textured olive-green background—both contrasts hold against inspected images.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcLwRBYXD3xkkYBZzx4QxSRw56bewjo6Sae9R7VM17wM7/image.png",
+        "imageSHA256": "7d372d48c923f3ce75bf290f3d85b7dfb3c6f4785801543f943250f4bc8667a3"
+      },
+      {
+        "artworkId": "QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD/image.png",
+        "imageSHA256": "0431fbef46d3493e70a572bb28c2e78a1ac47e510797d33265c8e3c5529fda3e"
+      },
+      {
+        "artworkId": "QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw/image.png",
+        "imageSHA256": "2f3fcc1a40f64ab10707d8bbea0c925fc8a8f3fd97721b7542b6796d545d1c7f"
+      },
+      {
+        "artworkId": "QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY/image.png",
+        "imageSHA256": "f76de33fd65fbd9399a1edd27b6d12441f4103ce82029b84dfc5bc563f93240f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two bold X-shaped marks sit where eyes would be, formed by thick black crossed strokes against patches of green, purple, and brown.\", \"The background is saturated golden-yellow filled with overlapping rounded blob shapes in darker amber, covering the entire field around the figure.\", \"The lower body area is outlined by a single loose black contour enclosing pale cream and white blobs, sharply lighter than the surrounding yellow.\"], \"reading\": \"The crossed-out eyes give the head a sealed, muted quality—a face that refuses to return a gaze. Patches of red, blue, and purple crowd the skull area like bruised light, while the torso below empties into near-white, as if the figure is dissolving downward. The warm yellow field presses close, its rounded shapes almost cellular, making the dark head feel trapped inside a living surface.\", \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #12\\\" and \\\"nnxyz rawblocks #14.\\\" All three feature head-and-shoulder compositions built from loose black outlines over colored fills, but #13 is the only one where the eyes are blocked out rather than drawn open.\", \"connections\": [{\"targetArtworkId\": \"QmeQgCDVqjuA46dq4MeauWKErtUi6NptvyhQ8yS7EHRSRD\", \"reason\": \"Both use a single black contour to frame a head against a saturated background, but #12's figure has visible open eyes and a deep purple field, contrasting with #13's sealed X-eyes and golden surround.\"}, {\"targetArtworkId\": \"QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY\", \"reason\": \"#14 shares the blob-filled background and loose outline approach but renders defined accessories like glasses, while #13 strips the face down to crossed marks and raw color patches.\"}], \"tags\": [\"crossed-out eyes\", \"golden-yellow background\", \"head and shoulders\", \"loose black contour\", \"overlapping blob shapes\", \"high color contrast\"], \"lookingQuestion\": \"How does the sharp brightness shift between the pale torso area and the deep amber-yellow background change the way the dark, multicolored head sits in the composition?\", \"ambiguities\": [\"Whether the X marks over the eyes represent a recurring motif in the wider rawblocks series cannot be confirmed from the supplied comparisons alone.\", \"The rounded blob shapes in the background may be a shared fill technique across nearby works, but only three neighbors were available for inspection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

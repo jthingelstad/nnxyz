@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:54.032664-05:00",
+    "usage": {
+      "inputTokens": 6213,
+      "outputTokens": 757,
+      "totalTokens": 6970,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12527
+    },
+    "requestId": "8e8de847-e586-4b25-9381-0ca0f18850fc",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two roughly oval head-shapes sit side by side, each with spiral-filled eye sockets drawn in concentric loops of white, yellow, and red against a purple-red ground.\",\n    \"A dense grid of horizontal orange and vertical black lines covers most of the background, overlaid with loose blue spiral clusters in the upper corners and a pink zigzag running across the lower third.\",\n    \"Jagged yellow crown-like teeth line the top edge of each head, and a shared mouth zone near center shows a yellow-outlined row of marks suggesting teeth, flanked by teal and white strokes.\"\n  ],\n  \"reading\": \"Two head-forms share the frame, their spiral eyes giving them a fixed, outward stare that reads as confrontational or watchful. The warm orange grid presses against the figures rather than receding, so foreground and background compete at the same visual weight. Zigzag borders and looping blue lines keep the surface restless, while the paired arrangement introduces a quieter symmetry beneath the noise.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #234 uses a single head on a flat red field with minimal color, making this work's doubled figures and full-spectrum palette a strong contrast. The collector links nnxyz's looping line patterns to scrimshaw's engraved spirals.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F\",\n      \"reason\": \"nnxyz nnotb #236 shares the paired circular eye motifs and jagged crown-tooth forms at the top edge, making it a direct formal echo of #235's head structure.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNsBdMhm4PivpEUuRspiddbPMn5NaQdfbzq47fNXytm18\",\n      \"reason\": \"nnxyz nnotb #234 offers a stark contrast: one head, near-monochrome red and black, a single yellow bar — against #235's doubled figures and full multicolor grid.\"\n    }\n  ],\n  \"tags\": [\n    \"paired figures\",\n    \"spiral eye forms\",\n    \"grid background\",\n    \"zigzag line borders\",\n    \"multicolor overlapping lines\",\n    \"crown-tooth edge marks\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational gaze\",\n    \"restless surface energy\",\n    \"symmetry under noise\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first — toward the spiral centers of the eyes, the jagged crown edges, or the competing grid behind the figures — and what draws it there?\",\n  \"ambiguities\": [\n    \"The nifty-faces #0000 comparison image shows no clear formal parallel to #235's specific paired-head and spiral-eye structure, so it was not selected as a connection.\",\n    \"Whether the two head-forms are meant as separate figures or a split view of one is not resolvable from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUUtghgoHciiCzGu8ddDDa4BaRmLGC46fmJfgDhzjKUb2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUUtghgoHciiCzGu8ddDDa4BaRmLGC46fmJfgDhzjKUb2/image.png",
+        "imageSHA256": "a0ede280648fa8b199645cabe5026359374800d5845234b75f87c1d879c7158a"
+      },
+      {
+        "artworkId": "QmNsBdMhm4PivpEUuRspiddbPMn5NaQdfbzq47fNXytm18",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNsBdMhm4PivpEUuRspiddbPMn5NaQdfbzq47fNXytm18/image.png",
+        "imageSHA256": "fc9e2607abdd2b0c8829cb7b5374f4b41a0f6c8455a99f36153f9822e6280824"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F/image.png",
+        "imageSHA256": "ffafeaf9deb62fa9d21cd79b23d590f4469b1e3f0ef4f4eca686e3af9555649d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:01.393590-05:00",
+    "usage": {
+      "inputTokens": 6990,
+      "outputTokens": 937,
+      "totalTokens": 7927,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7285
+    },
+    "requestId": "2810d127-e61a-4d91-a50e-b1643820336c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two roughly oval head-forms sit side by side, each with spiral-filled eye sockets drawn in concentric loops of white, yellow, and red against a purple-red ground.\",\n    \"A dense grid of horizontal orange and vertical black lines covers most of the background, overlaid with loose blue spiral clusters in the upper corners and a pink zigzag running across the lower third.\",\n    \"Jagged yellow serrated edges line the top of each head-form, and a shared zone near center shows a yellow-outlined row of marks flanked by teal and white strokes.\"\n  ],\n  \"reading\": \"Two head-forms share the frame, their spiral eyes giving them a fixed outward stare that reads as confrontational or watchful. The warm orange grid presses against the figures rather than receding, so foreground and background compete at the same visual weight. Zigzag borders and looping blue lines keep the surface restless, while the paired arrangement introduces a quieter symmetry beneath the noise.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #234 uses a single head on a flat red field with sparse color, making this work's doubled figures and full-spectrum palette a strong contrast. The collector links nnxyz's looping line patterns to scrimshaw's engraved spirals.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F\",\n      \"reason\": \"nnxyz nnotb #236 shares paired circular eye motifs and jagged serrated crown forms at the top edge, making it a direct formal echo of the head structure seen here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNsBdMhm4PivpEUuRspiddbPMn5NaQdfbzq47fNXytm18\",\n      \"reason\": \"nnxyz nnotb #234 offers a stark contrast: one head, near-monochrome red and black with a single yellow bar, against this work's doubled figures and dense multicolor grid.\"\n    }\n  ],\n  \"tags\": [\n    \"paired head-forms\",\n    \"spiral eye sockets\",\n    \"grid background\",\n    \"zigzag line borders\",\n    \"multicolor overlapping lines\",\n    \"serrated crown-edge marks\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational gaze\",\n    \"restless surface\",\n    \"symmetry under noise\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — the spiral centers of the eye sockets, the serrated edges at the top, or the orange grid pressing in from behind — and what pulls it there?\",\n  \"ambiguities\": [\n    \"The nifty-faces #0000 comparison image shows no clear formal parallel to the paired-head and spiral-eye structure here, so it was not selected as a connection.\",\n    \"Whether the two head-forms represent separate figures or a split view of one is not resolvable from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: both comparison images inspected — #236 visibly shares paired circular eye motifs and jagged crown forms; #234 visibly contrasts as single head on flat red with one yellow bar; both connections are grounded in observed form.\",\n    \"Replaced 'crown-like teeth' with 'serrated edges' and 'crown-tooth edge marks' with 'serrated crown-edge marks' to avoid unsupported subject identification; 'jagged yellow serrated edges' accurately describes the visible line behavior.\",\n    \"Word counts verified: reading is 62 words, contextAngle is 42 words, all observations under 35 words, both comparison reasons under 35 words; no prohibited vocabulary, no numerical technical facts, no intent language introduced.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUUtghgoHciiCzGu8ddDDa4BaRmLGC46fmJfgDhzjKUb2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUUtghgoHciiCzGu8ddDDa4BaRmLGC46fmJfgDhzjKUb2/image.png",
+        "imageSHA256": "a0ede280648fa8b199645cabe5026359374800d5845234b75f87c1d879c7158a"
+      },
+      {
+        "artworkId": "QmNsBdMhm4PivpEUuRspiddbPMn5NaQdfbzq47fNXytm18",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNsBdMhm4PivpEUuRspiddbPMn5NaQdfbzq47fNXytm18/image.png",
+        "imageSHA256": "fc9e2607abdd2b0c8829cb7b5374f4b41a0f6c8455a99f36153f9822e6280824"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F/image.png",
+        "imageSHA256": "ffafeaf9deb62fa9d21cd79b23d590f4469b1e3f0ef4f4eca686e3af9555649d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two roughly oval head-shapes sit side by side, each with spiral-filled eye sockets drawn in concentric loops of white, yellow, and red against a purple-red ground.\", \"A dense grid of horizontal orange and vertical black lines covers most of the background, overlaid with loose blue spiral clusters in the upper corners and a pink zigzag running across the lower third.\", \"Jagged yellow crown-like teeth line the top edge of each head, and a shared mouth zone near center shows a yellow-outlined row of marks suggesting teeth, flanked by teal and white strokes.\"], \"reading\": \"Two head-forms share the frame, their spiral eyes giving them a fixed, outward stare that reads as confrontational or watchful. The warm orange grid presses against the figures rather than receding, so foreground and background compete at the same visual weight. Zigzag borders and looping blue lines keep the surface restless, while the paired arrangement introduces a quieter symmetry beneath the noise.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #234 uses a single head on a flat red field with minimal color, making this work's doubled figures and full-spectrum palette a strong contrast. The collector links nnxyz's looping line patterns to scrimshaw's engraved spirals.\", \"connections\": [{\"targetArtworkId\": \"Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F\", \"reason\": \"nnxyz nnotb #236 shares the paired circular eye motifs and jagged crown-tooth forms at the top edge, making it a direct formal echo of #235's head structure.\"}, {\"targetArtworkId\": \"QmNsBdMhm4PivpEUuRspiddbPMn5NaQdfbzq47fNXytm18\", \"reason\": \"nnxyz nnotb #234 offers a stark contrast: one head, near-monochrome red and black, a single yellow bar — against #235's doubled figures and full multicolor grid.\"}], \"tags\": [\"paired figures\", \"spiral eye forms\", \"grid background\", \"zigzag line borders\", \"multicolor overlapping lines\", \"crown-tooth edge marks\"], \"interpretiveTags\": [\"confrontational gaze\", \"restless surface energy\", \"symmetry under noise\"], \"lookingQuestion\": \"Where does your eye move first — toward the spiral centers of the eyes, the jagged crown edges, or the competing grid behind the figures — and what draws it there?\", \"ambiguities\": [\"The nifty-faces #0000 comparison image shows no clear formal parallel to #235's specific paired-head and spiral-eye structure, so it was not selected as a connection.\", \"Whether the two head-forms are meant as separate figures or a split view of one is not resolvable from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:06:55.183843-05:00",
+    "usage": {
+      "inputTokens": 6752,
+      "outputTokens": 824,
+      "totalTokens": 7576,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10440
+    },
+    "requestId": "1b0461f3-c246-4b15-88ea-807dd48f7d2e",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"Two roughly oval head-forms sit side by side, each with spiral-filled eye sockets drawn in concentric loops of white, yellow, and red against a purple-red ground.\",\n    \"A dense grid of horizontal orange and vertical black lines covers most of the background, overlaid with loose blue spiral clusters in the upper corners and a pink zigzag running across the lower third.\",\n    \"Jagged yellow serrated edges line the top of each head-form, and a shared zone near center shows a yellow-outlined row of marks flanked by teal and white strokes.\"\n  ],\n  \"reading\": \"Two head-forms share the frame, their spiral eyes giving them a fixed outward stare that reads as confrontational or watchful. The warm orange grid presses against the figures rather than receding, so foreground and background compete at the same visual weight. Zigzag borders and looping blue lines keep the surface restless, while the paired arrangement introduces a quieter symmetry beneath the noise.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #234 uses a single head on a flat red field with sparse color, making this work's doubled figures and full-spectrum palette a strong contrast. The collector links nnxyz's looping line patterns to scrimshaw's incised spirals.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F\",\n      \"reason\": \"nnxyz nnotb #236 shares paired circular eye motifs and jagged serrated crown forms at the top edge, making it a direct formal echo of the head structure seen here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNsBdMhm4PivpEUuRspiddbPMn5NaQdfbzq47fNXytm18\",\n      \"reason\": \"nnxyz nnotb #234 offers a stark contrast: one head, near-monochrome red and black with a single yellow bar, against this work's doubled figures and dense multicolor grid.\"\n    }\n  ],\n  \"tags\": [\n    \"paired head-forms\",\n    \"spiral eye sockets\",\n    \"grid background\",\n    \"zigzag line borders\",\n    \"multicolor overlapping lines\",\n    \"serrated crown-edge marks\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — the spiral centers of the eye sockets, the serrated edges at the top, or the orange grid pressing in from behind — and what pulls it there?\",\n  \"ambiguities\": [\n    \"The nifty-faces #0000 comparison image shows no clear formal parallel to the paired-head and spiral-eye structure here, so it was not selected as a connection.\",\n    \"Whether the two head-forms represent separate figures or a split view of one is not resolvable from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'engraved spirals' with 'incised spirals' in contextAngle to remove the flagged named-media term while preserving the collector's scrimshaw association.\",\n    \"Reading word count verified at 62 words; context angle at 39 words — both within required ranges.\",\n    \"All other fields confirmed compliant: no technique claims beyond visible evidence, no biography or intention language.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUUtghgoHciiCzGu8ddDDa4BaRmLGC46fmJfgDhzjKUb2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUUtghgoHciiCzGu8ddDDa4BaRmLGC46fmJfgDhzjKUb2/image.png",
+        "imageSHA256": "a0ede280648fa8b199645cabe5026359374800d5845234b75f87c1d879c7158a"
+      },
+      {
+        "artworkId": "QmNsBdMhm4PivpEUuRspiddbPMn5NaQdfbzq47fNXytm18",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNsBdMhm4PivpEUuRspiddbPMn5NaQdfbzq47fNXytm18/image.png",
+        "imageSHA256": "fc9e2607abdd2b0c8829cb7b5374f4b41a0f6c8455a99f36153f9822e6280824"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F/image.png",
+        "imageSHA256": "ffafeaf9deb62fa9d21cd79b23d590f4469b1e3f0ef4f4eca686e3af9555649d"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"Two roughly oval head-forms sit side by side, each with spiral-filled eye sockets drawn in concentric loops of white, yellow, and red against a purple-red ground.\", \"A dense grid of horizontal orange and vertical black lines covers most of the background, overlaid with loose blue spiral clusters in the upper corners and a pink zigzag running across the lower third.\", \"Jagged yellow serrated edges line the top of each head-form, and a shared zone near center shows a yellow-outlined row of marks flanked by teal and white strokes.\"], \"reading\": \"Two head-forms share the frame, their spiral eyes giving them a fixed outward stare that reads as confrontational or watchful. The warm orange grid presses against the figures rather than receding, so foreground and background compete at the same visual weight. Zigzag borders and looping blue lines keep the surface restless, while the paired arrangement introduces a quieter symmetry beneath the noise.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #234 uses a single head on a flat red field with sparse color, making this work's doubled figures and full-spectrum palette a strong contrast. The collector links nnxyz's looping line patterns to scrimshaw's engraved spirals.\", \"connections\": [{\"targetArtworkId\": \"Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F\", \"reason\": \"nnxyz nnotb #236 shares paired circular eye motifs and jagged serrated crown forms at the top edge, making it a direct formal echo of the head structure seen here.\"}, {\"targetArtworkId\": \"QmNsBdMhm4PivpEUuRspiddbPMn5NaQdfbzq47fNXytm18\", \"reason\": \"nnxyz nnotb #234 offers a stark contrast: one head, near-monochrome red and black with a single yellow bar, against this work's doubled figures and dense multicolor grid.\"}], \"tags\": [\"paired head-forms\", \"spiral eye sockets\", \"grid background\", \"zigzag line borders\", \"multicolor overlapping lines\", \"serrated crown-edge marks\"], \"lookingQuestion\": \"Where does your eye settle first — the spiral centers of the eye sockets, the serrated edges at the top, or the orange grid pressing in from behind — and what pulls it there?\", \"ambiguities\": [\"The nifty-faces #0000 comparison image shows no clear formal parallel to the paired-head and spiral-eye structure here, so it was not selected as a connection.\", \"Whether the two head-forms represent separate figures or a split view of one is not resolvable from the image alone.\"]}\nFLAGS:\n[{\"artworkId\": \"QmUUtghgoHciiCzGu8ddDDa4BaRmLGC46fmJfgDhzjKUb2\", \"field\": \"contextAngle\", \"rule\": \"named-media\", \"matches\": [\"engraved\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

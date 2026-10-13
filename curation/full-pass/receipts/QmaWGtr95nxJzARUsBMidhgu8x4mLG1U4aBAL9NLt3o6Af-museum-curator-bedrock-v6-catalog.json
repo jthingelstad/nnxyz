@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:06:52.466362-05:00",
+    "usage": {
+      "inputTokens": 6097,
+      "outputTokens": 686,
+      "totalTokens": 6783,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19049
+    },
+    "requestId": "b4b208d5-c69e-4cb9-bdb6-f848e0cee3ee",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A red-and-white spiral sits inside a tilted rectangular frame in the upper center, ringed by concentric black and olive lines.\",\n    \"Heavy black outlines carve angular, box-like shapes across the composition, with a zigzag white-and-purple band running horizontally through the lower third.\",\n    \"Thin yellow, cyan, and white scratch-lines fill gaps between the black scaffolding, layered over patches of teal, orange, red, and soft blue.\"\n  ],\n  \"reading\": \"Thick black borders stack and lean like crates pried open to reveal color underneath. The red spiral draws the eye upward, anchoring the composition against the pull of the zigzag band below. Scattered cyan and yellow scratches read as restless annotation, as though the surface has been marked and re-marked. The overall effect feels compressed and loud, a dense field that resists a single focal point.\",\n  \"contextAngle\": \"Sitting between rawblocks #1 and rawblocks #3 in the owned subset, this work shares the heavy black scaffolding and layered scratch-lines of its title neighbor #1, but shifts to a brighter, more open palette with larger areas of teal and white breathing space at the edges.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr\",\n      \"reason\": \"Both use thick black rectangular frames packed with zigzag bands and spiral motifs, but #1 fills the entire field while #2 leaves more dark teal margin at the edges.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg\",\n      \"reason\": \"nnxyz #64 layers text and a face-like form over gray washes, while #2 replaces legible words with pure line tangles, showing two different densities of mark-making.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral motif\",\n    \"black scaffolding\",\n    \"zigzag pattern\",\n    \"layered scratch-lines\",\n    \"dense composition\",\n    \"rectangular frames\"\n  ],\n  \"lookingQuestion\": \"Where does the red-and-white spiral sit relative to the zigzag band, and how do those two repeating patterns compete for your attention across the surface?\",\n  \"ambiguities\": [\n    \"Whether the tilted rectangular shapes represent stacked objects or are purely abstract framing devices cannot be determined from the image alone.\",\n    \"rawblocks #3 shifts to a radically different style with soft fills and a single rounded figure, making it an unclear formal comparison despite being a title neighbor.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af/image.png",
+        "imageSHA256": "1607160a191b258ac5f63a04cba0ea468bdf0f5414281ff45f6f8075f0cb83a5"
+      },
+      {
+        "artworkId": "QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr/image.png",
+        "imageSHA256": "e2a24a8191cd92c60aefc9a7731e85e6e5e0cecc9ef4d9d92ec11141dd57905e"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW/image.png",
+        "imageSHA256": "41e1ffd72020f4a1357ef598a9ec4651781ef4ac7786564dc841031c93439dee"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:03.791233-05:00",
+    "usage": {
+      "inputTokens": 6815,
+      "outputTokens": 803,
+      "totalTokens": 7618,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11233
+    },
+    "requestId": "4114cf2b-407b-4a4c-aef8-b2438de79e1c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A red-and-white spiral occupies a tilted rectangular frame in the upper center, surrounded by concentric black and olive outlines.\",\n    \"Heavy black lines carve angular, box-like shapes across the surface, with a zigzag purple-and-white band running horizontally through the lower third.\",\n    \"Thin yellow, cyan, and white scratch-lines fill gaps between the black scaffolding, layered over patches of teal, orange, red, and soft blue.\"\n  ],\n  \"reading\": \"Thick black borders stack and lean like crates pried open to reveal color underneath. The red spiral draws the eye upward, anchoring the composition against the pull of the zigzag band below. Scattered cyan and yellow scratches read as restless annotation, as though the surface has been marked and re-marked. The result feels compressed and loud, a dense field that resists a single focal point.\",\n  \"contextAngle\": \"Sitting between rawblocks #1 and rawblocks #3 in the owned subset, this work shares the heavy black scaffolding and layered scratch-lines of its title neighbor #1, but opens up more dark teal margin at the edges and uses a brighter palette.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr\",\n      \"reason\": \"Both pack thick black rectangular frames with zigzag bands and spiral motifs, but #1 fills the entire field while #2 leaves more dark teal breathing space at the margins.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg\",\n      \"reason\": \"nnxyz #64 layers legible text and a face-like form over gray washes, while #2 replaces words with pure line tangles, showing two different densities of mark-making.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral motif\",\n    \"black scaffolding\",\n    \"zigzag pattern\",\n    \"layered scratch-lines\",\n    \"dense composition\",\n    \"rectangular frames\"\n  ],\n  \"lookingQuestion\": \"Where does the red-and-white spiral sit relative to the zigzag band, and how do those two repeating patterns compete for your attention across the surface?\",\n  \"ambiguities\": [\n    \"Whether the tilted rectangular shapes represent stacked objects or are purely abstract framing devices cannot be determined from the image alone.\",\n    \"rawblocks #3 shifts to soft fills and a single rounded figure, making it a weak formal comparison despite being a title neighbor.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed spiral is red-and-white with concentric rings inside a tilted rectangle; olive outlines verified around it.\",\n    \"Zigzag band color corrected from 'white-and-purple' to 'purple-and-white' to match visible purple dominance; both colors present.\",\n    \"Comparison to #64 verified: legible text fragments ('BLUE CHIP', 'DIGITAL ART', etc.) and gray washes in #64 contrast with the text-free line tangles in #2.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af/image.png",
+        "imageSHA256": "1607160a191b258ac5f63a04cba0ea468bdf0f5414281ff45f6f8075f0cb83a5"
+      },
+      {
+        "artworkId": "QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr/image.png",
+        "imageSHA256": "e2a24a8191cd92c60aefc9a7731e85e6e5e0cecc9ef4d9d92ec11141dd57905e"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNS4DTJmCnD2WcNMWRR7pUR8t4ex4XVh2rBeAs9deroJW/image.png",
+        "imageSHA256": "41e1ffd72020f4a1357ef598a9ec4651781ef4ac7786564dc841031c93439dee"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A red-and-white spiral sits inside a tilted rectangular frame in the upper center, ringed by concentric black and olive lines.\", \"Heavy black outlines carve angular, box-like shapes across the composition, with a zigzag white-and-purple band running horizontally through the lower third.\", \"Thin yellow, cyan, and white scratch-lines fill gaps between the black scaffolding, layered over patches of teal, orange, red, and soft blue.\"], \"reading\": \"Thick black borders stack and lean like crates pried open to reveal color underneath. The red spiral draws the eye upward, anchoring the composition against the pull of the zigzag band below. Scattered cyan and yellow scratches read as restless annotation, as though the surface has been marked and re-marked. The overall effect feels compressed and loud, a dense field that resists a single focal point.\", \"contextAngle\": \"Sitting between rawblocks #1 and rawblocks #3 in the owned subset, this work shares the heavy black scaffolding and layered scratch-lines of its title neighbor #1, but shifts to a brighter, more open palette with larger areas of teal and white breathing space at the edges.\", \"connections\": [{\"targetArtworkId\": \"QmPxKPp8NG8oFyqbzWTzG69aCKCZYLwM8bNrkM37nEcpbr\", \"reason\": \"Both use thick black rectangular frames packed with zigzag bands and spiral motifs, but #1 fills the entire field while #2 leaves more dark teal margin at the edges.\"}, {\"targetArtworkId\": \"QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg\", \"reason\": \"nnxyz #64 layers text and a face-like form over gray washes, while #2 replaces legible words with pure line tangles, showing two different densities of mark-making.\"}], \"tags\": [\"spiral motif\", \"black scaffolding\", \"zigzag pattern\", \"layered scratch-lines\", \"dense composition\", \"rectangular frames\"], \"lookingQuestion\": \"Where does the red-and-white spiral sit relative to the zigzag band, and how do those two repeating patterns compete for your attention across the surface?\", \"ambiguities\": [\"Whether the tilted rectangular shapes represent stacked objects or are purely abstract framing devices cannot be determined from the image alone.\", \"rawblocks #3 shifts to a radically different style with soft fills and a single rounded figure, making it an unclear formal comparison despite being a title neighbor.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

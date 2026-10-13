@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:09:30.998345-05:00",
+    "usage": {
+      "inputTokens": 6121,
+      "outputTokens": 713,
+      "totalTokens": 6834,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20357
+    },
+    "requestId": "7bf7051f-3da1-4ece-b0a7-7e574b57d8aa",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large white circular outline dominates the center, containing a face-like arrangement with two mismatched spiral eyes, jagged yellow teeth, and spiky radiating forms.\",\n    \"A warm brown background is crossed by diagonal stripes of green and pink at upper left, and a horizontal bright-blue bar with white dashes runs across the lower third.\",\n    \"Dense layered marks fill the circle's interior: pink zigzag trim along the right arc, red and orange color fields behind the face, and small repeated wave and triangle patterns in multiple colors.\"\n  ],\n  \"reading\": \"The heavy white ring acts like a lens or shield, framing a face that stares out through mismatched eyes—one ringed in yellow, the other a tight black spiral. Jagged yellow teeth repeat across two stacked mouth-like rectangles, giving the figure a double growl. The brown field and crossing blue bar read as a stage or frame, lending the packed interior a feeling of confinement. The overall effect can feel both playful and unsettling, a grinning mask held at arm's length.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"rawblocks #30\\\" and \\\"rawblocks #32.\\\" All three share a dominant circular head form, yet #31 stands apart with its muted brown ground and sparser exterior, concentrating nearly all pattern activity inside the ring rather than spreading it across the full field.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXEWt2NEHkCFVJNyFwPMe7BdBsiMJAoE5NCLGF4ZfBXc1\",\n      \"reason\": \"Both use a large circular outline to contain a face, but #30 fills its background with saturated pink and packs color outside the ring, while #31 leaves the brown ground mostly bare.\"\n    },\n    {\n      \"targetArtworkId\": \"QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q\",\n      \"reason\": \"The nnotb piece shares zigzag teeth, crown-like spikes, and crossed-out eye symbols, but replaces the circular frame with a solid black mass and a yellow-dominant palette.\"\n    }\n  ],\n  \"tags\": [\n    \"circular frame\",\n    \"face with teeth\",\n    \"brown ground\",\n    \"layered line patterns\",\n    \"zigzag trim\",\n    \"horizontal bar\"\n  ],\n  \"lookingQuestion\": \"How does the contrast between the busy interior of the circle and the relatively empty brown background change the way you focus on the face?\",\n  \"ambiguities\": [\n    \"The blue horizontal bar and the small figure at lower right may be separate elements or part of the face's body; their relationship to the head is unclear.\",\n    \"Lettering visible in the lower-left corner appears to be a signature mark, not embedded text content.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmcf7QQo6G8DLPNJWfZw6STsctJtzY1E9CaestowV8BYSt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcf7QQo6G8DLPNJWfZw6STsctJtzY1E9CaestowV8BYSt/image.png",
+        "imageSHA256": "8af3361949cf07fb4f702d546870c8aa49b8aef21e6da6e0d7ccf04f98ee27ad"
+      },
+      {
+        "artworkId": "QmXEWt2NEHkCFVJNyFwPMe7BdBsiMJAoE5NCLGF4ZfBXc1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXEWt2NEHkCFVJNyFwPMe7BdBsiMJAoE5NCLGF4ZfBXc1/image.png",
+        "imageSHA256": "6a935823283c76de0ee841506677248376a6af94bd512f8db9a7772d7f2522f4"
+      },
+      {
+        "artworkId": "QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q/image.png",
+        "imageSHA256": "a382383cd7c1e5be77913b3bb630379179f8b0637338b8fa5a6d07d031353c33"
+      },
+      {
+        "artworkId": "QmdAR6KRmu2V6KGMbLWFWYAzg8qb3UqTUowbMN21x7gPX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdAR6KRmu2V6KGMbLWFWYAzg8qb3UqTUowbMN21x7gPX2/image.png",
+        "imageSHA256": "e9612854f69e0286d99d04dbfb5748895cebb95b51766108d604705d5db6f152"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:09:43.776554-05:00",
+    "usage": {
+      "inputTokens": 6866,
+      "outputTokens": 843,
+      "totalTokens": 7709,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12701
+    },
+    "requestId": "7c98b81f-ce24-4adc-8f59-666bb2e27527",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large white circular outline dominates the center, containing a face-like arrangement with two mismatched eyes—one ringed in yellow-green, the other a tight spiral—and jagged yellow triangular teeth.\",\n    \"A warm brown background is crossed by diagonal green stripes at upper left and pink stripes at left; a horizontal bright-blue bar with white dashes runs across the lower third.\",\n    \"Dense layered marks fill the circle's interior: pink zigzag trim along the right arc, red and orange color fields behind the face, and small repeated wave and triangle patterns in blue, purple, and yellow.\"\n  ],\n  \"reading\": \"The heavy white ring frames a face that stares out through mismatched eyes—one ringed in yellow-green spikes, the other a tight black-and-white spiral. Jagged yellow teeth repeat across two stacked rectangular mouths, giving the figure a double snarl. The brown field and crossing blue bar read as a sparse stage, concentrating all pattern density inside the ring. The effect can feel both playful and unsettling, a grinning mask held in place.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"rawblocks #30\\\" and \\\"rawblocks #32.\\\" All three share a dominant circular head form, yet this piece stands apart with its muted brown ground and sparser exterior, concentrating nearly all pattern activity inside the ring.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXEWt2NEHkCFVJNyFwPMe7BdBsiMJAoE5NCLGF4ZfBXc1\",\n      \"reason\": \"Both use a large circular outline to contain a face, but #30 fills its background with saturated pink and packs dense color outside the ring, while #31 leaves the brown ground mostly bare.\"\n    },\n    {\n      \"targetArtworkId\": \"QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q\",\n      \"reason\": \"The nnotb piece shares zigzag teeth and crown-like spikes but replaces the circular frame with a solid black mass and a yellow-dominant palette.\"\n    }\n  ],\n  \"tags\": [\n    \"circular frame\",\n    \"face with teeth\",\n    \"brown ground\",\n    \"layered line patterns\",\n    \"zigzag trim\",\n    \"horizontal bar\"\n  ],\n  \"lookingQuestion\": \"How does the contrast between the busy interior of the circle and the relatively empty brown background change the way you focus on the face?\",\n  \"ambiguities\": [\n    \"The blue horizontal bar and the small shapes at lower right may be separate elements or part of a body below the head; their relationship to the face is unclear.\",\n    \"Lettering visible in the lower-left corner appears to be a signature mark, not embedded text content.\"\n  ],\n  \"reviewFindings\": [\n    \"Corrected eye description: the left eye has yellow-green radiating spikes, not a plain yellow ring; the right eye is a black-and-white spiral—confirmed against image.\",\n    \"Reading trimmed from 80+ words to within the 55–65 target range; removed 'at arm's length' stock metaphor.\",\n    \"Comparison to #32 confirmed: its head is filled with tangled multicolor scribbles over a dark blue ground, very different from #31's brown and structured interior, supporting the contrast noted in contextAngle.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmcf7QQo6G8DLPNJWfZw6STsctJtzY1E9CaestowV8BYSt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcf7QQo6G8DLPNJWfZw6STsctJtzY1E9CaestowV8BYSt/image.png",
+        "imageSHA256": "8af3361949cf07fb4f702d546870c8aa49b8aef21e6da6e0d7ccf04f98ee27ad"
+      },
+      {
+        "artworkId": "QmXEWt2NEHkCFVJNyFwPMe7BdBsiMJAoE5NCLGF4ZfBXc1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXEWt2NEHkCFVJNyFwPMe7BdBsiMJAoE5NCLGF4ZfBXc1/image.png",
+        "imageSHA256": "6a935823283c76de0ee841506677248376a6af94bd512f8db9a7772d7f2522f4"
+      },
+      {
+        "artworkId": "QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q/image.png",
+        "imageSHA256": "a382383cd7c1e5be77913b3bb630379179f8b0637338b8fa5a6d07d031353c33"
+      },
+      {
+        "artworkId": "QmdAR6KRmu2V6KGMbLWFWYAzg8qb3UqTUowbMN21x7gPX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdAR6KRmu2V6KGMbLWFWYAzg8qb3UqTUowbMN21x7gPX2/image.png",
+        "imageSHA256": "e9612854f69e0286d99d04dbfb5748895cebb95b51766108d604705d5db6f152"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large white circular outline dominates the center, containing a face-like arrangement with two mismatched spiral eyes, jagged yellow teeth, and spiky radiating forms.\", \"A warm brown background is crossed by diagonal stripes of green and pink at upper left, and a horizontal bright-blue bar with white dashes runs across the lower third.\", \"Dense layered marks fill the circle's interior: pink zigzag trim along the right arc, red and orange color fields behind the face, and small repeated wave and triangle patterns in multiple colors.\"], \"reading\": \"The heavy white ring acts like a lens or shield, framing a face that stares out through mismatched eyes—one ringed in yellow, the other a tight black spiral. Jagged yellow teeth repeat across two stacked mouth-like rectangles, giving the figure a double growl. The brown field and crossing blue bar read as a stage or frame, lending the packed interior a feeling of confinement. The overall effect can feel both playful and unsettling, a grinning mask held at arm's length.\", \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"rawblocks #30\\\" and \\\"rawblocks #32.\\\" All three share a dominant circular head form, yet #31 stands apart with its muted brown ground and sparser exterior, concentrating nearly all pattern activity inside the ring rather than spreading it across the full field.\", \"connections\": [{\"targetArtworkId\": \"QmXEWt2NEHkCFVJNyFwPMe7BdBsiMJAoE5NCLGF4ZfBXc1\", \"reason\": \"Both use a large circular outline to contain a face, but #30 fills its background with saturated pink and packs color outside the ring, while #31 leaves the brown ground mostly bare.\"}, {\"targetArtworkId\": \"QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q\", \"reason\": \"The nnotb piece shares zigzag teeth, crown-like spikes, and crossed-out eye symbols, but replaces the circular frame with a solid black mass and a yellow-dominant palette.\"}], \"tags\": [\"circular frame\", \"face with teeth\", \"brown ground\", \"layered line patterns\", \"zigzag trim\", \"horizontal bar\"], \"lookingQuestion\": \"How does the contrast between the busy interior of the circle and the relatively empty brown background change the way you focus on the face?\", \"ambiguities\": [\"The blue horizontal bar and the small figure at lower right may be separate elements or part of the face's body; their relationship to the head is unclear.\", \"Lettering visible in the lower-left corner appears to be a signature mark, not embedded text content.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

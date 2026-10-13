@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:05:40.842156-05:00",
+    "usage": {
+      "inputTokens": 6207,
+      "outputTokens": 683,
+      "totalTokens": 6890,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 18667
+    },
+    "requestId": "613c20ff-15ca-4894-b6f2-e42b7c521a9a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Hundreds of small, rounded dabs in yellow, pink, green, orange, and white cluster across the upper two-thirds, creating a dense canopy-like mass.\",\n    \"Diagonal golden-yellow rays cut from the upper left toward the lower right, passing through the dab field and a dark olive trunk-like vertical form.\",\n    \"A row of thin dark vertical lines crosses the bottom edge like a fence, with a strip of green and scattered pink spots below the main mass.\"\n  ],\n  \"reading\": \"The image reads as a flood of warm light breaking through a thick accumulation of colored spots. Those small rounded marks sit so densely that they almost dissolve the dark branching form behind them, leaving only glimpses of olive and brown. The diagonal rays reinforce a feeling of afternoon glare—something half-seen through brightness. Against the cool blue-grey background patches, the yellow saturation can feel almost overwhelming, as though the scene is being swallowed by its own warmth.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between \\\"nnxyz nnotb #218\\\" and \\\"nnxyz nnotb #220,\\\" both of which use heavy black line work and figure-like compositions. By contrast, #219 replaces outlines with soft, overlapping dabs, making it a striking tonal shift among its title neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u\",\n      \"reason\": \"Both use layered green and yellow masses over dark structural forms, but rawblocks #65 relies on tangled scribble lines where #219 uses rounded dabs.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto\",\n      \"reason\": \"The next title neighbor #220 shares a dominant yellow palette, but builds its surface from tight spirals and zigzag lines rather than soft translucent spots.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded dabs\",\n    \"yellow saturation\",\n    \"diagonal light rays\",\n    \"layered translucency\",\n    \"fence-like bottom edge\",\n    \"soft edges\"\n  ],\n  \"lookingQuestion\": \"How do the diagonal rays interact with the clusters of colored dabs—do they appear to pass in front of, behind, or through the spotted field?\",\n  \"ambiguities\": [\n    \"The dark vertical form could be read as a trunk, a shadow, or an abstract wedge; the image does not resolve this clearly.\",\n    \"Small lettering appears in the lower-right corner but is partially obscured and difficult to read at this resolution.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSJAr63wu3YBNXrPhJ2iCNbrjAdCo6rEaVyefPABUNBcx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSJAr63wu3YBNXrPhJ2iCNbrjAdCo6rEaVyefPABUNBcx/image.png",
+        "imageSHA256": "296840a9c6a37c7f79fee0257dba29673a1613b9343653705fc6a625dcf58be3"
+      },
+      {
+        "artworkId": "QmeA8KKkdTM93nJDuW9iZCWD8DZvXKStqj5ixY6teYeJDJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeA8KKkdTM93nJDuW9iZCWD8DZvXKStqj5ixY6teYeJDJ/image.png",
+        "imageSHA256": "b5dd69b04baed93cb0629a43b8ae5504e1c86a06218a53c87b9a76d412a27cbd"
+      },
+      {
+        "artworkId": "QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u/image.png",
+        "imageSHA256": "edd7251aba659cdd8dea2cdf16ad4903ffc574c49b6e07e0f828d56c6474cae5"
+      },
+      {
+        "artworkId": "QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto/image.png",
+        "imageSHA256": "49c5d9222537327d0394124ba2d3900946aaef5fb55f4bb527cfadaf50425962"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:05:52.727075-05:00",
+    "usage": {
+      "inputTokens": 6922,
+      "outputTokens": 828,
+      "totalTokens": 7750,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11777
+    },
+    "requestId": "808fb9d7-620a-44bb-b64b-eed7a69a4b14",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Hundreds of small, rounded dabs in yellow, pink, green, orange, and white cluster across the upper two-thirds, forming a dense, canopy-like mass.\",\n    \"Diagonal golden-yellow rays cut from the upper left toward the lower right, passing through the dab field and a dark olive vertical form at center.\",\n    \"A row of thin dark vertical lines crosses the bottom edge like a fence, with a strip of green and scattered pink spots below the main mass.\"\n  ],\n  \"reading\": \"The image reads as a flood of warm light breaking through a thick accumulation of colored spots. Those small rounded marks sit so densely they almost dissolve the dark branching form behind them, leaving only glimpses of olive and brown. The diagonal rays reinforce a sense of afternoon glare—something half-seen through brightness. Against cool blue-grey background patches, the yellow saturation feels almost overwhelming, as though the scene is being swallowed by its own warmth.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between \\\"nnxyz nnotb #218\\\" and \\\"nnxyz nnotb #220,\\\" both of which use heavy black line work and figure-like compositions. By contrast, #219 replaces outlines with soft, overlapping dabs, making it a striking tonal shift among its title neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u\",\n      \"reason\": \"Both layer green and yellow masses over dark structural forms, but rawblocks #65 relies on tangled scribble lines where #219 uses rounded dabs.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto\",\n      \"reason\": \"Title neighbor #220 shares a dominant yellow palette but builds its surface from tight spirals and zigzag lines rather than soft translucent spots.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded dabs\",\n    \"yellow saturation\",\n    \"diagonal light rays\",\n    \"layered translucency\",\n    \"fence-like bottom edge\",\n    \"soft edges\"\n  ],\n  \"lookingQuestion\": \"How do the diagonal rays interact with the clusters of colored dabs—do they appear to pass in front of, behind, or through the spotted field?\",\n  \"ambiguities\": [\n    \"The dark vertical form could be read as a trunk, a shadow, or an abstract wedge; the image does not resolve this.\",\n    \"Small lettering appears in the lower-right corner but is partially obscured and difficult to read at this resolution.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed diagonal rays, rounded dabs, dark olive vertical form, fence-like bottom lines, and blue-grey background patches all visible in the primary image.\",\n    \"Reading trimmed from 80 to 74 words to stay within limit; removed 'stock metaphor' phrasing about the scene being 'swallowed' but retained it as a qualified emotional reading.\",\n    \"Comparison images verified: #218 and #220 both show heavy black outlines and figure-like forms; rawblocks #65 shows tangled scribble lines over dark masses with green/yellow—all contrasts with #219 are accurate.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSJAr63wu3YBNXrPhJ2iCNbrjAdCo6rEaVyefPABUNBcx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSJAr63wu3YBNXrPhJ2iCNbrjAdCo6rEaVyefPABUNBcx/image.png",
+        "imageSHA256": "296840a9c6a37c7f79fee0257dba29673a1613b9343653705fc6a625dcf58be3"
+      },
+      {
+        "artworkId": "QmeA8KKkdTM93nJDuW9iZCWD8DZvXKStqj5ixY6teYeJDJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeA8KKkdTM93nJDuW9iZCWD8DZvXKStqj5ixY6teYeJDJ/image.png",
+        "imageSHA256": "b5dd69b04baed93cb0629a43b8ae5504e1c86a06218a53c87b9a76d412a27cbd"
+      },
+      {
+        "artworkId": "QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u/image.png",
+        "imageSHA256": "edd7251aba659cdd8dea2cdf16ad4903ffc574c49b6e07e0f828d56c6474cae5"
+      },
+      {
+        "artworkId": "QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto/image.png",
+        "imageSHA256": "49c5d9222537327d0394124ba2d3900946aaef5fb55f4bb527cfadaf50425962"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Hundreds of small, rounded dabs in yellow, pink, green, orange, and white cluster across the upper two-thirds, creating a dense canopy-like mass.\", \"Diagonal golden-yellow rays cut from the upper left toward the lower right, passing through the dab field and a dark olive trunk-like vertical form.\", \"A row of thin dark vertical lines crosses the bottom edge like a fence, with a strip of green and scattered pink spots below the main mass.\"], \"reading\": \"The image reads as a flood of warm light breaking through a thick accumulation of colored spots. Those small rounded marks sit so densely that they almost dissolve the dark branching form behind them, leaving only glimpses of olive and brown. The diagonal rays reinforce a feeling of afternoon glare—something half-seen through brightness. Against the cool blue-grey background patches, the yellow saturation can feel almost overwhelming, as though the scene is being swallowed by its own warmth.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between \\\"nnxyz nnotb #218\\\" and \\\"nnxyz nnotb #220,\\\" both of which use heavy black line work and figure-like compositions. By contrast, #219 replaces outlines with soft, overlapping dabs, making it a striking tonal shift among its title neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u\", \"reason\": \"Both use layered green and yellow masses over dark structural forms, but rawblocks #65 relies on tangled scribble lines where #219 uses rounded dabs.\"}, {\"targetArtworkId\": \"QmWMvAooJGmAwRbaiM8XdTu4j2KNjymDsjZ59QKGJ5dhto\", \"reason\": \"The next title neighbor #220 shares a dominant yellow palette, but builds its surface from tight spirals and zigzag lines rather than soft translucent spots.\"}], \"tags\": [\"rounded dabs\", \"yellow saturation\", \"diagonal light rays\", \"layered translucency\", \"fence-like bottom edge\", \"soft edges\"], \"lookingQuestion\": \"How do the diagonal rays interact with the clusters of colored dabs—do they appear to pass in front of, behind, or through the spotted field?\", \"ambiguities\": [\"The dark vertical form could be read as a trunk, a shadow, or an abstract wedge; the image does not resolve this clearly.\", \"Small lettering appears in the lower-right corner but is partially obscured and difficult to read at this resolution.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

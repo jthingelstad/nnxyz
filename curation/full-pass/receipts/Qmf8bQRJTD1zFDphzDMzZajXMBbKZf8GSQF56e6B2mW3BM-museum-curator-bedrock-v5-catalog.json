@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:06.926707-05:00",
+    "usage": {
+      "inputTokens": 6075,
+      "outputTokens": 808,
+      "totalTokens": 6883,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12710
+    },
+    "requestId": "7f3d2053-8e08-4125-93aa-a2fd21e16f08",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A round face shape is outlined in white against an orange background, with a scalloped or block-toothed border running around its upper and right edges.\",\n    \"Each eye socket is a rectangular white-outlined box containing a layered mark: a pink oval, a red smear, and a dark crossed circle with teal and yellow arcs radiating from it.\",\n    \"A vertical white wedge sits between the two eye boxes in place of a nose, and a curved row of pale blue-grey block teeth forms the lower mouth, echoing the scalloped border above.\"\n  ],\n  \"reading\": \"The face here is more mask than head — flat, frontal, and divided into compartments. The eye boxes hold the same crossed-circle mark twice, giving the image a bilateral symmetry that feels more mechanical than natural. Orange pushes in from outside while purple and yellow crowd the interior, and the block teeth at top and bottom frame the whole face like a border eating itself. The mood reads as blankly ceremonial.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #79 and nnxyz nifty faces #81 in both title and recorded-creation order. Where #79 uses a vivid cyan field and a single large spiral eye, #80 shifts to warm orange and bilateral eye symmetry — a notable structural contrast across neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdiKbak8ZUeGqQCEF7XQe94SHL8hdVofZLksFWxQ2wWzP\",\n      \"reason\": \"nnxyz nifty faces #79 shares the block-tooth mouth motif and dense layered marks inside the eye area, but its single off-center spiral eye and cyan ground make the bilateral symmetry and warm orange of #80 stand out sharply.\"\n    },\n    {\n      \"targetArtworkId\": \"QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq\",\n      \"reason\": \"nnxyz nifty faces #81 also uses a warm solid-color ground with a white-outlined face and a row of block teeth, but its surface is covered in loose crossing lines rather than the compartmented eye-box structure seen in #80.\"\n    }\n  ],\n  \"tags\": [\n    \"bilateral symmetry\",\n    \"rectangular eye compartments\",\n    \"block teeth border\",\n    \"crossed-circle eye mark\",\n    \"orange ground\",\n    \"scalloped outline\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like\",\n    \"ceremonial tone\",\n    \"mechanical repetition\"\n  ],\n  \"lookingQuestion\": \"The crossed-circle mark appears in both eye boxes at nearly the same scale and angle — what does that exact repetition do to how you read the two sides of the face?\",\n  \"ambiguities\": [\n    \"The scalloped border along the top and right edge could be read as part of the face shape or as a separate decorative frame; the image does not resolve this clearly.\",\n    \"nnxyz nnotb #43 was inspected but offers no specific formal connection to #80 beyond shared multi-figure density; it is omitted from connections to avoid a weak match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM/image.png",
+        "imageSHA256": "eb9f7f0662797170061168cc9ca04144557ec18b30bd12a04c9fb3311b4abeb0"
+      },
+      {
+        "artworkId": "QmdiKbak8ZUeGqQCEF7XQe94SHL8hdVofZLksFWxQ2wWzP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdiKbak8ZUeGqQCEF7XQe94SHL8hdVofZLksFWxQ2wWzP/image.png",
+        "imageSHA256": "fb543a9e98c9e03af8a91460defe4868971bde260015dae54e885c30516a1007"
+      },
+      {
+        "artworkId": "QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y/image.png",
+        "imageSHA256": "9755b4d5a4f856abf44dff23440c9f47b66a918c5778e0c9cae5c37b0dde98c8"
+      },
+      {
+        "artworkId": "QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq/image.png",
+        "imageSHA256": "5912247f74da27c048f9ff89ed18c216f975d92f9901c96b057059d9b52efba9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:13.677884-05:00",
+    "usage": {
+      "inputTokens": 6903,
+      "outputTokens": 951,
+      "totalTokens": 7854,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6682
+    },
+    "requestId": "30e42ad5-5998-4115-a06b-7f7db04821f8",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A round face shape is outlined in white against an orange background, with a scalloped block-toothed border running along its upper and right edges.\",\n    \"Each eye socket is a rectangular white-outlined box containing layered marks: a pink oval, a red smear, and a dark crossed circle with teal and yellow arcs radiating from it.\",\n    \"A vertical white wedge sits between the two eye boxes where a nose would be, and a curved row of pale blue-grey block teeth forms the lower mouth, echoing the scalloped border above.\"\n  ],\n  \"reading\": \"The face is flat and frontal, divided into compartments rather than modeled as a volume. Each eye box holds the same crossed-circle mark, giving the image a bilateral symmetry that reads as mechanical. Orange presses in from outside while purple and yellow crowd the interior, and block teeth at top and bottom frame the whole face like a border folding back on itself. The overall mood reads as blankly ceremonial.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #79 and nnxyz nifty faces #81 in both title and recorded-creation order. Where #79 uses a vivid cyan field and a single large spiral eye, #80 shifts to warm orange and bilateral eye symmetry — a notable structural contrast across neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdiKbak8ZUeGqQCEF7XQe94SHL8hdVofZLksFWxQ2wWzP\",\n      \"reason\": \"nnxyz nifty faces #79 shares the block-tooth mouth motif and dense layered marks inside the eye area, but its single off-center spiral eye and cyan ground make the bilateral symmetry and warm orange of #80 stand out sharply.\"\n    },\n    {\n      \"targetArtworkId\": \"QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq\",\n      \"reason\": \"nnxyz nifty faces #81 also uses a warm solid-color ground with a white-outlined face and a row of block teeth, but its surface is covered in loose crossing lines rather than the compartmented eye-box structure seen in #80.\"\n    }\n  ],\n  \"tags\": [\n    \"bilateral symmetry\",\n    \"rectangular eye compartments\",\n    \"block teeth border\",\n    \"crossed-circle eye mark\",\n    \"orange ground\",\n    \"scalloped outline\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like\",\n    \"ceremonial tone\",\n    \"mechanical repetition\"\n  ],\n  \"lookingQuestion\": \"The crossed-circle mark appears in both eye boxes at nearly the same scale and angle — what does that exact repetition do to how you read the two sides of the face?\",\n  \"ambiguities\": [\n    \"The scalloped border along the top and right edge could be read as part of the face shape or as a separate decorative frame; the image does not resolve this clearly.\",\n    \"nnxyz nnotb #43 was inspected but offers no specific formal connection to #80 beyond shared multi-figure density; it is omitted to avoid a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: orange ground, rectangular eye boxes with teal/yellow crossed-circle marks, white wedge nose, and pale blue-grey block teeth are all visible.\",\n    \"Both comparison connections verified against inspected images: #79 cyan ground with single spiral eye confirmed; #81 warm yellow ground with loose crossing lines and block teeth confirmed — contrasts stated accurately.\",\n    \"No invented biography, intent, technique, or unsupported subject identities found; 'blankly ceremonial' retained as an explicit mood reading, not a factual claim; word counts within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf8bQRJTD1zFDphzDMzZajXMBbKZf8GSQF56e6B2mW3BM/image.png",
+        "imageSHA256": "eb9f7f0662797170061168cc9ca04144557ec18b30bd12a04c9fb3311b4abeb0"
+      },
+      {
+        "artworkId": "QmdiKbak8ZUeGqQCEF7XQe94SHL8hdVofZLksFWxQ2wWzP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdiKbak8ZUeGqQCEF7XQe94SHL8hdVofZLksFWxQ2wWzP/image.png",
+        "imageSHA256": "fb543a9e98c9e03af8a91460defe4868971bde260015dae54e885c30516a1007"
+      },
+      {
+        "artworkId": "QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y/image.png",
+        "imageSHA256": "9755b4d5a4f856abf44dff23440c9f47b66a918c5778e0c9cae5c37b0dde98c8"
+      },
+      {
+        "artworkId": "QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq/image.png",
+        "imageSHA256": "5912247f74da27c048f9ff89ed18c216f975d92f9901c96b057059d9b52efba9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A round face shape is outlined in white against an orange background, with a scalloped or block-toothed border running around its upper and right edges.\", \"Each eye socket is a rectangular white-outlined box containing a layered mark: a pink oval, a red smear, and a dark crossed circle with teal and yellow arcs radiating from it.\", \"A vertical white wedge sits between the two eye boxes in place of a nose, and a curved row of pale blue-grey block teeth forms the lower mouth, echoing the scalloped border above.\"], \"reading\": \"The face here is more mask than head — flat, frontal, and divided into compartments. The eye boxes hold the same crossed-circle mark twice, giving the image a bilateral symmetry that feels more mechanical than natural. Orange pushes in from outside while purple and yellow crowd the interior, and the block teeth at top and bottom frame the whole face like a border eating itself. The mood reads as blankly ceremonial.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #79 and nnxyz nifty faces #81 in both title and recorded-creation order. Where #79 uses a vivid cyan field and a single large spiral eye, #80 shifts to warm orange and bilateral eye symmetry — a notable structural contrast across neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmdiKbak8ZUeGqQCEF7XQe94SHL8hdVofZLksFWxQ2wWzP\", \"reason\": \"nnxyz nifty faces #79 shares the block-tooth mouth motif and dense layered marks inside the eye area, but its single off-center spiral eye and cyan ground make the bilateral symmetry and warm orange of #80 stand out sharply.\"}, {\"targetArtworkId\": \"QmcJ56oMqPuABHa4y3KCNpFmnZDtQyYMJzVHLvTwDVgPRq\", \"reason\": \"nnxyz nifty faces #81 also uses a warm solid-color ground with a white-outlined face and a row of block teeth, but its surface is covered in loose crossing lines rather than the compartmented eye-box structure seen in #80.\"}], \"tags\": [\"bilateral symmetry\", \"rectangular eye compartments\", \"block teeth border\", \"crossed-circle eye mark\", \"orange ground\", \"scalloped outline\"], \"interpretiveTags\": [\"mask-like\", \"ceremonial tone\", \"mechanical repetition\"], \"lookingQuestion\": \"The crossed-circle mark appears in both eye boxes at nearly the same scale and angle — what does that exact repetition do to how you read the two sides of the face?\", \"ambiguities\": [\"The scalloped border along the top and right edge could be read as part of the face shape or as a separate decorative frame; the image does not resolve this clearly.\", \"nnxyz nnotb #43 was inspected but offers no specific formal connection to #80 beyond shared multi-figure density; it is omitted from connections to avoid a weak match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

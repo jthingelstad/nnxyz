@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:24.114512-05:00",
+    "usage": {
+      "inputTokens": 5112,
+      "outputTokens": 662,
+      "totalTokens": 5774,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 91628
+    },
+    "requestId": "9272a0bc-7f5c-4dc3-ade8-f690d53aa0b3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two asymmetric eye sockets dominate the upper half: the left is a purple circle with a white spiral center, the right is an orange ring with a blue dot.\",\n    \"A wide mouth spans the lower third, built from black zigzag lines forming pointed teeth, with yellow rectangular shapes filling the gaps between them.\",\n    \"A pale green wash covers the background, especially at lower right, while red looping lines cut diagonally across the entire composition over every other layer.\"\n  ],\n  \"reading\": \"The face reads as a mask pulled apart by competing line systems. Heavy black strokes define the skull-like structure, but red arcs and blue hooks refuse to stay inside it, spilling past the jaw and forehead. The mismatched eyes—one cool purple, one hot orange—give the head a lopsided alertness, as though each side watches something different. Yellow teeth grin against a soft green field, mixing menace with something almost comic.\",\n  \"contextAngle\": \"This work shares its title with another variant in the owned subset. Compared to its title neighbor Scrimshaw5, the background shifts from bright yellow to muted green, and the line density thins enough to let open color patches breathe between strokes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY\",\n      \"reason\": \"Both feature spiral-filled eye sockets and jagged tooth rows, but Scrimshaw5 packs its lines far tighter, leaving almost no bare background visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2\",\n      \"reason\": \"nnxyz #31 shares the zigzag teeth motif and layered white marks over yellow, though its black fills create heavier mass where this work stays open and airy.\"\n    }\n  ],\n  \"tags\": [\n    \"skull-like face\",\n    \"spiral eyes\",\n    \"zigzag teeth\",\n    \"layered line work\",\n    \"green background wash\",\n    \"asymmetric features\"\n  ],\n  \"lookingQuestion\": \"How does the contrast between the cool purple left eye and the warm orange right eye affect the way your gaze moves across the face?\",\n  \"ambiguities\": [\n    \"Two works in the owned subset share the title Scrimshaw6; which came first cannot be determined from title order alone.\",\n    \"Small yellow and blue hook shapes at the edges may be fragments of additional figures or purely abstract marks—the image does not resolve this.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU/image.png",
+        "imageSHA256": "0cbae346fa04bfe60a8fc18a15c3d837a67856d8c4199cfbc70d3293e2cd0e94"
+      },
+      {
+        "artworkId": "QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp/image.png",
+        "imageSHA256": "0ca4a88a11e4bc7a87daea94cb47751bb8a7039eb28e79379ec6339792639625"
+      },
+      {
+        "artworkId": "QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2/image.png",
+        "imageSHA256": "c00d7770fb9f7946da0209d3c75ec7aba20c2af921142764035fd365d639bc16"
+      },
+      {
+        "artworkId": "QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY/image.png",
+        "imageSHA256": "a2d236328a681914a143fcce7a333955b097277b0853c582ce0973c5391ef350"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:34.688894-05:00",
+    "usage": {
+      "inputTokens": 5806,
+      "outputTokens": 774,
+      "totalTokens": 6580,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10513
+    },
+    "requestId": "893e2489-6447-43b9-94f5-094e8fadd3d6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two asymmetric eye sockets fill the upper half: the left is a purple circle with a white spiral center, the right is an orange ring with a blue dot at its core.\",\n    \"A wide mouth spans the lower third, built from black zigzag lines forming pointed teeth, with yellow rectangular shapes filling the gaps between them.\",\n    \"A pale green wash covers the background, strongest at lower left and right, while red looping lines cut diagonally across the full composition over every other layer.\"\n  ],\n  \"reading\": \"The face reads as a mask pulled apart by competing line systems. Heavy black strokes define the skull-like structure, but red arcs and blue hooks spill past the jaw and forehead. The mismatched eyes—one cool purple, one hot orange—give the head a lopsided alertness, as though each side watches something different. Yellow teeth grin against a soft green field, mixing menace with something almost comic.\",\n  \"contextAngle\": \"This work shares its title with another variant in the owned subset. Compared to its title neighbor Scrimshaw5, the background shifts from bright yellow to muted green, and the line density thins enough to let open color patches breathe between strokes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY\",\n      \"reason\": \"Both feature spiral-filled eye sockets and jagged tooth rows, but Scrimshaw5 packs its lines far tighter, leaving almost no bare background visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2\",\n      \"reason\": \"nnxyz #31 shares the zigzag teeth motif and layered white marks over yellow, though its black fills create heavier mass where this work stays open and airy.\"\n    }\n  ],\n  \"tags\": [\n    \"skull-like face\",\n    \"spiral eyes\",\n    \"zigzag teeth\",\n    \"layered line work\",\n    \"green background wash\",\n    \"asymmetric features\"\n  ],\n  \"lookingQuestion\": \"How does the contrast between the cool purple left eye and the warm orange right eye affect the way your gaze moves across the face?\",\n  \"ambiguities\": [\n    \"Two works in the owned subset share the title Scrimshaw6; which came first cannot be determined from title order alone.\",\n    \"Small yellow and blue hook shapes at the edges may be fragments of additional figures or purely abstract marks—the image does not resolve this.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed purple circle with white spiral at left eye and orange ring with blue dot at right eye match the image; no color swap needed.\",\n    \"Background green wash is strongest at lower left and lower right, not exclusively lower right as draft stated; corrected placement.\",\n    \"Comparison to nnxyz #31 verified: both show zigzag tooth rows and white line marks over yellow areas, and nnxyz #31 does use heavier black fills.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU/image.png",
+        "imageSHA256": "0cbae346fa04bfe60a8fc18a15c3d837a67856d8c4199cfbc70d3293e2cd0e94"
+      },
+      {
+        "artworkId": "QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp/image.png",
+        "imageSHA256": "0ca4a88a11e4bc7a87daea94cb47751bb8a7039eb28e79379ec6339792639625"
+      },
+      {
+        "artworkId": "QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2/image.png",
+        "imageSHA256": "c00d7770fb9f7946da0209d3c75ec7aba20c2af921142764035fd365d639bc16"
+      },
+      {
+        "artworkId": "QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY/image.png",
+        "imageSHA256": "a2d236328a681914a143fcce7a333955b097277b0853c582ce0973c5391ef350"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two asymmetric eye sockets dominate the upper half: the left is a purple circle with a white spiral center, the right is an orange ring with a blue dot.\", \"A wide mouth spans the lower third, built from black zigzag lines forming pointed teeth, with yellow rectangular shapes filling the gaps between them.\", \"A pale green wash covers the background, especially at lower right, while red looping lines cut diagonally across the entire composition over every other layer.\"], \"reading\": \"The face reads as a mask pulled apart by competing line systems. Heavy black strokes define the skull-like structure, but red arcs and blue hooks refuse to stay inside it, spilling past the jaw and forehead. The mismatched eyes—one cool purple, one hot orange—give the head a lopsided alertness, as though each side watches something different. Yellow teeth grin against a soft green field, mixing menace with something almost comic.\", \"contextAngle\": \"This work shares its title with another variant in the owned subset. Compared to its title neighbor Scrimshaw5, the background shifts from bright yellow to muted green, and the line density thins enough to let open color patches breathe between strokes.\", \"connections\": [{\"targetArtworkId\": \"QmcJUTRqU9y2WjiexBkf5xSfaUADHgpEpw5FRxWkpuVHQY\", \"reason\": \"Both feature spiral-filled eye sockets and jagged tooth rows, but Scrimshaw5 packs its lines far tighter, leaving almost no bare background visible.\"}, {\"targetArtworkId\": \"QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2\", \"reason\": \"nnxyz #31 shares the zigzag teeth motif and layered white marks over yellow, though its black fills create heavier mass where this work stays open and airy.\"}], \"tags\": [\"skull-like face\", \"spiral eyes\", \"zigzag teeth\", \"layered line work\", \"green background wash\", \"asymmetric features\"], \"lookingQuestion\": \"How does the contrast between the cool purple left eye and the warm orange right eye affect the way your gaze moves across the face?\", \"ambiguities\": [\"Two works in the owned subset share the title Scrimshaw6; which came first cannot be determined from title order alone.\", \"Small yellow and blue hook shapes at the edges may be fragments of additional figures or purely abstract marks—the image does not resolve this.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

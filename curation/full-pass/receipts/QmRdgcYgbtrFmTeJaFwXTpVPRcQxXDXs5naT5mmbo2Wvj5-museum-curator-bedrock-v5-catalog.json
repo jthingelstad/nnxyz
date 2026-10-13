@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:37.754188-05:00",
+    "usage": {
+      "inputTokens": 6338,
+      "outputTokens": 832,
+      "totalTokens": 7170,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13425
+    },
+    "requestId": "d0685936-0620-4819-babd-2e92b92313bf",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad-shouldered figure fills the frame, its body built from dark olive and black banded segments, with two large rounded feet planted at the bottom center.\",\n    \"Wide wings spread left and right, layered with dense white, gold, and teal hatched lines over dark brown-green masses, edged with loose pink outlines that extend into the purple background.\",\n    \"The face is small relative to the body: a pale oval mask carries red angular marks and a spiral, topped by two thin antennae curling upward against the deep purple sky, which is scattered with yellow zigzag lines.\"\n  ],\n  \"reading\": \"A squat, armored figure stands front-on, wings flung wide in a posture that reads as either threat or display. The banded torso and heavy feet give it weight, while the small masked face—red marks, spiral, antennae—pulls attention upward to something stranger and more fragile. Yellow zigzags crackle across the purple ground, making the stillness of the stance feel charged rather than calm.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #38 and nnxyz nnotb #40. All three feature masked figures against saturated grounds, but #39 shifts from the single hooded form of #38 to a winged, symmetrical silhouette, while #40 moves toward softer, blurred volumes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR3atsU3reQqLyPWY7Dc58HsujbwTs1yfYQ8ctSar12go\",\n      \"reason\": \"Both #39 and #40 place a gold-and-olive figure against a purple ground with pink outline work, but #40 replaces #39's dense hatched wings with smooth, bubble-like inflated forms, making the contrast in surface texture direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm\",\n      \"reason\": \"Both #38 and #39 use a red mark cluster at the face center as a focal point against a dark mask, but #38 places this on a hooded figure in a green field while #39 expands the composition outward with wings and a charged background.\"\n    }\n  ],\n  \"tags\": [\n    \"winged figure\",\n    \"banded segmented body\",\n    \"masked face with antennae\",\n    \"hatched wing texture\",\n    \"zigzag background marks\",\n    \"symmetrical frontal stance\"\n  ],\n  \"interpretiveTags\": [\n    \"charged stillness\",\n    \"threat-or-display ambiguity\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—the small masked face at the top of the body, the spread wings, or the heavy feet at the bottom—and what does that path through the image do to how large or small the figure feels?\",\n  \"ambiguities\": [\n    \"The red marks on the face mask resemble lettering or symbols but are not legibly resolved at this scale; treating them as content rather than text.\",\n    \"The rawblocks #52 comparison image shows a face-focused composition with overlapping scribbled lines but shares no strong formal structure with #39's winged symmetry, so it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRdgcYgbtrFmTeJaFwXTpVPRcQxXDXs5naT5mmbo2Wvj5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRdgcYgbtrFmTeJaFwXTpVPRcQxXDXs5naT5mmbo2Wvj5/image.png",
+        "imageSHA256": "cd8dd5ac68358a1fc61e8f8d64dc74296d6e9b3fd82dbd4aa87f738e0d023e79"
+      },
+      {
+        "artworkId": "QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm/image.png",
+        "imageSHA256": "7c6a1f5af4cb0d7db8ff108a81ce519bb10d13735ef3ad162dd9e89f2322a081"
+      },
+      {
+        "artworkId": "QmaZYZ9pHoVxgy7j2QomhxFbCXmC3CrgLhm6LNJzjuvRHP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaZYZ9pHoVxgy7j2QomhxFbCXmC3CrgLhm6LNJzjuvRHP/image.png",
+        "imageSHA256": "102d002601cd1eaf39b0177a21cfd36473864db446c7822e247c289164ff5b4c"
+      },
+      {
+        "artworkId": "QmR3atsU3reQqLyPWY7Dc58HsujbwTs1yfYQ8ctSar12go",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR3atsU3reQqLyPWY7Dc58HsujbwTs1yfYQ8ctSar12go/image.png",
+        "imageSHA256": "8bd7dcfb7b715adb183164afe5ee775afea165af5e64ee57b355dc35ad54799c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:45.157004-05:00",
+    "usage": {
+      "inputTokens": 7192,
+      "outputTokens": 1012,
+      "totalTokens": 8204,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7321
+    },
+    "requestId": "e5eed5ad-3ead-4431-a910-a3653f45896c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad-shouldered figure fills the frame, its body built from dark olive and black banded segments, with two large rounded feet planted at the bottom center.\",\n    \"Wide wings spread left and right, layered with dense white, gold, and teal hatched lines over dark brown-green masses, edged with loose pink outlines that extend into the purple background.\",\n    \"The face is small relative to the body: a pale oval mask carries red angular marks and a spiral, topped by two thin antennae curling upward against the deep purple ground, which is scattered with yellow zigzag lines.\"\n  ],\n  \"reading\": \"A squat, armored figure stands front-on, wings flung wide in a posture that reads as either threat or display. The banded torso and heavy feet give it weight, while the small masked face—red marks, spiral, antennae—pulls attention upward to something stranger and more fragile. Yellow zigzags crackle across the purple ground, making the stillness of the stance feel charged rather than calm.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #38 and nnxyz nnotb #40. All three feature masked figures against saturated grounds, but #39 shifts from the single hooded form of #38 to a winged, symmetrical silhouette, while #40 moves toward softer, blurred volumes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR3atsU3reQqLyPWY7Dc58HsujbwTs1yfYQ8ctSar12go\",\n      \"reason\": \"Both #39 and #40 place a gold-and-olive figure against a purple ground with pink outline work, but #40 replaces #39's dense hatched wings with smooth, bubble-like inflated forms, making the contrast in surface texture direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm\",\n      \"reason\": \"Both #38 and #39 use a red mark cluster at the face center as a focal point against a dark mask, but #38 places this on a hooded figure against a green field while #39 expands outward with wings and a charged background.\"\n    }\n  ],\n  \"tags\": [\n    \"winged figure\",\n    \"banded segmented body\",\n    \"masked face with antennae\",\n    \"hatched wing texture\",\n    \"zigzag background marks\",\n    \"symmetrical frontal stance\"\n  ],\n  \"interpretiveTags\": [\n    \"charged stillness\",\n    \"threat-or-display ambiguity\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—the small masked face at the top of the body, the spread wings, or the heavy feet at the bottom—and what does that path through the image do to how large or small the figure feels?\",\n  \"ambiguities\": [\n    \"The red marks on the face mask resemble lettering or symbols but are not legibly resolved at this scale; treating them as content rather than text.\",\n    \"The rawblocks #52 comparison image shows a face-focused composition with overlapping scribbled lines but shares no strong formal structure with #39's winged symmetry, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed against primary image: banded olive-black torso, teal-white-gold hatching on wings, pink edge lines, yellow zigzags on purple ground, and pale oval mask with red marks and spiral all verified as visible.\",\n    \"Both connection comparisons checked against inspected images: #40 confirmed purple ground, pink outlines, and smooth inflated volumes contrasting with #39's hatching; #38 confirmed red face marks on dark mask against green field, supporting the stated contrast.\",\n    \"No invented intent, biography, media, or duration language found in draft; 'deliberately' and similar flagged words absent; reading word count confirmed within 55–80 range; context within 25–55 range; no numerical technical facts in prose.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRdgcYgbtrFmTeJaFwXTpVPRcQxXDXs5naT5mmbo2Wvj5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRdgcYgbtrFmTeJaFwXTpVPRcQxXDXs5naT5mmbo2Wvj5/image.png",
+        "imageSHA256": "cd8dd5ac68358a1fc61e8f8d64dc74296d6e9b3fd82dbd4aa87f738e0d023e79"
+      },
+      {
+        "artworkId": "QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm/image.png",
+        "imageSHA256": "7c6a1f5af4cb0d7db8ff108a81ce519bb10d13735ef3ad162dd9e89f2322a081"
+      },
+      {
+        "artworkId": "QmaZYZ9pHoVxgy7j2QomhxFbCXmC3CrgLhm6LNJzjuvRHP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaZYZ9pHoVxgy7j2QomhxFbCXmC3CrgLhm6LNJzjuvRHP/image.png",
+        "imageSHA256": "102d002601cd1eaf39b0177a21cfd36473864db446c7822e247c289164ff5b4c"
+      },
+      {
+        "artworkId": "QmR3atsU3reQqLyPWY7Dc58HsujbwTs1yfYQ8ctSar12go",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR3atsU3reQqLyPWY7Dc58HsujbwTs1yfYQ8ctSar12go/image.png",
+        "imageSHA256": "8bd7dcfb7b715adb183164afe5ee775afea165af5e64ee57b355dc35ad54799c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad-shouldered figure fills the frame, its body built from dark olive and black banded segments, with two large rounded feet planted at the bottom center.\", \"Wide wings spread left and right, layered with dense white, gold, and teal hatched lines over dark brown-green masses, edged with loose pink outlines that extend into the purple background.\", \"The face is small relative to the body: a pale oval mask carries red angular marks and a spiral, topped by two thin antennae curling upward against the deep purple sky, which is scattered with yellow zigzag lines.\"], \"reading\": \"A squat, armored figure stands front-on, wings flung wide in a posture that reads as either threat or display. The banded torso and heavy feet give it weight, while the small masked face—red marks, spiral, antennae—pulls attention upward to something stranger and more fragile. Yellow zigzags crackle across the purple ground, making the stillness of the stance feel charged rather than calm.\", \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #38 and nnxyz nnotb #40. All three feature masked figures against saturated grounds, but #39 shifts from the single hooded form of #38 to a winged, symmetrical silhouette, while #40 moves toward softer, blurred volumes.\", \"connections\": [{\"targetArtworkId\": \"QmR3atsU3reQqLyPWY7Dc58HsujbwTs1yfYQ8ctSar12go\", \"reason\": \"Both #39 and #40 place a gold-and-olive figure against a purple ground with pink outline work, but #40 replaces #39's dense hatched wings with smooth, bubble-like inflated forms, making the contrast in surface texture direct and visible.\"}, {\"targetArtworkId\": \"QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm\", \"reason\": \"Both #38 and #39 use a red mark cluster at the face center as a focal point against a dark mask, but #38 places this on a hooded figure in a green field while #39 expands the composition outward with wings and a charged background.\"}], \"tags\": [\"winged figure\", \"banded segmented body\", \"masked face with antennae\", \"hatched wing texture\", \"zigzag background marks\", \"symmetrical frontal stance\"], \"interpretiveTags\": [\"charged stillness\", \"threat-or-display ambiguity\"], \"lookingQuestion\": \"Where does your eye settle first—the small masked face at the top of the body, the spread wings, or the heavy feet at the bottom—and what does that path through the image do to how large or small the figure feels?\", \"ambiguities\": [\"The red marks on the face mask resemble lettering or symbols but are not legibly resolved at this scale; treating them as content rather than text.\", \"The rawblocks #52 comparison image shows a face-focused composition with overlapping scribbled lines but shares no strong formal structure with #39's winged symmetry, so it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

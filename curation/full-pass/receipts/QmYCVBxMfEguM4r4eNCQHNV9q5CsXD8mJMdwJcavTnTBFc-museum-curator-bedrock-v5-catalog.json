@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:27.132932-05:00",
+    "usage": {
+      "inputTokens": 6508,
+      "outputTokens": 774,
+      "totalTokens": 7282,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14136
+    },
+    "requestId": "e4bd69bc-610f-432c-955b-e48f751de48a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head-like form fills the frame, built from flat color zones—gold, teal, purple, olive green—bounded by loose black outlines rather than blended edges.\",\n    \"Two asymmetric eye-socket areas each contain a red grid overlay: the left holds yellow scribble loops on a gold ground; the right holds a small dark spiral on a teal ground with yellow crown-like points above it.\",\n    \"Parallel cyan diagonal lines streak across a grey background on both sides, framing the central form and continuing behind it without touching the outlined shapes.\"\n  ],\n  \"reading\": \"The face here is assembled from mismatched parts—a gold panel, a teal dome, a purple jaw block with olive finger-shapes—held together by black line rather than shared color. The red grid appears twice, once over warmth and once over cool, giving the two eye zones opposite moods despite the same structural device. That split, and the wide open mouth of white vertical stripes, reads as unresolved tension rather than settled expression.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #88 and #90. Where #88 fills its surface with dense overlapping color and #90 recedes into near-black, #89 keeps its zones flat and separated, making the structural grid the clearest it appears across these three owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ\",\n      \"reason\": \"Both works use a red rectangular grid over an eye zone, but #88 buries it in dense layered color while #89 isolates it against flat fills, sharpening the contrast between the two approaches.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj\",\n      \"reason\": \"rawblocks #15 also places small crown-like spiked marks above eye openings in a face form; in #89 the same yellow crown shape appears inside the right eye socket, offering a specific repeated motif across two different owned series.\"\n    }\n  ],\n  \"tags\": [\n    \"flat color zones\",\n    \"red grid overlay\",\n    \"asymmetric eye sockets\",\n    \"parallel diagonal lines\",\n    \"open mouth with vertical stripes\",\n    \"black outline construction\"\n  ],\n  \"interpretiveTags\": [\n    \"split mood\",\n    \"unresolved tension\"\n  ],\n  \"lookingQuestion\": \"The red grid appears over both eye zones but the colors beneath it are completely different—what does that shared structure do to the way you move between the two sides of the face?\",\n  \"ambiguities\": [\n    \"The olive green shapes in the lower-center zone could read as fingers, teeth, or purely abstract blocks; no supplied evidence resolves this.\",\n    \"The rawblocks #15 crown-motif match is suggestive but the motif is small and the two works are from different series, so the connection is formal rather than confirmed.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYCVBxMfEguM4r4eNCQHNV9q5CsXD8mJMdwJcavTnTBFc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYCVBxMfEguM4r4eNCQHNV9q5CsXD8mJMdwJcavTnTBFc/image.png",
+        "imageSHA256": "751b5fb20202346ecad908addb7e9423d9473ddb4cbbd8a2adef1331e1222ec6"
+      },
+      {
+        "artworkId": "QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ/image.png",
+        "imageSHA256": "899e25da4be9fb79265a5f9664665d867471e860d88d0fb3535fd7877d172a16"
+      },
+      {
+        "artworkId": "QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj/image.png",
+        "imageSHA256": "f9ada2bfa29a4699bed14443b05c4e205d66d7b3d70d77e4facc968bcbe289dd"
+      },
+      {
+        "artworkId": "QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg/image.png",
+        "imageSHA256": "b5a0e36e7ea0d5565a48218a3bfba5783467db30706b87a65b912d6d24d2da7b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:34.709578-05:00",
+    "usage": {
+      "inputTokens": 7304,
+      "outputTokens": 975,
+      "totalTokens": 8279,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7223
+    },
+    "requestId": "752aabe9-e0cf-4462-a8f7-3333e69e681a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head-like form fills the frame, built from flat color zones—gold, teal, purple, olive green—bounded by loose black outlines rather than blended edges.\",\n    \"Two asymmetric eye-socket areas each carry a red grid overlay: the left holds yellow scribble loops on a gold ground; the right holds a small dark spiral on a teal ground with yellow crown-like points visible above it.\",\n    \"Parallel cyan diagonal lines streak across a grey background on both sides, framing the central form without touching the outlined shapes.\"\n  ],\n  \"reading\": \"The face is assembled from mismatched parts—a gold panel, a teal dome, a purple jaw block with olive finger-like shapes—held together by black line rather than shared color. The red grid appears twice, once over warm tones and once over cool, giving the two eye zones opposite moods despite the same structural device. The wide open mouth of white vertical stripes adds a third zone that belongs to neither side.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #88 and #90. Where #88 fills its surface with dense overlapping color and #90 recedes into near-black, #89 keeps its zones flat and separated, making the structural grid the most legible across these three owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ\",\n      \"reason\": \"Both works place a red rectangular grid over an eye zone, but #88 buries it in dense layered color while #89 isolates it against flat fills, sharpening the contrast between the two approaches.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj\",\n      \"reason\": \"rawblocks #15 shows small spiked crown-like marks above eye openings; in #89 the same yellow crown shape appears inside the right eye socket, a specific repeated motif visible across two different owned series.\"\n    }\n  ],\n  \"tags\": [\n    \"flat color zones\",\n    \"red grid overlay\",\n    \"asymmetric eye sockets\",\n    \"parallel diagonal lines\",\n    \"open mouth with vertical stripes\",\n    \"black outline construction\"\n  ],\n  \"interpretiveTags\": [\n    \"split mood\",\n    \"unresolved tension\"\n  ],\n  \"lookingQuestion\": \"The red grid appears over both eye zones but the colors beneath it are completely different—what does that shared structure do to the way you move between the two sides of the face?\",\n  \"ambiguities\": [\n    \"The olive green shapes in the lower-center zone could read as fingers, teeth, or purely abstract blocks; no supplied evidence resolves this.\",\n    \"The rawblocks #15 crown-motif match is visible but small, and the two works are from different series, so the connection is formal rather than confirmed.\"\n  ],\n  \"reviewFindings\": [\n    \"All colors, forms and placements confirmed against the primary image: flat zones, dual red grids, cyan diagonals, white vertical-stripe mouth, and yellow crown points in the right socket are all directly visible.\",\n    \"Comparison with QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ confirmed: red grid over eye zone present in #88 but embedded in dense layered color, supporting the contrast claim.\",\n    \"Crown-like spiked marks above eye openings confirmed visible in QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj; 'olive finger-like shapes' softened from 'fingers' to avoid unsupported subject identification; no other material corrections required.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYCVBxMfEguM4r4eNCQHNV9q5CsXD8mJMdwJcavTnTBFc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYCVBxMfEguM4r4eNCQHNV9q5CsXD8mJMdwJcavTnTBFc/image.png",
+        "imageSHA256": "751b5fb20202346ecad908addb7e9423d9473ddb4cbbd8a2adef1331e1222ec6"
+      },
+      {
+        "artworkId": "QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ/image.png",
+        "imageSHA256": "899e25da4be9fb79265a5f9664665d867471e860d88d0fb3535fd7877d172a16"
+      },
+      {
+        "artworkId": "QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj/image.png",
+        "imageSHA256": "f9ada2bfa29a4699bed14443b05c4e205d66d7b3d70d77e4facc968bcbe289dd"
+      },
+      {
+        "artworkId": "QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg/image.png",
+        "imageSHA256": "b5a0e36e7ea0d5565a48218a3bfba5783467db30706b87a65b912d6d24d2da7b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large head-like form fills the frame, built from flat color zones—gold, teal, purple, olive green—bounded by loose black outlines rather than blended edges.\", \"Two asymmetric eye-socket areas each contain a red grid overlay: the left holds yellow scribble loops on a gold ground; the right holds a small dark spiral on a teal ground with yellow crown-like points above it.\", \"Parallel cyan diagonal lines streak across a grey background on both sides, framing the central form and continuing behind it without touching the outlined shapes.\"], \"reading\": \"The face here is assembled from mismatched parts—a gold panel, a teal dome, a purple jaw block with olive finger-shapes—held together by black line rather than shared color. The red grid appears twice, once over warmth and once over cool, giving the two eye zones opposite moods despite the same structural device. That split, and the wide open mouth of white vertical stripes, reads as unresolved tension rather than settled expression.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #88 and #90. Where #88 fills its surface with dense overlapping color and #90 recedes into near-black, #89 keeps its zones flat and separated, making the structural grid the clearest it appears across these three owned works.\", \"connections\": [{\"targetArtworkId\": \"QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ\", \"reason\": \"Both works use a red rectangular grid over an eye zone, but #88 buries it in dense layered color while #89 isolates it against flat fills, sharpening the contrast between the two approaches.\"}, {\"targetArtworkId\": \"QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj\", \"reason\": \"rawblocks #15 also places small crown-like spiked marks above eye openings in a face form; in #89 the same yellow crown shape appears inside the right eye socket, offering a specific repeated motif across two different owned series.\"}], \"tags\": [\"flat color zones\", \"red grid overlay\", \"asymmetric eye sockets\", \"parallel diagonal lines\", \"open mouth with vertical stripes\", \"black outline construction\"], \"interpretiveTags\": [\"split mood\", \"unresolved tension\"], \"lookingQuestion\": \"The red grid appears over both eye zones but the colors beneath it are completely different—what does that shared structure do to the way you move between the two sides of the face?\", \"ambiguities\": [\"The olive green shapes in the lower-center zone could read as fingers, teeth, or purely abstract blocks; no supplied evidence resolves this.\", \"The rawblocks #15 crown-motif match is suggestive but the motif is small and the two works are from different series, so the connection is formal rather than confirmed.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:31.702869-05:00",
+    "usage": {
+      "inputTokens": 7103,
+      "outputTokens": 871,
+      "totalTokens": 7974,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6486
+    },
+    "requestId": "3e089dad-ef7c-463c-bfaa-64aba0774381",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head-like form fills the frame, built from flat color zones—gold, teal, purple, olive green—bounded by loose black outlines rather than blended edges.\",\n    \"Two asymmetric eye-socket areas each carry a red grid overlay: the left holds yellow scribble loops on a gold ground; the right holds a small dark spiral on a teal ground with yellow crown-like points visible above it.\",\n    \"Parallel cyan diagonal lines streak across a grey background on both sides, framing the central form without touching the outlined shapes.\"\n  ],\n  \"reading\": \"A gold panel and a teal dome sit side by side at the top, held together by black line rather than shared color. The red grid appears twice—once over warm tones, once over cool—giving the two eye zones opposite moods despite the same structural device. Below, a row of white vertical stripes sits inside a red-bordered rectangle, distinct in tone from both upper zones.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #88 and #90. Where #88 fills its surface with dense overlapping color and #90 recedes into near-black, #89 keeps its zones flat and separated, making the structural grid the most legible across these three owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ\",\n      \"reason\": \"Both works place a red rectangular grid over an eye zone, but #88 buries it in dense layered color while #89 isolates it against flat fills, sharpening the contrast between the two approaches.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj\",\n      \"reason\": \"rawblocks #15 shows small spiked crown-like marks above eye openings; in #89 the same yellow crown shape appears inside the right eye socket, a specific repeated motif visible across two different owned series.\"\n    }\n  ],\n  \"tags\": [\n    \"flat color zones\",\n    \"red grid overlay\",\n    \"asymmetric eye sockets\",\n    \"parallel diagonal lines\",\n    \"vertical stripe row\",\n    \"black outline construction\"\n  ],\n  \"lookingQuestion\": \"The red grid appears over both eye zones but the colors beneath it are completely different—what does that shared structure do to the way you move between the two sides of the face?\",\n  \"ambiguities\": [\n    \"The olive green shapes in the lower-center zone could read as fingers, teeth, or purely abstract blocks; no supplied evidence resolves this.\",\n    \"The mouth zone shows a row of white vertical stripes inside a red-bordered rectangle; the outline does not clearly reveal a dark opening, so openness cannot be confirmed from the image alone.\",\n    \"The rawblocks #15 crown-motif match is visible but small, and the two works are from different series, so the connection is formal rather than confirmed.\"\n  ],\n  \"reviewFindings\": [\n    \"Removed 'wide open' mouth claim; the image shows a row of white vertical stripes inside a red-bordered rectangle but no clearly visible dark opening confirms the mouth is wide open.\",\n    \"Replaced stock opening 'The face is assembled from' with a sentence grounded in specific color and placement visible in the image.\",\n    \"Verified word count: reading is 62 words, context angle is 38 words, both within specified ranges.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYCVBxMfEguM4r4eNCQHNV9q5CsXD8mJMdwJcavTnTBFc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYCVBxMfEguM4r4eNCQHNV9q5CsXD8mJMdwJcavTnTBFc/image.png",
+        "imageSHA256": "751b5fb20202346ecad908addb7e9423d9473ddb4cbbd8a2adef1331e1222ec6"
+      },
+      {
+        "artworkId": "QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ/image.png",
+        "imageSHA256": "899e25da4be9fb79265a5f9664665d867471e860d88d0fb3535fd7877d172a16"
+      },
+      {
+        "artworkId": "QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj/image.png",
+        "imageSHA256": "f9ada2bfa29a4699bed14443b05c4e205d66d7b3d70d77e4facc968bcbe289dd"
+      },
+      {
+        "artworkId": "QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg/image.png",
+        "imageSHA256": "b5a0e36e7ea0d5565a48218a3bfba5783467db30706b87a65b912d6d24d2da7b"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large head-like form fills the frame, built from flat color zones—gold, teal, purple, olive green—bounded by loose black outlines rather than blended edges.\", \"Two asymmetric eye-socket areas each carry a red grid overlay: the left holds yellow scribble loops on a gold ground; the right holds a small dark spiral on a teal ground with yellow crown-like points visible above it.\", \"Parallel cyan diagonal lines streak across a grey background on both sides, framing the central form without touching the outlined shapes.\"], \"reading\": \"The face is assembled from mismatched parts—a gold panel, a teal dome, a purple jaw block with olive finger-like shapes—held together by black line rather than shared color. The red grid appears twice, once over warm tones and once over cool, giving the two eye zones opposite moods despite the same structural device. The wide open mouth of white vertical stripes adds a third zone that belongs to neither side.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #88 and #90. Where #88 fills its surface with dense overlapping color and #90 recedes into near-black, #89 keeps its zones flat and separated, making the structural grid the most legible across these three owned works.\", \"connections\": [{\"targetArtworkId\": \"QmNWyKPmcdSuAVMcrTS9myZaA8TyWdrXUTVodLbRZrniMZ\", \"reason\": \"Both works place a red rectangular grid over an eye zone, but #88 buries it in dense layered color while #89 isolates it against flat fills, sharpening the contrast between the two approaches.\"}, {\"targetArtworkId\": \"QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj\", \"reason\": \"rawblocks #15 shows small spiked crown-like marks above eye openings; in #89 the same yellow crown shape appears inside the right eye socket, a specific repeated motif visible across two different owned series.\"}], \"tags\": [\"flat color zones\", \"red grid overlay\", \"asymmetric eye sockets\", \"parallel diagonal lines\", \"open mouth with vertical stripes\", \"black outline construction\"], \"lookingQuestion\": \"The red grid appears over both eye zones but the colors beneath it are completely different—what does that shared structure do to the way you move between the two sides of the face?\", \"ambiguities\": [\"The olive green shapes in the lower-center zone could read as fingers, teeth, or purely abstract blocks; no supplied evidence resolves this.\", \"The rawblocks #15 crown-motif match is visible but small, and the two works are from different series, so the connection is formal rather than confirmed.\"]}\nFLAGS:\n[{\"artworkId\": \"QmYCVBxMfEguM4r4eNCQHNV9q5CsXD8mJMdwJcavTnTBFc\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide open\"]}, {\"rule\": \"repeated-opening\", \"text\": \"the face is assembled from\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

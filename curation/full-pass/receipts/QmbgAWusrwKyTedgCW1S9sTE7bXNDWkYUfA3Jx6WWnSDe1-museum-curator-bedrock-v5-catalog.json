@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:12.752493-05:00",
+    "usage": {
+      "inputTokens": 5762,
+      "outputTokens": 829,
+      "totalTokens": 6591,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13862
+    },
+    "requestId": "bf688b14-3770-4527-a8ef-7e0281ff5977",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid black rounded figure sits low and centered, cropped at the bottom edge, with a small circular knob at its top and two wide lateral lobes flanking a central disc containing small looped and jagged yellow marks.\",\n    \"Yellow zigzag and wavy lines radiate outward from the figure in all directions against a flat deep-orange field, varying from tight zigzags near the top to longer horizontal waves at the sides and lower corners.\",\n    \"A white inner border separates the orange field from a bright yellow outer border, and a small angular yellow signature mark sits in the lower-left corner of the white zone.\"\n  ],\n  \"reading\": \"The black figure sits at the lower half of the frame, its bulk pressing toward the viewer while the upper field stays open and unbroken. Yellow lines pulse outward from it in every direction, some tight and jagged, others long and rolling — a visible range of agitation. The small marks inside the central disc read as a face under pressure, and the overall effect feels less like calm than like something held just barely in place.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the same black-silhouette-plus-yellow-radiating-line grammar appears in title neighbor nnxyz nnotb #64, there on a teal ground with a bird-like form. The collector's link between nnxyz and scrimshaw finds a foothold in the shared use of radiating line bursts as an expressive device across both collections.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW\",\n      \"reason\": \"Both works place a solid black silhouette against a flat ground and surround it with yellow radiating zigzag lines, but #64 shifts to teal and a horizontal bird shape, making the contrast in ground color and figure orientation visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmfNadsrbcpMmJRG5qXVijUcqeGarsAYAHoGybBvkhfKva\",\n      \"reason\": \"Scrimshaw9 uses dense radiating line bursts fanning outward from a central form — the same structural device as the yellow lines here — though Scrimshaw9 layers multiple colors and fills the whole field rather than leaving open space.\"\n    }\n  ],\n  \"tags\": [\n    \"black silhouette\",\n    \"radiating zigzag lines\",\n    \"orange ground\",\n    \"yellow line marks\",\n    \"face marks within disc\",\n    \"figure cropped at frame edge\"\n  ],\n  \"interpretiveTags\": [\n    \"contained agitation\",\n    \"pressure or intensity\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the radiating lines change from tight zigzags to longer waves, and does that shift follow any axis of the figure's shape?\",\n  \"ambiguities\": [\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps may exist elsewhere in the nnotb family; no variant of #63 is recorded.\",\n    \"The comparison with QmTbgoi65G6JjTGZAsUN8wFMHEodCZmmU2N4Ceeaa5iG3V (#62) was inspected but omitted: its white-ground composition and corner-placed figure offer no stronger formal connection than the two selected works.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbgAWusrwKyTedgCW1S9sTE7bXNDWkYUfA3Jx6WWnSDe1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbgAWusrwKyTedgCW1S9sTE7bXNDWkYUfA3Jx6WWnSDe1/image.png",
+        "imageSHA256": "4c559fb07a221a439a5ca07102aaf03f793aae79b9c427b996d9ad467bf8d00c"
+      },
+      {
+        "artworkId": "QmTbgoi65G6JjTGZAsUN8wFMHEodCZmmU2N4Ceeaa5iG3V",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTbgoi65G6JjTGZAsUN8wFMHEodCZmmU2N4Ceeaa5iG3V/image.png",
+        "imageSHA256": "9538e0ac73c44f7fb1dc2033640ed96d8da2cde04f71b78525ea226f5bcde09e"
+      },
+      {
+        "artworkId": "QmfNadsrbcpMmJRG5qXVijUcqeGarsAYAHoGybBvkhfKva",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmfNadsrbcpMmJRG5qXVijUcqeGarsAYAHoGybBvkhfKva/image.png",
+        "imageSHA256": "e4478bdbc6870c94729275593212d6af6a03bcd1babd5d210d369ab543661ec0"
+      },
+      {
+        "artworkId": "QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW/image.png",
+        "imageSHA256": "ad963094e90bd2e743a87b3b29bb22573e348ddefb80cc808b9b293212331545"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:19.525670-05:00",
+    "usage": {
+      "inputTokens": 6613,
+      "outputTokens": 941,
+      "totalTokens": 7554,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6724
+    },
+    "requestId": "c63b93b0-b5ed-435f-b31e-56b8031f254e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid black rounded figure sits low and centered, cropped at the bottom edge, with a small circular knob at its top and two wide lateral lobes flanking a central disc containing small looped and jagged yellow marks.\",\n    \"Yellow zigzag and wavy lines radiate outward from the figure in all directions against a flat deep-orange field, varying from tight zigzags near the top to longer horizontal waves at the sides and lower corners.\",\n    \"A white inner border separates the orange field from a bright yellow outer border, and a small angular yellow signature mark sits in the lower-left corner of the white zone.\"\n  ],\n  \"reading\": \"The black figure sits in the lower half of the frame, its bulk pressing toward the viewer while the upper field stays open and unbroken. Yellow lines spread outward in every direction — some tight and jagged near the top, others long and rolling at the sides. The small marks inside the central disc suggest a face under some kind of strain, and the overall image feels less settled than suspended.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #64 shares the same black-silhouette-plus-yellow-radiating-line structure on a teal ground. The collector's link between nnxyz and scrimshaw finds a foothold in the shared use of radiating line bursts as an expressive device across both collections.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW\",\n      \"reason\": \"Both works place a solid black silhouette against a flat ground and surround it with yellow radiating zigzag lines; #64 shifts to a teal ground and a horizontal bird-like form, making the contrast in color and figure orientation concrete.\"\n    },\n    {\n      \"targetArtworkId\": \"QmfNadsrbcpMmJRG5qXVijUcqeGarsAYAHoGybBvkhfKva\",\n      \"reason\": \"Scrimshaw9 uses dense radiating line bursts fanning from a central form — the same structural device as the yellow lines here — though it layers multiple colors and fills the whole field rather than leaving open ground.\"\n    }\n  ],\n  \"tags\": [\n    \"black silhouette\",\n    \"radiating zigzag lines\",\n    \"orange ground\",\n    \"yellow line marks\",\n    \"face marks within disc\",\n    \"figure cropped at frame edge\"\n  ],\n  \"interpretiveTags\": [\n    \"contained agitation\",\n    \"suspended tension\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the radiating lines change from tight zigzags to longer waves, and does that shift follow any axis of the figure's shape?\",\n  \"ambiguities\": [\n    \"Title-derived order and recorded-creation order align for #63, but the metadata notes gaps may exist elsewhere in the nnotb family; no variant of #63 is recorded.\",\n    \"Comparison #62 was inspected but omitted: its white-ground, corner-placed figure offers no stronger formal connection than the two selected works.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: deep-orange field, yellow radiating lines with zigzag-to-wave variation, white inner border, yellow outer border, and yellow signature mark in lower-left white zone.\",\n    \"Both comparison images inspected: #64 confirmed teal ground with yellow radiating zigzags around a black bird-like silhouette; Scrimshaw9 confirmed dense multi-color radiating lines from a central form filling the full field — both comparisons are formally grounded.\",\n    \"Draft reading phrase 'held just barely in place' replaced with 'suspended' to remove stock metaphor; no invented biography, intent, technique, or unsupported subject identity found; word counts within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbgAWusrwKyTedgCW1S9sTE7bXNDWkYUfA3Jx6WWnSDe1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbgAWusrwKyTedgCW1S9sTE7bXNDWkYUfA3Jx6WWnSDe1/image.png",
+        "imageSHA256": "4c559fb07a221a439a5ca07102aaf03f793aae79b9c427b996d9ad467bf8d00c"
+      },
+      {
+        "artworkId": "QmTbgoi65G6JjTGZAsUN8wFMHEodCZmmU2N4Ceeaa5iG3V",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTbgoi65G6JjTGZAsUN8wFMHEodCZmmU2N4Ceeaa5iG3V/image.png",
+        "imageSHA256": "9538e0ac73c44f7fb1dc2033640ed96d8da2cde04f71b78525ea226f5bcde09e"
+      },
+      {
+        "artworkId": "QmfNadsrbcpMmJRG5qXVijUcqeGarsAYAHoGybBvkhfKva",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmfNadsrbcpMmJRG5qXVijUcqeGarsAYAHoGybBvkhfKva/image.png",
+        "imageSHA256": "e4478bdbc6870c94729275593212d6af6a03bcd1babd5d210d369ab543661ec0"
+      },
+      {
+        "artworkId": "QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW/image.png",
+        "imageSHA256": "ad963094e90bd2e743a87b3b29bb22573e348ddefb80cc808b9b293212331545"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A solid black rounded figure sits low and centered, cropped at the bottom edge, with a small circular knob at its top and two wide lateral lobes flanking a central disc containing small looped and jagged yellow marks.\", \"Yellow zigzag and wavy lines radiate outward from the figure in all directions against a flat deep-orange field, varying from tight zigzags near the top to longer horizontal waves at the sides and lower corners.\", \"A white inner border separates the orange field from a bright yellow outer border, and a small angular yellow signature mark sits in the lower-left corner of the white zone.\"], \"reading\": \"The black figure sits at the lower half of the frame, its bulk pressing toward the viewer while the upper field stays open and unbroken. Yellow lines pulse outward from it in every direction, some tight and jagged, others long and rolling — a visible range of agitation. The small marks inside the central disc read as a face under pressure, and the overall effect feels less like calm than like something held just barely in place.\", \"contextAngle\": \"Within the owned nnotb subset, the same black-silhouette-plus-yellow-radiating-line grammar appears in title neighbor nnxyz nnotb #64, there on a teal ground with a bird-like form. The collector's link between nnxyz and scrimshaw finds a foothold in the shared use of radiating line bursts as an expressive device across both collections.\", \"connections\": [{\"targetArtworkId\": \"QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW\", \"reason\": \"Both works place a solid black silhouette against a flat ground and surround it with yellow radiating zigzag lines, but #64 shifts to teal and a horizontal bird shape, making the contrast in ground color and figure orientation visible.\"}, {\"targetArtworkId\": \"QmfNadsrbcpMmJRG5qXVijUcqeGarsAYAHoGybBvkhfKva\", \"reason\": \"Scrimshaw9 uses dense radiating line bursts fanning outward from a central form — the same structural device as the yellow lines here — though Scrimshaw9 layers multiple colors and fills the whole field rather than leaving open space.\"}], \"tags\": [\"black silhouette\", \"radiating zigzag lines\", \"orange ground\", \"yellow line marks\", \"face marks within disc\", \"figure cropped at frame edge\"], \"interpretiveTags\": [\"contained agitation\", \"pressure or intensity\"], \"lookingQuestion\": \"Where exactly do the radiating lines change from tight zigzags to longer waves, and does that shift follow any axis of the figure's shape?\", \"ambiguities\": [\"Title-derived order and recorded-creation order align here, but the metadata notes gaps may exist elsewhere in the nnotb family; no variant of #63 is recorded.\", \"The comparison with QmTbgoi65G6JjTGZAsUN8wFMHEodCZmmU2N4Ceeaa5iG3V (#62) was inspected but omitted: its white-ground composition and corner-placed figure offer no stronger formal connection than the two selected works.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

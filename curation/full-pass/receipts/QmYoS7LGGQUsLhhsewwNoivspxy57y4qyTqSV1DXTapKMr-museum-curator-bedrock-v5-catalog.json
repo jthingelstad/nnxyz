@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:33.424668-05:00",
+    "usage": {
+      "inputTokens": 6116,
+      "outputTokens": 790,
+      "totalTokens": 6906,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12572
+    },
+    "requestId": "e9a886fe-8c61-40fc-bfa3-2a66aeb5572e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded, stuffed-toy-like figure sits centered on a flat yellow field; its body is built from overlapping blobs of ochre, pink, grey-green and pale blue, with black outlines tracing each swollen limb.\",\n    \"Two eyes are ringed by tight yellow spirals on a dark ground, and a small black nose sits above a mouth showing white teeth; jagged black marks at the crown read as a tuft of hair.\",\n    \"Loose red, pink and dark-blue scribble lines run across the torso and face, sitting visibly on top of the colour fills rather than blending into them.\"\n  ],\n  \"reading\": \"The figure reads as a toy made uneasy: the rounded, balloon-like forms suggest softness, but the layered scribbles and spiral eye rings pull against that comfort. The flat yellow surround keeps the mood open rather than threatening. What might be read as innocence and unease share the same surface without one cancelling the other.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #110 and nnxyz nnotb #112 in both title-derived and recorded-creation order. Those neighbors use flat silhouette and dense cross-hatching respectively, making the layered colour-and-scribble approach here distinct among the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmThbmxXFE6oHSyFZpuXQsMKZpG4w7DSdSzmMWxHfEjruS\",\n      \"reason\": \"nnxyz nnotb #110 shares the spiral eye treatment and visible scribble lines over colour fills, but places them on a dark ground with a framed border, making the yellow open field of #111 feel notably airier by contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34\",\n      \"reason\": \"nnxyz nnotb #112 uses a single flat colour field with a black silhouette and minimal marks, offering a direct contrast to #111's multi-layer colour-and-scribble approach on a similarly saturated ground.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded toy-like form\",\n    \"flat saturated yellow ground\",\n    \"spiral eye rings\",\n    \"layered scribble lines over colour fills\",\n    \"black outline construction\",\n    \"visible surface marks\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the scribble lines sit in relation to the colour fills beneath them, and does that layering feel the same across the face as it does across the torso?\",\n  \"ambiguities\": [\n    \"The overlapping colour patches suggest multiple passes of mark-making, but the sequence or number of layers cannot be confirmed from the image alone.\",\n    \"QmdHEg3abh9JKppBCdnRQYjfe6RywNqD49pMz29pg2GBRU (nnxyz nifty summer ink) shares a saturated flat ground but differs too strongly in subject and mark density to support a useful formal connection; omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYoS7LGGQUsLhhsewwNoivspxy57y4qyTqSV1DXTapKMr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYoS7LGGQUsLhhsewwNoivspxy57y4qyTqSV1DXTapKMr/image.png",
+        "imageSHA256": "486ee6b69c8df11843de81ebedf0212713395b1f8047ca025edc47cbab23a9e1"
+      },
+      {
+        "artworkId": "QmThbmxXFE6oHSyFZpuXQsMKZpG4w7DSdSzmMWxHfEjruS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmThbmxXFE6oHSyFZpuXQsMKZpG4w7DSdSzmMWxHfEjruS/image.png",
+        "imageSHA256": "7de0a93320f95aa5d40432a95bf8ad9c06fcec8a346224496c9b96ca4f795414"
+      },
+      {
+        "artworkId": "QmdHEg3abh9JKppBCdnRQYjfe6RywNqD49pMz29pg2GBRU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdHEg3abh9JKppBCdnRQYjfe6RywNqD49pMz29pg2GBRU/image.png",
+        "imageSHA256": "2f51d7a012fcae76d9289758366dafbaedc8c84cbadf46de16abd9acd6bd8642"
+      },
+      {
+        "artworkId": "QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34/image.png",
+        "imageSHA256": "5018456123a5e902800617437c2e1138da5bbc6d8a4cf9339304348202a6abaf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:39.740594-05:00",
+    "usage": {
+      "inputTokens": 6938,
+      "outputTokens": 916,
+      "totalTokens": 7854,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6255
+    },
+    "requestId": "d6fa8fd5-8104-46a8-b0ee-7ed66d7d04a7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded, stuffed-toy-like figure sits centered on a flat yellow field; its body is built from overlapping blobs of ochre, pink, grey-green and pale blue, with black outlines tracing each swollen limb.\",\n    \"Two eyes are ringed by tight yellow spirals on a dark ground, and a small black nose sits above a mouth showing white teeth; jagged black marks at the crown read as a tuft of hair.\",\n    \"Loose red, pink and dark-blue scribble lines run across the torso and face, sitting visibly on top of the colour fills rather than blending into them.\"\n  ],\n  \"reading\": \"The figure reads as a toy made uneasy: the rounded, balloon-like forms suggest softness, but the layered scribbles and spiral eye rings pull against that comfort. The flat yellow surround keeps the mood open rather than threatening. What might be read as innocence and unease share the same surface without one cancelling the other.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #110 and nnxyz nnotb #112 in both title-derived and recorded-creation order. Those neighbors use a dark framed ground and flat silhouette respectively, making the layered colour-and-scribble approach here distinct among the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmThbmxXFE6oHSyFZpuXQsMKZpG4w7DSdSzmMWxHfEjruS\",\n      \"reason\": \"nnxyz nnotb #110 shares the spiral eye treatment and scribble lines over colour fills, but places them on a dark ground inside a dense hatched border, making the open yellow field of #111 feel notably airier by contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34\",\n      \"reason\": \"nnxyz nnotb #112 uses a single flat colour field with a black silhouette and minimal marks, offering a direct contrast to #111's multi-layer colour-and-scribble approach on a similarly saturated ground.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded toy-like form\",\n    \"flat saturated yellow ground\",\n    \"spiral eye rings\",\n    \"layered scribble lines over colour fills\",\n    \"black outline construction\",\n    \"visible surface marks\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the scribble lines sit in relation to the colour fills beneath them, and does that layering feel the same across the face as it does across the torso?\",\n  \"ambiguities\": [\n    \"The overlapping colour patches suggest multiple passes of mark-making, but the sequence or number of layers cannot be confirmed from the image alone.\",\n    \"QmdHEg3abh9JKppBCdnRQYjfe6RywNqD49pMz29pg2GBRU shares a saturated flat ground but differs too strongly in subject and mark density to support a useful formal connection; omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: rounded form, spiral eye rings, and surface scribble lines are all directly visible.\",\n    \"Context angle corrected: draft said '#110 uses dense cross-hatching' but the #110 image shows a framed border with hatching around a dark interior field — description refined to 'dark framed ground' to stay accurate.\",\n    \"Both comparison connections confirmed against inspected images; spiral eyes and scribble-over-fill are visible in #110, and flat silhouette with minimal marks is visible in #112.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYoS7LGGQUsLhhsewwNoivspxy57y4qyTqSV1DXTapKMr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYoS7LGGQUsLhhsewwNoivspxy57y4qyTqSV1DXTapKMr/image.png",
+        "imageSHA256": "486ee6b69c8df11843de81ebedf0212713395b1f8047ca025edc47cbab23a9e1"
+      },
+      {
+        "artworkId": "QmThbmxXFE6oHSyFZpuXQsMKZpG4w7DSdSzmMWxHfEjruS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmThbmxXFE6oHSyFZpuXQsMKZpG4w7DSdSzmMWxHfEjruS/image.png",
+        "imageSHA256": "7de0a93320f95aa5d40432a95bf8ad9c06fcec8a346224496c9b96ca4f795414"
+      },
+      {
+        "artworkId": "QmdHEg3abh9JKppBCdnRQYjfe6RywNqD49pMz29pg2GBRU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdHEg3abh9JKppBCdnRQYjfe6RywNqD49pMz29pg2GBRU/image.png",
+        "imageSHA256": "2f51d7a012fcae76d9289758366dafbaedc8c84cbadf46de16abd9acd6bd8642"
+      },
+      {
+        "artworkId": "QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34/image.png",
+        "imageSHA256": "5018456123a5e902800617437c2e1138da5bbc6d8a4cf9339304348202a6abaf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A rounded, stuffed-toy-like figure sits centered on a flat yellow field; its body is built from overlapping blobs of ochre, pink, grey-green and pale blue, with black outlines tracing each swollen limb.\", \"Two eyes are ringed by tight yellow spirals on a dark ground, and a small black nose sits above a mouth showing white teeth; jagged black marks at the crown read as a tuft of hair.\", \"Loose red, pink and dark-blue scribble lines run across the torso and face, sitting visibly on top of the colour fills rather than blending into them.\"], \"reading\": \"The figure reads as a toy made uneasy: the rounded, balloon-like forms suggest softness, but the layered scribbles and spiral eye rings pull against that comfort. The flat yellow surround keeps the mood open rather than threatening. What might be read as innocence and unease share the same surface without one cancelling the other.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #110 and nnxyz nnotb #112 in both title-derived and recorded-creation order. Those neighbors use flat silhouette and dense cross-hatching respectively, making the layered colour-and-scribble approach here distinct among the three.\", \"connections\": [{\"targetArtworkId\": \"QmThbmxXFE6oHSyFZpuXQsMKZpG4w7DSdSzmMWxHfEjruS\", \"reason\": \"nnxyz nnotb #110 shares the spiral eye treatment and visible scribble lines over colour fills, but places them on a dark ground with a framed border, making the yellow open field of #111 feel notably airier by contrast.\"}, {\"targetArtworkId\": \"QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34\", \"reason\": \"nnxyz nnotb #112 uses a single flat colour field with a black silhouette and minimal marks, offering a direct contrast to #111's multi-layer colour-and-scribble approach on a similarly saturated ground.\"}], \"tags\": [\"rounded toy-like form\", \"flat saturated yellow ground\", \"spiral eye rings\", \"layered scribble lines over colour fills\", \"black outline construction\", \"visible surface marks\"], \"lookingQuestion\": \"Where exactly do the scribble lines sit in relation to the colour fills beneath them, and does that layering feel the same across the face as it does across the torso?\", \"ambiguities\": [\"The overlapping colour patches suggest multiple passes of mark-making, but the sequence or number of layers cannot be confirmed from the image alone.\", \"QmdHEg3abh9JKppBCdnRQYjfe6RywNqD49pMz29pg2GBRU (nnxyz nifty summer ink) shares a saturated flat ground but differs too strongly in subject and mark density to support a useful formal connection; omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

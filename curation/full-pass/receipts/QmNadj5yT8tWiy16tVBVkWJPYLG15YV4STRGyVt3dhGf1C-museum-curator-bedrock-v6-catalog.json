@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:39.090553-05:00",
+    "usage": {
+      "inputTokens": 6114,
+      "outputTokens": 711,
+      "totalTokens": 6825,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19923
+    },
+    "requestId": "3bb23add-4699-4bae-90ba-0f651f1a7ff2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A compact, roughly circular figure sits center-low against a flat orange field, built from heavy black scribbled lines that loop into two wide asymmetric eyes with white highlights.\",\n    \"Teal and cyan rounded shapes push through behind the black linework, creating a cool backdrop that contrasts sharply with the warm orange ground and scattered yellow-gold patches.\",\n    \"A row of small white teeth appears in a wide, downturned mouth area, while spiky black strokes rise from the top of the form like unruly hair or horns.\"\n  ],\n  \"reading\": \"The figure reads as crouched and cornered, its oversized eyes staring outward with an unsettled alertness. Black lines pile up densely at the base, pooling like shadow, while the teal shapes behind the head feel almost like a halo gone wrong. Patches of magenta and yellow peek through the tangle, giving the impression of something bright trapped under heavy marks. The flat orange surround amplifies the figure's isolation, pressing it into a small, noisy pocket of space.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"rawblocks #46\\\" and \\\"rawblocks #48.\\\" All three share face-like structures and exposed teeth, but #47 is notably more compact and uses a simpler, warmer background, pulling away from the dense multi-color layering of its neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2\",\n      \"reason\": \"#46 shares the wide-open mouth with visible teeth, but its figure fills the frame and layers many more colors, while #47 compresses the form into a smaller, rounder mass against open space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNbmL5UjVgDeCqeAjWvXTVdxpEUrYGETKf4cdjhj9NVxk\",\n      \"reason\": \"nnotb #88 matches the flat orange background and black-dominant palette, but replaces the tangled face with a single silhouette figure, showing how the same color pairing can shift from frantic to still.\"\n    }\n  ],\n  \"tags\": [\n    \"face-like form\",\n    \"exposed teeth\",\n    \"heavy black linework\",\n    \"flat orange ground\",\n    \"teal color shapes\",\n    \"compact composition\"\n  ],\n  \"lookingQuestion\": \"Where do the teal shapes sit relative to the black lines—are they behind, between, or breaking through the figure's outline?\",\n  \"ambiguities\": [\n    \"Whether the spiky top strokes represent hair, horns, or abstract marks is unclear from the image alone.\",\n    \"A small mark cluster in the lower-left corner may be a signature or stray lines; its role is uncertain.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C/image.png",
+        "imageSHA256": "2ad0890ea541a3f3ea6891c794e13ad4d9700660dbd8b9eb5487d79add5c845d"
+      },
+      {
+        "artworkId": "QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2/image.png",
+        "imageSHA256": "43f3c0a12db8570717e4f2a7629a64373342c3c99a2c65fdeb2ed645ddec2a97"
+      },
+      {
+        "artworkId": "QmNbmL5UjVgDeCqeAjWvXTVdxpEUrYGETKf4cdjhj9NVxk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbmL5UjVgDeCqeAjWvXTVdxpEUrYGETKf4cdjhj9NVxk/image.png",
+        "imageSHA256": "aeeff00f96355463a1a39a38e95d9ef8715148a2c3434c1a4d9652e43c08b63b"
+      },
+      {
+        "artworkId": "QmbuaZmH9FWYSKVAiQSz8oNChr9syQnrqezfc6p44Gti1e",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbuaZmH9FWYSKVAiQSz8oNChr9syQnrqezfc6p44Gti1e/image.png",
+        "imageSHA256": "605f6f705f9d18102adf0d91b004669cc7600cbe26d2b6d18ef89f78dd675c02"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:49.774953-05:00",
+    "usage": {
+      "inputTokens": 6857,
+      "outputTokens": 808,
+      "totalTokens": 7665,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10623
+    },
+    "requestId": "735872cb-fe3b-460f-8261-3a5368636819",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A compact, roughly circular figure sits center-low against a flat orange field, built from heavy black looping lines that form two wide asymmetric eyes with white highlights.\",\n    \"Teal and cyan rounded shapes push through behind the black linework, contrasting sharply with the warm orange ground and scattered yellow-gold patches within the figure.\",\n    \"A row of small white teeth appears in a wide, downturned mouth area, while spiky black strokes rise from the top of the form like jagged protrusions.\"\n  ],\n  \"reading\": \"The figure reads as crouched and cornered, its oversized eyes staring outward with unsettled alertness. Black lines pile up densely at the base, pooling like shadow, while teal shapes behind the head feel like a broken halo. Patches of magenta and yellow peek through the tangle, something bright trapped under heavy marks. The flat orange surround amplifies the figure's isolation, pressing it into a small, noisy pocket of space.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"rawblocks #46\\\" and \\\"rawblocks #48.\\\" All three share face-like structures and exposed teeth, but #47 is more compact and uses a simpler, warmer background, pulling away from the dense multi-color layering of its neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2\",\n      \"reason\": \"#46 shares the wide-open mouth with visible teeth, but its figure fills the frame with far more color layers, while #47 compresses the form into a smaller round mass against open space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNbmL5UjVgDeCqeAjWvXTVdxpEUrYGETKf4cdjhj9NVxk\",\n      \"reason\": \"nnotb #88 matches the flat orange background and black-dominant marks, but replaces the tangled face with a single silhouette figure, showing how the same color pairing shifts from frantic to still.\"\n    }\n  ],\n  \"tags\": [\n    \"face-like form\",\n    \"exposed teeth\",\n    \"heavy black linework\",\n    \"flat orange ground\",\n    \"teal color shapes\",\n    \"compact composition\"\n  ],\n  \"lookingQuestion\": \"Where do the teal shapes sit relative to the black lines—are they behind, between, or breaking through the figure's outline?\",\n  \"ambiguities\": [\n    \"Whether the spiky top strokes represent hair, horns, or abstract marks is unclear from the image alone.\",\n    \"A small mark cluster in the lower-left corner may be a signature or stray lines; its role is uncertain.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed teal/cyan rounded shapes visible behind and between black lines; magenta and yellow patches also present inside the figure—draft accurate.\",\n    \"Lower-left mark cluster checked: it resembles the nnxyz signature glyph seen in comparison images, consistent with draft's ambiguity note.\",\n    \"Reading trimmed from 80 to 63 words; removed 'gone wrong' stock metaphor; context confirmed at 40 words within limit.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C/image.png",
+        "imageSHA256": "2ad0890ea541a3f3ea6891c794e13ad4d9700660dbd8b9eb5487d79add5c845d"
+      },
+      {
+        "artworkId": "QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2/image.png",
+        "imageSHA256": "43f3c0a12db8570717e4f2a7629a64373342c3c99a2c65fdeb2ed645ddec2a97"
+      },
+      {
+        "artworkId": "QmNbmL5UjVgDeCqeAjWvXTVdxpEUrYGETKf4cdjhj9NVxk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbmL5UjVgDeCqeAjWvXTVdxpEUrYGETKf4cdjhj9NVxk/image.png",
+        "imageSHA256": "aeeff00f96355463a1a39a38e95d9ef8715148a2c3434c1a4d9652e43c08b63b"
+      },
+      {
+        "artworkId": "QmbuaZmH9FWYSKVAiQSz8oNChr9syQnrqezfc6p44Gti1e",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbuaZmH9FWYSKVAiQSz8oNChr9syQnrqezfc6p44Gti1e/image.png",
+        "imageSHA256": "605f6f705f9d18102adf0d91b004669cc7600cbe26d2b6d18ef89f78dd675c02"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A compact, roughly circular figure sits center-low against a flat orange field, built from heavy black scribbled lines that loop into two wide asymmetric eyes with white highlights.\", \"Teal and cyan rounded shapes push through behind the black linework, creating a cool backdrop that contrasts sharply with the warm orange ground and scattered yellow-gold patches.\", \"A row of small white teeth appears in a wide, downturned mouth area, while spiky black strokes rise from the top of the form like unruly hair or horns.\"], \"reading\": \"The figure reads as crouched and cornered, its oversized eyes staring outward with an unsettled alertness. Black lines pile up densely at the base, pooling like shadow, while the teal shapes behind the head feel almost like a halo gone wrong. Patches of magenta and yellow peek through the tangle, giving the impression of something bright trapped under heavy marks. The flat orange surround amplifies the figure's isolation, pressing it into a small, noisy pocket of space.\", \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"rawblocks #46\\\" and \\\"rawblocks #48.\\\" All three share face-like structures and exposed teeth, but #47 is notably more compact and uses a simpler, warmer background, pulling away from the dense multi-color layering of its neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2\", \"reason\": \"#46 shares the wide-open mouth with visible teeth, but its figure fills the frame and layers many more colors, while #47 compresses the form into a smaller, rounder mass against open space.\"}, {\"targetArtworkId\": \"QmNbmL5UjVgDeCqeAjWvXTVdxpEUrYGETKf4cdjhj9NVxk\", \"reason\": \"nnotb #88 matches the flat orange background and black-dominant palette, but replaces the tangled face with a single silhouette figure, showing how the same color pairing can shift from frantic to still.\"}], \"tags\": [\"face-like form\", \"exposed teeth\", \"heavy black linework\", \"flat orange ground\", \"teal color shapes\", \"compact composition\"], \"lookingQuestion\": \"Where do the teal shapes sit relative to the black lines—are they behind, between, or breaking through the figure's outline?\", \"ambiguities\": [\"Whether the spiky top strokes represent hair, horns, or abstract marks is unclear from the image alone.\", \"A small mark cluster in the lower-left corner may be a signature or stray lines; its role is uncertain.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:16:14.468454-05:00",
+    "usage": {
+      "inputTokens": 6661,
+      "outputTokens": 803,
+      "totalTokens": 7464,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10717
+    },
+    "requestId": "e1e7f262-7b70-4855-a717-9053aa2e72ae",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A compact, roughly circular figure sits center-low against a flat orange field, built from heavy black looping lines that form two wide asymmetric eyes with white highlights.\",\n    \"Teal and cyan rounded shapes push through behind the black linework, contrasting sharply with the warm orange ground and scattered yellow-gold patches within the figure.\",\n    \"A row of small white teeth appears between dark outlines in a downturned mouth area, while spiky black strokes rise from the top of the form like jagged protrusions.\"\n  ],\n  \"reading\": \"The figure reads as crouched and cornered, its oversized eyes staring outward with unsettled alertness. Black lines pile up densely at the base, pooling like shadow, while teal shapes behind the head feel like a broken halo. Patches of magenta and yellow peek through the tangle, something bright trapped under heavy marks. The flat orange surround amplifies the figure's isolation, pressing it into a small, noisy pocket of space.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between #46 and #48. All three feature face-like structures and visible tooth rows, but #47 is more compact and uses a simpler, warmer background, pulling away from the dense multi-color layering of its neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2\",\n      \"reason\": \"#46 shares the exposed tooth row and black-line face structure, but its figure fills the frame with far more color layers, while #47 compresses the form into a smaller round mass against open space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNbmL5UjVgDeCqeAjWvXTVdxpEUrYGETKf4cdjhj9NVxk\",\n      \"reason\": \"nnotb #88 matches the flat orange background and black-dominant marks, but replaces the tangled face with a single silhouette figure, showing how the same color pairing shifts from frantic to still.\"\n    }\n  ],\n  \"tags\": [\n    \"face-like form\",\n    \"exposed teeth\",\n    \"heavy black linework\",\n    \"flat orange ground\",\n    \"teal color shapes\",\n    \"compact composition\"\n  ],\n  \"lookingQuestion\": \"Where do the teal shapes sit relative to the black lines—are they behind, between, or breaking through the figure's outline?\",\n  \"ambiguities\": [\n    \"Whether the spiky top strokes represent hair, horns, or abstract marks is unclear from the image alone.\",\n    \"A small mark cluster in the lower-left corner may be a signature or stray lines; its role is uncertain.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open mouth' with 'downturned mouth area' in observation 3; the tooth row is visible but the mouth opening itself is narrow and bounded by dark outlines, not gaping.\",\n    \"Updated connection to #46 to reference 'exposed tooth row' rather than 'wide-open mouth,' matching what is visible in both images.\",\n    \"Context angle trimmed to stay within word limits and avoid unscoped comparative claims.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C/image.png",
+        "imageSHA256": "2ad0890ea541a3f3ea6891c794e13ad4d9700660dbd8b9eb5487d79add5c845d"
+      },
+      {
+        "artworkId": "QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2/image.png",
+        "imageSHA256": "43f3c0a12db8570717e4f2a7629a64373342c3c99a2c65fdeb2ed645ddec2a97"
+      },
+      {
+        "artworkId": "QmNbmL5UjVgDeCqeAjWvXTVdxpEUrYGETKf4cdjhj9NVxk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbmL5UjVgDeCqeAjWvXTVdxpEUrYGETKf4cdjhj9NVxk/image.png",
+        "imageSHA256": "aeeff00f96355463a1a39a38e95d9ef8715148a2c3434c1a4d9652e43c08b63b"
+      },
+      {
+        "artworkId": "QmbuaZmH9FWYSKVAiQSz8oNChr9syQnrqezfc6p44Gti1e",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbuaZmH9FWYSKVAiQSz8oNChr9syQnrqezfc6p44Gti1e/image.png",
+        "imageSHA256": "605f6f705f9d18102adf0d91b004669cc7600cbe26d2b6d18ef89f78dd675c02"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A compact, roughly circular figure sits center-low against a flat orange field, built from heavy black looping lines that form two wide asymmetric eyes with white highlights.\", \"Teal and cyan rounded shapes push through behind the black linework, contrasting sharply with the warm orange ground and scattered yellow-gold patches within the figure.\", \"A row of small white teeth appears in a wide, downturned mouth area, while spiky black strokes rise from the top of the form like jagged protrusions.\"], \"reading\": \"The figure reads as crouched and cornered, its oversized eyes staring outward with unsettled alertness. Black lines pile up densely at the base, pooling like shadow, while teal shapes behind the head feel like a broken halo. Patches of magenta and yellow peek through the tangle, something bright trapped under heavy marks. The flat orange surround amplifies the figure's isolation, pressing it into a small, noisy pocket of space.\", \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"rawblocks #46\\\" and \\\"rawblocks #48.\\\" All three share face-like structures and exposed teeth, but #47 is more compact and uses a simpler, warmer background, pulling away from the dense multi-color layering of its neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2\", \"reason\": \"#46 shares the wide-open mouth with visible teeth, but its figure fills the frame with far more color layers, while #47 compresses the form into a smaller round mass against open space.\"}, {\"targetArtworkId\": \"QmNbmL5UjVgDeCqeAjWvXTVdxpEUrYGETKf4cdjhj9NVxk\", \"reason\": \"nnotb #88 matches the flat orange background and black-dominant marks, but replaces the tangled face with a single silhouette figure, showing how the same color pairing shifts from frantic to still.\"}], \"tags\": [\"face-like form\", \"exposed teeth\", \"heavy black linework\", \"flat orange ground\", \"teal color shapes\", \"compact composition\"], \"lookingQuestion\": \"Where do the teal shapes sit relative to the black lines—are they behind, between, or breaking through the figure's outline?\", \"ambiguities\": [\"Whether the spiky top strokes represent hair, horns, or abstract marks is unclear from the image alone.\", \"A small mark cluster in the lower-left corner may be a signature or stray lines; its role is uncertain.\"]}\nFLAGS:\n[{\"artworkId\": \"QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C\", \"field\": \"connections\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

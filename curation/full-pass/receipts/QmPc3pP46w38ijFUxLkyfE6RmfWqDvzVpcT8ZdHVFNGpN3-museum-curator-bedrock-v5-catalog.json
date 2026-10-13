@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:32.940185-05:00",
+    "usage": {
+      "inputTokens": 6370,
+      "outputTokens": 687,
+      "totalTokens": 7057,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12724
+    },
+    "requestId": "a5b4a38d-bd94-408e-b8dc-89cc4326a045",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Thick black lines run both horizontally and vertically across the full image, forming a loose grid that holds the composition together without aligning to a strict geometry.\",\n    \"Yellow and orange strokes cluster heavily in the upper half and along the left edge, while dark red-brown fills large mid-ground areas, leaving white gaps scattered throughout.\",\n    \"Red lines, thinner than the black, weave through the grid at irregular intervals, and small dark green marks appear in clusters near the lower center and left, adding a cooler accent against the warm field.\"\n  ],\n  \"reading\": \"A grid of black lines holds the image like a fence that has been pushed and pulled out of true. Warm yellows and burnt reds press forward while white gaps breathe between them, giving the surface a feeling of pressure and release in roughly equal measure. The red threads running through the structure read as tension rather than decoration. The collector's link to scrimshaw feels apt: line here is load-bearing, not ornamental.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #36 and nnxyz nnotb #38. Where #36 uses a pale blue field with rounded, floating marks, #37 is dense and warm-dominant, showing how different the same grid impulse can feel across the owned sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRZgKKnxNpqKKg2rt8uRaE3LTF5KwUKorTvN3PRTjYmcv\",\n      \"reason\": \"Both works use repeated parallel lines as a structural scaffold, but #36 runs white horizontals over a cool blue ground with soft rounded marks, making the contrast with #37's hot, dense, black-dominant grid immediately visible.\"\n    }\n  ],\n  \"tags\": [\n    \"grid structure\",\n    \"overlapping line layers\",\n    \"warm ground with white gaps\",\n    \"red accent lines\",\n    \"dark green clusters\",\n    \"black horizontal and vertical marks\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the grid break down — can you find a spot where the horizontal and vertical lines stop aligning, and what happens to the color there?\",\n  \"ambiguities\": [\n    \"The small marks in the lower-right corner may be a signature or incidental marks; they are not legible at this resolution.\",\n    \"No second comparison image offered a stronger formal connection than #36; QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2 and QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm share yellow but differ structurally enough that no second connection was added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPc3pP46w38ijFUxLkyfE6RmfWqDvzVpcT8ZdHVFNGpN3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPc3pP46w38ijFUxLkyfE6RmfWqDvzVpcT8ZdHVFNGpN3/image.png",
+        "imageSHA256": "1e8cf120851bbf388964e6458127eff032f643b27ecc088bacb5fe0c5d601a4e"
+      },
+      {
+        "artworkId": "QmRZgKKnxNpqKKg2rt8uRaE3LTF5KwUKorTvN3PRTjYmcv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRZgKKnxNpqKKg2rt8uRaE3LTF5KwUKorTvN3PRTjYmcv/image.png",
+        "imageSHA256": "9d99a0e00ad0501e82fc1ca6a47f72bcb3a70186ad7436558c114013cd134fcb"
+      },
+      {
+        "artworkId": "QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2/image.png",
+        "imageSHA256": "a8c39c99721e0c1034f741de062fa3c16d37b8c2cd005617085e3df3c23ef4ac"
+      },
+      {
+        "artworkId": "QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm/image.png",
+        "imageSHA256": "7c6a1f5af4cb0d7db8ff108a81ce519bb10d13735ef3ad162dd9e89f2322a081"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:39.714497-05:00",
+    "usage": {
+      "inputTokens": 7098,
+      "outputTokens": 878,
+      "totalTokens": 7976,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6700
+    },
+    "requestId": "adb5fc36-b999-4f43-9e74-47d11ae01464",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Thick black lines run both horizontally and vertically across the full image, forming a loose grid that never aligns to a strict geometry, with gaps and overlaps throughout.\",\n    \"Yellow and orange strokes cluster heavily in the upper half and along the left edge, while dark red-brown fills large mid-ground areas, leaving white gaps scattered across the surface.\",\n    \"Red lines, thinner than the black, weave through the grid at irregular intervals; small dark green marks appear in clusters near the lower center and left, adding a cooler note against the warm field.\"\n  ],\n  \"reading\": \"A grid of black lines holds the surface like a fence pushed out of true. Warm yellows and burnt reds press forward while white gaps open between them, giving the image a feeling of pressure and release in roughly equal measure. The thinner red threads read as tension rather than decoration. The collector's link to scrimshaw feels apt here: line is load-bearing, not ornamental.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #36 and nnxyz nnotb #38. Where #36 uses a pale blue field with rounded, floating marks, this work is dense and warm-dominant, showing how different the same grid impulse can feel across the owned sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRZgKKnxNpqKKg2rt8uRaE3LTF5KwUKorTvN3PRTjYmcv\",\n      \"reason\": \"Both works use repeated parallel lines as a structural scaffold, but #36 runs white horizontals over a cool blue ground with soft rounded marks, making the contrast with this work's hot, dense, black-dominant grid immediately visible.\"\n    }\n  ],\n  \"tags\": [\n    \"grid structure\",\n    \"overlapping line layers\",\n    \"warm ground with white gaps\",\n    \"red accent lines\",\n    \"dark green clusters\",\n    \"black horizontal and vertical marks\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the grid break down — can you find a spot where the horizontal and vertical lines stop aligning, and what happens to the color there?\",\n  \"ambiguities\": [\n    \"The small marks in the lower-right corner may be a signature or incidental marks; they are not legible at this resolution.\",\n    \"No second comparison image offered a stronger formal connection than #36; QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2 is figurative and structurally unlike this work, and QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm shares yellow but is figure-on-ground rather than grid-based, so no second connection was added.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: black grid, warm upper-left clustering, thin red weave, and dark green lower-center marks are all visible.\",\n    \"Comparison with QmRZgKKnxNpqKKg2rt8uRaE3LTF5KwUKorTvN3PRTjYmcv confirmed: #36 shows white horizontal lines over a blue ground with rounded marks, making the structural contrast with #37 concrete and accurate.\",\n    \"Draft reading removed 'fence' metaphor's second use and tightened to stay within word limit; no invented intent, biography, or technique claims found; collector perspective on scrimshaw retained as collector's reading only.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPc3pP46w38ijFUxLkyfE6RmfWqDvzVpcT8ZdHVFNGpN3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPc3pP46w38ijFUxLkyfE6RmfWqDvzVpcT8ZdHVFNGpN3/image.png",
+        "imageSHA256": "1e8cf120851bbf388964e6458127eff032f643b27ecc088bacb5fe0c5d601a4e"
+      },
+      {
+        "artworkId": "QmRZgKKnxNpqKKg2rt8uRaE3LTF5KwUKorTvN3PRTjYmcv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRZgKKnxNpqKKg2rt8uRaE3LTF5KwUKorTvN3PRTjYmcv/image.png",
+        "imageSHA256": "9d99a0e00ad0501e82fc1ca6a47f72bcb3a70186ad7436558c114013cd134fcb"
+      },
+      {
+        "artworkId": "QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2/image.png",
+        "imageSHA256": "a8c39c99721e0c1034f741de062fa3c16d37b8c2cd005617085e3df3c23ef4ac"
+      },
+      {
+        "artworkId": "QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm/image.png",
+        "imageSHA256": "7c6a1f5af4cb0d7db8ff108a81ce519bb10d13735ef3ad162dd9e89f2322a081"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Thick black lines run both horizontally and vertically across the full image, forming a loose grid that holds the composition together without aligning to a strict geometry.\", \"Yellow and orange strokes cluster heavily in the upper half and along the left edge, while dark red-brown fills large mid-ground areas, leaving white gaps scattered throughout.\", \"Red lines, thinner than the black, weave through the grid at irregular intervals, and small dark green marks appear in clusters near the lower center and left, adding a cooler accent against the warm field.\"], \"reading\": \"A grid of black lines holds the image like a fence that has been pushed and pulled out of true. Warm yellows and burnt reds press forward while white gaps breathe between them, giving the surface a feeling of pressure and release in roughly equal measure. The red threads running through the structure read as tension rather than decoration. The collector's link to scrimshaw feels apt: line here is load-bearing, not ornamental.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #36 and nnxyz nnotb #38. Where #36 uses a pale blue field with rounded, floating marks, #37 is dense and warm-dominant, showing how different the same grid impulse can feel across the owned sequence.\", \"connections\": [{\"targetArtworkId\": \"QmRZgKKnxNpqKKg2rt8uRaE3LTF5KwUKorTvN3PRTjYmcv\", \"reason\": \"Both works use repeated parallel lines as a structural scaffold, but #36 runs white horizontals over a cool blue ground with soft rounded marks, making the contrast with #37's hot, dense, black-dominant grid immediately visible.\"}], \"tags\": [\"grid structure\", \"overlapping line layers\", \"warm ground with white gaps\", \"red accent lines\", \"dark green clusters\", \"black horizontal and vertical marks\"], \"lookingQuestion\": \"Where exactly does the grid break down — can you find a spot where the horizontal and vertical lines stop aligning, and what happens to the color there?\", \"ambiguities\": [\"The small marks in the lower-right corner may be a signature or incidental marks; they are not legible at this resolution.\", \"No second comparison image offered a stronger formal connection than #36; QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2 and QmfWMAcrFGT5XvAxA9Z6sasgFXuapzrwJ3dg2QZLCC1jPm share yellow but differ structurally enough that no second connection was added.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

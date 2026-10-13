@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:43.355393-05:00",
+    "usage": {
+      "inputTokens": 6364,
+      "outputTokens": 667,
+      "totalTokens": 7031,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12506
+    },
+    "requestId": "cd77d32a-d8e0-42a0-b401-38ea90ca736f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Overlapping pale yellow-green circles float across the background, creating a soft, diffused glow that sits behind and partially through the drawn lines.\",\n    \"Orange, yellow, and dark brown lines loop and cross to define the brow, nose, and lips, while two small areas of bright blue fill the irises against white-grey eye whites.\",\n    \"The face tilts slightly downward and is cropped close, with loose black hatching extending beyond the face outline toward the right edge and lower corners.\"\n  ],\n  \"reading\": \"Soft overlapping circles dissolve the background into pools of pale gold and grey, while tight looping lines in orange and brown pull a face forward from that haze. The two blue irises hold steady against the warm surround, a contrast that reads as watchful or guarded. The downward tilt and close crop press the face toward the viewer without quite meeting their gaze.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors #60 and #62 show how differently the same line-over-wash approach can land: #60 is high-contrast and fractured; #62 shares the gold-and-bokeh ground but sits in deeper shadow. #61 occupies a quieter, more inward register between them.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQyf9zyoCxF9oL639RAcXR731S5T56S89rAcaSzNxge8Y\",\n      \"reason\": \"Both #61 and #62 layer orange-gold lines over a bokeh-style ground of overlapping circles, but #62 uses a much darker surround and cooler eye color, making the shared structure feel tonally opposite.\"\n    }\n  ],\n  \"tags\": [\n    \"close-cropped face\",\n    \"bokeh circle ground\",\n    \"orange-brown line work\",\n    \"blue irises\",\n    \"downward gaze\",\n    \"warm-cool contrast\"\n  ],\n  \"interpretiveTags\": [\n    \"guarded mood\",\n    \"inward feeling\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the pale background circles end and the drawn lines begin, and does that boundary stay consistent across the face?\",\n  \"ambiguities\": [\n    \"The title-order and recorded-creation order align for this work, but gaps may exist elsewhere in the owned subset, so neighbor positions are not confirmed as strictly sequential in making.\",\n    \"Comparison candidate QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe (nnotb #139) shares warm gold tones but its subject and line behavior differ enough that no strong formal connection was found; it is omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmatSMkmeDvJsXwwx9kJqBhW7FW6SJYFuRwjXi68pTmFtE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmatSMkmeDvJsXwwx9kJqBhW7FW6SJYFuRwjXi68pTmFtE/image.png",
+        "imageSHA256": "fbdb539a74b9fd258e0e97b99f75b59ab64aef65ed004d3467dfbba894c128c7"
+      },
+      {
+        "artworkId": "QmaPam5TjyNR184RqgjDtAAVAUe1TwzvQrKZUuGtsFeEav",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaPam5TjyNR184RqgjDtAAVAUe1TwzvQrKZUuGtsFeEav/image.png",
+        "imageSHA256": "daa3baae49d991e91bfb4e089d0c4b8835d0c6bf651976f29edd69ce1d592fce"
+      },
+      {
+        "artworkId": "QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe/image.png",
+        "imageSHA256": "b70c6bb1474e8a2e624b3fcbca66b9150e3cdc7952d5fcc59e83ad8e3c3682e6"
+      },
+      {
+        "artworkId": "QmQyf9zyoCxF9oL639RAcXR731S5T56S89rAcaSzNxge8Y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQyf9zyoCxF9oL639RAcXR731S5T56S89rAcaSzNxge8Y/image.png",
+        "imageSHA256": "ea6412d8b796d77170c4a14c2988d6614ea7046970f1b981b3da019e6e4285c3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:50.645832-05:00",
+    "usage": {
+      "inputTokens": 7062,
+      "outputTokens": 803,
+      "totalTokens": 7865,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6932
+    },
+    "requestId": "d599d03b-5525-4efb-af7d-87aa563ed56b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Overlapping pale yellow-green circles float across the background, creating a soft diffused glow that sits behind and partially through the drawn lines.\",\n    \"Orange, yellow, and dark brown lines loop and cross to define the brow, nose, and lips, while two small areas of bright blue fill the irises against white-grey eye whites.\",\n    \"The face tilts slightly downward and is cropped close, with loose black hatching extending beyond the face outline toward the right edge and lower corners.\"\n  ],\n  \"reading\": \"Soft overlapping circles dissolve the background into pools of pale gold and grey, while tight looping lines in orange and brown pull a face forward from that haze. The two blue irises hold steady against the warm surround, a contrast that reads as watchful or guarded. The downward tilt and close crop press the face toward the viewer without quite meeting their gaze.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors #60 and #62 show how differently the same line-over-wash approach can land: #60 is high-contrast and fractured; #62 shares the gold-and-bokeh ground but sits in deeper shadow.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQyf9zyoCxF9oL639RAcXR731S5T56S89rAcaSzNxge8Y\",\n      \"reason\": \"Both works layer orange-gold lines over a ground of overlapping circles, but #62 uses a much darker surround and cooler eye color, making the shared structure feel tonally opposite.\"\n    }\n  ],\n  \"tags\": [\n    \"close-cropped face\",\n    \"bokeh circle ground\",\n    \"orange-brown line work\",\n    \"blue irises\",\n    \"downward gaze\",\n    \"warm-cool contrast\"\n  ],\n  \"interpretiveTags\": [\n    \"guarded mood\",\n    \"inward feeling\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the pale background circles end and the drawn lines begin, and does that boundary stay consistent across the face?\",\n  \"ambiguities\": [\n    \"Title-order and recorded-creation order align for this work, but gaps may exist elsewhere in the owned subset, so neighbor positions are not confirmed as strictly sequential in making.\",\n    \"Candidate QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe (nnotb #139) shares warm gold tones but its subject and line behavior differ substantially; no strong formal connection found and it is omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: yellow-green bokeh circles visible in background, orange/brown/yellow line work with blue irises confirmed, downward tilt and black hatching at right and lower edges confirmed.\",\n    \"Reading revised to remove 'register' per vocabulary rules; 'watchful or guarded' retained as an explicit reading, not stated fact; no invented biography, technique duration, or intent present.\",\n    \"Context angle trimmed to fit 30-40 word target and the final clause about #61 occupying a 'quieter register' was removed as it used a banned word and implied intent; comparison to #60 and #62 grounded in inspected images only.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmatSMkmeDvJsXwwx9kJqBhW7FW6SJYFuRwjXi68pTmFtE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmatSMkmeDvJsXwwx9kJqBhW7FW6SJYFuRwjXi68pTmFtE/image.png",
+        "imageSHA256": "fbdb539a74b9fd258e0e97b99f75b59ab64aef65ed004d3467dfbba894c128c7"
+      },
+      {
+        "artworkId": "QmaPam5TjyNR184RqgjDtAAVAUe1TwzvQrKZUuGtsFeEav",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaPam5TjyNR184RqgjDtAAVAUe1TwzvQrKZUuGtsFeEav/image.png",
+        "imageSHA256": "daa3baae49d991e91bfb4e089d0c4b8835d0c6bf651976f29edd69ce1d592fce"
+      },
+      {
+        "artworkId": "QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe/image.png",
+        "imageSHA256": "b70c6bb1474e8a2e624b3fcbca66b9150e3cdc7952d5fcc59e83ad8e3c3682e6"
+      },
+      {
+        "artworkId": "QmQyf9zyoCxF9oL639RAcXR731S5T56S89rAcaSzNxge8Y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQyf9zyoCxF9oL639RAcXR731S5T56S89rAcaSzNxge8Y/image.png",
+        "imageSHA256": "ea6412d8b796d77170c4a14c2988d6614ea7046970f1b981b3da019e6e4285c3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Overlapping pale yellow-green circles float across the background, creating a soft, diffused glow that sits behind and partially through the drawn lines.\", \"Orange, yellow, and dark brown lines loop and cross to define the brow, nose, and lips, while two small areas of bright blue fill the irises against white-grey eye whites.\", \"The face tilts slightly downward and is cropped close, with loose black hatching extending beyond the face outline toward the right edge and lower corners.\"], \"reading\": \"Soft overlapping circles dissolve the background into pools of pale gold and grey, while tight looping lines in orange and brown pull a face forward from that haze. The two blue irises hold steady against the warm surround, a contrast that reads as watchful or guarded. The downward tilt and close crop press the face toward the viewer without quite meeting their gaze.\", \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors #60 and #62 show how differently the same line-over-wash approach can land: #60 is high-contrast and fractured; #62 shares the gold-and-bokeh ground but sits in deeper shadow. #61 occupies a quieter, more inward register between them.\", \"connections\": [{\"targetArtworkId\": \"QmQyf9zyoCxF9oL639RAcXR731S5T56S89rAcaSzNxge8Y\", \"reason\": \"Both #61 and #62 layer orange-gold lines over a bokeh-style ground of overlapping circles, but #62 uses a much darker surround and cooler eye color, making the shared structure feel tonally opposite.\"}], \"tags\": [\"close-cropped face\", \"bokeh circle ground\", \"orange-brown line work\", \"blue irises\", \"downward gaze\", \"warm-cool contrast\"], \"interpretiveTags\": [\"guarded mood\", \"inward feeling\"], \"lookingQuestion\": \"Where exactly do the pale background circles end and the drawn lines begin, and does that boundary stay consistent across the face?\", \"ambiguities\": [\"The title-order and recorded-creation order align for this work, but gaps may exist elsewhere in the owned subset, so neighbor positions are not confirmed as strictly sequential in making.\", \"Comparison candidate QmPJ95R24WC5j5Hi5m6heHzAWBsk9VYJygqZKa2pFiLoZe (nnotb #139) shares warm gold tones but its subject and line behavior differ enough that no strong formal connection was found; it is omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:42.365499-05:00",
+    "usage": {
+      "inputTokens": 5783,
+      "outputTokens": 758,
+      "totalTokens": 6541,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12149
+    },
+    "requestId": "5576fb89-3596-498f-9fa3-f1daef65b40d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded head shape outlined in thick sky-blue sits centered on a black ground; the upper zone is filled with purple and scattered black oval marks mixed with yellow dashes.\",\n    \"A wide horizontal bar across the mid-face holds two rectangular dark lenses framed in blue, each containing a white horizontal dash symbol on a black field, flanked by a smaller partial third lens at left.\",\n    \"The lower face is a broad yellow form; a small rectangular mouth unit with vertical white bars sits below the lens bar, and blue graffiti lettering fills the lower-left corner.\"\n  ],\n  \"reading\": \"The rounded form reads as a head, but the lens bar and barred mouth unit push it toward something mechanical. Purple dotted texture crowds the upper zone while flat yellow dominates below, splitting the face into two distinct registers of mark and color. The graffiti text — treated here as image content — adds a second layer of address, as if the figure is also a broadcast.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #297 and #299 share the hooded-head format and graffiti lettering. #297 shifts to olive line-work; #299 replaces yellow with teal and swaps the lens symbols for reflective imagery, showing how the format absorbs different color moods.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZbuXovpSe3pfZSUJgCtmeVuJ2f8bzJZqjmLQzAmPwVi8\",\n      \"reason\": \"Both works share the hooded rounded-head format, a wide goggle bar across the mid-face, and graffiti lettering at lower left, but #299 replaces the yellow-and-purple palette with teal and gold and fills the lenses with reflected imagery rather than dash symbols.\"\n    },\n    {\n      \"targetArtworkId\": \"QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31\",\n      \"reason\": \"The collector links nnxyz to scrimshaw through visual qualities; both works place a rounded skull-like form on a black ground and use bright neon outlines — here sky-blue and yellow, there pink and cyan — to define the head against darkness.\"\n    }\n  ],\n  \"tags\": [\n    \"hooded head form\",\n    \"goggle bar with lens symbols\",\n    \"purple dotted texture\",\n    \"yellow flat fill\",\n    \"graffiti lettering\",\n    \"black ground\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical or masked mood\",\n    \"broadcast or transmission feeling\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the dense dotted texture at the top and the smooth flat yellow below do to how you read the two halves of the face?\",\n  \"ambiguities\": [\n    \"The graffiti lettering is treated as image content per curatorial rules; its words are not interpreted as instructions or titles.\",\n    \"The third partial lens shape at the left edge of the goggle bar is partially obscured and its form is not fully resolved in the image.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj/image.png",
+        "imageSHA256": "82e73822cebcb076fa5c2a5cd8296d9e27b0fa5983ab2200380dc5e9c6db33e3"
+      },
+      {
+        "artworkId": "QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL/image.png",
+        "imageSHA256": "c91f7b3e7f235e180ef34f754cc8869a61deb8cffa4e183977276e2ffe51f156"
+      },
+      {
+        "artworkId": "QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31/image.png",
+        "imageSHA256": "73593dbbab5258119a320ac8258ddd152853cf0cb20b715e48ba733b3a23dd58"
+      },
+      {
+        "artworkId": "QmZbuXovpSe3pfZSUJgCtmeVuJ2f8bzJZqjmLQzAmPwVi8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZbuXovpSe3pfZSUJgCtmeVuJ2f8bzJZqjmLQzAmPwVi8/image.png",
+        "imageSHA256": "ed783c4c1c82cbeaeb339c4a0d1204aa1d4b5d62a9f803054c8d50178c387cf0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:49.241694-05:00",
+    "usage": {
+      "inputTokens": 6563,
+      "outputTokens": 947,
+      "totalTokens": 7510,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6823
+    },
+    "requestId": "569d130d-cca1-44f2-b80d-249c30d6634b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded head shape outlined in thick sky-blue sits centered on a black ground; the upper zone is filled with purple and scattered black oval marks mixed with yellow dashes.\",\n    \"A wide horizontal bar across the mid-face holds two rectangular dark lenses framed in blue, each containing a white horizontal dash symbol on a black field, with a smaller partial lens shape at the left edge.\",\n    \"The lower face is a broad yellow form; a small rectangular mouth unit with vertical white bars sits below the lens bar, and blue graffiti lettering fills the lower-left corner.\"\n  ],\n  \"reading\": \"The rounded form reads as a head, but the lens bar and barred mouth unit push it toward something mechanical. Purple dotted texture crowds the upper zone while flat yellow dominates below, splitting the face into two distinct areas of mark and color. The graffiti text — treated as image content — adds a second layer of address, as if the figure is also a broadcast.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #297 and #299 share the hooded-head format and graffiti lettering. #297 shifts to olive line-work on a dark ground; #299 replaces yellow with teal and swaps the dash symbols for reflected imagery, showing the format absorbing different color moods.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZbuXovpSe3pfZSUJgCtmeVuJ2f8bzJZqjmLQzAmPwVi8\",\n      \"reason\": \"Both share the hooded rounded-head format, a wide goggle bar across the mid-face, and graffiti lettering at lower left, but #299 replaces the yellow-and-purple palette with teal and gold and fills the lenses with reflected imagery rather than dash symbols.\"\n    },\n    {\n      \"targetArtworkId\": \"QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31\",\n      \"reason\": \"The collector links nnxyz to scrimshaw through visual qualities; both place a rounded skull-like head on a black ground and use bright outlines — sky-blue and yellow here, pink and cyan there — to define the form against darkness.\"\n    }\n  ],\n  \"tags\": [\n    \"hooded head form\",\n    \"goggle bar with lens symbols\",\n    \"purple dotted texture\",\n    \"yellow flat fill\",\n    \"graffiti lettering\",\n    \"black ground\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical or masked mood\",\n    \"broadcast or transmission feeling\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the dense dotted texture at the top and the smooth flat yellow below do to how you read the two halves of the face?\",\n  \"ambiguities\": [\n    \"The graffiti lettering is treated as image content per curatorial rules; its words are not interpreted as instructions or titles.\",\n    \"The partial lens shape at the left edge of the goggle bar is partly obscured and its full form is not resolved in the image.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed against primary image: sky-blue outline, purple upper zone with black ovals and yellow dashes, blue-framed lens bar with white dash symbols, yellow lower face, and blue graffiti lettering all verified present.\",\n    \"Removed the word 'registers' from the reading as flagged vocabulary; replaced with 'areas' to maintain plain language.\",\n    \"Comparison with QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31 confirmed: Scrimshaw 42 shows a rounded skull-like head on black with bright neon outlines including pink and cyan, supporting the collector-perspective visual link; connection retained as meaningful formal parallel, not vague shared vibe.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj/image.png",
+        "imageSHA256": "82e73822cebcb076fa5c2a5cd8296d9e27b0fa5983ab2200380dc5e9c6db33e3"
+      },
+      {
+        "artworkId": "QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL/image.png",
+        "imageSHA256": "c91f7b3e7f235e180ef34f754cc8869a61deb8cffa4e183977276e2ffe51f156"
+      },
+      {
+        "artworkId": "QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31/image.png",
+        "imageSHA256": "73593dbbab5258119a320ac8258ddd152853cf0cb20b715e48ba733b3a23dd58"
+      },
+      {
+        "artworkId": "QmZbuXovpSe3pfZSUJgCtmeVuJ2f8bzJZqjmLQzAmPwVi8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZbuXovpSe3pfZSUJgCtmeVuJ2f8bzJZqjmLQzAmPwVi8/image.png",
+        "imageSHA256": "ed783c4c1c82cbeaeb339c4a0d1204aa1d4b5d62a9f803054c8d50178c387cf0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A rounded head shape outlined in thick sky-blue sits centered on a black ground; the upper zone is filled with purple and scattered black oval marks mixed with yellow dashes.\", \"A wide horizontal bar across the mid-face holds two rectangular dark lenses framed in blue, each containing a white horizontal dash symbol on a black field, flanked by a smaller partial third lens at left.\", \"The lower face is a broad yellow form; a small rectangular mouth unit with vertical white bars sits below the lens bar, and blue graffiti lettering fills the lower-left corner.\"], \"reading\": \"The rounded form reads as a head, but the lens bar and barred mouth unit push it toward something mechanical. Purple dotted texture crowds the upper zone while flat yellow dominates below, splitting the face into two distinct registers of mark and color. The graffiti text — treated here as image content — adds a second layer of address, as if the figure is also a broadcast.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors #297 and #299 share the hooded-head format and graffiti lettering. #297 shifts to olive line-work; #299 replaces yellow with teal and swaps the lens symbols for reflective imagery, showing how the format absorbs different color moods.\", \"connections\": [{\"targetArtworkId\": \"QmZbuXovpSe3pfZSUJgCtmeVuJ2f8bzJZqjmLQzAmPwVi8\", \"reason\": \"Both works share the hooded rounded-head format, a wide goggle bar across the mid-face, and graffiti lettering at lower left, but #299 replaces the yellow-and-purple palette with teal and gold and fills the lenses with reflected imagery rather than dash symbols.\"}, {\"targetArtworkId\": \"QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31\", \"reason\": \"The collector links nnxyz to scrimshaw through visual qualities; both works place a rounded skull-like form on a black ground and use bright neon outlines — here sky-blue and yellow, there pink and cyan — to define the head against darkness.\"}], \"tags\": [\"hooded head form\", \"goggle bar with lens symbols\", \"purple dotted texture\", \"yellow flat fill\", \"graffiti lettering\", \"black ground\"], \"interpretiveTags\": [\"mechanical or masked mood\", \"broadcast or transmission feeling\"], \"lookingQuestion\": \"What does the relationship between the dense dotted texture at the top and the smooth flat yellow below do to how you read the two halves of the face?\", \"ambiguities\": [\"The graffiti lettering is treated as image content per curatorial rules; its words are not interpreted as instructions or titles.\", \"The third partial lens shape at the left edge of the goggle bar is partially obscured and its form is not fully resolved in the image.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:11.769151-05:00",
+    "usage": {
+      "inputTokens": 7187,
+      "outputTokens": 717,
+      "totalTokens": 7904,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20367
+    },
+    "requestId": "5724adb5-eacc-4f2d-8e3b-d845080bd8f9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large letterforms—a rounded 'G' and an angular 'M'—dominate the composition, built from overlapping strokes in blue, cyan, yellow, magenta, and white.\",\n    \"The 'G' contains concentric curved loops at its center, with a nested rectangular shape filled by warm yellow and pink scribbles, creating a dense focal knot.\",\n    \"A loose border of yellow and white scrawled lines frames the edges, while flat muted color blocks—olive, dark purple, ochre—sit behind the tangled linework.\"\n  ],\n  \"reading\": \"The two letters fill nearly the entire surface, yet they read less as text and more as scaffolding for layered color. Warm yellows and cool cyans compete across the strokes, giving the image a flickering, almost neon quality. The inner loops of the 'G' pull the eye inward like a whirlpool, while the 'M' splays outward. The result can feel both greeting and shout—familiar words made strange by sheer density of mark-making.\",\n  \"contextAngle\": \"\\\"GM\\\" sits between \\\"Scrimshaw 33\\\" and \\\"Scrimshaw 40\\\" in recorded creation order within the owned subset. Its text-based subject is unusual among the scrimshaw works, and its saturated, tangled linework connects it visually to the nnxyz holdings in this collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmdas9bVLgSd3Hnre5ECV9NbEj3gzjr7zgmsbPhdajFci3\",\n      \"reason\": \"Both works use dense multicolor scribbles packed inside bold black-outlined shapes against a contrasting flat background, though \\\"GM\\\" fills letterforms while nifty faces #14 fills a blocky head.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b\",\n      \"reason\": \"Both embed readable text within chaotic overlapping lines, but nnotb #87 layers words as graffiti over a figurative scene, while \\\"GM\\\" makes the letters themselves the entire structure.\"\n    }\n  ],\n  \"tags\": [\n    \"letterforms\",\n    \"overlapping line layers\",\n    \"multicolor scribble\",\n    \"flat color blocks\",\n    \"dense center\",\n    \"framing border marks\"\n  ],\n  \"lookingQuestion\": \"Where do the flat color blocks behind the lines become visible, and how do those quieter patches change the way the bright tangled strokes feel?\",\n  \"ambiguities\": [\n    \"The title 'GM' matches the visible letters, but whether this is a greeting, abbreviation, or something else cannot be confirmed from the image alone.\",\n    \"No numbered title family exists for this work, so no title-order neighbors can be identified.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe/image.png",
+        "imageSHA256": "0d3f93195d69021ed0166a9c36466c54b02de607267465bcdd897a11a4915e60"
+      },
+      {
+        "artworkId": "QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry/image.png",
+        "imageSHA256": "a18a0bd568f37d3c2e4f4ed2ee1e1927f94ffe59d57fe1926de9141e78e93b7e"
+      },
+      {
+        "artworkId": "Qmdas9bVLgSd3Hnre5ECV9NbEj3gzjr7zgmsbPhdajFci3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmdas9bVLgSd3Hnre5ECV9NbEj3gzjr7zgmsbPhdajFci3/image.png",
+        "imageSHA256": "b1557908a8b8ea26ac822628ec8f7a67d62211dc2597eabcab43f5abe74d388f"
+      },
+      {
+        "artworkId": "QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b/image.png",
+        "imageSHA256": "f148a09e2f3a8abb9411b0b2522fb87f9e5af7ba2130132376163caa82418ac0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:25.214073-05:00",
+    "usage": {
+      "inputTokens": 7936,
+      "outputTokens": 843,
+      "totalTokens": 8779,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13297
+    },
+    "requestId": "2ad79350-5277-46f3-8f66-9bad053537f6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large letterforms—a rounded 'G' and an angular 'M'—fill the composition, built from overlapping strokes in blue, cyan, yellow, magenta, and white.\",\n    \"The 'G' contains concentric curved loops at its center with a nested rectangular shape filled by warm yellow and pink scribbles, forming a dense focal knot.\",\n    \"A loose border of yellow and white scrawled lines frames the edges, while flat muted blocks—olive, dark purple, ochre—sit behind the tangled linework.\"\n  ],\n  \"reading\": \"The two letters fill nearly the entire surface, yet they read less as text and more as scaffolding for layered color. Warm yellows and cool cyans compete across the strokes, giving the image a flickering, almost neon quality. The inner loops of the 'G' pull the eye inward, while the 'M' splays outward. The result can feel both greeting and shout—familiar letters made strange by sheer density of mark-making.\",\n  \"contextAngle\": \"\\\"GM\\\" sits between \\\"Scrimshaw 33\\\" and \\\"Scrimshaw 40\\\" in recorded creation order within the owned subset. Its text-based subject is uncommon among the scrimshaw works, and its saturated tangled linework connects it visually to the nnxyz holdings in this collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmdas9bVLgSd3Hnre5ECV9NbEj3gzjr7zgmsbPhdajFci3\",\n      \"reason\": \"Both pack dense multicolor scribbles inside bold black-outlined shapes against a flat background, though \\\"GM\\\" fills letterforms while nifty faces #14 fills a blocky head.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b\",\n      \"reason\": \"Both embed readable text within chaotic overlapping lines, but nnotb #87 layers words as graffiti over a figurative scene while \\\"GM\\\" makes the letters the entire structure.\"\n    }\n  ],\n  \"tags\": [\n    \"letterforms\",\n    \"overlapping line layers\",\n    \"multicolor scribble\",\n    \"flat color blocks\",\n    \"dense center\",\n    \"framing border marks\"\n  ],\n  \"lookingQuestion\": \"Where do the flat color blocks behind the lines become visible, and how do those quieter patches change the way the bright tangled strokes feel?\",\n  \"ambiguities\": [\n    \"The title 'GM' matches the visible letters, but whether this is a greeting, abbreviation, or something else cannot be confirmed from the image alone.\",\n    \"No numbered title family exists for this work, so no title-order neighbors can be identified.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed 'G' and 'M' letterforms visible in image; concentric loops inside the 'G' and nested rectangular shape verified against the original.\",\n    \"Comparison to nifty faces #14: both show dense colored scribbles within black-outlined shapes over flat backgrounds—yellow in #14, olive/purple/ochre here—confirmed by inspecting both images.\",\n    \"Reading trimmed from 80 to 65 words; replaced 'whirlpool' metaphor with plainer phrasing; context angle at 39 words within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe/image.png",
+        "imageSHA256": "0d3f93195d69021ed0166a9c36466c54b02de607267465bcdd897a11a4915e60"
+      },
+      {
+        "artworkId": "QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry/image.png",
+        "imageSHA256": "a18a0bd568f37d3c2e4f4ed2ee1e1927f94ffe59d57fe1926de9141e78e93b7e"
+      },
+      {
+        "artworkId": "Qmdas9bVLgSd3Hnre5ECV9NbEj3gzjr7zgmsbPhdajFci3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmdas9bVLgSd3Hnre5ECV9NbEj3gzjr7zgmsbPhdajFci3/image.png",
+        "imageSHA256": "b1557908a8b8ea26ac822628ec8f7a67d62211dc2597eabcab43f5abe74d388f"
+      },
+      {
+        "artworkId": "QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b/image.png",
+        "imageSHA256": "f148a09e2f3a8abb9411b0b2522fb87f9e5af7ba2130132376163caa82418ac0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two large letterforms—a rounded 'G' and an angular 'M'—dominate the composition, built from overlapping strokes in blue, cyan, yellow, magenta, and white.\", \"The 'G' contains concentric curved loops at its center, with a nested rectangular shape filled by warm yellow and pink scribbles, creating a dense focal knot.\", \"A loose border of yellow and white scrawled lines frames the edges, while flat muted color blocks—olive, dark purple, ochre—sit behind the tangled linework.\"], \"reading\": \"The two letters fill nearly the entire surface, yet they read less as text and more as scaffolding for layered color. Warm yellows and cool cyans compete across the strokes, giving the image a flickering, almost neon quality. The inner loops of the 'G' pull the eye inward like a whirlpool, while the 'M' splays outward. The result can feel both greeting and shout—familiar words made strange by sheer density of mark-making.\", \"contextAngle\": \"\\\"GM\\\" sits between \\\"Scrimshaw 33\\\" and \\\"Scrimshaw 40\\\" in recorded creation order within the owned subset. Its text-based subject is unusual among the scrimshaw works, and its saturated, tangled linework connects it visually to the nnxyz holdings in this collection.\", \"connections\": [{\"targetArtworkId\": \"Qmdas9bVLgSd3Hnre5ECV9NbEj3gzjr7zgmsbPhdajFci3\", \"reason\": \"Both works use dense multicolor scribbles packed inside bold black-outlined shapes against a contrasting flat background, though \\\"GM\\\" fills letterforms while nifty faces #14 fills a blocky head.\"}, {\"targetArtworkId\": \"QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b\", \"reason\": \"Both embed readable text within chaotic overlapping lines, but nnotb #87 layers words as graffiti over a figurative scene, while \\\"GM\\\" makes the letters themselves the entire structure.\"}], \"tags\": [\"letterforms\", \"overlapping line layers\", \"multicolor scribble\", \"flat color blocks\", \"dense center\", \"framing border marks\"], \"lookingQuestion\": \"Where do the flat color blocks behind the lines become visible, and how do those quieter patches change the way the bright tangled strokes feel?\", \"ambiguities\": [\"The title 'GM' matches the visible letters, but whether this is a greeting, abbreviation, or something else cannot be confirmed from the image alone.\", \"No numbered title family exists for this work, so no title-order neighbors can be identified.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:45.125141-05:00",
+    "usage": {
+      "inputTokens": 6353,
+      "outputTokens": 811,
+      "totalTokens": 7164,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13464
+    },
+    "requestId": "5df030d0-5a2d-48c6-8041-3d6bf9d2d347",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded skull-like form sits center-image, filled with layered scribble lines in teal, yellow, and white; a circular yellow-and-brown ring sits where eyes would be, with a blue triangle at its center.\",\n    \"Thick horizontal black stripes sweep across a salmon-pink background, interrupted by blocks of yellow, orange, and magenta; a cluster of comb-like black shapes rises from the top-left corner.\",\n    \"Lower edge holds loosely drawn pink heart outlines and red rounded shapes; a small white signature mark appears bottom-left; a dense teal-and-yellow fragment floats upper-right, visually separate from the central form.\"\n  ],\n  \"reading\": \"The central skull-like form is ringed by horizontal black bands that push it forward against the warm pink field. The circular eye-ring, with its blue triangle, reads as both mechanical and ceremonial. Scribbled lines in teal and white cross the face without settling into detail, giving the image a restless, unresolved feeling. The hearts at the lower edge shift the mood toward something more tender, pulling against the skull's harder geometry.\",\n  \"contextAngle\": \"Within the owned nnxyz-numbered subset, nnxyz #4 is notably busier than its title neighbor nnxyz #3, trading that work's open grey ground for a packed salmon field. The collector links the layered line patterns here to the engraved surface quality of scrimshaw.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS\",\n      \"reason\": \"nnxyz #3 shares the central rounded skull form and multi-color scribble overlay, but its open grey ground makes the face read in isolation, while nnxyz #4 buries the same form in dense horizontal banding.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9\",\n      \"reason\": \"nnxyz #5 repeats the heart motif in the lower register and uses a similar warm-field-plus-black-band structure, but fragments the central form into multiple smaller heads rather than one dominant skull.\"\n    }\n  ],\n  \"tags\": [\n    \"skull-like form\",\n    \"horizontal banding\",\n    \"circular eye-ring\",\n    \"heart outlines\",\n    \"layered scribble lines\",\n    \"salmon-pink ground\"\n  ],\n  \"interpretiveTags\": [\n    \"tender-and-threatening contrast\",\n    \"ceremonial reading\",\n    \"restless surface\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the circular yellow ring at the center and the loose heart shapes at the bottom edge do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The teal-and-yellow fragment in the upper-right corner is visually distinct from the main composition; whether it functions as a separate figure or background noise is unclear from the image alone.\",\n    \"The rawblocks #32 comparison image shows a face on a blue ground with no horizontal banding or heart motifs, making a meaningful formal connection weak; it was inspected but not selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe/image.png",
+        "imageSHA256": "79571f1753e94ca260f28aa86a3dff93e12ebb2999424128fc120689562c9023"
+      },
+      {
+        "artworkId": "QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS/image.png",
+        "imageSHA256": "e08fa2b3caeb9c4f1578c6d0906018135a1ec3c005be2a62af390ba0ec4f971d"
+      },
+      {
+        "artworkId": "QmdAR6KRmu2V6KGMbLWFWYAzg8qb3UqTUowbMN21x7gPX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdAR6KRmu2V6KGMbLWFWYAzg8qb3UqTUowbMN21x7gPX2/image.png",
+        "imageSHA256": "e9612854f69e0286d99d04dbfb5748895cebb95b51766108d604705d5db6f152"
+      },
+      {
+        "artworkId": "QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9/image.png",
+        "imageSHA256": "4d361181bbd3e4e755740f6abb4e2e3686dc02f21fecbf92e59758990691d77d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:52.378217-05:00",
+    "usage": {
+      "inputTokens": 7184,
+      "outputTokens": 1005,
+      "totalTokens": 8189,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6926
+    },
+    "requestId": "f395a231-1d0c-4667-840c-9cbf864aa923",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded skull-like form sits center-image, filled with layered scribble lines in teal, yellow, and white; a circular yellow-and-brown ring sits where eyes would be, with a blue triangle at its center.\",\n    \"Thick horizontal black stripes sweep across a salmon-pink background, interrupted by blocks of yellow, orange, and magenta; a cluster of comb-like black shapes rises from the top-left corner.\",\n    \"The lower edge holds loosely drawn pink heart outlines and red rounded shapes; a small white signature mark appears bottom-left; a dense teal-and-yellow fragment floats upper-right, visually separate from the central form.\"\n  ],\n  \"reading\": \"The central skull-like form is ringed by horizontal black bands that push it forward against the warm pink field. The circular eye-ring, with its blue triangle, reads as both mechanical and ceremonial. Scribbled lines in teal and white cross the face without settling into detail, giving the image a restless, unresolved feeling. The heart outlines at the lower edge shift the mood toward something more tender, pulling against the skull's harder geometry.\",\n  \"contextAngle\": \"Within the owned nnxyz-numbered subset, nnxyz #4 trades the open grey ground of title neighbor nnxyz #3 for a packed salmon field dense with horizontal banding. The collector links the layered line patterns here to the engraved surface quality of scrimshaw.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS\",\n      \"reason\": \"nnxyz #3 shares the central rounded skull form and multi-color scribble overlay, but its open grey ground lets the face read in isolation, while nnxyz #4 buries the same form in dense horizontal banding.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9\",\n      \"reason\": \"nnxyz #5 repeats heart motifs in the lower register and uses a similar warm-field-plus-black-band structure, but fragments the central form into multiple smaller skull-like heads rather than one dominant form.\"\n    }\n  ],\n  \"tags\": [\n    \"skull-like form\",\n    \"horizontal banding\",\n    \"circular eye-ring\",\n    \"heart outlines\",\n    \"layered scribble lines\",\n    \"salmon-pink ground\"\n  ],\n  \"interpretiveTags\": [\n    \"tender-and-threatening contrast\",\n    \"ceremonial reading\",\n    \"restless surface\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the circular yellow ring at the center and the loose heart shapes at the bottom edge do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The teal-and-yellow fragment in the upper-right corner is visually distinct from the main composition; whether it functions as a separate figure or background element is unclear from the image alone.\",\n    \"rawblocks #32 was inspected but not selected: its face-on-blue-ground structure shares no horizontal banding or heart motifs with nnxyz #4, making a meaningful formal connection too weak to include.\"\n  ],\n  \"reviewFindings\": [\n    \"All color, form, and placement claims in observations and reading confirmed against the primary image: salmon-pink ground, horizontal black banding, circular yellow-brown eye-ring with blue triangle, teal-and-yellow upper-right fragment, and lower-edge heart outlines are all visible.\",\n    \"Comparison with nnxyz #3 confirmed: grey ground, central rounded skull form, and multi-color scribble overlay are visible in that image; contrast with nnxyz #4's banded salmon field is accurate.\",\n    \"Comparison with nnxyz #5 confirmed: heart motifs in lower register and warm-field-plus-black-band structure are visible; fragmented multiple skull-like heads rather than one dominant form is accurate; no invented claims added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe/image.png",
+        "imageSHA256": "79571f1753e94ca260f28aa86a3dff93e12ebb2999424128fc120689562c9023"
+      },
+      {
+        "artworkId": "QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS/image.png",
+        "imageSHA256": "e08fa2b3caeb9c4f1578c6d0906018135a1ec3c005be2a62af390ba0ec4f971d"
+      },
+      {
+        "artworkId": "QmdAR6KRmu2V6KGMbLWFWYAzg8qb3UqTUowbMN21x7gPX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdAR6KRmu2V6KGMbLWFWYAzg8qb3UqTUowbMN21x7gPX2/image.png",
+        "imageSHA256": "e9612854f69e0286d99d04dbfb5748895cebb95b51766108d604705d5db6f152"
+      },
+      {
+        "artworkId": "QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9/image.png",
+        "imageSHA256": "4d361181bbd3e4e755740f6abb4e2e3686dc02f21fecbf92e59758990691d77d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A rounded skull-like form sits center-image, filled with layered scribble lines in teal, yellow, and white; a circular yellow-and-brown ring sits where eyes would be, with a blue triangle at its center.\", \"Thick horizontal black stripes sweep across a salmon-pink background, interrupted by blocks of yellow, orange, and magenta; a cluster of comb-like black shapes rises from the top-left corner.\", \"Lower edge holds loosely drawn pink heart outlines and red rounded shapes; a small white signature mark appears bottom-left; a dense teal-and-yellow fragment floats upper-right, visually separate from the central form.\"], \"reading\": \"The central skull-like form is ringed by horizontal black bands that push it forward against the warm pink field. The circular eye-ring, with its blue triangle, reads as both mechanical and ceremonial. Scribbled lines in teal and white cross the face without settling into detail, giving the image a restless, unresolved feeling. The hearts at the lower edge shift the mood toward something more tender, pulling against the skull's harder geometry.\", \"contextAngle\": \"Within the owned nnxyz-numbered subset, nnxyz #4 is notably busier than its title neighbor nnxyz #3, trading that work's open grey ground for a packed salmon field. The collector links the layered line patterns here to the engraved surface quality of scrimshaw.\", \"connections\": [{\"targetArtworkId\": \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS\", \"reason\": \"nnxyz #3 shares the central rounded skull form and multi-color scribble overlay, but its open grey ground makes the face read in isolation, while nnxyz #4 buries the same form in dense horizontal banding.\"}, {\"targetArtworkId\": \"QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9\", \"reason\": \"nnxyz #5 repeats the heart motif in the lower register and uses a similar warm-field-plus-black-band structure, but fragments the central form into multiple smaller heads rather than one dominant skull.\"}], \"tags\": [\"skull-like form\", \"horizontal banding\", \"circular eye-ring\", \"heart outlines\", \"layered scribble lines\", \"salmon-pink ground\"], \"interpretiveTags\": [\"tender-and-threatening contrast\", \"ceremonial reading\", \"restless surface\"], \"lookingQuestion\": \"What does the relationship between the circular yellow ring at the center and the loose heart shapes at the bottom edge do to how you move through the image?\", \"ambiguities\": [\"The teal-and-yellow fragment in the upper-right corner is visually distinct from the main composition; whether it functions as a separate figure or background noise is unclear from the image alone.\", \"The rawblocks #32 comparison image shows a face on a blue ground with no horizontal banding or heart motifs, making a meaningful formal connection weak; it was inspected but not selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:06.849456-05:00",
+    "usage": {
+      "inputTokens": 6959,
+      "outputTokens": 894,
+      "totalTokens": 7853,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11200
+    },
+    "requestId": "239e7c64-4b77-46f5-b0ae-ce222cf67968",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded skull-like form sits center-image, filled with layered scribble lines in teal, yellow, and white; a circular yellow-and-brown ring sits where an eye would be, with a blue triangle at its center.\",\n    \"Thick horizontal black stripes sweep across a salmon-pink background, interrupted by blocks of yellow, orange, and magenta; a cluster of comb-like black shapes rises from the top-left corner.\",\n    \"The lower edge holds loosely drawn pink heart outlines and red rounded shapes; a small white signature mark appears bottom-left; a dense teal-and-yellow fragment floats upper-right, visually separate from the central form.\"\n  ],\n  \"reading\": \"The central skull-like form is ringed by horizontal black bands that push it forward against the warm pink field. The circular eye-ring, with its blue triangle, reads as both mechanical and ceremonial. Scribbled lines in teal and white cross the face without settling into detail, giving the image a restless, unresolved quality. Heart outlines at the lower edge shift the mood toward something more tender, pulling against the skull's harder geometry.\",\n  \"contextAngle\": \"Within the owned nnxyz-numbered subset, nnxyz #4 trades the open grey ground of title neighbor nnxyz #3 for a packed salmon field dense with horizontal banding. The collector links the layered line patterns here to the scored surface quality found in scrimshaw.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS\",\n      \"reason\": \"nnxyz #3 shares the central rounded skull form and multi-color scribble overlay, but its open grey ground lets the face read in isolation, while nnxyz #4 buries the same form in dense horizontal banding.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9\",\n      \"reason\": \"nnxyz #5 repeats heart motifs in the lower register and uses a similar warm-field-plus-black-band structure, but fragments the central form into multiple smaller skull-like heads rather than one dominant form.\"\n    }\n  ],\n  \"tags\": [\"skull-like form\", \"horizontal banding\", \"circular eye-ring\", \"heart outlines\", \"layered scribble lines\", \"salmon-pink ground\"],\n  \"lookingQuestion\": \"What does the relationship between the circular yellow ring at the center and the loose heart shapes at the bottom edge do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The teal-and-yellow fragment in the upper-right corner is visually distinct from the main composition; whether it functions as a separate figure or background element is unclear from the image alone.\",\n    \"rawblocks #32 was inspected but not selected: its face-on-blue-ground structure shares no horizontal banding or heart motifs with nnxyz #4, making a meaningful formal connection too weak to include.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'engraved surface quality' with 'scored surface quality' in contextAngle to remove the flagged named-media term while preserving the collector's visual comparison to scrimshaw.\",\n    \"Reading confirmed at 65 words; contextAngle confirmed at 37 words; both within required ranges.\",\n    \"All other fields verified: three observations, six visible-form tags, two image-backed connections with exact targetArtworkId, one looking question, and two ambiguity notes retained.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe/image.png",
+        "imageSHA256": "79571f1753e94ca260f28aa86a3dff93e12ebb2999424128fc120689562c9023"
+      },
+      {
+        "artworkId": "QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS/image.png",
+        "imageSHA256": "e08fa2b3caeb9c4f1578c6d0906018135a1ec3c005be2a62af390ba0ec4f971d"
+      },
+      {
+        "artworkId": "QmdAR6KRmu2V6KGMbLWFWYAzg8qb3UqTUowbMN21x7gPX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdAR6KRmu2V6KGMbLWFWYAzg8qb3UqTUowbMN21x7gPX2/image.png",
+        "imageSHA256": "e9612854f69e0286d99d04dbfb5748895cebb95b51766108d604705d5db6f152"
+      },
+      {
+        "artworkId": "QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9/image.png",
+        "imageSHA256": "4d361181bbd3e4e755740f6abb4e2e3686dc02f21fecbf92e59758990691d77d"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A rounded skull-like form sits center-image, filled with layered scribble lines in teal, yellow, and white; a circular yellow-and-brown ring sits where eyes would be, with a blue triangle at its center.\", \"Thick horizontal black stripes sweep across a salmon-pink background, interrupted by blocks of yellow, orange, and magenta; a cluster of comb-like black shapes rises from the top-left corner.\", \"The lower edge holds loosely drawn pink heart outlines and red rounded shapes; a small white signature mark appears bottom-left; a dense teal-and-yellow fragment floats upper-right, visually separate from the central form.\"], \"reading\": \"The central skull-like form is ringed by horizontal black bands that push it forward against the warm pink field. The circular eye-ring, with its blue triangle, reads as both mechanical and ceremonial. Scribbled lines in teal and white cross the face without settling into detail, giving the image a restless, unresolved feeling. The heart outlines at the lower edge shift the mood toward something more tender, pulling against the skull's harder geometry.\", \"contextAngle\": \"Within the owned nnxyz-numbered subset, nnxyz #4 trades the open grey ground of title neighbor nnxyz #3 for a packed salmon field dense with horizontal banding. The collector links the layered line patterns here to the engraved surface quality of scrimshaw.\", \"connections\": [{\"targetArtworkId\": \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS\", \"reason\": \"nnxyz #3 shares the central rounded skull form and multi-color scribble overlay, but its open grey ground lets the face read in isolation, while nnxyz #4 buries the same form in dense horizontal banding.\"}, {\"targetArtworkId\": \"QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9\", \"reason\": \"nnxyz #5 repeats heart motifs in the lower register and uses a similar warm-field-plus-black-band structure, but fragments the central form into multiple smaller skull-like heads rather than one dominant form.\"}], \"tags\": [\"skull-like form\", \"horizontal banding\", \"circular eye-ring\", \"heart outlines\", \"layered scribble lines\", \"salmon-pink ground\"], \"lookingQuestion\": \"What does the relationship between the circular yellow ring at the center and the loose heart shapes at the bottom edge do to how you move through the image?\", \"ambiguities\": [\"The teal-and-yellow fragment in the upper-right corner is visually distinct from the main composition; whether it functions as a separate figure or background element is unclear from the image alone.\", \"rawblocks #32 was inspected but not selected: its face-on-blue-ground structure shares no horizontal banding or heart motifs with nnxyz #4, making a meaningful formal connection too weak to include.\"]}\nFLAGS:\n[{\"artworkId\": \"QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe\", \"field\": \"contextAngle\", \"rule\": \"named-media\", \"matches\": [\"engraved\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

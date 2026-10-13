@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:35.500998-05:00",
+    "usage": {
+      "inputTokens": 6332,
+      "outputTokens": 768,
+      "totalTokens": 7100,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12740
+    },
+    "requestId": "d7c66ec8-09a1-47c4-a72c-5d746eca546b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dense central form built from stacked rectangles and overlapping outlines sits against a flat magenta field, with yellow zigzag bands running horizontally across the lower half.\",\n    \"Concentric spiral eyes appear in two rectangular panels on the left and in a circular cluster of orange-ringed dots on the right, all outlined in black against white or dark grounds.\",\n    \"The outer edge is ringed by alternating lime-green and black coiled shapes at top and right, while red spiral forms and olive dots punctuate the left margin.\"\n  ],\n  \"reading\": \"Magenta fills every gap between a machine-like central mass and its busy border, giving the image an almost pressurized feel. The repeated spiral eye motif—appearing in rectangular panels and a circular cluster—creates a rhythm that reads as watchful or unsettled. Yellow zigzag bands lock the lower section into a grid-like tension against the looser coiled shapes at the edges, where the image seems to unwind.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors #186 and #188 share the spiral-eye motif and heavy outline work. #186 uses a warm yellow ground where #187 uses magenta; #188 shifts to olive green, suggesting the magenta here is a distinct tonal moment rather than a constant.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z\",\n      \"reason\": \"Both #187 and #188 use a ringed border of repeating coiled or segmented shapes and place spiral-eye forms inside a large central mass, but #188 replaces magenta with an olive ground, sharpening the contrast between the two.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXTzpLTCwL321LWRpzPoWubirTgp1k359GbQsoKoHfzTu\",\n      \"reason\": \"The collector links nnxyz to scrimshaw through visual pattern; nifty faces #91 shares the same flat magenta ground and uses yellow as a dominant accent color against dense black outlines, making the surface rhythm directly comparable.\"\n    }\n  ],\n  \"tags\": [\n    \"magenta ground\",\n    \"spiral eye motif\",\n    \"yellow zigzag bands\",\n    \"coiled border shapes\",\n    \"stacked rectangular forms\",\n    \"concentric ring clusters\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful\",\n    \"pressurized\",\n    \"unsettled rhythm\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first—toward the spiral panels on the left, the dot cluster on the right, or the yellow zigzag bands below—and what in the image pulls it there?\",\n  \"ambiguities\": [\n    \"The central stacked form could be read as mechanical, architectural, or mask-like; the image supplies no single clear referent.\",\n    \"Comparison candidate #186 shares structural similarities but its warm yellow ground makes direct color comparison limited; the connection is noted as a contrast rather than a match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmcjt5kVnrrxL3EC3S3yerJddZeFqxc9VtW8Hu1y145Vjj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcjt5kVnrrxL3EC3S3yerJddZeFqxc9VtW8Hu1y145Vjj/image.png",
+        "imageSHA256": "2cd1695ccd19ca6dd53b0b0736046828b96d32f6adc17aac122395429de14421"
+      },
+      {
+        "artworkId": "QmY5UxbMzc99VfqtuWe55aspK4XR9JyZsV6B35pPmEJLD4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY5UxbMzc99VfqtuWe55aspK4XR9JyZsV6B35pPmEJLD4/image.png",
+        "imageSHA256": "4bc492c8afc6d9bfa343ded8d95f843b864323232bead5c1ea91e25660b0b66a"
+      },
+      {
+        "artworkId": "QmXTzpLTCwL321LWRpzPoWubirTgp1k359GbQsoKoHfzTu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXTzpLTCwL321LWRpzPoWubirTgp1k359GbQsoKoHfzTu/image.png",
+        "imageSHA256": "76e54b90d2606d19322823808a154ca32210fd872a55dcb0503269408ed5c7e0"
+      },
+      {
+        "artworkId": "QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z/image.png",
+        "imageSHA256": "3c7196c3a8e2d8f39ee43d25c9b3f5c895e644d8a7d6b0c09700fe24e515623e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:43.036205-05:00",
+    "usage": {
+      "inputTokens": 7120,
+      "outputTokens": 904,
+      "totalTokens": 8024,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7459
+    },
+    "requestId": "645539d1-fc11-4dab-97f6-bda563657ffd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dense central form built from stacked rectangles and overlapping outlines sits against a flat magenta field, with yellow zigzag bands running horizontally across the lower half.\",\n    \"Concentric spiral eyes appear in two rectangular panels on the left and in a circular cluster of orange-ringed dots on the right, all outlined in black against white or dark grounds.\",\n    \"The outer edge is ringed by alternating lime-green and black coiled shapes at top and right, while red spiral forms and olive dots punctuate the left margin.\"\n  ],\n  \"reading\": \"Magenta fills every gap between a machine-like central mass and its busy border, giving the image an almost pressurized feel. The repeated spiral eye motif—in rectangular panels and a circular dot cluster—creates a rhythm that reads as watchful or unsettled. Yellow zigzag bands lock the lower section into a grid-like tension against the looser coiled shapes at the edges, where the image seems to unwind.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #186 and #188 share spiral-eye forms and heavy outline work. #186 uses a warm yellow ground where #187 uses magenta; #188 shifts to olive green, making the magenta here a distinct tonal moment between the two.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z\",\n      \"reason\": \"Both #187 and #188 use a ringed border of repeating coiled or segmented shapes and place spiral-eye forms inside a large central mass, but #188 replaces magenta with an olive ground, sharpening the contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXTzpLTCwL321LWRpzPoWubirTgp1k359GbQsoKoHfzTu\",\n      \"reason\": \"nifty faces #91 shares the same flat magenta ground and uses yellow as a dominant accent against dense black outlines, making the surface pattern rhythm directly comparable across two different owned series.\"\n    }\n  ],\n  \"tags\": [\n    \"magenta ground\",\n    \"spiral eye motif\",\n    \"yellow zigzag bands\",\n    \"coiled border shapes\",\n    \"stacked rectangular forms\",\n    \"concentric ring clusters\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful\",\n    \"pressurized\",\n    \"unsettled rhythm\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first—toward the spiral panels on the left, the dot cluster on the right, or the yellow zigzag bands below—and what in the image pulls it there?\",\n  \"ambiguities\": [\n    \"The central stacked form could be read as mechanical, architectural, or mask-like; the image supplies no single clear referent.\",\n    \"Comparison with #186 is noted as contrast rather than match; its warm yellow ground limits direct color comparison.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: magenta ground, stacked rectangular central form, spiral/concentric eye panels left and dot cluster right, lime-green and black coiled border top and right, red spirals and olive dots left margin—all visible.\",\n    \"nifty faces #91 image confirmed: flat magenta ground and yellow accent against black outlines are both present, supporting the collector-perspective pattern comparison; connection retained.\",\n    \"No invented subject identities, unsupported intent, or fabricated technical claims found in draft; word counts for reading (~62 words) and contextAngle (~42 words) fall within limits; no corrections required beyond minor tightening already applied.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmcjt5kVnrrxL3EC3S3yerJddZeFqxc9VtW8Hu1y145Vjj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcjt5kVnrrxL3EC3S3yerJddZeFqxc9VtW8Hu1y145Vjj/image.png",
+        "imageSHA256": "2cd1695ccd19ca6dd53b0b0736046828b96d32f6adc17aac122395429de14421"
+      },
+      {
+        "artworkId": "QmY5UxbMzc99VfqtuWe55aspK4XR9JyZsV6B35pPmEJLD4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY5UxbMzc99VfqtuWe55aspK4XR9JyZsV6B35pPmEJLD4/image.png",
+        "imageSHA256": "4bc492c8afc6d9bfa343ded8d95f843b864323232bead5c1ea91e25660b0b66a"
+      },
+      {
+        "artworkId": "QmXTzpLTCwL321LWRpzPoWubirTgp1k359GbQsoKoHfzTu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXTzpLTCwL321LWRpzPoWubirTgp1k359GbQsoKoHfzTu/image.png",
+        "imageSHA256": "76e54b90d2606d19322823808a154ca32210fd872a55dcb0503269408ed5c7e0"
+      },
+      {
+        "artworkId": "QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z/image.png",
+        "imageSHA256": "3c7196c3a8e2d8f39ee43d25c9b3f5c895e644d8a7d6b0c09700fe24e515623e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dense central form built from stacked rectangles and overlapping outlines sits against a flat magenta field, with yellow zigzag bands running horizontally across the lower half.\", \"Concentric spiral eyes appear in two rectangular panels on the left and in a circular cluster of orange-ringed dots on the right, all outlined in black against white or dark grounds.\", \"The outer edge is ringed by alternating lime-green and black coiled shapes at top and right, while red spiral forms and olive dots punctuate the left margin.\"], \"reading\": \"Magenta fills every gap between a machine-like central mass and its busy border, giving the image an almost pressurized feel. The repeated spiral eye motif—appearing in rectangular panels and a circular cluster—creates a rhythm that reads as watchful or unsettled. Yellow zigzag bands lock the lower section into a grid-like tension against the looser coiled shapes at the edges, where the image seems to unwind.\", \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors #186 and #188 share the spiral-eye motif and heavy outline work. #186 uses a warm yellow ground where #187 uses magenta; #188 shifts to olive green, suggesting the magenta here is a distinct tonal moment rather than a constant.\", \"connections\": [{\"targetArtworkId\": \"QmY1RRbXVyGMhhccyybNMvmsE7FvVknF2UWMW45Ya98Z5z\", \"reason\": \"Both #187 and #188 use a ringed border of repeating coiled or segmented shapes and place spiral-eye forms inside a large central mass, but #188 replaces magenta with an olive ground, sharpening the contrast between the two.\"}, {\"targetArtworkId\": \"QmXTzpLTCwL321LWRpzPoWubirTgp1k359GbQsoKoHfzTu\", \"reason\": \"The collector links nnxyz to scrimshaw through visual pattern; nifty faces #91 shares the same flat magenta ground and uses yellow as a dominant accent color against dense black outlines, making the surface rhythm directly comparable.\"}], \"tags\": [\"magenta ground\", \"spiral eye motif\", \"yellow zigzag bands\", \"coiled border shapes\", \"stacked rectangular forms\", \"concentric ring clusters\"], \"interpretiveTags\": [\"watchful\", \"pressurized\", \"unsettled rhythm\"], \"lookingQuestion\": \"Where does your eye move first—toward the spiral panels on the left, the dot cluster on the right, or the yellow zigzag bands below—and what in the image pulls it there?\", \"ambiguities\": [\"The central stacked form could be read as mechanical, architectural, or mask-like; the image supplies no single clear referent.\", \"Comparison candidate #186 shares structural similarities but its warm yellow ground makes direct color comparison limited; the connection is noted as a contrast rather than a match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

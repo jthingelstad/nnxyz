@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:06.572785-05:00",
+    "usage": {
+      "inputTokens": 6069,
+      "outputTokens": 743,
+      "totalTokens": 6812,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13319
+    },
+    "requestId": "7d56f4ff-a82d-4bf1-a5dc-76b6b4a01bf6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad rectangular form sits centered on a teal ground, outlined in thick black; its upper edge sprouts a row of sharp white spikes and a band of yellow-green hatching.\",\n    \"Two recessed rectangular zones suggest eye sockets: the left holds crossed yellow-orange loops, the right a dark oval ringed by red and orange ellipses on a white field.\",\n    \"A wide horizontal rectangle near the bottom, bordered in deep red, contains dense black scribble lines on white, reading as a filled lower register rather than open space.\"\n  ],\n  \"reading\": \"The face here reads as architecture more than anatomy—stacked rectangular chambers, each holding its own color argument. The spiked crown presses upward while the scribble-filled lower band anchors the whole structure downward. Thin magenta and yellow lines drift outside the black borders, loosening what the thick outlines try to contain. The mood sits somewhere between ceremonial weight and barely controlled noise.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #77 and #79. Where #77 fills a red ground with a rounded, organic mass and #79 opens onto flat sky-blue with a single spiral eye, #78 builds a cooler teal field around a rigid, compartmented structure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN\",\n      \"reason\": \"Both works use stacked rectangular eye zones and a wide mouth band, but #77 rounds its outer silhouette against red while #78 keeps hard right-angle edges against teal, sharpening the structural contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A\",\n      \"reason\": \"nnotb #256 shares the spiked crown motif and layered rectangular face chambers with #78, though it builds on black rather than teal and extends the figure below the face into a torso region.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular face structure\",\n    \"spiked crown\",\n    \"teal ground\",\n    \"crossed loop eye marker\",\n    \"dense scribble fill\",\n    \"layered border lines\"\n  ],\n  \"interpretiveTags\": [\n    \"ceremonial weight\",\n    \"contained tension\"\n  ],\n  \"lookingQuestion\": \"How does the behavior of the thin colored lines outside the thick black border change your sense of where the face ends and the background begins?\",\n  \"ambiguities\": [\n    \"The right eye zone contains a dark oval and red-orange ellipses; whether this reads as a single eye or two overlapping forms is not fully resolved by the image alone.\",\n    \"Title-derived and recorded-creation neighbor orders align here, but gaps may exist elsewhere in the owned subset, so sequence position should not be read as strict making order.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRsR9cYrLSe6HUwRG5ozLB2FoJ4hpuR1XwWKZcRK3Foaa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRsR9cYrLSe6HUwRG5ozLB2FoJ4hpuR1XwWKZcRK3Foaa/image.png",
+        "imageSHA256": "7d85c56a8a1a227358e21c8163e9be7c24db7a6a1ce8f773c1ba2bd262d50f2c"
+      },
+      {
+        "artworkId": "QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN/image.png",
+        "imageSHA256": "f548741885bb9cc5d9f96c53ca8eb64537f55aeb26f66bff8a0545a4abb4524e"
+      },
+      {
+        "artworkId": "QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A/image.png",
+        "imageSHA256": "ccc58afcddbd2d7caf70b2a02ace283ec36639c1cd7e832b9ed6ca81a2387a3c"
+      },
+      {
+        "artworkId": "QmdiKbak8ZUeGqQCEF7XQe94SHL8hdVofZLksFWxQ2wWzP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdiKbak8ZUeGqQCEF7XQe94SHL8hdVofZLksFWxQ2wWzP/image.png",
+        "imageSHA256": "fb543a9e98c9e03af8a91460defe4868971bde260015dae54e885c30516a1007"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:13.098154-05:00",
+    "usage": {
+      "inputTokens": 6834,
+      "outputTokens": 900,
+      "totalTokens": 7734,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6461
+    },
+    "requestId": "a6d0d79b-bb95-4f19-9787-faedcae4e9ac",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad rectangular form sits centered on a teal ground, outlined in thick black; its upper edge sprouts a row of sharp white spikes and a band of yellow-green hatching.\",\n    \"Two recessed rectangular zones suggest eye sockets: the left holds crossed yellow-orange loops, the right a dark oval ringed by red and orange ellipses on a white field.\",\n    \"A wide horizontal rectangle near the bottom, bordered in deep red, contains dense black scribble lines on white, sitting as a filled band rather than open space.\"\n  ],\n  \"reading\": \"The face reads as architecture more than anatomy—stacked rectangular chambers, each holding its own color argument. The spiked crown presses upward while the scribble-filled lower band anchors the structure downward. Thin magenta and yellow lines drift outside the thick black borders, loosening what those outlines try to contain. The mood sits between ceremonial weight and barely controlled noise.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #77 and #79. Where #77 fills a red ground with a rounded organic mass and #79 opens onto flat sky-blue with a single spiral eye, #78 builds a cooler teal field around a rigid, compartmented structure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN\",\n      \"reason\": \"Both works use stacked rectangular eye zones and a wide mouth band, but #77 rounds its outer silhouette against red while #78 keeps hard right-angle edges against teal, sharpening the structural contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A\",\n      \"reason\": \"nnotb #256 shares the spiked crown and layered rectangular face chambers visible in #78, though it builds on black rather than teal and extends the composition below the face into a torso region.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular face structure\",\n    \"spiked crown\",\n    \"teal ground\",\n    \"crossed loop eye marker\",\n    \"dense scribble fill\",\n    \"layered border lines\"\n  ],\n  \"interpretiveTags\": [\n    \"ceremonial weight\",\n    \"contained tension\"\n  ],\n  \"lookingQuestion\": \"How does the behavior of the thin colored lines outside the thick black border change your sense of where the face ends and the background begins?\",\n  \"ambiguities\": [\n    \"The right eye zone contains a dark oval and red-orange ellipses; whether this reads as a single eye or two overlapping forms is not fully resolved by the image alone.\",\n    \"Title-derived and recorded-creation neighbor orders align for this work, but gaps may exist elsewhere in the owned subset, so sequence position should not be read as strict making order.\"\n  ],\n  \"reviewFindings\": [\n    \"All color and form observations confirmed against the primary image: teal ground, white spikes, yellow-green hatching, crossed yellow-orange loops left, red-orange ellipses right, deep-red-bordered scribble band confirmed.\",\n    \"Both comparison connections verified against inspected images: #77 rounded silhouette on red confirmed; nnotb #256 spiked crown and rectangular chambers on black confirmed; no invented shared colors or unsupported claims found.\",\n    \"Word counts checked: reading 63 words, contextAngle 52 words, both within limits; 'register' removed from observation three and replaced with plain language; no prohibited intent words present.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRsR9cYrLSe6HUwRG5ozLB2FoJ4hpuR1XwWKZcRK3Foaa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRsR9cYrLSe6HUwRG5ozLB2FoJ4hpuR1XwWKZcRK3Foaa/image.png",
+        "imageSHA256": "7d85c56a8a1a227358e21c8163e9be7c24db7a6a1ce8f773c1ba2bd262d50f2c"
+      },
+      {
+        "artworkId": "QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN/image.png",
+        "imageSHA256": "f548741885bb9cc5d9f96c53ca8eb64537f55aeb26f66bff8a0545a4abb4524e"
+      },
+      {
+        "artworkId": "QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A/image.png",
+        "imageSHA256": "ccc58afcddbd2d7caf70b2a02ace283ec36639c1cd7e832b9ed6ca81a2387a3c"
+      },
+      {
+        "artworkId": "QmdiKbak8ZUeGqQCEF7XQe94SHL8hdVofZLksFWxQ2wWzP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdiKbak8ZUeGqQCEF7XQe94SHL8hdVofZLksFWxQ2wWzP/image.png",
+        "imageSHA256": "fb543a9e98c9e03af8a91460defe4868971bde260015dae54e885c30516a1007"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad rectangular form sits centered on a teal ground, outlined in thick black; its upper edge sprouts a row of sharp white spikes and a band of yellow-green hatching.\", \"Two recessed rectangular zones suggest eye sockets: the left holds crossed yellow-orange loops, the right a dark oval ringed by red and orange ellipses on a white field.\", \"A wide horizontal rectangle near the bottom, bordered in deep red, contains dense black scribble lines on white, reading as a filled lower register rather than open space.\"], \"reading\": \"The face here reads as architecture more than anatomy—stacked rectangular chambers, each holding its own color argument. The spiked crown presses upward while the scribble-filled lower band anchors the whole structure downward. Thin magenta and yellow lines drift outside the black borders, loosening what the thick outlines try to contain. The mood sits somewhere between ceremonial weight and barely controlled noise.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #77 and #79. Where #77 fills a red ground with a rounded, organic mass and #79 opens onto flat sky-blue with a single spiral eye, #78 builds a cooler teal field around a rigid, compartmented structure.\", \"connections\": [{\"targetArtworkId\": \"QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN\", \"reason\": \"Both works use stacked rectangular eye zones and a wide mouth band, but #77 rounds its outer silhouette against red while #78 keeps hard right-angle edges against teal, sharpening the structural contrast.\"}, {\"targetArtworkId\": \"QmWdbkXHkYtNRrnv3jKjyhAkgabMpKDVLHw5Qdt7w37F2A\", \"reason\": \"nnotb #256 shares the spiked crown motif and layered rectangular face chambers with #78, though it builds on black rather than teal and extends the figure below the face into a torso region.\"}], \"tags\": [\"rectangular face structure\", \"spiked crown\", \"teal ground\", \"crossed loop eye marker\", \"dense scribble fill\", \"layered border lines\"], \"interpretiveTags\": [\"ceremonial weight\", \"contained tension\"], \"lookingQuestion\": \"How does the behavior of the thin colored lines outside the thick black border change your sense of where the face ends and the background begins?\", \"ambiguities\": [\"The right eye zone contains a dark oval and red-orange ellipses; whether this reads as a single eye or two overlapping forms is not fully resolved by the image alone.\", \"Title-derived and recorded-creation neighbor orders align here, but gaps may exist elsewhere in the owned subset, so sequence position should not be read as strict making order.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

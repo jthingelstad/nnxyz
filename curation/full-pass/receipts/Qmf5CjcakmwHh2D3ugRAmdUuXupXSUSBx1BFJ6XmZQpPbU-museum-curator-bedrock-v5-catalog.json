@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:47.101636-05:00",
+    "usage": {
+      "inputTokens": 6265,
+      "outputTokens": 780,
+      "totalTokens": 7045,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11569
+    },
+    "requestId": "565d0038-9599-416c-9133-b27993f0ed78",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid pink upright figure occupies the center against a black ground; jagged spike lines run along the top of the head and down the back, drawn in a lighter pink outline.\",\n    \"The snout extends far to the right, lined with a row of small triangular teeth along the lower jaw; a white concentric-circle eye sits near the snout's base.\",\n    \"A thick black wavy line cuts across the neck area, separating the head mass from the body, while shorter zigzag lines texture the torso's left edge.\"\n  ],\n  \"reading\": \"Pink fills a single upright form that reads as neither fully animal nor human—long snout, spiked crest, toothed jaw open wide. The black wavy break at the neck gives the figure a fractured quality, as if the head is barely attached. The concentric-circle eye adds a fixed, almost mechanical stillness to an otherwise agitated outline. The mood reads as loud and unsettled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #264 and nnxyz nnotb #266. All three share the spiked-crest and spiral-eye vocabulary on upright figures, though the palette shifts sharply—deep red, then black, then dark grey across the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3\",\n      \"reason\": \"nnxyz nnotb #264 shares the same spiked-crown line, a spiral eye, and a toothed mouth on an upright figure, making it a direct structural parallel despite the shift from pink-on-black to blue-on-red.\"\n    },\n    {\n      \"targetArtworkId\": \"QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN\",\n      \"reason\": \"nnxyz nnotb #266 repeats the zigzag crest and a small tangled-circle eye on a similar upright form, but the open jaw and pink fill are absent, making the contrast in tension visible.\"\n    }\n  ],\n  \"tags\": [\n    \"upright figure\",\n    \"toothed jaw\",\n    \"spike-line crest\",\n    \"concentric-circle eye\",\n    \"pink fill on black ground\",\n    \"zigzag edge lines\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled\",\n    \"confrontational\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the thick wavy black line fall on the figure's body, and how does its weight compare to the lighter zigzag lines elsewhere?\",\n  \"ambiguities\": [\n    \"The black wavy line at the neck could be read as a collar, a wound, or a structural break in the form; the image alone does not resolve which.\",\n    \"nnxyz nifty faces #82 shares pink tones and a toothed mouth but the formal overlap is weaker than the two nnotb neighbors, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU/image.png",
+        "imageSHA256": "f2e59f2254f29f9b66b67ad53e7d543b394b437e86d325084997a142d091f243"
+      },
+      {
+        "artworkId": "QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3/image.png",
+        "imageSHA256": "4f8a70ae92d9194fe188d0c6c602157397e389fccb813bffda471915b715e69b"
+      },
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      },
+      {
+        "artworkId": "QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN/image.png",
+        "imageSHA256": "397974f5da2122c75f43bee3704c6e02e488aea3a4f0f3c02a0050a4c1037ac0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:53.079127-05:00",
+    "usage": {
+      "inputTokens": 7067,
+      "outputTokens": 913,
+      "totalTokens": 7980,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5933
+    },
+    "requestId": "451bb6ec-432b-4d7c-8be5-e7e0b236f89d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid pink upright figure occupies the center against a black ground; jagged spike lines run along the top of the head and down the back, drawn in a lighter pink outline.\",\n    \"The snout extends far to the right, lined with a row of small triangular teeth along the lower jaw; a white concentric-circle eye sits near the snout's base.\",\n    \"A thick black wavy line cuts across the neck area, separating the head mass from the body, while shorter zigzag lines texture the torso's left edge.\"\n  ],\n  \"reading\": \"Pink fills a single upright form—long snout, spiked crest, jaw open wide with small triangular teeth. A thick black wavy line at the neck gives the figure a fractured quality, as if the head is barely held in place. The concentric-circle eye adds a fixed, almost mechanical stillness against an otherwise agitated outline. The mood reads as loud and unsettled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #264 and nnxyz nnotb #266. All three share a spiked-crest and spiral-eye vocabulary on upright figures, though the palette shifts sharply—blue on deep red, then pink on black, then teal on dark grey.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3\",\n      \"reason\": \"nnxyz nnotb #264 shares the spiked-crown line, a spiral eye, and a toothed mouth on an upright figure—a direct structural parallel despite the shift from pink-on-black to blue-on-red.\"\n    },\n    {\n      \"targetArtworkId\": \"QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN\",\n      \"reason\": \"nnxyz nnotb #266 repeats the zigzag crest and a small tangled-circle eye on a similar upright form, but the open toothed jaw and pink fill are absent, making the contrast in tension visible.\"\n    }\n  ],\n  \"tags\": [\n    \"upright figure\",\n    \"toothed jaw\",\n    \"spike-line crest\",\n    \"concentric-circle eye\",\n    \"pink fill on black ground\",\n    \"zigzag edge lines\"\n  ],\n  \"interpretiveTags\": [\"unsettled\", \"confrontational\"],\n  \"lookingQuestion\": \"Where exactly does the thick wavy black line fall on the figure's body, and how does its weight compare to the lighter zigzag lines elsewhere?\",\n  \"ambiguities\": [\n    \"The thick black wavy line at the neck could be read as a collar, a wound, or a structural break in the form; the image alone does not resolve which.\",\n    \"nnxyz nifty faces #82 shares pink tones and a toothed mouth but the formal overlap is weaker than the two nnotb neighbors, so it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"Context angle corrected: draft said 'deep red, then black, then dark grey' but #264 is blue-on-deep-red and #266 is teal-on-dark-grey; #265 is pink-on-black—order and colors now accurate.\",\n    \"Reading trimmed to stay within 55–65 word target while retaining all grounded observations; no invented intent or biography added.\",\n    \"All comparison IDs confirmed against inspected images; nifty faces #82 exclusion rationale verified as correct given weaker formal overlap.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf5CjcakmwHh2D3ugRAmdUuXupXSUSBx1BFJ6XmZQpPbU/image.png",
+        "imageSHA256": "f2e59f2254f29f9b66b67ad53e7d543b394b437e86d325084997a142d091f243"
+      },
+      {
+        "artworkId": "QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3/image.png",
+        "imageSHA256": "4f8a70ae92d9194fe188d0c6c602157397e389fccb813bffda471915b715e69b"
+      },
+      {
+        "artworkId": "QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQemk6ETjruovocZ5tsYA86yh19hYLpJu18p2VSRPgNJ3/image.png",
+        "imageSHA256": "3be1cd7ae7c332eb682064efe2e38b48e5b51c3b59fa78a8d1befedae2d62c28"
+      },
+      {
+        "artworkId": "QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN/image.png",
+        "imageSHA256": "397974f5da2122c75f43bee3704c6e02e488aea3a4f0f3c02a0050a4c1037ac0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A solid pink upright figure occupies the center against a black ground; jagged spike lines run along the top of the head and down the back, drawn in a lighter pink outline.\", \"The snout extends far to the right, lined with a row of small triangular teeth along the lower jaw; a white concentric-circle eye sits near the snout's base.\", \"A thick black wavy line cuts across the neck area, separating the head mass from the body, while shorter zigzag lines texture the torso's left edge.\"], \"reading\": \"Pink fills a single upright form that reads as neither fully animal nor human—long snout, spiked crest, toothed jaw open wide. The black wavy break at the neck gives the figure a fractured quality, as if the head is barely attached. The concentric-circle eye adds a fixed, almost mechanical stillness to an otherwise agitated outline. The mood reads as loud and unsettled.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #264 and nnxyz nnotb #266. All three share the spiked-crest and spiral-eye vocabulary on upright figures, though the palette shifts sharply—deep red, then black, then dark grey across the three.\", \"connections\": [{\"targetArtworkId\": \"QmRqfM5rD8Hu77YmntMuPa1Vs3hF43eUwZPZvZcr8qk8d3\", \"reason\": \"nnxyz nnotb #264 shares the same spiked-crown line, a spiral eye, and a toothed mouth on an upright figure, making it a direct structural parallel despite the shift from pink-on-black to blue-on-red.\"}, {\"targetArtworkId\": \"QmW9CEX3DMnJQycnK6ezoWwZETBxgNjTazANqypoSXXFxN\", \"reason\": \"nnxyz nnotb #266 repeats the zigzag crest and a small tangled-circle eye on a similar upright form, but the open jaw and pink fill are absent, making the contrast in tension visible.\"}], \"tags\": [\"upright figure\", \"toothed jaw\", \"spike-line crest\", \"concentric-circle eye\", \"pink fill on black ground\", \"zigzag edge lines\"], \"interpretiveTags\": [\"unsettled\", \"confrontational\"], \"lookingQuestion\": \"Where exactly does the thick wavy black line fall on the figure's body, and how does its weight compare to the lighter zigzag lines elsewhere?\", \"ambiguities\": [\"The black wavy line at the neck could be read as a collar, a wound, or a structural break in the form; the image alone does not resolve which.\", \"nnxyz nifty faces #82 shares pink tones and a toothed mouth but the formal overlap is weaker than the two nnotb neighbors, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

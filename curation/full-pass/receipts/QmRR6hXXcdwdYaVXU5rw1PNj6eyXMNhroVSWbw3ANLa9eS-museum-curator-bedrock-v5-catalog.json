@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:46.373041-05:00",
+    "usage": {
+      "inputTokens": 6291,
+      "outputTokens": 833,
+      "totalTokens": 7124,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13483
+    },
+    "requestId": "3f9ce570-dc63-4db4-9dfb-985e7221a927",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the frame against a flat lime-green background, with a spiral ear form on the left and an oversized downward-pointing nose dominating the lower half.\",\n    \"Wide goggle-like eyes with white sclera and blue irises sit beneath a dark brow band, while a wide open mouth at lower right shows white teeth edged in red.\",\n    \"Dense overlapping white scribble lines cover the face's surface, layered over broad strokes of yellow, teal, orange, and dark green that read as patches rather than contours.\"\n  ],\n  \"reading\": \"The lime-green field pushes the head forward rather than receding behind it. Goggle eyes and bared teeth pull the face toward alarm or exaggeration, though the reading stays open. White scribble lines pile up across the surface, flattening depth even as the broad color patches suggest volume. The spiral ear and bulbous nose stretch the face's proportions into something between caricature and mask.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #63 and nnxyz nifty faces #65. Those two works use near-black and cream fields respectively; the saturated lime here marks a strong color contrast within the trio. Title order matches recorded creation order for these three owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2\",\n      \"reason\": \"Both works use a saturated single-color background (lime vs. purple) that isolates the head, and both show bared white teeth with red edging as a focal point in the lower face.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN\",\n      \"reason\": \"Title neighbor nnxyz nifty faces #63 shares the goggle-eye motif and white scribble lines over a layered color field, but its near-black background and geometric face structure contrast sharply with the open lime ground here.\"\n    }\n  ],\n  \"tags\": [\n    \"lime-green flat background\",\n    \"goggle eyes with white sclera\",\n    \"open mouth with visible teeth\",\n    \"spiral ear form\",\n    \"white scribble line overlay\",\n    \"bulbous nose\"\n  ],\n  \"interpretiveTags\": [\n    \"alarm or exaggeration\",\n    \"mask-like quality\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — the goggle eyes, the open mouth, or the spiral ear — and what does the placement of those three elements do to how you read the face's shape?\",\n  \"ambiguities\": [\n    \"The goggle-like forms could read as eyewear or as stylized eye sockets; no external evidence resolves which was intended.\",\n    \"nnxyz nifty faces #65 (QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq) shares the open-mouth motif but its sparse line work and muted palette offer only a weak formal link, so it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS/image.png",
+        "imageSHA256": "b36931cf15e053d6eed1da22cbdacc2c4f9c40c856f7097b3c5306fbe532b440"
+      },
+      {
+        "artworkId": "QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN/image.png",
+        "imageSHA256": "83a88763b3c818d726d9202d8bb8a99bf2e7fc101f0007166589ded1732ee166"
+      },
+      {
+        "artworkId": "QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2/image.png",
+        "imageSHA256": "43f3c0a12db8570717e4f2a7629a64373342c3c99a2c65fdeb2ed645ddec2a97"
+      },
+      {
+        "artworkId": "QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq/image.png",
+        "imageSHA256": "4757e5aaac1bc7bd0433f6182d727f6a859676330eb4120d5b54b80d1ca05391"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:53.185007-05:00",
+    "usage": {
+      "inputTokens": 7146,
+      "outputTokens": 999,
+      "totalTokens": 8145,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6729
+    },
+    "requestId": "e6732613-3368-4a93-a1f4-d8e648f276c2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the frame against a flat lime-green background, with a spiral ear form on the left and an oversized downward-pointing nose dominating the lower half.\",\n    \"Wide goggle-like eye forms with white sclera and blue irises sit beneath a dark brow band; a wide open mouth at lower right shows white teeth edged in red.\",\n    \"Dense overlapping white scribble lines cover the face's surface, layered over broad patches of yellow, teal, orange, and dark green that suggest volume without forming clear contours.\"\n  ],\n  \"reading\": \"The lime-green field pushes the head forward rather than receding behind it. Goggle eyes and bared teeth pull the face toward alarm or exaggeration, though the reading stays open. White scribble lines pile across the surface, flattening depth even as the broad color patches suggest volume. The spiral ear and bulbous nose stretch the proportions into something between caricature and mask.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #63 and nnxyz nifty faces #65. Those two works use near-black and cream fields; the saturated lime here marks a strong color contrast within the trio. Title order matches recorded creation order for these three owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2\",\n      \"reason\": \"Both works use a saturated flat background that isolates the head, and both show bared white teeth with red edging as a focal point in the lower face.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN\",\n      \"reason\": \"Title neighbor nnxyz nifty faces #63 shares goggle-eye forms and white scribble lines over a layered color field, but its near-black background and more geometric face structure contrast sharply with the open lime ground here.\"\n    }\n  ],\n  \"tags\": [\n    \"lime-green flat background\",\n    \"goggle eye forms with white sclera\",\n    \"open mouth with visible teeth\",\n    \"spiral ear form\",\n    \"white scribble line overlay\",\n    \"bulbous nose\"\n  ],\n  \"interpretiveTags\": [\n    \"alarm or exaggeration\",\n    \"mask-like quality\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — the goggle eyes, the open mouth, or the spiral ear — and what does the placement of those three elements do to how you read the face's overall shape?\",\n  \"ambiguities\": [\n    \"The goggle-like forms could read as eyewear or as stylized eye sockets; no supplied evidence resolves which was intended.\",\n    \"nnxyz nifty faces #65 shares the open-mouth motif but its sparse line work and muted cream palette offer only a weak formal link, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Color observations confirmed against image: lime-green background, white scribble overlay, yellow/teal/orange/dark-green patches, blue irises, red-edged teeth — all visible and accurately described.\",\n    \"Comparison with QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2 confirmed: purple flat background isolates head, bared white teeth with red edging visible in lower face — connection is formally grounded, not color-coincidence only.\",\n    \"Comparison with QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN confirmed: goggle-eye forms and white scribble lines present in #63; near-black background and geometric structure contrast noted — contrast framing retained as meaningful.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS/image.png",
+        "imageSHA256": "b36931cf15e053d6eed1da22cbdacc2c4f9c40c856f7097b3c5306fbe532b440"
+      },
+      {
+        "artworkId": "QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN/image.png",
+        "imageSHA256": "83a88763b3c818d726d9202d8bb8a99bf2e7fc101f0007166589ded1732ee166"
+      },
+      {
+        "artworkId": "QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2/image.png",
+        "imageSHA256": "43f3c0a12db8570717e4f2a7629a64373342c3c99a2c65fdeb2ed645ddec2a97"
+      },
+      {
+        "artworkId": "QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq/image.png",
+        "imageSHA256": "4757e5aaac1bc7bd0433f6182d727f6a859676330eb4120d5b54b80d1ca05391"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape fills most of the frame against a flat lime-green background, with a spiral ear form on the left and an oversized downward-pointing nose dominating the lower half.\", \"Wide goggle-like eyes with white sclera and blue irises sit beneath a dark brow band, while a wide open mouth at lower right shows white teeth edged in red.\", \"Dense overlapping white scribble lines cover the face's surface, layered over broad strokes of yellow, teal, orange, and dark green that read as patches rather than contours.\"], \"reading\": \"The lime-green field pushes the head forward rather than receding behind it. Goggle eyes and bared teeth pull the face toward alarm or exaggeration, though the reading stays open. White scribble lines pile up across the surface, flattening depth even as the broad color patches suggest volume. The spiral ear and bulbous nose stretch the face's proportions into something between caricature and mask.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #63 and nnxyz nifty faces #65. Those two works use near-black and cream fields respectively; the saturated lime here marks a strong color contrast within the trio. Title order matches recorded creation order for these three owned works.\", \"connections\": [{\"targetArtworkId\": \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2\", \"reason\": \"Both works use a saturated single-color background (lime vs. purple) that isolates the head, and both show bared white teeth with red edging as a focal point in the lower face.\"}, {\"targetArtworkId\": \"QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN\", \"reason\": \"Title neighbor nnxyz nifty faces #63 shares the goggle-eye motif and white scribble lines over a layered color field, but its near-black background and geometric face structure contrast sharply with the open lime ground here.\"}], \"tags\": [\"lime-green flat background\", \"goggle eyes with white sclera\", \"open mouth with visible teeth\", \"spiral ear form\", \"white scribble line overlay\", \"bulbous nose\"], \"interpretiveTags\": [\"alarm or exaggeration\", \"mask-like quality\"], \"lookingQuestion\": \"Where does your eye settle first — the goggle eyes, the open mouth, or the spiral ear — and what does the placement of those three elements do to how you read the face's shape?\", \"ambiguities\": [\"The goggle-like forms could read as eyewear or as stylized eye sockets; no external evidence resolves which was intended.\", \"nnxyz nifty faces #65 (QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq) shares the open-mouth motif but its sparse line work and muted palette offer only a weak formal link, so it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:18:10.204527-05:00",
+    "usage": {
+      "inputTokens": 6896,
+      "outputTokens": 846,
+      "totalTokens": 7742,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10887
+    },
+    "requestId": "e24ed67b-b451-4703-8cd8-6af52ec99302",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the frame against a flat lime-green background, with a spiral ear form on the left and an oversized downward-pointing nose dominating the lower half.\",\n    \"Wide goggle-like eye forms with white sclera and blue irises sit beneath a dark brow band; a mouth at lower right shows a row of white teeth edged in red, with a narrow dark gap visible between the upper and lower rows.\",\n    \"Dense overlapping white scribble lines cover the face's surface, layered over broad patches of yellow, teal, orange, and dark green that suggest volume without forming clear contours.\"\n  ],\n  \"reading\": \"The lime-green field pushes the head forward rather than receding behind it. Goggle eyes and bared teeth pull the face toward alarm or exaggeration, though the reading stays open. White scribble lines pile across the surface, flattening depth even as broad color patches suggest volume. The spiral ear and bulbous nose stretch proportions into something between caricature and mask.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #63 and #65. Those two use near-black and cream fields; the saturated lime here marks a strong color contrast within the trio. Title order matches recorded creation order for these three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2\",\n      \"reason\": \"Both works use a saturated flat background that isolates the head, and both show a row of white teeth with red edging as a focal point in the lower face.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN\",\n      \"reason\": \"Title neighbor #63 shares goggle-eye forms and white scribble lines over a layered color field, but its near-black background and more geometric face structure contrast sharply with the open lime ground here.\"\n    }\n  ],\n  \"tags\": [\n    \"lime-green flat background\",\n    \"goggle eye forms with white sclera\",\n    \"visible teeth with red edging\",\n    \"spiral ear form\",\n    \"white scribble line overlay\",\n    \"bulbous nose\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — the goggle eyes, the teeth, or the spiral ear — and what does the placement of those three elements do to how you read the face's overall shape?\",\n  \"ambiguities\": [\n    \"The goggle-like forms could read as eyewear or as stylized eye sockets; no supplied evidence resolves which was intended.\",\n    \"nnxyz nifty faces #65 shares a teeth motif but its sparse line work and muted cream palette offer only a weak formal link, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide open mouth' with a specific description of the narrow dark gap between tooth rows and the visible red-edged teeth, avoiding an unsupported claim of wide openness.\",\n    \"Updated the corresponding tag from 'open mouth with visible teeth' to 'visible teeth with red edging' to match the revised observation.\",\n    \"No other flagged issues; reading, context, and connections remain within word limits and grounded in inspected images.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS/image.png",
+        "imageSHA256": "b36931cf15e053d6eed1da22cbdacc2c4f9c40c856f7097b3c5306fbe532b440"
+      },
+      {
+        "artworkId": "QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN/image.png",
+        "imageSHA256": "83a88763b3c818d726d9202d8bb8a99bf2e7fc101f0007166589ded1732ee166"
+      },
+      {
+        "artworkId": "QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2/image.png",
+        "imageSHA256": "43f3c0a12db8570717e4f2a7629a64373342c3c99a2c65fdeb2ed645ddec2a97"
+      },
+      {
+        "artworkId": "QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq/image.png",
+        "imageSHA256": "4757e5aaac1bc7bd0433f6182d727f6a859676330eb4120d5b54b80d1ca05391"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large rounded head shape fills most of the frame against a flat lime-green background, with a spiral ear form on the left and an oversized downward-pointing nose dominating the lower half.\", \"Wide goggle-like eye forms with white sclera and blue irises sit beneath a dark brow band; a wide open mouth at lower right shows white teeth edged in red.\", \"Dense overlapping white scribble lines cover the face's surface, layered over broad patches of yellow, teal, orange, and dark green that suggest volume without forming clear contours.\"], \"reading\": \"The lime-green field pushes the head forward rather than receding behind it. Goggle eyes and bared teeth pull the face toward alarm or exaggeration, though the reading stays open. White scribble lines pile across the surface, flattening depth even as the broad color patches suggest volume. The spiral ear and bulbous nose stretch the proportions into something between caricature and mask.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #63 and nnxyz nifty faces #65. Those two works use near-black and cream fields; the saturated lime here marks a strong color contrast within the trio. Title order matches recorded creation order for these three owned works.\", \"connections\": [{\"targetArtworkId\": \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2\", \"reason\": \"Both works use a saturated flat background that isolates the head, and both show bared white teeth with red edging as a focal point in the lower face.\"}, {\"targetArtworkId\": \"QmNW7aDw92KddNtpvpy9pGgw13SYYMjnDcMvLpo3STAVfN\", \"reason\": \"Title neighbor nnxyz nifty faces #63 shares goggle-eye forms and white scribble lines over a layered color field, but its near-black background and more geometric face structure contrast sharply with the open lime ground here.\"}], \"tags\": [\"lime-green flat background\", \"goggle eye forms with white sclera\", \"open mouth with visible teeth\", \"spiral ear form\", \"white scribble line overlay\", \"bulbous nose\"], \"lookingQuestion\": \"Where does your eye settle first — the goggle eyes, the open mouth, or the spiral ear — and what does the placement of those three elements do to how you read the face's overall shape?\", \"ambiguities\": [\"The goggle-like forms could read as eyewear or as stylized eye sockets; no supplied evidence resolves which was intended.\", \"nnxyz nifty faces #65 shares the open-mouth motif but its sparse line work and muted cream palette offer only a weak formal link, so it was not selected as a connection.\"]}\nFLAGS:\n[{\"artworkId\": \"QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS\", \"field\": \"observations\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:08.343244-05:00",
+    "usage": {
+      "inputTokens": 6044,
+      "outputTokens": 846,
+      "totalTokens": 6890,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14261
+    },
+    "requestId": "0dbfcdbe-c0b6-47e0-8b8d-3394a73242a2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval face shape, outlined in thick black and gold, fills most of the canvas; its interior is divided into roughly four quadrants by bold black lines.\",\n    \"The left eye area holds a sun-like circle in orange and white; the right eye holds a red spiral; both sit inside layered rectangular frames of green, neon yellow, and dark purple.\",\n    \"A wide open mouth near the lower center shows yellow-outlined teeth above a row of blue and white blocks, while small spiral and flower motifs in black and yellow float in the orange-red background corners.\"\n  ],\n  \"reading\": \"The face structure here is dense and compartmentalized: each feature locked inside its own framed zone, as though the head were a cabinet of separate rooms. The sun-circle and red spiral read as mismatched eyes, giving the face an off-balance, watchful feeling. Zigzag lines and loose white scribbles crowd the background, pressing against the outer edge of the oval and keeping the composition taut rather than open.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #278 and #280 share the oval face format and layered-line approach. #278 uses a cooler pink-and-blue palette against flat grey; #280 buries its face under dense crosshatch scribbles on black. #279 sits between them in both title order and recorded creation order, with the warmest, most saturated background of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC\",\n      \"reason\": \"Both #278 and #279 use a large oval face outline with mismatched eye motifs—one spiral, one sun-circle—but #278 keeps its palette cool and spare while #279 layers warm orange-red behind a far busier interior.\"\n    },\n    {\n      \"targetArtworkId\": \"QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy\",\n      \"reason\": \"#280 shares the oval face container and the red-outlined eye zones visible in #279, but replaces the warm saturated background with black and overlays the interior with a dense yellow-blue scribble field absent in #279.\"\n    }\n  ],\n  \"tags\": [\n    \"oval face form\",\n    \"divided interior quadrants\",\n    \"spiral eye motif\",\n    \"sun-circle motif\",\n    \"open mouth with teeth\",\n    \"warm orange-red background\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful mood\",\n    \"compartmentalized feeling\"\n  ],\n  \"lookingQuestion\": \"The two eye zones use different marks—a sun-circle on the left and a tight red spiral on the right—what does that difference in line behavior do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The collector's noted connection between nnxyz work and scrimshaw rests on visual pattern qualities; no specific formal feature in this image has been confirmed as the basis for that link.\",\n    \"QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp (rawblocks #0000) shares a dense multi-figure composition but no strong formal parallel to #279's single oval face structure; it is omitted as a weak match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY/image.png",
+        "imageSHA256": "4d131bb431f780e0f4262e10fed6568a5a6b1ef92ae7fe783f2e51b74aafbf28"
+      },
+      {
+        "artworkId": "QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC/image.png",
+        "imageSHA256": "47e4c6ae75fcb52b87f4c2c76c541d54413c8b99f314c97d1aa8d19e514404e3"
+      },
+      {
+        "artworkId": "QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp/image.png",
+        "imageSHA256": "ab6febb004e49d10ab9740ed086dc2562d51f14eeaa82dd68f451f6400955192"
+      },
+      {
+        "artworkId": "QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy/image.png",
+        "imageSHA256": "e00134d3c43fdfb5c0bf1ae9d4e511bd525a7fef6f866cd7d0453d29c98fe9e7"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:14.704175-05:00",
+    "usage": {
+      "inputTokens": 6912,
+      "outputTokens": 967,
+      "totalTokens": 7879,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6299
+    },
+    "requestId": "bacd3ad3-87b0-47ff-b54d-3da6f27d290d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval face shape, outlined in thick black and gold, fills most of the canvas; bold black lines divide its interior into roughly four quadrants.\",\n    \"The left eye area holds a sun-like circle in orange and white; the right eye holds a tight red spiral; both sit inside layered rectangular frames of green, neon yellow, and dark purple.\",\n    \"A wide open mouth near the lower center shows yellow-outlined teeth above a row of blue and white blocks; small spiral and flower motifs in black and yellow float in the orange-red background corners.\"\n  ],\n  \"reading\": \"The face here is dense and compartmentalized: each feature locked inside its own framed zone, as though the head were a cabinet of separate rooms. The sun-circle and red spiral read as mismatched eyes, giving the face an off-balance, watchful feeling. Zigzag lines and loose white scribbles crowd the background, pressing against the outer edge of the oval and keeping the composition taut rather than open.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #278 and #280 share the oval face format and layered-line approach. #278 uses a cooler pink-and-blue palette against flat grey; #280 buries its face under dense crosshatch scribbles on black. #279 carries the warmest, most saturated background of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC\",\n      \"reason\": \"Both use a large oval face outline with one spiral eye and one sun-circle eye, but #278 keeps its palette cool and spare while #279 layers warm orange-red behind a far busier interior.\"\n    },\n    {\n      \"targetArtworkId\": \"QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy\",\n      \"reason\": \"#280 shares the oval face container and red-outlined eye zones, but replaces the warm saturated background with black and overlays the interior with a dense yellow-blue scribble field absent in #279.\"\n    }\n  ],\n  \"tags\": [\n    \"oval face form\",\n    \"divided interior quadrants\",\n    \"spiral eye motif\",\n    \"sun-circle motif\",\n    \"open mouth with teeth\",\n    \"warm orange-red background\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful mood\",\n    \"compartmentalized feeling\"\n  ],\n  \"lookingQuestion\": \"The two eye zones use different marks—a sun-circle on the left and a tight red spiral on the right—what does that difference in line behavior do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The collector's noted connection between nnxyz work and scrimshaw rests on visual pattern qualities; no specific formal feature in this image has been confirmed as the basis for that link.\",\n    \"QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp (rawblocks #0000) shares a dense multi-figure composition but no strong formal parallel to #279's single oval face structure; omitted as a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: orange-white sun-circle left, red spiral right, yellow-outlined teeth, blue-white blocks in mouth row, orange-red background with black-yellow corner motifs all verified against the primary image.\",\n    \"Comparison claims verified: #278 image confirms cool pink-blue palette and oval face with matching eye motif types; #280 image confirms black background, dense crosshatch overlay, and red-outlined eye zones.\",\n    \"No invented intent, biography, technique duration, or unsupported subject identities found; 'mismatched eyes' and 'watchful feeling' retained as explicit readings, not assertions.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY/image.png",
+        "imageSHA256": "4d131bb431f780e0f4262e10fed6568a5a6b1ef92ae7fe783f2e51b74aafbf28"
+      },
+      {
+        "artworkId": "QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC/image.png",
+        "imageSHA256": "47e4c6ae75fcb52b87f4c2c76c541d54413c8b99f314c97d1aa8d19e514404e3"
+      },
+      {
+        "artworkId": "QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp/image.png",
+        "imageSHA256": "ab6febb004e49d10ab9740ed086dc2562d51f14eeaa82dd68f451f6400955192"
+      },
+      {
+        "artworkId": "QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy/image.png",
+        "imageSHA256": "e00134d3c43fdfb5c0bf1ae9d4e511bd525a7fef6f866cd7d0453d29c98fe9e7"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large oval face shape, outlined in thick black and gold, fills most of the canvas; its interior is divided into roughly four quadrants by bold black lines.\", \"The left eye area holds a sun-like circle in orange and white; the right eye holds a red spiral; both sit inside layered rectangular frames of green, neon yellow, and dark purple.\", \"A wide open mouth near the lower center shows yellow-outlined teeth above a row of blue and white blocks, while small spiral and flower motifs in black and yellow float in the orange-red background corners.\"], \"reading\": \"The face structure here is dense and compartmentalized: each feature locked inside its own framed zone, as though the head were a cabinet of separate rooms. The sun-circle and red spiral read as mismatched eyes, giving the face an off-balance, watchful feeling. Zigzag lines and loose white scribbles crowd the background, pressing against the outer edge of the oval and keeping the composition taut rather than open.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors #278 and #280 share the oval face format and layered-line approach. #278 uses a cooler pink-and-blue palette against flat grey; #280 buries its face under dense crosshatch scribbles on black. #279 sits between them in both title order and recorded creation order, with the warmest, most saturated background of the three.\", \"connections\": [{\"targetArtworkId\": \"QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC\", \"reason\": \"Both #278 and #279 use a large oval face outline with mismatched eye motifs—one spiral, one sun-circle—but #278 keeps its palette cool and spare while #279 layers warm orange-red behind a far busier interior.\"}, {\"targetArtworkId\": \"QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy\", \"reason\": \"#280 shares the oval face container and the red-outlined eye zones visible in #279, but replaces the warm saturated background with black and overlays the interior with a dense yellow-blue scribble field absent in #279.\"}], \"tags\": [\"oval face form\", \"divided interior quadrants\", \"spiral eye motif\", \"sun-circle motif\", \"open mouth with teeth\", \"warm orange-red background\"], \"interpretiveTags\": [\"watchful mood\", \"compartmentalized feeling\"], \"lookingQuestion\": \"The two eye zones use different marks—a sun-circle on the left and a tight red spiral on the right—what does that difference in line behavior do to how you read the face as a whole?\", \"ambiguities\": [\"The collector's noted connection between nnxyz work and scrimshaw rests on visual pattern qualities; no specific formal feature in this image has been confirmed as the basis for that link.\", \"QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp (rawblocks #0000) shares a dense multi-figure composition but no strong formal parallel to #279's single oval face structure; it is omitted as a weak match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:18:19.621108-05:00",
+    "usage": {
+      "inputTokens": 6683,
+      "outputTokens": 892,
+      "totalTokens": 7575,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10614
+    },
+    "requestId": "b284790d-5377-49c2-8bee-9aa13fa97ce0",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval face shape, outlined in thick black and gold, fills most of the canvas; bold black lines divide its interior into roughly four quadrants.\",\n    \"The left eye area holds a sun-like circle in orange and white; the right eye holds a tight red spiral; both sit inside layered rectangular frames of green, neon yellow, and dark purple.\",\n    \"The lower center shows two rows of yellow-outlined teeth separated by a dark gap, with a curved pink-white outline framing the mouth area; small spiral and flower motifs in black and yellow float in the orange-red background corners.\"\n  ],\n  \"reading\": \"The face is dense and compartmentalized: each feature locked inside its own framed zone, as though the head were a cabinet of separate rooms. The sun-circle and red spiral read as mismatched eyes, lending the face an off-balance, watchful quality. Zigzag lines and loose white scribbles crowd the background, pressing against the outer edge of the oval and keeping the composition taut rather than open.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #278 and #280 share the oval face format and layered-line approach. #278 uses a cooler pink-and-blue palette against flat grey; #280 buries its face under dense crosshatch scribbles on black. #279 carries the warmest, most saturated background of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC\",\n      \"reason\": \"Both use a large oval face outline with one spiral eye and one sun-circle eye, but #278 keeps its palette cool and spare while #279 layers warm orange-red behind a far busier interior.\"\n    },\n    {\n      \"targetArtworkId\": \"QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy\",\n      \"reason\": \"#280 shares the oval face container and red-outlined eye zones, but replaces the warm saturated background with black and overlays the interior with a dense yellow-blue scribble field absent in #279.\"\n    }\n  ],\n  \"tags\": [\n    \"oval face form\",\n    \"divided interior quadrants\",\n    \"spiral eye motif\",\n    \"sun-circle motif\",\n    \"exposed teeth rows\",\n    \"warm orange-red background\"\n  ],\n  \"lookingQuestion\": \"The two eye zones use different marks—a sun-circle on the left and a tight red spiral on the right—what does that difference in line behavior do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The collector's noted connection between nnxyz work and scrimshaw rests on visual pattern qualities; no specific formal feature in this image has been confirmed as the basis for that link.\",\n    \"QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp (rawblocks #0000) shares a dense multi-figure composition but no strong formal parallel to #279's single oval face structure; omitted as a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide open mouth' with a specific description of two tooth rows separated by a dark gap and a curved pink-white outline, reflecting visible structure without overstating openness.\",\n    \"Reading and context kept within word limits; no superlatives or unscoped complexity claims.\",\n    \"Tag 'open mouth with teeth' revised to 'exposed teeth rows' to match the corrected observation.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY/image.png",
+        "imageSHA256": "4d131bb431f780e0f4262e10fed6568a5a6b1ef92ae7fe783f2e51b74aafbf28"
+      },
+      {
+        "artworkId": "QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC/image.png",
+        "imageSHA256": "47e4c6ae75fcb52b87f4c2c76c541d54413c8b99f314c97d1aa8d19e514404e3"
+      },
+      {
+        "artworkId": "QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp/image.png",
+        "imageSHA256": "ab6febb004e49d10ab9740ed086dc2562d51f14eeaa82dd68f451f6400955192"
+      },
+      {
+        "artworkId": "QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy/image.png",
+        "imageSHA256": "e00134d3c43fdfb5c0bf1ae9d4e511bd525a7fef6f866cd7d0453d29c98fe9e7"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large oval face shape, outlined in thick black and gold, fills most of the canvas; bold black lines divide its interior into roughly four quadrants.\", \"The left eye area holds a sun-like circle in orange and white; the right eye holds a tight red spiral; both sit inside layered rectangular frames of green, neon yellow, and dark purple.\", \"A wide open mouth near the lower center shows yellow-outlined teeth above a row of blue and white blocks; small spiral and flower motifs in black and yellow float in the orange-red background corners.\"], \"reading\": \"The face here is dense and compartmentalized: each feature locked inside its own framed zone, as though the head were a cabinet of separate rooms. The sun-circle and red spiral read as mismatched eyes, giving the face an off-balance, watchful feeling. Zigzag lines and loose white scribbles crowd the background, pressing against the outer edge of the oval and keeping the composition taut rather than open.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors #278 and #280 share the oval face format and layered-line approach. #278 uses a cooler pink-and-blue palette against flat grey; #280 buries its face under dense crosshatch scribbles on black. #279 carries the warmest, most saturated background of the three.\", \"connections\": [{\"targetArtworkId\": \"QmXSgahauWXeVigxbB5JBTTKtrY2Lffv1i32fDfgcLBsLC\", \"reason\": \"Both use a large oval face outline with one spiral eye and one sun-circle eye, but #278 keeps its palette cool and spare while #279 layers warm orange-red behind a far busier interior.\"}, {\"targetArtworkId\": \"QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy\", \"reason\": \"#280 shares the oval face container and red-outlined eye zones, but replaces the warm saturated background with black and overlays the interior with a dense yellow-blue scribble field absent in #279.\"}], \"tags\": [\"oval face form\", \"divided interior quadrants\", \"spiral eye motif\", \"sun-circle motif\", \"open mouth with teeth\", \"warm orange-red background\"], \"lookingQuestion\": \"The two eye zones use different marks—a sun-circle on the left and a tight red spiral on the right—what does that difference in line behavior do to how you read the face as a whole?\", \"ambiguities\": [\"The collector's noted connection between nnxyz work and scrimshaw rests on visual pattern qualities; no specific formal feature in this image has been confirmed as the basis for that link.\", \"QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp (rawblocks #0000) shares a dense multi-figure composition but no strong formal parallel to #279's single oval face structure; omitted as a weak match.\"]}\nFLAGS:\n[{\"artworkId\": \"QmSTSbuAEAcvFLHkM28qjWBJYWR1CWdbX23dTTi3Tz8KEY\", \"field\": \"observations\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:23.203469-05:00",
+    "usage": {
+      "inputTokens": 6230,
+      "outputTokens": 877,
+      "totalTokens": 7107,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 15144
+    },
+    "requestId": "164da4da-299f-4962-911b-631aef39892e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head dominates the upper two-thirds; two asymmetric eye forms glow orange-yellow against dark surrounds, the left eye ringed by a double oval, the right topped with a small crown of spikes.\",\n    \"A wide open mouth spans the lower face, outlined in red-pink with dense black vertical lines crossing the teeth zone, giving it a grid-like interior pattern.\",\n    \"Loose red scribble lines spill beyond the figure on both sides, while black-and-white striped limb shapes hang at lower left and right, layered over a cream background.\"\n  ],\n  \"reading\": \"Two mismatched eyes burn orange against a dark head that fills the frame, their uneven sizes and different crown shapes making the face feel off-balance in a way that holds attention. The gridded mouth reads as both grin and cage. Red lines escape the body's edges as if the figure cannot contain itself, while striped limbs dangle with a loose, puppet-like quality. The overall mood sits somewhere between comic and unsettling.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #249 and nnxyz nnotb #251. Where #249 spreads figures across a wide field with bold sky-blue passages, #250 compresses a single head close to the picture plane, trading open space for confrontational scale.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\",\n      \"reason\": \"nnxyz nnotb #251 shares the close-cropped single head format and a toothed mouth with interior line patterning, but swaps the orange-eye palette for green irises and opens the background to pale blue, making the two a direct color contrast on the same structural idea.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4\",\n      \"reason\": \"nnxyz #1 from the nnxyz-other owned subset also centers a dark head with large goggle-like eye forms and a wide exposed-teeth mouth, offering a cross-collection comparison of how the same face structure appears with a denser, more layered mark surface.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye forms\",\n    \"gridded mouth interior\",\n    \"crown spike motif\",\n    \"red overflow lines\",\n    \"striped limb shapes\",\n    \"dark head on cream ground\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational scale\",\n    \"comic-unsettling tension\",\n    \"contained-versus-escaping energy\"\n  ],\n  \"lookingQuestion\": \"The two eye forms differ in size, framing, and crown detail — what does following those differences tell you about how the face is organized across its vertical center line?\",\n  \"ambiguities\": [\n    \"The small lettered marks scattered across the torso area may be legible text or purely decorative glyphs; image resolution does not resolve this.\",\n    \"The candidate nnxyz nnotb #249 (QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc) was inspected but its multi-figure, wide-field composition offers no strong formal parallel to #250's single close-cropped head, so it was omitted from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSdyHNNWyX9VydvbuxyaznnEhuCBPoRiW51wBQWWyheYR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSdyHNNWyX9VydvbuxyaznnEhuCBPoRiW51wBQWWyheYR/image.png",
+        "imageSHA256": "0bc03ea5f6be98477376735f421c045915c0ffc5c939708a238904e487034e7f"
+      },
+      {
+        "artworkId": "QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc/image.png",
+        "imageSHA256": "9aa266ba8a09556404380bba25c88102191eb1b7e7d6153eaf12d63457aca986"
+      },
+      {
+        "artworkId": "QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4/image.png",
+        "imageSHA256": "5f4375bae89cc265fa3df6e522c6340791089fbf0be9e2542341d94db9787ed3"
+      },
+      {
+        "artworkId": "QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j/image.png",
+        "imageSHA256": "4e39544e62e9642ae5a225337d1a5bbdbcb0cfd44294b8870a520f42f373de92"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:30.671133-05:00",
+    "usage": {
+      "inputTokens": 7127,
+      "outputTokens": 1002,
+      "totalTokens": 8129,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7397
+    },
+    "requestId": "8c382bac-49d0-4fa3-a4b0-ef126cd6e0ce",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head fills the upper two-thirds; two asymmetric eye forms glow orange-yellow against dark surrounds, the left ringed by a double oval, the right topped with a small spike crown.\",\n    \"A wide open mouth spans the lower face, outlined in red-pink with dense black vertical lines crossing the teeth zone, forming a grid-like interior pattern.\",\n    \"Loose red scribble lines spill beyond the figure on both sides; black-and-white striped limb shapes hang at lower left and right against a cream background.\"\n  ],\n  \"reading\": \"Two mismatched eyes burn orange against a dark head that fills the frame; their uneven sizes and different crown shapes make the face feel off-balance in a way that holds attention. The gridded mouth reads as both grin and cage. Red lines escape the body's edges, while striped limbs dangle with a loose, puppet-like quality. The mood sits somewhere between comic and unsettling.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #249 and nnxyz nnotb #251. Where #249 spreads figures across a wide field with bold sky-blue passages, #250 compresses a single head to the picture plane, trading open space for confrontational scale.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\",\n      \"reason\": \"nnxyz nnotb #251 shares the close-cropped single head and a toothed mouth with interior line patterning, but swaps the orange-eye palette for green irises and opens the background to pale blue — a direct color contrast on the same structural arrangement.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4\",\n      \"reason\": \"nnxyz #1 from the nnxyz-other owned subset centers a dark head with large goggle-like eye forms and a wide exposed-teeth mouth, offering a cross-collection comparison of the same face structure rendered with a denser, more layered mark surface.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye forms\",\n    \"gridded mouth interior\",\n    \"spike crown motif\",\n    \"red overflow lines\",\n    \"striped limb shapes\",\n    \"dark head on cream ground\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational scale\",\n    \"comic-unsettling tension\",\n    \"contained-versus-escaping energy\"\n  ],\n  \"lookingQuestion\": \"The two eye forms differ in size, framing, and crown detail — what does following those differences tell you about how the face is organized across its vertical center line?\",\n  \"ambiguities\": [\n    \"Small lettered marks scattered across the torso area may be legible text or purely decorative glyphs; image resolution does not resolve this.\",\n    \"nnxyz nnotb #249 (QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc) was inspected but its multi-figure, wide-field composition offers no strong formal parallel to #250's single close-cropped head, so it was omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the image: orange-yellow asymmetric eyes, red-pink gridded mouth, and red overflow lines with striped limb shapes are all directly visible.\",\n    \"Draft reading phrase 'cannot contain itself' implied intent and was replaced with a plain description of the visible result; all other claims remain grounded in observations.\",\n    \"Both comparison IDs inspected and confirmed: #251 visibly shares close-crop head and gridded mouth with contrasting green/blue palette; nnxyz #1 visibly shares dark head, goggle eye forms, and wide teeth mouth — connections retained as meaningful formal comparisons.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSdyHNNWyX9VydvbuxyaznnEhuCBPoRiW51wBQWWyheYR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSdyHNNWyX9VydvbuxyaznnEhuCBPoRiW51wBQWWyheYR/image.png",
+        "imageSHA256": "0bc03ea5f6be98477376735f421c045915c0ffc5c939708a238904e487034e7f"
+      },
+      {
+        "artworkId": "QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc/image.png",
+        "imageSHA256": "9aa266ba8a09556404380bba25c88102191eb1b7e7d6153eaf12d63457aca986"
+      },
+      {
+        "artworkId": "QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4/image.png",
+        "imageSHA256": "5f4375bae89cc265fa3df6e522c6340791089fbf0be9e2542341d94db9787ed3"
+      },
+      {
+        "artworkId": "QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j/image.png",
+        "imageSHA256": "4e39544e62e9642ae5a225337d1a5bbdbcb0cfd44294b8870a520f42f373de92"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head dominates the upper two-thirds; two asymmetric eye forms glow orange-yellow against dark surrounds, the left eye ringed by a double oval, the right topped with a small crown of spikes.\", \"A wide open mouth spans the lower face, outlined in red-pink with dense black vertical lines crossing the teeth zone, giving it a grid-like interior pattern.\", \"Loose red scribble lines spill beyond the figure on both sides, while black-and-white striped limb shapes hang at lower left and right, layered over a cream background.\"], \"reading\": \"Two mismatched eyes burn orange against a dark head that fills the frame, their uneven sizes and different crown shapes making the face feel off-balance in a way that holds attention. The gridded mouth reads as both grin and cage. Red lines escape the body's edges as if the figure cannot contain itself, while striped limbs dangle with a loose, puppet-like quality. The overall mood sits somewhere between comic and unsettling.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #249 and nnxyz nnotb #251. Where #249 spreads figures across a wide field with bold sky-blue passages, #250 compresses a single head close to the picture plane, trading open space for confrontational scale.\", \"connections\": [{\"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\", \"reason\": \"nnxyz nnotb #251 shares the close-cropped single head format and a toothed mouth with interior line patterning, but swaps the orange-eye palette for green irises and opens the background to pale blue, making the two a direct color contrast on the same structural idea.\"}, {\"targetArtworkId\": \"QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4\", \"reason\": \"nnxyz #1 from the nnxyz-other owned subset also centers a dark head with large goggle-like eye forms and a wide exposed-teeth mouth, offering a cross-collection comparison of how the same face structure appears with a denser, more layered mark surface.\"}], \"tags\": [\"asymmetric eye forms\", \"gridded mouth interior\", \"crown spike motif\", \"red overflow lines\", \"striped limb shapes\", \"dark head on cream ground\"], \"interpretiveTags\": [\"confrontational scale\", \"comic-unsettling tension\", \"contained-versus-escaping energy\"], \"lookingQuestion\": \"The two eye forms differ in size, framing, and crown detail — what does following those differences tell you about how the face is organized across its vertical center line?\", \"ambiguities\": [\"The small lettered marks scattered across the torso area may be legible text or purely decorative glyphs; image resolution does not resolve this.\", \"The candidate nnxyz nnotb #249 (QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc) was inspected but its multi-figure, wide-field composition offers no strong formal parallel to #250's single close-cropped head, so it was omitted from connections.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:18:22.460304-05:00",
+    "usage": {
+      "inputTokens": 6891,
+      "outputTokens": 956,
+      "totalTokens": 7847,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12443
+    },
+    "requestId": "0814b4ff-9535-44cb-905b-1febbef6c6a0",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head fills the upper two-thirds; two asymmetric eye forms glow orange-yellow against dark surrounds, the left ringed by a double oval, the right topped with a small spike crown.\",\n    \"A red-pink outlined mouth spans the lower face, with dense black vertical and horizontal lines crossing the tooth zone to form a grid-like interior; individual white teeth are visible but the dark opening behind them is narrow, contained by the lattice of crossing lines.\",\n    \"Loose red scribble lines spill beyond the figure on both sides; black-and-white striped limb shapes hang at lower left and right against a cream background.\"\n  ],\n  \"reading\": \"Two mismatched eyes burn orange against a dark head that fills the frame; their uneven sizes and different crown shapes make the face feel off-balance in a way that holds attention. The gridded mouth reads as both grin and cage, its teeth visible but barred behind crossing lines. Red marks escape the body's edges, while striped limbs dangle with a loose, puppet-like quality. The mood sits somewhere between comic and unsettling.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors #249 and #251. Where #249 spreads multiple figures across a wide field with bold sky-blue passages, #250 compresses a single head to the picture plane, trading open space for confrontational scale.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\",\n      \"reason\": \"nnxyz nnotb #251 shares the close-cropped single head and a toothed mouth with interior line patterning, but swaps the orange-eye palette for green irises and opens the background to pale blue — a direct color contrast on the same structural arrangement.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4\",\n      \"reason\": \"nnxyz #1 from the nnxyz-other owned subset centers a dark head with large goggle-like eye forms and a wide exposed-teeth mouth, offering a cross-collection comparison of the same face structure rendered with a denser, more layered mark surface.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye forms\",\n    \"gridded mouth interior\",\n    \"spike crown motif\",\n    \"red overflow lines\",\n    \"striped limb shapes\",\n    \"dark head on cream ground\"\n  ],\n  \"lookingQuestion\": \"The two eye forms differ in size, framing, and crown detail — what does following those differences tell you about how the face is organized across its vertical center line?\",\n  \"ambiguities\": [\n    \"Small lettered marks scattered across the torso area may be legible text or purely decorative glyphs; image resolution does not resolve this.\",\n    \"nnxyz nnotb #249 (QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc) was inspected but its multi-figure, wide-field composition offers no strong formal parallel to #250's single close-cropped head, so it was omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide open mouth' with a description noting the visible teeth behind a dense grid of crossing lines and a narrow dark opening, consistent with the mouth-openness-check flag.\",\n    \"Retained both connections after re-inspection: #251 and nnxyz #1 each show specific formal parallels (close-cropped head, toothed mouth, dark mass) supported by the comparison images.\",\n    \"Reading adjusted to 65 words; context angle at 38 words referencing only the owned subset.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSdyHNNWyX9VydvbuxyaznnEhuCBPoRiW51wBQWWyheYR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSdyHNNWyX9VydvbuxyaznnEhuCBPoRiW51wBQWWyheYR/image.png",
+        "imageSHA256": "0bc03ea5f6be98477376735f421c045915c0ffc5c939708a238904e487034e7f"
+      },
+      {
+        "artworkId": "QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc/image.png",
+        "imageSHA256": "9aa266ba8a09556404380bba25c88102191eb1b7e7d6153eaf12d63457aca986"
+      },
+      {
+        "artworkId": "QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4/image.png",
+        "imageSHA256": "5f4375bae89cc265fa3df6e522c6340791089fbf0be9e2542341d94db9787ed3"
+      },
+      {
+        "artworkId": "QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j/image.png",
+        "imageSHA256": "4e39544e62e9642ae5a225337d1a5bbdbcb0cfd44294b8870a520f42f373de92"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large rounded head fills the upper two-thirds; two asymmetric eye forms glow orange-yellow against dark surrounds, the left ringed by a double oval, the right topped with a small spike crown.\", \"A wide open mouth spans the lower face, outlined in red-pink with dense black vertical lines crossing the teeth zone, forming a grid-like interior pattern.\", \"Loose red scribble lines spill beyond the figure on both sides; black-and-white striped limb shapes hang at lower left and right against a cream background.\"], \"reading\": \"Two mismatched eyes burn orange against a dark head that fills the frame; their uneven sizes and different crown shapes make the face feel off-balance in a way that holds attention. The gridded mouth reads as both grin and cage. Red lines escape the body's edges, while striped limbs dangle with a loose, puppet-like quality. The mood sits somewhere between comic and unsettling.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #249 and nnxyz nnotb #251. Where #249 spreads figures across a wide field with bold sky-blue passages, #250 compresses a single head to the picture plane, trading open space for confrontational scale.\", \"connections\": [{\"targetArtworkId\": \"QmUAbGkqejRABQoEfqdxsAEN1ryYdRzsqXAgrEdzwzEj7j\", \"reason\": \"nnxyz nnotb #251 shares the close-cropped single head and a toothed mouth with interior line patterning, but swaps the orange-eye palette for green irises and opens the background to pale blue — a direct color contrast on the same structural arrangement.\"}, {\"targetArtworkId\": \"QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4\", \"reason\": \"nnxyz #1 from the nnxyz-other owned subset centers a dark head with large goggle-like eye forms and a wide exposed-teeth mouth, offering a cross-collection comparison of the same face structure rendered with a denser, more layered mark surface.\"}], \"tags\": [\"asymmetric eye forms\", \"gridded mouth interior\", \"spike crown motif\", \"red overflow lines\", \"striped limb shapes\", \"dark head on cream ground\"], \"lookingQuestion\": \"The two eye forms differ in size, framing, and crown detail — what does following those differences tell you about how the face is organized across its vertical center line?\", \"ambiguities\": [\"Small lettered marks scattered across the torso area may be legible text or purely decorative glyphs; image resolution does not resolve this.\", \"nnxyz nnotb #249 (QmWvnDQtFnCLaj1uv1eysWc9UkLFkJdSxo7fLQs5mri3qc) was inspected but its multi-figure, wide-field composition offers no strong formal parallel to #250's single close-cropped head, so it was omitted from connections.\"]}\nFLAGS:\n[{\"artworkId\": \"QmSdyHNNWyX9VydvbuxyaznnEhuCBPoRiW51wBQWWyheYR\", \"field\": \"observations\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

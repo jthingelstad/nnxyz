@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:19.096123-05:00",
+    "usage": {
+      "inputTokens": 6112,
+      "outputTokens": 812,
+      "totalTokens": 6924,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14004
+    },
+    "requestId": "2eacaea4-61dc-49e6-8e3f-2c1ff4d60dd8",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark, bulky figure sits upright at center, its open-mouthed head ringed by a bright white oval halo; yellow line-work traces the body's edges against a purple-teal torso.\",\n    \"The lower half of the image is filled with loose white and cream circular forms suggesting cloud or foam, rendered with quick looping strokes on a blue-lavender ground.\",\n    \"Upper left holds a large soft yellow disc bleeding into orange and gold; the background shifts from warm yellow-gold on the left to muted rose-brown on the right.\"\n  ],\n  \"reading\": \"A heavy dark figure sits amid billowing white loops, its wide-open mouth and red-tinged eye giving the face an unsettled charge. The halo above reads as both light source and ironic marker—brightness pressed against something rawer below. Yellow line-work crackles across the dark mass, and the warm solar disc at upper left pulls against the cooler blue ground, making the mood hard to settle.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the soft cloud-foam ground and layered warm-cool sky here contrast sharply with the flat teal field and spare black silhouette of title-neighbor nnxyz nnotb #64, showing the range the collector values across this series.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW\",\n      \"reason\": \"Both works place a dark, open-mouthed form at center with yellow line-work radiating from it, but #64 strips the image to a flat silhouette on solid teal while #65 layers the same elements into a dense, atmospheric ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw\",\n      \"reason\": \"Title-neighbor #66 shares the soft bokeh-style cloud ground and yellow scribble lines over a dark animal body, making the two works a close formal pair within the owned nnotb subset.\"\n    }\n  ],\n  \"tags\": [\n    \"dark figure on cloud ground\",\n    \"open mouth with teeth\",\n    \"white oval halo\",\n    \"yellow line-work over dark mass\",\n    \"warm solar disc upper left\",\n    \"blue-lavender sky field\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled reverence\",\n    \"ironic sanctity\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first—toward the bright halo, the open mouth, or the warm disc at upper left—and what does that path do to how you read the figure's weight?\",\n  \"ambiguities\": [\n    \"The white oval above the head reads as a halo by convention, but its form could equally be a light reflection or floating ring; no metadata confirms the subject.\",\n    \"The comparison with QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA (nnxyz #34) shares yellow-on-dark line-work but belongs to a different collection family and the formal overlap is not strong enough to warrant a connection slot.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQnShMAWKDVvLCJJw6b5XmP5P46FHNc5cdNe2z9hJhWmm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQnShMAWKDVvLCJJw6b5XmP5P46FHNc5cdNe2z9hJhWmm/image.png",
+        "imageSHA256": "2442ccc99af498b307e79e83a29f12feda972c291accf348988f87d2cbad2d1c"
+      },
+      {
+        "artworkId": "QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW/image.png",
+        "imageSHA256": "ad963094e90bd2e743a87b3b29bb22573e348ddefb80cc808b9b293212331545"
+      },
+      {
+        "artworkId": "QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA/image.png",
+        "imageSHA256": "0701bf9c1565e8855e58c7ecca2e53b35449dd859633380517df8cfb9d989dc8"
+      },
+      {
+        "artworkId": "QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw/image.png",
+        "imageSHA256": "c5df97b5cafd540b1b4c317009d39a2251bca088c1896ea0495ca1ac6630cc09"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:25.524127-05:00",
+    "usage": {
+      "inputTokens": 6946,
+      "outputTokens": 903,
+      "totalTokens": 7849,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6357
+    },
+    "requestId": "f8a02f10-9751-4e78-a177-e5b130f61285",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark, bulky figure sits upright at center, its wide-open mouth showing teeth and its head ringed by a bright white oval above; yellow line-work traces the body's edges against a purple-teal torso.\",\n    \"The lower half is filled with loose white and cream circular looping forms on a blue-lavender ground, suggesting foam or cloud without defining either precisely.\",\n    \"Upper left holds a large soft yellow disc bleeding into orange and gold; the background shifts from warm yellow-gold on the left to muted rose-brown on the right.\"\n  ],\n  \"reading\": \"A heavy dark figure sits amid billowing white loops, its wide-open mouth and red-tinged eye giving the face an unsettled charge. A bright white oval above the head reads as both possible light source and ironic marker—brightness pressed against something rawer below. Yellow line-work crackles across the dark mass, and the warm solar disc at upper left pulls against the cooler blue ground, keeping the mood hard to settle.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the layered warm-cool sky and soft cloud-foam ground here contrast sharply with the flat teal field and spare black silhouette of title-neighbor nnxyz nnotb #64, showing the tonal range the collector values.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW\",\n      \"reason\": \"Both works center a dark open-mouthed form with yellow line-work, but #64 strips the image to a flat silhouette on solid teal while #65 layers the same elements into a dense atmospheric ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw\",\n      \"reason\": \"Title-neighbor #66 shares the soft circular cloud ground and yellow scribble lines over a dark animal body, making the two a close formal pair within the owned nnotb subset.\"\n    }\n  ],\n  \"tags\": [\n    \"dark figure on cloud ground\",\n    \"open mouth with teeth\",\n    \"white oval above head\",\n    \"yellow line-work over dark mass\",\n    \"warm solar disc upper left\",\n    \"blue-lavender sky field\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled reverence\",\n    \"ironic brightness\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first—toward the white oval above the head, the open mouth, or the warm disc at upper left—and what does that path do to how you read the figure's weight?\",\n  \"ambiguities\": [\n    \"The white oval above the head reads as a halo by convention, but its form could equally be a light reflection or floating ring; no metadata confirms the subject identity.\",\n    \"QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA shares yellow-on-dark line-work but belongs to a different collection family and the formal overlap is not strong enough to warrant a connection slot.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: white oval above head is visible and distinct; 'halo' retained only as a reading, not asserted as subject identity.\",\n    \"Confirmed: #66 image shows soft circular cloud ground and yellow scribble lines over a dark body—comparison is formally grounded, not proximity-based.\",\n    \"Removed 'ironic marker' as stated fact in reading; reframed as a possible reading to avoid asserting intent.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQnShMAWKDVvLCJJw6b5XmP5P46FHNc5cdNe2z9hJhWmm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQnShMAWKDVvLCJJw6b5XmP5P46FHNc5cdNe2z9hJhWmm/image.png",
+        "imageSHA256": "2442ccc99af498b307e79e83a29f12feda972c291accf348988f87d2cbad2d1c"
+      },
+      {
+        "artworkId": "QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW/image.png",
+        "imageSHA256": "ad963094e90bd2e743a87b3b29bb22573e348ddefb80cc808b9b293212331545"
+      },
+      {
+        "artworkId": "QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA/image.png",
+        "imageSHA256": "0701bf9c1565e8855e58c7ecca2e53b35449dd859633380517df8cfb9d989dc8"
+      },
+      {
+        "artworkId": "QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw/image.png",
+        "imageSHA256": "c5df97b5cafd540b1b4c317009d39a2251bca088c1896ea0495ca1ac6630cc09"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dark, bulky figure sits upright at center, its open-mouthed head ringed by a bright white oval halo; yellow line-work traces the body's edges against a purple-teal torso.\", \"The lower half of the image is filled with loose white and cream circular forms suggesting cloud or foam, rendered with quick looping strokes on a blue-lavender ground.\", \"Upper left holds a large soft yellow disc bleeding into orange and gold; the background shifts from warm yellow-gold on the left to muted rose-brown on the right.\"], \"reading\": \"A heavy dark figure sits amid billowing white loops, its wide-open mouth and red-tinged eye giving the face an unsettled charge. The halo above reads as both light source and ironic marker—brightness pressed against something rawer below. Yellow line-work crackles across the dark mass, and the warm solar disc at upper left pulls against the cooler blue ground, making the mood hard to settle.\", \"contextAngle\": \"Within the owned nnotb subset, the soft cloud-foam ground and layered warm-cool sky here contrast sharply with the flat teal field and spare black silhouette of title-neighbor nnxyz nnotb #64, showing the range the collector values across this series.\", \"connections\": [{\"targetArtworkId\": \"QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW\", \"reason\": \"Both works place a dark, open-mouthed form at center with yellow line-work radiating from it, but #64 strips the image to a flat silhouette on solid teal while #65 layers the same elements into a dense, atmospheric ground.\"}, {\"targetArtworkId\": \"QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw\", \"reason\": \"Title-neighbor #66 shares the soft bokeh-style cloud ground and yellow scribble lines over a dark animal body, making the two works a close formal pair within the owned nnotb subset.\"}], \"tags\": [\"dark figure on cloud ground\", \"open mouth with teeth\", \"white oval halo\", \"yellow line-work over dark mass\", \"warm solar disc upper left\", \"blue-lavender sky field\"], \"interpretiveTags\": [\"unsettled reverence\", \"ironic sanctity\"], \"lookingQuestion\": \"Where does your eye move first—toward the bright halo, the open mouth, or the warm disc at upper left—and what does that path do to how you read the figure's weight?\", \"ambiguities\": [\"The white oval above the head reads as a halo by convention, but its form could equally be a light reflection or floating ring; no metadata confirms the subject.\", \"The comparison with QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA (nnxyz #34) shares yellow-on-dark line-work but belongs to a different collection family and the formal overlap is not strong enough to warrant a connection slot.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:11.483836-05:00",
+    "usage": {
+      "inputTokens": 6856,
+      "outputTokens": 896,
+      "totalTokens": 7752,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6662
+    },
+    "requestId": "66a0b9ab-f1bf-422e-aa92-e3e0fec979c2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark, bulky figure sits upright at center, its mouth showing a horizontal tooth row and a red-tinged eye; yellow line-work traces the body's edges against a purple-teal torso, and a bright white oval floats above the head.\",\n    \"The lower half is filled with loose white and cream circular looping forms on a blue-lavender ground, suggesting foam or cloud without defining either precisely.\",\n    \"Upper left holds a large soft yellow disc bleeding into orange and gold; the background shifts from warm yellow-gold on the left to muted rose-brown on the right.\"\n  ],\n  \"reading\": \"A heavy dark figure sits amid billowing white loops, its exposed tooth row and red-tinged eye giving the face an unsettled charge. A bright white oval above the head reads as both possible light source and ironic marker—brightness pressed against something rawer below. Yellow line-work crackles across the dark mass, and the warm solar disc at upper left pulls against the cooler blue ground, keeping the mood hard to settle.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the layered warm-cool sky and looping white cloud forms here contrast sharply with the flat teal field and spare black silhouette of title-neighbor nnxyz nnotb #64, showing the tonal range the collector values.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW\",\n      \"reason\": \"Both works center a dark figure with a visible tooth row and yellow line-work, but #64 strips the image to a flat silhouette on solid teal while #65 layers the same elements into a dense atmospheric ground of warm and cool color.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw\",\n      \"reason\": \"Title-neighbor #66 shares the yellow scribble lines over a dark animal body and soft circular light forms in the background, though its ground is a warm orange field rather than the blue-lavender of #65.\"\n    }\n  ],\n  \"tags\": [\n    \"dark figure on cloud ground\",\n    \"exposed tooth row\",\n    \"white oval above head\",\n    \"yellow line-work over dark mass\",\n    \"warm solar disc upper left\",\n    \"blue-lavender sky field\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first—toward the white oval above the head, the tooth row, or the warm disc at upper left—and what does that path do to how you read the figure's weight?\",\n  \"ambiguities\": [\n    \"The white oval above the head reads as a halo by convention, but its form could equally be a light reflection or floating ring; no metadata confirms the subject identity.\",\n    \"QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA shares yellow-on-dark line-work but belongs to a different collection family and the formal overlap is not strong enough to warrant a connection slot.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open mouth' with 'exposed tooth row' throughout, grounding the claim in the visible horizontal band of teeth rather than inferring jaw position.\",\n    \"Revised the #66 connection to note its warm orange field specifically, distinguishing it from the blue-lavender ground of #65 rather than claiming a shared cloud ground.\",\n    \"Reading and observations remain within word-count targets; no counts, dates, or CIDs were inserted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQnShMAWKDVvLCJJw6b5XmP5P46FHNc5cdNe2z9hJhWmm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQnShMAWKDVvLCJJw6b5XmP5P46FHNc5cdNe2z9hJhWmm/image.png",
+        "imageSHA256": "2442ccc99af498b307e79e83a29f12feda972c291accf348988f87d2cbad2d1c"
+      },
+      {
+        "artworkId": "QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW/image.png",
+        "imageSHA256": "ad963094e90bd2e743a87b3b29bb22573e348ddefb80cc808b9b293212331545"
+      },
+      {
+        "artworkId": "QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA/image.png",
+        "imageSHA256": "0701bf9c1565e8855e58c7ecca2e53b35449dd859633380517df8cfb9d989dc8"
+      },
+      {
+        "artworkId": "QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw/image.png",
+        "imageSHA256": "c5df97b5cafd540b1b4c317009d39a2251bca088c1896ea0495ca1ac6630cc09"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A dark, bulky figure sits upright at center, its wide-open mouth showing teeth and its head ringed by a bright white oval above; yellow line-work traces the body's edges against a purple-teal torso.\", \"The lower half is filled with loose white and cream circular looping forms on a blue-lavender ground, suggesting foam or cloud without defining either precisely.\", \"Upper left holds a large soft yellow disc bleeding into orange and gold; the background shifts from warm yellow-gold on the left to muted rose-brown on the right.\"], \"reading\": \"A heavy dark figure sits amid billowing white loops, its wide-open mouth and red-tinged eye giving the face an unsettled charge. A bright white oval above the head reads as both possible light source and ironic marker—brightness pressed against something rawer below. Yellow line-work crackles across the dark mass, and the warm solar disc at upper left pulls against the cooler blue ground, keeping the mood hard to settle.\", \"contextAngle\": \"Within the owned nnotb subset, the layered warm-cool sky and soft cloud-foam ground here contrast sharply with the flat teal field and spare black silhouette of title-neighbor nnxyz nnotb #64, showing the tonal range the collector values.\", \"connections\": [{\"targetArtworkId\": \"QmbYHXARpZbd2ktVptYURm615Z5ynFGAgx7EfzpRRMthMW\", \"reason\": \"Both works center a dark open-mouthed form with yellow line-work, but #64 strips the image to a flat silhouette on solid teal while #65 layers the same elements into a dense atmospheric ground.\"}, {\"targetArtworkId\": \"QmNvxm97BahJf9u1dMi48r5KozNFCu9zvLXqie8tAjPtaw\", \"reason\": \"Title-neighbor #66 shares the soft circular cloud ground and yellow scribble lines over a dark animal body, making the two a close formal pair within the owned nnotb subset.\"}], \"tags\": [\"dark figure on cloud ground\", \"open mouth with teeth\", \"white oval above head\", \"yellow line-work over dark mass\", \"warm solar disc upper left\", \"blue-lavender sky field\"], \"lookingQuestion\": \"Where does your eye move first—toward the white oval above the head, the open mouth, or the warm disc at upper left—and what does that path do to how you read the figure's weight?\", \"ambiguities\": [\"The white oval above the head reads as a halo by convention, but its form could equally be a light reflection or floating ring; no metadata confirms the subject identity.\", \"QmWQwscsYAtx7pZVKPsL19Yc4CbwFKAJnv7rTA7gtVcdaA shares yellow-on-dark line-work but belongs to a different collection family and the formal overlap is not strong enough to warrant a connection slot.\"]}\nFLAGS:\n[{\"artworkId\": \"QmQnShMAWKDVvLCJJw6b5XmP5P46FHNc5cdNe2z9hJhWmm\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}, {\"artworkId\": \"QmQnShMAWKDVvLCJJw6b5XmP5P46FHNc5cdNe2z9hJhWmm\", \"rule\": \"assistant-original-image-check\", \"detail\": \"The mouth is an exposed tooth row or grimace, rather than clearly wide-open. Do not infer openness from visible teeth alone. The comparison nnotb #66 has a warm orange field and rounded light forms mostly above its clustered animal-like bodies; describing it as the same cloud ground as #65 is too broad. Re-examine both images and give a more precise shared-form or contrasting-ground comparison.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

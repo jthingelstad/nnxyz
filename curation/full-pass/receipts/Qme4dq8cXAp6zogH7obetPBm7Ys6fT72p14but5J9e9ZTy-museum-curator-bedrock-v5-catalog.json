@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:10.983256-05:00",
+    "usage": {
+      "inputTokens": 6130,
+      "outputTokens": 812,
+      "totalTokens": 6942,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13476
+    },
+    "requestId": "85294996-6d87-428a-b106-596779c3eecb",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large circular black outline dominates the center, enclosing layered warm tones—deep red, burnt orange, and olive—with white zigzag marks and black spiked forms suggesting an open jaw in the lower half.\",\n    \"Loose scribbled lines in red, light blue, white, and pink radiate outward from the central form against a flat teal-green background, with a horizontal pink band cutting across the left edge.\",\n    \"On the right side, a tighter cluster of yellow, gold, and black lines forms a secondary rounded shape with a small spiral, distinct from the looser surrounding marks.\"\n  ],\n  \"reading\": \"A heavy circular outline holds a dense interior of warm reds and oranges, while spiked black forms and white zigzags below it read as a wide, open mouth. The surrounding field is restless—thin colored lines scatter outward without settling. The right-side spiral cluster feels quieter, almost watchful, against the louder central mass. The overall mood is confrontational, though that reading sits with the viewer.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #206 and nnotb #208 in both title order and recorded creation order. All three share the same teal-green ground and a skull-like circular form, but #207 uses warmer interior tones and a more open jaw than its neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q\",\n      \"reason\": \"nnotb #208 shares the same teal ground and large circular skull form, but its interior is darker and more densely overworked, making the two a direct contrast in interior density on the same basic structure.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY\",\n      \"reason\": \"nnotb #206 uses a cooler blue-grey ground and a horizontally oriented open-jaw form, contrasting with #207's warmer palette and more upright circular framing of a similar subject.\"\n    }\n  ],\n  \"tags\": [\n    \"circular outline\",\n    \"open jaw form\",\n    \"teal ground\",\n    \"radiating scribble lines\",\n    \"warm interior tones\",\n    \"spiral cluster\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"watchful secondary form\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the tight spiral cluster on the right and the open jaw at the center do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The secondary rounded form on the right could be read as a separate figure or as a detail of the same form; the image does not resolve this clearly.\",\n    \"nifty faces #105 (QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt) was inspected but not selected—its black ground, muted palette, and single upright face structure offer no strong formal connection to #207 beyond both containing a face-like form.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qme4dq8cXAp6zogH7obetPBm7Ys6fT72p14but5J9e9ZTy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4dq8cXAp6zogH7obetPBm7Ys6fT72p14but5J9e9ZTy/image.png",
+        "imageSHA256": "778757241686e0880de9591c5721cc3c933a010bea8a0c7c1525eac17e5d8ca9"
+      },
+      {
+        "artworkId": "QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY/image.png",
+        "imageSHA256": "16b717168fe37dda5b9caacf0cb4fe8a7fd18ab3b349d3e8cf2fbcbabc406c9c"
+      },
+      {
+        "artworkId": "QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt/image.png",
+        "imageSHA256": "91c731b737adf7142f583ada3857fb2fd519ff2afa42b15520a3f0ec773fb7b2"
+      },
+      {
+        "artworkId": "QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q/image.png",
+        "imageSHA256": "f5b357f777cdc7a9434ed7db0586bfb9ec7bb761ee1d5dd5ebbf2541c7150c95"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:17.658947-05:00",
+    "usage": {
+      "inputTokens": 6964,
+      "outputTokens": 938,
+      "totalTokens": 7902,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6606
+    },
+    "requestId": "feca7920-32eb-438c-9d7b-b7bd140d36c6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large circular black outline dominates the center, enclosing layered warm tones—deep red, burnt orange, and olive—with white zigzag marks and black spiked forms in the lower half suggesting an open jaw.\",\n    \"Loose scribbled lines in red, light blue, white, and pink radiate outward from the central form against a flat teal-green ground, with a horizontal pink band cutting across the left edge.\",\n    \"On the right side, a tighter cluster of yellow, gold, and black lines forms a secondary rounded shape containing a small spiral, distinct from the looser marks surrounding it.\"\n  ],\n  \"reading\": \"A heavy circular outline holds a dense interior of warm reds and oranges, while spiked black forms and white zigzags below read as a wide open jaw. The surrounding field is restless—thin colored lines scatter outward without settling. The right-side spiral cluster sits quieter against the louder central mass. Whether the overall effect feels confrontational or absorbing is left to the viewer.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #206 and nnotb #208 in both title and recorded creation order. All three share a teal-green ground and a large circular form with jaw-like marks, but #207 carries warmer interior tones than either neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q\",\n      \"reason\": \"nnotb #208 shares the same teal ground and large circular skull-like form, but its interior is darker and more densely overworked, making the two a direct contrast in interior density on the same basic structure.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY\",\n      \"reason\": \"nnotb #206 uses a cooler blue-grey ground and a horizontally oriented open-jaw form, contrasting with #207's warmer interior palette and more upright circular framing.\"\n    }\n  ],\n  \"tags\": [\"circular outline\", \"open jaw form\", \"teal ground\", \"radiating scribble lines\", \"warm interior tones\", \"spiral cluster\"],\n  \"interpretiveTags\": [\"confrontational mood\", \"watchful secondary form\"],\n  \"lookingQuestion\": \"What does the relationship between the tight spiral cluster on the right and the open jaw at the center do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The secondary rounded form on the right could be read as a separate figure or as a detail of the same form; the image does not resolve this.\",\n    \"nifty faces #105 (QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt) was inspected but not selected—its black ground, muted warm palette, and single upright face structure offer no strong formal connection to #207 beyond both containing a face-like form.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: circular black outline, warm interior tones, teal ground, pink horizontal band, and right-side spiral cluster are all visible.\",\n    \"Comparison with QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q (#208) confirmed: same teal ground and circular form, interior markedly darker and denser than #207.\",\n    \"Draft reading phrase 'almost watchful' removed from prose as interpretive; retained only in interpretiveTags field. No invented biography, technique, or intent introduced.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qme4dq8cXAp6zogH7obetPBm7Ys6fT72p14but5J9e9ZTy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4dq8cXAp6zogH7obetPBm7Ys6fT72p14but5J9e9ZTy/image.png",
+        "imageSHA256": "778757241686e0880de9591c5721cc3c933a010bea8a0c7c1525eac17e5d8ca9"
+      },
+      {
+        "artworkId": "QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY/image.png",
+        "imageSHA256": "16b717168fe37dda5b9caacf0cb4fe8a7fd18ab3b349d3e8cf2fbcbabc406c9c"
+      },
+      {
+        "artworkId": "QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt/image.png",
+        "imageSHA256": "91c731b737adf7142f583ada3857fb2fd519ff2afa42b15520a3f0ec773fb7b2"
+      },
+      {
+        "artworkId": "QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q/image.png",
+        "imageSHA256": "f5b357f777cdc7a9434ed7db0586bfb9ec7bb761ee1d5dd5ebbf2541c7150c95"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large circular black outline dominates the center, enclosing layered warm tones—deep red, burnt orange, and olive—with white zigzag marks and black spiked forms suggesting an open jaw in the lower half.\", \"Loose scribbled lines in red, light blue, white, and pink radiate outward from the central form against a flat teal-green background, with a horizontal pink band cutting across the left edge.\", \"On the right side, a tighter cluster of yellow, gold, and black lines forms a secondary rounded shape with a small spiral, distinct from the looser surrounding marks.\"], \"reading\": \"A heavy circular outline holds a dense interior of warm reds and oranges, while spiked black forms and white zigzags below it read as a wide, open mouth. The surrounding field is restless—thin colored lines scatter outward without settling. The right-side spiral cluster feels quieter, almost watchful, against the louder central mass. The overall mood is confrontational, though that reading sits with the viewer.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #206 and nnotb #208 in both title order and recorded creation order. All three share the same teal-green ground and a skull-like circular form, but #207 uses warmer interior tones and a more open jaw than its neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q\", \"reason\": \"nnotb #208 shares the same teal ground and large circular skull form, but its interior is darker and more densely overworked, making the two a direct contrast in interior density on the same basic structure.\"}, {\"targetArtworkId\": \"QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY\", \"reason\": \"nnotb #206 uses a cooler blue-grey ground and a horizontally oriented open-jaw form, contrasting with #207's warmer palette and more upright circular framing of a similar subject.\"}], \"tags\": [\"circular outline\", \"open jaw form\", \"teal ground\", \"radiating scribble lines\", \"warm interior tones\", \"spiral cluster\"], \"interpretiveTags\": [\"confrontational mood\", \"watchful secondary form\"], \"lookingQuestion\": \"What does the relationship between the tight spiral cluster on the right and the open jaw at the center do to how you move through the image?\", \"ambiguities\": [\"The secondary rounded form on the right could be read as a separate figure or as a detail of the same form; the image does not resolve this clearly.\", \"nifty faces #105 (QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt) was inspected but not selected—its black ground, muted palette, and single upright face structure offer no strong formal connection to #207 beyond both containing a face-like form.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:43.673037-05:00",
+    "usage": {
+      "inputTokens": 6725,
+      "outputTokens": 875,
+      "totalTokens": 7600,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5924
+    },
+    "requestId": "78e1f016-dd9e-4aa4-9758-f5932efd7f22",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large circular black outline dominates the center, enclosing layered warm tones—deep red, burnt orange, and olive—with white zigzag marks and black spiked forms in the lower half suggesting a jaw with visible tooth-like white verticals.\",\n    \"Loose scribbled lines in red, light blue, white, and pink radiate outward from the central form against a flat teal-green ground, with a horizontal pink band cutting across the left edge.\",\n    \"On the right side, a tighter cluster of yellow, gold, and black lines forms a secondary rounded shape containing a small spiral, distinct from the looser marks surrounding it.\"\n  ],\n  \"reading\": \"A heavy circular outline holds a dense interior of warm reds and oranges, while spiked black forms and white zigzag verticals below read as a jaw with bared teeth. The surrounding field is restless—thin colored lines scatter outward without settling. The right-side spiral cluster sits quieter against the louder central mass. Whether the overall effect feels confrontational or absorbing is left to the viewer.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #206 and nnotb #208 in both title and recorded creation order. All three share a teal-green ground and a large circular form with jaw-like marks, but #207 carries warmer interior tones than either neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q\",\n      \"reason\": \"nnotb #208 shares the same teal ground and large circular skull-like form, but its interior is darker and more densely overworked, making the two a direct contrast in interior density on the same basic structure.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY\",\n      \"reason\": \"nnotb #206 uses a cooler blue-grey ground and a horizontally oriented jaw form, contrasting with #207's warmer interior palette and more upright circular framing.\"\n    }\n  ],\n  \"tags\": [\"circular outline\", \"bared teeth form\", \"teal ground\", \"radiating scribble lines\", \"warm interior tones\", \"spiral cluster\"],\n  \"lookingQuestion\": \"What does the relationship between the tight spiral cluster on the right and the tooth-like verticals at the center do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The secondary rounded form on the right could be read as a separate figure or as a detail of the same form; the image does not resolve this.\",\n    \"nifty faces #105 (QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt) was inspected but not selected—its black ground, muted warm palette, and single upright face structure offer no strong formal connection to #207 beyond both containing a face-like form.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide open jaw' with 'jaw with bared teeth'—the visible evidence is a row of white vertical marks and spiked black forms, not a clearly open dark cavity establishing a wide-open mouth.\",\n    \"Reading reworded accordingly; all other fields preserved.\",\n    \"Tag updated from 'open jaw form' to 'bared teeth form' to match the revised visual claim.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qme4dq8cXAp6zogH7obetPBm7Ys6fT72p14but5J9e9ZTy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4dq8cXAp6zogH7obetPBm7Ys6fT72p14but5J9e9ZTy/image.png",
+        "imageSHA256": "778757241686e0880de9591c5721cc3c933a010bea8a0c7c1525eac17e5d8ca9"
+      },
+      {
+        "artworkId": "QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY/image.png",
+        "imageSHA256": "16b717168fe37dda5b9caacf0cb4fe8a7fd18ab3b349d3e8cf2fbcbabc406c9c"
+      },
+      {
+        "artworkId": "QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt/image.png",
+        "imageSHA256": "91c731b737adf7142f583ada3857fb2fd519ff2afa42b15520a3f0ec773fb7b2"
+      },
+      {
+        "artworkId": "QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q/image.png",
+        "imageSHA256": "f5b357f777cdc7a9434ed7db0586bfb9ec7bb761ee1d5dd5ebbf2541c7150c95"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large circular black outline dominates the center, enclosing layered warm tones—deep red, burnt orange, and olive—with white zigzag marks and black spiked forms in the lower half suggesting an open jaw.\", \"Loose scribbled lines in red, light blue, white, and pink radiate outward from the central form against a flat teal-green ground, with a horizontal pink band cutting across the left edge.\", \"On the right side, a tighter cluster of yellow, gold, and black lines forms a secondary rounded shape containing a small spiral, distinct from the looser marks surrounding it.\"], \"reading\": \"A heavy circular outline holds a dense interior of warm reds and oranges, while spiked black forms and white zigzags below read as a wide open jaw. The surrounding field is restless—thin colored lines scatter outward without settling. The right-side spiral cluster sits quieter against the louder central mass. Whether the overall effect feels confrontational or absorbing is left to the viewer.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #206 and nnotb #208 in both title and recorded creation order. All three share a teal-green ground and a large circular form with jaw-like marks, but #207 carries warmer interior tones than either neighbor.\", \"connections\": [{\"targetArtworkId\": \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q\", \"reason\": \"nnotb #208 shares the same teal ground and large circular skull-like form, but its interior is darker and more densely overworked, making the two a direct contrast in interior density on the same basic structure.\"}, {\"targetArtworkId\": \"QmQyzLqpcCLmzs8BNaytp4n9Q96hkECL6fB2xH9nuvQbDY\", \"reason\": \"nnotb #206 uses a cooler blue-grey ground and a horizontally oriented open-jaw form, contrasting with #207's warmer interior palette and more upright circular framing.\"}], \"tags\": [\"circular outline\", \"open jaw form\", \"teal ground\", \"radiating scribble lines\", \"warm interior tones\", \"spiral cluster\"], \"lookingQuestion\": \"What does the relationship between the tight spiral cluster on the right and the open jaw at the center do to how you move through the image?\", \"ambiguities\": [\"The secondary rounded form on the right could be read as a separate figure or as a detail of the same form; the image does not resolve this.\", \"nifty faces #105 (QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt) was inspected but not selected—its black ground, muted warm palette, and single upright face structure offer no strong formal connection to #207 beyond both containing a face-like form.\"]}\nFLAGS:\n[{\"artworkId\": \"Qme4dq8cXAp6zogH7obetPBm7Ys6fT72p14but5J9e9ZTy\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

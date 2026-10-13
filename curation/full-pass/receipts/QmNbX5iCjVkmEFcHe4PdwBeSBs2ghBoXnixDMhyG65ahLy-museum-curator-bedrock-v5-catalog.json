@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:07.702978-05:00",
+    "usage": {
+      "inputTokens": 6541,
+      "outputTokens": 770,
+      "totalTokens": 7311,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12315
+    },
+    "requestId": "dbf0f8a8-0723-4d3f-8826-c750d5f0ba75",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two pointed ear-like forms rise from the top of the head, outlined in red-orange over black fill, with yellow and teal triangles nested inside them.\",\n    \"The face is built from layered loops of red, yellow, green, blue, and white lines crossing over a dark base, with two rectangular eye zones and a wide-open mouth showing white teeth at the bottom.\",\n    \"White spiked lines radiate upward from the crown area, and loose scribbled loops in pink, cyan, and lime extend beyond the face outline into the flat teal background.\"\n  ],\n  \"reading\": \"A dense, snarling face fills most of the canvas, its features stacked vertically and outlined in competing colors rather than blended. The rectangular eye zones and bared teeth read as confrontational, while the radiating white spikes and loose scribbled loops spilling into the background give the form an unsettled, outward pressure. The flat teal ground keeps all that line energy from dissolving into chaos.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #116 and #118. Where #116 uses a muted purple-brown ground with softer, more diffuse marks, #117 returns to the same teal ground shared with #118, pairing high-contrast color stacking with a more frontal, symmetrical face structure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc\",\n      \"reason\": \"Both #117 and #118 share the same flat teal background and use a wide row of white teeth as a dominant horizontal anchor across the lower face, making the ground-and-teeth pairing a direct visual echo between title neighbors in the owned subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje\",\n      \"reason\": \"nnotb #18 shares the same teal background tone and uses a similarly small, densely layered head with spiked crown forms and red circular eye marks, offering a cross-collection comparison the collector links through shared visual qualities.\"\n    }\n  ],\n  \"tags\": [\n    \"layered line loops\",\n    \"pointed ear forms\",\n    \"rectangular eye zones\",\n    \"white teeth row\",\n    \"radiating crown spikes\",\n    \"flat teal ground\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"outward pressure\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"Where does the boundary between the face and the background actually end — and what happens to the lines that cross it?\",\n  \"ambiguities\": [\n    \"The spiked white forms at the crown could read as hair, a headdress element, or purely abstract marks; no supplied evidence resolves this.\",\n    \"nnotb #18 is from a different title family and the teal-ground similarity may be coincidental; the connection is noted as a collector-perspective visual link, not a confirmed formal relationship.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy/image.png",
+        "imageSHA256": "b78b35ca0d53c98a8552b0b373bef6bcda35e7490e6e5f7b9221ba4888d132d3"
+      },
+      {
+        "artworkId": "QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK/image.png",
+        "imageSHA256": "787af10d727472001660fdcc59524af7a602e97d3f544d798b65485175021278"
+      },
+      {
+        "artworkId": "QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje/image.png",
+        "imageSHA256": "47f90dd166f1dbb538036bbb9092d66476531075c47a32eda3d9109d236fc0a7"
+      },
+      {
+        "artworkId": "QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc/image.png",
+        "imageSHA256": "c766949d939386b3c30f75c48c5906edce0ed6b684253719ec6436ad556d4b73"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:14.292897-05:00",
+    "usage": {
+      "inputTokens": 7331,
+      "outputTokens": 969,
+      "totalTokens": 8300,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6471
+    },
+    "requestId": "5892d5e3-030d-46a2-89f0-acdc1803c559",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two pointed ear-like forms rise from the top of the head, outlined in red-orange over black fill, with yellow and teal triangles nested inside them.\",\n    \"The face is built from layered loops of red, yellow, green, blue, and white lines crossing over a dark base, with two rectangular eye zones and a wide-open mouth showing white teeth at the bottom.\",\n    \"White spiked lines radiate upward from the crown area, and loose scribbled loops in pink, cyan, and lime extend beyond the face outline into the flat teal background.\"\n  ],\n  \"reading\": \"A dense, snarling face fills most of the canvas, its features stacked vertically and outlined in competing colors rather than blended. The rectangular eye zones and bared teeth carry a confrontational charge, while the radiating white spikes and scribbled loops spilling into the background give the form an outward, unsettled pressure. The flat teal ground keeps all that line energy contained.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #116 and #118. Where #116 uses a muted purple-brown ground with softer, diffuse marks, #117 shares the flat teal ground of #118, pairing high-contrast color stacking with a more frontal face structure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc\",\n      \"reason\": \"Both works share the same flat teal background and use a wide row of white teeth as a dominant horizontal anchor across the lower face, making the ground-and-teeth pairing a direct visual echo between these title neighbors in the owned subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje\",\n      \"reason\": \"nnotb #18 shares the same teal background tone and carries a densely layered head with spiked crown forms and red circular eye marks; the collector links these across collections through shared visual qualities, not confirmed formal relationship.\"\n    }\n  ],\n  \"tags\": [\n    \"layered line loops\",\n    \"pointed ear forms\",\n    \"rectangular eye zones\",\n    \"white teeth row\",\n    \"radiating crown spikes\",\n    \"flat teal ground\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"outward pressure\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"Where does the boundary between the face and the background actually end — and what happens to the lines that cross it?\",\n  \"ambiguities\": [\n    \"The spiked white forms at the crown could read as hair, a headdress element, or purely abstract marks; no supplied evidence resolves this.\",\n    \"The teal-ground similarity between #117 and nnotb #18 may be coincidental; flagged as a collector-perspective visual link only.\"\n  ],\n  \"reviewFindings\": [\n    \"All colors, forms and placements confirmed against the primary image: red-orange ear outlines, nested yellow/teal triangles, rectangular eye zones, white teeth row, radiating crown spikes, and loose scribbled loops into teal ground are all visible.\",\n    \"Comparison with QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc confirmed: #118 shares flat teal ground and white teeth row as horizontal anchor; connection retained.\",\n    \"Comparison with QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje confirmed: nnotb #18 shows teal ground, spiked crown, and red circular eye marks on a small dense head; cross-collection link retained with collector-perspective framing and ambiguity note.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy/image.png",
+        "imageSHA256": "b78b35ca0d53c98a8552b0b373bef6bcda35e7490e6e5f7b9221ba4888d132d3"
+      },
+      {
+        "artworkId": "QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK/image.png",
+        "imageSHA256": "787af10d727472001660fdcc59524af7a602e97d3f544d798b65485175021278"
+      },
+      {
+        "artworkId": "QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje/image.png",
+        "imageSHA256": "47f90dd166f1dbb538036bbb9092d66476531075c47a32eda3d9109d236fc0a7"
+      },
+      {
+        "artworkId": "QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc/image.png",
+        "imageSHA256": "c766949d939386b3c30f75c48c5906edce0ed6b684253719ec6436ad556d4b73"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two pointed ear-like forms rise from the top of the head, outlined in red-orange over black fill, with yellow and teal triangles nested inside them.\", \"The face is built from layered loops of red, yellow, green, blue, and white lines crossing over a dark base, with two rectangular eye zones and a wide-open mouth showing white teeth at the bottom.\", \"White spiked lines radiate upward from the crown area, and loose scribbled loops in pink, cyan, and lime extend beyond the face outline into the flat teal background.\"], \"reading\": \"A dense, snarling face fills most of the canvas, its features stacked vertically and outlined in competing colors rather than blended. The rectangular eye zones and bared teeth read as confrontational, while the radiating white spikes and loose scribbled loops spilling into the background give the form an unsettled, outward pressure. The flat teal ground keeps all that line energy from dissolving into chaos.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #116 and #118. Where #116 uses a muted purple-brown ground with softer, more diffuse marks, #117 returns to the same teal ground shared with #118, pairing high-contrast color stacking with a more frontal, symmetrical face structure.\", \"connections\": [{\"targetArtworkId\": \"QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc\", \"reason\": \"Both #117 and #118 share the same flat teal background and use a wide row of white teeth as a dominant horizontal anchor across the lower face, making the ground-and-teeth pairing a direct visual echo between title neighbors in the owned subset.\"}, {\"targetArtworkId\": \"QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje\", \"reason\": \"nnotb #18 shares the same teal background tone and uses a similarly small, densely layered head with spiked crown forms and red circular eye marks, offering a cross-collection comparison the collector links through shared visual qualities.\"}], \"tags\": [\"layered line loops\", \"pointed ear forms\", \"rectangular eye zones\", \"white teeth row\", \"radiating crown spikes\", \"flat teal ground\"], \"interpretiveTags\": [\"confrontational\", \"outward pressure\", \"unsettled\"], \"lookingQuestion\": \"Where does the boundary between the face and the background actually end — and what happens to the lines that cross it?\", \"ambiguities\": [\"The spiked white forms at the crown could read as hair, a headdress element, or purely abstract marks; no supplied evidence resolves this.\", \"nnotb #18 is from a different title family and the teal-ground similarity may be coincidental; the connection is noted as a collector-perspective visual link, not a confirmed formal relationship.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:17:45.718225-05:00",
+    "usage": {
+      "inputTokens": 7108,
+      "outputTokens": 829,
+      "totalTokens": 7937,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10761
+    },
+    "requestId": "6f1f86d2-f195-43f3-95a0-7be037a544e9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two pointed ear-like forms rise from the top of the head, outlined in red-orange over black fill, with yellow and teal triangles nested inside them.\",\n    \"The face is built from layered loops of red, yellow, green, blue, and white lines crossing over a dark base, with two rectangular eye zones and a mouth at the bottom showing a row of white teeth separated by a dark gap from the upper lip area.\",\n    \"White spiked lines radiate upward from the crown area, and loose scribbled loops in pink, cyan, and lime extend beyond the face outline into the flat teal background.\"\n  ],\n  \"reading\": \"A dense, snarling face fills most of the canvas, its features stacked vertically and outlined in competing colors rather than blended. The rectangular eye zones and bared teeth carry a confrontational charge, while the radiating white spikes and scribbled loops spilling into the background give the form an outward, unsettled pressure. The flat teal ground holds all that line energy in a single plane.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #116 and #118. Where #116 uses a muted purple-brown ground with softer, diffuse marks, #117 shares the flat teal ground of #118, pairing high-contrast color stacking with a more frontal face structure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc\",\n      \"reason\": \"Both works share the same flat teal background and use a horizontal row of white teeth as a dominant anchor across the lower face, making the ground-and-teeth pairing a direct visual echo between these title neighbors in the owned subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje\",\n      \"reason\": \"nnotb #18 shares the same teal background tone and carries a densely layered head with spiked crown forms and red circular eye marks; the collector links these across collections through shared visual qualities, not confirmed formal relationship.\"\n    }\n  ],\n  \"tags\": [\"layered line loops\", \"pointed ear forms\", \"rectangular eye zones\", \"white teeth row\", \"radiating crown spikes\", \"flat teal ground\"],\n  \"lookingQuestion\": \"Where does the boundary between the face and the background actually end — and what happens to the lines that cross it?\",\n  \"ambiguities\": [\n    \"The spiked white forms at the crown could read as hair, a headdress element, or purely abstract marks; no supplied evidence resolves this.\",\n    \"The teal-ground similarity between #117 and nnotb #18 may be coincidental; flagged as a collector-perspective visual link only.\"\n  ],\n  \"reviewFindings\": [\n    \"Removed 'wide-open' from the mouth description; the visible teeth row and dark gap suggest a bared-teeth expression, but the mouth opening is partially obscured by overlapping line work rather than clearly gaping.\",\n    \"Retained both connections after re-inspecting all four images; the teal ground and teeth-row parallels are visible in both comparison works.\",\n    \"Reading kept within 55–65 word range at 58 words; context at 40 words.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy/image.png",
+        "imageSHA256": "b78b35ca0d53c98a8552b0b373bef6bcda35e7490e6e5f7b9221ba4888d132d3"
+      },
+      {
+        "artworkId": "QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYhez47MEMRssLteQUimQWXHygeUo58Xixj51WWaUnzGK/image.png",
+        "imageSHA256": "787af10d727472001660fdcc59524af7a602e97d3f544d798b65485175021278"
+      },
+      {
+        "artworkId": "QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje/image.png",
+        "imageSHA256": "47f90dd166f1dbb538036bbb9092d66476531075c47a32eda3d9109d236fc0a7"
+      },
+      {
+        "artworkId": "QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc/image.png",
+        "imageSHA256": "c766949d939386b3c30f75c48c5906edce0ed6b684253719ec6436ad556d4b73"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"Two pointed ear-like forms rise from the top of the head, outlined in red-orange over black fill, with yellow and teal triangles nested inside them.\", \"The face is built from layered loops of red, yellow, green, blue, and white lines crossing over a dark base, with two rectangular eye zones and a wide-open mouth showing white teeth at the bottom.\", \"White spiked lines radiate upward from the crown area, and loose scribbled loops in pink, cyan, and lime extend beyond the face outline into the flat teal background.\"], \"reading\": \"A dense, snarling face fills most of the canvas, its features stacked vertically and outlined in competing colors rather than blended. The rectangular eye zones and bared teeth carry a confrontational charge, while the radiating white spikes and scribbled loops spilling into the background give the form an outward, unsettled pressure. The flat teal ground keeps all that line energy contained.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #116 and #118. Where #116 uses a muted purple-brown ground with softer, diffuse marks, #117 shares the flat teal ground of #118, pairing high-contrast color stacking with a more frontal face structure.\", \"connections\": [{\"targetArtworkId\": \"QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc\", \"reason\": \"Both works share the same flat teal background and use a wide row of white teeth as a dominant horizontal anchor across the lower face, making the ground-and-teeth pairing a direct visual echo between these title neighbors in the owned subset.\"}, {\"targetArtworkId\": \"QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje\", \"reason\": \"nnotb #18 shares the same teal background tone and carries a densely layered head with spiked crown forms and red circular eye marks; the collector links these across collections through shared visual qualities, not confirmed formal relationship.\"}], \"tags\": [\"layered line loops\", \"pointed ear forms\", \"rectangular eye zones\", \"white teeth row\", \"radiating crown spikes\", \"flat teal ground\"], \"lookingQuestion\": \"Where does the boundary between the face and the background actually end — and what happens to the lines that cross it?\", \"ambiguities\": [\"The spiked white forms at the crown could read as hair, a headdress element, or purely abstract marks; no supplied evidence resolves this.\", \"The teal-ground similarity between #117 and nnotb #18 may be coincidental; flagged as a collector-perspective visual link only.\"]}\nFLAGS:\n[{\"artworkId\": \"QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy\", \"field\": \"observations\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

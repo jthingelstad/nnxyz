@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:06.242076-05:00",
+    "usage": {
+      "inputTokens": 6278,
+      "outputTokens": 768,
+      "totalTokens": 7046,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12226
+    },
+    "requestId": "3985c173-e648-44d1-a723-3a0f7681504a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large white-outlined head shape dominates the left half, filled with dense horizontal black and yellow stripes; a pink claw-like form and an orange X mark its center.\",\n    \"Five smaller white skull-like forms cluster the right side, each outlined in black with dark oval eye sockets and tooth rows, overlaid with loose red and yellow diagonal lines.\",\n    \"Across the dark background, layered horizontal bands of red, blue, orange, and gray run edge to edge, interrupted by looping scribbles in green, teal, purple, and red at the margins.\"\n  ],\n  \"reading\": \"The large striped head and the cluster of smaller skull forms set up a clear size contrast, pulling the eye between a single dominant shape and a repeating one. The pink claws and orange X inside the head read as markers or wounds rather than decoration. Surrounding scribble lines feel restless against the rigid horizontal banding, giving the image a tense, crowded quality that sits somewhere between inventory and alarm.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, title neighbors nnxyz #20 and nnxyz #26 show the same layered-line approach on very different grounds: #20 uses a gray field with a single close-up skull face; #26 opens onto saturated yellow. This work's black ground and multi-figure spread is distinct among the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk\",\n      \"reason\": \"nnxyz #20 shares the skull-face vocabulary and white outline over dark fill, but compresses everything into one large close-up head rather than distributing multiple smaller forms across the field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNU12HQkmrGh2LPSjXBJY5eSMDcbFVmRZ3FWc6db6R945\",\n      \"reason\": \"nnxyz #26 uses the same loose scribble lines and white outline style but replaces the black ground and skull cluster with a flat yellow field and a single figure, making the spatial mood markedly lighter.\"\n    }\n  ],\n  \"tags\": [\n    \"skull forms\",\n    \"horizontal stripe fill\",\n    \"white outline drawing\",\n    \"multi-figure composition\",\n    \"layered scribble lines\",\n    \"dark ground\"\n  ],\n  \"interpretiveTags\": [\n    \"tense\",\n    \"crowded\",\n    \"inventory-like\"\n  ],\n  \"lookingQuestion\": \"What does the size difference between the single large striped head and the five smaller skull forms do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The pink claw form and orange X inside the large head are visually distinct but their relationship to the head shape is unclear from the image alone.\",\n    \"nnxyz nifty faces #95 shares a loose-line face approach but belongs to a different collection family; the formal overlap is present but not strong enough to warrant a primary connection over the direct title neighbors.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7/image.png",
+        "imageSHA256": "0428a448c9a387e1d60f3793918bf997b0a0d008902bd6e5831e689069da6dd3"
+      },
+      {
+        "artworkId": "Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk/image.png",
+        "imageSHA256": "f8c70935e6fc1ef193d6a7e05f4f206a8b41f8f8951c613b320d89c2e2d2fdbc"
+      },
+      {
+        "artworkId": "QmSnzoppkGxTPQNWL6EbWivyjJCqZGt4vMempgeCfHNRGY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSnzoppkGxTPQNWL6EbWivyjJCqZGt4vMempgeCfHNRGY/image.png",
+        "imageSHA256": "541d82945dc06c5e86bdffdeb82a931db7eccd7ae2dcb087286a8b0460aa3b00"
+      },
+      {
+        "artworkId": "QmNU12HQkmrGh2LPSjXBJY5eSMDcbFVmRZ3FWc6db6R945",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNU12HQkmrGh2LPSjXBJY5eSMDcbFVmRZ3FWc6db6R945/image.png",
+        "imageSHA256": "0de35be97544e17e9fd8f58b487fed6a896216d8187a7c4b6ca79612fd3cdba0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:12.700639-05:00",
+    "usage": {
+      "inputTokens": 7066,
+      "outputTokens": 889,
+      "totalTokens": 7955,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6391
+    },
+    "requestId": "2b94ac8f-e104-47f9-9e51-af2d4a6fec86",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large white-outlined head shape dominates the left half, filled with dense horizontal black and yellow stripes; a pink claw-like form and an orange X mark its center.\",\n    \"Five smaller white skull-like forms cluster the right side, each outlined in black with dark oval eye sockets and tooth rows, overlaid with loose red and yellow diagonal lines.\",\n    \"Across the dark background, layered horizontal bands of red, blue, orange, and gray run edge to edge, interrupted by looping scribbles in green, teal, purple, and red at the margins.\"\n  ],\n  \"reading\": \"The large striped head and the cluster of smaller skull forms set up a clear size contrast, pulling the eye between one dominant shape and a repeating one. The pink claws and orange X inside the head read as markers rather than decoration. Surrounding scribble lines feel restless against the rigid horizontal banding, giving the image a tense, crowded quality that sits somewhere between inventory and alarm.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, title neighbors nnxyz #20 and nnxyz #26 share the layered-line approach on very different grounds: #20 uses a gray field with one close-up skull face; #26 opens onto saturated yellow. This work's black ground and multi-figure spread is distinct among the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk\",\n      \"reason\": \"nnxyz #20 shares the skull-face vocabulary and white outline over dark fill, but compresses everything into one large close-up head rather than distributing multiple smaller forms across the field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNU12HQkmrGh2LPSjXBJY5eSMDcbFVmRZ3FWc6db6R945\",\n      \"reason\": \"nnxyz #26 uses the same loose scribble lines and white outline style but replaces the black ground and skull cluster with a flat yellow field and a single figure, making the spatial mood markedly lighter.\"\n    }\n  ],\n  \"tags\": [\n    \"skull forms\",\n    \"horizontal stripe fill\",\n    \"white outline drawing\",\n    \"multi-figure composition\",\n    \"layered scribble lines\",\n    \"dark ground\"\n  ],\n  \"interpretiveTags\": [\"tense\", \"crowded\", \"inventory-like\"],\n  \"lookingQuestion\": \"What does the size difference between the single large striped head and the five smaller skull forms do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The pink claw form and orange X inside the large head are visually distinct but their relationship to the surrounding head shape is unclear from the image alone.\",\n    \"nnxyz nifty faces #95 shares a loose-line face approach but belongs to a different collection family; the formal overlap is not strong enough to warrant a connection over the direct title neighbors.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: horizontal stripe fill, skull cluster placement, and margin scribble colors are accurate.\",\n    \"nnxyz #20 dark-fill and skull-face vocabulary confirmed in comparison image; nnxyz #26 yellow ground and single-figure confirmed; both connections retained as meaningful contrasts.\",\n    \"Reading trimmed slightly to stay within word limit; no invented intent, biography, or unsupported subject identities found in draft; 'wounds' removed as unsupported interpretation, replaced with neutral 'markers'.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRfyzr637FSZaqAWm9jUR3k1Qu88gM8jsdAysVJCHSZw7/image.png",
+        "imageSHA256": "0428a448c9a387e1d60f3793918bf997b0a0d008902bd6e5831e689069da6dd3"
+      },
+      {
+        "artworkId": "Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk/image.png",
+        "imageSHA256": "f8c70935e6fc1ef193d6a7e05f4f206a8b41f8f8951c613b320d89c2e2d2fdbc"
+      },
+      {
+        "artworkId": "QmSnzoppkGxTPQNWL6EbWivyjJCqZGt4vMempgeCfHNRGY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSnzoppkGxTPQNWL6EbWivyjJCqZGt4vMempgeCfHNRGY/image.png",
+        "imageSHA256": "541d82945dc06c5e86bdffdeb82a931db7eccd7ae2dcb087286a8b0460aa3b00"
+      },
+      {
+        "artworkId": "QmNU12HQkmrGh2LPSjXBJY5eSMDcbFVmRZ3FWc6db6R945",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNU12HQkmrGh2LPSjXBJY5eSMDcbFVmRZ3FWc6db6R945/image.png",
+        "imageSHA256": "0de35be97544e17e9fd8f58b487fed6a896216d8187a7c4b6ca79612fd3cdba0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large white-outlined head shape dominates the left half, filled with dense horizontal black and yellow stripes; a pink claw-like form and an orange X mark its center.\", \"Five smaller white skull-like forms cluster the right side, each outlined in black with dark oval eye sockets and tooth rows, overlaid with loose red and yellow diagonal lines.\", \"Across the dark background, layered horizontal bands of red, blue, orange, and gray run edge to edge, interrupted by looping scribbles in green, teal, purple, and red at the margins.\"], \"reading\": \"The large striped head and the cluster of smaller skull forms set up a clear size contrast, pulling the eye between a single dominant shape and a repeating one. The pink claws and orange X inside the head read as markers or wounds rather than decoration. Surrounding scribble lines feel restless against the rigid horizontal banding, giving the image a tense, crowded quality that sits somewhere between inventory and alarm.\", \"contextAngle\": \"Within the owned nnxyz-other subset, title neighbors nnxyz #20 and nnxyz #26 show the same layered-line approach on very different grounds: #20 uses a gray field with a single close-up skull face; #26 opens onto saturated yellow. This work's black ground and multi-figure spread is distinct among the three.\", \"connections\": [{\"targetArtworkId\": \"Qme91y8NhSp2zS7RkyuhDCRaFtoqvVnp6j9UKnqM3fFwPk\", \"reason\": \"nnxyz #20 shares the skull-face vocabulary and white outline over dark fill, but compresses everything into one large close-up head rather than distributing multiple smaller forms across the field.\"}, {\"targetArtworkId\": \"QmNU12HQkmrGh2LPSjXBJY5eSMDcbFVmRZ3FWc6db6R945\", \"reason\": \"nnxyz #26 uses the same loose scribble lines and white outline style but replaces the black ground and skull cluster with a flat yellow field and a single figure, making the spatial mood markedly lighter.\"}], \"tags\": [\"skull forms\", \"horizontal stripe fill\", \"white outline drawing\", \"multi-figure composition\", \"layered scribble lines\", \"dark ground\"], \"interpretiveTags\": [\"tense\", \"crowded\", \"inventory-like\"], \"lookingQuestion\": \"What does the size difference between the single large striped head and the five smaller skull forms do to how you move through the image?\", \"ambiguities\": [\"The pink claw form and orange X inside the large head are visually distinct but their relationship to the head shape is unclear from the image alone.\", \"nnxyz nifty faces #95 shares a loose-line face approach but belongs to a different collection family; the formal overlap is present but not strong enough to warrant a primary connection over the direct title neighbors.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

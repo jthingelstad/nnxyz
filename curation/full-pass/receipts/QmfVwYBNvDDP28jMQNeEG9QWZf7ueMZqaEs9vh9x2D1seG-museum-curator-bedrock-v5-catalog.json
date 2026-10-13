@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:55.934892-05:00",
+    "usage": {
+      "inputTokens": 6031,
+      "outputTokens": 776,
+      "totalTokens": 6807,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12253
+    },
+    "requestId": "9d6d9584-64ae-42ca-a05f-161294c8c66b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly rectangular central form sits on a slate-blue ground, its edges reinforced by thick black outlines; a dark red diagonal band cuts across the upper third from left to right.\",\n    \"A circular spiral sits left of center, rendered in dark red and black, while a second smaller coiled form appears lower-center in white; both sit inside the larger enclosing shape.\",\n    \"Zigzag lines in red, white, and yellow run horizontally across the lower half, layered over teal, lime-green, and orange fill areas that bleed beyond the black outlines.\"\n  ],\n  \"reading\": \"The slate-blue ground holds a dense, box-like form that feels compressed rather than open. The dark red diagonal band and the two coiled spirals pull the eye in competing directions, giving the image a tense, locked quality. Zigzag lines stacked across the lower half read as agitation held inside a frame, while lime and teal patches push outward against the black containment.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #198 and nnxyz nnotb #200 share the slate-blue ground and a roughly circular or rectangular enclosing form, but #199 replaces their warmer earth tones with cooler teal and a more insistent red diagonal.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK\",\n      \"reason\": \"Both #199 and #200 use the same slate-blue ground and place a large enclosing circular or rectangular form at center, but #200 fills its interior with brown and muted tones where #199 uses teal and lime, sharpening the contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\",\n      \"reason\": \"nifty faces #67 shares the stacked horizontal zigzag lines across a lower register and a similarly compressed rectangular enclosing form, making it a useful cross-collection comparison for that specific line behavior.\"\n    }\n  ],\n  \"tags\": [\n    \"zigzag lines\",\n    \"spiral forms\",\n    \"diagonal band\",\n    \"rectangular enclosure\",\n    \"layered line work\",\n    \"slate-blue ground\"\n  ],\n  \"interpretiveTags\": [\n    \"tense containment\",\n    \"competing focal points\"\n  ],\n  \"lookingQuestion\": \"Where does your eye land first — on the dark red diagonal band, the coiled spiral at left, or the stacked zigzags at the bottom — and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The circular spiral left of center could be read as an eye-like form, but the surrounding lines do not clearly confirm a face structure; the label avoids that identification.\",\n    \"The nifty faces #67 comparison is drawn from a different owned collection family, so the connection is formal only and carries no implication of shared series context.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG/image.png",
+        "imageSHA256": "8a841f005644c131b31cae6a90fca9d8878f6cc51d81c446f7f808660287f27a"
+      },
+      {
+        "artworkId": "QmXvr8fsFZt9YwRw9ULaHRvTSYPiERhMdKMPp6Ud2pvNGW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXvr8fsFZt9YwRw9ULaHRvTSYPiERhMdKMPp6Ud2pvNGW/image.png",
+        "imageSHA256": "94ff13caee2d187361a248c8606041033920ce7ccd2694ee8e85b999a0aa0818"
+      },
+      {
+        "artworkId": "QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS/image.png",
+        "imageSHA256": "64c4f51006df02d6fa50d6ee1c8aaa0bb1f8a2f4175e9fcf89c0cd85e115fe49"
+      },
+      {
+        "artworkId": "QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK/image.png",
+        "imageSHA256": "413e366d8bd1a9cb5b1da5872ee14581e94d979a04e73acca243a80e17698b8a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:02.179708-05:00",
+    "usage": {
+      "inputTokens": 6829,
+      "outputTokens": 950,
+      "totalTokens": 7779,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6130
+    },
+    "requestId": "0d167f36-99ca-44de-a083-4ad7e4b7e8c6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly rectangular central form sits on a slate-blue ground, its edges reinforced by thick black outlines; a dark red diagonal band cuts across the upper third from left to right.\",\n    \"A circular spiral sits left of center, rendered in dark red and black, while a second smaller coiled form appears lower-center in white; both sit inside the larger enclosing shape.\",\n    \"Zigzag lines in red, white, and yellow run horizontally across the lower half, layered over teal, lime-green, and orange fill areas that push beyond the black outlines.\"\n  ],\n  \"reading\": \"The slate-blue ground holds a dense, box-like form that reads as compressed rather than open. The dark red diagonal band and two coiled spirals pull the eye in competing directions, giving the image a tense, locked quality. Zigzag lines stacked across the lower half suggest agitation held inside a frame, while lime and teal patches push outward against the black containment.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #198 and nnxyz nnotb #200 share the slate-blue ground and a large enclosing form, but #199 replaces their warmer earth tones with cooler teal and a more insistent red diagonal.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK\",\n      \"reason\": \"Both works use the same slate-blue ground and a large enclosing form at center, but #200 fills its interior with brown and muted tones where #199 uses teal and lime, sharpening the contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\",\n      \"reason\": \"nifty faces #67 shares stacked horizontal zigzag lines across its lower area and a similarly compressed rectangular enclosing form, making it a useful cross-collection comparison for that specific line behavior.\"\n    }\n  ],\n  \"tags\": [\"zigzag lines\", \"spiral forms\", \"diagonal band\", \"rectangular enclosure\", \"layered line work\", \"slate-blue ground\"],\n  \"interpretiveTags\": [\"tense containment\", \"competing focal points\"],\n  \"lookingQuestion\": \"Where does your eye land first — on the dark red diagonal band, the coiled spiral at left, or the stacked zigzags at the bottom — and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The circular spiral left of center could be read as an eye-like form, but surrounding lines do not clearly confirm a face structure; the label avoids that identification.\",\n    \"The nifty faces #67 comparison is drawn from a different owned collection family, so the connection is formal only and carries no implication of shared series context.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: slate-blue ground, dark red diagonal band, two coiled spirals, and lower-half zigzags in red/white/yellow are all directly visible in the primary image.\",\n    \"Replaced 'bleed beyond' with 'push beyond' to remove a paint-media implication; all other description remains supported by the image.\",\n    \"Both comparison IDs inspected: QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK confirms slate-blue ground and large enclosing form with brown interior; QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS confirms stacked zigzag lines and compressed rectangular form — both connections stand.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG/image.png",
+        "imageSHA256": "8a841f005644c131b31cae6a90fca9d8878f6cc51d81c446f7f808660287f27a"
+      },
+      {
+        "artworkId": "QmXvr8fsFZt9YwRw9ULaHRvTSYPiERhMdKMPp6Ud2pvNGW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXvr8fsFZt9YwRw9ULaHRvTSYPiERhMdKMPp6Ud2pvNGW/image.png",
+        "imageSHA256": "94ff13caee2d187361a248c8606041033920ce7ccd2694ee8e85b999a0aa0818"
+      },
+      {
+        "artworkId": "QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS/image.png",
+        "imageSHA256": "64c4f51006df02d6fa50d6ee1c8aaa0bb1f8a2f4175e9fcf89c0cd85e115fe49"
+      },
+      {
+        "artworkId": "QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK/image.png",
+        "imageSHA256": "413e366d8bd1a9cb5b1da5872ee14581e94d979a04e73acca243a80e17698b8a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A roughly rectangular central form sits on a slate-blue ground, its edges reinforced by thick black outlines; a dark red diagonal band cuts across the upper third from left to right.\", \"A circular spiral sits left of center, rendered in dark red and black, while a second smaller coiled form appears lower-center in white; both sit inside the larger enclosing shape.\", \"Zigzag lines in red, white, and yellow run horizontally across the lower half, layered over teal, lime-green, and orange fill areas that bleed beyond the black outlines.\"], \"reading\": \"The slate-blue ground holds a dense, box-like form that feels compressed rather than open. The dark red diagonal band and the two coiled spirals pull the eye in competing directions, giving the image a tense, locked quality. Zigzag lines stacked across the lower half read as agitation held inside a frame, while lime and teal patches push outward against the black containment.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #198 and nnxyz nnotb #200 share the slate-blue ground and a roughly circular or rectangular enclosing form, but #199 replaces their warmer earth tones with cooler teal and a more insistent red diagonal.\", \"connections\": [{\"targetArtworkId\": \"QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK\", \"reason\": \"Both #199 and #200 use the same slate-blue ground and place a large enclosing circular or rectangular form at center, but #200 fills its interior with brown and muted tones where #199 uses teal and lime, sharpening the contrast.\"}, {\"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\", \"reason\": \"nifty faces #67 shares the stacked horizontal zigzag lines across a lower register and a similarly compressed rectangular enclosing form, making it a useful cross-collection comparison for that specific line behavior.\"}], \"tags\": [\"zigzag lines\", \"spiral forms\", \"diagonal band\", \"rectangular enclosure\", \"layered line work\", \"slate-blue ground\"], \"interpretiveTags\": [\"tense containment\", \"competing focal points\"], \"lookingQuestion\": \"Where does your eye land first — on the dark red diagonal band, the coiled spiral at left, or the stacked zigzags at the bottom — and what does that path through the image feel like?\", \"ambiguities\": [\"The circular spiral left of center could be read as an eye-like form, but the surrounding lines do not clearly confirm a face structure; the label avoids that identification.\", \"The nifty faces #67 comparison is drawn from a different owned collection family, so the connection is formal only and carries no implication of shared series context.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

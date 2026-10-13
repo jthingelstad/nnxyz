@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:48.393239-05:00",
+    "usage": {
+      "inputTokens": 6267,
+      "outputTokens": 793,
+      "totalTokens": 7060,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13647
+    },
+    "requestId": "ff1d89d4-1675-44ba-a4cb-960e04415242",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A head in three-quarter profile occupies the left-center of the image, built from overlapping white, red, and dark-red lines against a deep blue-black background that fills the left third.\",\n    \"Orange and yellow lines arc across the top of the head and scatter into loose coils on the right side, contrasting with the cooler blue wash visible beneath the face.\",\n    \"The right side of the composition opens into a warm dark-red field threaded with red and white scribble loops, leaving the figure's edge unresolved against that ground.\"\n  ],\n  \"reading\": \"The face tilts slightly downward, its structure held together by white lines that cut across cheekbone and jaw while red and dark-red marks press in from every side. The cool blue beneath the face and the warm red field behind it pull against each other, and that tension reads as unease rather than calm. Loose orange coils at the crown feel like heat escaping upward, leaving the lower face in shadow.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #103 and #105. Where #103 uses a muted grey ground and a frontal arrangement, #104 turns the head into profile and floods the field with saturated red and blue, sharpening the emotional contrast the collector values across the series.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn\",\n      \"reason\": \"Both works use layered scribble lines over a painted ground to describe a head, but #103 holds the face frontally in cool grey while #104 turns it in profile against saturated red and blue, making the contrast in mood and palette direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr\",\n      \"reason\": \"rawblocks #53 shares the same dense, multi-color scribble lines crossing a dark ground, but its head faces forward and fills the frame more completely, whereas #104 leaves the right field open and unresolved.\"\n    }\n  ],\n  \"tags\": [\n    \"profile head\",\n    \"scribble line over painted ground\",\n    \"red and blue contrast\",\n    \"orange coil marks\",\n    \"dark background\",\n    \"open right edge\"\n  ],\n  \"interpretiveTags\": [\n    \"unease\",\n    \"heat and shadow\",\n    \"tension\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the white line stop defining the jaw, and what takes over at that edge?\",\n  \"ambiguities\": [\n    \"The warm dark-red area on the right is ambiguous as figure or ground; it may read as hair, background, or both.\",\n    \"Comparison QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt (nifty faces #105) was inspected but its warm gold palette and more resolved contour lines offer no stronger formal connection than the two selected works, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26/image.png",
+        "imageSHA256": "47ad867ec4d9fef8f64a5b4ea19da43061e06d009b2d4349bc55232e11511a41"
+      },
+      {
+        "artworkId": "QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn/image.png",
+        "imageSHA256": "3b23e0c42eddb3384d791f1fbad78ed63e4652eb23539fcdb8c801937a37cedf"
+      },
+      {
+        "artworkId": "QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr/image.png",
+        "imageSHA256": "cf4172ccac5cdec11c216c34d78f613de6ad8673c0ef21925519c74eee0ee496"
+      },
+      {
+        "artworkId": "QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt/image.png",
+        "imageSHA256": "91c731b737adf7142f583ada3857fb2fd519ff2afa42b15520a3f0ec773fb7b2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:56.608320-05:00",
+    "usage": {
+      "inputTokens": 7080,
+      "outputTokens": 940,
+      "totalTokens": 8020,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7872
+    },
+    "requestId": "af8eeaaa-b761-44eb-8c98-6c336debb896",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A head in three-quarter profile occupies the left-center, built from overlapping white, red, and dark-red lines against a deep blue-black ground that fills the left third.\",\n    \"Orange and yellow lines arc across the top of the head and scatter into loose coils on the right side, contrasting with a cool blue wash visible beneath the face.\",\n    \"The right side opens into a warm dark-red field threaded with red and white scribble loops, leaving the figure's edge unresolved against that ground.\"\n  ],\n  \"reading\": \"The face tilts slightly downward, its structure held by white lines crossing cheekbone and jaw while red and dark-red marks press in from every side. The cool blue beneath the face and the warm red field behind it pull against each other, and that tension reads as unease rather than calm. Loose orange coils at the crown sit above a lower face that recedes into shadow.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #103 and #105. Where #103 uses a muted grey ground and a frontal arrangement, #104 turns the head into profile and floods the field with saturated red and blue, sharpening the emotional contrast the collector values.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn\",\n      \"reason\": \"Both use layered scribble lines over a painted ground to describe a head, but #103 holds the face frontally in cool grey while #104 turns it in profile against saturated red and blue, making the palette and orientation contrast direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr\",\n      \"reason\": \"rawblocks #53 shares dense multi-color scribble lines crossing a dark ground, but its head faces forward and fills the frame more completely, whereas #104 leaves the right field open and unresolved.\"\n    }\n  ],\n  \"tags\": [\n    \"profile head\",\n    \"scribble line over painted ground\",\n    \"red and blue contrast\",\n    \"orange coil marks\",\n    \"dark background\",\n    \"open right edge\"\n  ],\n  \"interpretiveTags\": [\n    \"unease\",\n    \"heat and shadow\",\n    \"tension\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the white line stop defining the jaw, and what takes over at that edge?\",\n  \"ambiguities\": [\n    \"The warm dark-red area on the right is ambiguous as figure or ground; it may read as hair, background, or both.\",\n    \"nifty faces #105 was inspected but its warm gold palette and more resolved contour lines offer no stronger formal connection than the two selected works, so it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: blue-black left ground, cool blue wash under face, orange-yellow coils at crown, and warm dark-red right field are all visible.\",\n    \"Profile orientation and unresolved right edge confirmed; no invented subject identities or unsupported intent found in draft; 'heat escaping upward' stock metaphor softened to 'sit above' in reading.\",\n    \"Both comparison IDs inspected: QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn frontal/grey contrast confirmed; QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr forward-facing full-frame contrast confirmed; word limits checked and within range.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26/image.png",
+        "imageSHA256": "47ad867ec4d9fef8f64a5b4ea19da43061e06d009b2d4349bc55232e11511a41"
+      },
+      {
+        "artworkId": "QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn/image.png",
+        "imageSHA256": "3b23e0c42eddb3384d791f1fbad78ed63e4652eb23539fcdb8c801937a37cedf"
+      },
+      {
+        "artworkId": "QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr/image.png",
+        "imageSHA256": "cf4172ccac5cdec11c216c34d78f613de6ad8673c0ef21925519c74eee0ee496"
+      },
+      {
+        "artworkId": "QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt/image.png",
+        "imageSHA256": "91c731b737adf7142f583ada3857fb2fd519ff2afa42b15520a3f0ec773fb7b2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A head in three-quarter profile occupies the left-center of the image, built from overlapping white, red, and dark-red lines against a deep blue-black background that fills the left third.\", \"Orange and yellow lines arc across the top of the head and scatter into loose coils on the right side, contrasting with the cooler blue wash visible beneath the face.\", \"The right side of the composition opens into a warm dark-red field threaded with red and white scribble loops, leaving the figure's edge unresolved against that ground.\"], \"reading\": \"The face tilts slightly downward, its structure held together by white lines that cut across cheekbone and jaw while red and dark-red marks press in from every side. The cool blue beneath the face and the warm red field behind it pull against each other, and that tension reads as unease rather than calm. Loose orange coils at the crown feel like heat escaping upward, leaving the lower face in shadow.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #103 and #105. Where #103 uses a muted grey ground and a frontal arrangement, #104 turns the head into profile and floods the field with saturated red and blue, sharpening the emotional contrast the collector values across the series.\", \"connections\": [{\"targetArtworkId\": \"QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn\", \"reason\": \"Both works use layered scribble lines over a painted ground to describe a head, but #103 holds the face frontally in cool grey while #104 turns it in profile against saturated red and blue, making the contrast in mood and palette direct and visible.\"}, {\"targetArtworkId\": \"QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr\", \"reason\": \"rawblocks #53 shares the same dense, multi-color scribble lines crossing a dark ground, but its head faces forward and fills the frame more completely, whereas #104 leaves the right field open and unresolved.\"}], \"tags\": [\"profile head\", \"scribble line over painted ground\", \"red and blue contrast\", \"orange coil marks\", \"dark background\", \"open right edge\"], \"interpretiveTags\": [\"unease\", \"heat and shadow\", \"tension\"], \"lookingQuestion\": \"Where exactly does the white line stop defining the jaw, and what takes over at that edge?\", \"ambiguities\": [\"The warm dark-red area on the right is ambiguous as figure or ground; it may read as hair, background, or both.\", \"Comparison QmQEM8sKWANbPbdNbTLt3UQ76MHBAEN7XDw4jm5enoxeYt (nifty faces #105) was inspected but its warm gold palette and more resolved contour lines offer no stronger formal connection than the two selected works, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

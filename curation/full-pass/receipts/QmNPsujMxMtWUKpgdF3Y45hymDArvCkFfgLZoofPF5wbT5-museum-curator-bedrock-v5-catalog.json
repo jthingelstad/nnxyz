@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:37.694909-05:00",
+    "usage": {
+      "inputTokens": 6289,
+      "outputTokens": 689,
+      "totalTokens": 6978,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11890
+    },
+    "requestId": "66ee5ef5-d2bf-4ae9-b3d3-5454b7371a2a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-brimmed hat with a small clustered ornament at the upper left dominates the upper half; its brim extends to the right edge while the crown is rendered in layered yellow-green and grey strokes.\",\n    \"Large translucent circular shapes—pale grey and soft peach—float across the figure, overlapping the hat brim and the lower face, softening the boundary between figure and the pale blue-white background.\",\n    \"Fine dark scribbled lines run across the neck and chest area, visible beneath the soft colour washes; a few yellow-gold lines trace the jaw and collar, adding a harder edge against the blurred forms.\"\n  ],\n  \"reading\": \"The figure tilts its head downward, face partly hidden beneath the hat's shadow. Overlapping soft circles dissolve the outline so that solid and atmosphere trade places across the image. The scribbled underlayer shows through the washes, giving the surface a layered, unresolved quality that reads as quiet rather than finished. The small ornament at the hat's crown—tight loops of green and rust—is the one dense, specific detail in an otherwise diffuse field.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #114 and nnxyz nnotb #116. Those two works use flat saturated fields and hard line work; #115 moves in the opposite direction, replacing outline clarity with overlapping soft circles and muted washes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7\",\n      \"reason\": \"nnxyz nnotb #114 uses a flat saturated yellow ground with bold black outlines—a direct contrast to #115's pale, circle-layered surface—making the two immediate title neighbors a study in opposite approaches to ground and edge.\"\n    }\n  ],\n  \"tags\": [\n    \"wide-brimmed hat\",\n    \"overlapping translucent circles\",\n    \"scribbled underlayer\",\n    \"muted yellow-green and grey palette\",\n    \"diffuse figure-ground boundary\",\n    \"small clustered ornament\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the hat brim end and the background begin, and what visual device makes that boundary hard to locate?\",\n  \"ambiguities\": [\n    \"The face below the hat brim is largely obscured by the overlapping circles; whether a full facial structure is present beneath the washes cannot be confirmed from this image alone.\",\n    \"nnxyz nnotb #116 and nnxyz nifty faces #13 were inspected but both use dense, high-contrast line work with no formal overlap with #115's soft-circle structure; neither supports a meaningful comparison and both are omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNPsujMxMtWUKpgdF3Y45hymDArvCkFfgLZoofPF5wbT5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPsujMxMtWUKpgdF3Y45hymDArvCkFfgLZoofPF5wbT5/image.png",
+        "imageSHA256": "77f3ceaf27fc238ec482a45b116877abee2083c42ad64fc380b6935ff4833d8d"
+      },
+      {
+        "artworkId": "QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7/image.png",
+        "imageSHA256": "c8dca195b5c88229ede9ba146288f5acf245a8bee5049def62a5dc336ee272cc"
+      },
+      {
+        "artworkId": "QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv/image.png",
+        "imageSHA256": "8fb5d20a65575f71b89832b7bc615816f47dbb58733f8316991a3595ae38b2d8"
+      },
+      {
+        "artworkId": "QmY2tJZFwshovguNeyfuA5W6LXoMWD6ZKoFCcAwXXGenxw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY2tJZFwshovguNeyfuA5W6LXoMWD6ZKoFCcAwXXGenxw/image.png",
+        "imageSHA256": "d933d1d101ff161c3659b608327a92b7a67dadf25aad820e513293976ebcfffc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:44.107306-05:00",
+    "usage": {
+      "inputTokens": 7019,
+      "outputTokens": 854,
+      "totalTokens": 7873,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6342
+    },
+    "requestId": "e418ef2a-0f18-4a64-997a-eec6b10105c3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-brimmed hat with a small clustered ornament of tight green and rust loops at the upper left dominates the upper half; its brim extends toward the right edge, rendered in layered yellow-green and grey strokes.\",\n    \"Large translucent circles in pale grey and soft peach float across the figure, overlapping the hat brim and lower face, blurring the boundary between figure and the pale blue-white background.\",\n    \"Fine dark scribbled lines run across the neck and chest beneath the colour washes; a few yellow-gold lines trace the jaw and collar, adding a harder edge against the otherwise diffuse forms.\"\n  ],\n  \"reading\": \"The figure tilts downward, face partly hidden beneath the hat's shadow. Overlapping soft circles dissolve the outline so that solid form and open atmosphere trade places across the surface. The scribbled underlayer shows through the washes, giving the image a layered, unresolved quality that reads as quiet rather than incomplete. The small ornament at the hat's crown—tight loops of green and rust—is the one dense, specific detail in an otherwise diffuse field.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #114 and nnxyz nnotb #116. Both neighbors use flat saturated grounds and hard line work; #115 moves in the opposite direction, replacing outline clarity with overlapping soft circles and muted washes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7\",\n      \"reason\": \"nnxyz nnotb #114 uses a flat saturated yellow ground with bold black outlines—a direct contrast to #115's pale, circle-layered surface—making these immediate title neighbors a study in opposite approaches to ground and edge.\"\n    }\n  ],\n  \"tags\": [\n    \"wide-brimmed hat\",\n    \"overlapping translucent circles\",\n    \"scribbled underlayer\",\n    \"muted yellow-green and grey palette\",\n    \"diffuse figure-ground boundary\",\n    \"small clustered ornament\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the hat brim end and the background begin, and what visual device makes that boundary hard to locate?\",\n  \"ambiguities\": [\n    \"The face below the hat brim is largely obscured by overlapping circles; whether a complete facial structure is present beneath the washes cannot be confirmed from this image alone.\",\n    \"nnxyz nnotb #116 and nnxyz nifty faces #13 were inspected but both use dense high-contrast line work with no formal overlap with #115's soft-circle structure; neither supports a meaningful comparison and both are omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: hat form, translucent circles, and scribbled underlayer with yellow-gold lines are all visibly present.\",\n    \"Comparison with QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7 confirmed: flat saturated yellow ground and bold black outlines are clearly visible in #114, making the contrast with #115's soft washes accurate and specific.\",\n    \"No invented intent, biography, media, or unsupported subject identities found in draft; word counts for reading (68 words) and contextAngle (46 words) fall within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNPsujMxMtWUKpgdF3Y45hymDArvCkFfgLZoofPF5wbT5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPsujMxMtWUKpgdF3Y45hymDArvCkFfgLZoofPF5wbT5/image.png",
+        "imageSHA256": "77f3ceaf27fc238ec482a45b116877abee2083c42ad64fc380b6935ff4833d8d"
+      },
+      {
+        "artworkId": "QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7/image.png",
+        "imageSHA256": "c8dca195b5c88229ede9ba146288f5acf245a8bee5049def62a5dc336ee272cc"
+      },
+      {
+        "artworkId": "QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv/image.png",
+        "imageSHA256": "8fb5d20a65575f71b89832b7bc615816f47dbb58733f8316991a3595ae38b2d8"
+      },
+      {
+        "artworkId": "QmY2tJZFwshovguNeyfuA5W6LXoMWD6ZKoFCcAwXXGenxw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY2tJZFwshovguNeyfuA5W6LXoMWD6ZKoFCcAwXXGenxw/image.png",
+        "imageSHA256": "d933d1d101ff161c3659b608327a92b7a67dadf25aad820e513293976ebcfffc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A wide-brimmed hat with a small clustered ornament at the upper left dominates the upper half; its brim extends to the right edge while the crown is rendered in layered yellow-green and grey strokes.\", \"Large translucent circular shapes—pale grey and soft peach—float across the figure, overlapping the hat brim and the lower face, softening the boundary between figure and the pale blue-white background.\", \"Fine dark scribbled lines run across the neck and chest area, visible beneath the soft colour washes; a few yellow-gold lines trace the jaw and collar, adding a harder edge against the blurred forms.\"], \"reading\": \"The figure tilts its head downward, face partly hidden beneath the hat's shadow. Overlapping soft circles dissolve the outline so that solid and atmosphere trade places across the image. The scribbled underlayer shows through the washes, giving the surface a layered, unresolved quality that reads as quiet rather than finished. The small ornament at the hat's crown—tight loops of green and rust—is the one dense, specific detail in an otherwise diffuse field.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #114 and nnxyz nnotb #116. Those two works use flat saturated fields and hard line work; #115 moves in the opposite direction, replacing outline clarity with overlapping soft circles and muted washes.\", \"connections\": [{\"targetArtworkId\": \"QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7\", \"reason\": \"nnxyz nnotb #114 uses a flat saturated yellow ground with bold black outlines—a direct contrast to #115's pale, circle-layered surface—making the two immediate title neighbors a study in opposite approaches to ground and edge.\"}], \"tags\": [\"wide-brimmed hat\", \"overlapping translucent circles\", \"scribbled underlayer\", \"muted yellow-green and grey palette\", \"diffuse figure-ground boundary\", \"small clustered ornament\"], \"lookingQuestion\": \"Where exactly does the hat brim end and the background begin, and what visual device makes that boundary hard to locate?\", \"ambiguities\": [\"The face below the hat brim is largely obscured by the overlapping circles; whether a full facial structure is present beneath the washes cannot be confirmed from this image alone.\", \"nnxyz nnotb #116 and nnxyz nifty faces #13 were inspected but both use dense, high-contrast line work with no formal overlap with #115's soft-circle structure; neither supports a meaningful comparison and both are omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

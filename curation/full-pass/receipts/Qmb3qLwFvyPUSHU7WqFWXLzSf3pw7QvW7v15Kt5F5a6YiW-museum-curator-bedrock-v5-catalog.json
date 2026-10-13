@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:24.429877-05:00",
+    "usage": {
+      "inputTokens": 6031,
+      "outputTokens": 822,
+      "totalTokens": 6853,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12983
+    },
+    "requestId": "0ae89fbb-8784-4f5a-9cd4-7273b5a46831",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face-like form fills the canvas against a warm amber-brown ground, outlined in thick white and gray lines, with yellow looping scribbles massed across the upper region.\",\n    \"Two asymmetric eye zones: the left holds concentric orange-red-yellow rings nested inside a teal rectangle; the right shows a black spoked wheel form with a small teal center, set in a white-outlined socket.\",\n    \"A wide rectangular mouth zone sits mid-lower face, filled with red and black arched marks over a blue-outlined box, with a row of white comb-like marks appearing both above the eyes and below the mouth.\"\n  ],\n  \"reading\": \"The face holds two eyes that refuse to match: one a spinning target of warm rings, the other a cold spoked wheel. Repeated comb marks above and below anchor the composition in a kind of grim symmetry. The amber ground presses in from all sides, and the white outline reads less like a boundary than a pressure seal. The overall feeling is confrontational, maybe wary.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #41 sits between title neighbors nnxyz #37 and nnxyz #43 — the same order as its recorded-creation neighbors here. The amber-orange ground is a strong contrast to the saturated blue field of nnxyz #37, while the comb and tooth marks echo across both works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo\",\n      \"reason\": \"nnxyz #37 shares the large face-filling structure and repeated comb-tooth marks, but its blue ground and concentric circle layout make the warm amber and nested-rectangle eye of #41 feel like a direct color inversion of the same formal vocabulary.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx\",\n      \"reason\": \"nnxyz #43 also uses a yellow looping mass at the top and a wide tooth-marked mouth zone, but its dense multicolor scribble fill and red ground contrast with the flatter, more isolated eye forms in #41.\"\n    }\n  ],\n  \"tags\": [\n    \"face-form\",\n    \"concentric-rings\",\n    \"spoked-wheel-eye\",\n    \"comb-marks\",\n    \"amber-ground\",\n    \"asymmetric-eyes\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"wary\"\n  ],\n  \"lookingQuestion\": \"The two eye zones use completely different internal structures — what does the contrast between the warm nested rings on the left and the black spoked wheel on the right do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The comb-like white marks appear in at least three locations; whether they function as a single repeated motif or mark distinct facial features is not resolvable from the image alone.\",\n    \"nnxyz rawblocks #47 shares an amber-orange ground but its compact rounded form and different line weight offer no strong formal connection to #41 beyond color field; it was inspected and set aside.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmb3qLwFvyPUSHU7WqFWXLzSf3pw7QvW7v15Kt5F5a6YiW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmb3qLwFvyPUSHU7WqFWXLzSf3pw7QvW7v15Kt5F5a6YiW/image.png",
+        "imageSHA256": "2b7db689ead11ead1c3db783519a3116eccdfa479d41a02f554584837d5ba00f"
+      },
+      {
+        "artworkId": "QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo/image.png",
+        "imageSHA256": "e09fb4b8df40064bea6cd3c005622e52c1f60d6cbe4a43154646ffc69e3f6e01"
+      },
+      {
+        "artworkId": "QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C/image.png",
+        "imageSHA256": "2ad0890ea541a3f3ea6891c794e13ad4d9700660dbd8b9eb5487d79add5c845d"
+      },
+      {
+        "artworkId": "QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx/image.png",
+        "imageSHA256": "627676ccadbbc7fc43e8dd3c294bd70c306ad15e8ef47d8c2cb09ffa89bc5aa6"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:32.133757-05:00",
+    "usage": {
+      "inputTokens": 6875,
+      "outputTokens": 1106,
+      "totalTokens": 7981,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7611
+    },
+    "requestId": "b31f249d-9a4f-48a1-b55b-bfd030284812",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face-like form fills the canvas against a warm amber-brown ground, outlined in thick white and gray lines, with yellow looping scribbles massed across the upper region.\",\n    \"Two asymmetric eye zones: the left holds concentric orange-red-yellow rings nested inside a teal rectangle; the right shows a black spoked wheel form with a small teal center, set in a white-outlined socket.\",\n    \"A wide rectangular mouth zone sits mid-lower face, filled with red and black arched marks over a blue-outlined box, with rows of white comb-like marks appearing both above the eyes and below the mouth.\"\n  ],\n  \"reading\": \"The face holds two eyes that refuse to match: one a warm target of nested rings, the other a cold spoked wheel. Comb marks above and below create a grim symmetry across the composition. The amber ground presses in from all sides, and the thick white outline reads less like a boundary than a pressure seal. The overall feeling is confrontational, maybe wary.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #41 sits between title neighbors nnxyz #37 and nnxyz #43 — matching its recorded-creation neighbors here. The amber-orange ground contrasts sharply with the saturated blue field of nnxyz #37, while comb and tooth marks echo across both works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo\",\n      \"reason\": \"nnxyz #37 shares the large face-filling structure and repeated comb-tooth marks along the mouth zone, but its blue ground and concentric circle layout make the warm amber and nested-rectangle eye of #41 feel like a color inversion of the same formal vocabulary.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx\",\n      \"reason\": \"nnxyz #43 also carries a yellow looping mass at the top and a wide tooth-marked mouth zone, but its dense multicolor scribble fill and deep red ground contrast with the more isolated, distinct eye forms in #41.\"\n    }\n  ],\n  \"tags\": [\n    \"face-form\",\n    \"concentric-rings\",\n    \"spoked-wheel-eye\",\n    \"comb-marks\",\n    \"amber-ground\",\n    \"asymmetric-eyes\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"wary\"\n  ],\n  \"lookingQuestion\": \"The two eye zones use completely different internal structures — what does the contrast between the warm nested rings on the left and the black spoked wheel on the right do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The comb-like white marks appear in at least three locations; whether they function as a single repeated motif or mark distinct facial features is not resolvable from the image alone.\",\n    \"nnxyz rawblocks #47 shares an amber-orange ground but its compact rounded form and different line weight offer no strong formal connection to #41 beyond color field; inspected and set aside.\"\n  ],\n  \"reviewFindings\": [\n    \"All colors, forms and placements confirmed against the primary image: amber-brown ground, white-gray outline, yellow looping scribbles, concentric warm rings in teal rectangle (left eye), black spoked wheel with teal center (right eye), red-black arched mouth with blue outline, and comb marks above and below — all verified present.\",\n    \"Comparison with QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo confirmed: blue ground, large face structure, comb-tooth marks along mouth zone, and concentric circle element visible — connection claim is supported; 'color inversion' phrasing retained as a reading, not a fact.\",\n    \"Comparison with QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx confirmed: yellow looping mass at top, wide tooth-marked mouth, dense multicolor scribble fill, and deep red ground all visible — connection claim is supported; no invented intent or unsupported claims found in draft; minor phrasing tightened for word limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmb3qLwFvyPUSHU7WqFWXLzSf3pw7QvW7v15Kt5F5a6YiW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmb3qLwFvyPUSHU7WqFWXLzSf3pw7QvW7v15Kt5F5a6YiW/image.png",
+        "imageSHA256": "2b7db689ead11ead1c3db783519a3116eccdfa479d41a02f554584837d5ba00f"
+      },
+      {
+        "artworkId": "QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo/image.png",
+        "imageSHA256": "e09fb4b8df40064bea6cd3c005622e52c1f60d6cbe4a43154646ffc69e3f6e01"
+      },
+      {
+        "artworkId": "QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C/image.png",
+        "imageSHA256": "2ad0890ea541a3f3ea6891c794e13ad4d9700660dbd8b9eb5487d79add5c845d"
+      },
+      {
+        "artworkId": "QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx/image.png",
+        "imageSHA256": "627676ccadbbc7fc43e8dd3c294bd70c306ad15e8ef47d8c2cb09ffa89bc5aa6"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large face-like form fills the canvas against a warm amber-brown ground, outlined in thick white and gray lines, with yellow looping scribbles massed across the upper region.\", \"Two asymmetric eye zones: the left holds concentric orange-red-yellow rings nested inside a teal rectangle; the right shows a black spoked wheel form with a small teal center, set in a white-outlined socket.\", \"A wide rectangular mouth zone sits mid-lower face, filled with red and black arched marks over a blue-outlined box, with a row of white comb-like marks appearing both above the eyes and below the mouth.\"], \"reading\": \"The face holds two eyes that refuse to match: one a spinning target of warm rings, the other a cold spoked wheel. Repeated comb marks above and below anchor the composition in a kind of grim symmetry. The amber ground presses in from all sides, and the white outline reads less like a boundary than a pressure seal. The overall feeling is confrontational, maybe wary.\", \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #41 sits between title neighbors nnxyz #37 and nnxyz #43 — the same order as its recorded-creation neighbors here. The amber-orange ground is a strong contrast to the saturated blue field of nnxyz #37, while the comb and tooth marks echo across both works.\", \"connections\": [{\"targetArtworkId\": \"QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo\", \"reason\": \"nnxyz #37 shares the large face-filling structure and repeated comb-tooth marks, but its blue ground and concentric circle layout make the warm amber and nested-rectangle eye of #41 feel like a direct color inversion of the same formal vocabulary.\"}, {\"targetArtworkId\": \"QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx\", \"reason\": \"nnxyz #43 also uses a yellow looping mass at the top and a wide tooth-marked mouth zone, but its dense multicolor scribble fill and red ground contrast with the flatter, more isolated eye forms in #41.\"}], \"tags\": [\"face-form\", \"concentric-rings\", \"spoked-wheel-eye\", \"comb-marks\", \"amber-ground\", \"asymmetric-eyes\"], \"interpretiveTags\": [\"confrontational\", \"wary\"], \"lookingQuestion\": \"The two eye zones use completely different internal structures — what does the contrast between the warm nested rings on the left and the black spoked wheel on the right do to how you read the face as a whole?\", \"ambiguities\": [\"The comb-like white marks appear in at least three locations; whether they function as a single repeated motif or mark distinct facial features is not resolvable from the image alone.\", \"nnxyz rawblocks #47 shares an amber-orange ground but its compact rounded form and different line weight offer no strong formal connection to #41 beyond color field; it was inspected and set aside.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

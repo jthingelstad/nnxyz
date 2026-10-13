@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:06.019317-05:00",
+    "usage": {
+      "inputTokens": 6185,
+      "outputTokens": 840,
+      "totalTokens": 7025,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14676
+    },
+    "requestId": "29e6723b-2d63-42cd-b056-04f6a8050261",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Three rectangular eye-zones sit side by side across the upper face, each containing a bold red letter—X, Y, Z—drawn inside a circle or square outline against a white ground.\",\n    \"Yellow lines form the dominant structural scaffolding of the face, layered over and under black outlines, with red-orange rectangles framing two mouth zones stacked vertically in the lower half.\",\n    \"Loose blue and pink lines scatter across the lavender background, extending beyond the face edges as stray marks that do not resolve into secondary shapes.\"\n  ],\n  \"reading\": \"A flat lavender field holds a frontal face built from stacked rectangular zones rather than organic curves. The three labeled eye-boxes read as a grid before they read as eyes, giving the face a mechanical, almost schematic quality. The double mouth—two separate barred rectangles, one above the other—adds an unsettled doubling that the red-orange framing makes hard to ignore. The scattered loose lines feel less like decoration than like pressure leaking out at the edges.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the title-neighbor nnxyz nifty faces #75 shares the same layered-line approach but places its forms off-center on a teal ground, making #76's symmetrical, lavender-backed grid feel comparatively locked and frontal. The nnotb collection, also in the owned subset, works with different subject matter entirely.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4\",\n      \"reason\": \"Both works use stacked rectangular zones and layered yellow-and-black lines to build a face, but #75 shifts its structure off-axis on a teal ground while #76 holds a strict frontal symmetry on lavender.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN\",\n      \"reason\": \"Both #76 and #77 feature a wide, tooth-filled mouth zone framed in red-orange, but #77 wraps its forms in a rounded, dark-filled silhouette against red, contrasting sharply with #76's open lavender ground and grid structure.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular eye zones\",\n    \"embedded lettering\",\n    \"stacked mouth forms\",\n    \"yellow structural lines\",\n    \"lavender ground\",\n    \"scattered edge marks\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical affect\",\n    \"schematic face\",\n    \"contained pressure\"\n  ],\n  \"lookingQuestion\": \"The face contains two separate mouth-like rectangles stacked vertically—what changes when you treat them as two distinct features rather than one?\",\n  \"ambiguities\": [\n    \"The letters X, Y, Z in the eye zones are visible image content treated as such; whether they carry meaning beyond the artist's title signature cannot be determined from the image alone.\",\n    \"QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA (nnotb #21) shows a building subject with no formal overlap with #76's face structure; no useful connection was found and it is omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD/image.png",
+        "imageSHA256": "71e1fb501a6f6a17291b51862a87a9a99d25a5fe5a454d229ee3b3b88f9c12d1"
+      },
+      {
+        "artworkId": "QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4/image.png",
+        "imageSHA256": "301ba5add6cada5ef518bead7e8ad2490a703ce67940b12bcf4eccf1eb140b1c"
+      },
+      {
+        "artworkId": "QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA/image.png",
+        "imageSHA256": "413cf86e63301d4f70708dc56d018eb5d9eb1d246a47e9771dbf7c1ad5c5f01e"
+      },
+      {
+        "artworkId": "QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN/image.png",
+        "imageSHA256": "f548741885bb9cc5d9f96c53ca8eb64537f55aeb26f66bff8a0545a4abb4524e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:12.888925-05:00",
+    "usage": {
+      "inputTokens": 7045,
+      "outputTokens": 1041,
+      "totalTokens": 8086,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6799
+    },
+    "requestId": "dfc0337c-5cd1-420c-a453-d5200344d89f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Three rectangular eye-zones sit side by side across the upper face, each containing a bold red letter—X, Y, Z—drawn inside a circle or square outline against a white ground.\",\n    \"Yellow lines form the dominant structural scaffolding of the face, layered over and under black outlines, with red-orange rectangles framing two mouth zones stacked vertically in the lower half.\",\n    \"Loose blue and pink lines scatter across the lavender background, extending beyond the face edges as stray marks that do not resolve into secondary shapes.\"\n  ],\n  \"reading\": \"A flat lavender field holds a frontal face built from stacked rectangular zones rather than organic curves. The three labeled eye-boxes read as a grid before they read as eyes, giving the face a mechanical, almost schematic quality. The double mouth—two separate barred rectangles, one above the other—adds an unsettled doubling that the red-orange framing makes hard to ignore. The scattered loose lines feel less like decoration than like pressure leaking out at the edges.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title-neighbor nnxyz nifty faces #75 shares the layered-line approach but places its forms off-center on a teal ground, making #76's symmetrical, lavender-backed grid feel comparatively locked and frontal.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4\",\n      \"reason\": \"Both works use stacked rectangular zones and layered yellow-and-black lines to build a face, but #75 shifts its structure off-axis on a teal ground while #76 holds strict frontal symmetry on lavender.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN\",\n      \"reason\": \"Both #76 and #77 show a wide tooth-filled mouth zone framed in red-orange, but #77 wraps its forms in a rounded dark-filled silhouette against red, contrasting with #76's open lavender ground and grid structure.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular eye zones\",\n    \"embedded lettering\",\n    \"stacked mouth forms\",\n    \"yellow structural lines\",\n    \"lavender ground\",\n    \"scattered edge marks\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical affect\",\n    \"schematic face\",\n    \"contained pressure\"\n  ],\n  \"lookingQuestion\": \"The face contains two separate mouth-like rectangles stacked vertically—what changes when you treat them as two distinct features rather than one?\",\n  \"ambiguities\": [\n    \"The letters X, Y, Z in the eye zones are visible image content treated as such; whether they carry meaning beyond the artist's title signature cannot be determined from the image alone.\",\n    \"QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA (nnotb #21) shows a building subject with no formal overlap with #76's face structure; no useful connection was found and it is omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: X, Y, Z letters visible in white-ground eye-boxes; yellow scaffolding and red-orange double mouth confirmed; stray blue and pink marks on lavender ground confirmed.\",\n    \"Comparison with QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4 confirmed: #75 image shows off-axis placement on teal with yellow-and-black layering, supporting the stated contrast with #76's frontal symmetry.\",\n    \"Comparison with QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN confirmed: #77 image shows red-orange mouth framing and a rounded dark silhouette on a red ground, supporting the stated contrast; no draft claims required correction.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD/image.png",
+        "imageSHA256": "71e1fb501a6f6a17291b51862a87a9a99d25a5fe5a454d229ee3b3b88f9c12d1"
+      },
+      {
+        "artworkId": "QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4/image.png",
+        "imageSHA256": "301ba5add6cada5ef518bead7e8ad2490a703ce67940b12bcf4eccf1eb140b1c"
+      },
+      {
+        "artworkId": "QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA/image.png",
+        "imageSHA256": "413cf86e63301d4f70708dc56d018eb5d9eb1d246a47e9771dbf7c1ad5c5f01e"
+      },
+      {
+        "artworkId": "QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN/image.png",
+        "imageSHA256": "f548741885bb9cc5d9f96c53ca8eb64537f55aeb26f66bff8a0545a4abb4524e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Three rectangular eye-zones sit side by side across the upper face, each containing a bold red letter—X, Y, Z—drawn inside a circle or square outline against a white ground.\", \"Yellow lines form the dominant structural scaffolding of the face, layered over and under black outlines, with red-orange rectangles framing two mouth zones stacked vertically in the lower half.\", \"Loose blue and pink lines scatter across the lavender background, extending beyond the face edges as stray marks that do not resolve into secondary shapes.\"], \"reading\": \"A flat lavender field holds a frontal face built from stacked rectangular zones rather than organic curves. The three labeled eye-boxes read as a grid before they read as eyes, giving the face a mechanical, almost schematic quality. The double mouth—two separate barred rectangles, one above the other—adds an unsettled doubling that the red-orange framing makes hard to ignore. The scattered loose lines feel less like decoration than like pressure leaking out at the edges.\", \"contextAngle\": \"Within the owned nifty-faces subset, the title-neighbor nnxyz nifty faces #75 shares the same layered-line approach but places its forms off-center on a teal ground, making #76's symmetrical, lavender-backed grid feel comparatively locked and frontal. The nnotb collection, also in the owned subset, works with different subject matter entirely.\", \"connections\": [{\"targetArtworkId\": \"QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4\", \"reason\": \"Both works use stacked rectangular zones and layered yellow-and-black lines to build a face, but #75 shifts its structure off-axis on a teal ground while #76 holds a strict frontal symmetry on lavender.\"}, {\"targetArtworkId\": \"QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN\", \"reason\": \"Both #76 and #77 feature a wide, tooth-filled mouth zone framed in red-orange, but #77 wraps its forms in a rounded, dark-filled silhouette against red, contrasting sharply with #76's open lavender ground and grid structure.\"}], \"tags\": [\"rectangular eye zones\", \"embedded lettering\", \"stacked mouth forms\", \"yellow structural lines\", \"lavender ground\", \"scattered edge marks\"], \"interpretiveTags\": [\"mechanical affect\", \"schematic face\", \"contained pressure\"], \"lookingQuestion\": \"The face contains two separate mouth-like rectangles stacked vertically—what changes when you treat them as two distinct features rather than one?\", \"ambiguities\": [\"The letters X, Y, Z in the eye zones are visible image content treated as such; whether they carry meaning beyond the artist's title signature cannot be determined from the image alone.\", \"QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA (nnotb #21) shows a building subject with no formal overlap with #76's face structure; no useful connection was found and it is omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

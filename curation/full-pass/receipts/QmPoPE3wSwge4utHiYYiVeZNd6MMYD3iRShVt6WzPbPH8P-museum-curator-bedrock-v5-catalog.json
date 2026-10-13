@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:26.178070-05:00",
+    "usage": {
+      "inputTokens": 6312,
+      "outputTokens": 705,
+      "totalTokens": 7017,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12945
+    },
+    "requestId": "274c543a-3a52-4505-8aea-6acd729c199f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large flat-fronted form fills the center, framed by a yellow-gold border stripe and a magenta-and-black banded header across the top third.\",\n    \"Two spiral shapes in light blue and orange-gold sit symmetrically in the upper half, each coiling inward around a darker core; a red cross-hatched oval occupies the left spiral.\",\n    \"Loose yellow circles outlined in black scatter across all four edges outside the inner border, while white zigzag and wavy lines layer over the lower central area.\"\n  ],\n  \"reading\": \"A dense frontal form holds the frame, its flat face divided by banded stripes of magenta, black, and gold. The two inward-coiling spirals read as watchful openings—one carrying a red-crossed mark, the other a clean orange loop. Below them, stacked zigzag bands and a row of white rounded shapes suggest a mouth or keyboard. The scattered yellow circles at the edges feel like an audience or static, keeping the center under pressure.\",\n  \"contextAngle\": \"Within the owned nnotb subset, nnxyz nnotb #71 and nnxyz nnotb #73 are the immediate title neighbors. #71 spreads many small oval faces across its field; #73 tilts toward a single large form dissolving into loose line-work. #72 sits between those two densities, holding a single frontal structure with more internal pattern.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc\",\n      \"reason\": \"Both works use yellow-outlined circles scattered at the image edges as a repeating border element, though #71 fills its interior with many small oval faces while #72 concentrates on one large patterned form.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral forms\",\n    \"banded horizontal stripes\",\n    \"scattered circle border\",\n    \"zigzag line patterning\",\n    \"flat frontal structure\",\n    \"layered line overlay\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful\",\n    \"pressured enclosure\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the two spirals and the stacked zigzag bands below them suggest about how the form is organized—do they feel like separate zones or parts of a single system?\",\n  \"ambiguities\": [\n    \"The central form could be read as a face, a machine panel, or a decorative mask; no supplied metadata confirms subject identity.\",\n    \"nnxyz rawblocks #60 (QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W) shares circular motifs but its composition is too different in structure and palette to support a specific formal comparison beyond surface similarity.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P/image.png",
+        "imageSHA256": "5c4229d31db5fba6812b0c5465f31ad3df52b61a086702d49b12aca429f939d0"
+      },
+      {
+        "artworkId": "QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc/image.png",
+        "imageSHA256": "4470f64fbea0251bd5a33e911bfab148324c1682b0172e9ca00b7615c107a0a3"
+      },
+      {
+        "artworkId": "QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W/image.png",
+        "imageSHA256": "4236e23b2d0901f3772181b1b095363e28e3ba3d3c047ece9e6ac0d59646aff0"
+      },
+      {
+        "artworkId": "QmYAaq3C3XpXaxbF6NhRWnJS1d1HiUUn2wwfu9vtnQ8zFA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYAaq3C3XpXaxbF6NhRWnJS1d1HiUUn2wwfu9vtnQ8zFA/image.png",
+        "imageSHA256": "db7b51af1e74af8c6aabb520c2fff1030599df3fd02a42cc948d1a7a5a1e8f52"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:33.318591-05:00",
+    "usage": {
+      "inputTokens": 7048,
+      "outputTokens": 836,
+      "totalTokens": 7884,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7019
+    },
+    "requestId": "57933e4e-6b24-44db-8633-ebc0034ed0c5",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large flat-fronted form fills the center, framed by a yellow-gold border stripe and a magenta-and-black banded header across the top third.\",\n    \"Two spiral shapes in light blue and orange-gold sit symmetrically in the upper half, each coiling inward around a darker core; a red cross-hatched oval occupies the left spiral.\",\n    \"Loose yellow circles outlined in black scatter across all four edges outside the inner border, while white zigzag and wavy lines layer over the lower central area.\"\n  ],\n  \"reading\": \"A dense frontal form holds the frame, its flat face divided by banded stripes of magenta, black, and gold. The two inward-coiling spirals—one carrying a red-crossed mark, the other a clean orange loop—sit above stacked zigzag bands and a row of white rounded shapes. Scattered yellow circles at the edges ring the whole composition, holding the patterned center in a loose enclosure that reads as both busy and contained.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #71 and nnxyz nnotb #73 bracket this work. #71 distributes many small oval faces across its field; #73 tilts toward a single large form dissolving into loose line-work. #72 holds a single frontal structure dense with internal pattern.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc\",\n      \"reason\": \"Both works scatter yellow-outlined circles along all four edges as a repeating border element, though #71 fills its interior with many small oval faces while #72 concentrates on one large patterned form.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral forms\",\n    \"banded horizontal stripes\",\n    \"scattered circle border\",\n    \"zigzag line patterning\",\n    \"flat frontal structure\",\n    \"layered line overlay\"\n  ],\n  \"interpretiveTags\": [\n    \"contained enclosure\",\n    \"watchful symmetry\"\n  ],\n  \"lookingQuestion\": \"Do the two spirals and the stacked zigzag bands below them read as separate zones within the form, or does the line-work connect them into a single organized system?\",\n  \"ambiguities\": [\n    \"The central form could be read as a face, a machine panel, or a decorative mask; no supplied metadata confirms subject identity.\",\n    \"nnxyz rawblocks #60 shares circular motifs but its composition differs enough in structure and palette that no specific formal comparison is supported beyond surface similarity; it was excluded.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: yellow-gold border, magenta-black header, blue and orange-gold spirals with red cross-hatched oval in left spiral, and yellow outlined circles at edges are all visibly present.\",\n    \"Comparison with QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc confirmed: #71 does show yellow-outlined circles scattered at edges and many small oval face forms in the interior, supporting the stated contrast.\",\n    \"Reading revised to remove 'audience or static' stock metaphor and 'under pressure' unsupported intent language; replaced with a concrete description of the enclosure effect visible in the image.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P/image.png",
+        "imageSHA256": "5c4229d31db5fba6812b0c5465f31ad3df52b61a086702d49b12aca429f939d0"
+      },
+      {
+        "artworkId": "QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc/image.png",
+        "imageSHA256": "4470f64fbea0251bd5a33e911bfab148324c1682b0172e9ca00b7615c107a0a3"
+      },
+      {
+        "artworkId": "QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W/image.png",
+        "imageSHA256": "4236e23b2d0901f3772181b1b095363e28e3ba3d3c047ece9e6ac0d59646aff0"
+      },
+      {
+        "artworkId": "QmYAaq3C3XpXaxbF6NhRWnJS1d1HiUUn2wwfu9vtnQ8zFA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYAaq3C3XpXaxbF6NhRWnJS1d1HiUUn2wwfu9vtnQ8zFA/image.png",
+        "imageSHA256": "db7b51af1e74af8c6aabb520c2fff1030599df3fd02a42cc948d1a7a5a1e8f52"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large flat-fronted form fills the center, framed by a yellow-gold border stripe and a magenta-and-black banded header across the top third.\", \"Two spiral shapes in light blue and orange-gold sit symmetrically in the upper half, each coiling inward around a darker core; a red cross-hatched oval occupies the left spiral.\", \"Loose yellow circles outlined in black scatter across all four edges outside the inner border, while white zigzag and wavy lines layer over the lower central area.\"], \"reading\": \"A dense frontal form holds the frame, its flat face divided by banded stripes of magenta, black, and gold. The two inward-coiling spirals read as watchful openings—one carrying a red-crossed mark, the other a clean orange loop. Below them, stacked zigzag bands and a row of white rounded shapes suggest a mouth or keyboard. The scattered yellow circles at the edges feel like an audience or static, keeping the center under pressure.\", \"contextAngle\": \"Within the owned nnotb subset, nnxyz nnotb #71 and nnxyz nnotb #73 are the immediate title neighbors. #71 spreads many small oval faces across its field; #73 tilts toward a single large form dissolving into loose line-work. #72 sits between those two densities, holding a single frontal structure with more internal pattern.\", \"connections\": [{\"targetArtworkId\": \"QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc\", \"reason\": \"Both works use yellow-outlined circles scattered at the image edges as a repeating border element, though #71 fills its interior with many small oval faces while #72 concentrates on one large patterned form.\"}], \"tags\": [\"spiral forms\", \"banded horizontal stripes\", \"scattered circle border\", \"zigzag line patterning\", \"flat frontal structure\", \"layered line overlay\"], \"interpretiveTags\": [\"watchful\", \"pressured enclosure\"], \"lookingQuestion\": \"What does the relationship between the two spirals and the stacked zigzag bands below them suggest about how the form is organized—do they feel like separate zones or parts of a single system?\", \"ambiguities\": [\"The central form could be read as a face, a machine panel, or a decorative mask; no supplied metadata confirms subject identity.\", \"nnxyz rawblocks #60 (QmQfhMd1n6ngfpiAq141mbVPSoGWWBjB3dtRWySsEwn59W) shares circular motifs but its composition is too different in structure and palette to support a specific formal comparison beyond surface similarity.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

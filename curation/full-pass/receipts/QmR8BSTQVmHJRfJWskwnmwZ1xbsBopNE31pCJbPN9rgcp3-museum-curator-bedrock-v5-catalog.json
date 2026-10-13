@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:23.682071-05:00",
+    "usage": {
+      "inputTokens": 6107,
+      "outputTokens": 784,
+      "totalTokens": 6891,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12954
+    },
+    "requestId": "f4fed5ac-3636-4155-acfb-e9f8d2dce453",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A skull form occupies the center, rendered in gold and yellow tones against a black rectangle, with white lines tracing the jaw and teeth across the lower half.\",\n    \"Two red X marks sit over the eye sockets, drawn with thick crossing strokes that stand out sharply against the gold ground.\",\n    \"Loose scribbled lines in black, white, purple, and red extend beyond the central black rectangle into a warm tan border, with flat green and blue shapes scattered at the edges.\"\n  ],\n  \"reading\": \"The skull reads as both subject and surface: the gold wash gives it weight while the layered scribbles dissolve its edges into surrounding noise. The red X marks over the eyes read as cancellation or emphasis—hard to separate the two. Outside the black rectangle, the border scribbles feel like overflow, as though the central image could not contain everything pressing against it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #68 and nnxyz nnotb #70 both center a head-like form inside a framed rectangle with border marks spilling outward—a shared structural habit visible across these three works in the collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN\",\n      \"reason\": \"nnxyz nnotb #68 uses the same device of a head-form inside a dark inner rectangle with scribbled lines breaking into a contrasting outer border, though its palette runs to teal and brown rather than gold and black.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXdFvLb8cxB2nuRLze6uh4KTbaqkcqpTfM6RgTXiZm3KP\",\n      \"reason\": \"nnxyz nnotb #70 shares the gold-dominant skull-like head and a spiral mark over one eye socket, offering a direct color and motif comparison to the X marks in #69.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"X marks over eye sockets\",\n    \"gold and black ground\",\n    \"layered scribble lines\",\n    \"framed inner rectangle\",\n    \"border overflow marks\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between containment and excess\",\n    \"ambiguous cancellation or emphasis\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the scribbled lines outside the black rectangle connect to or avoid the skull form inside it—and what does that boundary do to how you read the two zones?\",\n  \"ambiguities\": [\n    \"It is unclear whether the red X marks were added over the gold ground as a separate layer or drawn as part of the same pass; the image alone cannot resolve this.\",\n    \"QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3 (nifty faces #98) shares the multi-line scribble approach but its teal ground and profile orientation offer no strong formal anchor to #69 beyond general line density; connection omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3/image.png",
+        "imageSHA256": "8003ee07cd34193841d0615cfac97a097f870cf902ab6d1fb23e7030a200c83f"
+      },
+      {
+        "artworkId": "QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN/image.png",
+        "imageSHA256": "421b6eeffb13f512a7f48c63425378dda46ebdb7df5bb6a617c9bb5908672c3d"
+      },
+      {
+        "artworkId": "QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3/image.png",
+        "imageSHA256": "fe3880dc497fd81e7cc28a66b255034f986e00ebb28a95a6b152bdd47994bbb2"
+      },
+      {
+        "artworkId": "QmXdFvLb8cxB2nuRLze6uh4KTbaqkcqpTfM6RgTXiZm3KP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXdFvLb8cxB2nuRLze6uh4KTbaqkcqpTfM6RgTXiZm3KP/image.png",
+        "imageSHA256": "26857ea6ade5f3a0bb1cf46bf510005d23c65b4817b025d75b8e7db1e23f5197"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:30.382397-05:00",
+    "usage": {
+      "inputTokens": 6913,
+      "outputTokens": 911,
+      "totalTokens": 7824,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6623
+    },
+    "requestId": "757883f4-9af4-40a9-b382-88125660b99c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A skull form occupies the center, rendered in gold and yellow tones against a black rectangle, with white lines tracing the jaw and teeth across the lower half.\",\n    \"Two red X marks sit over the eye sockets, drawn with thick crossing strokes that stand out sharply against the gold ground.\",\n    \"Loose scribbled lines in black, white, purple, and red extend beyond the central black rectangle into a warm tan border, with flat green and blue shapes scattered at the edges.\"\n  ],\n  \"reading\": \"The skull reads as both subject and surface: the gold wash gives it weight while layered scribbles dissolve its edges into surrounding noise. The red X marks over the eyes read as cancellation or emphasis—hard to separate the two. Outside the black rectangle, the border scribbles feel like overflow, as though the central image could not contain everything pressing against it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #68 and nnxyz nnotb #70 both center a head-like form inside a framed rectangle with border marks spilling outward—a shared structural habit visible across these three works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN\",\n      \"reason\": \"nnxyz nnotb #68 places a head-form inside a dark inner rectangle with scribbled lines breaking into a contrasting outer border, though its palette runs to teal and brown rather than gold and black.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXdFvLb8cxB2nuRLze6uh4KTbaqkcqpTfM6RgTXiZm3KP\",\n      \"reason\": \"nnxyz nnotb #70 shares the gold-dominant skull-like head and a spiral mark over one eye socket, offering a direct color and motif contrast to the X marks in #69.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"X marks over eye sockets\",\n    \"gold and black ground\",\n    \"layered scribble lines\",\n    \"framed inner rectangle\",\n    \"border overflow marks\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between containment and excess\",\n    \"ambiguous cancellation or emphasis\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the scribbled lines outside the black rectangle connect to or avoid the skull form inside it—and what does that boundary do to how you read the two zones?\",\n  \"ambiguities\": [\n    \"It is unclear whether the red X marks were added over the gold ground as a separate layer or drawn in the same pass; the image alone cannot resolve this.\",\n    \"QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3 (nifty faces #98) shares multi-line scribble density but its teal ground and profile orientation offer no strong formal anchor to #69; connection omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: gold skull, red X marks, tan border with green and blue edge shapes are all visible.\",\n    \"Both comparison connections verified against inspected images: #68 confirmed teal/brown inner-rectangle structure; #70 confirmed gold skull with spiral eye mark—contrast with X marks is meaningful and specific.\",\n    \"Word counts checked: reading is within 45–80 words, contextAngle is within 25–55 words; no prohibited vocabulary (deliberately, intentional, evolving, etc.) found; no numerical technical facts appear in prose.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3/image.png",
+        "imageSHA256": "8003ee07cd34193841d0615cfac97a097f870cf902ab6d1fb23e7030a200c83f"
+      },
+      {
+        "artworkId": "QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN/image.png",
+        "imageSHA256": "421b6eeffb13f512a7f48c63425378dda46ebdb7df5bb6a617c9bb5908672c3d"
+      },
+      {
+        "artworkId": "QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3/image.png",
+        "imageSHA256": "fe3880dc497fd81e7cc28a66b255034f986e00ebb28a95a6b152bdd47994bbb2"
+      },
+      {
+        "artworkId": "QmXdFvLb8cxB2nuRLze6uh4KTbaqkcqpTfM6RgTXiZm3KP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXdFvLb8cxB2nuRLze6uh4KTbaqkcqpTfM6RgTXiZm3KP/image.png",
+        "imageSHA256": "26857ea6ade5f3a0bb1cf46bf510005d23c65b4817b025d75b8e7db1e23f5197"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A skull form occupies the center, rendered in gold and yellow tones against a black rectangle, with white lines tracing the jaw and teeth across the lower half.\", \"Two red X marks sit over the eye sockets, drawn with thick crossing strokes that stand out sharply against the gold ground.\", \"Loose scribbled lines in black, white, purple, and red extend beyond the central black rectangle into a warm tan border, with flat green and blue shapes scattered at the edges.\"], \"reading\": \"The skull reads as both subject and surface: the gold wash gives it weight while the layered scribbles dissolve its edges into surrounding noise. The red X marks over the eyes read as cancellation or emphasis—hard to separate the two. Outside the black rectangle, the border scribbles feel like overflow, as though the central image could not contain everything pressing against it.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #68 and nnxyz nnotb #70 both center a head-like form inside a framed rectangle with border marks spilling outward—a shared structural habit visible across these three works in the collection.\", \"connections\": [{\"targetArtworkId\": \"QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN\", \"reason\": \"nnxyz nnotb #68 uses the same device of a head-form inside a dark inner rectangle with scribbled lines breaking into a contrasting outer border, though its palette runs to teal and brown rather than gold and black.\"}, {\"targetArtworkId\": \"QmXdFvLb8cxB2nuRLze6uh4KTbaqkcqpTfM6RgTXiZm3KP\", \"reason\": \"nnxyz nnotb #70 shares the gold-dominant skull-like head and a spiral mark over one eye socket, offering a direct color and motif comparison to the X marks in #69.\"}], \"tags\": [\"skull form\", \"X marks over eye sockets\", \"gold and black ground\", \"layered scribble lines\", \"framed inner rectangle\", \"border overflow marks\"], \"interpretiveTags\": [\"tension between containment and excess\", \"ambiguous cancellation or emphasis\"], \"lookingQuestion\": \"Where exactly do the scribbled lines outside the black rectangle connect to or avoid the skull form inside it—and what does that boundary do to how you read the two zones?\", \"ambiguities\": [\"It is unclear whether the red X marks were added over the gold ground as a separate layer or drawn as part of the same pass; the image alone cannot resolve this.\", \"QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3 (nifty faces #98) shares the multi-line scribble approach but its teal ground and profile orientation offer no strong formal anchor to #69 beyond general line density; connection omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:42.239112-05:00",
+    "usage": {
+      "inputTokens": 6205,
+      "outputTokens": 765,
+      "totalTokens": 6970,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13357
+    },
+    "requestId": "b9f9e4b8-f715-4b8d-a75a-db6064c5a7cd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A yellow-ochre hooded figure occupies the center, its face rendered with a few loose black lines suggesting downcast eyes and a compressed mouth, surrounded by dense overlapping scribbles in black, red, and yellow.\",\n    \"Blue diagonal dashes fall across the dark background on both sides of the figure, reading as rain; a flat pink band and a sky-blue wave run across the top edge, with a yellow circle and radiating lines in the upper left corner.\",\n    \"The upper background is divided into warm brown-orange on the right and near-black on the left, creating an uneven split that the figure straddles, while the scribble layers vary in density from sparse at center to packed at the edges.\"\n  ],\n  \"reading\": \"Rain lines press down from all sides while a hooded figure holds its ground at center, face tight and eyes low. The bright band at the top—pink, blue, a yellow circle—sits at a remove from the figure's compressed expression, offering no obvious comfort. That gap between the cheerful upper register and the weighted lower half gives the image its pull.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #190 and nnxyz nnotb #192 in both title and recorded order. Where #190 fills the frame with a close, layered face on flat purple, #191 opens into a scene with weather, space, and a figure caught inside it.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both works use a yellow-ochre face as the focal mass and layer dense colored scribbles over it, but #190 fills the frame tightly on flat purple while #191 places the face inside a rain-filled scene with a horizon band above.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq\",\n      \"reason\": \"rawblocks #50 shares the yellow-ochre and black color split and the same loose-line face construction, but its scribble field radiates outward from the face rather than falling as vertical rain lines.\"\n    }\n  ],\n  \"tags\": [\n    \"hooded figure\",\n    \"vertical rain lines\",\n    \"yellow-ochre face\",\n    \"layered scribble field\",\n    \"horizontal sky band\",\n    \"warm-cool background split\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the pink-and-blue band at the top meet the dark background below it, and what does that boundary do to the figure standing beneath it?\",\n  \"ambiguities\": [\n    \"The yellow circle with radiating lines in the upper left reads as a sun, but the image provides no confirming label; it is described by its visible form only.\",\n    \"The connection to rawblocks #50 is cross-collection; the formal parallel is visible but the two works belong to separate owned subsets with no supplied metadata linking them beyond the same artist.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcD1xkkuaHW1NbaQ6An3oz3ettKbJK2wLcAcz4evcRH2Z",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcD1xkkuaHW1NbaQ6An3oz3ettKbJK2wLcAcz4evcRH2Z/image.png",
+        "imageSHA256": "974f22d2b90b56daa5ff49250d3e1bf620a6694ac86ecb68c4ce6c9b1db769a6"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      },
+      {
+        "artworkId": "QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq/image.png",
+        "imageSHA256": "c515045e826ae291c7fde3291c9e34cd6efc534a545ed3b37c8b4c48a180f037"
+      },
+      {
+        "artworkId": "QmRKT8wTQZznodu6HJqKBs36LxCZURHQZQ4j8m8dMcVT8G",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRKT8wTQZznodu6HJqKBs36LxCZURHQZQ4j8m8dMcVT8G/image.png",
+        "imageSHA256": "88fbbb409d76fe316461faf615642c3f84d0257c3045663d1159f8f7cf2ebf32"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:50.240367-05:00",
+    "usage": {
+      "inputTokens": 7002,
+      "outputTokens": 980,
+      "totalTokens": 7982,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7918
+    },
+    "requestId": "61eab2e4-153d-457f-8d14-1498cee1625b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A yellow-ochre hooded figure occupies the center, its face built from a few loose black lines suggesting downcast eyes and a compressed mouth, surrounded by overlapping scribbles in black, red, and yellow.\",\n    \"Blue diagonal dashes fall across the dark background on both sides of the figure; a flat pink band and a sky-blue wave run across the top edge, with a yellow circle and radiating lines in the upper-left corner.\",\n    \"The upper background divides into warm brown-orange on the right and near-black on the left, a split the figure straddles, while scribble density thins at center and thickens toward the edges.\"\n  ],\n  \"reading\": \"Rain lines press down from all sides while a hooded figure holds its ground at center, face tight and eyes low. The bright band at the top—pink, blue, a yellow circle—sits at a remove from that compressed expression, offering no obvious relief. The gap between the cheerful upper strip and the weighted lower half gives the image its tension.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #190 and nnxyz nnotb #192 in both title and recorded order. Where #190 fills the frame with a close layered face on flat purple, #191 opens into a scene with weather, space, and a figure caught inside it.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both works center a yellow-ochre face buried under dense colored scribbles, but #190 presses that face against flat purple with no surrounding space, while #191 places it inside a rain-filled scene with a horizon band above.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq\",\n      \"reason\": \"rawblocks #50 shares the yellow-ochre and near-black split and loose-line face construction, but its scribble field spreads outward from the face rather than falling as vertical rain lines across a scene.\"\n    }\n  ],\n  \"tags\": [\n    \"hooded figure\",\n    \"vertical rain lines\",\n    \"yellow-ochre face\",\n    \"layered scribble field\",\n    \"horizontal sky band\",\n    \"warm-cool background split\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the pink-and-blue band at the top meet the dark background below it, and what does that boundary do to the figure standing beneath it?\",\n  \"ambiguities\": [\n    \"The yellow circle with radiating lines in the upper left reads visually as a sun symbol but carries no confirming label; it is described by visible form only.\",\n    \"The rawblocks #50 connection is cross-collection; the formal parallel is visible in both inspected images, but the two works belong to separate owned subsets with no supplied metadata linking them beyond the same artist.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: hooded figure, blue diagonal rain dashes, pink-blue top band, yellow radiating circle, and warm-cool background split are all directly visible.\",\n    \"Reading revised to remove 'pull' (vague) in favor of 'tension'; no invented intent, biography, or technique claims remain; word count confirmed within 45–80 limit.\",\n    \"Both comparison IDs inspected: QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi confirmed yellow-ochre face on flat purple with dense scribbles; QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq confirmed yellow-ochre and black field with outward scribble spread—both comparisons grounded in visible evidence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcD1xkkuaHW1NbaQ6An3oz3ettKbJK2wLcAcz4evcRH2Z",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcD1xkkuaHW1NbaQ6An3oz3ettKbJK2wLcAcz4evcRH2Z/image.png",
+        "imageSHA256": "974f22d2b90b56daa5ff49250d3e1bf620a6694ac86ecb68c4ce6c9b1db769a6"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      },
+      {
+        "artworkId": "QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq/image.png",
+        "imageSHA256": "c515045e826ae291c7fde3291c9e34cd6efc534a545ed3b37c8b4c48a180f037"
+      },
+      {
+        "artworkId": "QmRKT8wTQZznodu6HJqKBs36LxCZURHQZQ4j8m8dMcVT8G",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRKT8wTQZznodu6HJqKBs36LxCZURHQZQ4j8m8dMcVT8G/image.png",
+        "imageSHA256": "88fbbb409d76fe316461faf615642c3f84d0257c3045663d1159f8f7cf2ebf32"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A yellow-ochre hooded figure occupies the center, its face rendered with a few loose black lines suggesting downcast eyes and a compressed mouth, surrounded by dense overlapping scribbles in black, red, and yellow.\", \"Blue diagonal dashes fall across the dark background on both sides of the figure, reading as rain; a flat pink band and a sky-blue wave run across the top edge, with a yellow circle and radiating lines in the upper left corner.\", \"The upper background is divided into warm brown-orange on the right and near-black on the left, creating an uneven split that the figure straddles, while the scribble layers vary in density from sparse at center to packed at the edges.\"], \"reading\": \"Rain lines press down from all sides while a hooded figure holds its ground at center, face tight and eyes low. The bright band at the top—pink, blue, a yellow circle—sits at a remove from the figure's compressed expression, offering no obvious comfort. That gap between the cheerful upper register and the weighted lower half gives the image its pull.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #190 and nnxyz nnotb #192 in both title and recorded order. Where #190 fills the frame with a close, layered face on flat purple, #191 opens into a scene with weather, space, and a figure caught inside it.\", \"connections\": [{\"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\", \"reason\": \"Both works use a yellow-ochre face as the focal mass and layer dense colored scribbles over it, but #190 fills the frame tightly on flat purple while #191 places the face inside a rain-filled scene with a horizon band above.\"}, {\"targetArtworkId\": \"QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq\", \"reason\": \"rawblocks #50 shares the yellow-ochre and black color split and the same loose-line face construction, but its scribble field radiates outward from the face rather than falling as vertical rain lines.\"}], \"tags\": [\"hooded figure\", \"vertical rain lines\", \"yellow-ochre face\", \"layered scribble field\", \"horizontal sky band\", \"warm-cool background split\"], \"lookingQuestion\": \"Where exactly does the pink-and-blue band at the top meet the dark background below it, and what does that boundary do to the figure standing beneath it?\", \"ambiguities\": [\"The yellow circle with radiating lines in the upper left reads as a sun, but the image provides no confirming label; it is described by its visible form only.\", \"The connection to rawblocks #50 is cross-collection; the formal parallel is visible but the two works belong to separate owned subsets with no supplied metadata linking them beyond the same artist.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

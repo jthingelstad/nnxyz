@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:02.360956-05:00",
+    "usage": {
+      "inputTokens": 6284,
+      "outputTokens": 758,
+      "totalTokens": 7042,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13025
+    },
+    "requestId": "654b99f0-9be5-4226-973c-2c8997918a3e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large red heart-shaped form with spiral eyes and an open mouth dominates the center, flanked by two black figures with white dot eyes and yellow outline details on a hot-pink ground.\",\n    \"Scattered yellow dash-shapes float across the entire field, overlapping figures and background alike, while diagonal rainbow bands cut behind the central form.\",\n    \"Upper left holds a yellow circular form with black oval markings trailing long yellow lines downward, distinct from the figures below it.\"\n  ],\n  \"reading\": \"Three figures share a pink field without clearly interacting—each holds its own space through contrasting fill colors. The central red form reads as festive or unsettling depending on how its spiral eyes land; the flanking black figures carry white smiles that feel equally ambiguous. Yellow dashes scatter like confetti or static, refusing to settle into background or foreground. The mood sits somewhere between a parade and unease.\",\n  \"contextAngle\": \"Within the owned nnxyz-numbered subset, this work sits between nnxyz #11 and nnxyz #13 in both title order and recorded creation order. Where nnxyz #11 fills the frame with a single close face on deep purple, this work opens to a pink field holding multiple figures at full body scale.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx\",\n      \"reason\": \"nnxyz #11 shares the yellow-dash scatter pattern and white-outlined facial features, but compresses everything into one large face on purple rather than spreading multiple figures across pink.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXPwE4xt7p96WCJ6bsuSkGs2x15BEQivcQvzGuHXi17j2\",\n      \"reason\": \"nnxyz rawblocks #33 uses the same hot-pink ground and black solid-fill figures with colored line overlays, making the two works the clearest color-and-figure pairing across the owned subsets.\"\n    }\n  ],\n  \"tags\": [\n    \"multiple figures\",\n    \"heart-shaped form\",\n    \"scattered dash marks\",\n    \"spiral eyes\",\n    \"pink ground\",\n    \"black silhouette figures\"\n  ],\n  \"interpretiveTags\": [\n    \"ambiguous mood\",\n    \"festive-unsettling tension\"\n  ],\n  \"lookingQuestion\": \"Do the yellow dashes behave the same way near the figures as they do in the open background, or does their spacing change around the forms?\",\n  \"ambiguities\": [\n    \"The yellow circular form upper-left may read as a face or as an abstract sun-like shape; the image does not resolve this clearly.\",\n    \"nnxyz #13 (QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj) shows a dense green-ground face composition with no strong formal overlap beyond shared line scatter, so it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK/image.png",
+        "imageSHA256": "6ad8bdeb7282d0a4392acbfbb81974dd5f5f613bb9d83cd06238f8d49c6020bf"
+      },
+      {
+        "artworkId": "QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx/image.png",
+        "imageSHA256": "65fffd90caa259b0bb16965b28fc35f714ec19b08d995109f9404ff5e1806a82"
+      },
+      {
+        "artworkId": "QmXPwE4xt7p96WCJ6bsuSkGs2x15BEQivcQvzGuHXi17j2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXPwE4xt7p96WCJ6bsuSkGs2x15BEQivcQvzGuHXi17j2/image.png",
+        "imageSHA256": "61443302ef9c48f89aa2d88a157c099477b7b3c11e9407cf4dc6c76fed6255df"
+      },
+      {
+        "artworkId": "QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj/image.png",
+        "imageSHA256": "ef34d6ab4a3e369e0b8479e99373fa80cfdf2079734946abcd10be932b23457a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:10.345610-05:00",
+    "usage": {
+      "inputTokens": 7064,
+      "outputTokens": 877,
+      "totalTokens": 7941,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7889
+    },
+    "requestId": "de64cca7-e54c-4f24-ac06-972099bfda15",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large red heart-shaped form with spiral eyes and an open mouth occupies the center, flanked by two black solid-fill figures with white dot eyes and yellow outline details on a hot-pink ground.\",\n    \"Scattered yellow dash-shapes float across the entire field, overlapping figures and background alike, while diagonal bands of pink, orange, and blue cut behind the central form.\",\n    \"Upper left holds a yellow circular form with black oval markings trailing long yellow lines downward, distinct from the standing figures below it.\"\n  ],\n  \"reading\": \"Three figures share a pink field without clearly interacting—each holds its own space through contrasting fill colors. The central red form reads as festive or unsettling depending on how its spiral eyes land; the flanking black figures carry white smiles that feel equally ambiguous. Yellow dashes scatter across the surface, refusing to settle into background or foreground. The mood sits somewhere between a parade and unease.\",\n  \"contextAngle\": \"Within the owned nnxyz-numbered subset, this work sits between nnxyz #11 and nnxyz #13 in both title order and recorded creation order. Where nnxyz #11 fills the frame with a single close face on deep purple, this work opens to a pink field holding multiple figures at full-body scale.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx\",\n      \"reason\": \"nnxyz #11 shares yellow-dash scatter and white-outlined facial features, but compresses everything into one large face on purple rather than spreading multiple figures across pink.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXPwE4xt7p96WCJ6bsuSkGs2x15BEQivcQvzGuHXi17j2\",\n      \"reason\": \"nnxyz rawblocks #33 uses the same hot-pink ground and black solid-fill figures with colored line overlays, making these two the clearest color-and-figure pairing across the owned subsets.\"\n    }\n  ],\n  \"tags\": [\"multiple figures\", \"heart-shaped form\", \"scattered dash marks\", \"spiral eyes\", \"pink ground\", \"black silhouette figures\"],\n  \"interpretiveTags\": [\"ambiguous mood\", \"festive-unsettling tension\"],\n  \"lookingQuestion\": \"Do the yellow dashes behave the same way near the figures as they do in the open background, or does their spacing change around the forms?\",\n  \"ambiguities\": [\n    \"The yellow circular form upper-left may read as a face or as an abstract sun-like shape; the image does not resolve this clearly.\",\n    \"nnxyz #13 shows a dense green-ground face composition with no strong formal overlap beyond shared line scatter, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Diagonal bands confirmed as pink, orange, and blue—not 'rainbow'; draft corrected to match visible colors.\",\n    \"Both figure comparisons verified against inspected images: yellow-dash scatter in QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx and pink-ground black figures in QmXPwE4xt7p96WCJ6bsuSkGs2x15BEQivcQvzGuHXi17j2 confirmed as concrete formal matches.\",\n    \"Word counts checked: reading 68 words, contextAngle 52 words, both within limits; no prohibited vocabulary detected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK/image.png",
+        "imageSHA256": "6ad8bdeb7282d0a4392acbfbb81974dd5f5f613bb9d83cd06238f8d49c6020bf"
+      },
+      {
+        "artworkId": "QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx/image.png",
+        "imageSHA256": "65fffd90caa259b0bb16965b28fc35f714ec19b08d995109f9404ff5e1806a82"
+      },
+      {
+        "artworkId": "QmXPwE4xt7p96WCJ6bsuSkGs2x15BEQivcQvzGuHXi17j2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXPwE4xt7p96WCJ6bsuSkGs2x15BEQivcQvzGuHXi17j2/image.png",
+        "imageSHA256": "61443302ef9c48f89aa2d88a157c099477b7b3c11e9407cf4dc6c76fed6255df"
+      },
+      {
+        "artworkId": "QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj/image.png",
+        "imageSHA256": "ef34d6ab4a3e369e0b8479e99373fa80cfdf2079734946abcd10be932b23457a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large red heart-shaped form with spiral eyes and an open mouth dominates the center, flanked by two black figures with white dot eyes and yellow outline details on a hot-pink ground.\", \"Scattered yellow dash-shapes float across the entire field, overlapping figures and background alike, while diagonal rainbow bands cut behind the central form.\", \"Upper left holds a yellow circular form with black oval markings trailing long yellow lines downward, distinct from the figures below it.\"], \"reading\": \"Three figures share a pink field without clearly interacting—each holds its own space through contrasting fill colors. The central red form reads as festive or unsettling depending on how its spiral eyes land; the flanking black figures carry white smiles that feel equally ambiguous. Yellow dashes scatter like confetti or static, refusing to settle into background or foreground. The mood sits somewhere between a parade and unease.\", \"contextAngle\": \"Within the owned nnxyz-numbered subset, this work sits between nnxyz #11 and nnxyz #13 in both title order and recorded creation order. Where nnxyz #11 fills the frame with a single close face on deep purple, this work opens to a pink field holding multiple figures at full body scale.\", \"connections\": [{\"targetArtworkId\": \"QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx\", \"reason\": \"nnxyz #11 shares the yellow-dash scatter pattern and white-outlined facial features, but compresses everything into one large face on purple rather than spreading multiple figures across pink.\"}, {\"targetArtworkId\": \"QmXPwE4xt7p96WCJ6bsuSkGs2x15BEQivcQvzGuHXi17j2\", \"reason\": \"nnxyz rawblocks #33 uses the same hot-pink ground and black solid-fill figures with colored line overlays, making the two works the clearest color-and-figure pairing across the owned subsets.\"}], \"tags\": [\"multiple figures\", \"heart-shaped form\", \"scattered dash marks\", \"spiral eyes\", \"pink ground\", \"black silhouette figures\"], \"interpretiveTags\": [\"ambiguous mood\", \"festive-unsettling tension\"], \"lookingQuestion\": \"Do the yellow dashes behave the same way near the figures as they do in the open background, or does their spacing change around the forms?\", \"ambiguities\": [\"The yellow circular form upper-left may read as a face or as an abstract sun-like shape; the image does not resolve this clearly.\", \"nnxyz #13 (QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj) shows a dense green-ground face composition with no strong formal overlap beyond shared line scatter, so it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

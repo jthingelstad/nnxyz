@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:07.906581-05:00",
+    "usage": {
+      "inputTokens": 6609,
+      "outputTokens": 790,
+      "totalTokens": 7399,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13028
+    },
+    "requestId": "a815cc99-3668-4d2b-afe5-604fa31bdb98",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Rounded dome-like forms cluster along the top and sides of the image, each outlined in looping blue and red lines with dark shadowed undersides, leaving the pale yellow center relatively open.\",\n    \"Thin vertical streaks in white, red, and dark brown fall downward from the clustered forms, creating a dripping or trailing effect against the warm yellow-green background wash.\",\n    \"The lower center holds a tangle of wavy blue and white lines that zigzag horizontally, sitting below a soft radiant bloom of pale yellow-white light that spreads from mid-image outward.\"\n  ],\n  \"reading\": \"Dome-capped forms press in from the edges while the center holds open in a wash of pale yellow-white light, giving the composition a sense of crowding held at bay. The dripping verticals connect the upper clusters to the lower tangle of wavy lines, pulling the eye downward. The mood reads as lush and slightly unsettled — abundance pressing against a quiet, lit space.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #19 and nnotb #21 in both title order and recorded creation order. Where #19 fills its surface with dense figure-like line work on a blue ground, #20 opens a luminous yellow center — a strong tonal contrast between the two neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUwjsSUDpDxSboqD8BMyJXZiZwfZxZZjUr5Xq3KFX8tMu\",\n      \"reason\": \"Both works use layered blue looping lines over a warm-toned ground, but #19 fills the field edge-to-edge with angular figure forms while #20 clears a glowing center, making the contrast in spatial openness visible and direct.\"\n    },\n    {\n      \"targetArtworkId\": \"QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA\",\n      \"reason\": \"nnotb #21 shares the yellow-green palette and loose scribbled outlines, but organizes them around a single structural form at center rather than the edge-clustered domes of #20, showing how the same color range can produce opposite spatial arrangements.\"\n    }\n  ],\n  \"tags\": [\n    \"dome forms\",\n    \"dripping verticals\",\n    \"looping blue outlines\",\n    \"yellow-green ground\",\n    \"open center\",\n    \"wavy horizontal lines\"\n  ],\n  \"interpretiveTags\": [\n    \"lush\",\n    \"crowded edges\",\n    \"quiet center\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the pale light at the center stop and the darker clustered forms begin — is there a clear boundary, or do the two zones bleed into each other?\",\n  \"ambiguities\": [\n    \"The dome-like forms could read as organic caps, clouds, or purely abstract rounded shapes; no supplied metadata resolves this.\",\n    \"The rawblocks #23 comparison image shows a figure-based work with a flat blue ground and no shared formal qualities with #20, so it was inspected but not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr/image.png",
+        "imageSHA256": "6a2edf1542791c2d99ffa08abdf3ac49b0472da340b5e5bedae1887675b717b5"
+      },
+      {
+        "artworkId": "QmUwjsSUDpDxSboqD8BMyJXZiZwfZxZZjUr5Xq3KFX8tMu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUwjsSUDpDxSboqD8BMyJXZiZwfZxZZjUr5Xq3KFX8tMu/image.png",
+        "imageSHA256": "824409fdbe2030aab453c7434e15ba6499ad3902e98d9af172205b587c58263a"
+      },
+      {
+        "artworkId": "QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf/image.png",
+        "imageSHA256": "f764b3625f76438eeec80b7e9b217c5873ff98c09af5b94d40918cf17f477bf5"
+      },
+      {
+        "artworkId": "QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA/image.png",
+        "imageSHA256": "413cf86e63301d4f70708dc56d018eb5d9eb1d246a47e9771dbf7c1ad5c5f01e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:16.918374-05:00",
+    "usage": {
+      "inputTokens": 7419,
+      "outputTokens": 899,
+      "totalTokens": 8318,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 8771
+    },
+    "requestId": "6250861d-cba7-49e2-bafb-c0b6f7fc3306",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Rounded dome-like forms cluster along the top edge and both sides, each outlined in looping blue and red lines with dark shadowed undersides, leaving the pale yellow-white center open.\",\n    \"Thin vertical streaks in white, red, and dark brown fall downward from the clustered forms against the warm yellow-green background wash.\",\n    \"The lower center holds a tangle of wavy blue and white lines zigzagging horizontally, sitting below a soft bloom of pale yellow-white light spreading from mid-image outward.\"\n  ],\n  \"reading\": \"Rounded forms press in from the edges while the center stays open in a wash of pale yellow-white light, giving the composition a feeling of crowding held at bay. Dripping verticals connect the upper clusters to the lower tangle of wavy lines, pulling the eye downward. The mood reads as lush and slightly unsettled — abundance pressing against a quiet, lit space.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #19 and nnotb #21 in both title order and recorded creation order. Where #19 fills its surface with dense figure-like line work on a blue ground, #20 opens a luminous yellow center — a strong tonal contrast between neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUwjsSUDpDxSboqD8BMyJXZiZwfZxZZjUr5Xq3KFX8tMu\",\n      \"reason\": \"Both works use layered blue looping lines over a warm-toned ground, but #19 fills the field edge-to-edge with angular forms while #20 clears a glowing center, making the contrast in spatial openness direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA\",\n      \"reason\": \"nnotb #21 shares the yellow-green palette and loose scribbled outlines but organizes them around a single structural form at center rather than edge-clustered domes, showing how the same color range produces opposite spatial arrangements.\"\n    }\n  ],\n  \"tags\": [\n    \"dome forms\",\n    \"dripping verticals\",\n    \"looping blue outlines\",\n    \"yellow-green ground\",\n    \"open center\",\n    \"wavy horizontal lines\"\n  ],\n  \"interpretiveTags\": [\n    \"lush\",\n    \"crowded edges\",\n    \"quiet center\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the pale light at the center stop and the darker clustered forms begin — is there a clear boundary, or do the two zones bleed into each other?\",\n  \"ambiguities\": [\n    \"The dome-like forms could read as organic caps, clouds, or purely abstract rounded shapes; no supplied metadata resolves this.\",\n    \"rawblocks #23 was inspected but shows a figure-based work on a flat blue ground with no shared formal qualities with #20 and was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: dome forms at edges, dripping verticals, and wavy lower-center lines are all visible.\",\n    \"nnotb #19 confirmed as blue-ground, edge-filling figure work; nnotb #21 confirmed as yellow-green with a single central structural form — both comparisons are grounded in inspected images.\",\n    \"No invented subject identities, unsupported intent, or stock metaphors found; word counts for reading (~62 words) and contextAngle (~52 words) fall within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr/image.png",
+        "imageSHA256": "6a2edf1542791c2d99ffa08abdf3ac49b0472da340b5e5bedae1887675b717b5"
+      },
+      {
+        "artworkId": "QmUwjsSUDpDxSboqD8BMyJXZiZwfZxZZjUr5Xq3KFX8tMu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUwjsSUDpDxSboqD8BMyJXZiZwfZxZZjUr5Xq3KFX8tMu/image.png",
+        "imageSHA256": "824409fdbe2030aab453c7434e15ba6499ad3902e98d9af172205b587c58263a"
+      },
+      {
+        "artworkId": "QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf/image.png",
+        "imageSHA256": "f764b3625f76438eeec80b7e9b217c5873ff98c09af5b94d40918cf17f477bf5"
+      },
+      {
+        "artworkId": "QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA/image.png",
+        "imageSHA256": "413cf86e63301d4f70708dc56d018eb5d9eb1d246a47e9771dbf7c1ad5c5f01e"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Rounded dome-like forms cluster along the top and sides of the image, each outlined in looping blue and red lines with dark shadowed undersides, leaving the pale yellow center relatively open.\", \"Thin vertical streaks in white, red, and dark brown fall downward from the clustered forms, creating a dripping or trailing effect against the warm yellow-green background wash.\", \"The lower center holds a tangle of wavy blue and white lines that zigzag horizontally, sitting below a soft radiant bloom of pale yellow-white light that spreads from mid-image outward.\"], \"reading\": \"Dome-capped forms press in from the edges while the center holds open in a wash of pale yellow-white light, giving the composition a sense of crowding held at bay. The dripping verticals connect the upper clusters to the lower tangle of wavy lines, pulling the eye downward. The mood reads as lush and slightly unsettled — abundance pressing against a quiet, lit space.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #19 and nnotb #21 in both title order and recorded creation order. Where #19 fills its surface with dense figure-like line work on a blue ground, #20 opens a luminous yellow center — a strong tonal contrast between the two neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmUwjsSUDpDxSboqD8BMyJXZiZwfZxZZjUr5Xq3KFX8tMu\", \"reason\": \"Both works use layered blue looping lines over a warm-toned ground, but #19 fills the field edge-to-edge with angular figure forms while #20 clears a glowing center, making the contrast in spatial openness visible and direct.\"}, {\"targetArtworkId\": \"QmP5K1tN6eqimD5t4KUdvMRTz7yDNxGaQcj2tGVLJ1T5WA\", \"reason\": \"nnotb #21 shares the yellow-green palette and loose scribbled outlines, but organizes them around a single structural form at center rather than the edge-clustered domes of #20, showing how the same color range can produce opposite spatial arrangements.\"}], \"tags\": [\"dome forms\", \"dripping verticals\", \"looping blue outlines\", \"yellow-green ground\", \"open center\", \"wavy horizontal lines\"], \"interpretiveTags\": [\"lush\", \"crowded edges\", \"quiet center\"], \"lookingQuestion\": \"Where exactly does the pale light at the center stop and the darker clustered forms begin — is there a clear boundary, or do the two zones bleed into each other?\", \"ambiguities\": [\"The dome-like forms could read as organic caps, clouds, or purely abstract rounded shapes; no supplied metadata resolves this.\", \"The rawblocks #23 comparison image shows a figure-based work with a flat blue ground and no shared formal qualities with #20, so it was inspected but not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

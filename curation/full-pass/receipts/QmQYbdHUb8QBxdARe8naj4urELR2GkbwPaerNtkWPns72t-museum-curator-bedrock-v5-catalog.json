@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:25.379739-05:00",
+    "usage": {
+      "inputTokens": 6931,
+      "outputTokens": 724,
+      "totalTokens": 7655,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12693
+    },
+    "requestId": "d3aa308a-a1ec-4ff8-995e-e6e5ef5f58d3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark-red arc dominates the upper half, with orange flame-like spikes breaking above it against a dark teal background.\",\n    \"A thick dark-brown vertical form bisects the center, flanked left by a magenta-and-white X shape and right by a teal-and-magenta circular scribble cluster.\",\n    \"Acid-green brush strokes stack along the left edge and lower corners hold flat magenta and cyan blocks, while loose white lines form a rough rectangle around the central zone.\"\n  ],\n  \"reading\": \"The dark arc overhead and the bisecting vertical form pull the eye into a compressed middle zone where two smaller marks—an X and a looping circle—sit like mismatched eyes. The surrounding white scrawl holds them loosely inside a frame that keeps breaking open. Acid-green and magenta at the edges feel abrupt rather than decorative, as though the image is still deciding its own boundary.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbor #49—which centers a rounded, warm-toned face with legible eye forms—and title neighbor #51, whose stacked rectangular structure and paired circular eyes read as more frontal and composed. #50 sits between those two modes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6\",\n      \"reason\": \"Both works use a rough rectangular enclosure around paired circular marks that suggest eyes, but #51 keeps that structure symmetrical and upright while #50 lets the bisecting vertical disrupt any symmetry.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af\",\n      \"reason\": \"rawblocks #2 shares the dark background, a dominant rectangular inner frame, and scattered bright-line overflow, offering a cross-collection contrast where the block structure is heavier and the face marks more embedded.\"\n    }\n  ],\n  \"tags\": [\n    \"dark arc\",\n    \"bisecting vertical form\",\n    \"broken rectangular frame\",\n    \"acid-green edge marks\",\n    \"flat magenta and cyan blocks\",\n    \"looping circular scribble\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed tension\",\n    \"boundary uncertainty\"\n  ],\n  \"lookingQuestion\": \"Where does the rough white rectangle actually close, and what happens to the marks that fall outside it?\",\n  \"ambiguities\": [\n    \"The dark-brown vertical form could be read as a figure or as a purely structural dividing line; the image does not resolve this.\",\n    \"Title order and recorded-creation order align here, but a gap exists between #50 and #51 in recorded creation (xmas special intervenes), so proximity in title sequence does not confirm proximity in making.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t/image.png",
+        "imageSHA256": "697b2300a608e8b7e002530b7438440dca72e91acf060ff71f0262a095ed4d06"
+      },
+      {
+        "artworkId": "QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2/image.png",
+        "imageSHA256": "98a770300ef0d8cdc65c7c560f610e10409fec0fe42be343c6665775a2c3553a"
+      },
+      {
+        "artworkId": "QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af/image.png",
+        "imageSHA256": "1607160a191b258ac5f63a04cba0ea468bdf0f5414281ff45f6f8075f0cb83a5"
+      },
+      {
+        "artworkId": "QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6/image.png",
+        "imageSHA256": "70f082b91f55ea9db6575966050dc4e7545cc5dc710e9d4fef7b7f40a5ff9154"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:32.543122-05:00",
+    "usage": {
+      "inputTokens": 7677,
+      "outputTokens": 962,
+      "totalTokens": 8639,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7068
+    },
+    "requestId": "86e13183-f7c4-4004-abe9-a2a39da9d9a1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark-red arc spans the upper half, with orange flame-like spikes breaking above it against a dark teal background.\",\n    \"A thick dark-brown vertical form bisects the center, flanked left by a magenta-and-white X shape and right by a teal-and-magenta circular scribble cluster.\",\n    \"Acid-green brush strokes stack along the left edge; lower corners hold flat magenta and cyan blocks, while loose white lines form a rough open rectangle around the central zone.\"\n  ],\n  \"reading\": \"The dark arc overhead and the bisecting vertical pull the eye into a compressed middle zone where two smaller marks—an X and a looping circle—sit like mismatched anchors. The surrounding white scrawl holds them loosely inside a frame that keeps breaking open at the edges. Acid-green and magenta at the margins feel abrupt, as though the image resists settling into a fixed boundary.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbor #49—a warm-toned rounded form with legible eye marks—and title neighbor #51, whose stacked rectangles and paired circular eyes read as more frontal and composed. #50 sits between those two modes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6\",\n      \"reason\": \"Both works use a rough rectangular enclosure around paired circular marks, but #51 keeps that structure symmetrical and upright while #50 lets the bisecting vertical disrupt any symmetry.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af\",\n      \"reason\": \"rawblocks #2 shares a dark background, a dominant inner rectangular frame, and scattered bright-line overflow, offering a cross-collection contrast where the block structure is heavier and face marks more embedded.\"\n    }\n  ],\n  \"tags\": [\n    \"dark arc upper field\",\n    \"bisecting vertical form\",\n    \"broken rectangular frame\",\n    \"acid-green edge marks\",\n    \"flat magenta and cyan blocks\",\n    \"looping circular scribble\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed tension\",\n    \"boundary uncertainty\"\n  ],\n  \"lookingQuestion\": \"Where does the rough white rectangle actually close, and what happens to the marks that fall outside it?\",\n  \"ambiguities\": [\n    \"The dark-brown vertical form could be read as a figure or as a purely structural dividing line; the image does not resolve this.\",\n    \"Title order and recorded-creation order align for #49 and #50, but a gap exists between #50 and #51 in recorded creation (xmas special intervenes), so title-sequence proximity does not confirm making proximity.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed against image: dark-red arc, orange spikes, dark-brown vertical, magenta-white X, teal-magenta circle cluster, acid-green left edge, magenta and cyan lower blocks, and broken white rectangle all verified as visible.\",\n    \"Comparison with QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6 confirmed: #51 shows stacked rectangles and paired circular eye marks; contrast with #50's disrupted symmetry is supported by both images.\",\n    \"Comparison with QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af confirmed: rawblocks #2 shows dark background, inner rectangular frame, and bright-line overflow; cross-collection contrast claim is visually grounded; no unsupported intent or invented subject added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t/image.png",
+        "imageSHA256": "697b2300a608e8b7e002530b7438440dca72e91acf060ff71f0262a095ed4d06"
+      },
+      {
+        "artworkId": "QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2/image.png",
+        "imageSHA256": "98a770300ef0d8cdc65c7c560f610e10409fec0fe42be343c6665775a2c3553a"
+      },
+      {
+        "artworkId": "QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af/image.png",
+        "imageSHA256": "1607160a191b258ac5f63a04cba0ea468bdf0f5414281ff45f6f8075f0cb83a5"
+      },
+      {
+        "artworkId": "QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6/image.png",
+        "imageSHA256": "70f082b91f55ea9db6575966050dc4e7545cc5dc710e9d4fef7b7f40a5ff9154"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large dark-red arc dominates the upper half, with orange flame-like spikes breaking above it against a dark teal background.\", \"A thick dark-brown vertical form bisects the center, flanked left by a magenta-and-white X shape and right by a teal-and-magenta circular scribble cluster.\", \"Acid-green brush strokes stack along the left edge and lower corners hold flat magenta and cyan blocks, while loose white lines form a rough rectangle around the central zone.\"], \"reading\": \"The dark arc overhead and the bisecting vertical form pull the eye into a compressed middle zone where two smaller marks—an X and a looping circle—sit like mismatched eyes. The surrounding white scrawl holds them loosely inside a frame that keeps breaking open. Acid-green and magenta at the edges feel abrupt rather than decorative, as though the image is still deciding its own boundary.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbor #49—which centers a rounded, warm-toned face with legible eye forms—and title neighbor #51, whose stacked rectangular structure and paired circular eyes read as more frontal and composed. #50 sits between those two modes.\", \"connections\": [{\"targetArtworkId\": \"QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6\", \"reason\": \"Both works use a rough rectangular enclosure around paired circular marks that suggest eyes, but #51 keeps that structure symmetrical and upright while #50 lets the bisecting vertical disrupt any symmetry.\"}, {\"targetArtworkId\": \"QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af\", \"reason\": \"rawblocks #2 shares the dark background, a dominant rectangular inner frame, and scattered bright-line overflow, offering a cross-collection contrast where the block structure is heavier and the face marks more embedded.\"}], \"tags\": [\"dark arc\", \"bisecting vertical form\", \"broken rectangular frame\", \"acid-green edge marks\", \"flat magenta and cyan blocks\", \"looping circular scribble\"], \"interpretiveTags\": [\"compressed tension\", \"boundary uncertainty\"], \"lookingQuestion\": \"Where does the rough white rectangle actually close, and what happens to the marks that fall outside it?\", \"ambiguities\": [\"The dark-brown vertical form could be read as a figure or as a purely structural dividing line; the image does not resolve this.\", \"Title order and recorded-creation order align here, but a gap exists between #50 and #51 in recorded creation (xmas special intervenes), so proximity in title sequence does not confirm proximity in making.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:49.464304-05:00",
+    "usage": {
+      "inputTokens": 7489,
+      "outputTokens": 814,
+      "totalTokens": 8303,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5783
+    },
+    "requestId": "e38df131-c8cf-4b47-9c65-b453a84b8725",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large orange-red arc spans the upper half, with orange flame-like spikes breaking above it against a dark teal background.\",\n    \"A thick dark-brown vertical form bisects the center, flanked left by a magenta-and-white X shape and right by a teal-and-magenta circular scribble cluster.\",\n    \"Acid-green brush strokes stack along the left edge; lower corners hold flat magenta and cyan blocks, while loose white lines form a rough open rectangle around the central zone.\"\n  ],\n  \"reading\": \"The orange-red arc overhead and the bisecting vertical compress the eye into a middle zone where two smaller marks—an X and a looping circle—sit like mismatched anchors. The surrounding white scrawl holds them loosely inside a frame that keeps breaking open at the edges. Acid-green and magenta at the margins feel abrupt, as though the image resists settling into a fixed boundary.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbor #49—a warm-toned rounded form with legible eye marks—and title neighbor #51, whose stacked rectangles and paired circular eyes read as more frontal and composed. #50 sits between those two modes.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6\",\n      \"reason\": \"Both works use a rough rectangular enclosure around paired circular marks, but #51 keeps that structure symmetrical and upright while #50 lets the bisecting vertical disrupt any symmetry.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af\",\n      \"reason\": \"rawblocks #2 shares a dark background, a dominant inner rectangular frame, and scattered bright-line overflow, offering a cross-collection contrast where the block structure is heavier and face marks more embedded.\"\n    }\n  ],\n  \"tags\": [\n    \"orange-red arc upper field\",\n    \"bisecting vertical form\",\n    \"broken rectangular frame\",\n    \"acid-green edge marks\",\n    \"flat magenta and cyan blocks\",\n    \"looping circular scribble\"\n  ],\n  \"lookingQuestion\": \"Where does the rough white rectangle actually close, and what happens to the marks that fall outside it?\",\n  \"ambiguities\": [\n    \"The dark-brown vertical form could be read as a figure or as a purely structural dividing line; the image does not resolve this.\",\n    \"Title order and recorded-creation order align for #49 and #50, but a gap exists between #50 and #51 in recorded creation (xmas special intervenes), so title-sequence proximity does not confirm making proximity.\"\n  ],\n  \"reviewFindings\": [\n    \"Corrected 'dark-red arc' to 'orange-red arc' after re-examining the primary image, where the upper arch reads as a warm orange-red against the dark teal ground.\",\n    \"Central vertical, X mark, circular scribble cluster, and white enclosure observations retained unchanged as flag confirmed their accuracy.\",\n    \"No other flag-driven changes required; reading and context angle updated only to reflect the corrected arc color.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t/image.png",
+        "imageSHA256": "697b2300a608e8b7e002530b7438440dca72e91acf060ff71f0262a095ed4d06"
+      },
+      {
+        "artworkId": "QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2/image.png",
+        "imageSHA256": "98a770300ef0d8cdc65c7c560f610e10409fec0fe42be343c6665775a2c3553a"
+      },
+      {
+        "artworkId": "QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af/image.png",
+        "imageSHA256": "1607160a191b258ac5f63a04cba0ea468bdf0f5414281ff45f6f8075f0cb83a5"
+      },
+      {
+        "artworkId": "QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6/image.png",
+        "imageSHA256": "70f082b91f55ea9db6575966050dc4e7545cc5dc710e9d4fef7b7f40a5ff9154"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large dark-red arc spans the upper half, with orange flame-like spikes breaking above it against a dark teal background.\", \"A thick dark-brown vertical form bisects the center, flanked left by a magenta-and-white X shape and right by a teal-and-magenta circular scribble cluster.\", \"Acid-green brush strokes stack along the left edge; lower corners hold flat magenta and cyan blocks, while loose white lines form a rough open rectangle around the central zone.\"], \"reading\": \"The dark arc overhead and the bisecting vertical pull the eye into a compressed middle zone where two smaller marks—an X and a looping circle—sit like mismatched anchors. The surrounding white scrawl holds them loosely inside a frame that keeps breaking open at the edges. Acid-green and magenta at the margins feel abrupt, as though the image resists settling into a fixed boundary.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbor #49—a warm-toned rounded form with legible eye marks—and title neighbor #51, whose stacked rectangles and paired circular eyes read as more frontal and composed. #50 sits between those two modes.\", \"connections\": [{\"targetArtworkId\": \"QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6\", \"reason\": \"Both works use a rough rectangular enclosure around paired circular marks, but #51 keeps that structure symmetrical and upright while #50 lets the bisecting vertical disrupt any symmetry.\"}, {\"targetArtworkId\": \"QmaWGtr95nxJzARUsBMidhgu8x4mLG1U4aBAL9NLt3o6Af\", \"reason\": \"rawblocks #2 shares a dark background, a dominant inner rectangular frame, and scattered bright-line overflow, offering a cross-collection contrast where the block structure is heavier and face marks more embedded.\"}], \"tags\": [\"dark arc upper field\", \"bisecting vertical form\", \"broken rectangular frame\", \"acid-green edge marks\", \"flat magenta and cyan blocks\", \"looping circular scribble\"], \"lookingQuestion\": \"Where does the rough white rectangle actually close, and what happens to the marks that fall outside it?\", \"ambiguities\": [\"The dark-brown vertical form could be read as a figure or as a purely structural dividing line; the image does not resolve this.\", \"Title order and recorded-creation order align for #49 and #50, but a gap exists between #50 and #51 in recorded creation (xmas special intervenes), so title-sequence proximity does not confirm making proximity.\"]}\nFLAGS:\n[{\"artworkId\": \"QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t\", \"rule\": \"assistant-original-image-check\", \"detail\": \"The upper arch reads as bright red or orange-red against the dark teal ground, not dark red. Recheck that color description and preserve the otherwise specific central vertical, crossed and circular eye marks, and white enclosure observations.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:44.512767-05:00",
+    "usage": {
+      "inputTokens": 6443,
+      "outputTokens": 781,
+      "totalTokens": 7224,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12305
+    },
+    "requestId": "ea7c006d-679e-4857-9c76-3c212061e003",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A blocky head shape sits on a saturated yellow ground; two large white oval eye areas each contain a red oval, and a horizontal red bar bridges them like a crosspiece.\",\n    \"A wide row of grey-white teeth runs across the lower third, framed by thick black outlines and bands of red, pink, and yellow that form a broad open mouth.\",\n    \"Blue, white, red, and yellow loose looping lines scatter across the dark teal-green head surface, with a small rectangular ear-like form projecting from the left side.\"\n  ],\n  \"reading\": \"The yellow ground pushes the dark head forward, and the oversized eye ovals read as blank and fixed rather than expressive. The red crossbar and the teeth row divide the face into hard horizontal zones, giving it a mechanical, mask-like feel. The loose looping lines across the surface add restlessness against that rigid structure, so the image holds both stillness and agitation at once.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors are nnxyz nifty faces #98 and nnxyz nifty faces #100. The #98 work uses a teal ground with scattered yellow coils; #100 shifts to muted layered planes. This work's flat yellow ground and locked frontal gaze mark a distinct mood among the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3\",\n      \"reason\": \"Both works use a dense scatter of looping coloured lines over a large head form, but #98 places them on a teal ground with an off-axis view, while #99's yellow ground and dead-on frontal lock create a starker, more confrontational feel.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY\",\n      \"reason\": \"Title neighbor #100 replaces the flat yellow field and bold outlines with overlapping translucent planes and a muted palette, making the contrast in surface treatment and emotional register between the two works immediately visible.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal head form\",\n    \"flat yellow ground\",\n    \"oval eye shapes\",\n    \"teeth row\",\n    \"looping line scatter\",\n    \"horizontal face divisions\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like stillness\",\n    \"mechanical affect\",\n    \"agitation within rigid structure\"\n  ],\n  \"lookingQuestion\": \"The red crossbar connecting the two eye ovals sits at the same level as the pupils — does that bar read as part of the face structure, or does it flatten the eyes into something else?\",\n  \"ambiguities\": [\n    \"The small rectangular projection on the left side of the head could be an ear, a handle, or an unrelated geometric element; the image does not resolve this clearly.\",\n    \"Title-derived order and recorded-creation order align for this work and its immediate neighbors, but gaps exist elsewhere in the owned subset, so no broader sequence claims are made.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc/image.png",
+        "imageSHA256": "8693d1519b420bbb29a5dd7011dfcd8df2e324c25db0d3c44a23ce3277e40b81"
+      },
+      {
+        "artworkId": "QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3/image.png",
+        "imageSHA256": "fe3880dc497fd81e7cc28a66b255034f986e00ebb28a95a6b152bdd47994bbb2"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY/image.png",
+        "imageSHA256": "35071101d5a52604a4979b2386732acfc14944b8d89725661cd94480fa78b973"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:51.319928-05:00",
+    "usage": {
+      "inputTokens": 7244,
+      "outputTokens": 984,
+      "totalTokens": 8228,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6737
+    },
+    "requestId": "cf977684-6b5f-403c-884a-59b4e9ead0a2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A blocky head shape sits on a saturated yellow ground; two large white oval eye areas each contain a red oval, and a horizontal red bar bridges them at mid-level.\",\n    \"A wide row of grey-white teeth runs across the lower third, framed by thick black outlines and bands of red, pink, and yellow forming a broad open mouth.\",\n    \"Blue, white, red, and yellow loose looping lines scatter across the dark teal-green head surface, with a small rectangular form projecting from the left side.\"\n  ],\n  \"reading\": \"The yellow ground pushes the dark head forward, and the oversized eye ovals read as blank and fixed rather than expressive. The red crossbar and the teeth row divide the face into hard horizontal zones, giving it a mask-like quality. The loose looping lines across the surface add restlessness against that rigid structure, so the image holds both stillness and agitation at once.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors are nnxyz nifty faces #98 and nnxyz nifty faces #100. The #98 work uses a teal ground with scattered yellow coils; #100 shifts to muted layered planes. This work's flat yellow ground and locked frontal arrangement mark a distinct mood among the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3\",\n      \"reason\": \"Both works scatter looping coloured lines across a large head form, but #98 uses a teal ground with an off-axis view, while this work's yellow ground and dead-on frontal lock produce a starker contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY\",\n      \"reason\": \"Title neighbor #100 replaces the flat yellow field and bold black outlines with overlapping translucent planes and a muted palette, making the difference in surface treatment immediately visible.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal head form\",\n    \"flat yellow ground\",\n    \"oval eye shapes\",\n    \"teeth row\",\n    \"looping line scatter\",\n    \"horizontal face divisions\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like stillness\",\n    \"mechanical affect\",\n    \"agitation within rigid structure\"\n  ],\n  \"lookingQuestion\": \"The red crossbar connecting the two eye ovals sits at the same level as the pupils — does that bar read as part of the face structure, or does it flatten the eyes into something else?\",\n  \"ambiguities\": [\n    \"The small rectangular projection on the left side of the head could be an ear, a handle, or an unrelated geometric element; the image does not resolve this clearly.\",\n    \"Title-derived order and recorded-creation order align for this work and its immediate neighbors, but gaps exist elsewhere in the owned subset, so no broader sequence claims are made.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: yellow ground, teal-green head, red crossbar, grey-white teeth row, and looping blue/white/red/yellow lines are all visible.\",\n    \"Comparison with QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3 confirmed: #98 image shows teal ground and off-axis head with yellow coils, supporting the stated contrast; reason trimmed to stay within 35 words.\",\n    \"Comparison with QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY confirmed: #100 image shows translucent overlapping planes and muted palette with no flat yellow field, supporting the surface-treatment contrast; 'emotional register' removed as interpretive overreach.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc/image.png",
+        "imageSHA256": "8693d1519b420bbb29a5dd7011dfcd8df2e324c25db0d3c44a23ce3277e40b81"
+      },
+      {
+        "artworkId": "QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3/image.png",
+        "imageSHA256": "fe3880dc497fd81e7cc28a66b255034f986e00ebb28a95a6b152bdd47994bbb2"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY/image.png",
+        "imageSHA256": "35071101d5a52604a4979b2386732acfc14944b8d89725661cd94480fa78b973"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A blocky head shape sits on a saturated yellow ground; two large white oval eye areas each contain a red oval, and a horizontal red bar bridges them like a crosspiece.\", \"A wide row of grey-white teeth runs across the lower third, framed by thick black outlines and bands of red, pink, and yellow that form a broad open mouth.\", \"Blue, white, red, and yellow loose looping lines scatter across the dark teal-green head surface, with a small rectangular ear-like form projecting from the left side.\"], \"reading\": \"The yellow ground pushes the dark head forward, and the oversized eye ovals read as blank and fixed rather than expressive. The red crossbar and the teeth row divide the face into hard horizontal zones, giving it a mechanical, mask-like feel. The loose looping lines across the surface add restlessness against that rigid structure, so the image holds both stillness and agitation at once.\", \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors are nnxyz nifty faces #98 and nnxyz nifty faces #100. The #98 work uses a teal ground with scattered yellow coils; #100 shifts to muted layered planes. This work's flat yellow ground and locked frontal gaze mark a distinct mood among the three.\", \"connections\": [{\"targetArtworkId\": \"QmQdMfNB86NypWw6U5R2ssfpE7DBqij8jTCePgVMfEngz3\", \"reason\": \"Both works use a dense scatter of looping coloured lines over a large head form, but #98 places them on a teal ground with an off-axis view, while #99's yellow ground and dead-on frontal lock create a starker, more confrontational feel.\"}, {\"targetArtworkId\": \"QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY\", \"reason\": \"Title neighbor #100 replaces the flat yellow field and bold outlines with overlapping translucent planes and a muted palette, making the contrast in surface treatment and emotional register between the two works immediately visible.\"}], \"tags\": [\"frontal head form\", \"flat yellow ground\", \"oval eye shapes\", \"teeth row\", \"looping line scatter\", \"horizontal face divisions\"], \"interpretiveTags\": [\"mask-like stillness\", \"mechanical affect\", \"agitation within rigid structure\"], \"lookingQuestion\": \"The red crossbar connecting the two eye ovals sits at the same level as the pupils — does that bar read as part of the face structure, or does it flatten the eyes into something else?\", \"ambiguities\": [\"The small rectangular projection on the left side of the head could be an ear, a handle, or an unrelated geometric element; the image does not resolve this clearly.\", \"Title-derived order and recorded-creation order align for this work and its immediate neighbors, but gaps exist elsewhere in the owned subset, so no broader sequence claims are made.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

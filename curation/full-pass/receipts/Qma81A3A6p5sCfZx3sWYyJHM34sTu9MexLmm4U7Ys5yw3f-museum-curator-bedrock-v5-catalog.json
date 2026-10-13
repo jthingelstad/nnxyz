@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:46.979199-05:00",
+    "usage": {
+      "inputTokens": 6194,
+      "outputTokens": 774,
+      "totalTokens": 6968,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13078
+    },
+    "requestId": "71cdeedf-df67-434c-9e4c-86b2f375af27",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form fills most of the canvas, built from deep black masses with warm amber and orange tones breaking through at the cheek, nose, and forehead areas.\",\n    \"Dense, short lines in red, orange, yellow-green, and white run across the surface in overlapping clusters, sitting on top of the dark underlayer rather than defining edges cleanly.\",\n    \"The background is pale grey-white with loose grey wash marks at the sides; the lower-left corner carries a small handwritten signature in white.\"\n  ],\n  \"reading\": \"The dark mass dominates, pressing close to the frame's edges, while the layered lines in red, orange, and yellow-green push back against that weight with heat. Where the lines gather thickest—across the brow and around the mouth—the surface reads as friction rather than description. The pale ground at the edges keeps the whole form from closing in entirely, offering a thin margin of quiet.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #65 and nnxyz nifty faces #67. Those two lean toward flat, high-contrast grounds; this one buries its form in dark mass, making the warm line clusters feel like pressure from within rather than surface decoration.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq\",\n      \"reason\": \"nnxyz nifty faces #65 uses open looping lines on a pale ground, making a useful contrast: where #65 reads as airy and unresolved, #66's dark fill turns the same line vocabulary into something dense and pressured.\"\n    },\n    {\n      \"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\",\n      \"reason\": \"nnxyz nifty faces #67 shares the warm orange-yellow palette and tight line clusters, but places them against a flat dark ground with clear feature zones, whereas #66 dissolves those zones into the dark mass itself.\"\n    }\n  ],\n  \"tags\": [\n    \"dark mass ground\",\n    \"overlapping short lines\",\n    \"warm orange-red line clusters\",\n    \"yellow-green accents\",\n    \"pale grey border\",\n    \"rounded frontal form\"\n  ],\n  \"interpretiveTags\": [\n    \"pressure\",\n    \"heat against weight\",\n    \"contained intensity\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the warm line clusters break through the dark mass most densely, and does that placement correspond to any readable feature of the form?\",\n  \"ambiguities\": [\n    \"The dark underlayer reads as both a filled ground and a volumetric form; it is unclear from the image alone whether the black areas are a base layer or drawn over lighter marks.\",\n    \"The nnotb #245 comparison image shows a structurally different approach with flat outlined zones and a white ground; no strong formal connection to #66 was found, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f/image.png",
+        "imageSHA256": "20ef3cd7545f6490eeb31c944a8ed98ac4cf422484f8d9e13ec623768115b834"
+      },
+      {
+        "artworkId": "QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq/image.png",
+        "imageSHA256": "4757e5aaac1bc7bd0433f6182d727f6a859676330eb4120d5b54b80d1ca05391"
+      },
+      {
+        "artworkId": "QmeJFLNxEoshMk9DVLf8kxArTWbjcTA1iHuRf8rFzJSMDx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeJFLNxEoshMk9DVLf8kxArTWbjcTA1iHuRf8rFzJSMDx/image.png",
+        "imageSHA256": "132a2c2fd899e4deb538f4b707be4525ea95d80b97d44ad4fbcecd3d5af87727"
+      },
+      {
+        "artworkId": "QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS/image.png",
+        "imageSHA256": "64c4f51006df02d6fa50d6ee1c8aaa0bb1f8a2f4175e9fcf89c0cd85e115fe49"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:54.138512-05:00",
+    "usage": {
+      "inputTokens": 6988,
+      "outputTokens": 926,
+      "totalTokens": 7914,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7071
+    },
+    "requestId": "0013b415-ad20-4293-9d4e-a2e27a4c0676",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form fills most of the canvas, built from deep black masses with warm amber and orange tones breaking through at the cheek, nose, and forehead areas.\",\n    \"Dense, short lines in red, orange, yellow-green, and white run across the surface in overlapping clusters, sitting on top of the dark underlayer rather than defining edges cleanly.\",\n    \"The background is pale grey-white with loose grey wash marks at the sides; the lower-left corner carries a small handwritten signature in white.\"\n  ],\n  \"reading\": \"The dark mass dominates, pressing close to the frame's edges, while layered lines in red, orange, and yellow-green push back against that weight with heat. Where the lines gather thickest—across the brow and around the mouth—the surface reads as friction rather than description. The pale ground at the edges keeps the form from closing in entirely, offering a thin margin of quiet.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #65 and nnxyz nifty faces #67. Those two lean toward flat, high-contrast grounds; this one buries its form in dark mass, making the warm line clusters feel like pressure from within.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq\",\n      \"reason\": \"nnxyz nifty faces #65 uses open looping lines on a pale warm ground, making a direct contrast: where #65 reads as airy and open, #66's dark fill turns the same line vocabulary into something dense and pressured.\"\n    },\n    {\n      \"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\",\n      \"reason\": \"nnxyz nifty faces #67 shares warm orange-yellow tones and tight line clusters, but places them against a flat dark ground with legible feature zones, whereas #66 dissolves those zones into the dark mass itself.\"\n    }\n  ],\n  \"tags\": [\n    \"dark mass ground\",\n    \"overlapping short lines\",\n    \"warm orange-red line clusters\",\n    \"yellow-green accents\",\n    \"pale grey border\",\n    \"rounded frontal form\"\n  ],\n  \"interpretiveTags\": [\n    \"pressure\",\n    \"heat against weight\",\n    \"contained intensity\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the warm line clusters break through the dark mass most densely, and does that placement correspond to any readable feature of the form?\",\n  \"ambiguities\": [\n    \"The dark underlayer reads as both a filled ground and a volumetric form; it is unclear from the image alone whether the black areas are a base layer or drawn over lighter marks.\",\n    \"nnxyz nnotb #245 shows a structurally different approach with flat outlined zones and a white ground; no strong formal connection to #66 was found and it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the image: dark mass with amber/orange breaks, dense multi-color short line clusters on top, pale grey-white ground with grey wash marks and white signature lower-left.\",\n    \"Reading trimmed by two words to sit within the 55–65 word target; no invented intent, biography, or technique claims found; removed one instance of a near-generic opener and confirmed all sentences are grounded in observations.\",\n    \"Both comparison reasons checked against inspected images: #65 pale open ground confirmed; #67 flat dark ground with distinct feature zones confirmed; nnotb #245 correctly excluded; no weak or uninspected IDs included.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f/image.png",
+        "imageSHA256": "20ef3cd7545f6490eeb31c944a8ed98ac4cf422484f8d9e13ec623768115b834"
+      },
+      {
+        "artworkId": "QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq/image.png",
+        "imageSHA256": "4757e5aaac1bc7bd0433f6182d727f6a859676330eb4120d5b54b80d1ca05391"
+      },
+      {
+        "artworkId": "QmeJFLNxEoshMk9DVLf8kxArTWbjcTA1iHuRf8rFzJSMDx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeJFLNxEoshMk9DVLf8kxArTWbjcTA1iHuRf8rFzJSMDx/image.png",
+        "imageSHA256": "132a2c2fd899e4deb538f4b707be4525ea95d80b97d44ad4fbcecd3d5af87727"
+      },
+      {
+        "artworkId": "QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS/image.png",
+        "imageSHA256": "64c4f51006df02d6fa50d6ee1c8aaa0bb1f8a2f4175e9fcf89c0cd85e115fe49"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded form fills most of the canvas, built from deep black masses with warm amber and orange tones breaking through at the cheek, nose, and forehead areas.\", \"Dense, short lines in red, orange, yellow-green, and white run across the surface in overlapping clusters, sitting on top of the dark underlayer rather than defining edges cleanly.\", \"The background is pale grey-white with loose grey wash marks at the sides; the lower-left corner carries a small handwritten signature in white.\"], \"reading\": \"The dark mass dominates, pressing close to the frame's edges, while the layered lines in red, orange, and yellow-green push back against that weight with heat. Where the lines gather thickest—across the brow and around the mouth—the surface reads as friction rather than description. The pale ground at the edges keeps the whole form from closing in entirely, offering a thin margin of quiet.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #65 and nnxyz nifty faces #67. Those two lean toward flat, high-contrast grounds; this one buries its form in dark mass, making the warm line clusters feel like pressure from within rather than surface decoration.\", \"connections\": [{\"targetArtworkId\": \"QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq\", \"reason\": \"nnxyz nifty faces #65 uses open looping lines on a pale ground, making a useful contrast: where #65 reads as airy and unresolved, #66's dark fill turns the same line vocabulary into something dense and pressured.\"}, {\"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\", \"reason\": \"nnxyz nifty faces #67 shares the warm orange-yellow palette and tight line clusters, but places them against a flat dark ground with clear feature zones, whereas #66 dissolves those zones into the dark mass itself.\"}], \"tags\": [\"dark mass ground\", \"overlapping short lines\", \"warm orange-red line clusters\", \"yellow-green accents\", \"pale grey border\", \"rounded frontal form\"], \"interpretiveTags\": [\"pressure\", \"heat against weight\", \"contained intensity\"], \"lookingQuestion\": \"Where exactly do the warm line clusters break through the dark mass most densely, and does that placement correspond to any readable feature of the form?\", \"ambiguities\": [\"The dark underlayer reads as both a filled ground and a volumetric form; it is unclear from the image alone whether the black areas are a base layer or drawn over lighter marks.\", \"The nnotb #245 comparison image shows a structurally different approach with flat outlined zones and a white ground; no strong formal connection to #66 was found, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

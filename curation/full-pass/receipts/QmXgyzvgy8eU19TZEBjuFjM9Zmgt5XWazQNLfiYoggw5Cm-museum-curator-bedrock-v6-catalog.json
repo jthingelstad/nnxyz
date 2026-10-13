@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:56.655541-05:00",
+    "usage": {
+      "inputTokens": 6235,
+      "outputTokens": 720,
+      "totalTokens": 6955,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19088
+    },
+    "requestId": "8651b994-adc4-4931-b6cb-34549e9828b1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large pink-framed visor spans the center of the head, containing a dark slit with two pale blue vertical bars and white tooth-like shapes along its rim.\",\n    \"The scalp area is layered with scribbled black lines over patches of magenta, orange, red, and yellow, with teal strokes visible beneath the tangle.\",\n    \"A small dripping creature with yellow-orange eyes and red-orange drips hangs from the lower right of the jaw, set against an olive-green flat background.\"\n  ],\n  \"reading\": \"The oversized pink visor dominates the composition, its teeth-like border turning eyewear into something that reads as a grinning mouth. Beneath tangled hair scribbles, the scalp becomes a compressed color field—hot orange against magenta—that feels pressurized. The small dripping figure at the jaw introduces a note of unease, as though something is leaking out of an otherwise contained figure. The flat olive ground holds everything still.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #15\\\" and \\\"nnxyz rawblocks #17.\\\" All three share a head-and-shoulders framing against a flat background, but this piece is the only one where a small secondary creature appears attached to the figure's face.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw\",\n      \"reason\": \"Both share the same olive-green background, a three-quarter head angle, oversized eyewear, and a spiral earring, but #17 replaces the chaotic hair scribbles with a smooth cap and polka-dot pattern.\"\n    },\n    {\n      \"targetArtworkId\": \"QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L\",\n      \"reason\": \"Both use the same olive-green ground and pink as a key accent, but the nifty faces piece builds its head from stacked rectangular frames rather than a rounded organic silhouette.\"\n    }\n  ],\n  \"tags\": [\n    \"oversized eyewear\",\n    \"olive-green background\",\n    \"dripping small figure\",\n    \"tangled line work\",\n    \"pink accent\",\n    \"head and shoulders\"\n  ],\n  \"lookingQuestion\": \"What changes about the visor if you read its white rim shapes as teeth rather than decorative trim—does the whole face reorganize around a different kind of opening?\",\n  \"ambiguities\": [\n    \"The small dripping form at the jaw could be read as a separate creature, a mouth element, or a beard ornament; the image does not resolve this.\",\n    \"Whether the pale blue bars inside the visor represent eyes, a pause symbol, or another motif is unclear from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXgyzvgy8eU19TZEBjuFjM9Zmgt5XWazQNLfiYoggw5Cm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXgyzvgy8eU19TZEBjuFjM9Zmgt5XWazQNLfiYoggw5Cm/image.png",
+        "imageSHA256": "9bfcb04d167f6a97ff9d0887a25e9e2f48472d7265c7888d65fa6454a7d51d39"
+      },
+      {
+        "artworkId": "QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj/image.png",
+        "imageSHA256": "f9ada2bfa29a4699bed14443b05c4e205d66d7b3d70d77e4facc968bcbe289dd"
+      },
+      {
+        "artworkId": "QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L/image.png",
+        "imageSHA256": "4febcf90aad6d497861f904d5749a5883bdbf0a9f2f5154e7ff9ee93db9b9aa6"
+      },
+      {
+        "artworkId": "QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw/image.png",
+        "imageSHA256": "ba798aa01f9bdc057fd37e59a29eeda4aa52edd08baf1b692bb80f4c029d57a9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:07.684644-05:00",
+    "usage": {
+      "inputTokens": 6987,
+      "outputTokens": 847,
+      "totalTokens": 7834,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10951
+    },
+    "requestId": "e0a2115f-478f-400d-a432-fff6030907f2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large pink-framed visor spans the center of the head, containing a dark slit with two pale blue vertical bars and white tooth-like shapes along its upper and lower rim.\",\n    \"The scalp area is layered with scribbled black lines over patches of magenta, orange, red, and yellow, with teal strokes visible beneath the tangle.\",\n    \"A small dripping form with yellow-orange eyes and red-orange drips hangs from the lower right of the jaw, set against a flat olive-green background.\"\n  ],\n  \"reading\": \"The oversized pink visor dominates the composition, its tooth-like border turning eyewear into something that reads as a grinning mouth. Beneath tangled hair scribbles, the scalp becomes a compressed color field—hot orange against magenta—that feels pressurized. The small dripping form at the jaw introduces a note of unease, as though something is leaking out of an otherwise contained figure. The flat olive ground holds everything still.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #15\\\" and \\\"nnxyz rawblocks #17.\\\" All three share head-and-shoulders framing against a flat background, but this piece is the only one where a small secondary form appears attached to the figure's face.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw\",\n      \"reason\": \"Both share the same olive-green background, a three-quarter head angle, oversized eyewear, and a spiral earring, but #17 replaces the chaotic hair scribbles with a smooth cap and polka-dot pattern.\"\n    },\n    {\n      \"targetArtworkId\": \"QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L\",\n      \"reason\": \"Both use the same olive-green ground and pink as a key accent, but the nifty faces piece builds its head from stacked rectangular frames rather than a rounded organic silhouette.\"\n    }\n  ],\n  \"tags\": [\n    \"oversized eyewear\",\n    \"olive-green background\",\n    \"dripping small form\",\n    \"tangled line work\",\n    \"pink accent\",\n    \"head and shoulders\"\n  ],\n  \"lookingQuestion\": \"What changes about the visor if you read its white rim shapes as teeth rather than decorative trim—does the whole face reorganize around a different kind of opening?\",\n  \"ambiguities\": [\n    \"The small dripping form at the jaw could be read as a separate creature, a mouth element, or a beard ornament; the image does not resolve this.\",\n    \"Whether the pale blue bars inside the visor represent eyes, a pause symbol, or another motif is unclear from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed pink visor has white tooth-like bumps on both upper and lower rim, and two pale blue vertical bars inside the dark slit—draft accurate.\",\n    \"Changed 'creature' to 'form' in observation and reading to avoid unsupported subject identification; the dripping element's nature is genuinely ambiguous.\",\n    \"Verified #17 comparison: olive background, spiral earring, oversized dark-framed eyewear, and blue cap with polka dots all confirmed in the image.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXgyzvgy8eU19TZEBjuFjM9Zmgt5XWazQNLfiYoggw5Cm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXgyzvgy8eU19TZEBjuFjM9Zmgt5XWazQNLfiYoggw5Cm/image.png",
+        "imageSHA256": "9bfcb04d167f6a97ff9d0887a25e9e2f48472d7265c7888d65fa6454a7d51d39"
+      },
+      {
+        "artworkId": "QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT5kWjajHYc8Xp6ZCnLCBNuL8Fi52kNtyxdp8XmwU6Tnj/image.png",
+        "imageSHA256": "f9ada2bfa29a4699bed14443b05c4e205d66d7b3d70d77e4facc968bcbe289dd"
+      },
+      {
+        "artworkId": "QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L/image.png",
+        "imageSHA256": "4febcf90aad6d497861f904d5749a5883bdbf0a9f2f5154e7ff9ee93db9b9aa6"
+      },
+      {
+        "artworkId": "QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw/image.png",
+        "imageSHA256": "ba798aa01f9bdc057fd37e59a29eeda4aa52edd08baf1b692bb80f4c029d57a9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large pink-framed visor spans the center of the head, containing a dark slit with two pale blue vertical bars and white tooth-like shapes along its rim.\", \"The scalp area is layered with scribbled black lines over patches of magenta, orange, red, and yellow, with teal strokes visible beneath the tangle.\", \"A small dripping creature with yellow-orange eyes and red-orange drips hangs from the lower right of the jaw, set against an olive-green flat background.\"], \"reading\": \"The oversized pink visor dominates the composition, its teeth-like border turning eyewear into something that reads as a grinning mouth. Beneath tangled hair scribbles, the scalp becomes a compressed color field—hot orange against magenta—that feels pressurized. The small dripping figure at the jaw introduces a note of unease, as though something is leaking out of an otherwise contained figure. The flat olive ground holds everything still.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #15\\\" and \\\"nnxyz rawblocks #17.\\\" All three share a head-and-shoulders framing against a flat background, but this piece is the only one where a small secondary creature appears attached to the figure's face.\", \"connections\": [{\"targetArtworkId\": \"QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw\", \"reason\": \"Both share the same olive-green background, a three-quarter head angle, oversized eyewear, and a spiral earring, but #17 replaces the chaotic hair scribbles with a smooth cap and polka-dot pattern.\"}, {\"targetArtworkId\": \"QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L\", \"reason\": \"Both use the same olive-green ground and pink as a key accent, but the nifty faces piece builds its head from stacked rectangular frames rather than a rounded organic silhouette.\"}], \"tags\": [\"oversized eyewear\", \"olive-green background\", \"dripping small figure\", \"tangled line work\", \"pink accent\", \"head and shoulders\"], \"lookingQuestion\": \"What changes about the visor if you read its white rim shapes as teeth rather than decorative trim—does the whole face reorganize around a different kind of opening?\", \"ambiguities\": [\"The small dripping form at the jaw could be read as a separate creature, a mouth element, or a beard ornament; the image does not resolve this.\", \"Whether the pale blue bars inside the visor represent eyes, a pause symbol, or another motif is unclear from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

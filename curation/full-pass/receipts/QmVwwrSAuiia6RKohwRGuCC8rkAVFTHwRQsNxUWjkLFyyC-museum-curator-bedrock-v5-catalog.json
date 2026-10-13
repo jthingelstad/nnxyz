@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:30.675230-05:00",
+    "usage": {
+      "inputTokens": 6555,
+      "outputTokens": 792,
+      "totalTokens": 7347,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12844
+    },
+    "requestId": "f2c12e07-02f1-4648-a363-e17c0349fc47",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pointed, ear-topped head shape sits against a deep navy ground; the outline is drawn in thick blue-purple with a thin gold line running inside it along the upper edge.\",\n    \"One oversized eye on the left side of the face is filled with radiating black lines on white, giving it a starburst quality; a second, smaller eye sits lower right, dark-pupiled with short lash marks.\",\n    \"Color patches—sky blue, mint green, pink, yellow, olive—are layered loosely across the face without following the drawn contours, leaving gaps of bare ground visible between them.\"\n  ],\n  \"reading\": \"The face here is pulled in two directions at once: the left eye balloons outward with radiating lines that feel like alarm, while the open mouth below shows white teeth against a dark red interior that reads as a shout or a laugh. The loose color patches float free of the outlines rather than filling them, so the face seems assembled from mismatched pieces. The gold zigzag line along the jaw adds a restless, unresolved edge.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #292 and nnxyz nnotb #294. Both neighbors also use a face-centered composition with a dark ground, but #293 replaces the warm, saturated field of #292 with a cooler blue-dominant palette and a much quieter background.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv\",\n      \"reason\": \"Both works place a single face on a dark ground with a gold zigzag line running across the lower jaw area, but #292 fills its entire background with warm color patches while #293 leaves the navy ground largely bare.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh\",\n      \"reason\": \"Like #293, title neighbor #294 features mismatched eyes of different sizes and a mouth showing teeth, but #294 adds raised hands and a hat, spreading the composition well beyond the face alone.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eyes\",\n    \"radiating line fill\",\n    \"open mouth with teeth\",\n    \"floating color patches\",\n    \"gold zigzag outline\",\n    \"dark navy ground\"\n  ],\n  \"interpretiveTags\": [\n    \"alarm or surprise reading\",\n    \"fragmented identity mood\"\n  ],\n  \"lookingQuestion\": \"The radiating lines inside the large left eye and the open teeth of the mouth are the two most insistent marks in the image — do they pull your attention in the same direction or in opposite directions?\",\n  \"ambiguities\": [\n    \"The pointed upper shapes read as ears, but the image alone does not confirm whether the form is meant as animal, hybrid, or stylized human head.\",\n    \"The nifty-faces #31 comparison was inspected but offers only a general shared density of line work; no specific formal echo strong enough to warrant a connection was found, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVwwrSAuiia6RKohwRGuCC8rkAVFTHwRQsNxUWjkLFyyC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVwwrSAuiia6RKohwRGuCC8rkAVFTHwRQsNxUWjkLFyyC/image.png",
+        "imageSHA256": "1906bc2083859f7ef2443d51e7eb5af915b350779e7f1e743849a9b0790626cf"
+      },
+      {
+        "artworkId": "Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv/image.png",
+        "imageSHA256": "6ea5e7857de938cc8ca218d27a915288e1dda9ac4304df7e9fd54b94af1fffcc"
+      },
+      {
+        "artworkId": "QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj/image.png",
+        "imageSHA256": "deb9b31cfa305a30c9c9f939e3903e77310cc9c8b8f2ad044c9ef6ee71ab4dd2"
+      },
+      {
+        "artworkId": "QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh/image.png",
+        "imageSHA256": "4c7a7d2d55f858a526928be8b5b1ad135e6f7e9eb1b49066d1fa769791335c10"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:37.775979-05:00",
+    "usage": {
+      "inputTokens": 7369,
+      "outputTokens": 999,
+      "totalTokens": 8368,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7038
+    },
+    "requestId": "fde4481d-1221-46eb-9b2a-37ad2daa81e4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pointed, ear-topped head shape sits against a deep navy ground; the outer outline is drawn in thick blue-purple with a thin gold line running inside it along the upper edge.\",\n    \"One oversized eye on the left side of the face is filled with radiating black lines on white; a second, smaller eye sits lower right, dark-pupiled with short lash marks.\",\n    \"Color patches—sky blue, mint green, pink, yellow, olive—are layered loosely across the face without following the drawn contours, leaving gaps of bare navy ground visible between them.\"\n  ],\n  \"reading\": \"The face is pulled in two directions: the left eye balloons outward with radiating lines that read as alarm, while the open mouth below shows white teeth against a dark red interior that reads as a shout or a laugh. The color patches float free of the outlines rather than filling them, so the face seems assembled from mismatched pieces. A gold zigzag line along the jaw adds a restless, unresolved edge.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #292 and nnxyz nnotb #294. Both share a face-centered composition on a dark ground, but #293 replaces the warm, saturated field of #292 with a cooler blue-dominant palette and a much quieter background.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv\",\n      \"reason\": \"Both works place a single face on a dark ground with a gold zigzag line near the lower jaw, but #292 fills its entire background with warm color patches while #293 leaves the navy ground largely bare.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh\",\n      \"reason\": \"Title neighbor #294 also features mismatched eyes of different sizes and a mouth showing teeth, but spreads the composition to include raised hands and a hat well beyond the face alone.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eyes\",\n    \"radiating line fill\",\n    \"open mouth with teeth\",\n    \"floating color patches\",\n    \"gold zigzag outline\",\n    \"dark navy ground\"\n  ],\n  \"lookingQuestion\": \"The radiating lines inside the large left eye and the open teeth of the mouth are the two most insistent marks in the image — do they pull your attention in the same direction or in opposite directions?\",\n  \"ambiguities\": [\n    \"The pointed upper shapes read as ears, but the image alone does not confirm whether the form is animal, hybrid, or stylized human head.\",\n    \"nnxyz nifty faces #31 was inspected but shares only general line density with #293; no specific formal echo strong enough to warrant a connection was found, so it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All colors, forms and placements confirmed against the primary image: navy ground, blue-purple outline, gold inner line, radiating left eye, smaller dark right eye, loose color patches, gold zigzag jaw line, open red-interior mouth with white teeth — all visible and accurately described.\",\n    \"Comparison with Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv confirmed: #292 does use a gold zigzag line and a face on a dark ground, but its background is fully saturated with warm color patches, contrasting with #293's bare navy ground — connection retained as meaningful contrast.\",\n    \"Comparison with QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh confirmed: #294 shows mismatched eyes and teeth-baring mouth matching the draft claim; raised hands and hat also visible, confirming the compositional contrast stated — connection retained.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVwwrSAuiia6RKohwRGuCC8rkAVFTHwRQsNxUWjkLFyyC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVwwrSAuiia6RKohwRGuCC8rkAVFTHwRQsNxUWjkLFyyC/image.png",
+        "imageSHA256": "1906bc2083859f7ef2443d51e7eb5af915b350779e7f1e743849a9b0790626cf"
+      },
+      {
+        "artworkId": "Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv/image.png",
+        "imageSHA256": "6ea5e7857de938cc8ca218d27a915288e1dda9ac4304df7e9fd54b94af1fffcc"
+      },
+      {
+        "artworkId": "QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj/image.png",
+        "imageSHA256": "deb9b31cfa305a30c9c9f939e3903e77310cc9c8b8f2ad044c9ef6ee71ab4dd2"
+      },
+      {
+        "artworkId": "QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh/image.png",
+        "imageSHA256": "4c7a7d2d55f858a526928be8b5b1ad135e6f7e9eb1b49066d1fa769791335c10"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A pointed, ear-topped head shape sits against a deep navy ground; the outline is drawn in thick blue-purple with a thin gold line running inside it along the upper edge.\", \"One oversized eye on the left side of the face is filled with radiating black lines on white, giving it a starburst quality; a second, smaller eye sits lower right, dark-pupiled with short lash marks.\", \"Color patches—sky blue, mint green, pink, yellow, olive—are layered loosely across the face without following the drawn contours, leaving gaps of bare ground visible between them.\"], \"reading\": \"The face here is pulled in two directions at once: the left eye balloons outward with radiating lines that feel like alarm, while the open mouth below shows white teeth against a dark red interior that reads as a shout or a laugh. The loose color patches float free of the outlines rather than filling them, so the face seems assembled from mismatched pieces. The gold zigzag line along the jaw adds a restless, unresolved edge.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #292 and nnxyz nnotb #294. Both neighbors also use a face-centered composition with a dark ground, but #293 replaces the warm, saturated field of #292 with a cooler blue-dominant palette and a much quieter background.\", \"connections\": [{\"targetArtworkId\": \"Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv\", \"reason\": \"Both works place a single face on a dark ground with a gold zigzag line running across the lower jaw area, but #292 fills its entire background with warm color patches while #293 leaves the navy ground largely bare.\"}, {\"targetArtworkId\": \"QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh\", \"reason\": \"Like #293, title neighbor #294 features mismatched eyes of different sizes and a mouth showing teeth, but #294 adds raised hands and a hat, spreading the composition well beyond the face alone.\"}], \"tags\": [\"asymmetric eyes\", \"radiating line fill\", \"open mouth with teeth\", \"floating color patches\", \"gold zigzag outline\", \"dark navy ground\"], \"interpretiveTags\": [\"alarm or surprise reading\", \"fragmented identity mood\"], \"lookingQuestion\": \"The radiating lines inside the large left eye and the open teeth of the mouth are the two most insistent marks in the image — do they pull your attention in the same direction or in opposite directions?\", \"ambiguities\": [\"The pointed upper shapes read as ears, but the image alone does not confirm whether the form is meant as animal, hybrid, or stylized human head.\", \"The nifty-faces #31 comparison was inspected but offers only a general shared density of line work; no specific formal echo strong enough to warrant a connection was found, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

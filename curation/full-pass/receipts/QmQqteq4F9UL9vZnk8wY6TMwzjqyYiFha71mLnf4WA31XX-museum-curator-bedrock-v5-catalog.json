@@ -1,0 +1,178 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:11.497053-05:00",
+    "usage": {
+      "inputTokens": 6164,
+      "outputTokens": 751,
+      "totalTokens": 6915,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12684
+    },
+    "requestId": "5c78854c-2837-41fc-8bee-5460bc215ffa",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face fills most of the frame against a flat purple background; tangled orange, yellow, red, and white lines cover the upper head, while the lower face and shoulders are blocked in solid black.\",\n    \"Two wide-open eyes with green irises and heavy black lash marks sit near center; the mouth is open, showing white teeth, with dark surrounding marks that pull the lips back sharply.\",\n    \"A dense scribble layer—black, white, teal, and pink lines—runs across the cheeks and forehead, sitting visibly on top of the yellow-gold base color rather than blending into it.\"\n  ],\n  \"reading\": \"The face pushes close to the picture edge, leaving little breathing room. Green eyes and bared teeth read as high tension, though whether that tension is rage, fear, or something else stays open. The scribble layer on top of the gold skin gives the surface a frayed, unresolved quality—as if the lines are still working something out. The black shoulders anchor the figure while the purple field holds it at a cool distance.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work shares the flat purple background seen in nnotb #190 from the separate nnotb family—a color link the collector connects to the scrimshaw-like line-over-ground quality across nnxyz's work. Title neighbors are #85 and #87 in title-derived order.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both works use the same flat purple background and place dense, multi-color scribble lines directly over a warm gold face mass—a specific surface contrast absent in the grey-ground #85.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx\",\n      \"reason\": \"Title neighbor #87 shares the open-mouth, bared-teeth configuration and heavy lash marks around the eyes, but swaps the purple field for yellow, shifting the overall temperature sharply.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"bared teeth\",\n    \"green irises\",\n    \"layered scribble lines\",\n    \"gold and black face planes\",\n    \"flat purple background\"\n  ],\n  \"interpretiveTags\": [\n    \"high tension\",\n    \"unresolved surface energy\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the scribble layer sit in relation to the gold skin beneath it, and does that layering feel the same across both sides of the face?\",\n  \"ambiguities\": [\n    \"The title is treated as content only; no subject identity is confirmed from the image alone.\",\n    \"Comparison candidate #85 shares title-family proximity but its grey ground and sunglasses motif offer no strong formal link to #86, so it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQqteq4F9UL9vZnk8wY6TMwzjqyYiFha71mLnf4WA31XX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQqteq4F9UL9vZnk8wY6TMwzjqyYiFha71mLnf4WA31XX/image.png",
+        "imageSHA256": "dd2a4e52a724236243e4ca7c3a9189e1b35a7bf805c79f52a6d7acea5b206ff6"
+      },
+      {
+        "artworkId": "QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8/image.png",
+        "imageSHA256": "e8cca3217d04a2fc63be89c62eb8bbcfa303425e76314a4d88d95d6d139bbb79"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      },
+      {
+        "artworkId": "QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx/image.png",
+        "imageSHA256": "5622a58d545eefad34d1cda69f512f7ff32f21348691d5101343f420949523fb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:18.131604-05:00",
+    "usage": {
+      "inputTokens": 6937,
+      "outputTokens": 857,
+      "totalTokens": 7794,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6441
+    },
+    "requestId": "1040128a-ff65-400d-9848-b538a941b19f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face fills most of the frame against a flat purple background; tangled orange, yellow, red, and white lines cover the upper head, while the lower face and shoulders are blocked in solid black.\",\n    \"Two wide-open eyes with green irises and heavy black lash marks sit near center; the mouth is open, showing white teeth, with dark surrounding marks that pull the lips back sharply.\",\n    \"A dense scribble layer—black, white, teal, and pink lines—runs across the cheeks and forehead, sitting visibly on top of the yellow-gold base color rather than blending into it.\"\n  ],\n  \"reading\": \"The face pushes close to the picture edge, leaving little open space around it. Green eyes and bared teeth carry high tension, though whether that reads as rage, fear, or something else stays open. The scribble layer over the gold skin gives the surface a frayed quality—lines that sit on top rather than settle in. The solid black shoulders anchor the figure while the flat purple field holds it at a cool distance.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors are #85 and #87 in title-derived order. The flat purple background also appears in nnotb #190 from the separate owned nnotb family—a color link the collector connects to the scrimshaw-like line-over-ground quality across nnxyz's work.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both works share a flat purple background and place dense multi-color scribble lines directly over a warm gold face mass—a specific surface contrast absent in the grey-ground #85.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx\",\n      \"reason\": \"Title neighbor #87 shares the open-mouth bared-teeth configuration and heavy lash marks, but its yellow ground replaces the purple field, shifting the overall color temperature sharply.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"bared teeth\",\n    \"green irises\",\n    \"layered scribble lines\",\n    \"gold and black face planes\",\n    \"flat purple background\"\n  ],\n  \"interpretiveTags\": [\n    \"high tension\",\n    \"unresolved surface energy\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the scribble layer sit in relation to the gold skin beneath it, and does that layering feel the same across both sides of the face?\",\n  \"ambiguities\": [\n    \"Title treated as content only; no subject identity confirmed from the image alone.\",\n    \"Candidate #85 shares title-family proximity but its grey ground and sunglasses motif offer no strong formal link to #86, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: purple background, green irises, open mouth with white teeth, and visible scribble layer over gold skin are all present.\",\n    \"nnotb #190 image confirmed: flat purple background and warm gold face mass with dense multi-color scribble lines match the stated comparison; connection retained.\",\n    \"Reading trimmed to stay within 55–65 word target; no invented intent, biography, or technique claims detected; prohibited words absent.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQqteq4F9UL9vZnk8wY6TMwzjqyYiFha71mLnf4WA31XX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQqteq4F9UL9vZnk8wY6TMwzjqyYiFha71mLnf4WA31XX/image.png",
+        "imageSHA256": "dd2a4e52a724236243e4ca7c3a9189e1b35a7bf805c79f52a6d7acea5b206ff6"
+      },
+      {
+        "artworkId": "QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8/image.png",
+        "imageSHA256": "e8cca3217d04a2fc63be89c62eb8bbcfa303425e76314a4d88d95d6d139bbb79"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      },
+      {
+        "artworkId": "QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx/image.png",
+        "imageSHA256": "5622a58d545eefad34d1cda69f512f7ff32f21348691d5101343f420949523fb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A face fills most of the frame against a flat purple background; tangled orange, yellow, red, and white lines cover the upper head, while the lower face and shoulders are blocked in solid black.\", \"Two wide-open eyes with green irises and heavy black lash marks sit near center; the mouth is open, showing white teeth, with dark surrounding marks that pull the lips back sharply.\", \"A dense scribble layer—black, white, teal, and pink lines—runs across the cheeks and forehead, sitting visibly on top of the yellow-gold base color rather than blending into it.\"], \"reading\": \"The face pushes close to the picture edge, leaving little breathing room. Green eyes and bared teeth read as high tension, though whether that tension is rage, fear, or something else stays open. The scribble layer on top of the gold skin gives the surface a frayed, unresolved quality—as if the lines are still working something out. The black shoulders anchor the figure while the purple field holds it at a cool distance.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work shares the flat purple background seen in nnotb #190 from the separate nnotb family—a color link the collector connects to the scrimshaw-like line-over-ground quality across nnxyz's work. Title neighbors are #85 and #87 in title-derived order.\", \"connections\": [{\"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\", \"reason\": \"Both works use the same flat purple background and place dense, multi-color scribble lines directly over a warm gold face mass—a specific surface contrast absent in the grey-ground #85.\"}, {\"targetArtworkId\": \"QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx\", \"reason\": \"Title neighbor #87 shares the open-mouth, bared-teeth configuration and heavy lash marks around the eyes, but swaps the purple field for yellow, shifting the overall temperature sharply.\"}], \"tags\": [\"open mouth\", \"bared teeth\", \"green irises\", \"layered scribble lines\", \"gold and black face planes\", \"flat purple background\"], \"interpretiveTags\": [\"high tension\", \"unresolved surface energy\"], \"lookingQuestion\": \"Where exactly does the scribble layer sit in relation to the gold skin beneath it, and does that layering feel the same across both sides of the face?\", \"ambiguities\": [\"The title is treated as content only; no subject identity is confirmed from the image alone.\", \"Comparison candidate #85 shares title-family proximity but its grey ground and sunglasses motif offer no strong formal link to #86, so it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:33.398243-05:00",
+    "usage": {
+      "inputTokens": 6668,
+      "outputTokens": 799,
+      "totalTokens": 7467,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11633
+    },
+    "requestId": "be11cd55-35f6-4fae-8897-f76a7a7ac668",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face fills most of the frame against a flat purple background; tangled orange, yellow, red, and white lines cover the upper head, while the lower face and shoulders are blocked in solid black.\",\n    \"Two wide-open eyes with green irises and heavy black lash marks sit near center; the mouth is open, showing white teeth, with dark surrounding marks that pull the lips back sharply.\",\n    \"A dense scribble layer—black, white, teal, and pink lines—runs across the cheeks and forehead, sitting visibly on top of the yellow-gold base color rather than blending into it.\"\n  ],\n  \"reading\": \"Gold and orange scribble fills the upper skull while solid black anchors the shoulders, splitting the figure into warm chaos above and cool weight below. Green irises and bared teeth carry high tension, though whether that reads as rage, fear, or something else stays open. The scribble layer over the skin gives the surface a frayed quality—lines that sit on top rather than settle in. The flat purple field holds the face at a cool distance.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors are #85 and #87 in title-derived order. The flat purple background also appears in nnotb #190 from the separate owned nnotb family—a color link across nnxyz's work.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both works share a flat purple background and place dense multi-color scribble lines directly over a warm gold face mass—a specific surface contrast absent in the grey-ground #85.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx\",\n      \"reason\": \"Title neighbor #87 shares the open-mouth bared-teeth configuration and heavy lash marks, but its yellow ground replaces the purple field, shifting the overall color temperature sharply.\"\n    }\n  ],\n  \"tags\": [\"open mouth\", \"bared teeth\", \"green irises\", \"layered scribble lines\", \"gold and black face planes\", \"flat purple background\"],\n  \"lookingQuestion\": \"Where exactly does the scribble layer sit in relation to the gold skin beneath it, and does that layering feel the same across both sides of the face?\",\n  \"ambiguities\": [\n    \"Title treated as content only; no subject identity confirmed from the image alone.\",\n    \"Candidate #85 shares title-family proximity but its grey ground and sunglasses motif offer no strong formal link to #86, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced opening sentence to lead with a specific color-and-placement contrast (gold/orange scribble vs. solid black shoulders) rather than a generic face-framing statement.\",\n    \"Mouth-openness check: white teeth are visible in a row with dark interior behind them and lips pulled back, supporting the 'open mouth' and 'bared teeth' tags.\",\n    \"Reading word count adjusted to remain within 55–65 word target.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQqteq4F9UL9vZnk8wY6TMwzjqyYiFha71mLnf4WA31XX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQqteq4F9UL9vZnk8wY6TMwzjqyYiFha71mLnf4WA31XX/image.png",
+        "imageSHA256": "dd2a4e52a724236243e4ca7c3a9189e1b35a7bf805c79f52a6d7acea5b206ff6"
+      },
+      {
+        "artworkId": "QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8/image.png",
+        "imageSHA256": "e8cca3217d04a2fc63be89c62eb8bbcfa303425e76314a4d88d95d6d139bbb79"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      },
+      {
+        "artworkId": "QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx/image.png",
+        "imageSHA256": "5622a58d545eefad34d1cda69f512f7ff32f21348691d5101343f420949523fb"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A face fills most of the frame against a flat purple background; tangled orange, yellow, red, and white lines cover the upper head, while the lower face and shoulders are blocked in solid black.\", \"Two wide-open eyes with green irises and heavy black lash marks sit near center; the mouth is open, showing white teeth, with dark surrounding marks that pull the lips back sharply.\", \"A dense scribble layer—black, white, teal, and pink lines—runs across the cheeks and forehead, sitting visibly on top of the yellow-gold base color rather than blending into it.\"], \"reading\": \"The face pushes close to the picture edge, leaving little open space around it. Green eyes and bared teeth carry high tension, though whether that reads as rage, fear, or something else stays open. The scribble layer over the gold skin gives the surface a frayed quality—lines that sit on top rather than settle in. The solid black shoulders anchor the figure while the flat purple field holds it at a cool distance.\", \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors are #85 and #87 in title-derived order. The flat purple background also appears in nnotb #190 from the separate owned nnotb family—a color link the collector connects to the scrimshaw-like line-over-ground quality across nnxyz's work.\", \"connections\": [{\"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\", \"reason\": \"Both works share a flat purple background and place dense multi-color scribble lines directly over a warm gold face mass—a specific surface contrast absent in the grey-ground #85.\"}, {\"targetArtworkId\": \"QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx\", \"reason\": \"Title neighbor #87 shares the open-mouth bared-teeth configuration and heavy lash marks, but its yellow ground replaces the purple field, shifting the overall color temperature sharply.\"}], \"tags\": [\"open mouth\", \"bared teeth\", \"green irises\", \"layered scribble lines\", \"gold and black face planes\", \"flat purple background\"], \"lookingQuestion\": \"Where exactly does the scribble layer sit in relation to the gold skin beneath it, and does that layering feel the same across both sides of the face?\", \"ambiguities\": [\"Title treated as content only; no subject identity confirmed from the image alone.\", \"Candidate #85 shares title-family proximity but its grey ground and sunglasses motif offer no strong formal link to #86, so it was not selected as a connection.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the face pushes close to\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:18:08.932898-05:00",
+    "usage": {
+      "inputTokens": 6720,
+      "outputTokens": 793,
+      "totalTokens": 7513,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11501
+    },
+    "requestId": "473ecfcd-335c-4398-bd46-4d5cbbd80185",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face fills most of the frame against a flat purple background; tangled orange, yellow, red, and white lines cover the upper head, while the lower face and shoulders are blocked in solid black.\",\n    \"Two eyes with green irises and heavy black lash marks sit near center; the mouth is open with a visible row of white teeth and red interior, framed by dark lines that pull the lip edges back.\",\n    \"A dense scribble layer—black, white, teal, and pink lines—runs across the cheeks and forehead, sitting visibly on top of the yellow-gold base color rather than blending into it.\"\n  ],\n  \"reading\": \"Gold and orange scribble fills the upper skull while solid black anchors the shoulders, splitting the figure into warm chaos above and cool weight below. Green irises and bared teeth carry a reading of high tension—rage, fear, or something unresolved. The scribble layer over the skin gives the surface a frayed quality, lines resting on top rather than settling in. The flat purple field holds the face at a cool distance.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors are #85 and #87. The flat purple background also appears in nnotb #190 from the separate owned nnotb family, forming a color link across two nnxyz collections.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both works share a flat purple background and place dense multi-color scribble lines directly over a warm gold face mass—a specific surface contrast absent in the grey-ground #85.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx\",\n      \"reason\": \"Title neighbor #87 shares the open-mouth bared-teeth configuration and heavy lash marks, but its yellow ground replaces the purple field, shifting the overall color temperature sharply.\"\n    }\n  ],\n  \"tags\": [\"open mouth\", \"bared teeth\", \"green irises\", \"layered scribble lines\", \"gold and black face planes\", \"flat purple background\"],\n  \"lookingQuestion\": \"Where exactly does the scribble layer sit in relation to the gold skin beneath it, and does that layering feel the same across both sides of the face?\",\n  \"ambiguities\": [\n    \"Title treated as content only; no subject identity confirmed from the image alone.\",\n    \"Candidate #85 shares title-family proximity but its grey ground and sunglasses motif offer no strong formal link to #86, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open eyes' with 'two eyes' in observation 2; the eyes are prominent but the visible opening is not exceptionally wide compared to neighbors.\",\n    \"Mouth description revised: teeth row and red interior are visible, but the opening is moderate—described as 'open' rather than 'wide-open.'\",\n    \"Reading kept within 55–65 word target and avoids unscoped superlatives.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQqteq4F9UL9vZnk8wY6TMwzjqyYiFha71mLnf4WA31XX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQqteq4F9UL9vZnk8wY6TMwzjqyYiFha71mLnf4WA31XX/image.png",
+        "imageSHA256": "dd2a4e52a724236243e4ca7c3a9189e1b35a7bf805c79f52a6d7acea5b206ff6"
+      },
+      {
+        "artworkId": "QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8/image.png",
+        "imageSHA256": "e8cca3217d04a2fc63be89c62eb8bbcfa303425e76314a4d88d95d6d139bbb79"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      },
+      {
+        "artworkId": "QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx/image.png",
+        "imageSHA256": "5622a58d545eefad34d1cda69f512f7ff32f21348691d5101343f420949523fb"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A face fills most of the frame against a flat purple background; tangled orange, yellow, red, and white lines cover the upper head, while the lower face and shoulders are blocked in solid black.\", \"Two wide-open eyes with green irises and heavy black lash marks sit near center; the mouth is open, showing white teeth, with dark surrounding marks that pull the lips back sharply.\", \"A dense scribble layer—black, white, teal, and pink lines—runs across the cheeks and forehead, sitting visibly on top of the yellow-gold base color rather than blending into it.\"], \"reading\": \"Gold and orange scribble fills the upper skull while solid black anchors the shoulders, splitting the figure into warm chaos above and cool weight below. Green irises and bared teeth carry high tension, though whether that reads as rage, fear, or something else stays open. The scribble layer over the skin gives the surface a frayed quality—lines that sit on top rather than settle in. The flat purple field holds the face at a cool distance.\", \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors are #85 and #87 in title-derived order. The flat purple background also appears in nnotb #190 from the separate owned nnotb family—a color link across nnxyz's work.\", \"connections\": [{\"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\", \"reason\": \"Both works share a flat purple background and place dense multi-color scribble lines directly over a warm gold face mass—a specific surface contrast absent in the grey-ground #85.\"}, {\"targetArtworkId\": \"QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx\", \"reason\": \"Title neighbor #87 shares the open-mouth bared-teeth configuration and heavy lash marks, but its yellow ground replaces the purple field, shifting the overall color temperature sharply.\"}], \"tags\": [\"open mouth\", \"bared teeth\", \"green irises\", \"layered scribble lines\", \"gold and black face planes\", \"flat purple background\"], \"lookingQuestion\": \"Where exactly does the scribble layer sit in relation to the gold skin beneath it, and does that layering feel the same across both sides of the face?\", \"ambiguities\": [\"Title treated as content only; no subject identity confirmed from the image alone.\", \"Candidate #85 shares title-family proximity but its grey ground and sunglasses motif offer no strong formal link to #86, so it was not selected as a connection.\"]}\nFLAGS:\n[{\"artworkId\": \"QmQqteq4F9UL9vZnk8wY6TMwzjqyYiFha71mLnf4WA31XX\", \"field\": \"observations\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

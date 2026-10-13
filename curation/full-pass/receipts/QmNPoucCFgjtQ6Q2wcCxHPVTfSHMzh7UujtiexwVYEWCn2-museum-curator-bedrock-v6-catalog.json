@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:34.158465-05:00",
+    "usage": {
+      "inputTokens": 6208,
+      "outputTokens": 643,
+      "totalTokens": 6851,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 16857
+    },
+    "requestId": "662b97cd-bf48-45ea-9486-fa7d1092422f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-open mouth dominates the lower right, filled with pointed white teeth outlined in black against red and yellow striped lips.\",\n    \"Yellow looping forms crown the top of the head, layered over teal and black scribbled lines that create a dense, tangled mass.\",\n    \"Two rectangular eye shapes sit mid-face, cross-hatched in red and black with white highlights, framed by heavy black outlines against a flat purple background.\"\n  ],\n  \"reading\": \"The face splits open at the jaw, baring rows of sharp white teeth that pull the whole composition downward and to the right. Thick black lines tangle with bright yellow loops and teal threads, building a head that seems to vibrate against the still purple field. The effect reads as a shout caught mid-release—something between fury and laughter, held together only by the density of overlapping marks.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #45\\\" and \\\"nnxyz rawblocks #47.\\\" All three feature exposed teeth and tangled line work, but #46 stands apart with its saturated purple ground and the sheer number of color layers packed into the face.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmT2qH8HPHWZiyL21WwxQNEGBqBZCMtqAimY1Jp2TduPxf\",\n      \"reason\": \"Both share bared teeth and a profile-like tilt, but #45 uses a dark green field and sparse pink outlines where #46 fills every gap with competing color.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both place a face against a purple background with cross-hatched eyes, but nnotb #190 packs its marks into a rounder, more contained mass.\"\n    }\n  ],\n  \"tags\": [\n    \"bared teeth\",\n    \"tangled black lines\",\n    \"purple background\",\n    \"yellow loops\",\n    \"open mouth\",\n    \"layered color fills\"\n  ],\n  \"lookingQuestion\": \"Where does the yellow outline separate from the black scaffolding, and how does that gap change the sense of depth across the face?\",\n  \"ambiguities\": [\n    \"Whether the rectangular eye shapes represent glasses or eyes alone is unclear from the image.\",\n    \"The yellow crown-like loops could be read as hair, a headdress, or pure abstract mark-making.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2/image.png",
+        "imageSHA256": "43f3c0a12db8570717e4f2a7629a64373342c3c99a2c65fdeb2ed645ddec2a97"
+      },
+      {
+        "artworkId": "QmT2qH8HPHWZiyL21WwxQNEGBqBZCMtqAimY1Jp2TduPxf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2qH8HPHWZiyL21WwxQNEGBqBZCMtqAimY1Jp2TduPxf/image.png",
+        "imageSHA256": "911f7091bdc9e61ec78e9224ca31c071e234d8ed60077283f23ffc819a5394ba"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      },
+      {
+        "artworkId": "QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C/image.png",
+        "imageSHA256": "2ad0890ea541a3f3ea6891c794e13ad4d9700660dbd8b9eb5487d79add5c845d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:44.805566-05:00",
+    "usage": {
+      "inputTokens": 6883,
+      "outputTokens": 765,
+      "totalTokens": 7648,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10585
+    },
+    "requestId": "d69a0112-c193-468c-873f-14f16b5d9594",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-open mouth in the lower right shows rows of pointed white teeth between red-and-yellow striped lips, outlined heavily in black.\",\n    \"Yellow looping forms arc across the top of the head, layered over teal and black tangled lines that build a dense crown-like mass.\",\n    \"Two rectangular shapes sit mid-face, cross-hatched in red and black with white fills, framed by heavy black outlines against a flat purple field.\"\n  ],\n  \"reading\": \"The face breaks open at the jaw, baring sharp white teeth that drag the composition downward and to the right. Thick black lines tangle with bright yellow loops and teal threads, building a head that seems to vibrate against the still purple ground. The effect reads as a shout caught mid-release—something between fury and laughter, held together only by the density of overlapping marks.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #45\\\" and \\\"nnxyz rawblocks #47.\\\" All three feature exposed teeth and tangled line work, but this piece stands apart with its saturated purple ground and the density of color layers packed into the face.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmT2qH8HPHWZiyL21WwxQNEGBqBZCMtqAimY1Jp2TduPxf\",\n      \"reason\": \"Both show bared teeth and a profile-like tilt, but #45 uses a dark green field and sparse pink outlines where #46 fills every gap with competing color.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both place a face against purple with cross-hatched eye areas, but nnotb #190 packs its marks into a rounder, more contained mass.\"\n    }\n  ],\n  \"tags\": [\n    \"bared teeth\",\n    \"tangled black lines\",\n    \"purple background\",\n    \"yellow loops\",\n    \"open mouth\",\n    \"layered color fills\"\n  ],\n  \"lookingQuestion\": \"Where does the yellow outline separate from the black scaffolding, and how does that gap change the sense of depth across the face?\",\n  \"ambiguities\": [\n    \"Whether the rectangular mid-face shapes represent glasses or eyes alone is unclear from the image.\",\n    \"The yellow loops at the top could be read as hair, a headdress, or pure abstract mark-making.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed pointed white teeth, red-and-yellow striped lip area, and heavy black outlines in the mouth region match the image.\",\n    \"Replaced '#46 stands apart' phrasing in contextAngle with 'this piece stands apart' to avoid echoing a bare number in prose.\",\n    \"Verified nnotb #190 comparison: both share purple backgrounds and cross-hatched eye zones, but #190's face is rounder and more self-contained—accurate to the inspected image.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2/image.png",
+        "imageSHA256": "43f3c0a12db8570717e4f2a7629a64373342c3c99a2c65fdeb2ed645ddec2a97"
+      },
+      {
+        "artworkId": "QmT2qH8HPHWZiyL21WwxQNEGBqBZCMtqAimY1Jp2TduPxf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2qH8HPHWZiyL21WwxQNEGBqBZCMtqAimY1Jp2TduPxf/image.png",
+        "imageSHA256": "911f7091bdc9e61ec78e9224ca31c071e234d8ed60077283f23ffc819a5394ba"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      },
+      {
+        "artworkId": "QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C/image.png",
+        "imageSHA256": "2ad0890ea541a3f3ea6891c794e13ad4d9700660dbd8b9eb5487d79add5c845d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A wide-open mouth dominates the lower right, filled with pointed white teeth outlined in black against red and yellow striped lips.\", \"Yellow looping forms crown the top of the head, layered over teal and black scribbled lines that create a dense, tangled mass.\", \"Two rectangular eye shapes sit mid-face, cross-hatched in red and black with white highlights, framed by heavy black outlines against a flat purple background.\"], \"reading\": \"The face splits open at the jaw, baring rows of sharp white teeth that pull the whole composition downward and to the right. Thick black lines tangle with bright yellow loops and teal threads, building a head that seems to vibrate against the still purple field. The effect reads as a shout caught mid-release—something between fury and laughter, held together only by the density of overlapping marks.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #45\\\" and \\\"nnxyz rawblocks #47.\\\" All three feature exposed teeth and tangled line work, but #46 stands apart with its saturated purple ground and the sheer number of color layers packed into the face.\", \"connections\": [{\"targetArtworkId\": \"QmT2qH8HPHWZiyL21WwxQNEGBqBZCMtqAimY1Jp2TduPxf\", \"reason\": \"Both share bared teeth and a profile-like tilt, but #45 uses a dark green field and sparse pink outlines where #46 fills every gap with competing color.\"}, {\"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\", \"reason\": \"Both place a face against a purple background with cross-hatched eyes, but nnotb #190 packs its marks into a rounder, more contained mass.\"}], \"tags\": [\"bared teeth\", \"tangled black lines\", \"purple background\", \"yellow loops\", \"open mouth\", \"layered color fills\"], \"lookingQuestion\": \"Where does the yellow outline separate from the black scaffolding, and how does that gap change the sense of depth across the face?\", \"ambiguities\": [\"Whether the rectangular eye shapes represent glasses or eyes alone is unclear from the image.\", \"The yellow crown-like loops could be read as hair, a headdress, or pure abstract mark-making.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:17:45.619035-05:00",
+    "usage": {
+      "inputTokens": 6702,
+      "outputTokens": 733,
+      "totalTokens": 7435,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10705
+    },
+    "requestId": "639b5456-62e5-4870-b4a9-7737b65e56d1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A mouth in the lower right shows rows of pointed white teeth between red-and-yellow striped lips, with a dark opening visible behind the teeth and heavy black outlines framing the jaw.\",\n    \"Yellow looping forms arc across the top of the head, layered over teal and black tangled lines that build a dense crown-like mass.\",\n    \"Two rectangular shapes sit mid-face, cross-hatched in red and black with white fills, framed by heavy black outlines against a flat purple field.\"\n  ],\n  \"reading\": \"The face breaks open at the jaw, baring sharp white teeth that drag the composition downward and to the right. Thick black lines tangle with bright yellow loops and teal threads, building a head that seems to vibrate against the still purple ground. The effect reads as a shout caught mid-release—something between fury and laughter, held together by the density of overlapping marks.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between #45 and #47. All three feature exposed teeth and tangled line work, but this piece stands apart with its saturated purple ground and the density of color layers packed into the face.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmT2qH8HPHWZiyL21WwxQNEGBqBZCMtqAimY1Jp2TduPxf\",\n      \"reason\": \"Both show bared teeth and a profile-like tilt, but #45 uses a dark green field and sparse pink outlines where #46 fills every gap with competing color.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both place a face against purple with cross-hatched eye areas, but nnotb #190 packs its marks into a rounder, more contained mass.\"\n    }\n  ],\n  \"tags\": [\n    \"bared teeth\",\n    \"tangled black lines\",\n    \"purple background\",\n    \"yellow loops\",\n    \"layered color fills\"\n  ],\n  \"lookingQuestion\": \"Where does the yellow outline separate from the black scaffolding, and how does that gap change the sense of depth across the face?\",\n  \"ambiguities\": [\n    \"Whether the rectangular mid-face shapes represent glasses or eyes alone is unclear from the image.\",\n    \"The yellow loops at the top could be read as hair, a headdress, or pure abstract mark-making.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open mouth' with a description grounded in visible evidence: tooth rows, dark opening behind them, and outlined jaw, without asserting maximum openness.\",\n    \"Removed 'open mouth' from tags since the remaining tags and observations already convey the exposed teeth without an unsupported openness claim.\",\n    \"Reading and context remain within word limits; no superlatives, no biography or technique claims added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2/image.png",
+        "imageSHA256": "43f3c0a12db8570717e4f2a7629a64373342c3c99a2c65fdeb2ed645ddec2a97"
+      },
+      {
+        "artworkId": "QmT2qH8HPHWZiyL21WwxQNEGBqBZCMtqAimY1Jp2TduPxf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2qH8HPHWZiyL21WwxQNEGBqBZCMtqAimY1Jp2TduPxf/image.png",
+        "imageSHA256": "911f7091bdc9e61ec78e9224ca31c071e234d8ed60077283f23ffc819a5394ba"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      },
+      {
+        "artworkId": "QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNadj5yT8tWiy16tVBVkWJPYLG15YV4STRGyVt3dhGf1C/image.png",
+        "imageSHA256": "2ad0890ea541a3f3ea6891c794e13ad4d9700660dbd8b9eb5487d79add5c845d"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A wide-open mouth in the lower right shows rows of pointed white teeth between red-and-yellow striped lips, outlined heavily in black.\", \"Yellow looping forms arc across the top of the head, layered over teal and black tangled lines that build a dense crown-like mass.\", \"Two rectangular shapes sit mid-face, cross-hatched in red and black with white fills, framed by heavy black outlines against a flat purple field.\"], \"reading\": \"The face breaks open at the jaw, baring sharp white teeth that drag the composition downward and to the right. Thick black lines tangle with bright yellow loops and teal threads, building a head that seems to vibrate against the still purple ground. The effect reads as a shout caught mid-release—something between fury and laughter, held together only by the density of overlapping marks.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #45\\\" and \\\"nnxyz rawblocks #47.\\\" All three feature exposed teeth and tangled line work, but this piece stands apart with its saturated purple ground and the density of color layers packed into the face.\", \"connections\": [{\"targetArtworkId\": \"QmT2qH8HPHWZiyL21WwxQNEGBqBZCMtqAimY1Jp2TduPxf\", \"reason\": \"Both show bared teeth and a profile-like tilt, but #45 uses a dark green field and sparse pink outlines where #46 fills every gap with competing color.\"}, {\"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\", \"reason\": \"Both place a face against purple with cross-hatched eye areas, but nnotb #190 packs its marks into a rounder, more contained mass.\"}], \"tags\": [\"bared teeth\", \"tangled black lines\", \"purple background\", \"yellow loops\", \"open mouth\", \"layered color fills\"], \"lookingQuestion\": \"Where does the yellow outline separate from the black scaffolding, and how does that gap change the sense of depth across the face?\", \"ambiguities\": [\"Whether the rectangular mid-face shapes represent glasses or eyes alone is unclear from the image.\", \"The yellow loops at the top could be read as hair, a headdress, or pure abstract mark-making.\"]}\nFLAGS:\n[{\"artworkId\": \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2\", \"field\": \"observations\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

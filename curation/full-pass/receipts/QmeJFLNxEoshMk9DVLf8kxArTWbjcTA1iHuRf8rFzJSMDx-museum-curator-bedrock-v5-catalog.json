@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:18.710404-05:00",
+    "usage": {
+      "inputTokens": 6164,
+      "outputTokens": 849,
+      "totalTokens": 7013,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 21003
+    },
+    "requestId": "86920aff-191d-415e-b57a-7d6232d64236",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide, roughly rectangular head with pointed ear-like peaks at the top is outlined in heavy black lines against a pale, mark-covered background; four framed rectangular panels fill the face where features would be.\",\n    \"Each panel holds its own layered pattern: the upper-left contains blue and red looping lines around a teal oval; the upper-right holds a red rectangle with yellow zigzag border; the lower-left shows red crossed diagonals over a pink grid; the lower-right frames a single red-circled eye with concentric yellow and blue loops.\",\n    \"A purple zigzag line runs across the lower face like a mouth edge, and loose black spike lines radiate outward from the head on both sides against white and gray washed marks.\"\n  ],\n  \"reading\": \"Four framed panels replace the expected features of a face, each carrying its own small system of loops, crosses, and zigzags in red, blue, yellow, and teal. The result reads less as a face and more as a display board — something meant to be read rather than felt. The purple zigzag at the mouth and the single circled eye in the lower-right panel introduce an asymmetry that pulls against the otherwise grid-like order.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors #244 and #246 show the same pointed-ear head form but with very different moods: #244 fills its background with saturated cobalt blue and white-ringed eyes, while #246 shifts the figure to black against a fragmented color field. #245 sits between them in a pale, panel-heavy register.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH\",\n      \"reason\": \"Both works share the pointed-ear head silhouette and yellow zigzag line patterns, but #244 uses a saturated blue ground and white circular eyes where #245 uses a pale ground and replaces the eyes with layered rectangular panels.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4\",\n      \"reason\": \"In #1, large goggle-like frames over the eye area are packed with layered colored loops and marks, offering a close formal parallel to the panel-within-face structure visible in #245, though #1 uses a dark ground and denser line layering.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular face panels\",\n    \"zigzag line borders\",\n    \"pale ground with gray washes\",\n    \"radiating spike lines\",\n    \"layered loop patterns\",\n    \"asymmetric eye placement\"\n  ],\n  \"interpretiveTags\": [\n    \"display-like\",\n    \"unsettled order\"\n  ],\n  \"lookingQuestion\": \"The four panels each contain a different internal pattern — what do you notice about how the lines inside each panel relate to or ignore the lines in the panels next to it?\",\n  \"ambiguities\": [\n    \"The lower-left panel contains crossed diagonal lines and a small triangle shape that could be read as a symbol or as pure mark-making; no external evidence resolves this.\",\n    \"Candidate #246 shares the ear-head form but its composition is so different in color and figure placement that a connection would rest mainly on silhouette similarity, which is too thin for a meaningful comparison entry.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeJFLNxEoshMk9DVLf8kxArTWbjcTA1iHuRf8rFzJSMDx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeJFLNxEoshMk9DVLf8kxArTWbjcTA1iHuRf8rFzJSMDx/image.png",
+        "imageSHA256": "132a2c2fd899e4deb538f4b707be4525ea95d80b97d44ad4fbcecd3d5af87727"
+      },
+      {
+        "artworkId": "QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH/image.png",
+        "imageSHA256": "3a487eb235ad779ebfa2a6361e9a453fd1c4b2e4531c0bc876a16667b6f54952"
+      },
+      {
+        "artworkId": "QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4/image.png",
+        "imageSHA256": "5f4375bae89cc265fa3df6e522c6340791089fbf0be9e2542341d94db9787ed3"
+      },
+      {
+        "artworkId": "Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV/image.png",
+        "imageSHA256": "26ace1676f37ae27b9c70ee2156c0ac2a383df0bc817859fdfd1969f4210ac39"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:26.737579-05:00",
+    "usage": {
+      "inputTokens": 7035,
+      "outputTokens": 945,
+      "totalTokens": 7980,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7944
+    },
+    "requestId": "9a9fbde0-53db-4f9d-a3cf-89edd460b968",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide, roughly rectangular head with two pointed peaks at the top is outlined in heavy black lines against a pale background covered in gray washes and loose black spike marks; four framed rectangular panels fill the face area.\",\n    \"Each panel holds a distinct layered pattern: upper-left has blue and red looping lines around a teal oval; upper-right holds a red rectangle with yellow zigzag border; lower-left shows red crossed diagonals over a pink grid with a small triangle; lower-right frames a single red-circled form with concentric yellow and blue loops.\",\n    \"A purple zigzag line runs horizontally across the lower face, and a short red horizontal stroke extends from the right side of the head into the background.\"\n  ],\n  \"reading\": \"Four framed panels replace expected facial features, each running its own small system of loops, crosses, and zigzags in red, blue, yellow, and teal. The result reads less as a face and more as a display board — something to be scanned rather than met. The purple zigzag at the mouth edge and the single circled form in the lower-right panel introduce an asymmetry that pulls against the otherwise grid-like arrangement.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #244 and #246 share the pointed-ear head form but differ sharply: #244 fills its ground with saturated cobalt blue and uses white-ringed circular eyes; #246 shifts to a black figure against a fragmented color field. #245 sits between them with a pale ground and panel-divided face.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH\",\n      \"reason\": \"Both share the pointed-ear head silhouette and yellow zigzag line patterns, but #244 uses a saturated blue ground with white circular eyes while #245 uses a pale ground and replaces the eyes with layered rectangular panels.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4\",\n      \"reason\": \"In #1, large goggle-like frames over the eye area are packed with layered colored loops and marks, offering a close formal parallel to the panel-within-face structure in #245, though #1 uses a dark ground and denser line layering.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular face panels\",\n    \"zigzag line borders\",\n    \"pale ground with gray washes\",\n    \"radiating spike lines\",\n    \"layered loop patterns\",\n    \"asymmetric internal eye placement\"\n  ],\n  \"interpretiveTags\": [\n    \"display-like\",\n    \"unsettled order\"\n  ],\n  \"lookingQuestion\": \"The four panels each contain a different internal pattern — what do you notice about how the lines inside each panel relate to or ignore the lines in the panels next to it?\",\n  \"ambiguities\": [\n    \"The lower-left panel contains crossed diagonals and a small triangle shape that could be read as a symbol or as pure mark-making; no supplied evidence resolves this.\",\n    \"The red horizontal stroke extending from the right side of the head is visible but its relationship to the rest of the composition is unclear from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: four rectangular panels with distinct internal patterns are clearly visible; descriptions of each panel's contents match the image.\",\n    \"Corrected contextAngle: removed the phrase 'pale, panel-heavy register' as evaluative shorthand; replaced with a plain description of ground color and face structure.\",\n    \"Confirmed: both comparison images were inspected; #244 blue-ground and circular-eye contrast and #1 goggle-frame parallel are supported by visible evidence in those images.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeJFLNxEoshMk9DVLf8kxArTWbjcTA1iHuRf8rFzJSMDx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeJFLNxEoshMk9DVLf8kxArTWbjcTA1iHuRf8rFzJSMDx/image.png",
+        "imageSHA256": "132a2c2fd899e4deb538f4b707be4525ea95d80b97d44ad4fbcecd3d5af87727"
+      },
+      {
+        "artworkId": "QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH/image.png",
+        "imageSHA256": "3a487eb235ad779ebfa2a6361e9a453fd1c4b2e4531c0bc876a16667b6f54952"
+      },
+      {
+        "artworkId": "QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4/image.png",
+        "imageSHA256": "5f4375bae89cc265fa3df6e522c6340791089fbf0be9e2542341d94db9787ed3"
+      },
+      {
+        "artworkId": "Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV/image.png",
+        "imageSHA256": "26ace1676f37ae27b9c70ee2156c0ac2a383df0bc817859fdfd1969f4210ac39"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A wide, roughly rectangular head with pointed ear-like peaks at the top is outlined in heavy black lines against a pale, mark-covered background; four framed rectangular panels fill the face where features would be.\", \"Each panel holds its own layered pattern: the upper-left contains blue and red looping lines around a teal oval; the upper-right holds a red rectangle with yellow zigzag border; the lower-left shows red crossed diagonals over a pink grid; the lower-right frames a single red-circled eye with concentric yellow and blue loops.\", \"A purple zigzag line runs across the lower face like a mouth edge, and loose black spike lines radiate outward from the head on both sides against white and gray washed marks.\"], \"reading\": \"Four framed panels replace the expected features of a face, each carrying its own small system of loops, crosses, and zigzags in red, blue, yellow, and teal. The result reads less as a face and more as a display board — something meant to be read rather than felt. The purple zigzag at the mouth and the single circled eye in the lower-right panel introduce an asymmetry that pulls against the otherwise grid-like order.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors #244 and #246 show the same pointed-ear head form but with very different moods: #244 fills its background with saturated cobalt blue and white-ringed eyes, while #246 shifts the figure to black against a fragmented color field. #245 sits between them in a pale, panel-heavy register.\", \"connections\": [{\"targetArtworkId\": \"QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH\", \"reason\": \"Both works share the pointed-ear head silhouette and yellow zigzag line patterns, but #244 uses a saturated blue ground and white circular eyes where #245 uses a pale ground and replaces the eyes with layered rectangular panels.\"}, {\"targetArtworkId\": \"QmRDWKxd45v5uioL3NFy4yZckr1cfXg1ujhRRQEyaGb7P4\", \"reason\": \"In #1, large goggle-like frames over the eye area are packed with layered colored loops and marks, offering a close formal parallel to the panel-within-face structure visible in #245, though #1 uses a dark ground and denser line layering.\"}], \"tags\": [\"rectangular face panels\", \"zigzag line borders\", \"pale ground with gray washes\", \"radiating spike lines\", \"layered loop patterns\", \"asymmetric eye placement\"], \"interpretiveTags\": [\"display-like\", \"unsettled order\"], \"lookingQuestion\": \"The four panels each contain a different internal pattern — what do you notice about how the lines inside each panel relate to or ignore the lines in the panels next to it?\", \"ambiguities\": [\"The lower-left panel contains crossed diagonal lines and a small triangle shape that could be read as a symbol or as pure mark-making; no external evidence resolves this.\", \"Candidate #246 shares the ear-head form but its composition is so different in color and figure placement that a connection would rest mainly on silhouette similarity, which is too thin for a meaningful comparison entry.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

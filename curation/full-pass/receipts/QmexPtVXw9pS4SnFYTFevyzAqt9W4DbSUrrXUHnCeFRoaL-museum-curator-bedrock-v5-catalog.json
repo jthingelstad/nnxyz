@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:43.475378-05:00",
+    "usage": {
+      "inputTokens": 6531,
+      "outputTokens": 721,
+      "totalTokens": 7252,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14082
+    },
+    "requestId": "fe0f5020-5042-48b7-9995-75f2de0a9075",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Three face-like forms are layered across an olive-green field: a larger one left-of-center with dark gray structural lines marking brow, nose bridge, and mouth, and two smaller ones receding to the right.\",\n    \"Yellow and black lines loop and curl across the upper half, forming a dense mass above the largest face; small red marks cluster at the mouth area and trail downward into the lower-right corner.\",\n    \"A dark gray shadow shape sits behind the central face, slightly offset, giving the impression of depth without any modeled shading elsewhere in the image.\"\n  ],\n  \"reading\": \"Three faces share one olive field, the largest anchored by thick gray lines that map a brow, nose, and red-marked mouth, while two smaller versions drift rightward, growing fainter. The red marks feel urgent against the muted ground. Looping yellow and black lines overhead read as restless energy crowning the figures. The layering suggests multiplicity rather than a single presence—the same face seen more than once, or several at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #296 and nnxyz nnotb #298. Title order and recorded creation order align here. Where #296 fills its field with a single large yellow face, #297 divides attention across three smaller, receding forms on a cooler ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn\",\n      \"reason\": \"Both works use thick dark structural lines to define a face against a flat ground, but #296 concentrates on one large yellow form with red-orange accents, while #297 multiplies the face across olive green with the red reduced to small mouth marks.\"\n    }\n  ],\n  \"tags\": [\n    \"multiple-face-forms\",\n    \"olive-green-ground\",\n    \"looping-line-mass\",\n    \"gray-shadow-offset\",\n    \"red-mouth-accent\",\n    \"layered-figures\"\n  ],\n  \"lookingQuestion\": \"The two smaller face-like forms to the right share the same eye and nose line vocabulary as the central figure—do they read to you as the same face repeated, or as separate presences occupying the same space?\",\n  \"ambiguities\": [\n    \"The dense looping lines in the upper half could describe hair, foliage, or pure mark-making; no supplied evidence resolves this.\",\n    \"nnxyz nifty faces #5 (QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT) shares a face-building-from-lines approach but its dense multicolor scribble field is formally distant enough from #297's spare olive ground that no strong connection is offered; omitted to avoid a weak match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL/image.png",
+        "imageSHA256": "c91f7b3e7f235e180ef34f754cc8869a61deb8cffa4e183977276e2ffe51f156"
+      },
+      {
+        "artworkId": "QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn/image.png",
+        "imageSHA256": "cf7468142546e831420aae6b873cb909e93e25d199d31ba7de681d1be25b341c"
+      },
+      {
+        "artworkId": "QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT/image.png",
+        "imageSHA256": "e70b63e08d6bf27d837ac7cab7fada338752c0c4ed0ddce188dc7e8457ee2360"
+      },
+      {
+        "artworkId": "Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj/image.png",
+        "imageSHA256": "82e73822cebcb076fa5c2a5cd8296d9e27b0fa5983ab2200380dc5e9c6db33e3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:50.225092-05:00",
+    "usage": {
+      "inputTokens": 7293,
+      "outputTokens": 829,
+      "totalTokens": 8122,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6496
+    },
+    "requestId": "83de3114-96b5-46ef-ae70-0ba04e158046",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Three face-like forms are layered across an olive-green field: a larger one left-of-center with dark gray structural lines marking brow, nose bridge, and mouth, and two smaller ones receding to the right.\",\n    \"Yellow and black lines loop and curl across the upper half, forming a dense mass above the largest face; small red marks cluster at the mouth area and trail downward into the lower-right corner.\",\n    \"A dark gray shadow shape sits behind the central face, slightly offset, giving a sense of depth without modeled shading anywhere else in the image.\"\n  ],\n  \"reading\": \"Three face-like forms share one olive field, the largest anchored by thick gray lines tracing a brow, nose, and red-marked mouth, while two smaller versions drift rightward and grow fainter. The red marks feel urgent against the muted ground. Looping yellow and black lines overhead crown the figures with restless density. The layering suggests multiplicity—the same face seen more than once, or several at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #296 and nnxyz nnotb #298; title order and recorded creation order align here. Where #296 fills its field with one large yellow face, #297 divides attention across three receding forms on a cooler olive ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn\",\n      \"reason\": \"Both works use thick dark structural lines to define a face against a flat ground, but #296 concentrates on one large yellow form with red-orange accents, while #297 multiplies the face across olive green with red reduced to small mouth marks.\"\n    }\n  ],\n  \"tags\": [\n    \"multiple-face-forms\",\n    \"olive-green-ground\",\n    \"looping-line-mass\",\n    \"gray-shadow-offset\",\n    \"red-mouth-accent\",\n    \"layered-figures\"\n  ],\n  \"lookingQuestion\": \"The two smaller face-like forms to the right share the same eye and nose line vocabulary as the central figure—do they read as the same face repeated, or as separate presences occupying the same space?\",\n  \"ambiguities\": [\n    \"The dense looping lines in the upper half could describe hair, foliage, or pure mark-making; no supplied evidence resolves this.\",\n    \"nnxyz nifty faces #5 shares a face-built-from-lines approach but its dense multicolor scribble field is formally distant from #297's spare olive ground; omitted to avoid a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: olive ground, gray structural lines, red mouth marks trailing lower-right, and offset gray shadow are all visible.\",\n    \"Comparison with QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn confirmed: #296 shows one large yellow face with red-orange and a single cyan line; the contrast with #297's three-form olive composition is concrete and supported.\",\n    \"Minor phrasing edits only: removed 'crowning the figures' stock metaphor, tightened reading to stay within word limit; no factual corrections required.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL/image.png",
+        "imageSHA256": "c91f7b3e7f235e180ef34f754cc8869a61deb8cffa4e183977276e2ffe51f156"
+      },
+      {
+        "artworkId": "QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn/image.png",
+        "imageSHA256": "cf7468142546e831420aae6b873cb909e93e25d199d31ba7de681d1be25b341c"
+      },
+      {
+        "artworkId": "QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT/image.png",
+        "imageSHA256": "e70b63e08d6bf27d837ac7cab7fada338752c0c4ed0ddce188dc7e8457ee2360"
+      },
+      {
+        "artworkId": "Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj/image.png",
+        "imageSHA256": "82e73822cebcb076fa5c2a5cd8296d9e27b0fa5983ab2200380dc5e9c6db33e3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Three face-like forms are layered across an olive-green field: a larger one left-of-center with dark gray structural lines marking brow, nose bridge, and mouth, and two smaller ones receding to the right.\", \"Yellow and black lines loop and curl across the upper half, forming a dense mass above the largest face; small red marks cluster at the mouth area and trail downward into the lower-right corner.\", \"A dark gray shadow shape sits behind the central face, slightly offset, giving the impression of depth without any modeled shading elsewhere in the image.\"], \"reading\": \"Three faces share one olive field, the largest anchored by thick gray lines that map a brow, nose, and red-marked mouth, while two smaller versions drift rightward, growing fainter. The red marks feel urgent against the muted ground. Looping yellow and black lines overhead read as restless energy crowning the figures. The layering suggests multiplicity rather than a single presence—the same face seen more than once, or several at once.\", \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #296 and nnxyz nnotb #298. Title order and recorded creation order align here. Where #296 fills its field with a single large yellow face, #297 divides attention across three smaller, receding forms on a cooler ground.\", \"connections\": [{\"targetArtworkId\": \"QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn\", \"reason\": \"Both works use thick dark structural lines to define a face against a flat ground, but #296 concentrates on one large yellow form with red-orange accents, while #297 multiplies the face across olive green with the red reduced to small mouth marks.\"}], \"tags\": [\"multiple-face-forms\", \"olive-green-ground\", \"looping-line-mass\", \"gray-shadow-offset\", \"red-mouth-accent\", \"layered-figures\"], \"lookingQuestion\": \"The two smaller face-like forms to the right share the same eye and nose line vocabulary as the central figure—do they read to you as the same face repeated, or as separate presences occupying the same space?\", \"ambiguities\": [\"The dense looping lines in the upper half could describe hair, foliage, or pure mark-making; no supplied evidence resolves this.\", \"nnxyz nifty faces #5 (QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT) shares a face-building-from-lines approach but its dense multicolor scribble field is formally distant enough from #297's spare olive ground that no strong connection is offered; omitted to avoid a weak match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

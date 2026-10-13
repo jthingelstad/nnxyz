@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:55.817666-05:00",
+    "usage": {
+      "inputTokens": 5873,
+      "outputTokens": 806,
+      "totalTokens": 6679,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13603
+    },
+    "requestId": "8593192e-f298-4b15-8396-a6b4e993c53c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark circular form dominates the center, ringed with short radiating spikes; inside it, two eye-like shapes hold an X-crossed circle on the left and a green rectangle on the right.\",\n    \"Jagged crown-like points rise above the circle in red, yellow, and blue outlines, while a yellow rectangular mouth zone near the bottom contains white letter-like marks.\",\n    \"The olive-gold background is covered with looping yellow lines, dark brown grid marks, and scattered red strokes; a blue spiral sits in the lower right corner.\"\n  ],\n  \"reading\": \"The dark central form reads as a face under pressure: its crossed eye and mismatched green socket suggest asymmetry rather than calm. The spiked crown above and the toothed mouth below frame the face as something between authority and alarm. Yellow loops crowd the background without resolving into legible marks, keeping the surrounding space restless. The collector's link to scrimshaw feels apt here — dense line-work etched into a dark ground.\",\n  \"contextAngle\": \"Within the owned nnotb subset, #237 sits between title neighbors nnxyz nnotb #236 and nnxyz nnotb #238. Where #236 uses a cool gray field and #238 burns with flat orange, #237 settles on an olive-gold ground — a middle temperature between those two owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F\",\n      \"reason\": \"Both works center a dark, spike-crowned face with X-marked eye circles and a white-toothed mouth zone, but #236 places this on a gray ground with looser outer lines, while #237 compresses the same elements into a tighter olive field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD\",\n      \"reason\": \"#238 shares the spiked crown and white horizontal teeth bar, but its flat orange field and diagonal blue slashes create a more open, scattered surface compared to #237's contained circular form.\"\n    }\n  ],\n  \"tags\": [\n    \"circular dark form\",\n    \"spiked crown\",\n    \"X-crossed eye\",\n    \"looping background lines\",\n    \"white letter-marks in mouth zone\",\n    \"olive-gold ground\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"asymmetric unease\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the left eye — an X inside a blue circle — and the right eye — a green rectangle — do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The white marks inside the mouth zone resemble letters or glyphs but cannot be confirmed as legible text from the image alone.\",\n    \"The pizza pizza day comparison (QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ) shares a rounded face form and olive-gold ground tone but the structural differences are too broad to support a specific formal connection; excluded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q/image.png",
+        "imageSHA256": "a382383cd7c1e5be77913b3bb630379179f8b0637338b8fa5a6d07d031353c33"
+      },
+      {
+        "artworkId": "Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F/image.png",
+        "imageSHA256": "ffafeaf9deb62fa9d21cd79b23d590f4469b1e3f0ef4f4eca686e3af9555649d"
+      },
+      {
+        "artworkId": "QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ/image.png",
+        "imageSHA256": "bb097acc0e4aab16ce2ed584bb3e83df2c94785f7e38e90e57e4c6864724c08d"
+      },
+      {
+        "artworkId": "QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD/image.png",
+        "imageSHA256": "f0a73eb696e8ecf65334040810d2fce7ec0e0f36f0ab3a3cfd5406b47c663554"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:02.242628-05:00",
+    "usage": {
+      "inputTokens": 6701,
+      "outputTokens": 909,
+      "totalTokens": 7610,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6357
+    },
+    "requestId": "0464b7e4-9c59-4cc3-8a3a-c5dfcbf45ba3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark circular form dominates the center, ringed with short radiating spikes; inside it, two eye-like shapes hold an X-crossed blue circle on the left and a green rectangle on the right.\",\n    \"Jagged crown-like points rise above the circle in red, yellow, and blue outlines, while a yellow rectangular mouth zone near the bottom contains white letter-like marks.\",\n    \"The olive-gold background carries looping yellow lines, dark brown grid marks, and scattered red strokes; a blue spiral sits in the lower right corner.\"\n  ],\n  \"reading\": \"The dark central form reads as a face under pressure: its crossed eye and mismatched green socket create asymmetry rather than calm. The spiked crown above and the toothed mouth below frame it as something between authority and alarm. Yellow loops crowd the background without resolving into legible marks, keeping the surrounding space restless. The collector's link to scrimshaw feels apt — dense line-work etched into a dark ground.\",\n  \"contextAngle\": \"Within the owned nnotb subset, #237 sits between title neighbors nnxyz nnotb #236 and nnxyz nnotb #238. Where #236 uses a cool gray field and #238 burns with flat orange, #237 settles on an olive-gold ground — a middle temperature between those two owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F\",\n      \"reason\": \"Both center a dark spike-crowned face with an X-marked eye circle and a white-toothed mouth zone, but #236 sets this on a gray ground with looser outer lines, while #237 compresses the elements into a tighter olive-gold field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD\",\n      \"reason\": \"#238 shares the spiked crown and a white horizontal teeth bar, but its flat orange field and diagonal blue slashes produce a more open, scattered surface compared to #237's contained circular form.\"\n    }\n  ],\n  \"tags\": [\n    \"circular dark form\",\n    \"spiked crown\",\n    \"X-crossed eye\",\n    \"looping background lines\",\n    \"white letter-marks in mouth zone\",\n    \"olive-gold ground\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"asymmetric unease\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the left eye — an X inside a blue circle — and the right eye — a green rectangle — do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The white marks inside the mouth zone resemble letters or glyphs but cannot be confirmed as legible text from the image alone.\",\n    \"QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ shares a rounded face form and olive-gold tone but structural differences are too broad for a specific formal connection; excluded.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: left eye is an X inside a blue circle (not plain 'circle'); draft corrected to 'blue circle' in observation 1 — matches image.\",\n    \"Color checks passed: gray ground in #236, flat orange in #238, olive-gold in #237 all confirmed against inspected images.\",\n    \"No invented biography, intent, technique duration, or unsupported subject identities found; scrimshaw link correctly attributed to collector perspective.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q/image.png",
+        "imageSHA256": "a382383cd7c1e5be77913b3bb630379179f8b0637338b8fa5a6d07d031353c33"
+      },
+      {
+        "artworkId": "Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F/image.png",
+        "imageSHA256": "ffafeaf9deb62fa9d21cd79b23d590f4469b1e3f0ef4f4eca686e3af9555649d"
+      },
+      {
+        "artworkId": "QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ/image.png",
+        "imageSHA256": "bb097acc0e4aab16ce2ed584bb3e83df2c94785f7e38e90e57e4c6864724c08d"
+      },
+      {
+        "artworkId": "QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD/image.png",
+        "imageSHA256": "f0a73eb696e8ecf65334040810d2fce7ec0e0f36f0ab3a3cfd5406b47c663554"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large dark circular form dominates the center, ringed with short radiating spikes; inside it, two eye-like shapes hold an X-crossed circle on the left and a green rectangle on the right.\", \"Jagged crown-like points rise above the circle in red, yellow, and blue outlines, while a yellow rectangular mouth zone near the bottom contains white letter-like marks.\", \"The olive-gold background is covered with looping yellow lines, dark brown grid marks, and scattered red strokes; a blue spiral sits in the lower right corner.\"], \"reading\": \"The dark central form reads as a face under pressure: its crossed eye and mismatched green socket suggest asymmetry rather than calm. The spiked crown above and the toothed mouth below frame the face as something between authority and alarm. Yellow loops crowd the background without resolving into legible marks, keeping the surrounding space restless. The collector's link to scrimshaw feels apt here — dense line-work etched into a dark ground.\", \"contextAngle\": \"Within the owned nnotb subset, #237 sits between title neighbors nnxyz nnotb #236 and nnxyz nnotb #238. Where #236 uses a cool gray field and #238 burns with flat orange, #237 settles on an olive-gold ground — a middle temperature between those two owned works.\", \"connections\": [{\"targetArtworkId\": \"Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F\", \"reason\": \"Both works center a dark, spike-crowned face with X-marked eye circles and a white-toothed mouth zone, but #236 places this on a gray ground with looser outer lines, while #237 compresses the same elements into a tighter olive field.\"}, {\"targetArtworkId\": \"QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD\", \"reason\": \"#238 shares the spiked crown and white horizontal teeth bar, but its flat orange field and diagonal blue slashes create a more open, scattered surface compared to #237's contained circular form.\"}], \"tags\": [\"circular dark form\", \"spiked crown\", \"X-crossed eye\", \"looping background lines\", \"white letter-marks in mouth zone\", \"olive-gold ground\"], \"interpretiveTags\": [\"confrontational mood\", \"asymmetric unease\"], \"lookingQuestion\": \"What does the difference between the left eye — an X inside a blue circle — and the right eye — a green rectangle — do to how you read the face as a whole?\", \"ambiguities\": [\"The white marks inside the mouth zone resemble letters or glyphs but cannot be confirmed as legible text from the image alone.\", \"The pizza pizza day comparison (QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ) shares a rounded face form and olive-gold ground tone but the structural differences are too broad to support a specific formal connection; excluded.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:06:44.640852-05:00",
+    "usage": {
+      "inputTokens": 6456,
+      "outputTokens": 855,
+      "totalTokens": 7311,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 9956
+    },
+    "requestId": "9fad195b-b65c-4d6b-bd3c-af363864e36a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark circular form dominates the center, ringed with short radiating spikes; inside it, two eye-like shapes hold an X-crossed blue circle on the left and a green rectangle on the right.\",\n    \"Jagged crown-like points rise above the circle in red, yellow, and blue outlines, while a yellow rectangular mouth zone near the bottom contains white letter-like marks.\",\n    \"The olive-gold background carries looping yellow lines, dark brown grid marks, and scattered red strokes; a blue spiral sits in the lower right corner.\"\n  ],\n  \"reading\": \"The dark central form reads as a face under pressure: its crossed eye and mismatched green socket create asymmetry rather than calm. The spiked crown above and the toothed mouth below frame it as something between authority and alarm. Yellow loops crowd the background without resolving into legible marks, keeping the surrounding space restless. The collector's link to scrimshaw feels apt — dense line-work scored into a dark ground.\",\n  \"contextAngle\": \"Within the owned nnotb subset, #237 sits between title neighbors #236 and #238. Where #236 uses a cool gray field and #238 burns with flat orange, #237 settles on an olive-gold ground — a middle temperature between those two owned works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F\",\n      \"reason\": \"Both center a dark spike-crowned face with an X-marked eye circle and a white-toothed mouth zone, but #236 sets this on a gray ground with looser outer lines, while #237 compresses the elements into a tighter olive-gold field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD\",\n      \"reason\": \"#238 shares the spiked crown and a white horizontal teeth bar, but its flat orange field and diagonal blue slashes produce a more open, scattered surface compared to #237's contained circular form.\"\n    }\n  ],\n  \"tags\": [\n    \"circular dark form\",\n    \"spiked crown\",\n    \"X-crossed eye\",\n    \"looping background lines\",\n    \"white letter-marks in mouth zone\",\n    \"olive-gold ground\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the left eye — an X inside a blue circle — and the right eye — a green rectangle — do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The white marks inside the mouth zone resemble letters or glyphs but cannot be confirmed as legible text from the image alone.\",\n    \"QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ shares a rounded face form and olive-gold tone but structural differences are too broad for a specific formal connection; excluded.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'etched' with 'scored' in the reading to remove the named-media flag referencing a physical technique not evidenced in the supplied metadata.\",\n    \"Reading word count verified at 65 words; context angle at 38 words — both within range.\",\n    \"Mouth-openness not claimed; the observation describes white letter-like marks in a rectangular mouth zone, consistent with visible content.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q/image.png",
+        "imageSHA256": "a382383cd7c1e5be77913b3bb630379179f8b0637338b8fa5a6d07d031353c33"
+      },
+      {
+        "artworkId": "Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F/image.png",
+        "imageSHA256": "ffafeaf9deb62fa9d21cd79b23d590f4469b1e3f0ef4f4eca686e3af9555649d"
+      },
+      {
+        "artworkId": "QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ/image.png",
+        "imageSHA256": "bb097acc0e4aab16ce2ed584bb3e83df2c94785f7e38e90e57e4c6864724c08d"
+      },
+      {
+        "artworkId": "QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD/image.png",
+        "imageSHA256": "f0a73eb696e8ecf65334040810d2fce7ec0e0f36f0ab3a3cfd5406b47c663554"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large dark circular form dominates the center, ringed with short radiating spikes; inside it, two eye-like shapes hold an X-crossed blue circle on the left and a green rectangle on the right.\", \"Jagged crown-like points rise above the circle in red, yellow, and blue outlines, while a yellow rectangular mouth zone near the bottom contains white letter-like marks.\", \"The olive-gold background carries looping yellow lines, dark brown grid marks, and scattered red strokes; a blue spiral sits in the lower right corner.\"], \"reading\": \"The dark central form reads as a face under pressure: its crossed eye and mismatched green socket create asymmetry rather than calm. The spiked crown above and the toothed mouth below frame it as something between authority and alarm. Yellow loops crowd the background without resolving into legible marks, keeping the surrounding space restless. The collector's link to scrimshaw feels apt — dense line-work etched into a dark ground.\", \"contextAngle\": \"Within the owned nnotb subset, #237 sits between title neighbors nnxyz nnotb #236 and nnxyz nnotb #238. Where #236 uses a cool gray field and #238 burns with flat orange, #237 settles on an olive-gold ground — a middle temperature between those two owned works.\", \"connections\": [{\"targetArtworkId\": \"Qmau55uF7xikpUjSWkB84y8imEiyioTtBTkUmBwWMz2S1F\", \"reason\": \"Both center a dark spike-crowned face with an X-marked eye circle and a white-toothed mouth zone, but #236 sets this on a gray ground with looser outer lines, while #237 compresses the elements into a tighter olive-gold field.\"}, {\"targetArtworkId\": \"QmQfpbyRT8geN7kitKW57Wd3dnVv6YUohMStVXivgS2EVD\", \"reason\": \"#238 shares the spiked crown and a white horizontal teeth bar, but its flat orange field and diagonal blue slashes produce a more open, scattered surface compared to #237's contained circular form.\"}], \"tags\": [\"circular dark form\", \"spiked crown\", \"X-crossed eye\", \"looping background lines\", \"white letter-marks in mouth zone\", \"olive-gold ground\"], \"lookingQuestion\": \"What does the difference between the left eye — an X inside a blue circle — and the right eye — a green rectangle — do to how you read the face as a whole?\", \"ambiguities\": [\"The white marks inside the mouth zone resemble letters or glyphs but cannot be confirmed as legible text from the image alone.\", \"QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ shares a rounded face form and olive-gold tone but structural differences are too broad for a specific formal connection; excluded.\"]}\nFLAGS:\n[{\"artworkId\": \"QmS4CUcRf9fS978882xmMxvhkTVfVGCGfSp7twpqwadj1Q\", \"field\": \"reading\", \"rule\": \"named-media\", \"matches\": [\"etched\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:28.544278-05:00",
+    "usage": {
+      "inputTokens": 6293,
+      "outputTokens": 836,
+      "totalTokens": 7129,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14172
+    },
+    "requestId": "3c5f6df1-304f-4c9a-9358-c4454eb3048f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-brimmed hat sits atop a bulbous head; olive-green and dark teal fill both forms against a flat yellow-green ground, with small pink branching shapes escaping the hat's upper-left edge.\",\n    \"Red, white, and black lines cross the face in short jagged bursts, layering over the broad color fills without following the contours of the features beneath them.\",\n    \"The mouth area is a compressed dark oval ringed in red, showing a row of small teeth; the two eyes are set wide and low, each a tight spiral of black lines on a dark ground.\"\n  ],\n  \"reading\": \"The face pushes outward rather than receding — cheeks and forehead swell toward the viewer while the hat brim anchors the mass from above. Jagged white and red lines scatter across the surface like static, giving the skin a restless, almost uncomfortable texture. The compressed mouth and wide-set eyes read as wary or held-back. The small pink forms at the crown feel like an afterthought that quietly unsettles the whole.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the acid yellow-green ground here contrasts sharply with the teal field in title-neighbor nnxyz nifty faces #129, suggesting the background color carries as much weight as the face itself. The nnotb collection shares the same ground color in QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt, which the collector links to scrimshaw through surface-pattern qualities.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ\",\n      \"reason\": \"Both works center a single large head on a flat ground, but #129 uses cool teal and smooth dark fills where #130 uses warm olive-green with dense cross-hatched color patches, making the two a direct color-temperature contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt\",\n      \"reason\": \"The acid yellow-green ground in nnotb #55 matches #130's background closely, and both works layer short jagged lines over broader color fills in a way the collector connects to scrimshaw's incised-line quality.\"\n    }\n  ],\n  \"tags\": [\n    \"wide-brimmed hat\",\n    \"bulbous head form\",\n    \"jagged line overlay\",\n    \"olive-green and teal palette\",\n    \"compressed mouth with visible teeth\",\n    \"small branching shapes at crown\"\n  ],\n  \"interpretiveTags\": [\n    \"wary mood reading\",\n    \"surface tension\"\n  ],\n  \"lookingQuestion\": \"Where do the jagged white and red lines follow the face's contours, and where do they cut across them regardless of what lies beneath?\",\n  \"ambiguities\": [\n    \"The small pink branching forms at the upper-left of the hat are unclear — whether they are part of the hat's decoration or a separate element cannot be confirmed from the image alone.\",\n    \"Title order and recorded-creation order align for this work in the owned subset, but gaps exist in the full catalogue, so no broader sequence claims are made.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN/image.png",
+        "imageSHA256": "2689cdcd26fc8bd4633189b8cc68558e73c4318cdc8a428d260090c2859c3946"
+      },
+      {
+        "artworkId": "QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ/image.png",
+        "imageSHA256": "7f86d4d7dd1c801d16829bdb991d2fcdf7fd718ab8b3233bf1d4a19cbf8b1713"
+      },
+      {
+        "artworkId": "QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt/image.png",
+        "imageSHA256": "ae50904130ff40d0402c74f9546b5cdf817a2856781d34774a8a3f3402dc6edb"
+      },
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:35.857039-05:00",
+    "usage": {
+      "inputTokens": 7151,
+      "outputTokens": 1016,
+      "totalTokens": 8167,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7242
+    },
+    "requestId": "e33a4d22-b1e6-46b1-bce5-99d46b2528e2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-brimmed hat sits atop a bulbous head; olive-green and dark teal fill both forms against a flat yellow-green ground, with small pink branching shapes at the hat's upper-left edge.\",\n    \"Red, white, and black lines cross the face in short jagged bursts, layering over the broad color fills without following the contours of the features beneath them.\",\n    \"The mouth area is a compressed dark oval ringed in red, showing a row of small teeth; the two eyes are set wide and low, each a tight spiral of black lines on a dark ground.\"\n  ],\n  \"reading\": \"The face pushes outward — cheeks and forehead swell toward the viewer while the hat brim anchors the mass from above. Jagged white and red lines scatter across the surface like static, giving the skin a restless, uncomfortable texture. The compressed mouth and wide-set eyes read as wary or held-back. The small pink forms at the crown quietly unsettle the whole without resolving into a clear shape.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the acid yellow-green ground here contrasts sharply with the teal field in title-neighbor nnxyz nifty faces #129. The collector links this surface-pattern quality — dense lines over flat color — to scrimshaw, a connection visible also in nnotb #55's matching ground color.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ\",\n      \"reason\": \"Both center a single large head on a flat ground, but #129 uses cool teal with smooth dark fills where #130 uses warm olive-green with dense cross-hatched color patches — a direct color-temperature contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt\",\n      \"reason\": \"The acid yellow-green ground in nnotb #55 matches #130's background closely, and both layer short jagged lines over broader color fills in the way the collector connects to scrimshaw's incised-line quality.\"\n    }\n  ],\n  \"tags\": [\n    \"wide-brimmed hat\",\n    \"bulbous head form\",\n    \"jagged line overlay\",\n    \"olive-green and teal palette\",\n    \"compressed mouth with visible teeth\",\n    \"small branching shapes at crown\"\n  ],\n  \"interpretiveTags\": [\n    \"wary mood reading\",\n    \"surface tension\"\n  ],\n  \"lookingQuestion\": \"Where do the jagged white and red lines follow the face's contours, and where do they cut across them regardless of what lies beneath?\",\n  \"ambiguities\": [\n    \"The small pink branching forms at the upper-left of the hat are ambiguous — they may be part of the hat's decoration or a separate element; the image does not resolve this.\",\n    \"Title order and recorded-creation order align for this work in the owned subset, but gaps exist in the full catalogue, so no broader sequence claims are made.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: olive-green and teal fills, yellow-green ground, red/white/black line overlays, compressed dark mouth with teeth, wide-set spiral eyes — no invented details found.\",\n    \"Comparison with QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ confirmed: #129 does use cool teal and smoother dark fills versus #130's warm olive-green and cross-hatched patches; contrast claim is visually supported.\",\n    \"Comparison with QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt confirmed: nnotb #55 shares the acid yellow-green ground and uses jagged line overlays over color fills; scrimshaw link attributed correctly to collector perspective, not artist intent.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN/image.png",
+        "imageSHA256": "2689cdcd26fc8bd4633189b8cc68558e73c4318cdc8a428d260090c2859c3946"
+      },
+      {
+        "artworkId": "QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ/image.png",
+        "imageSHA256": "7f86d4d7dd1c801d16829bdb991d2fcdf7fd718ab8b3233bf1d4a19cbf8b1713"
+      },
+      {
+        "artworkId": "QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt/image.png",
+        "imageSHA256": "ae50904130ff40d0402c74f9546b5cdf817a2856781d34774a8a3f3402dc6edb"
+      },
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A wide-brimmed hat sits atop a bulbous head; olive-green and dark teal fill both forms against a flat yellow-green ground, with small pink branching shapes escaping the hat's upper-left edge.\", \"Red, white, and black lines cross the face in short jagged bursts, layering over the broad color fills without following the contours of the features beneath them.\", \"The mouth area is a compressed dark oval ringed in red, showing a row of small teeth; the two eyes are set wide and low, each a tight spiral of black lines on a dark ground.\"], \"reading\": \"The face pushes outward rather than receding — cheeks and forehead swell toward the viewer while the hat brim anchors the mass from above. Jagged white and red lines scatter across the surface like static, giving the skin a restless, almost uncomfortable texture. The compressed mouth and wide-set eyes read as wary or held-back. The small pink forms at the crown feel like an afterthought that quietly unsettles the whole.\", \"contextAngle\": \"Within the owned nifty-faces subset, the acid yellow-green ground here contrasts sharply with the teal field in title-neighbor nnxyz nifty faces #129, suggesting the background color carries as much weight as the face itself. The nnotb collection shares the same ground color in QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt, which the collector links to scrimshaw through surface-pattern qualities.\", \"connections\": [{\"targetArtworkId\": \"QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ\", \"reason\": \"Both works center a single large head on a flat ground, but #129 uses cool teal and smooth dark fills where #130 uses warm olive-green with dense cross-hatched color patches, making the two a direct color-temperature contrast.\"}, {\"targetArtworkId\": \"QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt\", \"reason\": \"The acid yellow-green ground in nnotb #55 matches #130's background closely, and both works layer short jagged lines over broader color fills in a way the collector connects to scrimshaw's incised-line quality.\"}], \"tags\": [\"wide-brimmed hat\", \"bulbous head form\", \"jagged line overlay\", \"olive-green and teal palette\", \"compressed mouth with visible teeth\", \"small branching shapes at crown\"], \"interpretiveTags\": [\"wary mood reading\", \"surface tension\"], \"lookingQuestion\": \"Where do the jagged white and red lines follow the face's contours, and where do they cut across them regardless of what lies beneath?\", \"ambiguities\": [\"The small pink branching forms at the upper-left of the hat are unclear — whether they are part of the hat's decoration or a separate element cannot be confirmed from the image alone.\", \"Title order and recorded-creation order align for this work in the owned subset, but gaps exist in the full catalogue, so no broader sequence claims are made.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

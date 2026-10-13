@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:26.549274-05:00",
+    "usage": {
+      "inputTokens": 6226,
+      "outputTokens": 785,
+      "totalTokens": 7011,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12997
+    },
+    "requestId": "27b7eb2f-f0b9-4a54-b4ce-7d40d7488f86",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-brimmed hat in yellow and orange sits atop a boxy torso; the figure stands centered on a flat teal ground with arms spread wide and claw-like hands at each side.\",\n    \"White and pink lines trace a ribcage pattern across the chest, layered over vertical stripes of magenta, yellow, and red that fill the rectangular body block.\",\n    \"The face shows a wide open-toothed grin rendered in black and white lines, framed by a gray shadow rectangle that separates head from hat.\"\n  ],\n  \"reading\": \"The figure plants itself squarely in the frame, arms out, grin exposed—a posture that reads as confrontational or theatrical depending on how long you look. The ribcage drawn over the bright torso stripes gives the body a see-through quality, as if the surface and the interior are competing for the same space. The flat teal ground offers no depth, keeping all that color tension right at the front.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #29 and nnxyz nnotb #31. All three share jointed limbs and a boxy body, but #30 swaps the gray ground of #29 for flat teal—a background the collector also connects to nnxyz nifty faces #129 from a separate owned family.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw\",\n      \"reason\": \"nnxyz nnotb #31 shares the wide-brimmed hat and exposed ribcage lines, but shifts to a deep orange ground and a leaning stride rather than the frontal, arms-wide stance here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ\",\n      \"reason\": \"nnxyz nifty faces #129 uses the same flat teal ground as #30, making the two works stand out together in the owned collection despite belonging to different title families.\"\n    }\n  ],\n  \"tags\": [\n    \"jointed figure\",\n    \"wide-brimmed hat\",\n    \"ribcage line pattern\",\n    \"teal ground\",\n    \"open-toothed grin\",\n    \"layered color stripes\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational posture\",\n    \"theatrical display\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—the grin, the spread arms, or the ribcage lines—and does that change which part of the figure feels most active?\",\n  \"ambiguities\": [\n    \"The gray rectangle behind the head may be a shadow, a separate background block, or a framing device; the image alone does not resolve this.\",\n    \"nnxyz nnotb #29 shares structural similarities but its gray ground makes it a weaker color comparison than #31 or nifty faces #129, so it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmNmGbXLfrqN546FbEDh71UTvfKhtuj67S6EVufLGSD7in",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNmGbXLfrqN546FbEDh71UTvfKhtuj67S6EVufLGSD7in/image.png",
+        "imageSHA256": "7952157a58e285db216716a8521da9e09ae6462bf74fb30336c9861872bb5ef2"
+      },
+      {
+        "artworkId": "QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ/image.png",
+        "imageSHA256": "7f86d4d7dd1c801d16829bdb991d2fcdf7fd718ab8b3233bf1d4a19cbf8b1713"
+      },
+      {
+        "artworkId": "QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw/image.png",
+        "imageSHA256": "2f3fcc1a40f64ab10707d8bbea0c925fc8a8f3fd97721b7542b6796d545d1c7f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:33.109234-05:00",
+    "usage": {
+      "inputTokens": 7033,
+      "outputTokens": 1000,
+      "totalTokens": 8033,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6489
+    },
+    "requestId": "ea3f8c8d-5b71-48f5-83be-210df8e1e58d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-brimmed hat in yellow and orange sits atop a boxy torso; the figure stands centered on a flat teal ground with arms spread wide and claw-like hands at each side.\",\n    \"White and pink lines trace a ribcage pattern across the chest, layered over vertical stripes of magenta, yellow, and red that fill the rectangular body block.\",\n    \"The face shows a wide open-toothed grin in black and white lines, framed by a gray rectangle that sits between the head and the hat brim.\"\n  ],\n  \"reading\": \"The figure plants itself squarely in the frame, arms out, grin exposed—a posture that reads as confrontational or theatrical depending on how long you look. The ribcage drawn over the bright torso stripes gives the body a see-through quality, as if surface and interior compete for the same space. The flat teal ground offers no depth, keeping all that color tension at the front.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #29 and nnxyz nnotb #31. All three share jointed limbs and a boxy body, but #30 uses a flat teal ground—a background the collector also connects to nnxyz nifty faces #129 from a separate owned family.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw\",\n      \"reason\": \"nnxyz nnotb #31 shares the wide-brimmed hat and exposed ribcage lines but shifts to a deep orange ground and a leaning stride rather than the frontal, arms-wide stance here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ\",\n      \"reason\": \"nnxyz nifty faces #129 uses the same flat teal ground as #30, making the two works visually linked across different owned title families despite their unlike subjects.\"\n    }\n  ],\n  \"tags\": [\n    \"jointed figure\",\n    \"wide-brimmed hat\",\n    \"ribcage line pattern\",\n    \"teal ground\",\n    \"open-toothed grin\",\n    \"layered color stripes\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational posture\",\n    \"theatrical display\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—the grin, the spread arms, or the ribcage lines—and does that change which part of the figure feels most active?\",\n  \"ambiguities\": [\n    \"The gray rectangle behind the head may be a shadow, a separate background block, or a framing device; the image alone does not resolve this.\",\n    \"nnxyz nnotb #29 shares structural similarities but its gray ground makes it a weaker color comparison than #31 or nifty faces #129, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Observation 3 corrected: draft said 'separates head from hat' but the gray rectangle sits between head and hat brim, not below the head—confirmed against image.\",\n    \"All color and form claims checked against primary image: teal ground, yellow-orange hat, magenta/yellow/red torso stripes, white-pink ribcage lines, and open-toothed grin all confirmed visible.\",\n    \"Both comparison IDs inspected: QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw confirms hat and ribcage lines on orange ground; QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ confirms matching flat teal ground—both connections supported by direct image inspection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmNmGbXLfrqN546FbEDh71UTvfKhtuj67S6EVufLGSD7in",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNmGbXLfrqN546FbEDh71UTvfKhtuj67S6EVufLGSD7in/image.png",
+        "imageSHA256": "7952157a58e285db216716a8521da9e09ae6462bf74fb30336c9861872bb5ef2"
+      },
+      {
+        "artworkId": "QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ/image.png",
+        "imageSHA256": "7f86d4d7dd1c801d16829bdb991d2fcdf7fd718ab8b3233bf1d4a19cbf8b1713"
+      },
+      {
+        "artworkId": "QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw/image.png",
+        "imageSHA256": "2f3fcc1a40f64ab10707d8bbea0c925fc8a8f3fd97721b7542b6796d545d1c7f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A wide-brimmed hat in yellow and orange sits atop a boxy torso; the figure stands centered on a flat teal ground with arms spread wide and claw-like hands at each side.\", \"White and pink lines trace a ribcage pattern across the chest, layered over vertical stripes of magenta, yellow, and red that fill the rectangular body block.\", \"The face shows a wide open-toothed grin rendered in black and white lines, framed by a gray shadow rectangle that separates head from hat.\"], \"reading\": \"The figure plants itself squarely in the frame, arms out, grin exposed—a posture that reads as confrontational or theatrical depending on how long you look. The ribcage drawn over the bright torso stripes gives the body a see-through quality, as if the surface and the interior are competing for the same space. The flat teal ground offers no depth, keeping all that color tension right at the front.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #29 and nnxyz nnotb #31. All three share jointed limbs and a boxy body, but #30 swaps the gray ground of #29 for flat teal—a background the collector also connects to nnxyz nifty faces #129 from a separate owned family.\", \"connections\": [{\"targetArtworkId\": \"QmR4HyUFjBBrJtLZj9hsCy5qzdmE8c4m7DrRNZTbH9WBNw\", \"reason\": \"nnxyz nnotb #31 shares the wide-brimmed hat and exposed ribcage lines, but shifts to a deep orange ground and a leaning stride rather than the frontal, arms-wide stance here.\"}, {\"targetArtworkId\": \"QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ\", \"reason\": \"nnxyz nifty faces #129 uses the same flat teal ground as #30, making the two works stand out together in the owned collection despite belonging to different title families.\"}], \"tags\": [\"jointed figure\", \"wide-brimmed hat\", \"ribcage line pattern\", \"teal ground\", \"open-toothed grin\", \"layered color stripes\"], \"interpretiveTags\": [\"confrontational posture\", \"theatrical display\"], \"lookingQuestion\": \"Where does your eye settle first—the grin, the spread arms, or the ribcage lines—and does that change which part of the figure feels most active?\", \"ambiguities\": [\"The gray rectangle behind the head may be a shadow, a separate background block, or a framing device; the image alone does not resolve this.\", \"nnxyz nnotb #29 shares structural similarities but its gray ground makes it a weaker color comparison than #31 or nifty faces #129, so it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

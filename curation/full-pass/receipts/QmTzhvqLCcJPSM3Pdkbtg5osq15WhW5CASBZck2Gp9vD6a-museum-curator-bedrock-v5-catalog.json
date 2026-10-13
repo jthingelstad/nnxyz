@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:52.026263-05:00",
+    "usage": {
+      "inputTokens": 6357,
+      "outputTokens": 819,
+      "totalTokens": 7176,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12247
+    },
+    "requestId": "6a4267b4-5a60-4785-819c-884508668a81",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pale, mask-like face with closed eyes and a small red mouth sits above a wide layered form; dark hair is gathered in a tight bun at the top.\",\n    \"Horizontal bands of magenta, purple, and blue-grey wrap the upper body in overlapping curved strips, contrasting with a wide skirt of gold and ochre vertical panels below.\",\n    \"Fine looping purple lines are visible across the lower skirt panels against the dark olive-green background, adding a secondary texture beneath the bolder color bands.\"\n  ],\n  \"reading\": \"The figure stands still, its closed eyes and small red mouth giving the face a sealed, inward quality. Layered fabric bands—magenta through blue-grey—wrap the torso in tight horizontal rings, while the skirt fans outward in warm gold panels. The contrast between the compressed upper wrapping and the spreading lower form creates a sense of contained weight. The looping lines across the skirt surface add quiet density without breaking the stillness.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #49 and nnxyz nnotb #51. Those two works use flat black silhouettes on saturated fields with radiating line textures—a strong contrast to the layered fabric bands and muted olive ground seen here.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZvaCoT8uMiU9fKeGvYwGEWsTptXxgYepAG4TiYiaTapL\",\n      \"reason\": \"nnxyz nnotb #49 uses dense repeating wavy lines across its background as a field texture, which contrasts directly with the looping lines confined to the skirt panels in #50, showing two different uses of the same mark type.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWiD7oYJeHDkEJ6STTuHfcLbRaNLvQK8BqHpKrKP7ErUv\",\n      \"reason\": \"nnxyz nnotb #51 places a flat black silhouette against a warm orange field with radiating yellow lines, offering a stark tonal and structural contrast to the multi-layered fabric bands and cool-warm palette split in #50.\"\n    }\n  ],\n  \"tags\": [\n    \"layered fabric bands\",\n    \"closed eyes\",\n    \"gold vertical panels\",\n    \"looping line texture\",\n    \"magenta-to-blue gradient wrapping\",\n    \"dark olive background\"\n  ],\n  \"interpretiveTags\": [\n    \"stillness\",\n    \"containment\",\n    \"inward mood\"\n  ],\n  \"lookingQuestion\": \"Where does the boundary between the wrapped upper bands and the spreading lower panels fall, and how does that line divide the colors in the image?\",\n  \"ambiguities\": [\n    \"The looping marks on the skirt panels may be a separate texture layer or part of the same stroke pass as the panel outlines; the image resolution does not resolve this.\",\n    \"nnxyz nifty faces #94 (QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2) shows a densely layered dark form but its subject and mark structure differ enough from #50 that no specific formal connection is supported; omitted from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTzhvqLCcJPSM3Pdkbtg5osq15WhW5CASBZck2Gp9vD6a",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTzhvqLCcJPSM3Pdkbtg5osq15WhW5CASBZck2Gp9vD6a/image.png",
+        "imageSHA256": "76eb8f85d2ebe1090f14c37f308ee0fe4a6f457a4737ffdb0f93b309f7084894"
+      },
+      {
+        "artworkId": "QmZvaCoT8uMiU9fKeGvYwGEWsTptXxgYepAG4TiYiaTapL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZvaCoT8uMiU9fKeGvYwGEWsTptXxgYepAG4TiYiaTapL/image.png",
+        "imageSHA256": "551ccaebd200164ae8a5c424f8f306e7d04f3a8868c9c87167abc0103a7d902f"
+      },
+      {
+        "artworkId": "QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2/image.png",
+        "imageSHA256": "a4557f5831b04f804d5d17743263cec0af16bb02bdf1b69256c1a92e27be7326"
+      },
+      {
+        "artworkId": "QmWiD7oYJeHDkEJ6STTuHfcLbRaNLvQK8BqHpKrKP7ErUv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWiD7oYJeHDkEJ6STTuHfcLbRaNLvQK8BqHpKrKP7ErUv/image.png",
+        "imageSHA256": "9077f9883827291eacffb4540d495792df6c7a858c55b5b84a5977049300ac58"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:58.835629-05:00",
+    "usage": {
+      "inputTokens": 7196,
+      "outputTokens": 971,
+      "totalTokens": 8167,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6727
+    },
+    "requestId": "0de0a8d1-f432-4b4a-9fcb-8fe8e7971da5",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pale, mask-like face with closed eyes and a small red mouth sits above a wide layered form; dark hair is gathered in a tight bun at the top.\",\n    \"Horizontal bands of magenta, purple, and blue-grey wrap the upper body in overlapping curved strips, contrasting with a wide skirt of gold and ochre vertical panels below.\",\n    \"Fine looping purple lines are visible across the lower skirt panels against the dark olive-green background, adding a secondary texture beneath the bolder color bands.\"\n  ],\n  \"reading\": \"The figure stands still, its closed eyes and small red mouth giving the face a sealed, inward quality. Layered fabric bands—magenta through blue-grey—wrap the torso in tight horizontal rings, while the skirt fans outward in warm gold panels. The contrast between the compressed upper wrapping and the spreading lower form creates a sense of contained weight. The looping lines across the skirt surface add quiet density without breaking the stillness.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #49 and nnxyz nnotb #51. Both neighbors use flat black silhouettes on saturated fields with radiating line textures—a strong contrast to the layered fabric bands and muted olive ground here.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZvaCoT8uMiU9fKeGvYwGEWsTptXxgYepAG4TiYiaTapL\",\n      \"reason\": \"nnxyz nnotb #49 fills its background with dense repeating wavy lines as field texture, contrasting with the looping lines in #50 that are confined to the skirt panels—two different placements of the same mark type.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWiD7oYJeHDkEJ6STTuHfcLbRaNLvQK8BqHpKrKP7ErUv\",\n      \"reason\": \"nnxyz nnotb #51 places a flat black silhouette against a warm orange field with radiating yellow lines, offering a stark tonal and structural contrast to the multi-layered fabric bands and cool-warm palette split in #50.\"\n    }\n  ],\n  \"tags\": [\n    \"layered fabric bands\",\n    \"closed eyes\",\n    \"gold vertical panels\",\n    \"looping line texture\",\n    \"magenta-to-blue-grey wrapping\",\n    \"dark olive background\"\n  ],\n  \"interpretiveTags\": [\n    \"stillness\",\n    \"containment\",\n    \"inward mood\"\n  ],\n  \"lookingQuestion\": \"Where does the boundary between the wrapped upper bands and the spreading lower panels fall, and how does that line divide the colors in the image?\",\n  \"ambiguities\": [\n    \"The looping marks on the skirt panels may be a separate texture layer or part of the same stroke pass as the panel outlines; image resolution does not resolve this.\",\n    \"nnxyz nifty faces #94 (QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2) shows a densely layered dark form but its subject and mark structure differ enough from #50 that no specific formal connection is supported; omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: pale face with bun, horizontal magenta-to-blue-grey bands, gold ochre skirt panels, and looping purple lines on skirt are all visibly present.\",\n    \"Both comparison connections verified against inspected images: #49 shows wavy line field texture across background; #51 shows flat black silhouette on orange with radiating yellow lines—both contrasts are accurate and specific.\",\n    \"Reading word count checked within 55–80 word limit; context angle within 30–55 word limit; no invented intent, biography, media, or duration language found; banned words absent.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTzhvqLCcJPSM3Pdkbtg5osq15WhW5CASBZck2Gp9vD6a",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTzhvqLCcJPSM3Pdkbtg5osq15WhW5CASBZck2Gp9vD6a/image.png",
+        "imageSHA256": "76eb8f85d2ebe1090f14c37f308ee0fe4a6f457a4737ffdb0f93b309f7084894"
+      },
+      {
+        "artworkId": "QmZvaCoT8uMiU9fKeGvYwGEWsTptXxgYepAG4TiYiaTapL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZvaCoT8uMiU9fKeGvYwGEWsTptXxgYepAG4TiYiaTapL/image.png",
+        "imageSHA256": "551ccaebd200164ae8a5c424f8f306e7d04f3a8868c9c87167abc0103a7d902f"
+      },
+      {
+        "artworkId": "QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2/image.png",
+        "imageSHA256": "a4557f5831b04f804d5d17743263cec0af16bb02bdf1b69256c1a92e27be7326"
+      },
+      {
+        "artworkId": "QmWiD7oYJeHDkEJ6STTuHfcLbRaNLvQK8BqHpKrKP7ErUv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWiD7oYJeHDkEJ6STTuHfcLbRaNLvQK8BqHpKrKP7ErUv/image.png",
+        "imageSHA256": "9077f9883827291eacffb4540d495792df6c7a858c55b5b84a5977049300ac58"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A pale, mask-like face with closed eyes and a small red mouth sits above a wide layered form; dark hair is gathered in a tight bun at the top.\", \"Horizontal bands of magenta, purple, and blue-grey wrap the upper body in overlapping curved strips, contrasting with a wide skirt of gold and ochre vertical panels below.\", \"Fine looping purple lines are visible across the lower skirt panels against the dark olive-green background, adding a secondary texture beneath the bolder color bands.\"], \"reading\": \"The figure stands still, its closed eyes and small red mouth giving the face a sealed, inward quality. Layered fabric bands—magenta through blue-grey—wrap the torso in tight horizontal rings, while the skirt fans outward in warm gold panels. The contrast between the compressed upper wrapping and the spreading lower form creates a sense of contained weight. The looping lines across the skirt surface add quiet density without breaking the stillness.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #49 and nnxyz nnotb #51. Those two works use flat black silhouettes on saturated fields with radiating line textures—a strong contrast to the layered fabric bands and muted olive ground seen here.\", \"connections\": [{\"targetArtworkId\": \"QmZvaCoT8uMiU9fKeGvYwGEWsTptXxgYepAG4TiYiaTapL\", \"reason\": \"nnxyz nnotb #49 uses dense repeating wavy lines across its background as a field texture, which contrasts directly with the looping lines confined to the skirt panels in #50, showing two different uses of the same mark type.\"}, {\"targetArtworkId\": \"QmWiD7oYJeHDkEJ6STTuHfcLbRaNLvQK8BqHpKrKP7ErUv\", \"reason\": \"nnxyz nnotb #51 places a flat black silhouette against a warm orange field with radiating yellow lines, offering a stark tonal and structural contrast to the multi-layered fabric bands and cool-warm palette split in #50.\"}], \"tags\": [\"layered fabric bands\", \"closed eyes\", \"gold vertical panels\", \"looping line texture\", \"magenta-to-blue gradient wrapping\", \"dark olive background\"], \"interpretiveTags\": [\"stillness\", \"containment\", \"inward mood\"], \"lookingQuestion\": \"Where does the boundary between the wrapped upper bands and the spreading lower panels fall, and how does that line divide the colors in the image?\", \"ambiguities\": [\"The looping marks on the skirt panels may be a separate texture layer or part of the same stroke pass as the panel outlines; the image resolution does not resolve this.\", \"nnxyz nifty faces #94 (QmNeEu68NZBuf2fuwo1mRN87Lo1m1jej1fumNyEZytvZV2) shows a densely layered dark form but its subject and mark structure differ enough from #50 that no specific formal connection is supported; omitted from connections.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

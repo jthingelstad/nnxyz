@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:27.246264-05:00",
+    "usage": {
+      "inputTokens": 6096,
+      "outputTokens": 750,
+      "totalTokens": 6846,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11919
+    },
+    "requestId": "3ff8211f-636e-451c-a5b7-d44bb5d5216a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large angular form dominates the center-left, outlined in white and black with yellow-green fill, containing two bright white glowing rectangles that read as light sources.\",\n    \"Dense overlapping zigzag and wavy lines in cyan, yellow, white, and orange spread across the background and foreground, layering over a muted olive-brown ground.\",\n    \"The upper-left quadrant holds a compressed cluster of dark hatching, purple, and multicolored short strokes that contrasts sharply with the open yellow space to the right.\"\n  ],\n  \"reading\": \"Two white-hot rectangles anchor the composition, pulling the eye through a tangle of zigzag lines that spread outward in yellow and cyan. The surrounding dark cluster feels compressed against that brightness, giving the image a push-pull between density and open glow. The white outlines of the central form hold their edge even as looser marks dissolve around them, suggesting something solid caught mid-dissolution.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #72 and nnxyz nnotb #74. Both neighbors also feature glowing white light sources and yellow-dominant fields, but #73 shifts the background toward darker olive and concentrates its color burst in one corner rather than across the full frame.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E\",\n      \"reason\": \"nnxyz nnotb #74 shares the same blown-out white glow zones and yellow-gold field, but organizes its angular forms along a diagonal axis where #73 keeps them more frontal and compressed.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML\",\n      \"reason\": \"nnxyz nnotb #77 repeats the single intense white bloom inside a boxy outlined form against a yellow ground, offering a starker, less cluttered version of the same light-source-within-structure motif.\"\n    }\n  ],\n  \"tags\": [\n    \"glowing rectangles\",\n    \"zigzag line field\",\n    \"angular outlined form\",\n    \"dark hatching cluster\",\n    \"yellow-green ground\",\n    \"cyan line overlay\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between density and openness\",\n    \"contained versus dissolving\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the white glow end and the yellow line work begin, and what happens to the forms at that boundary?\",\n  \"ambiguities\": [\n    \"The central outlined form suggests a recognizable object but its identity cannot be confirmed from the image alone; describing it as a specific thing would go beyond what is visible.\",\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps may exist elsewhere in the nnotb family, so proximity does not guarantee shared subject matter.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYAaq3C3XpXaxbF6NhRWnJS1d1HiUUn2wwfu9vtnQ8zFA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYAaq3C3XpXaxbF6NhRWnJS1d1HiUUn2wwfu9vtnQ8zFA/image.png",
+        "imageSHA256": "db7b51af1e74af8c6aabb520c2fff1030599df3fd02a42cc948d1a7a5a1e8f52"
+      },
+      {
+        "artworkId": "QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P/image.png",
+        "imageSHA256": "5c4229d31db5fba6812b0c5465f31ad3df52b61a086702d49b12aca429f939d0"
+      },
+      {
+        "artworkId": "QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E/image.png",
+        "imageSHA256": "66e132d134d3c7e127c7d9bd0ef902afe867ff3759acb668641ff5f04003aa66"
+      },
+      {
+        "artworkId": "QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML/image.png",
+        "imageSHA256": "445b8e3e10a0632c27f2f230dab02ff03fee2ea3287a5886d4a13b7011b3603f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:34.439180-05:00",
+    "usage": {
+      "inputTokens": 6868,
+      "outputTokens": 935,
+      "totalTokens": 7803,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7107
+    },
+    "requestId": "bfbefa98-af10-460f-8743-71d9169724f5",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large angular form dominates the center-left, outlined in white and black with yellow-green fill, containing two bright white glowing rectangles that read as light sources.\",\n    \"Dense overlapping zigzag and wavy lines in cyan, yellow, white, and orange spread across the background and foreground, layering over a muted olive-brown ground.\",\n    \"The upper-left quadrant holds a compressed cluster of dark hatching, purple, and multicolored short strokes that contrasts sharply with the open yellow space to the right.\"\n  ],\n  \"reading\": \"Two white-hot rectangles anchor the composition, pulling the eye through a tangle of zigzag lines spreading outward in yellow and cyan. The dark upper-left cluster feels compressed against that brightness, creating a push-pull between density and open glow. The white outlines of the central form hold their edge even as looser marks dissolve around them, leaving something solid caught mid-dissolution.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #72 and nnxyz nnotb #74. Both neighbors feature glowing white zones and yellow-dominant fields, but #73 shifts toward darker olive and concentrates its color burst in one corner rather than across the full frame.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E\",\n      \"reason\": \"nnxyz nnotb #74 shares blown-out white glow zones and a yellow-gold field, but arranges its angular outlined forms along a diagonal axis where #73 keeps them more frontal and compressed.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML\",\n      \"reason\": \"nnxyz nnotb #77 places a single intense white bloom inside a boxy outlined form against a yellow ground, offering a less cluttered version of the light-source-within-structure arrangement visible in #73.\"\n    }\n  ],\n  \"tags\": [\n    \"glowing rectangles\",\n    \"zigzag line field\",\n    \"angular outlined form\",\n    \"dark hatching cluster\",\n    \"yellow-green ground\",\n    \"cyan line overlay\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between density and openness\",\n    \"contained versus dissolving\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the white glow end and the yellow line work begin, and what happens to the forms at that boundary?\",\n  \"ambiguities\": [\n    \"The central outlined form suggests a recognizable object but its identity cannot be confirmed from the image alone.\",\n    \"Title-derived order and recorded-creation order align for this work, but metadata notes gaps may exist elsewhere in the nnotb family, so proximity does not guarantee shared subject matter.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and placement observations confirmed against the primary image: white glow rectangles, cyan-yellow zigzag field, and dark upper-left cluster are all clearly visible.\",\n    \"Comparison claims for QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E and QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML verified against their images; diagonal axis in #74 and single bloom in #77 are both visible and support the stated contrasts.\",\n    \"Removed one hedging phrase ('suggesting something solid') and tightened to 'leaving something solid' to reduce implied intent; all other draft content confirmed accurate and within word limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYAaq3C3XpXaxbF6NhRWnJS1d1HiUUn2wwfu9vtnQ8zFA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYAaq3C3XpXaxbF6NhRWnJS1d1HiUUn2wwfu9vtnQ8zFA/image.png",
+        "imageSHA256": "db7b51af1e74af8c6aabb520c2fff1030599df3fd02a42cc948d1a7a5a1e8f52"
+      },
+      {
+        "artworkId": "QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P/image.png",
+        "imageSHA256": "5c4229d31db5fba6812b0c5465f31ad3df52b61a086702d49b12aca429f939d0"
+      },
+      {
+        "artworkId": "QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E/image.png",
+        "imageSHA256": "66e132d134d3c7e127c7d9bd0ef902afe867ff3759acb668641ff5f04003aa66"
+      },
+      {
+        "artworkId": "QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML/image.png",
+        "imageSHA256": "445b8e3e10a0632c27f2f230dab02ff03fee2ea3287a5886d4a13b7011b3603f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large angular form dominates the center-left, outlined in white and black with yellow-green fill, containing two bright white glowing rectangles that read as light sources.\", \"Dense overlapping zigzag and wavy lines in cyan, yellow, white, and orange spread across the background and foreground, layering over a muted olive-brown ground.\", \"The upper-left quadrant holds a compressed cluster of dark hatching, purple, and multicolored short strokes that contrasts sharply with the open yellow space to the right.\"], \"reading\": \"Two white-hot rectangles anchor the composition, pulling the eye through a tangle of zigzag lines that spread outward in yellow and cyan. The surrounding dark cluster feels compressed against that brightness, giving the image a push-pull between density and open glow. The white outlines of the central form hold their edge even as looser marks dissolve around them, suggesting something solid caught mid-dissolution.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #72 and nnxyz nnotb #74. Both neighbors also feature glowing white light sources and yellow-dominant fields, but #73 shifts the background toward darker olive and concentrates its color burst in one corner rather than across the full frame.\", \"connections\": [{\"targetArtworkId\": \"QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E\", \"reason\": \"nnxyz nnotb #74 shares the same blown-out white glow zones and yellow-gold field, but organizes its angular forms along a diagonal axis where #73 keeps them more frontal and compressed.\"}, {\"targetArtworkId\": \"QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML\", \"reason\": \"nnxyz nnotb #77 repeats the single intense white bloom inside a boxy outlined form against a yellow ground, offering a starker, less cluttered version of the same light-source-within-structure motif.\"}], \"tags\": [\"glowing rectangles\", \"zigzag line field\", \"angular outlined form\", \"dark hatching cluster\", \"yellow-green ground\", \"cyan line overlay\"], \"interpretiveTags\": [\"tension between density and openness\", \"contained versus dissolving\"], \"lookingQuestion\": \"Where exactly does the white glow end and the yellow line work begin, and what happens to the forms at that boundary?\", \"ambiguities\": [\"The central outlined form suggests a recognizable object but its identity cannot be confirmed from the image alone; describing it as a specific thing would go beyond what is visible.\", \"Title-derived order and recorded-creation order align here, but the metadata notes gaps may exist elsewhere in the nnotb family, so proximity does not guarantee shared subject matter.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:02.100997-05:00",
+    "usage": {
+      "inputTokens": 6125,
+      "outputTokens": 794,
+      "totalTokens": 6919,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12921
+    },
+    "requestId": "ce43ff6a-4dd2-49ca-b861-bde535919187",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A tall, spindly dark figure occupies the right side; its oval head carries two spiral eyes, a small antenna, and a jagged mouth line drawn in white on black.\",\n    \"One arm extends far left in a long diagonal sweep, ending in splayed fingers where a small creature perches — its body cyan-blue, wings pink, beak yellow, with an X mark on its head.\",\n    \"The background is layered grey rectangles forming a double frame; a small sketched signature mark sits in the lower-left corner outside the inner field.\"\n  ],\n  \"reading\": \"A stretched figure leans across most of the image to offer its hand to something tiny and vividly colored. The figure's spiral eyes and jagged mouth read as unease or wonder; the small creature's X mark introduces an unsettling note against its bright hues. The vast grey space between them makes the reach feel effortful, and the color contrast — near-monochrome body, saturated visitor — pulls attention to what is being held out toward.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #128 and nnxyz nnotb #130. Where #128 fills its field with dense layered color and #130 places a solid silhouette against flat yellow, #129 works almost entirely in grey and white, reserving color for the single small figure on the outstretched hand.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF\",\n      \"reason\": \"Both works show a round-headed dark figure extending one arm toward a small object, but #130 uses a flat yellow field and solid silhouette while #129 uses grey layers and white line-work, making the structural echo visible as a direct contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWbdUPj39Zf8zsq7Ukprm3gKikQ53GSdfWJzcCVpW3ZRs\",\n      \"reason\": \"The nifty faces #71 figure shares the same near-monochrome grey ground and white-on-black line construction as #129, including spiral or looped eye marks on a dark oval head, though it is cropped to a head alone with no extending limb.\"\n    }\n  ],\n  \"tags\": [\n    \"extended arm diagonal\",\n    \"spiral eye marks\",\n    \"monochrome ground with isolated color accent\",\n    \"spindly elongated figure\",\n    \"small perching creature\",\n    \"double grey frame border\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between scale and reach\",\n    \"unease or wonder reading\"\n  ],\n  \"lookingQuestion\": \"What does the distance between the figure's body and its outstretched fingers — relative to the size of what rests there — do to how you read the image?\",\n  \"ambiguities\": [\n    \"The small creature's X mark could be a stylistic detail or carry symbolic weight; the image alone does not resolve this.\",\n    \"The nnotb #128 comparison (dense color, animal form) shares no strong formal element with #129 and was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9/image.png",
+        "imageSHA256": "df87091193909ce7d4e6edb314f7aa3ba0bfb9db44687047b4b6c64f38c720b0"
+      },
+      {
+        "artworkId": "QmboksMXMDHxaLB6xxdUWvXTLjJV9NmvnzYZbZDbcGXeKU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmboksMXMDHxaLB6xxdUWvXTLjJV9NmvnzYZbZDbcGXeKU/image.png",
+        "imageSHA256": "b5a0b0994d2e998f7393ef7d207005a25bff56ca40e6f73686959ebc2f2fba2f"
+      },
+      {
+        "artworkId": "QmWbdUPj39Zf8zsq7Ukprm3gKikQ53GSdfWJzcCVpW3ZRs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWbdUPj39Zf8zsq7Ukprm3gKikQ53GSdfWJzcCVpW3ZRs/image.png",
+        "imageSHA256": "9b6cd6d67aeca95c46a005aeed7035c97b736115a991bb487eb2c4ae8c1efa52"
+      },
+      {
+        "artworkId": "QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF/image.png",
+        "imageSHA256": "3d9c8db88ca457dea8a767ac2999547bc12f17c8bc2d1b9f35cb2234902925bb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:08.475636-05:00",
+    "usage": {
+      "inputTokens": 6941,
+      "outputTokens": 931,
+      "totalTokens": 7872,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6321
+    },
+    "requestId": "b18b8981-1c14-4750-b24b-51612845f42e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A tall, spindly dark figure occupies the right side; its oval head carries two spiral eyes, a small antenna, and a jagged mouth line drawn in white on black.\",\n    \"One arm extends far left in a long diagonal sweep, ending in splayed fingers where a small creature perches — its body cyan-blue, wings pink, beak yellow, with an X mark on its head.\",\n    \"The background is layered grey rectangles forming a double frame; a small sketched signature mark sits in the lower-left corner outside the inner field.\"\n  ],\n  \"reading\": \"A stretched figure leans across most of the image to offer its hand to something tiny and vividly colored. The spiral eyes and jagged mouth read as unease or wonder; the small creature's X mark introduces an unsettling note against its bright hues. The wide grey space between body and outstretched fingers makes the reach feel effortful, and the near-monochrome figure against a saturated visitor pulls attention to what is being held out toward.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #128 and nnxyz nnotb #130. Where #128 fills its field with dense layered color and #130 places a solid silhouette against flat yellow, #129 works almost entirely in grey and white, reserving color for the single small figure on the outstretched hand.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF\",\n      \"reason\": \"Both works show a round-headed dark figure extending one arm toward a small object, but #130 uses a flat yellow field and solid silhouette while #129 uses grey layers and white line-work, making the structural echo visible as a direct contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWbdUPj39Zf8zsq7Ukprm3gKikQ53GSdfWJzcCVpW3ZRs\",\n      \"reason\": \"nifty faces #71 shares the same near-monochrome grey ground and white-on-black line construction, including looped eye marks on a dark oval head, though it is cropped to a head alone with no extending limb.\"\n    }\n  ],\n  \"tags\": [\n    \"extended arm diagonal\",\n    \"spiral eye marks\",\n    \"monochrome ground with isolated color accent\",\n    \"spindly elongated figure\",\n    \"small perching creature\",\n    \"double grey frame border\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between scale and reach\",\n    \"unease or wonder reading\"\n  ],\n  \"lookingQuestion\": \"What does the distance between the figure's body and its outstretched fingers — relative to the size of what rests there — do to how you read the image?\",\n  \"ambiguities\": [\n    \"The small creature's X mark could be a stylistic detail or carry symbolic weight; the image alone does not resolve this.\",\n    \"nnotb #128 shares no strong formal element with #129 and was correctly excluded from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: spiral eyes, antenna, jagged mouth, cyan-blue body, pink wings, yellow beak, X mark, grey double-frame, and lower-left signature mark are all visible.\",\n    \"Reading revised to remove one repeated phrase ('color contrast') and tighten to within word limits; no invented intent or biography present.\",\n    \"Both comparison images inspected: #130 confirms round-headed silhouette extending arm toward small object on yellow ground; nifty faces #71 confirms grey ground, white-on-black lines, and looped eye marks on dark oval head — both connections supported by visible evidence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVWrRAokGq3gtJMag5Q6A9EfV73TcWA595UeYZHrBHSQ9/image.png",
+        "imageSHA256": "df87091193909ce7d4e6edb314f7aa3ba0bfb9db44687047b4b6c64f38c720b0"
+      },
+      {
+        "artworkId": "QmboksMXMDHxaLB6xxdUWvXTLjJV9NmvnzYZbZDbcGXeKU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmboksMXMDHxaLB6xxdUWvXTLjJV9NmvnzYZbZDbcGXeKU/image.png",
+        "imageSHA256": "b5a0b0994d2e998f7393ef7d207005a25bff56ca40e6f73686959ebc2f2fba2f"
+      },
+      {
+        "artworkId": "QmWbdUPj39Zf8zsq7Ukprm3gKikQ53GSdfWJzcCVpW3ZRs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWbdUPj39Zf8zsq7Ukprm3gKikQ53GSdfWJzcCVpW3ZRs/image.png",
+        "imageSHA256": "9b6cd6d67aeca95c46a005aeed7035c97b736115a991bb487eb2c4ae8c1efa52"
+      },
+      {
+        "artworkId": "QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF/image.png",
+        "imageSHA256": "3d9c8db88ca457dea8a767ac2999547bc12f17c8bc2d1b9f35cb2234902925bb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A tall, spindly dark figure occupies the right side; its oval head carries two spiral eyes, a small antenna, and a jagged mouth line drawn in white on black.\", \"One arm extends far left in a long diagonal sweep, ending in splayed fingers where a small creature perches — its body cyan-blue, wings pink, beak yellow, with an X mark on its head.\", \"The background is layered grey rectangles forming a double frame; a small sketched signature mark sits in the lower-left corner outside the inner field.\"], \"reading\": \"A stretched figure leans across most of the image to offer its hand to something tiny and vividly colored. The figure's spiral eyes and jagged mouth read as unease or wonder; the small creature's X mark introduces an unsettling note against its bright hues. The vast grey space between them makes the reach feel effortful, and the color contrast — near-monochrome body, saturated visitor — pulls attention to what is being held out toward.\", \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #128 and nnxyz nnotb #130. Where #128 fills its field with dense layered color and #130 places a solid silhouette against flat yellow, #129 works almost entirely in grey and white, reserving color for the single small figure on the outstretched hand.\", \"connections\": [{\"targetArtworkId\": \"QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF\", \"reason\": \"Both works show a round-headed dark figure extending one arm toward a small object, but #130 uses a flat yellow field and solid silhouette while #129 uses grey layers and white line-work, making the structural echo visible as a direct contrast.\"}, {\"targetArtworkId\": \"QmWbdUPj39Zf8zsq7Ukprm3gKikQ53GSdfWJzcCVpW3ZRs\", \"reason\": \"The nifty faces #71 figure shares the same near-monochrome grey ground and white-on-black line construction as #129, including spiral or looped eye marks on a dark oval head, though it is cropped to a head alone with no extending limb.\"}], \"tags\": [\"extended arm diagonal\", \"spiral eye marks\", \"monochrome ground with isolated color accent\", \"spindly elongated figure\", \"small perching creature\", \"double grey frame border\"], \"interpretiveTags\": [\"tension between scale and reach\", \"unease or wonder reading\"], \"lookingQuestion\": \"What does the distance between the figure's body and its outstretched fingers — relative to the size of what rests there — do to how you read the image?\", \"ambiguities\": [\"The small creature's X mark could be a stylistic detail or carry symbolic weight; the image alone does not resolve this.\", \"The nnotb #128 comparison (dense color, animal form) shares no strong formal element with #129 and was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

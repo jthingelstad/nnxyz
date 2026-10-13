@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:10.078580-05:00",
+    "usage": {
+      "inputTokens": 6350,
+      "outputTokens": 778,
+      "totalTokens": 7128,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13393
+    },
+    "requestId": "44e998bc-2ff7-4795-96c9-59416c34ec39",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A row of white and yellow rectangular shapes runs horizontally across the lower third, evenly spaced against a black band, reading like a wide flat grid.\",\n    \"A loose yellow scribble loop arcs along the right edge of the teal background, separate from the dense central mass of overlapping black, red, pink, and blue lines.\",\n    \"On the left, a large black oval sits inside a blue-outlined rounded rectangle; on the right, a spiral coil in pink and black occupies a similarly sized zone, giving the composition two distinct anchor areas.\"\n  ],\n  \"reading\": \"The teal field holds a dense knot of overlapping lines in black, red, pink, yellow, and blue, with the central mass pressing outward toward loose scribble loops at the edges. The lower band of evenly spaced white-and-yellow rectangles introduces a sudden calm regularity against the surrounding noise. That contrast — compressed tangle above, measured row below — gives the image a feeling of pressure held just short of release.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work shares the teal background and tooth-row motif visible in the nnotb comparison Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz, which the collector links to scrimshaw through repeating linear patterns across both collections.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz\",\n      \"reason\": \"Both works share a teal ground and a row of tightly packed white rectangular shapes near the lower edge, making the repeating-grid motif visible across two different title families in the owned subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC\",\n      \"reason\": \"The title neighbor nnxyz nifty faces #119 also features a horizontal tooth-row band and paired rectangular eye zones, but on a dark olive ground rather than teal, sharpening the contrast in background color between the two works.\"\n    }\n  ],\n  \"tags\": [\n    \"teal background\",\n    \"overlapping line clusters\",\n    \"horizontal tooth row\",\n    \"spiral coil form\",\n    \"oval within rectangle\",\n    \"loose edge scribble loops\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed tension\",\n    \"ordered-versus-chaotic contrast\"\n  ],\n  \"lookingQuestion\": \"What happens to your eye when it moves from the dense overlapping lines in the center down to the evenly spaced rectangular row at the bottom — does the spacing change how you read the forms above it?\",\n  \"ambiguities\": [\n    \"The yellow looping scribble along the right edge may be a border element or an overflow from the central composition; its relationship to the main mass is unclear from the image alone.\",\n    \"Title-derived and recorded-creation order align here, but gaps exist elsewhere in the owned nifty-faces subset, so adjacency does not confirm unbroken sequence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN/image.png",
+        "imageSHA256": "cd547c8669a74bd13d425f6cdf2a5f51264252bb65f353af45fdca71566898f9"
+      },
+      {
+        "artworkId": "QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC/image.png",
+        "imageSHA256": "4d920123eed7b43e2b6d90aa90570f89bf57f142e368535c17571c67938c6084"
+      },
+      {
+        "artworkId": "Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz/image.png",
+        "imageSHA256": "3ab92fb59f99813d9b90e6c0396db59e57668928fec523335b06ba45183e7505"
+      },
+      {
+        "artworkId": "QmdKWcoTSn82fHfvH2u3CyVqKrB6FPYqBhidGibeBkMBtJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdKWcoTSn82fHfvH2u3CyVqKrB6FPYqBhidGibeBkMBtJ/image.png",
+        "imageSHA256": "997bf837bc6811564bcf1b08394b8dc36665b2097c400ef67fc058533fb16170"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:17.623815-05:00",
+    "usage": {
+      "inputTokens": 7150,
+      "outputTokens": 941,
+      "totalTokens": 8091,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7474
+    },
+    "requestId": "ae094ebf-2677-4ce4-b429-53166cfbc94c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A row of white and yellow rectangular shapes runs horizontally across the lower third, evenly spaced against a black band, reading as a wide flat grid.\",\n    \"A loose yellow scribble loop arcs along the right edge of the teal background, separate from the dense central mass of overlapping black, red, pink, and blue lines.\",\n    \"On the left, a large black oval sits inside a blue-outlined rounded rectangle; on the right, a spiral coil in pink and black occupies a similarly sized zone, giving the composition two distinct anchor areas.\"\n  ],\n  \"reading\": \"The teal field holds a dense knot of overlapping lines in black, red, pink, yellow, and blue, with the central mass pressing outward toward loose scribble loops at the edges. The lower band of evenly spaced white-and-yellow rectangles introduces a sudden calm regularity against the surrounding noise. That contrast — compressed tangle above, measured row below — gives the image a feeling of pressure held just short of release.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work shares the teal background and tooth-row motif visible in the nnotb comparison, which the collector links to scrimshaw through repeating linear patterns across both collections.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz\",\n      \"reason\": \"Both works share a teal ground and a row of tightly packed white rectangular shapes near the lower edge, making the repeating-grid motif visible across two different title families in the owned subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC\",\n      \"reason\": \"Title neighbor nifty faces #119 also features a horizontal tooth-row band and paired rectangular zones, but on a dark olive ground rather than teal, sharpening the background color contrast between the two works.\"\n    }\n  ],\n  \"tags\": [\n    \"teal background\",\n    \"overlapping line clusters\",\n    \"horizontal tooth row\",\n    \"spiral coil form\",\n    \"oval within rectangle\",\n    \"loose edge scribble loops\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed tension\",\n    \"ordered-versus-chaotic contrast\"\n  ],\n  \"lookingQuestion\": \"What happens to your eye when it moves from the dense overlapping lines in the center down to the evenly spaced rectangular row at the bottom — does the spacing change how you read the forms above it?\",\n  \"ambiguities\": [\n    \"The yellow looping scribble along the right edge may be a border element or an overflow from the central composition; its relationship to the main mass is unclear from the image alone.\",\n    \"Title-derived and recorded-creation order align for this work, but gaps exist elsewhere in the owned nifty-faces subset, so adjacency does not confirm an unbroken sequence.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: tooth row, yellow edge loop, and left oval/right spiral anchor areas are all visibly present.\",\n    \"Comparison with Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz confirmed: teal ground and lower white rectangular row are both visible in that image, supporting the connection.\",\n    \"Comparison with QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC confirmed: dark olive ground and horizontal tooth-row band are visible; draft claim of 'paired rectangular eye zones' is broadly supported by two large dark rectangular areas, so language softened to 'paired rectangular zones' to avoid over-specifying subject identity.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN/image.png",
+        "imageSHA256": "cd547c8669a74bd13d425f6cdf2a5f51264252bb65f353af45fdca71566898f9"
+      },
+      {
+        "artworkId": "QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC/image.png",
+        "imageSHA256": "4d920123eed7b43e2b6d90aa90570f89bf57f142e368535c17571c67938c6084"
+      },
+      {
+        "artworkId": "Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz/image.png",
+        "imageSHA256": "3ab92fb59f99813d9b90e6c0396db59e57668928fec523335b06ba45183e7505"
+      },
+      {
+        "artworkId": "QmdKWcoTSn82fHfvH2u3CyVqKrB6FPYqBhidGibeBkMBtJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdKWcoTSn82fHfvH2u3CyVqKrB6FPYqBhidGibeBkMBtJ/image.png",
+        "imageSHA256": "997bf837bc6811564bcf1b08394b8dc36665b2097c400ef67fc058533fb16170"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A row of white and yellow rectangular shapes runs horizontally across the lower third, evenly spaced against a black band, reading like a wide flat grid.\", \"A loose yellow scribble loop arcs along the right edge of the teal background, separate from the dense central mass of overlapping black, red, pink, and blue lines.\", \"On the left, a large black oval sits inside a blue-outlined rounded rectangle; on the right, a spiral coil in pink and black occupies a similarly sized zone, giving the composition two distinct anchor areas.\"], \"reading\": \"The teal field holds a dense knot of overlapping lines in black, red, pink, yellow, and blue, with the central mass pressing outward toward loose scribble loops at the edges. The lower band of evenly spaced white-and-yellow rectangles introduces a sudden calm regularity against the surrounding noise. That contrast — compressed tangle above, measured row below — gives the image a feeling of pressure held just short of release.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work shares the teal background and tooth-row motif visible in the nnotb comparison Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz, which the collector links to scrimshaw through repeating linear patterns across both collections.\", \"connections\": [{\"targetArtworkId\": \"Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz\", \"reason\": \"Both works share a teal ground and a row of tightly packed white rectangular shapes near the lower edge, making the repeating-grid motif visible across two different title families in the owned subset.\"}, {\"targetArtworkId\": \"QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC\", \"reason\": \"The title neighbor nnxyz nifty faces #119 also features a horizontal tooth-row band and paired rectangular eye zones, but on a dark olive ground rather than teal, sharpening the contrast in background color between the two works.\"}], \"tags\": [\"teal background\", \"overlapping line clusters\", \"horizontal tooth row\", \"spiral coil form\", \"oval within rectangle\", \"loose edge scribble loops\"], \"interpretiveTags\": [\"compressed tension\", \"ordered-versus-chaotic contrast\"], \"lookingQuestion\": \"What happens to your eye when it moves from the dense overlapping lines in the center down to the evenly spaced rectangular row at the bottom — does the spacing change how you read the forms above it?\", \"ambiguities\": [\"The yellow looping scribble along the right edge may be a border element or an overflow from the central composition; its relationship to the main mass is unclear from the image alone.\", \"Title-derived and recorded-creation order align here, but gaps exist elsewhere in the owned nifty-faces subset, so adjacency does not confirm unbroken sequence.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

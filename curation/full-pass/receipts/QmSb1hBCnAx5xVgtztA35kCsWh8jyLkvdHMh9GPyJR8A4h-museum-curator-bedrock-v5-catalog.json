@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:24.572508-05:00",
+    "usage": {
+      "inputTokens": 5786,
+      "outputTokens": 802,
+      "totalTokens": 6588,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14031
+    },
+    "requestId": "fe415109-2514-46e8-9e3d-486233b97cf3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form fills most of the frame, rendered in layered grey and pale yellow washes with a bright circular highlight near the upper center, against a black field scattered with small white dots.\",\n    \"Two eyes sit asymmetrically: the left is loosely sketched with a pale iris, the right is more tightly drawn with a vivid green iris and black pupil, both surrounded by loose black outlines that double and drift.\",\n    \"An open mouth near the lower center shows a grid of small rectangular shapes in grey and off-white, edged in orange-red lines; the surrounding face lines are thin, scratchy, and overlap without fully closing.\"\n  ],\n  \"reading\": \"The rounded form reads as a helmet visor, its reflective surface suggested by overlapping pale washes and a bright bloom of light. The two eyes differ enough in finish that they feel like separate moments of attention caught inside the same enclosure. The open, gridded mouth adds a note of strain or surprise. The dotted black surround keeps the whole image suspended, neither grounded nor adrift.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #103 and nnxyz nnotb #105. Where #103 uses flat silhouette and open teal space, #104 fills its field with layered washes and overlapping lines — a strong contrast in density across adjacent titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH\",\n      \"reason\": \"Scrimshaw7 shares the same basic face structure — two eyes, open toothed mouth, loose overlapping outlines — but replaces the cool grey-yellow palette and enclosed helmet form with dense multicolor lines radiating outward; the collector links both artists through this shared face-and-line vocabulary.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP\",\n      \"reason\": \"Title neighbor nnxyz nnotb #103 offers a direct contrast: a flat black silhouette with a single yellow eye against open teal, versus #104's dense layered washes and doubled lines filling the entire field.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded enclosing form\",\n    \"asymmetric eyes\",\n    \"open gridded mouth\",\n    \"overlapping loose outlines\",\n    \"pale yellow wash with bright highlight\",\n    \"dotted dark surround\"\n  ],\n  \"interpretiveTags\": [\n    \"strain or surprise\",\n    \"suspended isolation\"\n  ],\n  \"lookingQuestion\": \"The two eyes are drawn with noticeably different levels of finish — what does that difference do to how you move between them across the face?\",\n  \"ambiguities\": [\n    \"The rounded form strongly suggests a helmet visor, but no metadata confirms the subject; the reading treats it as a visual observation rather than a fact.\",\n    \"nnxyz nnotb #105 was inspected but its dense abstract layering shares no specific formal element with #104 strong enough to support a meaningful connection over the two already selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h/image.png",
+        "imageSHA256": "b1370d52a9d8bedf3794f2a6294e80a60934081fb195a0bf4d576164420b4a7b"
+      },
+      {
+        "artworkId": "QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP/image.png",
+        "imageSHA256": "fc2ffd0109245e677af8ee0ab8abfcd5d95fa77583c409beb27f73e3cb0ac85e"
+      },
+      {
+        "artworkId": "QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH/image.png",
+        "imageSHA256": "30c897acb60f720e36113b6ac820280895f839aced2f21524c42e5b1da47666a"
+      },
+      {
+        "artworkId": "QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG/image.png",
+        "imageSHA256": "0e30d7f28bccbc06b4194e1656409b552461098aeac2d57f392a0723a9e37d46"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:31.177921-05:00",
+    "usage": {
+      "inputTokens": 6610,
+      "outputTokens": 961,
+      "totalTokens": 7571,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6543
+    },
+    "requestId": "d112ae61-8029-421b-a2f6-af9f4d714062",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form fills most of the frame, rendered in layered grey and pale yellow washes with a bright circular highlight near the upper center, against a black field scattered with small white dots.\",\n    \"Two eyes sit asymmetrically: the left is loosely sketched with a pale iris, the right is more tightly drawn with a vivid green iris and black pupil, both surrounded by loose black outlines that double and drift.\",\n    \"An open mouth near the lower center shows a grid of small rectangular shapes in grey and off-white, edged in orange-red lines; the surrounding face lines are thin, scratchy, and overlap without fully closing.\"\n  ],\n  \"reading\": \"The rounded form reads as a helmet visor, its reflective surface suggested by overlapping pale washes and a bright bloom of light near the top. The two eyes differ enough in finish that they feel like separate moments of attention caught inside the same enclosure. The open, gridded mouth adds a note of strain or surprise. The dotted black surround keeps the whole image suspended.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #103 and nnxyz nnotb #105. Where #103 uses a flat black silhouette against open teal, #104 fills its field with layered washes and overlapping lines — a strong contrast in density across adjacent titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH\",\n      \"reason\": \"Scrimshaw7 shares the same basic face structure — two eyes, open toothed mouth, loose overlapping outlines — but replaces the cool grey-yellow palette and enclosed rounded form with dense multicolor lines radiating outward; the collector links both artists through this shared face-and-line vocabulary.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP\",\n      \"reason\": \"Title neighbor nnxyz nnotb #103 offers a direct contrast: a flat black silhouette with a single yellow eye against open teal, versus #104's dense layered washes and doubled lines filling the entire field.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded enclosing form\",\n    \"asymmetric eyes\",\n    \"open gridded mouth\",\n    \"overlapping loose outlines\",\n    \"pale yellow wash with bright highlight\",\n    \"dotted dark surround\"\n  ],\n  \"interpretiveTags\": [\n    \"strain or surprise\",\n    \"suspended isolation\"\n  ],\n  \"lookingQuestion\": \"The two eyes are drawn with noticeably different levels of finish — what does that difference do to how you move between them across the face?\",\n  \"ambiguities\": [\n    \"The rounded form strongly suggests a helmet visor, but no metadata confirms the subject; the reading treats it as a visual observation rather than a stated fact.\",\n    \"nnxyz nnotb #105 was inspected but its dense abstract layering shares no specific formal element with #104 strong enough to support a meaningful connection over the two already selected.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: grey-yellow washes, bright highlight, asymmetric eyes with green right iris, orange-red edged gridded mouth, and dotted black surround are all visible.\",\n    \"Scrimshaw7 comparison confirmed: two eyes, open toothed mouth, and loose overlapping outlines are visible in that image; multicolor radiating lines versus #104's enclosed grey-yellow palette is a concrete contrast, not a vague similarity.\",\n    \"Draft reading removed one redundant clause ('neither grounded nor adrift') that added stock metaphor without grounding in a specific observation; all remaining sentences trace back to visible evidence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSb1hBCnAx5xVgtztA35kCsWh8jyLkvdHMh9GPyJR8A4h/image.png",
+        "imageSHA256": "b1370d52a9d8bedf3794f2a6294e80a60934081fb195a0bf4d576164420b4a7b"
+      },
+      {
+        "artworkId": "QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP/image.png",
+        "imageSHA256": "fc2ffd0109245e677af8ee0ab8abfcd5d95fa77583c409beb27f73e3cb0ac85e"
+      },
+      {
+        "artworkId": "QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH/image.png",
+        "imageSHA256": "30c897acb60f720e36113b6ac820280895f839aced2f21524c42e5b1da47666a"
+      },
+      {
+        "artworkId": "QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG/image.png",
+        "imageSHA256": "0e30d7f28bccbc06b4194e1656409b552461098aeac2d57f392a0723a9e37d46"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded form fills most of the frame, rendered in layered grey and pale yellow washes with a bright circular highlight near the upper center, against a black field scattered with small white dots.\", \"Two eyes sit asymmetrically: the left is loosely sketched with a pale iris, the right is more tightly drawn with a vivid green iris and black pupil, both surrounded by loose black outlines that double and drift.\", \"An open mouth near the lower center shows a grid of small rectangular shapes in grey and off-white, edged in orange-red lines; the surrounding face lines are thin, scratchy, and overlap without fully closing.\"], \"reading\": \"The rounded form reads as a helmet visor, its reflective surface suggested by overlapping pale washes and a bright bloom of light. The two eyes differ enough in finish that they feel like separate moments of attention caught inside the same enclosure. The open, gridded mouth adds a note of strain or surprise. The dotted black surround keeps the whole image suspended, neither grounded nor adrift.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #103 and nnxyz nnotb #105. Where #103 uses flat silhouette and open teal space, #104 fills its field with layered washes and overlapping lines — a strong contrast in density across adjacent titles.\", \"connections\": [{\"targetArtworkId\": \"QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH\", \"reason\": \"Scrimshaw7 shares the same basic face structure — two eyes, open toothed mouth, loose overlapping outlines — but replaces the cool grey-yellow palette and enclosed helmet form with dense multicolor lines radiating outward; the collector links both artists through this shared face-and-line vocabulary.\"}, {\"targetArtworkId\": \"QmQ5e85VA7yJDKMVCCQAVFFFcdjgFt7XpqXbNzYB5Aw8aP\", \"reason\": \"Title neighbor nnxyz nnotb #103 offers a direct contrast: a flat black silhouette with a single yellow eye against open teal, versus #104's dense layered washes and doubled lines filling the entire field.\"}], \"tags\": [\"rounded enclosing form\", \"asymmetric eyes\", \"open gridded mouth\", \"overlapping loose outlines\", \"pale yellow wash with bright highlight\", \"dotted dark surround\"], \"interpretiveTags\": [\"strain or surprise\", \"suspended isolation\"], \"lookingQuestion\": \"The two eyes are drawn with noticeably different levels of finish — what does that difference do to how you move between them across the face?\", \"ambiguities\": [\"The rounded form strongly suggests a helmet visor, but no metadata confirms the subject; the reading treats it as a visual observation rather than a fact.\", \"nnxyz nnotb #105 was inspected but its dense abstract layering shares no specific formal element with #104 strong enough to support a meaningful connection over the two already selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

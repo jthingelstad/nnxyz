@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:57.087460-05:00",
+    "usage": {
+      "inputTokens": 6232,
+      "outputTokens": 710,
+      "totalTokens": 6942,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19740
+    },
+    "requestId": "a34c4366-5ddc-455c-8dee-3be9ffdb0cd9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large skull shape fills the frame, outlined in bright blue, with a translucent golden-yellow wash over most of its surface revealing layered marks beneath.\",\n    \"A chain-like linked structure runs vertically from the crown down to the jaw, connecting to a circular medallion with scalloped black petals and yellow rays on the right cheek area.\",\n    \"Radiating bands of saturated color—red, purple, orange, yellow—fan outward from behind the skull, while the teeth are rendered as alternating gold triangles and white dots.\"\n  ],\n  \"reading\": \"The skull sits warm and almost luminous against its pinwheel of color, reading less as menacing than as ornamental—a decorated vessel. The chain and medallion add weight to one side, pulling the composition rightward and giving the face an asymmetry that feels lopsided and alive. Triangular teeth and a single blank eye socket lend a grinning, hollow quality, somewhere between festive and unsettling.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #23\\\" and \\\"nnxyz rawblocks #25,\\\" both of which also center on skull-like heads. Where #23 uses a solid blue background and heavy dark outlines, #24 replaces darkness with a warm, translucent glow.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt\",\n      \"reason\": \"Both feature front-facing skulls with radiating lines behind them, but #25 uses stark white bone outlines and red rays while #24 relies on golden transparency and softer blue contours.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf\",\n      \"reason\": \"Both share a concentric eye motif with scalloped petal borders, though #23 embeds it in a clothed figure against flat blue while #24 mounts it on a bare skull amid radiating color.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"radiating background lines\",\n    \"chain-link structure\",\n    \"medallion motif\",\n    \"triangular teeth\",\n    \"layered transparency\"\n  ],\n  \"lookingQuestion\": \"How does the golden translucency of the skull's surface change your sense of what is solid and what is hollow in this image?\",\n  \"ambiguities\": [\n    \"Small symbols inside the medallion (a peace sign and a crescent) are partially obscured, making their exact forms uncertain.\",\n    \"Faint scribbled marks on the right side of the cranium may be text or abstract scratches; they are not legible enough to confirm.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmawLjdTx3bwHGvZdyp1ojdHfYX7WnQUwm34kzWjDBB8kX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmawLjdTx3bwHGvZdyp1ojdHfYX7WnQUwm34kzWjDBB8kX/image.png",
+        "imageSHA256": "185c101aa0bf864f264dbb0d3081012ceee461af66c4c9d9f566bb5e441cb09b"
+      },
+      {
+        "artworkId": "QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf/image.png",
+        "imageSHA256": "f764b3625f76438eeec80b7e9b217c5873ff98c09af5b94d40918cf17f477bf5"
+      },
+      {
+        "artworkId": "QmQKk2xn5VVwGsmRLQURJqsTU95m9APBGkEKfYN7PgkxyF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQKk2xn5VVwGsmRLQURJqsTU95m9APBGkEKfYN7PgkxyF/image.png",
+        "imageSHA256": "45ffb3070812d3630c96ccdefcf191f3bf5dce0ec41467e5aea558a385fb7dd8"
+      },
+      {
+        "artworkId": "QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt/image.png",
+        "imageSHA256": "eaab78c7f4fb25f529e0ed40d5c5e45f1d3c70e8480440ac4abf36402136ceb7"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:09:07.931242-05:00",
+    "usage": {
+      "inputTokens": 6974,
+      "outputTokens": 825,
+      "totalTokens": 7799,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10774
+    },
+    "requestId": "a2d73c13-1514-4010-a73a-47eaf5d13d75",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large skull shape fills the frame, outlined in bright blue, with a translucent golden-yellow wash over its surface revealing layered marks beneath.\",\n    \"A chain-like linked structure runs from the crown down to the jaw, connecting to a circular medallion with scalloped black petals and yellow rays on the right cheek area.\",\n    \"Radiating bands of saturated color—red, purple, orange, yellow—fan outward behind the skull, while the teeth are rendered as alternating gold triangles and white dots.\"\n  ],\n  \"reading\": \"The skull sits warm and almost luminous against its pinwheel of color, reading less as menacing than as ornamental—a decorated vessel. The chain and medallion add weight to one side, pulling the composition rightward and giving the face a lopsided quality. Triangular teeth and a single blank eye socket lend a grinning, hollow look, somewhere between festive and unsettling.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #23\\\" and \\\"nnxyz rawblocks #25,\\\" both of which also center on skull-like heads. Where #23 uses a solid blue background and heavy dark outlines, #24 replaces darkness with a warm, translucent glow.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt\",\n      \"reason\": \"Both feature front-facing skulls with radiating lines behind them, but #25 uses stark white bone outlines and red rays while #24 relies on golden transparency and softer blue contours.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf\",\n      \"reason\": \"Both share a concentric eye motif with scalloped petal borders, though #23 embeds it in a clothed figure against flat blue while #24 mounts it on a bare skull amid radiating color.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"radiating background lines\",\n    \"chain-link structure\",\n    \"medallion motif\",\n    \"triangular teeth\",\n    \"layered transparency\"\n  ],\n  \"lookingQuestion\": \"How does the golden translucency of the skull's surface change your sense of what is solid and what is hollow in this image?\",\n  \"ambiguities\": [\n    \"Small symbols inside the medallion (possibly a peace sign and a crescent) are partially obscured, making their exact forms uncertain.\",\n    \"Faint scribbled marks on the right side of the cranium may be text or abstract scratches; they are not legible enough to confirm.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed blue outline around skull, golden-yellow translucent wash, chain structure, and scalloped medallion all visible in the primary image.\",\n    \"Verified #25 comparison: white bone outlines and red radiating rays contrast with #24's blue contour and warm glow; both skulls face forward.\",\n    \"Removed 'single blank eye socket' phrasing—the left eye area does show a pale blank opening while the right holds the medallion, so the description is accurate as revised.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmawLjdTx3bwHGvZdyp1ojdHfYX7WnQUwm34kzWjDBB8kX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmawLjdTx3bwHGvZdyp1ojdHfYX7WnQUwm34kzWjDBB8kX/image.png",
+        "imageSHA256": "185c101aa0bf864f264dbb0d3081012ceee461af66c4c9d9f566bb5e441cb09b"
+      },
+      {
+        "artworkId": "QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf/image.png",
+        "imageSHA256": "f764b3625f76438eeec80b7e9b217c5873ff98c09af5b94d40918cf17f477bf5"
+      },
+      {
+        "artworkId": "QmQKk2xn5VVwGsmRLQURJqsTU95m9APBGkEKfYN7PgkxyF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQKk2xn5VVwGsmRLQURJqsTU95m9APBGkEKfYN7PgkxyF/image.png",
+        "imageSHA256": "45ffb3070812d3630c96ccdefcf191f3bf5dce0ec41467e5aea558a385fb7dd8"
+      },
+      {
+        "artworkId": "QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt/image.png",
+        "imageSHA256": "eaab78c7f4fb25f529e0ed40d5c5e45f1d3c70e8480440ac4abf36402136ceb7"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large skull shape fills the frame, outlined in bright blue, with a translucent golden-yellow wash over most of its surface revealing layered marks beneath.\", \"A chain-like linked structure runs vertically from the crown down to the jaw, connecting to a circular medallion with scalloped black petals and yellow rays on the right cheek area.\", \"Radiating bands of saturated color—red, purple, orange, yellow—fan outward from behind the skull, while the teeth are rendered as alternating gold triangles and white dots.\"], \"reading\": \"The skull sits warm and almost luminous against its pinwheel of color, reading less as menacing than as ornamental—a decorated vessel. The chain and medallion add weight to one side, pulling the composition rightward and giving the face an asymmetry that feels lopsided and alive. Triangular teeth and a single blank eye socket lend a grinning, hollow quality, somewhere between festive and unsettling.\", \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #23\\\" and \\\"nnxyz rawblocks #25,\\\" both of which also center on skull-like heads. Where #23 uses a solid blue background and heavy dark outlines, #24 replaces darkness with a warm, translucent glow.\", \"connections\": [{\"targetArtworkId\": \"QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt\", \"reason\": \"Both feature front-facing skulls with radiating lines behind them, but #25 uses stark white bone outlines and red rays while #24 relies on golden transparency and softer blue contours.\"}, {\"targetArtworkId\": \"QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf\", \"reason\": \"Both share a concentric eye motif with scalloped petal borders, though #23 embeds it in a clothed figure against flat blue while #24 mounts it on a bare skull amid radiating color.\"}], \"tags\": [\"skull form\", \"radiating background lines\", \"chain-link structure\", \"medallion motif\", \"triangular teeth\", \"layered transparency\"], \"lookingQuestion\": \"How does the golden translucency of the skull's surface change your sense of what is solid and what is hollow in this image?\", \"ambiguities\": [\"Small symbols inside the medallion (a peace sign and a crescent) are partially obscured, making their exact forms uncertain.\", \"Faint scribbled marks on the right side of the cranium may be text or abstract scratches; they are not legible enough to confirm.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

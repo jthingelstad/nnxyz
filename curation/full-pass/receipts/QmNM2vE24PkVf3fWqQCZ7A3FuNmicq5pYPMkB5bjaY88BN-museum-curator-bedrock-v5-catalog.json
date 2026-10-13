@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:44.282121-05:00",
+    "usage": {
+      "inputTokens": 6357,
+      "outputTokens": 798,
+      "totalTokens": 7155,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12592
+    },
+    "requestId": "44dfcb03-efd6-4e74-9995-021732211e01",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A yellow-green face fills the center, outlined by a fine yellow grid of crossing lines that maps the forehead, cheeks, and jaw like a wire mesh draped over the form.\",\n    \"Jagged black teeth crown the top of the head and a red-rimmed open mouth with white rectangular teeth sits at the lower center, both sets of teeth echoing each other across the vertical axis.\",\n    \"Spiral forms appear in three corners and along the left cheek, drawn in blue, white, and pink, while loose parallel lines in yellow, pink, and blue extend behind the face against a flat pink background.\"\n  ],\n  \"reading\": \"The face is held inside a yellow grid that flattens and maps it at the same time, suggesting containment and exposure together. Two sets of teeth — one crowning the head, one splitting the lower face — give the image a doubled, unsettled quality. The spirals at the margins feel like pressure building at the edges of a form that is already stretched thin. Blue eyes with small coiled pupils hold the center without resolving the tension around them.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #228 and nnxyz nnotb #230 in both title and recorded creation order. Where #228 uses a cool purple field and radiating dashes, #229 packs its background with vertical color bars and layered line systems, producing a denser, louder surface.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK\",\n      \"reason\": \"nnxyz nnotb #230 shares the wire-grid face structure and white rectangular teeth block, but replaces the hot pink field with muted greys, making the same formal vocabulary feel heavier and more closed.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWA49E8DoFLVSNDT6s2VEh6yi5xvQ93HoSzcHkrXo2jWY\",\n      \"reason\": \"nnxyz nnotb #228 uses the same spiral motif and a crown of spiky marks at the top of the head, but its single-color background and radiating dashes produce a more open, less layered composition than #229.\"\n    }\n  ],\n  \"tags\": [\n    \"wire-grid face overlay\",\n    \"doubled teeth motif\",\n    \"spiral corner marks\",\n    \"vertical color bar background\",\n    \"coiled eye detail\",\n    \"pink ground\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"containment\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"The yellow grid lines cross the face at regular intervals — where do they hold the form together and where do they seem to pull it apart?\",\n  \"ambiguities\": [\n    \"The nifty-faces #120 comparison image was inspected but shares only a general multi-line face format with no specific formal feature strong enough to warrant a connection over the two nnotb neighbors.\",\n    \"Whether the crown of jagged marks at the top of the head reads as hair, a separate object, or a purely linear pattern cannot be resolved from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN/image.png",
+        "imageSHA256": "09f6c418e5da5dc3f00f53354d5a744f5add0b8eda0edb7299a5053412d935dc"
+      },
+      {
+        "artworkId": "QmWA49E8DoFLVSNDT6s2VEh6yi5xvQ93HoSzcHkrXo2jWY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWA49E8DoFLVSNDT6s2VEh6yi5xvQ93HoSzcHkrXo2jWY/image.png",
+        "imageSHA256": "8942dbbf9b70c6f8b354e56c09972ac5ab8ea61b370db501072051a0cfc8f5f1"
+      },
+      {
+        "artworkId": "QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN/image.png",
+        "imageSHA256": "cd547c8669a74bd13d425f6cdf2a5f51264252bb65f353af45fdca71566898f9"
+      },
+      {
+        "artworkId": "QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK/image.png",
+        "imageSHA256": "88b1e757ab4591ad823c2c714a73e1bce995d39683c48770d581d15bbee5c612"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:51.148000-05:00",
+    "usage": {
+      "inputTokens": 7175,
+      "outputTokens": 927,
+      "totalTokens": 8102,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6619
+    },
+    "requestId": "88aa96a2-c66d-4e73-a157-231ebb29d33a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A yellow-green face fills the center, outlined by a fine yellow grid of crossing lines that maps the forehead, cheeks, and jaw like a wire mesh draped over the form.\",\n    \"Jagged black marks crown the top of the head and a red-rimmed open mouth with white rectangular teeth sits at the lower center, both sets of marks echoing each other across the vertical axis.\",\n    \"Spiral forms appear in three corners and along the left cheek, drawn in blue, white, and pink, while loose parallel lines in yellow, pink, and blue extend behind the face against a flat pink background.\"\n  ],\n  \"reading\": \"The face is held inside a yellow grid that flattens and maps it at the same time, suggesting containment and exposure together. Two sets of marks — one crowning the head, one splitting the lower face — give the image a doubled, unsettled quality. The spirals at the margins feel like pressure building at the edges of a form already stretched thin. Blue eyes with small coiled pupils hold the center without resolving the tension around them.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #228 and nnxyz nnotb #230 in both title and recorded creation order. Where #228 uses a cool purple field and radiating dashes, #229 packs its background with vertical color bars and layered line systems, producing a denser surface.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK\",\n      \"reason\": \"nnxyz nnotb #230 shares the wire-grid face structure and white rectangular teeth block, but replaces the hot pink field with muted greys, making the same formal vocabulary feel heavier and more closed.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWA49E8DoFLVSNDT6s2VEh6yi5xvQ93HoSzcHkrXo2jWY\",\n      \"reason\": \"nnxyz nnotb #228 uses the same spiral motif and a crown of spiky marks at the top of the head, but its single-color background and radiating dashes produce a more open, less layered composition than #229.\"\n    }\n  ],\n  \"tags\": [\n    \"wire-grid face overlay\",\n    \"doubled teeth motif\",\n    \"spiral corner marks\",\n    \"vertical color bar background\",\n    \"coiled eye detail\",\n    \"pink ground\"\n  ],\n  \"interpretiveTags\": [\"tension\", \"containment\", \"unsettled\"],\n  \"lookingQuestion\": \"The yellow grid lines cross the face at regular intervals — where do they hold the form together and where do they seem to pull it apart?\",\n  \"ambiguities\": [\n    \"The nifty-faces #120 comparison image was inspected but shares only a general multi-line face format with no specific formal feature strong enough to warrant a connection over the two nnotb neighbors.\",\n    \"Whether the crown of jagged marks at the top of the head reads as hair, a separate object, or a purely linear pattern cannot be resolved from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Draft called the crown marks 'black teeth' — confirmed jagged black marks are visible but calling them teeth is an unsupported identity; corrected to 'jagged black marks' to describe visible form only.\",\n    \"All spiral placements (three corners, left cheek), pink background, yellow grid, red-rimmed mouth with white rectangles, and blue coiled eyes confirmed against the primary image.\",\n    \"Both comparison connections verified against inspected images: #230 confirms grey field with grid face and white tooth block; #228 confirms purple field, spiral motif, and spiky crown marks.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNM2vE24PkVf3fWqQCZ7A3FuNmicq5pYPMkB5bjaY88BN/image.png",
+        "imageSHA256": "09f6c418e5da5dc3f00f53354d5a744f5add0b8eda0edb7299a5053412d935dc"
+      },
+      {
+        "artworkId": "QmWA49E8DoFLVSNDT6s2VEh6yi5xvQ93HoSzcHkrXo2jWY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWA49E8DoFLVSNDT6s2VEh6yi5xvQ93HoSzcHkrXo2jWY/image.png",
+        "imageSHA256": "8942dbbf9b70c6f8b354e56c09972ac5ab8ea61b370db501072051a0cfc8f5f1"
+      },
+      {
+        "artworkId": "QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaVjqDWgVxZrHmKVGH8L36Y5PKwV1butxc42qxDG5EneN/image.png",
+        "imageSHA256": "cd547c8669a74bd13d425f6cdf2a5f51264252bb65f353af45fdca71566898f9"
+      },
+      {
+        "artworkId": "QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK/image.png",
+        "imageSHA256": "88b1e757ab4591ad823c2c714a73e1bce995d39683c48770d581d15bbee5c612"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A yellow-green face fills the center, outlined by a fine yellow grid of crossing lines that maps the forehead, cheeks, and jaw like a wire mesh draped over the form.\", \"Jagged black teeth crown the top of the head and a red-rimmed open mouth with white rectangular teeth sits at the lower center, both sets of teeth echoing each other across the vertical axis.\", \"Spiral forms appear in three corners and along the left cheek, drawn in blue, white, and pink, while loose parallel lines in yellow, pink, and blue extend behind the face against a flat pink background.\"], \"reading\": \"The face is held inside a yellow grid that flattens and maps it at the same time, suggesting containment and exposure together. Two sets of teeth — one crowning the head, one splitting the lower face — give the image a doubled, unsettled quality. The spirals at the margins feel like pressure building at the edges of a form that is already stretched thin. Blue eyes with small coiled pupils hold the center without resolving the tension around them.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnxyz nnotb #228 and nnxyz nnotb #230 in both title and recorded creation order. Where #228 uses a cool purple field and radiating dashes, #229 packs its background with vertical color bars and layered line systems, producing a denser, louder surface.\", \"connections\": [{\"targetArtworkId\": \"QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK\", \"reason\": \"nnxyz nnotb #230 shares the wire-grid face structure and white rectangular teeth block, but replaces the hot pink field with muted greys, making the same formal vocabulary feel heavier and more closed.\"}, {\"targetArtworkId\": \"QmWA49E8DoFLVSNDT6s2VEh6yi5xvQ93HoSzcHkrXo2jWY\", \"reason\": \"nnxyz nnotb #228 uses the same spiral motif and a crown of spiky marks at the top of the head, but its single-color background and radiating dashes produce a more open, less layered composition than #229.\"}], \"tags\": [\"wire-grid face overlay\", \"doubled teeth motif\", \"spiral corner marks\", \"vertical color bar background\", \"coiled eye detail\", \"pink ground\"], \"interpretiveTags\": [\"tension\", \"containment\", \"unsettled\"], \"lookingQuestion\": \"The yellow grid lines cross the face at regular intervals — where do they hold the form together and where do they seem to pull it apart?\", \"ambiguities\": [\"The nifty-faces #120 comparison image was inspected but shares only a general multi-line face format with no specific formal feature strong enough to warrant a connection over the two nnotb neighbors.\", \"Whether the crown of jagged marks at the top of the head reads as hair, a separate object, or a purely linear pattern cannot be resolved from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:15.488426-05:00",
+    "usage": {
+      "inputTokens": 6229,
+      "outputTokens": 730,
+      "totalTokens": 6959,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11573
+    },
+    "requestId": "068df650-2204-4ef0-bc07-c3f3cb7c3cec",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid black spiral-shelled form sits on a flat black ground strip, with a yellow spiral line visible inside the shell and two small cross-marked eyes near the right edge of the body.\",\n    \"Radiating outward from behind the shell, lines fan across the yellow field: straight lines on the outer edges and tightly zigzagging lines clustered near the center top, mixing two distinct line behaviors.\",\n    \"The composition is split into three horizontal bands — open yellow sky occupying roughly the top half, the black figure centered low, and a flat black ground strip at the bottom — leaving the upper field almost entirely empty.\"\n  ],\n  \"reading\": \"A black coiled form rests low in the frame, its shell enclosing a single yellow spiral. Lines burst outward from behind it — some straight, some sharply zigzagged — filling the yellow field with a sense of pressure or noise. The cross-marked eyes read as weary or dazed. The vast empty yellow above the figure makes the stillness feel heavy rather than open.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work shares its flat yellow field and black silhouette approach with title neighbor nnxyz nnotb #130, where a similar figure-on-yellow format appears. Both use radiating lines from a central black form, though the emotional weight differs markedly between the two.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF\",\n      \"reason\": \"Both works use a flat saturated yellow ground, a single black silhouette placed low in the frame, and the same radiating mixed-line pattern fanning outward from the figure's head area.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral form\",\n    \"radiating lines\",\n    \"two-color composition\",\n    \"zigzag lines\",\n    \"black silhouette\",\n    \"flat ground strip\"\n  ],\n  \"interpretiveTags\": [\n    \"stillness under pressure\",\n    \"dazed mood\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the straight radiating lines end and the zigzagging lines begin, and what does that boundary do to the space around the shell?\",\n  \"ambiguities\": [\n    \"The cross-marked marks near the figure's face could indicate eyes, stitching, or a purely graphic mark — the image does not resolve this.\",\n    \"nnxyz nnotb #100 (QmRQa8nu3BaaLVBGLUqkjiN46E6wVYYczPDyFhk9KZ6r1g) and nnxyz nnotb #102 (QmaUM1y4DsJPTRMe25nSRUXk9pBdVEqt59X9iHtDsjYHiZ) share no strong formal connection to the primary work beyond title adjacency, so neither is included as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdGce5bGM41Wwe7mMF5tzF8zUamJjw55hNezXbVkDCQbW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdGce5bGM41Wwe7mMF5tzF8zUamJjw55hNezXbVkDCQbW/image.png",
+        "imageSHA256": "18ca99b1b1b8dd581d6d4b5e6e075d9f640987f68ec8c254f9529566d9a72d6f"
+      },
+      {
+        "artworkId": "QmRQa8nu3BaaLVBGLUqkjiN46E6wVYYczPDyFhk9KZ6r1g",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRQa8nu3BaaLVBGLUqkjiN46E6wVYYczPDyFhk9KZ6r1g/image.png",
+        "imageSHA256": "a337e36591b9788fad12728040b87a3e605193bde21f3405dfc95348b1c91147"
+      },
+      {
+        "artworkId": "QmaUM1y4DsJPTRMe25nSRUXk9pBdVEqt59X9iHtDsjYHiZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaUM1y4DsJPTRMe25nSRUXk9pBdVEqt59X9iHtDsjYHiZ/image.png",
+        "imageSHA256": "e3dfbca7a91d936733f03056bccdc5aa39ecf7adca87cc3feaea3f0ba56c85a8"
+      },
+      {
+        "artworkId": "QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF/image.png",
+        "imageSHA256": "3d9c8db88ca457dea8a767ac2999547bc12f17c8bc2d1b9f35cb2234902925bb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:22.236893-05:00",
+    "usage": {
+      "inputTokens": 6990,
+      "outputTokens": 810,
+      "totalTokens": 7800,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6676
+    },
+    "requestId": "69cbc5ec-1c89-4979-b6bd-e3bc2bd9f79f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A solid black coiled form sits on a flat black ground strip; a yellow spiral line is visible inside the shell, and two small cross-marked points appear near the right edge of the body.\",\n    \"Lines fan outward from behind the shell across the yellow field: straight lines toward the outer edges, tightly zigzagging lines clustered near the center top, mixing two distinct line behaviors in the same burst.\",\n    \"The composition divides into three horizontal bands — open yellow occupying roughly the top half, the black form centered low, and a flat black ground strip at the bottom — leaving the upper field almost entirely bare.\"\n  ],\n  \"reading\": \"A black coiled form rests low in the frame, its shell enclosing a single yellow spiral. Lines burst outward from behind it — some straight, some sharply zigzagged — filling the yellow field with a sense of pressure or noise. The cross-marked points read as weary or dazed. The large empty yellow above makes the stillness feel heavy rather than open.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #130 shares the same flat saturated yellow field, black silhouette placed low, and radiating mixed lines fanning from the figure's head. The emotional weight between the two reads as markedly different.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF\",\n      \"reason\": \"Both works use a flat saturated yellow ground, a single black silhouette placed low in the frame, and a radiating burst of mixed straight and zigzag lines fanning outward from the figure's head area.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral form\",\n    \"radiating lines\",\n    \"two-color composition\",\n    \"zigzag lines\",\n    \"black silhouette\",\n    \"flat ground strip\"\n  ],\n  \"interpretiveTags\": [\n    \"stillness under pressure\",\n    \"dazed mood\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the straight radiating lines end and the zigzagging lines begin, and what does that boundary do to the space around the shell?\",\n  \"ambiguities\": [\n    \"The cross-marked points near the figure's face could indicate eyes, stitching, or a purely graphic mark — the image does not resolve this.\",\n    \"nnxyz nnotb #100 and nnxyz nnotb #102 share no strong formal connection to the primary work beyond title adjacency and are excluded as connections.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: yellow field, black silhouette, yellow interior spiral, cross-marked face marks, straight-plus-zigzag radiating lines, and flat black ground strip all verified against the primary image.\",\n    \"QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF (#130) confirmed via its image: flat yellow ground, black silhouette low in frame, radiating mixed lines — comparison is well-supported; retained.\",\n    \"Draft reading removed one unsupported word ('vast'); 'large' substituted. No invented biography, technique, or intent language found. Word counts fall within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdGce5bGM41Wwe7mMF5tzF8zUamJjw55hNezXbVkDCQbW",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdGce5bGM41Wwe7mMF5tzF8zUamJjw55hNezXbVkDCQbW/image.png",
+        "imageSHA256": "18ca99b1b1b8dd581d6d4b5e6e075d9f640987f68ec8c254f9529566d9a72d6f"
+      },
+      {
+        "artworkId": "QmRQa8nu3BaaLVBGLUqkjiN46E6wVYYczPDyFhk9KZ6r1g",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRQa8nu3BaaLVBGLUqkjiN46E6wVYYczPDyFhk9KZ6r1g/image.png",
+        "imageSHA256": "a337e36591b9788fad12728040b87a3e605193bde21f3405dfc95348b1c91147"
+      },
+      {
+        "artworkId": "QmaUM1y4DsJPTRMe25nSRUXk9pBdVEqt59X9iHtDsjYHiZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaUM1y4DsJPTRMe25nSRUXk9pBdVEqt59X9iHtDsjYHiZ/image.png",
+        "imageSHA256": "e3dfbca7a91d936733f03056bccdc5aa39ecf7adca87cc3feaea3f0ba56c85a8"
+      },
+      {
+        "artworkId": "QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF/image.png",
+        "imageSHA256": "3d9c8db88ca457dea8a767ac2999547bc12f17c8bc2d1b9f35cb2234902925bb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A solid black spiral-shelled form sits on a flat black ground strip, with a yellow spiral line visible inside the shell and two small cross-marked eyes near the right edge of the body.\", \"Radiating outward from behind the shell, lines fan across the yellow field: straight lines on the outer edges and tightly zigzagging lines clustered near the center top, mixing two distinct line behaviors.\", \"The composition is split into three horizontal bands — open yellow sky occupying roughly the top half, the black figure centered low, and a flat black ground strip at the bottom — leaving the upper field almost entirely empty.\"], \"reading\": \"A black coiled form rests low in the frame, its shell enclosing a single yellow spiral. Lines burst outward from behind it — some straight, some sharply zigzagged — filling the yellow field with a sense of pressure or noise. The cross-marked eyes read as weary or dazed. The vast empty yellow above the figure makes the stillness feel heavy rather than open.\", \"contextAngle\": \"Within the owned nnotb subset, this work shares its flat yellow field and black silhouette approach with title neighbor nnxyz nnotb #130, where a similar figure-on-yellow format appears. Both use radiating lines from a central black form, though the emotional weight differs markedly between the two.\", \"connections\": [{\"targetArtworkId\": \"QmaHRdwq347q7hyNkv4N71USG5H1zVViMGrHeXwUz2SDBF\", \"reason\": \"Both works use a flat saturated yellow ground, a single black silhouette placed low in the frame, and the same radiating mixed-line pattern fanning outward from the figure's head area.\"}], \"tags\": [\"spiral form\", \"radiating lines\", \"two-color composition\", \"zigzag lines\", \"black silhouette\", \"flat ground strip\"], \"interpretiveTags\": [\"stillness under pressure\", \"dazed mood\"], \"lookingQuestion\": \"Where exactly do the straight radiating lines end and the zigzagging lines begin, and what does that boundary do to the space around the shell?\", \"ambiguities\": [\"The cross-marked marks near the figure's face could indicate eyes, stitching, or a purely graphic mark — the image does not resolve this.\", \"nnxyz nnotb #100 (QmRQa8nu3BaaLVBGLUqkjiN46E6wVYYczPDyFhk9KZ6r1g) and nnxyz nnotb #102 (QmaUM1y4DsJPTRMe25nSRUXk9pBdVEqt59X9iHtDsjYHiZ) share no strong formal connection to the primary work beyond title adjacency, so neither is included as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

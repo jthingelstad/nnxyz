@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:45.080187-05:00",
+    "usage": {
+      "inputTokens": 6068,
+      "outputTokens": 738,
+      "totalTokens": 6806,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12788
+    },
+    "requestId": "156ba2b8-4156-4824-a555-c38d329a32d6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two rectangular eye zones sit side by side in the upper half of the face, each filled with dense crossing black lines over red and white, with small curved forms nested inside.\",\n    \"A broad yellow band runs across the forehead, flanked by red and orange shapes at the top corners; loose black scribble lines extend beyond the face outline onto the grey background.\",\n    \"The lower face is divided into a wide rectangular mouth block, outlined in black and yellow with white grid lines inside, sitting below a compressed nose area filled with teal and orange marks.\"\n  ],\n  \"reading\": \"The face is built from stacked rectangular zones rather than curved anatomy, giving it a flat, mask-like solidity. Dense crossing lines pack the eye areas until they read as texture rather than gaze. The warm red, yellow, and orange blocks press against each other with little breathing room, while teal and white marks surface unexpectedly in the lower half. The overall effect reads as confrontational containment — energy held inside hard edges.\",\n  \"contextAngle\": \"Within the owned subset of the nifty-faces series, this work sits between title neighbors #100 and #102. Where #100 uses layered translucent fills and smooth curves, #101 shifts to opaque flat blocks and heavy crossing lines — a strong contrast in surface approach across adjacent titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd\",\n      \"reason\": \"Scrimshaw 40 shares the same grey background, crossed-line eye treatment, and rectangular mouth block, making it the clearest visual parallel across the two collections the collector links by these qualities.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY\",\n      \"reason\": \"Title neighbor #100 uses a similar frontal face structure and teal accents but replaces the crossing-line texture with smooth overlapping fills, offering a direct contrast in mark density.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular eye zones\",\n    \"crossing line texture\",\n    \"flat color blocks\",\n    \"mask-like face structure\",\n    \"yellow forehead band\",\n    \"grid-lined mouth\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"contained energy\"\n  ],\n  \"lookingQuestion\": \"How do the lines inside the eye rectangles behave differently from the loose scribble lines that extend beyond the face outline — and what does that difference do to the boundary between the face and the background?\",\n  \"ambiguities\": [\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps exist elsewhere in the series, so adjacency does not confirm these were made in sequence.\",\n    \"The teal and white marks in the lower face are partially obscured by overlapping black lines, making their exact shapes difficult to read with certainty.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV/image.png",
+        "imageSHA256": "e55a6cae552483214e63fe56234fb274efbd223ccd2717c133227622f43be760"
+      },
+      {
+        "artworkId": "QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY/image.png",
+        "imageSHA256": "35071101d5a52604a4979b2386732acfc14944b8d89725661cd94480fa78b973"
+      },
+      {
+        "artworkId": "QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd/image.png",
+        "imageSHA256": "ac0065d1817a032625a2400fd56070f2cc8f5fee5c9da9da48500a21919945c1"
+      },
+      {
+        "artworkId": "QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo/image.png",
+        "imageSHA256": "3c2e27b4fb718f1546f287e4544bd6ef531c0113ce2565a9a83bf31fcc63d6ac"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:51.077139-05:00",
+    "usage": {
+      "inputTokens": 6828,
+      "outputTokens": 853,
+      "totalTokens": 7681,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5922
+    },
+    "requestId": "4cddd0a5-0ac4-4e83-b5a7-0622e589a682",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two rectangular eye zones sit side by side in the upper half, each packed with dense crossing black lines over red and white, with small curved forms nested inside.\",\n    \"A broad yellow band runs across the forehead, flanked by red and orange shapes at the top corners; loose black scribble lines extend beyond the face outline onto the grey background.\",\n    \"The lower face ends in a wide rectangular mouth block outlined in black and yellow with white grid lines inside, sitting below a compressed mid-face area carrying teal and orange marks.\"\n  ],\n  \"reading\": \"The face is built from stacked rectangular zones rather than curved anatomy, giving it a flat, mask-like solidity. Dense crossing lines pack the eye areas until they read as texture rather than gaze. Warm red, yellow, and orange blocks press against each other with little breathing room, while teal and white marks surface in the lower half. The result reads as energy held inside hard edges.\",\n  \"contextAngle\": \"Within the owned subset of the nifty-faces series, this work sits between title neighbors #100 and #102. Where #100 uses layered translucent fills and smooth curves, #101 shifts to opaque flat blocks and heavy crossing lines — a strong contrast in surface approach across adjacent titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd\",\n      \"reason\": \"Scrimshaw 40 shares the same grey background, crossed-line eye treatment, and a rectangular mouth block, making it the clearest visual parallel across the two collections the collector links by these qualities.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY\",\n      \"reason\": \"Title neighbor #100 uses a similar frontal face structure and teal accents but replaces the crossing-line texture with smooth overlapping fills, offering a direct contrast in mark density.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular eye zones\",\n    \"crossing line texture\",\n    \"flat color blocks\",\n    \"mask-like face structure\",\n    \"yellow forehead band\",\n    \"grid-lined mouth\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"contained energy\"\n  ],\n  \"lookingQuestion\": \"How do the lines inside the eye rectangles behave differently from the loose scribble lines that extend beyond the face outline — and what does that difference do to the boundary between the face and the background?\",\n  \"ambiguities\": [\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps exist elsewhere in the series, so adjacency does not confirm these were made in sequence.\",\n    \"Teal and white marks in the lower face are partially obscured by overlapping black lines, making their exact shapes difficult to read with certainty.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: yellow forehead band, crossing-line eye rectangles, and grid-lined mouth block are all clearly visible.\",\n    \"Scrimshaw 40 comparison confirmed: grey background, crossed-line eyes, and rectangular mouth block are visible in that image, supporting the stated parallel.\",\n    \"Removed one instance of 'confrontational containment' from the reading body to avoid repeating the interpretive tag as a factual claim; replaced with neutral description of the visible result.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV/image.png",
+        "imageSHA256": "e55a6cae552483214e63fe56234fb274efbd223ccd2717c133227622f43be760"
+      },
+      {
+        "artworkId": "QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY/image.png",
+        "imageSHA256": "35071101d5a52604a4979b2386732acfc14944b8d89725661cd94480fa78b973"
+      },
+      {
+        "artworkId": "QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd/image.png",
+        "imageSHA256": "ac0065d1817a032625a2400fd56070f2cc8f5fee5c9da9da48500a21919945c1"
+      },
+      {
+        "artworkId": "QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo/image.png",
+        "imageSHA256": "3c2e27b4fb718f1546f287e4544bd6ef531c0113ce2565a9a83bf31fcc63d6ac"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two rectangular eye zones sit side by side in the upper half of the face, each filled with dense crossing black lines over red and white, with small curved forms nested inside.\", \"A broad yellow band runs across the forehead, flanked by red and orange shapes at the top corners; loose black scribble lines extend beyond the face outline onto the grey background.\", \"The lower face is divided into a wide rectangular mouth block, outlined in black and yellow with white grid lines inside, sitting below a compressed nose area filled with teal and orange marks.\"], \"reading\": \"The face is built from stacked rectangular zones rather than curved anatomy, giving it a flat, mask-like solidity. Dense crossing lines pack the eye areas until they read as texture rather than gaze. The warm red, yellow, and orange blocks press against each other with little breathing room, while teal and white marks surface unexpectedly in the lower half. The overall effect reads as confrontational containment — energy held inside hard edges.\", \"contextAngle\": \"Within the owned subset of the nifty-faces series, this work sits between title neighbors #100 and #102. Where #100 uses layered translucent fills and smooth curves, #101 shifts to opaque flat blocks and heavy crossing lines — a strong contrast in surface approach across adjacent titles.\", \"connections\": [{\"targetArtworkId\": \"QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd\", \"reason\": \"Scrimshaw 40 shares the same grey background, crossed-line eye treatment, and rectangular mouth block, making it the clearest visual parallel across the two collections the collector links by these qualities.\"}, {\"targetArtworkId\": \"QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY\", \"reason\": \"Title neighbor #100 uses a similar frontal face structure and teal accents but replaces the crossing-line texture with smooth overlapping fills, offering a direct contrast in mark density.\"}], \"tags\": [\"rectangular eye zones\", \"crossing line texture\", \"flat color blocks\", \"mask-like face structure\", \"yellow forehead band\", \"grid-lined mouth\"], \"interpretiveTags\": [\"confrontational\", \"contained energy\"], \"lookingQuestion\": \"How do the lines inside the eye rectangles behave differently from the loose scribble lines that extend beyond the face outline — and what does that difference do to the boundary between the face and the background?\", \"ambiguities\": [\"Title-derived order and recorded-creation order align here, but the metadata notes gaps exist elsewhere in the series, so adjacency does not confirm these were made in sequence.\", \"The teal and white marks in the lower face are partially obscured by overlapping black lines, making their exact shapes difficult to read with certainty.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:19.842307-05:00",
+    "usage": {
+      "inputTokens": 6561,
+      "outputTokens": 816,
+      "totalTokens": 7377,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11948
+    },
+    "requestId": "6876369a-93f1-46b5-aa48-6d6623e637fa",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"Two rectangular eye zones sit side by side in the upper half, each packed with dense crossing black lines over red and white, with small curved forms nested inside.\",\n    \"A broad yellow band runs across the forehead, flanked by red and orange shapes at the top corners; loose black scribble lines extend beyond the face outline onto the grey background.\",\n    \"The lower face ends in a wide rectangular mouth block outlined in black and yellow with white grid lines inside, sitting below a compressed mid-face area carrying teal and orange marks.\"\n  ],\n  \"reading\": \"Stacked rectangular zones replace curved anatomy, pressing red, yellow, and orange blocks against each other with almost no breathing room. Dense crossing lines fill the eye areas until they read as texture rather than gaze, while teal and white marks surface only in the compressed lower half. The hard-edged containment reads as tension — warmth and motion locked inside rigid geometry, a mask that resists softening.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #100 and #102. Where #100 uses translucent fills and smooth curves, #101 shifts to opaque flat blocks and heavy crossing lines — a sharp contrast in surface approach across adjacent titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd\",\n      \"reason\": \"Scrimshaw 40 shares the same grey background, crossed-line eye treatment, and a rectangular mouth block, making it the clearest visual parallel across the two collections the collector links by these qualities.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY\",\n      \"reason\": \"Title neighbor #100 uses a similar frontal face structure and teal accents but replaces the crossing-line texture with smooth overlapping fills, offering a direct contrast in mark density.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular eye zones\",\n    \"crossing line texture\",\n    \"flat color blocks\",\n    \"mask-like face structure\",\n    \"yellow forehead band\",\n    \"grid-lined mouth\"\n  ],\n  \"lookingQuestion\": \"How do the lines inside the eye rectangles behave differently from the loose scribble lines that extend beyond the face outline — and what does that difference do to the boundary between the face and the background?\",\n  \"ambiguities\": [\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps exist elsewhere in the series, so adjacency does not confirm these were made in sequence.\",\n    \"Teal and white marks in the lower face are partially obscured by overlapping black lines, making their exact shapes difficult to read with certainty.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced opening phrase 'The face is built from' with a specific structural observation ('Stacked rectangular zones replace curved anatomy') to avoid the flagged repeated-opening pattern.\",\n    \"Reading holds at 63 words; context at 37 words — both within required ranges.\",\n    \"Cross-collection connection to Scrimshaw 40 confirmed by inspecting both images: grey background, crossed-line eye zones, and rectangular mouth block are visible in both works.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV/image.png",
+        "imageSHA256": "e55a6cae552483214e63fe56234fb274efbd223ccd2717c133227622f43be760"
+      },
+      {
+        "artworkId": "QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY/image.png",
+        "imageSHA256": "35071101d5a52604a4979b2386732acfc14944b8d89725661cd94480fa78b973"
+      },
+      {
+        "artworkId": "QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd/image.png",
+        "imageSHA256": "ac0065d1817a032625a2400fd56070f2cc8f5fee5c9da9da48500a21919945c1"
+      },
+      {
+        "artworkId": "QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo/image.png",
+        "imageSHA256": "3c2e27b4fb718f1546f287e4544bd6ef531c0113ce2565a9a83bf31fcc63d6ac"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"Two rectangular eye zones sit side by side in the upper half, each packed with dense crossing black lines over red and white, with small curved forms nested inside.\", \"A broad yellow band runs across the forehead, flanked by red and orange shapes at the top corners; loose black scribble lines extend beyond the face outline onto the grey background.\", \"The lower face ends in a wide rectangular mouth block outlined in black and yellow with white grid lines inside, sitting below a compressed mid-face area carrying teal and orange marks.\"], \"reading\": \"The face is built from stacked rectangular zones rather than curved anatomy, giving it a flat, mask-like solidity. Dense crossing lines pack the eye areas until they read as texture rather than gaze. Warm red, yellow, and orange blocks press against each other with little breathing room, while teal and white marks surface in the lower half. The result reads as energy held inside hard edges.\", \"contextAngle\": \"Within the owned subset of the nifty-faces series, this work sits between title neighbors #100 and #102. Where #100 uses layered translucent fills and smooth curves, #101 shifts to opaque flat blocks and heavy crossing lines — a strong contrast in surface approach across adjacent titles.\", \"connections\": [{\"targetArtworkId\": \"QmUXMPwYx8HWSFdJRH7kXBybaKddUrpa5xbNEEKAjRTaGd\", \"reason\": \"Scrimshaw 40 shares the same grey background, crossed-line eye treatment, and a rectangular mouth block, making it the clearest visual parallel across the two collections the collector links by these qualities.\"}, {\"targetArtworkId\": \"QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY\", \"reason\": \"Title neighbor #100 uses a similar frontal face structure and teal accents but replaces the crossing-line texture with smooth overlapping fills, offering a direct contrast in mark density.\"}], \"tags\": [\"rectangular eye zones\", \"crossing line texture\", \"flat color blocks\", \"mask-like face structure\", \"yellow forehead band\", \"grid-lined mouth\"], \"lookingQuestion\": \"How do the lines inside the eye rectangles behave differently from the loose scribble lines that extend beyond the face outline — and what does that difference do to the boundary between the face and the background?\", \"ambiguities\": [\"Title-derived order and recorded-creation order align here, but the metadata notes gaps exist elsewhere in the series, so adjacency does not confirm these were made in sequence.\", \"Teal and white marks in the lower face are partially obscured by overlapping black lines, making their exact shapes difficult to read with certainty.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the face is built from\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

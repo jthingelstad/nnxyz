@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:33.783952-05:00",
+    "usage": {
+      "inputTokens": 6370,
+      "outputTokens": 799,
+      "totalTokens": 7169,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13094
+    },
+    "requestId": "dd8af1ff-bac5-41f5-9af4-cf7dfc302460",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face fills most of the frame against a mid-blue field; tan-grey flat patches mark the forehead, cheeks, and chin, while a thick black outline defines the jaw and left side of the head.\",\n    \"Yellow zigzag and jagged lines radiate across the upper half and background, with a continuous yellow stroke running horizontally across the top of the face; a pink line traces the nose bridge down to a dark red mouth.\",\n    \"Two hands appear at lower left and lower right, rendered in the same tan-grey as the face patches; loose black scribble lines and pink angular marks scatter across the lower third of the composition.\"\n  ],\n  \"reading\": \"Blue fills every gap between the face and the edges, pressing the figure forward. The tan patches read as planes of skin, but the yellow zigzags crossing them feel more like interference than light. A pink line runs from brow to lip, pulling the eye down to a red mouth that sits still against all that noise. The raised hands neither reach nor defend; they simply hold their place.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors #294 and #296 share the same large-face format. #294 uses a dark grey field; #296 shifts to saturated yellow. #295 sits between them as the blue version of that recurring structure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn\",\n      \"reason\": \"Both #295 and #296 use the same large-face-with-hands layout and jagged yellow lines at the crown, but #296 replaces the blue field with flat yellow, making the two a direct color contrast on the same structure.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo\",\n      \"reason\": \"nnxyz #37 shares the same saturated blue ground and yellow accent lines as #295, though its central form is more fragmented and mechanical rather than face-shaped.\"\n    }\n  ],\n  \"tags\": [\n    \"blue ground\",\n    \"large face\",\n    \"yellow zigzag lines\",\n    \"flat skin-tone patches\",\n    \"raised hands\",\n    \"pink line accent\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between stillness and noise\",\n    \"ambiguous gesture\"\n  ],\n  \"lookingQuestion\": \"Where does the yellow line that crosses the top of the face begin and end, and does it connect to the zigzag marks in the background or stay separate from them?\",\n  \"ambiguities\": [\n    \"The two hands differ slightly in rendering detail; it is unclear whether they belong to the same figure or represent overlapping figures.\",\n    \"The comparison candidate QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh (#294) shares the face-and-hands format but its dark grey field and skull-like features offer a weaker formal parallel than #296, so it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u/image.png",
+        "imageSHA256": "280ee2323f3f2f06c526f05123b9b99cd9573c4243966b75b7b23476109207b9"
+      },
+      {
+        "artworkId": "QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh/image.png",
+        "imageSHA256": "4c7a7d2d55f858a526928be8b5b1ad135e6f7e9eb1b49066d1fa769791335c10"
+      },
+      {
+        "artworkId": "QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo/image.png",
+        "imageSHA256": "e09fb4b8df40064bea6cd3c005622e52c1f60d6cbe4a43154646ffc69e3f6e01"
+      },
+      {
+        "artworkId": "QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn/image.png",
+        "imageSHA256": "cf7468142546e831420aae6b873cb909e93e25d199d31ba7de681d1be25b341c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:39.908435-05:00",
+    "usage": {
+      "inputTokens": 7191,
+      "outputTokens": 869,
+      "totalTokens": 8060,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6067
+    },
+    "requestId": "59a21083-c9e0-4dca-a2b1-1992569ded16",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face fills most of the frame against a mid-blue field; tan-grey flat patches mark the forehead, cheeks, and chin, while a thick black outline defines the jaw and left side of the head.\",\n    \"Yellow zigzag and jagged lines radiate across the upper half and background, with a continuous yellow stroke running horizontally across the top of the face; a pink line traces the nose bridge down to a dark red mouth.\",\n    \"Two hands appear at lower left and lower right, rendered in the same tan-grey as the face patches; loose black scribble lines and pink angular marks scatter across the lower third of the composition.\"\n  ],\n  \"reading\": \"Blue fills every gap between the face and the edges, pressing the figure forward. The tan patches read as planes, but the yellow zigzags crossing them feel more like interference than light. A pink line runs from brow to lip, pulling the eye down to a red mouth that sits still against all that noise. The raised hands neither reach nor defend; they hold their place.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #294 and #296 share the same large-face format. #294 uses a dark grey field; #296 shifts to saturated yellow. #295 sits between them as the blue version of that recurring structure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn\",\n      \"reason\": \"#296 uses the same large-face-with-hands layout and jagged yellow lines at the crown as #295, but replaces the blue field with flat yellow, making the two a direct color contrast on the same structure.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo\",\n      \"reason\": \"nnxyz #37 shares the same saturated blue ground and yellow accent lines as #295, though its central form is more fragmented and mechanical rather than face-shaped.\"\n    }\n  ],\n  \"tags\": [\"blue ground\", \"large face\", \"yellow zigzag lines\", \"flat skin-tone patches\", \"raised hands\", \"pink line accent\"],\n  \"interpretiveTags\": [\"tension between stillness and noise\", \"ambiguous gesture\"],\n  \"lookingQuestion\": \"Where does the yellow line crossing the top of the face begin and end, and does it connect to the zigzag marks in the background or stay separate from them?\",\n  \"ambiguities\": [\n    \"The two hands differ slightly in rendering detail; it is unclear whether they belong to the same figure or represent overlapping figures.\",\n    \"Comparison candidate #294 shares the face-and-hands format but its dark grey field and skull-like features offer a weaker formal parallel than #296, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: mid-blue field, tan-grey patches, yellow zigzags, pink nose-bridge line, and dark red mouth are all visible.\",\n    \"Reading trimmed by one sentence to stay within the 55-65 word target; no invented intent or biography introduced; 'interference' retained as a reading, not a fact.\",\n    \"Both comparison images inspected: #296 blue-to-yellow field contrast confirmed; nnxyz #37 blue ground and yellow accents confirmed; #294 correctly excluded as weaker match due to dark grey field and distinct skull features.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u/image.png",
+        "imageSHA256": "280ee2323f3f2f06c526f05123b9b99cd9573c4243966b75b7b23476109207b9"
+      },
+      {
+        "artworkId": "QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh/image.png",
+        "imageSHA256": "4c7a7d2d55f858a526928be8b5b1ad135e6f7e9eb1b49066d1fa769791335c10"
+      },
+      {
+        "artworkId": "QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo/image.png",
+        "imageSHA256": "e09fb4b8df40064bea6cd3c005622e52c1f60d6cbe4a43154646ffc69e3f6e01"
+      },
+      {
+        "artworkId": "QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn/image.png",
+        "imageSHA256": "cf7468142546e831420aae6b873cb909e93e25d199d31ba7de681d1be25b341c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large face fills most of the frame against a mid-blue field; tan-grey flat patches mark the forehead, cheeks, and chin, while a thick black outline defines the jaw and left side of the head.\", \"Yellow zigzag and jagged lines radiate across the upper half and background, with a continuous yellow stroke running horizontally across the top of the face; a pink line traces the nose bridge down to a dark red mouth.\", \"Two hands appear at lower left and lower right, rendered in the same tan-grey as the face patches; loose black scribble lines and pink angular marks scatter across the lower third of the composition.\"], \"reading\": \"Blue fills every gap between the face and the edges, pressing the figure forward. The tan patches read as planes of skin, but the yellow zigzags crossing them feel more like interference than light. A pink line runs from brow to lip, pulling the eye down to a red mouth that sits still against all that noise. The raised hands neither reach nor defend; they simply hold their place.\", \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors #294 and #296 share the same large-face format. #294 uses a dark grey field; #296 shifts to saturated yellow. #295 sits between them as the blue version of that recurring structure.\", \"connections\": [{\"targetArtworkId\": \"QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn\", \"reason\": \"Both #295 and #296 use the same large-face-with-hands layout and jagged yellow lines at the crown, but #296 replaces the blue field with flat yellow, making the two a direct color contrast on the same structure.\"}, {\"targetArtworkId\": \"QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo\", \"reason\": \"nnxyz #37 shares the same saturated blue ground and yellow accent lines as #295, though its central form is more fragmented and mechanical rather than face-shaped.\"}], \"tags\": [\"blue ground\", \"large face\", \"yellow zigzag lines\", \"flat skin-tone patches\", \"raised hands\", \"pink line accent\"], \"interpretiveTags\": [\"tension between stillness and noise\", \"ambiguous gesture\"], \"lookingQuestion\": \"Where does the yellow line that crosses the top of the face begin and end, and does it connect to the zigzag marks in the background or stay separate from them?\", \"ambiguities\": [\"The two hands differ slightly in rendering detail; it is unclear whether they belong to the same figure or represent overlapping figures.\", \"The comparison candidate QmPgiNbRGwGxpCuEZdWjsq6AnrjEX4jSdfQoqKyKxdqfMh (#294) shares the face-and-hands format but its dark grey field and skull-like features offer a weaker formal parallel than #296, so it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

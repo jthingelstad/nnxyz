@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:47.202459-05:00",
+    "usage": {
+      "inputTokens": 6100,
+      "outputTokens": 790,
+      "totalTokens": 6890,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13614
+    },
+    "requestId": "a24aef22-4dc9-4391-a7e2-08cd724a3631",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two broad yellow-gold bands cross the lower half horizontally, anchoring a field of overlapping black, white, red, and orange loose lines that fill most of the canvas.\",\n    \"A dense red and dark-crimson spiral cluster sits in the right-center area, surrounded by blue arcing lines and white scribbles, forming the most color-saturated focal zone.\",\n    \"Vertical pink-magenta strokes descend from the upper-left quadrant alongside black vertical marks, while a muted grey-green wash occupies the background behind the line layers.\"\n  ],\n  \"reading\": \"The grey-green ground recedes behind a web of crossing lines that never quite resolve into objects. Yellow bands cut across like tape holding something together, while the red spiral on the right pulls the eye into a knot of pressure. The mood reads as crowded and unresolved — not chaotic for its own sake, but dense in the way a space feels when too many things are happening at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #192 and nnxyz nnotb #194. Where #192 builds around large spiral eye-forms on a bright ground, #193 replaces that clarity with a muted field and horizontal banding, and #194 returns to a face-forward structure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRKT8wTQZznodu6HJqKBs36LxCZURHQZQ4j8m8dMcVT8G\",\n      \"reason\": \"Both works use tight spiral forms as focal anchors, but #192 places them on a saturated yellow-green ground with clear face-like framing, while #193 buries its spiral in a grey-green field under crossing line layers.\"\n    },\n    {\n      \"targetArtworkId\": \"QmfT7CunjsKenygg3oymRQRHrKywqZ7r2BZtjBHd6m8M7j\",\n      \"reason\": \"Title neighbor #194 shares the horizontal banding device and a similar grey ground, but organizes its lines around two distinct circular eye-zones, giving it a more frontal structure than #193's dispersed field.\"\n    }\n  ],\n  \"tags\": [\n    \"horizontal banding\",\n    \"spiral cluster\",\n    \"overlapping line layers\",\n    \"grey-green ground\",\n    \"vertical pink strokes\",\n    \"red focal zone\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded\",\n    \"unresolved tension\",\n    \"compressed space\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle after the yellow bands draw it across — and what stops it from moving further?\",\n  \"ambiguities\": [\n    \"The red spiral cluster in the right-center could be read as a face element or as pure mark-making; no supplied evidence resolves this.\",\n    \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg (nifty faces #0000) shares line density but belongs to a different collection family and offers no specific formal echo strong enough to warrant a connection slot.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w/image.png",
+        "imageSHA256": "526a36144be11d7301b32cdd65b29d9ddfb9503a84b10b400264afdfe6e40d34"
+      },
+      {
+        "artworkId": "QmRKT8wTQZznodu6HJqKBs36LxCZURHQZQ4j8m8dMcVT8G",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRKT8wTQZznodu6HJqKBs36LxCZURHQZQ4j8m8dMcVT8G/image.png",
+        "imageSHA256": "88fbbb409d76fe316461faf615642c3f84d0257c3045663d1159f8f7cf2ebf32"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmfT7CunjsKenygg3oymRQRHrKywqZ7r2BZtjBHd6m8M7j",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfT7CunjsKenygg3oymRQRHrKywqZ7r2BZtjBHd6m8M7j/image.png",
+        "imageSHA256": "940b81ae1c53a3a41b7a0fcbd45467afbe57cddb0cd0169ddd2692f31ef3bfe9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:54.798336-05:00",
+    "usage": {
+      "inputTokens": 6910,
+      "outputTokens": 927,
+      "totalTokens": 7837,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7505
+    },
+    "requestId": "ef9a4aff-9ea5-4766-a4cc-1cbf088bb0a2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two broad yellow-gold bands cross the lower half horizontally, anchoring a field of overlapping black, white, red, and orange loose lines that fill most of the canvas.\",\n    \"A dense red and dark-crimson spiral cluster sits in the right-center area, surrounded by blue arcing lines and white scribbles, forming the most color-saturated focal zone.\",\n    \"Vertical pink-magenta strokes descend from the upper-left quadrant alongside black vertical marks, while a muted grey-green wash occupies the background behind the line layers.\"\n  ],\n  \"reading\": \"The grey-green ground recedes behind a web of crossing lines that never quite resolve into objects. Yellow bands cut across the lower field, and the red spiral on the right pulls the eye into a knot of concentrated marks. The overall feel is crowded and unresolved — dense in the way a space reads when too many things press against each other at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #192 and nnxyz nnotb #194. Where #192 builds around large spiral forms on a bright ground, #193 offers a muted field with horizontal banding, and #194 returns to a more frontal, face-structured arrangement.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRKT8wTQZznodu6HJqKBs36LxCZURHQZQ4j8m8dMcVT8G\",\n      \"reason\": \"Both works use tight spiral forms as focal anchors, but #192 places them on a saturated yellow-green ground with clear face-like framing, while #193 buries its spiral in a grey-green field under dense crossing lines.\"\n    },\n    {\n      \"targetArtworkId\": \"QmfT7CunjsKenygg3oymRQRHrKywqZ7r2BZtjBHd6m8M7j\",\n      \"reason\": \"Title neighbor #194 shares horizontal banding and a grey ground, but organizes its lines around two distinct circular zones, giving it a more frontal structure than #193's dispersed field.\"\n    }\n  ],\n  \"tags\": [\n    \"horizontal banding\",\n    \"spiral cluster\",\n    \"overlapping line layers\",\n    \"grey-green ground\",\n    \"vertical pink strokes\",\n    \"red focal zone\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded\",\n    \"unresolved tension\",\n    \"compressed space\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle after the yellow bands draw it across — and what stops it from moving further?\",\n  \"ambiguities\": [\n    \"The red spiral cluster in the right-center could be read as a face element or as pure mark-making; no supplied evidence resolves this.\",\n    \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg (nifty faces #0000) shares line density but belongs to a different collection family and offers no specific formal echo strong enough to warrant a connection slot.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: yellow bands, red-crimson spiral with blue arcs, and pink-magenta verticals on grey-green ground are all visibly present.\",\n    \"Comparison claims checked: #192 does show large spiral forms on a bright yellow-green ground with face framing; #194 does show a grey ground, horizontal banding, and two circular eye-zones — both contrasts are accurate.\",\n    \"Reading trimmed to stay within 80-word limit and removed the phrase 'not chaotic for its own sake' as an unsupported intent claim; replaced with a visible-result description.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w/image.png",
+        "imageSHA256": "526a36144be11d7301b32cdd65b29d9ddfb9503a84b10b400264afdfe6e40d34"
+      },
+      {
+        "artworkId": "QmRKT8wTQZznodu6HJqKBs36LxCZURHQZQ4j8m8dMcVT8G",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRKT8wTQZznodu6HJqKBs36LxCZURHQZQ4j8m8dMcVT8G/image.png",
+        "imageSHA256": "88fbbb409d76fe316461faf615642c3f84d0257c3045663d1159f8f7cf2ebf32"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmfT7CunjsKenygg3oymRQRHrKywqZ7r2BZtjBHd6m8M7j",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfT7CunjsKenygg3oymRQRHrKywqZ7r2BZtjBHd6m8M7j/image.png",
+        "imageSHA256": "940b81ae1c53a3a41b7a0fcbd45467afbe57cddb0cd0169ddd2692f31ef3bfe9"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two broad yellow-gold bands cross the lower half horizontally, anchoring a field of overlapping black, white, red, and orange loose lines that fill most of the canvas.\", \"A dense red and dark-crimson spiral cluster sits in the right-center area, surrounded by blue arcing lines and white scribbles, forming the most color-saturated focal zone.\", \"Vertical pink-magenta strokes descend from the upper-left quadrant alongside black vertical marks, while a muted grey-green wash occupies the background behind the line layers.\"], \"reading\": \"The grey-green ground recedes behind a web of crossing lines that never quite resolve into objects. Yellow bands cut across like tape holding something together, while the red spiral on the right pulls the eye into a knot of pressure. The mood reads as crowded and unresolved — not chaotic for its own sake, but dense in the way a space feels when too many things are happening at once.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #192 and nnxyz nnotb #194. Where #192 builds around large spiral eye-forms on a bright ground, #193 replaces that clarity with a muted field and horizontal banding, and #194 returns to a face-forward structure.\", \"connections\": [{\"targetArtworkId\": \"QmRKT8wTQZznodu6HJqKBs36LxCZURHQZQ4j8m8dMcVT8G\", \"reason\": \"Both works use tight spiral forms as focal anchors, but #192 places them on a saturated yellow-green ground with clear face-like framing, while #193 buries its spiral in a grey-green field under crossing line layers.\"}, {\"targetArtworkId\": \"QmfT7CunjsKenygg3oymRQRHrKywqZ7r2BZtjBHd6m8M7j\", \"reason\": \"Title neighbor #194 shares the horizontal banding device and a similar grey ground, but organizes its lines around two distinct circular eye-zones, giving it a more frontal structure than #193's dispersed field.\"}], \"tags\": [\"horizontal banding\", \"spiral cluster\", \"overlapping line layers\", \"grey-green ground\", \"vertical pink strokes\", \"red focal zone\"], \"interpretiveTags\": [\"crowded\", \"unresolved tension\", \"compressed space\"], \"lookingQuestion\": \"Where does your eye settle after the yellow bands draw it across — and what stops it from moving further?\", \"ambiguities\": [\"The red spiral cluster in the right-center could be read as a face element or as pure mark-making; no supplied evidence resolves this.\", \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg (nifty faces #0000) shares line density but belongs to a different collection family and offers no specific formal echo strong enough to warrant a connection slot.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

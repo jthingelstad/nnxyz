@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:05:41.021525-05:00",
+    "usage": {
+      "inputTokens": 6241,
+      "outputTokens": 641,
+      "totalTokens": 6882,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 18845
+    },
+    "requestId": "30f0e744-6684-424a-9427-3ae15c979959",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Bright yellow rays fan outward from a central mass, crossing the upper half and reaching all four edges of the composition.\",\n    \"A row of dark vertical strokes—black and deep red—stands across the middle band, anchored by a thin green strip at their base.\",\n    \"The lower third is a dense weave of crossing lines in yellow, green, black, and orange over warm horizontal color blocks.\"\n  ],\n  \"reading\": \"Radiating yellow lines split the image into a blazing upper zone and a tangled, warm ground. The dark verticals in the middle read as a screen or barrier between the two, their red accents bleeding downward into the lower mesh. Lavender and sky-blue patches at the edges cool the heat, giving the composition a sense of pressure held just short of overflow. The effect can feel both celebratory and overwhelming.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits near the end of the title sequence. Its neighbor \\\"nnxyz rawblocks #65\\\" shares a landscape-like structure with dense scribble masses, but #64 is far more saturated in yellow and organized around a single radiating burst rather than scattered tangles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u\",\n      \"reason\": \"Both use dark vertical strokes over a horizontal ground with looping scribble canopies, but #65 is cooler and more diffuse where #64 concentrates its warmth into a single bright center.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ\",\n      \"reason\": \"#63 fills its frame with a rounded central form and earth tones, while #64 opens outward with radiating lines—a strong contrast between containment and expansion.\"\n    }\n  ],\n  \"tags\": [\n    \"radiating lines\",\n    \"dense line overlay\",\n    \"warm yellow dominance\",\n    \"vertical dark strokes\",\n    \"layered color blocks\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the yellow rays begin—is there a single source point, or do they emerge from several spots within the central mass?\",\n  \"ambiguities\": [\n    \"Whether the dark verticals represent a distinct subject or are a structural divider between zones is unclear from the image alone.\",\n    \"The relationship between title order and creation order cannot be confirmed as identical for this work and its neighbors.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmei2iNQQgwPVSEcn1Pkec9k3GGtpAQ2FU6mkWtnQ6Bgnq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmei2iNQQgwPVSEcn1Pkec9k3GGtpAQ2FU6mkWtnQ6Bgnq/image.png",
+        "imageSHA256": "60f8d4be595aef22965b33036bdec9384f129bd6c99de6452b3b5253580dd2bb"
+      },
+      {
+        "artworkId": "QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ/image.png",
+        "imageSHA256": "4ef224f514be7fef5869b1ce3533bc04b27e913b3ccbc07c90f32ffd9fc77355"
+      },
+      {
+        "artworkId": "QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P/image.png",
+        "imageSHA256": "5c4229d31db5fba6812b0c5465f31ad3df52b61a086702d49b12aca429f939d0"
+      },
+      {
+        "artworkId": "QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u/image.png",
+        "imageSHA256": "edd7251aba659cdd8dea2cdf16ad4903ffc574c49b6e07e0f828d56c6474cae5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:05:52.413699-05:00",
+    "usage": {
+      "inputTokens": 6916,
+      "outputTokens": 780,
+      "totalTokens": 7696,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11230
+    },
+    "requestId": "a51fcd46-a3df-4429-b8eb-1de3cf4a553b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Bright yellow rays fan outward from a central mass in the upper half, reaching all four edges and overlapping patches of sky blue, lavender, and purple.\",\n    \"A row of dark vertical strokes—black and deep red—spans the middle band, rooted in a narrow green strip at their base.\",\n    \"The lower third is a dense weave of crossing lines in yellow, green, black, and orange laid over warm horizontal color blocks.\"\n  ],\n  \"reading\": \"Radiating yellow lines split the image into a blazing upper zone and a tangled, warm ground. The dark verticals in the middle act as a screen between the two, their red accents bleeding downward into the lower mesh. Lavender and sky-blue patches at the edges cool the surrounding heat, lending a sense of pressure held just short of overflow. The result can feel both celebratory and overwhelming.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits near the end of the title sequence. Its neighbor \\\"nnxyz rawblocks #65\\\" shares a landscape-like structure with dense scribble masses, but #64 is far more saturated in yellow and organized around a single radiating burst rather than scattered tangles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u\",\n      \"reason\": \"Both use dark vertical strokes over a horizontal ground with looping scribble canopies, but #65 is cooler and more diffuse where #64 concentrates warmth into a single bright center.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ\",\n      \"reason\": \"#63 fills its frame with a rounded central form and earth tones, while #64 opens outward with radiating lines—a strong contrast between containment and expansion.\"\n    }\n  ],\n  \"tags\": [\n    \"radiating lines\",\n    \"dense line overlay\",\n    \"warm yellow dominance\",\n    \"vertical dark strokes\",\n    \"layered color blocks\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the yellow rays begin—is there a single source point, or do they emerge from several spots within the central mass?\",\n  \"ambiguities\": [\n    \"Whether the dark verticals represent a distinct subject or serve as a structural divider between zones is unclear from the image alone.\",\n    \"The relationship between title order and creation order cannot be confirmed as identical for this work and its neighbors.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed yellow rays, dark vertical strokes with red and black, green base strip, and lower crosshatch weave all visible in the primary image.\",\n    \"Comparison to #65 verified: both show dark verticals and scribble canopies over a ground plane, but #65 uses cooler greens and scattered tangles versus #64's concentrated yellow burst.\",\n    \"Comparison to #63 verified: #63 centers on a large rounded form with brown/orange tones, contrasting with #64's open radiating composition.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmei2iNQQgwPVSEcn1Pkec9k3GGtpAQ2FU6mkWtnQ6Bgnq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmei2iNQQgwPVSEcn1Pkec9k3GGtpAQ2FU6mkWtnQ6Bgnq/image.png",
+        "imageSHA256": "60f8d4be595aef22965b33036bdec9384f129bd6c99de6452b3b5253580dd2bb"
+      },
+      {
+        "artworkId": "QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ/image.png",
+        "imageSHA256": "4ef224f514be7fef5869b1ce3533bc04b27e913b3ccbc07c90f32ffd9fc77355"
+      },
+      {
+        "artworkId": "QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPoPE3wSwge4utHiYYiVeZNd6MMYD3iRShVt6WzPbPH8P/image.png",
+        "imageSHA256": "5c4229d31db5fba6812b0c5465f31ad3df52b61a086702d49b12aca429f939d0"
+      },
+      {
+        "artworkId": "QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u/image.png",
+        "imageSHA256": "edd7251aba659cdd8dea2cdf16ad4903ffc574c49b6e07e0f828d56c6474cae5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Bright yellow rays fan outward from a central mass, crossing the upper half and reaching all four edges of the composition.\", \"A row of dark vertical strokes—black and deep red—stands across the middle band, anchored by a thin green strip at their base.\", \"The lower third is a dense weave of crossing lines in yellow, green, black, and orange over warm horizontal color blocks.\"], \"reading\": \"Radiating yellow lines split the image into a blazing upper zone and a tangled, warm ground. The dark verticals in the middle read as a screen or barrier between the two, their red accents bleeding downward into the lower mesh. Lavender and sky-blue patches at the edges cool the heat, giving the composition a sense of pressure held just short of overflow. The effect can feel both celebratory and overwhelming.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits near the end of the title sequence. Its neighbor \\\"nnxyz rawblocks #65\\\" shares a landscape-like structure with dense scribble masses, but #64 is far more saturated in yellow and organized around a single radiating burst rather than scattered tangles.\", \"connections\": [{\"targetArtworkId\": \"QmWVErkvmnanbxnMANT2u3FcBai6Yzhc2sfL48CecGam8u\", \"reason\": \"Both use dark vertical strokes over a horizontal ground with looping scribble canopies, but #65 is cooler and more diffuse where #64 concentrates its warmth into a single bright center.\"}, {\"targetArtworkId\": \"QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ\", \"reason\": \"#63 fills its frame with a rounded central form and earth tones, while #64 opens outward with radiating lines—a strong contrast between containment and expansion.\"}], \"tags\": [\"radiating lines\", \"dense line overlay\", \"warm yellow dominance\", \"vertical dark strokes\", \"layered color blocks\"], \"lookingQuestion\": \"Where exactly do the yellow rays begin—is there a single source point, or do they emerge from several spots within the central mass?\", \"ambiguities\": [\"Whether the dark verticals represent a distinct subject or are a structural divider between zones is unclear from the image alone.\", \"The relationship between title order and creation order cannot be confirmed as identical for this work and its neighbors.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

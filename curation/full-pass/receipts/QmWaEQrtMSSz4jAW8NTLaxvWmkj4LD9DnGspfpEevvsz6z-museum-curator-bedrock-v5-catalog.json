@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:46.412378-05:00",
+    "usage": {
+      "inputTokens": 6931,
+      "outputTokens": 810,
+      "totalTokens": 7741,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13470
+    },
+    "requestId": "1410e51c-a1f4-4542-b2c2-f05da395e54e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A blocky rectangular head fills most of the frame, outlined in thick black lines against a near-black background, with the top cropped so the crown is cut off.\",\n    \"Two concentric-circle eyes sit asymmetrically: the left eye is larger and more fully rendered with a white highlight dot at center; the right eye is smaller and pushed toward the upper-right corner.\",\n    \"The lower half is dominated by a wide rectangular mouth zone built from stacked horizontal bands; white triangular tooth shapes alternate with black zigzag lines across two rows.\"\n  ],\n  \"reading\": \"The face pushes forward like a mask pressed against glass, its cropped crown and off-center eyes giving the whole structure a lopsided weight. Dense crosshatched strokes in lime, teal, red, and yellow pack every surface, yet the black outlines hold the geometry firm. The stacked tooth bands read as both grin and grid. What could feel threatening softens into something closer to bewildered.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between 'nnxyz nifty faces #26' and 'nnxyz nifty faces #28' in both title order and recorded creation order. All three share the rectangular face schema, but #27 is the only one in the owned subset cropped at the crown and set against a near-black ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf\",\n      \"reason\": \"Both works use the same blocky rectangular head with concentric-circle eyes and a toothed mouth band, but #26 fills the full frame with a light ground and adds ear-like side panels absent in #27.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2\",\n      \"reason\": \"nnxyz #31 shares the paired spiral-eye motif and a horizontal zigzag tooth row in white against a dark band, making it a cross-collection echo of the same recurring face grammar.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular head form\",\n    \"concentric circle eyes\",\n    \"zigzag tooth bands\",\n    \"dense crosshatch fill\",\n    \"asymmetric eye placement\",\n    \"dark background\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like\",\n    \"lopsided weight\",\n    \"bewildered mood\"\n  ],\n  \"lookingQuestion\": \"The two eyes are drawn at noticeably different sizes and heights — what does that asymmetry do to the stability of the face as a whole?\",\n  \"ambiguities\": [\n    \"The crown of the head is cropped; it is unclear whether this reflects a canvas boundary choice or a compositional decision to enlarge the face.\",\n    \"Candidate QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT (#28) shares the face schema but its strongly tilted orientation and cool teal-dominant palette make a formal comparison less specific than the two selected; omitted to avoid a weak connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z/image.png",
+        "imageSHA256": "744efef32aee219a31e484899b92fdfc2df49806fa14663d812c18d5032d01c0"
+      },
+      {
+        "artworkId": "QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf/image.png",
+        "imageSHA256": "ede3560c9c1e93a94569db035f467613fe7c4604548f45f4108ca4b025c95143"
+      },
+      {
+        "artworkId": "QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2/image.png",
+        "imageSHA256": "c00d7770fb9f7946da0209d3c75ec7aba20c2af921142764035fd365d639bc16"
+      },
+      {
+        "artworkId": "QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT/image.png",
+        "imageSHA256": "09502613fe243cac108f130eea61dfed9edf7606e2bd3cfa7935927e40f6f5fe"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:52.852760-05:00",
+    "usage": {
+      "inputTokens": 7761,
+      "outputTokens": 932,
+      "totalTokens": 8693,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6291
+    },
+    "requestId": "544076ec-a25e-401f-9e7e-eb557003e96c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A blocky rectangular head fills most of the frame, outlined in thick black lines against a near-black background, with the top edge cropped so the crown is cut off.\",\n    \"Two concentric-circle eyes sit asymmetrically: the left eye is larger and more fully rendered with a white highlight dot at center; the right eye is smaller and pushed toward the upper-right corner.\",\n    \"The lower half is dominated by a wide rectangular mouth zone built from stacked horizontal bands; white triangular tooth shapes alternate with black zigzag lines across two rows.\"\n  ],\n  \"reading\": \"The face pushes forward, its cropped crown and off-center eyes giving the whole structure a lopsided weight. Dense crosshatched strokes in lime, teal, red, and yellow pack every surface, yet the thick black outlines hold the geometry firm. The stacked tooth bands read as both grin and grid. What could feel threatening softens into something closer to bewildered.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between 'nnxyz nifty faces #26' and 'nnxyz nifty faces #28' in both title order and recorded creation order. All three share the rectangular face schema, but this is the only one in the owned subset cropped at the crown and set against a near-black ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf\",\n      \"reason\": \"Both use a blocky rectangular head with concentric-circle eyes and a toothed mouth band, but #26 fills the full frame on a light ground and adds ear-like side panels absent in #27.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2\",\n      \"reason\": \"nnxyz #31 shares paired spiral eyes and a horizontal zigzag tooth row in white against a dark band, making it a cross-collection echo of the same recurring face structure.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular head form\",\n    \"concentric circle eyes\",\n    \"zigzag tooth bands\",\n    \"dense crosshatch fill\",\n    \"asymmetric eye placement\",\n    \"dark background\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like\",\n    \"lopsided weight\",\n    \"bewildered mood\"\n  ],\n  \"lookingQuestion\": \"The two eyes are drawn at noticeably different sizes and heights — what does that asymmetry do to the stability of the face as a whole?\",\n  \"ambiguities\": [\n    \"The crown of the head is cropped; it is unclear whether this reflects a canvas boundary or a choice to enlarge the face within the frame.\",\n    \"Candidate QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT (#28) shares the face schema but its strongly tilted orientation and cool teal-dominant palette make the formal comparison less specific than the two selected; omitted to avoid a weak connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color calls (lime, teal, red, yellow) confirmed against the primary image; no invented colors found.\",\n    \"Comparison with QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf confirmed: #26 image shows ear-like side panels and a lighter ground, supporting the stated contrast.\",\n    \"Reading trimmed by two words to stay within the 55–65 word target; no factual claims altered.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWaEQrtMSSz4jAW8NTLaxvWmkj4LD9DnGspfpEevvsz6z/image.png",
+        "imageSHA256": "744efef32aee219a31e484899b92fdfc2df49806fa14663d812c18d5032d01c0"
+      },
+      {
+        "artworkId": "QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf/image.png",
+        "imageSHA256": "ede3560c9c1e93a94569db035f467613fe7c4604548f45f4108ca4b025c95143"
+      },
+      {
+        "artworkId": "QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2/image.png",
+        "imageSHA256": "c00d7770fb9f7946da0209d3c75ec7aba20c2af921142764035fd365d639bc16"
+      },
+      {
+        "artworkId": "QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT/image.png",
+        "imageSHA256": "09502613fe243cac108f130eea61dfed9edf7606e2bd3cfa7935927e40f6f5fe"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A blocky rectangular head fills most of the frame, outlined in thick black lines against a near-black background, with the top cropped so the crown is cut off.\", \"Two concentric-circle eyes sit asymmetrically: the left eye is larger and more fully rendered with a white highlight dot at center; the right eye is smaller and pushed toward the upper-right corner.\", \"The lower half is dominated by a wide rectangular mouth zone built from stacked horizontal bands; white triangular tooth shapes alternate with black zigzag lines across two rows.\"], \"reading\": \"The face pushes forward like a mask pressed against glass, its cropped crown and off-center eyes giving the whole structure a lopsided weight. Dense crosshatched strokes in lime, teal, red, and yellow pack every surface, yet the black outlines hold the geometry firm. The stacked tooth bands read as both grin and grid. What could feel threatening softens into something closer to bewildered.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between 'nnxyz nifty faces #26' and 'nnxyz nifty faces #28' in both title order and recorded creation order. All three share the rectangular face schema, but #27 is the only one in the owned subset cropped at the crown and set against a near-black ground.\", \"connections\": [{\"targetArtworkId\": \"QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf\", \"reason\": \"Both works use the same blocky rectangular head with concentric-circle eyes and a toothed mouth band, but #26 fills the full frame with a light ground and adds ear-like side panels absent in #27.\"}, {\"targetArtworkId\": \"QmVD4CB9KoikeccEcY6sq6qLevQoZHNwvGSmGi8pwLfwJ2\", \"reason\": \"nnxyz #31 shares the paired spiral-eye motif and a horizontal zigzag tooth row in white against a dark band, making it a cross-collection echo of the same recurring face grammar.\"}], \"tags\": [\"rectangular head form\", \"concentric circle eyes\", \"zigzag tooth bands\", \"dense crosshatch fill\", \"asymmetric eye placement\", \"dark background\"], \"interpretiveTags\": [\"mask-like\", \"lopsided weight\", \"bewildered mood\"], \"lookingQuestion\": \"The two eyes are drawn at noticeably different sizes and heights — what does that asymmetry do to the stability of the face as a whole?\", \"ambiguities\": [\"The crown of the head is cropped; it is unclear whether this reflects a canvas boundary choice or a compositional decision to enlarge the face.\", \"Candidate QmbEc5f6qDV75yRkyN6H51HYCNmkDoj6uoVJE1FE3wpZjT (#28) shares the face schema but its strongly tilted orientation and cool teal-dominant palette make a formal comparison less specific than the two selected; omitted to avoid a weak connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:02.880252-05:00",
+    "usage": {
+      "inputTokens": 6353,
+      "outputTokens": 644,
+      "totalTokens": 6997,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12657
+    },
+    "requestId": "2c8fef45-473b-405d-85d5-d2092ccbffd3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly square dark-brown form fills the center against a flat orange field; nested rectangular outlines in black, blue, and purple layer around it like stacked frames.\",\n    \"Two eye zones each contain concentric spiraling loops—one in red and pink, one in black and white—set within square recesses; a wide lower rectangle holds a row of white teeth outlined in black.\",\n    \"Loose scribbled lines in yellow, blue, lavender, and green extend beyond the central form in all directions, with drip marks falling from the lower edge of the dark mass.\"\n  ],\n  \"reading\": \"The stacked-frame structure gives the face a flat, almost architectural weight, while the spiraling eye loops pull attention inward against that rigidity. Teeth bared in the lower rectangle read as confrontational, yet the loose scribbled lines spilling outward soften that edge into something closer to noise or overflow. The orange field holds everything at high contrast, making the dark core feel both grounded and pressurized.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #167 and nnxyz nnotb #169. Where #167 uses warm blended volumes on a muted ground, #168 returns to the flat orange field and hard outline layering also seen in the nifty-faces owned subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRC6w3n1yBToRnLzozVHb14UhS5r2A3p8CjWSnQNC4Zbb\",\n      \"reason\": \"Both works place a face-like form against the same flat orange ground, and both use exposed teeth as a focal element, making the shared background and mouth structure a direct visual echo across two different owned series.\"\n    }\n  ],\n  \"tags\": [\n    \"nested rectangular outlines\",\n    \"spiral eye forms\",\n    \"flat orange ground\",\n    \"exposed teeth\",\n    \"scribbled overflow lines\",\n    \"drip marks\"\n  ],\n  \"lookingQuestion\": \"How does the relationship between the rigid stacked frames and the loose lines escaping beyond them change what you read in the face?\",\n  \"ambiguities\": [\n    \"The lavender marks at lower right could be a secondary drawn element or an extension of the outer frame structure; the image does not resolve this clearly.\",\n    \"Comparison QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha (#167) uses a blended volumetric approach so different from #168 that no strong formal connection supports a listed pairing.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe/image.png",
+        "imageSHA256": "369481c24c3b39716ae9163bbe9f1083383b12c1cddaccc7ef16aca10c35f4f6"
+      },
+      {
+        "artworkId": "QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha/image.png",
+        "imageSHA256": "718a8e0ef7812da9f2c9fe88d38e17a434e366cd51b811565f90623f86041247"
+      },
+      {
+        "artworkId": "QmRC6w3n1yBToRnLzozVHb14UhS5r2A3p8CjWSnQNC4Zbb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRC6w3n1yBToRnLzozVHb14UhS5r2A3p8CjWSnQNC4Zbb/image.png",
+        "imageSHA256": "628c27117f68530f8d7643ddc929eb9b4513982e01c13967064e7f919a50c6fc"
+      },
+      {
+        "artworkId": "QmWFezBZmJR8rars8VYjbhBdS133tyXRJVfbq5EEpVNwUh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWFezBZmJR8rars8VYjbhBdS133tyXRJVfbq5EEpVNwUh/image.png",
+        "imageSHA256": "1264a0a3ddfca410d2bf89b6d44ee8fe8ca7dde476bb5a3895cf3c41c9c40b9b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:09.494516-05:00",
+    "usage": {
+      "inputTokens": 7038,
+      "outputTokens": 817,
+      "totalTokens": 7855,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6290
+    },
+    "requestId": "d84718f1-956e-44e0-bbb6-c6824ba42622",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly square dark-brown form fills the center against a flat orange field; nested rectangular outlines in black, blue, and purple layer around it like stacked frames.\",\n    \"Two eye zones each contain concentric spiraling loops—one in red and pink, one in black and white—set within square recesses; a wide lower rectangle holds a row of white teeth outlined in black.\",\n    \"Loose scribbled lines in yellow, blue, lavender, and green extend beyond the central form in all directions, with drip marks falling from the lower edge of the dark mass.\"\n  ],\n  \"reading\": \"The stacked-frame structure gives the face a flat, almost architectural weight, while the spiraling eye loops pull attention inward against that rigidity. Teeth bared in the lower rectangle read as confrontational, yet the loose scribbled lines spilling outward soften that edge into something closer to noise or overflow. The orange field holds everything at high contrast, making the dark core feel both grounded and pressurized.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #167 and nnxyz nnotb #169. Where #167 uses warm blended volumes on a muted ground, #168 shares the flat orange field and hard outline layering visible in the owned nifty-faces subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRC6w3n1yBToRnLzozVHb14UhS5r2A3p8CjWSnQNC4Zbb\",\n      \"reason\": \"Both works place a face-like form against the same flat orange ground and use exposed teeth as a focal element, making the shared background and mouth structure a direct visual echo across two different owned series.\"\n    }\n  ],\n  \"tags\": [\n    \"nested rectangular outlines\",\n    \"spiral eye forms\",\n    \"flat orange ground\",\n    \"exposed teeth\",\n    \"scribbled overflow lines\",\n    \"drip marks\"\n  ],\n  \"lookingQuestion\": \"How does the relationship between the rigid stacked frames and the loose lines escaping beyond them change what you read in the face?\",\n  \"ambiguities\": [\n    \"The lavender marks at lower right could be a secondary drawn element or an extension of the outer frame structure; the image does not resolve this clearly.\",\n    \"Comparison QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha (#167) uses a blended volumetric approach so different from #168 that no strong formal connection supports a listed pairing.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the image: dark-brown central mass, nested rectangular outlines, spiral eye loops, white teeth row, and scribbled overflow lines with drips are all directly visible.\",\n    \"QmRC6w3n1yBToRnLzozVHb14UhS5r2A3p8CjWSnQNC4Zbb (#124) confirmed as sharing the flat orange ground and exposed teeth focal element; connection retained as formally grounded.\",\n    \"Draft correctly excluded #167 and #169 as listed connections: #167 is volumetric on a muted ground, #169 uses a pink ground with figure-and-motion composition—neither supports a strong formal pairing with #168.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe/image.png",
+        "imageSHA256": "369481c24c3b39716ae9163bbe9f1083383b12c1cddaccc7ef16aca10c35f4f6"
+      },
+      {
+        "artworkId": "QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha/image.png",
+        "imageSHA256": "718a8e0ef7812da9f2c9fe88d38e17a434e366cd51b811565f90623f86041247"
+      },
+      {
+        "artworkId": "QmRC6w3n1yBToRnLzozVHb14UhS5r2A3p8CjWSnQNC4Zbb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRC6w3n1yBToRnLzozVHb14UhS5r2A3p8CjWSnQNC4Zbb/image.png",
+        "imageSHA256": "628c27117f68530f8d7643ddc929eb9b4513982e01c13967064e7f919a50c6fc"
+      },
+      {
+        "artworkId": "QmWFezBZmJR8rars8VYjbhBdS133tyXRJVfbq5EEpVNwUh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWFezBZmJR8rars8VYjbhBdS133tyXRJVfbq5EEpVNwUh/image.png",
+        "imageSHA256": "1264a0a3ddfca410d2bf89b6d44ee8fe8ca7dde476bb5a3895cf3c41c9c40b9b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A roughly square dark-brown form fills the center against a flat orange field; nested rectangular outlines in black, blue, and purple layer around it like stacked frames.\", \"Two eye zones each contain concentric spiraling loops—one in red and pink, one in black and white—set within square recesses; a wide lower rectangle holds a row of white teeth outlined in black.\", \"Loose scribbled lines in yellow, blue, lavender, and green extend beyond the central form in all directions, with drip marks falling from the lower edge of the dark mass.\"], \"reading\": \"The stacked-frame structure gives the face a flat, almost architectural weight, while the spiraling eye loops pull attention inward against that rigidity. Teeth bared in the lower rectangle read as confrontational, yet the loose scribbled lines spilling outward soften that edge into something closer to noise or overflow. The orange field holds everything at high contrast, making the dark core feel both grounded and pressurized.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #167 and nnxyz nnotb #169. Where #167 uses warm blended volumes on a muted ground, #168 returns to the flat orange field and hard outline layering also seen in the nifty-faces owned subset.\", \"connections\": [{\"targetArtworkId\": \"QmRC6w3n1yBToRnLzozVHb14UhS5r2A3p8CjWSnQNC4Zbb\", \"reason\": \"Both works place a face-like form against the same flat orange ground, and both use exposed teeth as a focal element, making the shared background and mouth structure a direct visual echo across two different owned series.\"}], \"tags\": [\"nested rectangular outlines\", \"spiral eye forms\", \"flat orange ground\", \"exposed teeth\", \"scribbled overflow lines\", \"drip marks\"], \"lookingQuestion\": \"How does the relationship between the rigid stacked frames and the loose lines escaping beyond them change what you read in the face?\", \"ambiguities\": [\"The lavender marks at lower right could be a secondary drawn element or an extension of the outer frame structure; the image does not resolve this clearly.\", \"Comparison QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha (#167) uses a blended volumetric approach so different from #168 that no strong formal connection supports a listed pairing.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

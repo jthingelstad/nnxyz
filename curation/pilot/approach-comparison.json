@@ -1,0 +1,31 @@
+{
+  "artwork": "nnxyz nifty faces #72",
+  "testType": "Qualitative evidence/design comparison by the same assistant. Not a blinded trial, independent-agent comparison, model benchmark or visitor usability study.",
+  "approaches": [
+    {
+      "id": "image-only",
+      "inputs": ["Original PNG"],
+      "label": "White patches and rows of teeth make a skull-like face against black. Thin red and pale outlines repeat around its head and shoulders, unsettling the apparent grin. The image can read as confrontational or darkly comic.",
+      "strength": "Specific looking language, with uncertainty about emotion.",
+      "limit": "Cannot establish technique, stroke counts, archival dates or a defensible position in the collection."
+    },
+    {
+      "id": "facts-in-the-label",
+      "inputs": ["Original PNG", "Stroke statistics", "Archived creation record"],
+      "label": "Recorded on February 8, 2022, the drawing contains 26 recorded strokes and 15,283 sampled points on a 742.05 × 742.05 logical canvas. Repeated lines outline a white, skull-like face against black, with red marks at the eyes and around the head.",
+      "strength": "Auditable technique and date information.",
+      "limit": "The paragraph reads like a data caption; exact canvas precision and point totals crowd the visual reading. Stroke count can be mistaken for effort."
+    },
+    {
+      "id": "three-layer-label",
+      "inputs": ["Original PNG", "Validated technical facts", "Collection-wide measurements", "Owned title and date neighbors", "Visually reviewed comparison images"],
+      "label": "White patches assemble a skull-like face, while red and pale outlines keep its edges unsettled. The teeth are drawn as repeated loops rather than one solid band, making the grin feel insistent. The black ground removes distractions. It can read as confrontational or darkly comic; the image does not fix a single emotion.",
+      "technicalStrip": "Digital brush drawing · recorded February 8, 2022 · 26 recorded strokes",
+      "collectionStrip": "Between owned Faces #71 and #73 in title order. Compare nnxyz #1 for another toothy head built from overlapping contours.",
+      "strength": "Keeps the wall label readable while retaining facts and an explicit route to another piece.",
+      "limit": "Needs more work behind the label: measured facts, source-linked context and image review of proposed relationships."
+    }
+  ],
+  "recommendation": "Use the three-layer label as the editorial format. Keep full technical data available on demand. Compute facts and relationship candidates before the AI drafts interpretation; review links against both images.",
+  "unmeasured": ["Visitor preference", "Independent model quality", "API cost", "Live chat reliability", "Full-collection editorial consistency"]
+}

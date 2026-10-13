@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:28.643625-05:00",
+    "usage": {
+      "inputTokens": 6131,
+      "outputTokens": 836,
+      "totalTokens": 6967,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13980
+    },
+    "requestId": "ee19d503-2c45-4925-805f-e37411b9c5d7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A thick black outline defines a large head in three-quarter profile against a flat warm-brown field; two horizontal zigzag bands in red and yellow extend left from the eye zone into the background.\",\n    \"The interior is packed with layered lines in green, teal, pink, red, and white forming looping and rectangular sub-zones; a spiral with a small star sits where the eye would be, and a red coiled shape marks the ear area.\",\n    \"A row of white arch shapes along the lower jaw reads as teeth; above it, bands of green parallel lines and teal curves fill the cheek and chin, while a pink outline traces a second, larger arc around the right side of the head.\"\n  ],\n  \"reading\": \"The brown field holds the head steady while everything inside it moves in a different direction. Zigzag bands cut across the eye line like a signal interrupting the form. Layered loops and rectangles fill the skull's interior without settling into a single reading—mechanical, anatomical, and decorative at once. The spiral eye and arched teeth give the face its anchor points; the rest resists resolution.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the horizontal zigzag beam crossing the eye zone appears in the title neighbor nnxyz nnotb #290 and again in nnxyz nnotb #292, suggesting it is a recurring structural device across this part of the collection rather than an isolated choice.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ\",\n      \"reason\": \"nnxyz nnotb #290 shares the horizontal beam crossing the eye zone and a similar profile-facing head structure, but its dark background and translucent color washes make the interior feel receding where #291 feels dense and opaque.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv\",\n      \"reason\": \"nnxyz nnotb #292 repeats the zigzag beam motif at the same horizontal position, but replaces the brown ground and layered line-work with a saturated multicolor wash, showing how the same structural device reads differently against a busy versus a neutral field.\"\n    }\n  ],\n  \"tags\": [\n    \"head in profile\",\n    \"zigzag horizontal bands\",\n    \"layered interior line-work\",\n    \"spiral eye form\",\n    \"arch-tooth row\",\n    \"warm brown ground\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed interior space\",\n    \"signal-interruption mood\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the thick outer outline, the zigzag beams crossing the eye zone, or the spiral at the center—and what does that path tell you about how the layers are ordered?\",\n  \"ambiguities\": [\n    \"The red coiled shape at the ear position could be read as an ear, a shell form, or a purely abstract loop; no supplied evidence resolves which reading the work supports.\",\n    \"nnxyz #32 from the nnxyz-other collection shares a spiral eye device and tooth-row, but its red ground and frontal orientation differ enough that the connection felt weaker than the two nnotb neighbors and was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG/image.png",
+        "imageSHA256": "884f4c0cd453e8a9bcb2adbd1294c70a5bef8eea8d5497f3dab11b8cddb6e053"
+      },
+      {
+        "artworkId": "QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ/image.png",
+        "imageSHA256": "0306e87bba6fc0bbbb2411f7ec95b04ada4349d53eb76c69760f2580850afe79"
+      },
+      {
+        "artworkId": "QmRJ2v2MWzABVtAMvq83FLoNBs4b9GWzRXdXJNkV1UJHbF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRJ2v2MWzABVtAMvq83FLoNBs4b9GWzRXdXJNkV1UJHbF/image.png",
+        "imageSHA256": "9e08f58c64d912a1fe1b6751e461a7d413baea4a9ca8ec3c94d5bd6059dd109e"
+      },
+      {
+        "artworkId": "Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv/image.png",
+        "imageSHA256": "6ea5e7857de938cc8ca218d27a915288e1dda9ac4304df7e9fd54b94af1fffcc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:35.590277-05:00",
+    "usage": {
+      "inputTokens": 6989,
+      "outputTokens": 1056,
+      "totalTokens": 8045,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6879
+    },
+    "requestId": "dc919717-0397-47a4-a8ee-1b5db041b1bd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A thick black outline defines a large head in three-quarter profile against a flat warm-brown field; two horizontal zigzag bands in red and yellow extend left from the eye zone into the background.\",\n    \"The interior is packed with layered lines in green, teal, pink, red, and white forming looping and rectangular sub-zones; a spiral with a small star-like mark sits where the eye would be, and a red coiled shape marks the ear area.\",\n    \"A row of white arch shapes along the lower jaw reads as teeth; above it, bands of green parallel lines and teal curves fill the cheek and chin, while a pink outline traces a larger arc around the right side of the head.\"\n  ],\n  \"reading\": \"The flat brown field holds the head steady while everything inside it moves in a different direction. Zigzag bands cut across the eye line like a signal interrupting the form. Layered loops and rectangles fill the interior without settling into a single reading—mechanical, anatomical, and decorative at once. The spiral eye and arched teeth give the face its anchor points; the rest resists resolution.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the horizontal zigzag beam crossing the eye zone appears in title neighbors nnxyz nnotb #290 and nnxyz nnotb #292, suggesting it recurs across this part of the collection rather than appearing in isolation.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ\",\n      \"reason\": \"nnxyz nnotb #290 shares the horizontal zigzag beam crossing the eye zone and a profile-facing head, but its dark background and translucent color washes make the interior feel receding where #291 feels dense and opaque.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv\",\n      \"reason\": \"nnxyz nnotb #292 repeats the zigzag beam at the same horizontal position but replaces the brown ground and layered line-work with a saturated multicolor wash, showing how the same device reads differently against a neutral versus a busy field.\"\n    }\n  ],\n  \"tags\": [\n    \"head in three-quarter profile\",\n    \"zigzag horizontal bands\",\n    \"layered interior line-work\",\n    \"spiral eye form\",\n    \"arch-tooth row\",\n    \"warm brown ground\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed interior space\",\n    \"signal-interruption mood\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the thick outer outline, the zigzag beams crossing the eye zone, or the spiral at the center—and what does that sequence tell you about how the layers are ordered?\",\n  \"ambiguities\": [\n    \"The red coiled shape at the ear position could be read as an ear, a shell form, or a purely abstract loop; no supplied evidence resolves which reading applies.\",\n    \"nnxyz #32 from the nnxyz-other collection shares a spiral eye device and tooth-row but its red ground and frontal orientation make the connection weaker than the two nnotb neighbors; it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: brown ground, red-and-yellow zigzag beams, spiral eye with small mark, red coiled ear shape, white arch-tooth row, green and teal interior bands, and pink outer arc are all visible.\",\n    \"Comparison with QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ confirmed: dark background and translucent washes contrast with #291's opaque brown ground; horizontal beam and profile structure are present in both images.\",\n    \"Comparison with Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv confirmed: zigzag beam visible at the same horizontal position; saturated multicolor wash background clearly differs from #291's flat brown field; no invented claims added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG/image.png",
+        "imageSHA256": "884f4c0cd453e8a9bcb2adbd1294c70a5bef8eea8d5497f3dab11b8cddb6e053"
+      },
+      {
+        "artworkId": "QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ/image.png",
+        "imageSHA256": "0306e87bba6fc0bbbb2411f7ec95b04ada4349d53eb76c69760f2580850afe79"
+      },
+      {
+        "artworkId": "QmRJ2v2MWzABVtAMvq83FLoNBs4b9GWzRXdXJNkV1UJHbF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRJ2v2MWzABVtAMvq83FLoNBs4b9GWzRXdXJNkV1UJHbF/image.png",
+        "imageSHA256": "9e08f58c64d912a1fe1b6751e461a7d413baea4a9ca8ec3c94d5bd6059dd109e"
+      },
+      {
+        "artworkId": "Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv/image.png",
+        "imageSHA256": "6ea5e7857de938cc8ca218d27a915288e1dda9ac4304df7e9fd54b94af1fffcc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A thick black outline defines a large head in three-quarter profile against a flat warm-brown field; two horizontal zigzag bands in red and yellow extend left from the eye zone into the background.\", \"The interior is packed with layered lines in green, teal, pink, red, and white forming looping and rectangular sub-zones; a spiral with a small star sits where the eye would be, and a red coiled shape marks the ear area.\", \"A row of white arch shapes along the lower jaw reads as teeth; above it, bands of green parallel lines and teal curves fill the cheek and chin, while a pink outline traces a second, larger arc around the right side of the head.\"], \"reading\": \"The brown field holds the head steady while everything inside it moves in a different direction. Zigzag bands cut across the eye line like a signal interrupting the form. Layered loops and rectangles fill the skull's interior without settling into a single reading—mechanical, anatomical, and decorative at once. The spiral eye and arched teeth give the face its anchor points; the rest resists resolution.\", \"contextAngle\": \"Within the owned nnotb subset, the horizontal zigzag beam crossing the eye zone appears in the title neighbor nnxyz nnotb #290 and again in nnxyz nnotb #292, suggesting it is a recurring structural device across this part of the collection rather than an isolated choice.\", \"connections\": [{\"targetArtworkId\": \"QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ\", \"reason\": \"nnxyz nnotb #290 shares the horizontal beam crossing the eye zone and a similar profile-facing head structure, but its dark background and translucent color washes make the interior feel receding where #291 feels dense and opaque.\"}, {\"targetArtworkId\": \"Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv\", \"reason\": \"nnxyz nnotb #292 repeats the zigzag beam motif at the same horizontal position, but replaces the brown ground and layered line-work with a saturated multicolor wash, showing how the same structural device reads differently against a busy versus a neutral field.\"}], \"tags\": [\"head in profile\", \"zigzag horizontal bands\", \"layered interior line-work\", \"spiral eye form\", \"arch-tooth row\", \"warm brown ground\"], \"interpretiveTags\": [\"compressed interior space\", \"signal-interruption mood\"], \"lookingQuestion\": \"Where does your eye settle first—on the thick outer outline, the zigzag beams crossing the eye zone, or the spiral at the center—and what does that path tell you about how the layers are ordered?\", \"ambiguities\": [\"The red coiled shape at the ear position could be read as an ear, a shell form, or a purely abstract loop; no supplied evidence resolves which reading the work supports.\", \"nnxyz #32 from the nnxyz-other collection shares a spiral eye device and tooth-row, but its red ground and frontal orientation differ enough that the connection felt weaker than the two nnotb neighbors and was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

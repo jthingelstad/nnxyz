@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:07.698840-05:00",
+    "usage": {
+      "inputTokens": 6242,
+      "outputTokens": 701,
+      "totalTokens": 6943,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20226
+    },
+    "requestId": "3c940165-0b86-4565-aa56-1cca06f3a1f7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A black figure with white outline stands center-frame, arms spread wide, with X-shaped eyes and a curved yellow smile on its head.\",\n    \"A large yellow circle with sunglasses and a frown occupies the upper right, radiating thick yellow rays across a gray-brown background scattered with light blue rain dashes.\",\n    \"Two speech-bubble shapes at lower left and right each contain bold \\\"?!\\\" marks, flanking black shoe-like forms marked with red X's and yellow zigzag lines.\"\n  ],\n  \"reading\": \"The spread-armed figure reads as caught between opposing signals: a red heart on its chest, a grinning face above, and a frowning sun overhead. Rain falls through sunshine. Exclamation marks and question marks crowd the margins, suggesting confusion or alarm from unseen onlookers. The composition feels like a scene rather than a single character study—something is happening, and the punctuation insists we notice.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #40\\\" and \\\"nnxyz rawblocks #42.\\\" Where those neighbors fill the frame with tangled line-work and exposed heads, this work isolates a full-body figure against open space, giving it a more narrative, stage-like arrangement.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe\",\n      \"reason\": \"Both share yellow accents and a face with visible teeth, but #40 buries its head in dense overlapping lines while #41 sets its figure against open gray space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\",\n      \"reason\": \"Both use a dominant yellow field and black outlines, but #42 returns to a close-cropped head with scribbled layers, abandoning the full-body staging seen here.\"\n    }\n  ],\n  \"tags\": [\n    \"full-body figure\",\n    \"sun face\",\n    \"rain pattern\",\n    \"speech bubbles\",\n    \"heart symbol\",\n    \"punctuation marks\"\n  ],\n  \"lookingQuestion\": \"How does the contrast between the figure's upturned smile and the sun's downturned mouth change the way you read the rain falling between them?\",\n  \"ambiguities\": [\n    \"The shoe-like shapes at the bottom could be separate characters or the figure's own feet; their red X marks and zigzag lines don't clearly connect to the central body.\",\n    \"The pink-magenta cloud forms at top left appear behind the sun's rays but their role—weather, decoration, framing—is uncertain.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmStzkXhUV4SRq6s7sBg7cABZqUFi2R3iqdirPeCV18xSp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmStzkXhUV4SRq6s7sBg7cABZqUFi2R3iqdirPeCV18xSp/image.png",
+        "imageSHA256": "1036f0528a2388ff4ee04eaab70503d10430f33ddc9476da44d023d98b8ae8d1"
+      },
+      {
+        "artworkId": "QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe/image.png",
+        "imageSHA256": "4432232fae9ee81bd00fa0e245871284775ab1e78693658130f4560f53083d2f"
+      },
+      {
+        "artworkId": "QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w/image.png",
+        "imageSHA256": "526a36144be11d7301b32cdd65b29d9ddfb9503a84b10b400264afdfe6e40d34"
+      },
+      {
+        "artworkId": "QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi/image.png",
+        "imageSHA256": "8190f31405813db5091f0bb1d2f807e5faf7b9fefc270d0ab1d7a08d9a82a35f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:19.104635-05:00",
+    "usage": {
+      "inputTokens": 6975,
+      "outputTokens": 823,
+      "totalTokens": 7798,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11298
+    },
+    "requestId": "4f83db38-31e1-44bd-983f-d44b853f97d2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A black figure with white outline stands center-frame, arms spread wide, with X-shaped eyes and a curved yellow smile on its head.\",\n    \"A large yellow circle with round sunglasses and a downturned mouth occupies the upper right, radiating thick yellow rays across a gray-brown background scattered with light blue rain dashes.\",\n    \"Two speech-bubble shapes at lower left and right each contain bold \\\"?!\\\" marks, flanking black shoe-like forms marked with red X's and yellow zigzag lines.\"\n  ],\n  \"reading\": \"The spread-armed figure stands caught between opposing signals: a red heart on its chest, a grinning face above, and a frowning sun overhead. Rain falls through sunshine. Exclamation and question marks crowd the margins in speech bubbles, reading as confusion or alarm from unseen onlookers. The composition feels like a staged scene rather than a single character study—something is happening, and the punctuation insists we notice.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #40\\\" and \\\"nnxyz rawblocks #42.\\\" Where those neighbors fill the frame with tangled line-work and close-cropped heads, this work isolates a full-body figure against open space, giving it a more narrative, stage-like arrangement.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe\",\n      \"reason\": \"Both feature yellow accents and a face with visible teeth, but #40 buries its head in dense overlapping lines while #41 sets its figure against open gray space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\",\n      \"reason\": \"Both use dominant yellow and black outlines, but #42 returns to a close-cropped head with scribbled layers, abandoning the full-body staging seen here.\"\n    }\n  ],\n  \"tags\": [\n    \"full-body figure\",\n    \"sun face\",\n    \"rain pattern\",\n    \"speech bubbles\",\n    \"heart symbol\",\n    \"punctuation marks\"\n  ],\n  \"lookingQuestion\": \"How does the contrast between the figure's upturned smile and the sun's downturned mouth change the way you read the rain falling between them?\",\n  \"ambiguities\": [\n    \"The shoe-like shapes at the bottom could be separate characters or the figure's own feet; their red X marks and zigzag lines don't clearly connect to the central body.\",\n    \"The pink-magenta cloud forms at top left appear behind the sun's rays but their role—weather, decoration, framing—is uncertain.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed the sun face has round dark glasses and a downturned mouth, not just a frown; corrected observation wording for precision.\",\n    \"Reading was 79 words, trimmed one word to stay within limit; context angle at 42 words, within range.\",\n    \"Both comparison reasons verified against inspected images: #40 is dense overlapping lines with a pink background, #42 is a close-cropped head on a yellow field.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmStzkXhUV4SRq6s7sBg7cABZqUFi2R3iqdirPeCV18xSp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmStzkXhUV4SRq6s7sBg7cABZqUFi2R3iqdirPeCV18xSp/image.png",
+        "imageSHA256": "1036f0528a2388ff4ee04eaab70503d10430f33ddc9476da44d023d98b8ae8d1"
+      },
+      {
+        "artworkId": "QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe/image.png",
+        "imageSHA256": "4432232fae9ee81bd00fa0e245871284775ab1e78693658130f4560f53083d2f"
+      },
+      {
+        "artworkId": "QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w/image.png",
+        "imageSHA256": "526a36144be11d7301b32cdd65b29d9ddfb9503a84b10b400264afdfe6e40d34"
+      },
+      {
+        "artworkId": "QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi/image.png",
+        "imageSHA256": "8190f31405813db5091f0bb1d2f807e5faf7b9fefc270d0ab1d7a08d9a82a35f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A black figure with white outline stands center-frame, arms spread wide, with X-shaped eyes and a curved yellow smile on its head.\", \"A large yellow circle with sunglasses and a frown occupies the upper right, radiating thick yellow rays across a gray-brown background scattered with light blue rain dashes.\", \"Two speech-bubble shapes at lower left and right each contain bold \\\"?!\\\" marks, flanking black shoe-like forms marked with red X's and yellow zigzag lines.\"], \"reading\": \"The spread-armed figure reads as caught between opposing signals: a red heart on its chest, a grinning face above, and a frowning sun overhead. Rain falls through sunshine. Exclamation marks and question marks crowd the margins, suggesting confusion or alarm from unseen onlookers. The composition feels like a scene rather than a single character study—something is happening, and the punctuation insists we notice.\", \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #40\\\" and \\\"nnxyz rawblocks #42.\\\" Where those neighbors fill the frame with tangled line-work and exposed heads, this work isolates a full-body figure against open space, giving it a more narrative, stage-like arrangement.\", \"connections\": [{\"targetArtworkId\": \"QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe\", \"reason\": \"Both share yellow accents and a face with visible teeth, but #40 buries its head in dense overlapping lines while #41 sets its figure against open gray space.\"}, {\"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\", \"reason\": \"Both use a dominant yellow field and black outlines, but #42 returns to a close-cropped head with scribbled layers, abandoning the full-body staging seen here.\"}], \"tags\": [\"full-body figure\", \"sun face\", \"rain pattern\", \"speech bubbles\", \"heart symbol\", \"punctuation marks\"], \"lookingQuestion\": \"How does the contrast between the figure's upturned smile and the sun's downturned mouth change the way you read the rain falling between them?\", \"ambiguities\": [\"The shoe-like shapes at the bottom could be separate characters or the figure's own feet; their red X marks and zigzag lines don't clearly connect to the central body.\", \"The pink-magenta cloud forms at top left appear behind the sun's rays but their role—weather, decoration, framing—is uncertain.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

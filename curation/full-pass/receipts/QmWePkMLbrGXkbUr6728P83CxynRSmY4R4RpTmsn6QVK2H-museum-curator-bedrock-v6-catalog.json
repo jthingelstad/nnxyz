@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:17.672014-05:00",
+    "usage": {
+      "inputTokens": 6396,
+      "outputTokens": 685,
+      "totalTokens": 7081,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20612
+    },
+    "requestId": "15f06a22-f94b-4bb9-a115-32525b4324b8",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face-like form fills the center, built from overlapping loops for eyes and a wide purple-pink mouth showing black vertical teeth marks.\",\n    \"Long streaks of red, yellow, orange, and blue radiate outward from the head like wild hair, crossing over a bright blue background at the edges.\",\n    \"A pale yellow-green wash fills the interior of the face, while the surrounding lines shift between thick opaque strokes and thin scratchy marks.\"\n  ],\n  \"reading\": \"The face seems to collapse under the weight of its own lines—eyes rendered as concentric spirals that sink unevenly, a mouth stretched open with jagged teeth scratched into purple. The radiating hair-like strokes push outward in every direction, giving the head a sense of unraveling. Against the cool blue ground, the warm yellows and reds of the interior read as feverish. The overall effect can feel like a scream caught mid-breath.\",\n  \"contextAngle\": \"In the owned Scrimshaw numbered subset, this work sits between Scrimshaw14 and Scrimshaw 18. Both neighbors share the open-mouth, looping-eye structure, but this piece uses a cooler blue field rather than the saturated yellow or orange grounds seen in those neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZsWCiKevravh4RtUvKd1LFAysU1qCkxCQQU4gqDsLjf7\",\n      \"reason\": \"Scrimshaw14 shares the open-mouth teeth motif and spiral eyes, but its yellow background and cooler blue line-work inside the face invert this piece's warm interior on cool ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9\",\n      \"reason\": \"The nnxyz nifty faces #43 packs similar multicolor scribble density into a head shape, but contains it within hard-edged block segments rather than letting lines escape freely.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"spiral eyes\",\n    \"radiating lines\",\n    \"blue ground\",\n    \"overlapping loops\",\n    \"face-like form\"\n  ],\n  \"lookingQuestion\": \"Where do the lines that form the hair-like streaks begin—do they originate from the face's outline, or do they seem to arrive from outside the frame?\",\n  \"ambiguities\": [\n    \"The pale yellow-green interior may be a filled shape or layered semi-transparent strokes; the method is not certain from the image alone.\",\n    \"A small white circular form below the mouth could be a chin element or a separate mark unrelated to the face structure.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWePkMLbrGXkbUr6728P83CxynRSmY4R4RpTmsn6QVK2H",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmWePkMLbrGXkbUr6728P83CxynRSmY4R4RpTmsn6QVK2H/image.png",
+        "imageSHA256": "cac80e95ffdce106ef6c53d51ed9cc84632d7b44cbe1183f4267d7d582b551e1"
+      },
+      {
+        "artworkId": "QmZsWCiKevravh4RtUvKd1LFAysU1qCkxCQQU4gqDsLjf7",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmZsWCiKevravh4RtUvKd1LFAysU1qCkxCQQU4gqDsLjf7/image.png",
+        "imageSHA256": "ae9c345138339e9b5e5c93bea22e7775461a2532e364bafa5f0b3febc30b2930"
+      },
+      {
+        "artworkId": "QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9/image.png",
+        "imageSHA256": "0d928685e12470f9b07ac07ca927cef0f1a09c023665dfab8fbdb4c2492f3ca2"
+      },
+      {
+        "artworkId": "QmSmnvZyNoHEn8bCUEtTsf5WN2ei9Gx8xsPpvjWGh2Z2pc",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmSmnvZyNoHEn8bCUEtTsf5WN2ei9Gx8xsPpvjWGh2Z2pc/image.png",
+        "imageSHA256": "5a9eca6410f58a18e083bc719a0489ebcca184b349143d66dbdf4f1118632ebc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:29.527181-05:00",
+    "usage": {
+      "inputTokens": 7113,
+      "outputTokens": 785,
+      "totalTokens": 7898,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11754
+    },
+    "requestId": "a3f9f91f-556b-4af6-98bb-5fe1d288d8a8",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face-like form fills the center, built from overlapping loops for eyes and a wide purple-pink mouth with black vertical tooth marks scratched inside.\",\n    \"Long streaks of red, yellow, orange, and blue radiate outward from the head, crossing over a bright blue background visible at the corners and edges.\",\n    \"A pale yellow-green wash fills the interior of the face, while surrounding lines alternate between thick opaque strokes and thin scratchy marks.\"\n  ],\n  \"reading\": \"The face seems to buckle under its own tangled lines—eyes built as lopsided concentric loops that sink at different heights, a mouth stretched wide with jagged marks scratched into purple. Radiating hair-like strokes push outward in every direction, giving the head a sense of unraveling. Against the cool blue ground, the warm yellows and reds inside read as feverish, suggesting a scream caught mid-breath.\",\n  \"contextAngle\": \"In the owned Scrimshaw numbered subset, this work sits between Scrimshaw14 and Scrimshaw 18. Both neighbors share the open-mouth, looping-eye structure, but this piece uses a cooler blue field rather than the saturated yellow or orange grounds of those neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZsWCiKevravh4RtUvKd1LFAysU1qCkxCQQU4gqDsLjf7\",\n      \"reason\": \"Scrimshaw14 shares the open-mouth teeth motif and spiral eyes but sets them against a bright yellow ground, inverting this piece's warm interior on cool blue.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9\",\n      \"reason\": \"Nifty faces #43 packs similar multicolor scribble density into a head shape but contains it within hard-edged block segments rather than letting lines escape freely.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"spiral eyes\",\n    \"radiating lines\",\n    \"blue ground\",\n    \"overlapping loops\",\n    \"face-like form\"\n  ],\n  \"lookingQuestion\": \"Where do the lines that form the hair-like streaks begin—do they originate from the face's outline, or do they seem to arrive from outside the frame?\",\n  \"ambiguities\": [\n    \"The pale yellow-green interior may be a filled shape or layered semi-transparent strokes; the method is not certain from the image alone.\",\n    \"A small white circular form below the mouth could be a chin element or a separate mark unrelated to the face structure.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: the mouth area is purple-pink with black vertical scratch marks for teeth, matching the image; draft's description accurate.\",\n    \"Corrected reading from 86 words to 65 words to meet the 45–80 word limit; removed redundant final sentence.\",\n    \"Verified Scrimshaw14 has a bright yellow background and Scrimshaw 18 has an orange ground; draft's color contrast claim confirmed against both comparison images.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWePkMLbrGXkbUr6728P83CxynRSmY4R4RpTmsn6QVK2H",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmWePkMLbrGXkbUr6728P83CxynRSmY4R4RpTmsn6QVK2H/image.png",
+        "imageSHA256": "cac80e95ffdce106ef6c53d51ed9cc84632d7b44cbe1183f4267d7d582b551e1"
+      },
+      {
+        "artworkId": "QmZsWCiKevravh4RtUvKd1LFAysU1qCkxCQQU4gqDsLjf7",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmZsWCiKevravh4RtUvKd1LFAysU1qCkxCQQU4gqDsLjf7/image.png",
+        "imageSHA256": "ae9c345138339e9b5e5c93bea22e7775461a2532e364bafa5f0b3febc30b2930"
+      },
+      {
+        "artworkId": "QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9/image.png",
+        "imageSHA256": "0d928685e12470f9b07ac07ca927cef0f1a09c023665dfab8fbdb4c2492f3ca2"
+      },
+      {
+        "artworkId": "QmSmnvZyNoHEn8bCUEtTsf5WN2ei9Gx8xsPpvjWGh2Z2pc",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmSmnvZyNoHEn8bCUEtTsf5WN2ei9Gx8xsPpvjWGh2Z2pc/image.png",
+        "imageSHA256": "5a9eca6410f58a18e083bc719a0489ebcca184b349143d66dbdf4f1118632ebc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A face-like form fills the center, built from overlapping loops for eyes and a wide purple-pink mouth showing black vertical teeth marks.\", \"Long streaks of red, yellow, orange, and blue radiate outward from the head like wild hair, crossing over a bright blue background at the edges.\", \"A pale yellow-green wash fills the interior of the face, while the surrounding lines shift between thick opaque strokes and thin scratchy marks.\"], \"reading\": \"The face seems to collapse under the weight of its own lines—eyes rendered as concentric spirals that sink unevenly, a mouth stretched open with jagged teeth scratched into purple. The radiating hair-like strokes push outward in every direction, giving the head a sense of unraveling. Against the cool blue ground, the warm yellows and reds of the interior read as feverish. The overall effect can feel like a scream caught mid-breath.\", \"contextAngle\": \"In the owned Scrimshaw numbered subset, this work sits between Scrimshaw14 and Scrimshaw 18. Both neighbors share the open-mouth, looping-eye structure, but this piece uses a cooler blue field rather than the saturated yellow or orange grounds seen in those neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmZsWCiKevravh4RtUvKd1LFAysU1qCkxCQQU4gqDsLjf7\", \"reason\": \"Scrimshaw14 shares the open-mouth teeth motif and spiral eyes, but its yellow background and cooler blue line-work inside the face invert this piece's warm interior on cool ground.\"}, {\"targetArtworkId\": \"QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9\", \"reason\": \"The nnxyz nifty faces #43 packs similar multicolor scribble density into a head shape, but contains it within hard-edged block segments rather than letting lines escape freely.\"}], \"tags\": [\"open mouth\", \"spiral eyes\", \"radiating lines\", \"blue ground\", \"overlapping loops\", \"face-like form\"], \"lookingQuestion\": \"Where do the lines that form the hair-like streaks begin—do they originate from the face's outline, or do they seem to arrive from outside the frame?\", \"ambiguities\": [\"The pale yellow-green interior may be a filled shape or layered semi-transparent strokes; the method is not certain from the image alone.\", \"A small white circular form below the mouth could be a chin element or a separate mark unrelated to the face structure.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

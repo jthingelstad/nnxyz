@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:31.694229-05:00",
+    "usage": {
+      "inputTokens": 6434,
+      "outputTokens": 699,
+      "totalTokens": 7133,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 21127
+    },
+    "requestId": "110a1bc1-a194-447d-8156-3d622ef9a6f7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head fills most of the frame, topped by a mass of yellow-green scribbled loops and broad color patches that suggest voluminous hair or a headdress.\",\n    \"Diagonal yellow and pale green rays fan outward from the lower right of the face, cutting across the flat cobalt-blue background like projected light.\",\n    \"A small rainbow-striped arc sits on the figure's right shoulder, and scattered pink, white, and yellow scrawled lines overlay the darker tones of the neck and chest.\"\n  ],\n  \"reading\": \"The figure seems to radiate: those fanning rays push outward from the jaw as if sound or heat is escaping the body. Thick color patches in olive, orange, and purple build the head's mass, while thin neon scribbles—yellow, pink, white—hover above like static electricity. The flat blue field makes every warm tone advance. The overall effect can feel celebratory, even overwhelming, as if the figure is mid-performance and barely contained by the frame.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #21\\\" and \\\"nnxyz rawblocks #23.\\\" All three share a cobalt-blue background and layered scribble-over-patch construction, but this piece is distinct for its radiating diagonal rays, which appear in neither neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz\",\n      \"reason\": \"Both place a head against the same blue field with olive-green hair patches, but #21 shows visible teeth and exposed eyes while #22 hides the eyes behind a dark band.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf\",\n      \"reason\": \"#23 uses a brimmed hat and concentric-ring eyes for a more contained, frontal gaze, contrasting with #22's obscured eyes and outward-bursting rays.\"\n    }\n  ],\n  \"tags\": [\n    \"flat blue background\",\n    \"scribbled line overlay\",\n    \"radiating diagonal rays\",\n    \"head and shoulders figure\",\n    \"rainbow arc detail\",\n    \"layered color patches\"\n  ],\n  \"lookingQuestion\": \"What effect does hiding the eyes behind that dark horizontal band have on how you read the figure's mood, especially compared to the exposed features in the neighboring works?\",\n  \"ambiguities\": [\n    \"Whether the dark band across the eyes represents sunglasses, shadow, or an abstract mark cannot be confirmed from the image alone.\",\n    \"The small rainbow arc on the shoulder may be a decorative element or part of clothing; its role is unclear.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTMztrF9fguSoP3Wh7WcuQJkQ1szr5uHBV7BvmSRHF4jw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTMztrF9fguSoP3Wh7WcuQJkQ1szr5uHBV7BvmSRHF4jw/image.png",
+        "imageSHA256": "367262ce618a02dcbbaa51fb4d91e12a47cabe24e860fff9cae7401343e65282"
+      },
+      {
+        "artworkId": "QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz/image.png",
+        "imageSHA256": "dca67b91ca9bd9661238d60dd1c9f88359f8d0ba0d74df0edb9c1cb3340b2000"
+      },
+      {
+        "artworkId": "QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9/image.png",
+        "imageSHA256": "0d928685e12470f9b07ac07ca927cef0f1a09c023665dfab8fbdb4c2492f3ca2"
+      },
+      {
+        "artworkId": "QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf/image.png",
+        "imageSHA256": "f764b3625f76438eeec80b7e9b217c5873ff98c09af5b94d40918cf17f477bf5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:42.748017-05:00",
+    "usage": {
+      "inputTokens": 7165,
+      "outputTokens": 803,
+      "totalTokens": 7968,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10957
+    },
+    "requestId": "bbd5ca9f-7014-40ed-8851-ac067943a745",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head fills most of the frame, topped by a mass of yellow-green scribbled loops and broad color patches that read as voluminous hair or a headdress.\",\n    \"Diagonal yellow and pale green rays fan outward from the lower-right area of the face, cutting across the flat cobalt-blue background.\",\n    \"A small rainbow-striped arc sits on the figure's right shoulder, and scattered pink, white, and yellow scrawled lines overlay the darker tones of the neck and chest.\"\n  ],\n  \"reading\": \"The figure seems to radiate: fanning rays push outward from the jaw as if sound or heat is escaping the body. Thick color patches in olive, orange, and purple build the head's mass, while thin neon scribbles—yellow, pink, white—hover above like static. The flat blue field makes every warm tone advance. The result can feel celebratory, even overwhelming, as if the figure is barely contained by the frame.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #21\\\" and \\\"nnxyz rawblocks #23.\\\" All three share a cobalt-blue background and layered scribble-over-patch construction, but this piece is distinct for its radiating diagonal rays, absent in either neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz\",\n      \"reason\": \"Both place a head against the same blue field with olive-green hair patches, but #21 shows visible teeth and exposed eyes while #22 hides the eyes behind a dark band.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf\",\n      \"reason\": \"#23 uses a brimmed hat and concentric-ring eyes for a contained frontal gaze, contrasting with #22's obscured eyes and outward-bursting rays.\"\n    }\n  ],\n  \"tags\": [\n    \"flat blue background\",\n    \"scribbled line overlay\",\n    \"radiating diagonal rays\",\n    \"head and shoulders figure\",\n    \"rainbow arc detail\",\n    \"layered color patches\"\n  ],\n  \"lookingQuestion\": \"What effect does hiding the eyes behind that dark horizontal band have on how you read the figure's mood, especially compared to the exposed features in the neighboring works?\",\n  \"ambiguities\": [\n    \"Whether the dark band across the eyes represents sunglasses, shadow, or an abstract mark cannot be confirmed from the image alone.\",\n    \"The small rainbow arc on the shoulder may be a decorative element or part of clothing; its role is unclear.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed diagonal rays visible in #22 image, absent in both #21 and #23 images; draft claim accurate.\",\n    \"Trimmed reading from 80 words to 64 and removed 'mid-performance' phrasing that implied narrative intent.\",\n    \"Verified #21 shows open mouth with teeth and two visible eyes; #23 shows concentric-ring eye detail and a brown brimmed hat—both comparison claims hold.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTMztrF9fguSoP3Wh7WcuQJkQ1szr5uHBV7BvmSRHF4jw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTMztrF9fguSoP3Wh7WcuQJkQ1szr5uHBV7BvmSRHF4jw/image.png",
+        "imageSHA256": "367262ce618a02dcbbaa51fb4d91e12a47cabe24e860fff9cae7401343e65282"
+      },
+      {
+        "artworkId": "QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz/image.png",
+        "imageSHA256": "dca67b91ca9bd9661238d60dd1c9f88359f8d0ba0d74df0edb9c1cb3340b2000"
+      },
+      {
+        "artworkId": "QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9/image.png",
+        "imageSHA256": "0d928685e12470f9b07ac07ca927cef0f1a09c023665dfab8fbdb4c2492f3ca2"
+      },
+      {
+        "artworkId": "QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf/image.png",
+        "imageSHA256": "f764b3625f76438eeec80b7e9b217c5873ff98c09af5b94d40918cf17f477bf5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large head fills most of the frame, topped by a mass of yellow-green scribbled loops and broad color patches that suggest voluminous hair or a headdress.\", \"Diagonal yellow and pale green rays fan outward from the lower right of the face, cutting across the flat cobalt-blue background like projected light.\", \"A small rainbow-striped arc sits on the figure's right shoulder, and scattered pink, white, and yellow scrawled lines overlay the darker tones of the neck and chest.\"], \"reading\": \"The figure seems to radiate: those fanning rays push outward from the jaw as if sound or heat is escaping the body. Thick color patches in olive, orange, and purple build the head's mass, while thin neon scribbles—yellow, pink, white—hover above like static electricity. The flat blue field makes every warm tone advance. The overall effect can feel celebratory, even overwhelming, as if the figure is mid-performance and barely contained by the frame.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #21\\\" and \\\"nnxyz rawblocks #23.\\\" All three share a cobalt-blue background and layered scribble-over-patch construction, but this piece is distinct for its radiating diagonal rays, which appear in neither neighbor.\", \"connections\": [{\"targetArtworkId\": \"QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz\", \"reason\": \"Both place a head against the same blue field with olive-green hair patches, but #21 shows visible teeth and exposed eyes while #22 hides the eyes behind a dark band.\"}, {\"targetArtworkId\": \"QmTHMqxfDfraMghzbwCA9hQhJfQGHm7osnEFZr1f29mbBf\", \"reason\": \"#23 uses a brimmed hat and concentric-ring eyes for a more contained, frontal gaze, contrasting with #22's obscured eyes and outward-bursting rays.\"}], \"tags\": [\"flat blue background\", \"scribbled line overlay\", \"radiating diagonal rays\", \"head and shoulders figure\", \"rainbow arc detail\", \"layered color patches\"], \"lookingQuestion\": \"What effect does hiding the eyes behind that dark horizontal band have on how you read the figure's mood, especially compared to the exposed features in the neighboring works?\", \"ambiguities\": [\"Whether the dark band across the eyes represents sunglasses, shadow, or an abstract mark cannot be confirmed from the image alone.\", \"The small rainbow arc on the shoulder may be a decorative element or part of clothing; its role is unclear.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:09.643981-05:00",
+    "usage": {
+      "inputTokens": 7065,
+      "outputTokens": 763,
+      "totalTokens": 7828,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14735
+    },
+    "requestId": "930ede23-b2f1-4596-a30b-7fb5c264f105",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"The upper-left quadrant holds large bubble-outlined letters — NN, XYZ — stacked in two framed rectangles, white-filled with cyan and pink inner lines against a red ground.\",\n    \"A circle containing a cross-plus sign occupies the upper-right, drawn in concentric cyan and white loops; a second, smaller plus sign floats in green and pink below it at center.\",\n    \"The lower half is divided into two horizontal bands: a row of seven oval white loops in a dark trough, then a bottom strip of smaller looping forms above a thick yellow wave running edge to edge.\"\n  ],\n  \"reading\": \"Letters, circles, and repeated oval units lock into a grid-like face-shaped layout — two framed text blocks read as eyes, the plus-in-circle as a nose or lens, the oval row as teeth or keys. The arrangement feels more like a schematic than a likeness, cool and systematic on the surface, yet the layered lines underneath pulse with something closer to noise than order. The collector's link to scrimshaw seems apt: dense line-on-line building up a surface that rewards slow looking.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #47 and #49. Where #47 fills its space with a single open-mouthed face and #49 with an asymmetric skull-like form, #48 replaces organic curves with lettered panels and repeating geometric units — the most schematic of the three inspected.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5\",\n      \"reason\": \"nifty faces #47 uses the same dense multi-color line layering but organizes it around a single open mouth and two eyes, making the contrast with #48's grid of symbols and repeated ovals visible and direct.\"\n    }\n  ],\n  \"tags\": [\n    \"lettering-as-form\",\n    \"grid-layout\",\n    \"repeated-oval-units\",\n    \"concentric-circle\",\n    \"plus-sign-motif\",\n    \"dense-line-layering\"\n  ],\n  \"lookingQuestion\": \"The seven white ovals in the lower band and the two framed letter blocks above share a similar scale and spacing — do they read as parts of a single face-like structure, or as separate registers of pattern?\",\n  \"ambiguities\": [\n    \"The face-schema reading (eyes, nose, mouth) is a curatorial interpretation based on placement; the image contains no unambiguous figurative anatomy.\",\n    \"No second comparison candidate offered a stronger formal connection than #47; QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m and QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2 share the artist but differ too broadly in structure to support a specific useful comparison beyond neighbor proximity.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWNiq7JW1LY5rwcquWFAch3JWsx3x2Be6iQ3kN4VGyf2Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWNiq7JW1LY5rwcquWFAch3JWsx3x2Be6iQ3kN4VGyf2Q/image.png",
+        "imageSHA256": "c8a7a12a2a04658e033c47813993e31ad53193effdca92660297b38f3133f035"
+      },
+      {
+        "artworkId": "QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5/image.png",
+        "imageSHA256": "06d63399707eb3df70361affe34d0be3094aab1c7d030fc5ee661e39b171a3a9"
+      },
+      {
+        "artworkId": "QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m/image.png",
+        "imageSHA256": "fd8e99494de0002315569673c79fa1198384bea974a3dc752c0d27339166ebcf"
+      },
+      {
+        "artworkId": "QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2/image.png",
+        "imageSHA256": "98a770300ef0d8cdc65c7c560f610e10409fec0fe42be343c6665775a2c3553a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:17.377019-05:00",
+    "usage": {
+      "inputTokens": 7869,
+      "outputTokens": 891,
+      "totalTokens": 8760,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7609
+    },
+    "requestId": "afbd313a-d076-4e07-b4f9-914dd8355116",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"The upper-left quadrant holds large bubble-outlined letters — NN, XYZ — stacked in two framed rectangles, white-filled with cyan and pink inner lines against a red ground.\",\n    \"A circle containing a cross-plus sign occupies the upper-right, drawn in concentric cyan and white loops; a second, smaller plus sign in green and pink floats below it near center.\",\n    \"The lower half splits into two horizontal bands: a row of seven white oval loops set in a dark trough, then a bottom strip of smaller looping forms above a thick yellow wave running edge to edge.\"\n  ],\n  \"reading\": \"Letters, circles, and repeated oval units lock into a grid-like layout — two framed text blocks, a plus-in-circle, and a row of ovals suggest a face-shaped schematic without committing to one. The arrangement feels cool and systematic on the surface, yet the layered lines underneath carry something closer to noise than order. The collector's link to scrimshaw seems apt: dense line-on-line building a surface that rewards slow looking.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #47 and #49. Where #47 fills its space with a single open-mouthed face and #49 with an asymmetric skull-like form, #48 replaces organic curves with lettered panels and repeating geometric units.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5\",\n      \"reason\": \"nifty faces #47 uses the same dense multi-color line layering but organizes it around a single open mouth and two eyes, making the contrast with #48's grid of symbols and repeated ovals direct and visible.\"\n    }\n  ],\n  \"tags\": [\n    \"lettering-as-form\",\n    \"grid-layout\",\n    \"repeated-oval-units\",\n    \"concentric-circle\",\n    \"plus-sign-motif\",\n    \"dense-line-layering\"\n  ],\n  \"lookingQuestion\": \"The seven white ovals in the lower band and the two framed letter blocks above share similar scale and spacing — do they read as parts of a single face-like structure, or as separate runs of pattern?\",\n  \"ambiguities\": [\n    \"The face-schema reading (eyes, nose, mouth) is a curatorial interpretation based on placement; the image contains no unambiguous figurative anatomy.\",\n    \"QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m and QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2 share the artist but differ too broadly in structure to support a specific formal comparison beyond neighbor proximity.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: letter forms, concentric circle with plus, and dual lower bands with yellow wave are all visible and accurately described.\",\n    \"Draft reading removed one clause implying the scrimshaw link was the artist's own framing; reattributed clearly to the collector's perspective as required.\",\n    \"Comparison with QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5 confirmed against its image: open mouth, two eyes, and dense multi-color layering are all visible, supporting the contrast claim; no invented details found.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWNiq7JW1LY5rwcquWFAch3JWsx3x2Be6iQ3kN4VGyf2Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWNiq7JW1LY5rwcquWFAch3JWsx3x2Be6iQ3kN4VGyf2Q/image.png",
+        "imageSHA256": "c8a7a12a2a04658e033c47813993e31ad53193effdca92660297b38f3133f035"
+      },
+      {
+        "artworkId": "QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5/image.png",
+        "imageSHA256": "06d63399707eb3df70361affe34d0be3094aab1c7d030fc5ee661e39b171a3a9"
+      },
+      {
+        "artworkId": "QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m/image.png",
+        "imageSHA256": "fd8e99494de0002315569673c79fa1198384bea974a3dc752c0d27339166ebcf"
+      },
+      {
+        "artworkId": "QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2/image.png",
+        "imageSHA256": "98a770300ef0d8cdc65c7c560f610e10409fec0fe42be343c6665775a2c3553a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"The upper-left quadrant holds large bubble-outlined letters — NN, XYZ — stacked in two framed rectangles, white-filled with cyan and pink inner lines against a red ground.\", \"A circle containing a cross-plus sign occupies the upper-right, drawn in concentric cyan and white loops; a second, smaller plus sign floats in green and pink below it at center.\", \"The lower half is divided into two horizontal bands: a row of seven oval white loops in a dark trough, then a bottom strip of smaller looping forms above a thick yellow wave running edge to edge.\"], \"reading\": \"Letters, circles, and repeated oval units lock into a grid-like face-shaped layout — two framed text blocks read as eyes, the plus-in-circle as a nose or lens, the oval row as teeth or keys. The arrangement feels more like a schematic than a likeness, cool and systematic on the surface, yet the layered lines underneath pulse with something closer to noise than order. The collector's link to scrimshaw seems apt: dense line-on-line building up a surface that rewards slow looking.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #47 and #49. Where #47 fills its space with a single open-mouthed face and #49 with an asymmetric skull-like form, #48 replaces organic curves with lettered panels and repeating geometric units — the most schematic of the three inspected.\", \"connections\": [{\"targetArtworkId\": \"QmbnKNhVZ6Jrp2WrdrEPpQ6LpHo2Dra6XLwubCd2wAwnG5\", \"reason\": \"nifty faces #47 uses the same dense multi-color line layering but organizes it around a single open mouth and two eyes, making the contrast with #48's grid of symbols and repeated ovals visible and direct.\"}], \"tags\": [\"lettering-as-form\", \"grid-layout\", \"repeated-oval-units\", \"concentric-circle\", \"plus-sign-motif\", \"dense-line-layering\"], \"lookingQuestion\": \"The seven white ovals in the lower band and the two framed letter blocks above share a similar scale and spacing — do they read as parts of a single face-like structure, or as separate registers of pattern?\", \"ambiguities\": [\"The face-schema reading (eyes, nose, mouth) is a curatorial interpretation based on placement; the image contains no unambiguous figurative anatomy.\", \"No second comparison candidate offered a stronger formal connection than #47; QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m and QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2 share the artist but differ too broadly in structure to support a specific useful comparison beyond neighbor proximity.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:46.495823-05:00",
+    "usage": {
+      "inputTokens": 6918,
+      "outputTokens": 811,
+      "totalTokens": 7729,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13344
+    },
+    "requestId": "37bf522c-1446-47dc-a557-2454aacaa12d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A tall rectangular form dominates the canvas against a dark background, divided into three stacked box-like zones: two upper squares containing concentric green spiral eyes, and a lower rectangle filled with pale scribbled lines.\",\n    \"Hot pink and red lines run across the surface in loose, overlapping strokes, with yellow accents cutting diagonally; the right edge is heavily layered in deep magenta and brown hatching that crowds toward the border.\",\n    \"The two eye zones each hold tightly wound green and yellow concentric rings outlined in purple, sitting within their own scribbled rectangular frames, giving the face a flat, segmented quality.\"\n  ],\n  \"reading\": \"Three stacked rectangles build a face that reads less as flesh than as a constructed object — compartments holding eyes and a mouth rather than features growing from a single surface. The green spiral eyes carry an almost mechanical intensity, while the lower box, pale and loosely scratched, reads as open or hollow. Hot pink and dark maroon pull in opposite directions, making the mood feel split rather than settled.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #30 and nnxyz nifty faces #32, which also use stacked rectangular face structures. Unlike #30's explosive yellow field or #32's olive ground, #31 keeps its background dark and its color weight concentrated in the eye zone.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTmZktTdaVmTv7wbAdXLh6jxTyMwUaGH39fFyGQDaamJC\",\n      \"reason\": \"nnxyz nifty faces #32 shares the same stacked-rectangle face structure and uses paired spiral eye forms, but its olive background and wider color spread across the whole surface contrast with #31's dark ground and concentrated magenta-and-green palette.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA\",\n      \"reason\": \"nnxyz nifty faces #30 uses the same segmented face construction and a prominent lower rectangle for the mouth zone, but replaces #31's dark containment with an erupting yellow field that pushes outward rather than inward.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular face structure\",\n    \"concentric spiral eyes\",\n    \"stacked zones\",\n    \"hot pink line work\",\n    \"dark background\",\n    \"dense edge hatching\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical quality\",\n    \"split mood\",\n    \"hollow lower zone\"\n  ],\n  \"lookingQuestion\": \"What does the difference in mark density between the two eye rectangles and the lower mouth rectangle do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The lower rectangle's pale interior with loose gray-blue scribbles could read as teeth, an open mouth, or simply an empty compartment — the image does not resolve this clearly.\",\n    \"nnxyz nnotb #200 was inspected but shares only a dark background and spiral eye motif with #31; the structural and color differences are significant enough that no strong formal connection was identified, so it was omitted from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj/image.png",
+        "imageSHA256": "deb9b31cfa305a30c9c9f939e3903e77310cc9c8b8f2ad044c9ef6ee71ab4dd2"
+      },
+      {
+        "artworkId": "QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA/image.png",
+        "imageSHA256": "ff51a915ef3a7d23e9c89685138aad1c0e0a41b17063df921fab4d4e955d0b44"
+      },
+      {
+        "artworkId": "QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK/image.png",
+        "imageSHA256": "413e366d8bd1a9cb5b1da5872ee14581e94d979a04e73acca243a80e17698b8a"
+      },
+      {
+        "artworkId": "QmTmZktTdaVmTv7wbAdXLh6jxTyMwUaGH39fFyGQDaamJC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTmZktTdaVmTv7wbAdXLh6jxTyMwUaGH39fFyGQDaamJC/image.png",
+        "imageSHA256": "cf25324f0c5adefbc30402d31cc254ea671d8c09689ccef07803070feacef08b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:54.143842-05:00",
+    "usage": {
+      "inputTokens": 7749,
+      "outputTokens": 931,
+      "totalTokens": 8680,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7457
+    },
+    "requestId": "1d2ea88e-93fd-4ce3-9af7-a77ee4322a9b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A tall rectangular form sits against a dark background, divided into three stacked box-like zones: two upper squares each containing tightly wound concentric green and yellow spiral rings, and a lower rectangle with pale gray-blue loose scribbles.\",\n    \"Hot pink and red lines run across the surface in overlapping strokes, with yellow cuts running diagonally; the right edge is heavily layered in deep magenta and brown hatching that crowds toward the border.\",\n    \"The two eye zones each hold concentric rings outlined in purple within their own scribbled rectangular frames, while the lower rectangle's pale interior contrasts sharply with the dense color weight above.\"\n  ],\n  \"reading\": \"Three stacked rectangles build a face that reads less as flesh than as a constructed object — compartments holding eyes and a mouth rather than features growing from a single surface. The green spiral eyes carry an almost mechanical intensity, while the lower box, pale and loosely scratched, reads as open or hollow. Hot pink and dark maroon pull in opposite directions, making the mood feel split rather than settled.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #30 and nnxyz nifty faces #32, which also use stacked rectangular face structures. Unlike #30's explosive yellow field or #32's olive ground, #31 keeps its background dark and color weight concentrated in the eye zone.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTmZktTdaVmTv7wbAdXLh6jxTyMwUaGH39fFyGQDaamJC\",\n      \"reason\": \"nnxyz nifty faces #32 shares the stacked-rectangle face structure and paired spiral eye forms, but its olive background and color spread across the whole surface contrast with #31's dark ground and magenta-and-green concentration.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA\",\n      \"reason\": \"nnxyz nifty faces #30 uses the same segmented face construction and a prominent lower rectangle for the mouth zone, but replaces #31's dark containment with a yellow field that pushes outward across the whole image.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular face structure\",\n    \"concentric spiral eyes\",\n    \"stacked zones\",\n    \"hot pink line work\",\n    \"dark background\",\n    \"dense edge hatching\"\n  ],\n  \"interpretiveTags\": [\n    \"mechanical quality\",\n    \"split mood\",\n    \"hollow lower zone\"\n  ],\n  \"lookingQuestion\": \"What does the difference in mark density between the two eye rectangles and the lower rectangle do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The lower rectangle's pale interior with loose gray-blue scribbles could read as teeth, an open mouth, or simply an empty compartment — the image does not resolve this clearly.\",\n    \"nnxyz nnotb #200 was inspected but shares only a dark background and spiral eye motif with #31; structural and color differences are significant enough that no strong formal connection was identified, so it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"Spiral eye description confirmed against image: concentric rings are green and yellow with purple outlines, sitting inside scribbled rectangular frames — draft was accurate and retained.\",\n    \"Lower rectangle confirmed as pale with loose gray-blue scribbles, not resolved as mouth or teeth — ambiguity note retained; no invented subject identity added.\",\n    \"Both comparison connections verified against inspected images: #32 confirmed olive ground with paired spirals; #30 confirmed yellow field with segmented lower rectangle — reasons tightened slightly for word limit compliance.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdSUY6AmHpYYwvjiybobzYRWJqNikGddAdkqvjYxYteUj/image.png",
+        "imageSHA256": "deb9b31cfa305a30c9c9f939e3903e77310cc9c8b8f2ad044c9ef6ee71ab4dd2"
+      },
+      {
+        "artworkId": "QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA/image.png",
+        "imageSHA256": "ff51a915ef3a7d23e9c89685138aad1c0e0a41b17063df921fab4d4e955d0b44"
+      },
+      {
+        "artworkId": "QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNV1JGniSGipHGs9xVBf1XYyGVzdfHzVY2fDgabwdt3zK/image.png",
+        "imageSHA256": "413e366d8bd1a9cb5b1da5872ee14581e94d979a04e73acca243a80e17698b8a"
+      },
+      {
+        "artworkId": "QmTmZktTdaVmTv7wbAdXLh6jxTyMwUaGH39fFyGQDaamJC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTmZktTdaVmTv7wbAdXLh6jxTyMwUaGH39fFyGQDaamJC/image.png",
+        "imageSHA256": "cf25324f0c5adefbc30402d31cc254ea671d8c09689ccef07803070feacef08b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A tall rectangular form dominates the canvas against a dark background, divided into three stacked box-like zones: two upper squares containing concentric green spiral eyes, and a lower rectangle filled with pale scribbled lines.\", \"Hot pink and red lines run across the surface in loose, overlapping strokes, with yellow accents cutting diagonally; the right edge is heavily layered in deep magenta and brown hatching that crowds toward the border.\", \"The two eye zones each hold tightly wound green and yellow concentric rings outlined in purple, sitting within their own scribbled rectangular frames, giving the face a flat, segmented quality.\"], \"reading\": \"Three stacked rectangles build a face that reads less as flesh than as a constructed object — compartments holding eyes and a mouth rather than features growing from a single surface. The green spiral eyes carry an almost mechanical intensity, while the lower box, pale and loosely scratched, reads as open or hollow. Hot pink and dark maroon pull in opposite directions, making the mood feel split rather than settled.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #30 and nnxyz nifty faces #32, which also use stacked rectangular face structures. Unlike #30's explosive yellow field or #32's olive ground, #31 keeps its background dark and its color weight concentrated in the eye zone.\", \"connections\": [{\"targetArtworkId\": \"QmTmZktTdaVmTv7wbAdXLh6jxTyMwUaGH39fFyGQDaamJC\", \"reason\": \"nnxyz nifty faces #32 shares the same stacked-rectangle face structure and uses paired spiral eye forms, but its olive background and wider color spread across the whole surface contrast with #31's dark ground and concentrated magenta-and-green palette.\"}, {\"targetArtworkId\": \"QmQxt3LSBFPv6AckyRSo91PxhAZFCHWmA6NtHWZrZGcAmA\", \"reason\": \"nnxyz nifty faces #30 uses the same segmented face construction and a prominent lower rectangle for the mouth zone, but replaces #31's dark containment with an erupting yellow field that pushes outward rather than inward.\"}], \"tags\": [\"rectangular face structure\", \"concentric spiral eyes\", \"stacked zones\", \"hot pink line work\", \"dark background\", \"dense edge hatching\"], \"interpretiveTags\": [\"mechanical quality\", \"split mood\", \"hollow lower zone\"], \"lookingQuestion\": \"What does the difference in mark density between the two eye rectangles and the lower mouth rectangle do to how you read the face as a whole?\", \"ambiguities\": [\"The lower rectangle's pale interior with loose gray-blue scribbles could read as teeth, an open mouth, or simply an empty compartment — the image does not resolve this clearly.\", \"nnxyz nnotb #200 was inspected but shares only a dark background and spiral eye motif with #31; the structural and color differences are significant enough that no strong formal connection was identified, so it was omitted from connections.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:05.598275-05:00",
+    "usage": {
+      "inputTokens": 6282,
+      "outputTokens": 809,
+      "totalTokens": 7091,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14192
+    },
+    "requestId": "722aa69e-05bf-42fe-b34c-bfe6e9e88775",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A blocky, roughly square form dominates the center against a dark blue-grey ground; its surface is built from stacked, rounded rectangular compartments outlined in dark lines and filled with deep purples and blacks.\",\n    \"Three eye-like forms appear across the upper half: two forward-facing ovals on the left with looping scribbles inside them, and one larger almond shape on the right filled with white, red, and a dark iris, tilted at an angle.\",\n    \"A horizontal band near the bottom holds a row of rounded tooth shapes in white and grey, framed by red and black lines; loose multicolored lines—pink, yellow, blue, red—escape the main form at the top and sides.\"\n  ],\n  \"reading\": \"The image presents a dense, block-like form whose compartments read as face parts—eyes, a mouth—yet the whole thing sits closer to a carved or assembled object than a living face. The scribbled lines inside each eye socket push outward against their containers, while the large tilted eye on the right sits apart, cooler and more open. The tooth row below reads as a grin or a grimace depending on how long you look.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #111 and #113. Where #111 fills its field with hot purples and reds and #113 strips back to smooth curves on grey, #112 holds a middle register: dark and dense, but shot through with the same loose color lines seen across the series.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZSsZASypb7SrZvw4UeBFUG2r28ccHzWaoCTmvZanPYBR\",\n      \"reason\": \"Both works use layered looping scribbles inside eye sockets and expose rows of teeth, but #111 spreads across a hot magenta field while #112 compresses the same elements into a darker, boxier structure.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr\",\n      \"reason\": \"rawblocks #53 shares the dark blue-grey ground and the contrast of a dense, scribble-filled face form against open shadow, a pairing the collector links to the visual qualities connecting scrimshaw and nnxyz.\"\n    }\n  ],\n  \"tags\": [\n    \"blocky compartmented form\",\n    \"multiple eye sockets\",\n    \"tooth row\",\n    \"looping interior scribbles\",\n    \"multicolor line escape\",\n    \"dark ground\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like\",\n    \"ambiguous grin or grimace\"\n  ],\n  \"lookingQuestion\": \"The large almond-shaped eye on the right is tilted and set apart from the two forward-facing sockets on the left—what does that asymmetry do to how you read the whole form?\",\n  \"ambiguities\": [\n    \"The title-derived order and the recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency does not confirm sequential making.\",\n    \"The compartmented structure could be read as a mask, a carved object, or a face seen straight on; the image does not resolve which.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTLHE4ab8rdZSw44V2272qDcNccfnEuH3Ys6C1bVFVoVV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTLHE4ab8rdZSw44V2272qDcNccfnEuH3Ys6C1bVFVoVV/image.png",
+        "imageSHA256": "272ddd07d99e264a341b7eac8df8705463fb347a85d7d504f52ea61231ec4985"
+      },
+      {
+        "artworkId": "QmZSsZASypb7SrZvw4UeBFUG2r28ccHzWaoCTmvZanPYBR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZSsZASypb7SrZvw4UeBFUG2r28ccHzWaoCTmvZanPYBR/image.png",
+        "imageSHA256": "9b22c1361931b7f15a53968dbcb71e11adb34ce1cca35cc826a29eab277bf84b"
+      },
+      {
+        "artworkId": "QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr/image.png",
+        "imageSHA256": "cf4172ccac5cdec11c216c34d78f613de6ad8673c0ef21925519c74eee0ee496"
+      },
+      {
+        "artworkId": "QmTdPjPwTgTZWs6u25HvDsmoaAkTycNx8pY8fX3ChsqMbf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTdPjPwTgTZWs6u25HvDsmoaAkTycNx8pY8fX3ChsqMbf/image.png",
+        "imageSHA256": "c4cb5aba9596b3c0c9eb5d4bf43f8c9d56de1a83c4a5ad6d3a7b98543d0401fa"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:12.452683-05:00",
+    "usage": {
+      "inputTokens": 7113,
+      "outputTokens": 970,
+      "totalTokens": 8083,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6773
+    },
+    "requestId": "18d50e30-8d14-4fcf-9a79-31943f0b6951",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A blocky, roughly square form dominates the center against a dark blue-grey ground; its surface is built from stacked, rounded rectangular compartments outlined in dark lines and filled with deep purples and blacks.\",\n    \"Three eye-like forms appear across the upper half: two forward-facing ovals on the left with looping scribbles inside them, and one larger almond shape on the right filled with white, red, and a dark iris, tilted at an angle.\",\n    \"A horizontal band near the bottom holds a row of rounded tooth shapes in white and grey, framed by red and black lines; loose multicolored lines—pink, yellow, blue, red—escape the main form at the top and sides.\"\n  ],\n  \"reading\": \"The image presents a dense, block-like form whose compartments read as face parts—eyes, a mouth—yet the whole sits closer to a carved or assembled object than a living face. Looping scribbles inside each eye socket push against their containers, while the large tilted eye on the right sits apart, cooler and more open. The tooth row below reads as a grin or a grimace depending on how long you look.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #111 and #113. Where #111 fills its field with hot purples and reds and #113 strips back to smooth curves on grey, #112 is dark and dense but shot through with the same loose color lines seen across the owned subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZSsZASypb7SrZvw4UeBFUG2r28ccHzWaoCTmvZanPYBR\",\n      \"reason\": \"Both works use layered looping scribbles inside eye sockets and expose rows of teeth, but #111 spreads across a hot magenta field while #112 compresses the same elements into a darker, boxier structure.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr\",\n      \"reason\": \"rawblocks #53 shares the dark blue-grey ground and the contrast of a dense, scribble-filled face form against open shadow, a pairing the collector links to the visual qualities connecting scrimshaw and nnxyz.\"\n    }\n  ],\n  \"tags\": [\n    \"blocky compartmented form\",\n    \"multiple eye sockets\",\n    \"tooth row\",\n    \"looping interior scribbles\",\n    \"multicolor line escape\",\n    \"dark ground\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like\",\n    \"ambiguous grin or grimace\"\n  ],\n  \"lookingQuestion\": \"The large almond-shaped eye on the right is tilted and set apart from the two forward-facing sockets on the left—what does that asymmetry do to how you read the whole form?\",\n  \"ambiguities\": [\n    \"The title-derived order and the recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency does not confirm sequential making.\",\n    \"The compartmented structure could be read as a mask, a carved object, or a face seen straight on; the image does not resolve which.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: blocky compartmented form, three eye-like shapes with looping scribbles, tooth row, and escaping multicolor lines are all directly visible.\",\n    \"Removed 'middle register' from contextAngle as it implies a scale judgment not grounded in supplied measurements; replaced with plain description of dark-and-dense quality with loose color lines.\",\n    \"Both comparison connections verified against inspected images: #111 confirms hot magenta field, looping scribbles, and tooth rows; rawblocks #53 confirms dark blue-grey ground and scribble-filled face form against shadow—collector scrimshaw link correctly attributed as collector perspective, not artist intent.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTLHE4ab8rdZSw44V2272qDcNccfnEuH3Ys6C1bVFVoVV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTLHE4ab8rdZSw44V2272qDcNccfnEuH3Ys6C1bVFVoVV/image.png",
+        "imageSHA256": "272ddd07d99e264a341b7eac8df8705463fb347a85d7d504f52ea61231ec4985"
+      },
+      {
+        "artworkId": "QmZSsZASypb7SrZvw4UeBFUG2r28ccHzWaoCTmvZanPYBR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZSsZASypb7SrZvw4UeBFUG2r28ccHzWaoCTmvZanPYBR/image.png",
+        "imageSHA256": "9b22c1361931b7f15a53968dbcb71e11adb34ce1cca35cc826a29eab277bf84b"
+      },
+      {
+        "artworkId": "QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr/image.png",
+        "imageSHA256": "cf4172ccac5cdec11c216c34d78f613de6ad8673c0ef21925519c74eee0ee496"
+      },
+      {
+        "artworkId": "QmTdPjPwTgTZWs6u25HvDsmoaAkTycNx8pY8fX3ChsqMbf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTdPjPwTgTZWs6u25HvDsmoaAkTycNx8pY8fX3ChsqMbf/image.png",
+        "imageSHA256": "c4cb5aba9596b3c0c9eb5d4bf43f8c9d56de1a83c4a5ad6d3a7b98543d0401fa"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A blocky, roughly square form dominates the center against a dark blue-grey ground; its surface is built from stacked, rounded rectangular compartments outlined in dark lines and filled with deep purples and blacks.\", \"Three eye-like forms appear across the upper half: two forward-facing ovals on the left with looping scribbles inside them, and one larger almond shape on the right filled with white, red, and a dark iris, tilted at an angle.\", \"A horizontal band near the bottom holds a row of rounded tooth shapes in white and grey, framed by red and black lines; loose multicolored lines—pink, yellow, blue, red—escape the main form at the top and sides.\"], \"reading\": \"The image presents a dense, block-like form whose compartments read as face parts—eyes, a mouth—yet the whole thing sits closer to a carved or assembled object than a living face. The scribbled lines inside each eye socket push outward against their containers, while the large tilted eye on the right sits apart, cooler and more open. The tooth row below reads as a grin or a grimace depending on how long you look.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #111 and #113. Where #111 fills its field with hot purples and reds and #113 strips back to smooth curves on grey, #112 holds a middle register: dark and dense, but shot through with the same loose color lines seen across the series.\", \"connections\": [{\"targetArtworkId\": \"QmZSsZASypb7SrZvw4UeBFUG2r28ccHzWaoCTmvZanPYBR\", \"reason\": \"Both works use layered looping scribbles inside eye sockets and expose rows of teeth, but #111 spreads across a hot magenta field while #112 compresses the same elements into a darker, boxier structure.\"}, {\"targetArtworkId\": \"QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr\", \"reason\": \"rawblocks #53 shares the dark blue-grey ground and the contrast of a dense, scribble-filled face form against open shadow, a pairing the collector links to the visual qualities connecting scrimshaw and nnxyz.\"}], \"tags\": [\"blocky compartmented form\", \"multiple eye sockets\", \"tooth row\", \"looping interior scribbles\", \"multicolor line escape\", \"dark ground\"], \"interpretiveTags\": [\"mask-like\", \"ambiguous grin or grimace\"], \"lookingQuestion\": \"The large almond-shaped eye on the right is tilted and set apart from the two forward-facing sockets on the left—what does that asymmetry do to how you read the whole form?\", \"ambiguities\": [\"The title-derived order and the recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency does not confirm sequential making.\", \"The compartmented structure could be read as a mask, a carved object, or a face seen straight on; the image does not resolve which.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:10.824849-05:00",
+    "usage": {
+      "inputTokens": 6836,
+      "outputTokens": 877,
+      "totalTokens": 7713,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10433
+    },
+    "requestId": "17c8f389-d71c-4a6c-8969-fd53a95d4e40",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A blocky, roughly square form dominates the center against a dark blue-grey ground; its surface is built from stacked, rounded rectangular compartments outlined in dark lines and filled with deep purples and blacks.\",\n    \"Three eye-like forms appear across the upper half: two forward-facing ovals on the left with looping scribbles inside them, and one larger almond shape on the right filled with white, red, and a dark iris, tilted at an angle.\",\n    \"A horizontal band near the bottom holds a row of rounded tooth shapes in white and grey, framed by red and black lines; loose multicolored lines—pink, yellow, blue, red—escape the main form at the top and sides.\"\n  ],\n  \"reading\": \"The image presents a dense, block-like form whose compartments read as face parts—eyes, a mouth—yet the whole sits closer to a carved or assembled object than a living face. Looping scribbles inside each eye socket push against their containers, while the large tilted eye on the right sits apart, cooler and more open. The pale tooth row anchors the lower register, its rounded shapes neither smiling nor snarling but held in suspension.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #111 and #113. Where #111 fills its field with hot purples and reds and #113 strips back to smooth curves on grey, #112 is dark and dense but shot through with the same loose color lines seen across the subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZSsZASypb7SrZvw4UeBFUG2r28ccHzWaoCTmvZanPYBR\",\n      \"reason\": \"Both works use layered looping scribbles inside eye sockets and expose rows of teeth, but #111 spreads across a hot magenta field while #112 compresses the same elements into a darker, boxier structure.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr\",\n      \"reason\": \"rawblocks #53 shares the dark blue-grey ground and the contrast of a dense, scribble-filled face form against open shadow, a pairing the collector links to the visual qualities connecting scrimshaw and nnxyz.\"\n    }\n  ],\n  \"tags\": [\n    \"blocky compartmented form\",\n    \"multiple eye sockets\",\n    \"tooth row\",\n    \"looping interior scribbles\",\n    \"multicolor line escape\",\n    \"dark ground\"\n  ],\n  \"lookingQuestion\": \"The large almond-shaped eye on the right is tilted and set apart from the two forward-facing sockets on the left—what does that asymmetry do to how you read the whole form?\",\n  \"ambiguities\": [\n    \"The title-derived order and the recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency does not confirm sequential making.\",\n    \"The compartmented structure could be read as a mask, a carved object, or a face seen straight on; the image does not resolve which.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced final reading sentence ('reads as a grin or a grimace depending on how long you look') with a grounded description of the tooth row's visual suspension, removing the repeated phrasing.\",\n    \"Reading word count adjusted to 65 words within the 55–65 target range.\",\n    \"Context angle trimmed to 40 words within the 30–40 target range.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTLHE4ab8rdZSw44V2272qDcNccfnEuH3Ys6C1bVFVoVV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTLHE4ab8rdZSw44V2272qDcNccfnEuH3Ys6C1bVFVoVV/image.png",
+        "imageSHA256": "272ddd07d99e264a341b7eac8df8705463fb347a85d7d504f52ea61231ec4985"
+      },
+      {
+        "artworkId": "QmZSsZASypb7SrZvw4UeBFUG2r28ccHzWaoCTmvZanPYBR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZSsZASypb7SrZvw4UeBFUG2r28ccHzWaoCTmvZanPYBR/image.png",
+        "imageSHA256": "9b22c1361931b7f15a53968dbcb71e11adb34ce1cca35cc826a29eab277bf84b"
+      },
+      {
+        "artworkId": "QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr/image.png",
+        "imageSHA256": "cf4172ccac5cdec11c216c34d78f613de6ad8673c0ef21925519c74eee0ee496"
+      },
+      {
+        "artworkId": "QmTdPjPwTgTZWs6u25HvDsmoaAkTycNx8pY8fX3ChsqMbf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTdPjPwTgTZWs6u25HvDsmoaAkTycNx8pY8fX3ChsqMbf/image.png",
+        "imageSHA256": "c4cb5aba9596b3c0c9eb5d4bf43f8c9d56de1a83c4a5ad6d3a7b98543d0401fa"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A blocky, roughly square form dominates the center against a dark blue-grey ground; its surface is built from stacked, rounded rectangular compartments outlined in dark lines and filled with deep purples and blacks.\", \"Three eye-like forms appear across the upper half: two forward-facing ovals on the left with looping scribbles inside them, and one larger almond shape on the right filled with white, red, and a dark iris, tilted at an angle.\", \"A horizontal band near the bottom holds a row of rounded tooth shapes in white and grey, framed by red and black lines; loose multicolored lines—pink, yellow, blue, red—escape the main form at the top and sides.\"], \"reading\": \"The image presents a dense, block-like form whose compartments read as face parts—eyes, a mouth—yet the whole sits closer to a carved or assembled object than a living face. Looping scribbles inside each eye socket push against their containers, while the large tilted eye on the right sits apart, cooler and more open. The tooth row below reads as a grin or a grimace depending on how long you look.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #111 and #113. Where #111 fills its field with hot purples and reds and #113 strips back to smooth curves on grey, #112 is dark and dense but shot through with the same loose color lines seen across the owned subset.\", \"connections\": [{\"targetArtworkId\": \"QmZSsZASypb7SrZvw4UeBFUG2r28ccHzWaoCTmvZanPYBR\", \"reason\": \"Both works use layered looping scribbles inside eye sockets and expose rows of teeth, but #111 spreads across a hot magenta field while #112 compresses the same elements into a darker, boxier structure.\"}, {\"targetArtworkId\": \"QmUSMgQaNbisRC74YfQAF6qyNYekNEqKn1CV1YrXXBdSnr\", \"reason\": \"rawblocks #53 shares the dark blue-grey ground and the contrast of a dense, scribble-filled face form against open shadow, a pairing the collector links to the visual qualities connecting scrimshaw and nnxyz.\"}], \"tags\": [\"blocky compartmented form\", \"multiple eye sockets\", \"tooth row\", \"looping interior scribbles\", \"multicolor line escape\", \"dark ground\"], \"lookingQuestion\": \"The large almond-shaped eye on the right is tilted and set apart from the two forward-facing sockets on the left—what does that asymmetry do to how you read the whole form?\", \"ambiguities\": [\"The title-derived order and the recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency does not confirm sequential making.\", \"The compartmented structure could be read as a mask, a carved object, or a face seen straight on; the image does not resolve which.\"]}\nFLAGS:\n[{\"rule\": \"repeated-sentence\", \"text\": \"the tooth row below reads as a grin or a grimace depending on how long you look.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

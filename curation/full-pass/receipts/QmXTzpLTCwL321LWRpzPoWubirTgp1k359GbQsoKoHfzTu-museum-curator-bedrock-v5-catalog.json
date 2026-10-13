@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:26.698116-05:00",
+    "usage": {
+      "inputTokens": 6377,
+      "outputTokens": 733,
+      "totalTokens": 7110,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12937
+    },
+    "requestId": "3502e304-a3c4-4e24-8f8e-e2caa32b27f9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape sits against a flat magenta background, outlined in thick black lines with yellow horn-like forms rising from the top edge.\",\n    \"Two asymmetric eye zones dominate the upper face: the left is a crossed square filled with red hatching, the right a circular form with radiating red lines around a blue oval center.\",\n    \"The open mouth shows a row of white teeth rendered as dense parallel strokes, while loose white and red scribble lines scatter across the blue and purple mid-face.\"\n  ],\n  \"reading\": \"The face pushes forward on its flat magenta field, the thick black outline holding together a surface that keeps splitting into competing zones. Yellow horns frame the top while the two eye forms refuse to match each other — one gridded and crossed, one radial and open. The bared teeth read as confrontational, yet the loose scribble lines across the cheeks soften that edge into something closer to unease.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #90 and #92. Where #90 uses a dark ground and muted flesh tones for a quieter tension, #91 returns to the saturated magenta field seen in nnotb #187, linking the two owned collections through shared background color and yellow line work.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg\",\n      \"reason\": \"Both works show a rounded head with exposed teeth, but #90 uses a black ground and blended flesh tones against #91's flat magenta and hard outlines, making the tonal contrast between the two direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmcjt5kVnrrxL3EC3S3yerJddZeFqxc9VtW8Hu1y145Vjj\",\n      \"reason\": \"nnotb #187 shares the same saturated magenta background and yellow line forms with #91, and both pack the picture surface with layered marks that leave little open space.\"\n    }\n  ],\n  \"tags\": [\n    \"face\",\n    \"asymmetric eyes\",\n    \"yellow horn forms\",\n    \"radial line pattern\",\n    \"exposed teeth\",\n    \"flat magenta ground\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"uneasy\"\n  ],\n  \"lookingQuestion\": \"The two eye zones use completely different internal structures — one crossed and gridded, one radial and open — so what does that asymmetry do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The small red heart-like marks near the upper corners are partially obscured by overlapping lines and their role in the composition is unclear.\",\n    \"The spiral form at the right edge of the face could be read as an ear or as a separate decorative element; the image does not resolve this.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXTzpLTCwL321LWRpzPoWubirTgp1k359GbQsoKoHfzTu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXTzpLTCwL321LWRpzPoWubirTgp1k359GbQsoKoHfzTu/image.png",
+        "imageSHA256": "76e54b90d2606d19322823808a154ca32210fd872a55dcb0503269408ed5c7e0"
+      },
+      {
+        "artworkId": "QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg/image.png",
+        "imageSHA256": "b5a0e36e7ea0d5565a48218a3bfba5783467db30706b87a65b912d6d24d2da7b"
+      },
+      {
+        "artworkId": "Qmcjt5kVnrrxL3EC3S3yerJddZeFqxc9VtW8Hu1y145Vjj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcjt5kVnrrxL3EC3S3yerJddZeFqxc9VtW8Hu1y145Vjj/image.png",
+        "imageSHA256": "2cd1695ccd19ca6dd53b0b0736046828b96d32f6adc17aac122395429de14421"
+      },
+      {
+        "artworkId": "QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L/image.png",
+        "imageSHA256": "4febcf90aad6d497861f904d5749a5883bdbf0a9f2f5154e7ff9ee93db9b9aa6"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:32.901117-05:00",
+    "usage": {
+      "inputTokens": 7132,
+      "outputTokens": 859,
+      "totalTokens": 7991,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6132
+    },
+    "requestId": "f789a563-1630-44f9-94ef-2e977db266d7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape sits against a flat magenta background, outlined in thick black lines, with yellow angular forms rising from the top edge.\",\n    \"Two asymmetric eye zones dominate the upper face: the left is a crossed square filled with red hatching, the right a circular form with radiating red lines around a blue oval center.\",\n    \"The open mouth shows a row of white teeth rendered as dense parallel strokes, while loose white and red scribble lines scatter across the blue and purple mid-face.\"\n  ],\n  \"reading\": \"The face pushes forward on its flat magenta field, thick black outlines holding together a surface that keeps splitting into competing zones. The two eye forms refuse to match — one gridded and crossed, one radial and open. Bared teeth read as confrontational, yet loose scribble lines across the cheeks pull that edge toward something closer to unease.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #90 and #92. Where #90 uses a black ground and blended flesh tones for quieter tension, #91 returns to a saturated magenta field also visible in nnotb #187, linking the two owned collections through shared background color and yellow line work.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg\",\n      \"reason\": \"Both works show a rounded head with exposed teeth, but #90 uses a black ground and blended flesh tones against #91's flat magenta and hard outlines, making the tonal contrast between the two direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmcjt5kVnrrxL3EC3S3yerJddZeFqxc9VtW8Hu1y145Vjj\",\n      \"reason\": \"nnotb #187 shares the same saturated magenta background and yellow line forms with #91, and both pack the picture surface with layered marks that leave little open space.\"\n    }\n  ],\n  \"tags\": [\n    \"face\",\n    \"asymmetric eyes\",\n    \"yellow angular forms\",\n    \"radial line pattern\",\n    \"exposed teeth\",\n    \"flat magenta ground\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"uneasy\"\n  ],\n  \"lookingQuestion\": \"The two eye zones use completely different internal structures — one crossed and gridded, one radial and open — so what does that asymmetry do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"Small red marks near the upper corners are partially obscured by overlapping lines; their role in the composition is unclear.\",\n    \"The spiral form at the right edge of the face could be read as an ear or as a separate decorative element; the image does not resolve this.\"\n  ],\n  \"reviewFindings\": [\n    \"Draft called the top forms 'horn-like' — confirmed as yellow angular line forms; 'horn-like' is an unsupported identity claim, softened to 'yellow angular forms' in tags and observations.\",\n    \"Context angle claim that #91 'returns to' the magenta field confirmed by direct inspection of nnotb #187 image, which shows the same saturated magenta ground and yellow marks.\",\n    \"Word counts checked: reading is 62 words, contextAngle is 52 words, both within limits; all comparison IDs verified against supplied candidate list.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXTzpLTCwL321LWRpzPoWubirTgp1k359GbQsoKoHfzTu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXTzpLTCwL321LWRpzPoWubirTgp1k359GbQsoKoHfzTu/image.png",
+        "imageSHA256": "76e54b90d2606d19322823808a154ca32210fd872a55dcb0503269408ed5c7e0"
+      },
+      {
+        "artworkId": "QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg/image.png",
+        "imageSHA256": "b5a0e36e7ea0d5565a48218a3bfba5783467db30706b87a65b912d6d24d2da7b"
+      },
+      {
+        "artworkId": "Qmcjt5kVnrrxL3EC3S3yerJddZeFqxc9VtW8Hu1y145Vjj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcjt5kVnrrxL3EC3S3yerJddZeFqxc9VtW8Hu1y145Vjj/image.png",
+        "imageSHA256": "2cd1695ccd19ca6dd53b0b0736046828b96d32f6adc17aac122395429de14421"
+      },
+      {
+        "artworkId": "QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmULMXSd8oNuHgBkcb4TNoJAQR68soA4RFZbuZXqtNr47L/image.png",
+        "imageSHA256": "4febcf90aad6d497861f904d5749a5883bdbf0a9f2f5154e7ff9ee93db9b9aa6"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape sits against a flat magenta background, outlined in thick black lines with yellow horn-like forms rising from the top edge.\", \"Two asymmetric eye zones dominate the upper face: the left is a crossed square filled with red hatching, the right a circular form with radiating red lines around a blue oval center.\", \"The open mouth shows a row of white teeth rendered as dense parallel strokes, while loose white and red scribble lines scatter across the blue and purple mid-face.\"], \"reading\": \"The face pushes forward on its flat magenta field, the thick black outline holding together a surface that keeps splitting into competing zones. Yellow horns frame the top while the two eye forms refuse to match each other — one gridded and crossed, one radial and open. The bared teeth read as confrontational, yet the loose scribble lines across the cheeks soften that edge into something closer to unease.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #90 and #92. Where #90 uses a dark ground and muted flesh tones for a quieter tension, #91 returns to the saturated magenta field seen in nnotb #187, linking the two owned collections through shared background color and yellow line work.\", \"connections\": [{\"targetArtworkId\": \"QmceJ3EN6mwKNjcsY4XJqwF3Pzha9cYbTgugVHnuciDBDg\", \"reason\": \"Both works show a rounded head with exposed teeth, but #90 uses a black ground and blended flesh tones against #91's flat magenta and hard outlines, making the tonal contrast between the two direct and visible.\"}, {\"targetArtworkId\": \"Qmcjt5kVnrrxL3EC3S3yerJddZeFqxc9VtW8Hu1y145Vjj\", \"reason\": \"nnotb #187 shares the same saturated magenta background and yellow line forms with #91, and both pack the picture surface with layered marks that leave little open space.\"}], \"tags\": [\"face\", \"asymmetric eyes\", \"yellow horn forms\", \"radial line pattern\", \"exposed teeth\", \"flat magenta ground\"], \"interpretiveTags\": [\"confrontational mood\", \"uneasy\"], \"lookingQuestion\": \"The two eye zones use completely different internal structures — one crossed and gridded, one radial and open — so what does that asymmetry do to how you read the face as a whole?\", \"ambiguities\": [\"The small red heart-like marks near the upper corners are partially obscured by overlapping lines and their role in the composition is unclear.\", \"The spiral form at the right edge of the face could be read as an ear or as a separate decorative element; the image does not resolve this.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

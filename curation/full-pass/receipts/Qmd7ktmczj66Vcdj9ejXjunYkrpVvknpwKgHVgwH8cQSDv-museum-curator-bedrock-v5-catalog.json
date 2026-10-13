@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:27.915151-05:00",
+    "usage": {
+      "inputTokens": 6549,
+      "outputTokens": 785,
+      "totalTokens": 7334,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13086
+    },
+    "requestId": "6ffe5191-0402-4a57-9d80-2747b7333f1f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-brimmed hat sits atop a roughly diamond-shaped head; the hat's brim extends beyond the figure's width and is filled with teal, yellow, and red marks.\",\n    \"A horizontal yellow band crosses the left side of the composition at eye level, edged with a tight zigzag line that continues off the left border.\",\n    \"The face interior is built from yellow outlines forming rectangular eye sockets, a grid-like mouth zone with vertical bars, and dense overlapping loops—all set against a background of soft, cloud-like green, teal, and purple shapes.\"\n  ],\n  \"reading\": \"The diamond-shaped head anchors the image while the hat pushes outward, giving the figure an off-balance spread. Yellow outlines carve the face into compartments—looping eye sockets, a barred mouth—that read as both mask and mechanism. The horizontal zigzag band cuts across like a signal or a seam, holding tension against the soft, pooling background colors. The overall mood sits somewhere between ceremonial and unsettled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #291 and nnxyz nnotb #293. All three share a head-centered format, but #292 replaces #291's earth-toned ground with a saturated multi-color field and adds a hat form absent in its neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG\",\n      \"reason\": \"Both works use a horizontal zigzag band crossing the left side at roughly the same height, and both fill the face with layered rectangular compartments and looping interior lines—though #291 uses a dark brown ground where #292 uses a bright multi-color field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf\",\n      \"reason\": \"nnxyz nifty faces #39 shares the same strategy of building a face from nested rectangular zones with grid-like tooth rows, offering a direct structural comparison across two different owned series.\"\n    }\n  ],\n  \"tags\": [\n    \"hat form\",\n    \"diamond-shaped head\",\n    \"rectangular compartments\",\n    \"zigzag horizontal band\",\n    \"yellow outline construction\",\n    \"soft cloud-like background\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like\",\n    \"ceremonial mood\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"How does the horizontal zigzag band relate spatially to the face—does it pass in front of, behind, or through the head's outline?\",\n  \"ambiguities\": [\n    \"The yellow horizontal band's spatial relationship to the head outline is ambiguous; it may read as overlapping the face or as a separate layer passing behind it.\",\n    \"The nifty faces #39 comparison is from a different owned series, so the connection is formal only—no shared series context can be assumed.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv/image.png",
+        "imageSHA256": "6ea5e7857de938cc8ca218d27a915288e1dda9ac4304df7e9fd54b94af1fffcc"
+      },
+      {
+        "artworkId": "QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG/image.png",
+        "imageSHA256": "884f4c0cd453e8a9bcb2adbd1294c70a5bef8eea8d5497f3dab11b8cddb6e053"
+      },
+      {
+        "artworkId": "QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf/image.png",
+        "imageSHA256": "fbbf717bfca866dc128312c233b8a7c01d00ca135127f72267cbdd92728f200f"
+      },
+      {
+        "artworkId": "QmVwwrSAuiia6RKohwRGuCC8rkAVFTHwRQsNxUWjkLFyyC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVwwrSAuiia6RKohwRGuCC8rkAVFTHwRQsNxUWjkLFyyC/image.png",
+        "imageSHA256": "1906bc2083859f7ef2443d51e7eb5af915b350779e7f1e743849a9b0790626cf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:35.019821-05:00",
+    "usage": {
+      "inputTokens": 7354,
+      "outputTokens": 898,
+      "totalTokens": 8252,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7034
+    },
+    "requestId": "a2a38361-c6b0-4893-a47e-4fdf1a1573f3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-brimmed hat sits atop a roughly diamond-shaped head; the brim extends beyond the figure's width and carries teal, yellow, and red marks.\",\n    \"A horizontal yellow band crosses the left side at roughly eye level, its upper edge lined with a tight zigzag that runs off the left border.\",\n    \"Yellow outlines inside the face form two rectangular eye sockets, a grid-like mouth zone with vertical bars, and dense overlapping loops, all set against soft cloud-like fields of green, teal, and purple.\"\n  ],\n  \"reading\": \"The diamond-shaped head sits slightly off-center while the hat brim pushes outward, giving the figure an uneven spread. Yellow outlines divide the face into compartments—looping eye sockets, a barred mouth—that read as both mask and mechanism. The horizontal zigzag band cuts across at eye level, holding tension against the soft, pooling background. The mood sits somewhere between ceremonial and unsettled.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work falls between title neighbors nnxyz nnotb #291 and nnxyz nnotb #293. All three use a head-centered format, but this piece replaces #291's earth-toned ground with a saturated multi-color field and adds a hat form absent in both neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG\",\n      \"reason\": \"Both works carry a horizontal zigzag band crossing the left side at roughly eye level, and both fill the face with layered rectangular compartments and looping interior lines—though #291 uses a dark brown ground where #292 uses a bright multi-color field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf\",\n      \"reason\": \"nnxyz nifty faces #39 builds its face from nested rectangular zones with a grid-like tooth row, offering a direct structural comparison to #292's compartmented face—across two different owned series.\"\n    }\n  ],\n  \"tags\": [\n    \"hat form\",\n    \"diamond-shaped head\",\n    \"rectangular compartments\",\n    \"zigzag horizontal band\",\n    \"yellow outline construction\",\n    \"soft cloud-like background\"\n  ],\n  \"interpretiveTags\": [\n    \"mask-like\",\n    \"ceremonial mood\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"How does the horizontal zigzag band relate spatially to the head outline—does it appear to pass in front of, behind, or through the face?\",\n  \"ambiguities\": [\n    \"The yellow band's spatial layer relative to the head outline is ambiguous; it may overlap the face or read as a separate plane passing behind it.\",\n    \"The nifty faces #39 connection is formal only—no shared series context can be assumed across the two owned series.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: hat brim, zigzag band, and yellow rectangular compartments are all directly visible.\",\n    \"Zigzag band in #291 confirmed at roughly eye level on the left side, matching the draft comparison; dark brown ground in #291 confirmed against earth-toned field visible in that image.\",\n    \"nifty faces #39 rectangular zone structure and grid tooth row confirmed in its image; cross-series caveat retained; no invented intent or unsupported claims found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv/image.png",
+        "imageSHA256": "6ea5e7857de938cc8ca218d27a915288e1dda9ac4304df7e9fd54b94af1fffcc"
+      },
+      {
+        "artworkId": "QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG/image.png",
+        "imageSHA256": "884f4c0cd453e8a9bcb2adbd1294c70a5bef8eea8d5497f3dab11b8cddb6e053"
+      },
+      {
+        "artworkId": "QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf/image.png",
+        "imageSHA256": "fbbf717bfca866dc128312c233b8a7c01d00ca135127f72267cbdd92728f200f"
+      },
+      {
+        "artworkId": "QmVwwrSAuiia6RKohwRGuCC8rkAVFTHwRQsNxUWjkLFyyC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVwwrSAuiia6RKohwRGuCC8rkAVFTHwRQsNxUWjkLFyyC/image.png",
+        "imageSHA256": "1906bc2083859f7ef2443d51e7eb5af915b350779e7f1e743849a9b0790626cf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A wide-brimmed hat sits atop a roughly diamond-shaped head; the hat's brim extends beyond the figure's width and is filled with teal, yellow, and red marks.\", \"A horizontal yellow band crosses the left side of the composition at eye level, edged with a tight zigzag line that continues off the left border.\", \"The face interior is built from yellow outlines forming rectangular eye sockets, a grid-like mouth zone with vertical bars, and dense overlapping loops—all set against a background of soft, cloud-like green, teal, and purple shapes.\"], \"reading\": \"The diamond-shaped head anchors the image while the hat pushes outward, giving the figure an off-balance spread. Yellow outlines carve the face into compartments—looping eye sockets, a barred mouth—that read as both mask and mechanism. The horizontal zigzag band cuts across like a signal or a seam, holding tension against the soft, pooling background colors. The overall mood sits somewhere between ceremonial and unsettled.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #291 and nnxyz nnotb #293. All three share a head-centered format, but #292 replaces #291's earth-toned ground with a saturated multi-color field and adds a hat form absent in its neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG\", \"reason\": \"Both works use a horizontal zigzag band crossing the left side at roughly the same height, and both fill the face with layered rectangular compartments and looping interior lines—though #291 uses a dark brown ground where #292 uses a bright multi-color field.\"}, {\"targetArtworkId\": \"QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf\", \"reason\": \"nnxyz nifty faces #39 shares the same strategy of building a face from nested rectangular zones with grid-like tooth rows, offering a direct structural comparison across two different owned series.\"}], \"tags\": [\"hat form\", \"diamond-shaped head\", \"rectangular compartments\", \"zigzag horizontal band\", \"yellow outline construction\", \"soft cloud-like background\"], \"interpretiveTags\": [\"mask-like\", \"ceremonial mood\", \"unsettled\"], \"lookingQuestion\": \"How does the horizontal zigzag band relate spatially to the face—does it pass in front of, behind, or through the head's outline?\", \"ambiguities\": [\"The yellow horizontal band's spatial relationship to the head outline is ambiguous; it may read as overlapping the face or as a separate layer passing behind it.\", \"The nifty faces #39 comparison is from a different owned series, so the connection is formal only—no shared series context can be assumed.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

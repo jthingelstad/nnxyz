@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:48.003422-05:00",
+    "usage": {
+      "inputTokens": 6491,
+      "outputTokens": 761,
+      "totalTokens": 7252,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13299
+    },
+    "requestId": "94831e53-b8b4-46f0-be59-0556432ade34",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal head shape fills the center, built from overlapping black outlines with orange, white, and dark green lines crossing the face; the eyes are closed or heavily lidded.\",\n    \"Horizontal bands of dark blue-grey wash cover much of the face, giving it a flat, shadowed quality, while orange lines trace the nose bridge, brow, and jaw with loose, open strokes.\",\n    \"The background is pale grey with soft vertical wave shapes; loose black lines extend beyond the head at the top and sides, and a small artist signature sits in the lower right corner.\"\n  ],\n  \"reading\": \"The closed or downcast eyes and the heavy dark wash across the face give this head a withdrawn, inward quality. Orange lines mark the facial structure without filling it in, leaving the form partly open to the grey ground beneath. White scratches cut across the shadowed areas, adding tension without resolving the surface. The overall mood reads as quiet but unsettled.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #102 and #104. Where #102 fills its surface with saturated color and radiating ornament, #103 pulls back to a near-monochrome field, making the restrained orange lines feel more exposed.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo\",\n      \"reason\": \"Both works center a head-like form built from layered lines, but #102 uses dense saturated color and outward-radiating shapes while #103 strips back to grey and sparse orange, making the contrast in emotional weight visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26\",\n      \"reason\": \"Title neighbor #104 also uses orange and white lines over a dark wash, but shifts to a three-quarter profile and a warmer, deeper background, showing how the same line vocabulary produces a different spatial and tonal result.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal head form\",\n    \"closed eyes\",\n    \"dark blue-grey wash\",\n    \"orange outline strokes\",\n    \"grey wave background\",\n    \"white scratch marks\"\n  ],\n  \"interpretiveTags\": [\n    \"withdrawn mood\",\n    \"quiet tension\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the orange lines stop and the dark wash take over, and what happens to the sense of the face at those edges?\",\n  \"ambiguities\": [\n    \"The eyes read as closed but heavy hatching makes it uncertain whether they are shut or simply obscured by the dark wash.\",\n    \"The nnotb comparison (QmTfiG8EufEr23BnFCm27R8GqB6zYNereym39nF7oP9KJL) shares a line-over-wash approach but the subject and palette differ enough that no strong formal connection was found; it was not selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn/image.png",
+        "imageSHA256": "3b23e0c42eddb3384d791f1fbad78ed63e4652eb23539fcdb8c801937a37cedf"
+      },
+      {
+        "artworkId": "QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo/image.png",
+        "imageSHA256": "3c2e27b4fb718f1546f287e4544bd6ef531c0113ce2565a9a83bf31fcc63d6ac"
+      },
+      {
+        "artworkId": "QmTfiG8EufEr23BnFCm27R8GqB6zYNereym39nF7oP9KJL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTfiG8EufEr23BnFCm27R8GqB6zYNereym39nF7oP9KJL/image.png",
+        "imageSHA256": "5018fe6b4c224c92d1e58602374d2f6fe025c51859af1222688e682afee02632"
+      },
+      {
+        "artworkId": "QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26/image.png",
+        "imageSHA256": "47ad867ec4d9fef8f64a5b4ea19da43061e06d009b2d4349bc55232e11511a41"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:55.416918-05:00",
+    "usage": {
+      "inputTokens": 7274,
+      "outputTokens": 897,
+      "totalTokens": 8171,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7041
+    },
+    "requestId": "34b817e8-9d6f-410f-b74d-d6a638b50289",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal head shape fills the center, built from overlapping black outlines with orange, white, and dark green lines crossing the face; the eyes appear closed or heavily lidded.\",\n    \"Horizontal bands of dark blue-grey wash cover much of the face, while orange lines trace the nose bridge, brow, and jaw with loose, open strokes that leave gaps in the form.\",\n    \"The background is pale grey with soft vertical wave shapes; loose black lines extend beyond the head at the top and sides, and a small artist signature sits in the lower right corner.\"\n  ],\n  \"reading\": \"The heavy dark wash across the face and the closed or downcast eyes give this head a withdrawn, inward quality. Orange lines mark the facial structure without filling it in, leaving the form open to the grey ground. White scratches cut across the shadowed areas, adding tension without resolving the surface. The mood reads as quiet but unsettled.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #102 and #104. Where #102 fills its surface with saturated color and radiating ornament, #103 pulls back to a near-monochrome field, making the sparse orange lines feel more exposed.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo\",\n      \"reason\": \"Both center a head-like form built from layered lines, but #102 uses dense saturated color and outward-radiating shapes while #103 strips back to grey and sparse orange, making the contrast in tonal weight visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26\",\n      \"reason\": \"Title neighbor #104 also uses orange and white lines over a dark wash, but shifts to a three-quarter profile and a warmer, deeper background, showing how the same line vocabulary produces a different spatial result.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal head form\",\n    \"closed or lidded eyes\",\n    \"dark blue-grey wash\",\n    \"orange outline strokes\",\n    \"pale grey wave background\",\n    \"white scratch marks\"\n  ],\n  \"interpretiveTags\": [\n    \"withdrawn mood\",\n    \"quiet tension\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the orange lines stop and the dark wash take over, and what happens to the sense of the face at those edges?\",\n  \"ambiguities\": [\n    \"The eyes read as closed, but heavy hatching makes it uncertain whether they are shut or obscured by the dark wash.\",\n    \"The nnotb comparison (QmTfiG8EufEr23BnFCm27R8GqB6zYNereym39nF7oP9KJL) was inspected but not selected; its subject and palette differ enough from #103 that no strong formal connection was found.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: dark blue-grey wash, orange structural lines, white scratches, and pale grey wave background are all visible.\",\n    \"Both comparison images were checked: #102 confirmed as saturated and radiating; #104 confirmed as three-quarter profile with orange and white lines over a dark warm background; reasons are grounded in visible differences.\",\n    \"Word counts checked: reading is within 45–80 words, contextAngle is within 25–55 words, and no prohibited terms (deliberately, intentional, evolving, etc.) appear in the final record.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZFVLxbrteXwZNWyhGyTzEfPATcwcoxCFosLf1QVmLoTn/image.png",
+        "imageSHA256": "3b23e0c42eddb3384d791f1fbad78ed63e4652eb23539fcdb8c801937a37cedf"
+      },
+      {
+        "artworkId": "QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo/image.png",
+        "imageSHA256": "3c2e27b4fb718f1546f287e4544bd6ef531c0113ce2565a9a83bf31fcc63d6ac"
+      },
+      {
+        "artworkId": "QmTfiG8EufEr23BnFCm27R8GqB6zYNereym39nF7oP9KJL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTfiG8EufEr23BnFCm27R8GqB6zYNereym39nF7oP9KJL/image.png",
+        "imageSHA256": "5018fe6b4c224c92d1e58602374d2f6fe025c51859af1222688e682afee02632"
+      },
+      {
+        "artworkId": "QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26/image.png",
+        "imageSHA256": "47ad867ec4d9fef8f64a5b4ea19da43061e06d009b2d4349bc55232e11511a41"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large frontal head shape fills the center, built from overlapping black outlines with orange, white, and dark green lines crossing the face; the eyes are closed or heavily lidded.\", \"Horizontal bands of dark blue-grey wash cover much of the face, giving it a flat, shadowed quality, while orange lines trace the nose bridge, brow, and jaw with loose, open strokes.\", \"The background is pale grey with soft vertical wave shapes; loose black lines extend beyond the head at the top and sides, and a small artist signature sits in the lower right corner.\"], \"reading\": \"The closed or downcast eyes and the heavy dark wash across the face give this head a withdrawn, inward quality. Orange lines mark the facial structure without filling it in, leaving the form partly open to the grey ground beneath. White scratches cut across the shadowed areas, adding tension without resolving the surface. The overall mood reads as quiet but unsettled.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #102 and #104. Where #102 fills its surface with saturated color and radiating ornament, #103 pulls back to a near-monochrome field, making the restrained orange lines feel more exposed.\", \"connections\": [{\"targetArtworkId\": \"QmdSmSK8z7KXZNCQCG8gadFgro9WdRWBpApKd1tth2YvLo\", \"reason\": \"Both works center a head-like form built from layered lines, but #102 uses dense saturated color and outward-radiating shapes while #103 strips back to grey and sparse orange, making the contrast in emotional weight visible.\"}, {\"targetArtworkId\": \"QmSkiFpyUyqfYaFPxdvxUcSfWe1d86HYrYvAvGSjA5TV26\", \"reason\": \"Title neighbor #104 also uses orange and white lines over a dark wash, but shifts to a three-quarter profile and a warmer, deeper background, showing how the same line vocabulary produces a different spatial and tonal result.\"}], \"tags\": [\"frontal head form\", \"closed eyes\", \"dark blue-grey wash\", \"orange outline strokes\", \"grey wave background\", \"white scratch marks\"], \"interpretiveTags\": [\"withdrawn mood\", \"quiet tension\"], \"lookingQuestion\": \"Where exactly do the orange lines stop and the dark wash take over, and what happens to the sense of the face at those edges?\", \"ambiguities\": [\"The eyes read as closed but heavy hatching makes it uncertain whether they are shut or simply obscured by the dark wash.\", \"The nnotb comparison (QmTfiG8EufEr23BnFCm27R8GqB6zYNereym39nF7oP9KJL) shares a line-over-wash approach but the subject and palette differ enough that no strong formal connection was found; it was not selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

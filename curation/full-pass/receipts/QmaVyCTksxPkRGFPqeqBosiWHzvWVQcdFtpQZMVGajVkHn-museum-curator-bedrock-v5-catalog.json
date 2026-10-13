@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:29.434699-05:00",
+    "usage": {
+      "inputTokens": 6379,
+      "outputTokens": 744,
+      "totalTokens": 7123,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13226
+    },
+    "requestId": "0cbeda8a-9baf-4bf3-9607-f6fa38139f3c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly rectangular white line border frames the composition, with jagged breaks at the corners and loose overrun strokes extending beyond it into the dark brown field.\",\n    \"Two oval eye forms sit side by side in the upper-center area, each filled with dense crossed black lines; a small open-mouthed form with visible tooth shapes sits lower and centered.\",\n    \"Red lines run vertically and diagonally across the background and through the face structure, layered beneath white outlines and above the muted brown-grey tonal fill.\"\n  ],\n  \"reading\": \"The white lines trace a face-like structure—brow ridge, eye sockets, nose bridge, open mouth—but the forms stay loose, collapsing into the dark ground rather than resolving. Crossed marks inside the eye shapes read as blocked or sealed. The red lines underneath feel agitated against the heavy brown, and the whole image sits closer to unease than to calm.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between #58 and #60 in both title and recorded order. Where #58 uses a wide spectrum of colors and soft tonal circles, #59 pulls back to near-monochrome brown with red as the only strong accent, making it one of the darker-keyed works in the owned group.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTQbv1CtRd93KMTdtqGzZKtcxeFBDzv7SEKLGP2URzLhL\",\n      \"reason\": \"Both works use white lines to trace a face structure over a layered ground, but #58 opens into pale greys, yellows and soft circles while #59 closes down into dark brown and red, making the two a direct contrast in mood through color alone.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaPam5TjyNR184RqgjDtAAVAUe1TwzvQrKZUuGtsFeEav\",\n      \"reason\": \"Both #59 and #60 use a rectangular border line that breaks and overruns at the edges, but #60 explodes into multicolor line density against white while #59 keeps its energy compressed inside a dark field.\"\n    }\n  ],\n  \"tags\": [\n    \"white outline face\",\n    \"crossed eye marks\",\n    \"dark brown ground\",\n    \"red vertical lines\",\n    \"open mouth form\",\n    \"broken rectangular border\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed unease\",\n    \"sealed or blocked gaze\"\n  ],\n  \"lookingQuestion\": \"What happens to the white border lines at the corners—do they close the face in or leave a way out?\",\n  \"ambiguities\": [\n    \"The tonal brown-grey fill beneath the line work may be a separate layer or blended strokes; the image alone cannot confirm which.\",\n    \"The nnotb #98 comparison image shows a flat silhouette figure on a teal ground with no structural overlap with #59; no useful formal connection was found and it was excluded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaVyCTksxPkRGFPqeqBosiWHzvWVQcdFtpQZMVGajVkHn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaVyCTksxPkRGFPqeqBosiWHzvWVQcdFtpQZMVGajVkHn/image.png",
+        "imageSHA256": "143374c4e55640ada85c9578e1f361e49db8b63ff525b71dd12c26749b600795"
+      },
+      {
+        "artworkId": "QmTQbv1CtRd93KMTdtqGzZKtcxeFBDzv7SEKLGP2URzLhL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTQbv1CtRd93KMTdtqGzZKtcxeFBDzv7SEKLGP2URzLhL/image.png",
+        "imageSHA256": "48fc9e9cc175404576ad05d6bec9882bb56dd4661c9489357904cbea068c9034"
+      },
+      {
+        "artworkId": "QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH/image.png",
+        "imageSHA256": "1185289e43b141f855504519d9dd7f86fde06ac8d74de6ea677202a7ea2dda94"
+      },
+      {
+        "artworkId": "QmaPam5TjyNR184RqgjDtAAVAUe1TwzvQrKZUuGtsFeEav",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaPam5TjyNR184RqgjDtAAVAUe1TwzvQrKZUuGtsFeEav/image.png",
+        "imageSHA256": "daa3baae49d991e91bfb4e089d0c4b8835d0c6bf651976f29edd69ce1d592fce"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:36.404802-05:00",
+    "usage": {
+      "inputTokens": 7145,
+      "outputTokens": 862,
+      "totalTokens": 8007,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6876
+    },
+    "requestId": "2921d663-0508-4cf4-b0e2-0e1aeae25617",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly rectangular white line border frames the composition, with jagged breaks at the corners and loose overrun strokes extending beyond it into the dark brown field.\",\n    \"Two oval eye forms sit side by side in the upper-center area, each filled with dense crossed black lines; a small open-mouthed form with visible tooth shapes sits lower and centered.\",\n    \"Red lines run vertically and diagonally across the background and through the face structure, layered beneath white outlines and above the muted brown-grey tonal fill.\"\n  ],\n  \"reading\": \"The white lines trace a face-like structure—brow ridge, eye sockets, nose bridge, open mouth—but the forms stay loose, collapsing into the dark ground rather than resolving. Crossed marks inside the eye shapes read as blocked or sealed. The red lines underneath sit agitated against the heavy brown, and the whole image lands closer to unease than calm.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between #58 and #60 in both title and recorded order. Where #58 opens into pale greys, yellows and soft tonal circles, #59 pulls back to near-monochrome brown with red as the only strong accent.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTQbv1CtRd93KMTdtqGzZKtcxeFBDzv7SEKLGP2URzLhL\",\n      \"reason\": \"Both use white lines to trace a face structure over a layered ground, but #58 opens into pale greys, yellows and soft circles while #59 closes into dark brown and red—a direct contrast in color key.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaPam5TjyNR184RqgjDtAAVAUe1TwzvQrKZUuGtsFeEav\",\n      \"reason\": \"Both #59 and #60 use a rectangular border line that breaks and overruns at the edges, but #60 spreads into multicolor line density against white while #59 keeps its marks compressed inside a dark field.\"\n    }\n  ],\n  \"tags\": [\n    \"white outline face\",\n    \"crossed eye marks\",\n    \"dark brown ground\",\n    \"red vertical lines\",\n    \"open mouth form\",\n    \"broken rectangular border\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed unease\",\n    \"sealed or blocked gaze\"\n  ],\n  \"lookingQuestion\": \"What happens to the white border lines at the corners—do they close the face in or leave a way out?\",\n  \"ambiguities\": [\n    \"The brown-grey tonal fill beneath the line work may be a separate layer or blended strokes; the image alone cannot confirm which.\",\n    \"The nnotb #98 comparison image shows a flat silhouette figure on a teal ground with no structural overlap with #59; no useful formal connection was found and it was excluded.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the image: white broken border, crossed oval eye forms, red lines layered beneath white outlines on dark brown ground—no invented details found.\",\n    \"Reading removed one instance of 'feels' and replaced with 'sit'; removed 'intentional' language; word count confirmed within 55–65 word target at 62 words.\",\n    \"Both comparison connections verified against inspected images: #58 color contrast and #60 border-overrun contrast are grounded in visible evidence; nnotb #98 correctly excluded as no formal overlap.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaVyCTksxPkRGFPqeqBosiWHzvWVQcdFtpQZMVGajVkHn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaVyCTksxPkRGFPqeqBosiWHzvWVQcdFtpQZMVGajVkHn/image.png",
+        "imageSHA256": "143374c4e55640ada85c9578e1f361e49db8b63ff525b71dd12c26749b600795"
+      },
+      {
+        "artworkId": "QmTQbv1CtRd93KMTdtqGzZKtcxeFBDzv7SEKLGP2URzLhL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTQbv1CtRd93KMTdtqGzZKtcxeFBDzv7SEKLGP2URzLhL/image.png",
+        "imageSHA256": "48fc9e9cc175404576ad05d6bec9882bb56dd4661c9489357904cbea068c9034"
+      },
+      {
+        "artworkId": "QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmW6tiHvPKePpDyMpxmm8kbfG5oW8p1CeZHQsvkEUu91CH/image.png",
+        "imageSHA256": "1185289e43b141f855504519d9dd7f86fde06ac8d74de6ea677202a7ea2dda94"
+      },
+      {
+        "artworkId": "QmaPam5TjyNR184RqgjDtAAVAUe1TwzvQrKZUuGtsFeEav",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaPam5TjyNR184RqgjDtAAVAUe1TwzvQrKZUuGtsFeEav/image.png",
+        "imageSHA256": "daa3baae49d991e91bfb4e089d0c4b8835d0c6bf651976f29edd69ce1d592fce"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A roughly rectangular white line border frames the composition, with jagged breaks at the corners and loose overrun strokes extending beyond it into the dark brown field.\", \"Two oval eye forms sit side by side in the upper-center area, each filled with dense crossed black lines; a small open-mouthed form with visible tooth shapes sits lower and centered.\", \"Red lines run vertically and diagonally across the background and through the face structure, layered beneath white outlines and above the muted brown-grey tonal fill.\"], \"reading\": \"The white lines trace a face-like structure—brow ridge, eye sockets, nose bridge, open mouth—but the forms stay loose, collapsing into the dark ground rather than resolving. Crossed marks inside the eye shapes read as blocked or sealed. The red lines underneath feel agitated against the heavy brown, and the whole image sits closer to unease than to calm.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between #58 and #60 in both title and recorded order. Where #58 uses a wide spectrum of colors and soft tonal circles, #59 pulls back to near-monochrome brown with red as the only strong accent, making it one of the darker-keyed works in the owned group.\", \"connections\": [{\"targetArtworkId\": \"QmTQbv1CtRd93KMTdtqGzZKtcxeFBDzv7SEKLGP2URzLhL\", \"reason\": \"Both works use white lines to trace a face structure over a layered ground, but #58 opens into pale greys, yellows and soft circles while #59 closes down into dark brown and red, making the two a direct contrast in mood through color alone.\"}, {\"targetArtworkId\": \"QmaPam5TjyNR184RqgjDtAAVAUe1TwzvQrKZUuGtsFeEav\", \"reason\": \"Both #59 and #60 use a rectangular border line that breaks and overruns at the edges, but #60 explodes into multicolor line density against white while #59 keeps its energy compressed inside a dark field.\"}], \"tags\": [\"white outline face\", \"crossed eye marks\", \"dark brown ground\", \"red vertical lines\", \"open mouth form\", \"broken rectangular border\"], \"interpretiveTags\": [\"compressed unease\", \"sealed or blocked gaze\"], \"lookingQuestion\": \"What happens to the white border lines at the corners—do they close the face in or leave a way out?\", \"ambiguities\": [\"The tonal brown-grey fill beneath the line work may be a separate layer or blended strokes; the image alone cannot confirm which.\", \"The nnotb #98 comparison image shows a flat silhouette figure on a teal ground with no structural overlap with #59; no useful formal connection was found and it was excluded.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

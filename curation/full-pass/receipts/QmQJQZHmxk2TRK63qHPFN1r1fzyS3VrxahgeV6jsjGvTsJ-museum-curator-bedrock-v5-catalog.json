@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:11.332631-05:00",
+    "usage": {
+      "inputTokens": 6273,
+      "outputTokens": 828,
+      "totalTokens": 7101,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13406
+    },
+    "requestId": "a6726a63-bfbe-4b39-96a3-b31c15952fa2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad flat-topped black shape sits across the upper portion of the figure, with a white-outlined rectangular form below it filled with deep red and layered marks in black and pink.\",\n    \"Two crown-like black shapes with yellow outlines sit where eyes would be, each containing a small spiral; blue rectangular marks appear beneath them, and a row of yellow ovals runs across the upper interior of the white-outlined form.\",\n    \"A loose chain of lime-green oval marks curves from the upper-left corner toward the center, while a scatter of smaller yellow ovals trails along the right edge of the composition against the deep red field.\"\n  ],\n  \"reading\": \"Against a field of deep red, a white-outlined rectangular form holds competing marks: crown shapes, spirals, blue blocks, and a grid of white lines at the base that reads as teeth. The lime-green chain arcing from the upper left pulls the eye away from the central form, giving the image two competing focal points. The overall mood feels confrontational, though the layered marks also suggest something ceremonial.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #280 and nnxyz nnotb #282 share the flat-topped hat shape and a central face-like form, but #281 replaces their dark or multicolored grounds with an unbroken red field that sharpens the contrast with its white outline.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy\",\n      \"reason\": \"nnxyz nnotb #280 uses a similar white-outlined central form with crown-like eye shapes and spiral marks, but its ground is black and the interior is packed with dense crosshatched color rather than the open red field here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPsn6putgaGfg42KWcXTx4gJJTadDPektpCPb8KkrvAag\",\n      \"reason\": \"nnxyz nnotb #282 repeats the flat-topped hat and scattered oval motifs visible in #281, but shifts to a dark ground with radiating blue lines, making the shared hat-and-oval vocabulary land with a different weight.\"\n    }\n  ],\n  \"tags\": [\n    \"red ground\",\n    \"white outline\",\n    \"crown shapes\",\n    \"spiral marks\",\n    \"oval chain\",\n    \"grid teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"ceremonial\"\n  ],\n  \"lookingQuestion\": \"The lime-green oval chain and the yellow ovals on the right edge both orbit the central white-outlined form — do they feel like they belong to the same system, or do they pull in different directions?\",\n  \"ambiguities\": [\n    \"The flat black shape at the top is read here as a hat based on visual form alone; no metadata confirms this identification.\",\n    \"nnxyz #10 (QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m) shares face-like structure and layered marks but belongs to a different title family and its orange-yellow ground offers no strong formal anchor to #281 beyond general compositional type, so it was omitted as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQJQZHmxk2TRK63qHPFN1r1fzyS3VrxahgeV6jsjGvTsJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQJQZHmxk2TRK63qHPFN1r1fzyS3VrxahgeV6jsjGvTsJ/image.png",
+        "imageSHA256": "6ce01a7cf867b31b49d63589b5c1c7a86973c77dd8a50b419035c4224b6da4a3"
+      },
+      {
+        "artworkId": "QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy/image.png",
+        "imageSHA256": "e00134d3c43fdfb5c0bf1ae9d4e511bd525a7fef6f866cd7d0453d29c98fe9e7"
+      },
+      {
+        "artworkId": "QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m/image.png",
+        "imageSHA256": "170a189de09704a85492113ec061f8e2b696438632febd630c33e42ceda5e48a"
+      },
+      {
+        "artworkId": "QmPsn6putgaGfg42KWcXTx4gJJTadDPektpCPb8KkrvAag",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPsn6putgaGfg42KWcXTx4gJJTadDPektpCPb8KkrvAag/image.png",
+        "imageSHA256": "72a5b158c7c41ac3069c02e10f5477fdf997bac873212c265799ee7e6517d4eb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:17.756589-05:00",
+    "usage": {
+      "inputTokens": 7123,
+      "outputTokens": 930,
+      "totalTokens": 8053,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6350
+    },
+    "requestId": "a41a38cf-7399-45d6-9979-c31a1bf16612",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad flat-topped black shape sits across the upper portion of the figure, with a white-outlined rectangular form below it filled with deep red and layered marks in black and pink.\",\n    \"Two crown-like black shapes with yellow outlines sit where eyes would be, each containing a small spiral; blue rectangular marks appear beneath them, and a row of yellow ovals runs across the upper interior of the white-outlined form.\",\n    \"A loose chain of lime-green oval marks curves from the upper-left corner toward the center, while smaller yellow ovals trail along the right edge against the deep red field.\"\n  ],\n  \"reading\": \"Against a deep red field, a white-outlined rectangular form holds competing marks: crown shapes with yellow outlines, small spirals, blue blocks, and a grid of white lines at the base that reads as teeth. A lime-green oval chain arcing from the upper left pulls attention away from the central form, creating two competing focal points. The layered marks give the image a quality that feels both confrontational and ceremonial.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #280 and nnxyz nnotb #282 share the flat-topped hat shape and a central face-like form, but #281 replaces their dark grounds with an unbroken red field that sharpens the contrast with its white outline.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy\",\n      \"reason\": \"nnxyz nnotb #280 uses a similar white-outlined central form with crown-like eye shapes and spiral marks, but its ground is black and the interior is packed with dense crosshatched color rather than the open red field in #281.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPsn6putgaGfg42KWcXTx4gJJTadDPektpCPb8KkrvAag\",\n      \"reason\": \"nnxyz nnotb #282 repeats the flat-topped hat shape and scattered oval motifs visible in #281, but shifts to a dark ground with radiating blue lines, making the shared hat-and-oval vocabulary land with a different weight.\"\n    }\n  ],\n  \"tags\": [\"red ground\", \"white outline\", \"crown shapes\", \"spiral marks\", \"oval chain\", \"grid teeth\"],\n  \"interpretiveTags\": [\"confrontational\", \"ceremonial\"],\n  \"lookingQuestion\": \"The lime-green oval chain and the yellow ovals along the right edge both orbit the central white-outlined form — do they feel like they belong to the same system, or do they pull in different directions?\",\n  \"ambiguities\": [\n    \"The flat black shape at the top is read here as a hat based on visual form alone; no metadata confirms this identification.\",\n    \"nnxyz #10 (QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m) shares face-like structure and layered marks but belongs to a different title family and its orange-yellow ground offers no strong formal anchor to #281 beyond general compositional type, so it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All colors confirmed against image: deep red ground, white outline, lime-green oval chain upper-left, yellow ovals right edge, blue rectangular marks, yellow-outlined crown shapes, and white grid at base all verified.\",\n    \"Observation 3 trimmed to remove redundant 'scatter' phrasing; substance unchanged and within word limit.\",\n    \"Reading revised to remove 'overall mood feels' hedge and tighten to 57 words; confrontational and ceremonial moved to interpretiveTags only, not asserted as fact in prose.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQJQZHmxk2TRK63qHPFN1r1fzyS3VrxahgeV6jsjGvTsJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQJQZHmxk2TRK63qHPFN1r1fzyS3VrxahgeV6jsjGvTsJ/image.png",
+        "imageSHA256": "6ce01a7cf867b31b49d63589b5c1c7a86973c77dd8a50b419035c4224b6da4a3"
+      },
+      {
+        "artworkId": "QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy/image.png",
+        "imageSHA256": "e00134d3c43fdfb5c0bf1ae9d4e511bd525a7fef6f866cd7d0453d29c98fe9e7"
+      },
+      {
+        "artworkId": "QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m/image.png",
+        "imageSHA256": "170a189de09704a85492113ec061f8e2b696438632febd630c33e42ceda5e48a"
+      },
+      {
+        "artworkId": "QmPsn6putgaGfg42KWcXTx4gJJTadDPektpCPb8KkrvAag",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPsn6putgaGfg42KWcXTx4gJJTadDPektpCPb8KkrvAag/image.png",
+        "imageSHA256": "72a5b158c7c41ac3069c02e10f5477fdf997bac873212c265799ee7e6517d4eb"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad flat-topped black shape sits across the upper portion of the figure, with a white-outlined rectangular form below it filled with deep red and layered marks in black and pink.\", \"Two crown-like black shapes with yellow outlines sit where eyes would be, each containing a small spiral; blue rectangular marks appear beneath them, and a row of yellow ovals runs across the upper interior of the white-outlined form.\", \"A loose chain of lime-green oval marks curves from the upper-left corner toward the center, while a scatter of smaller yellow ovals trails along the right edge of the composition against the deep red field.\"], \"reading\": \"Against a field of deep red, a white-outlined rectangular form holds competing marks: crown shapes, spirals, blue blocks, and a grid of white lines at the base that reads as teeth. The lime-green chain arcing from the upper left pulls the eye away from the central form, giving the image two competing focal points. The overall mood feels confrontational, though the layered marks also suggest something ceremonial.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #280 and nnxyz nnotb #282 share the flat-topped hat shape and a central face-like form, but #281 replaces their dark or multicolored grounds with an unbroken red field that sharpens the contrast with its white outline.\", \"connections\": [{\"targetArtworkId\": \"QmcBbutDgv3xw6H8yerz7ftw7y8oLZ2eBpNotQuSSr1LZy\", \"reason\": \"nnxyz nnotb #280 uses a similar white-outlined central form with crown-like eye shapes and spiral marks, but its ground is black and the interior is packed with dense crosshatched color rather than the open red field here.\"}, {\"targetArtworkId\": \"QmPsn6putgaGfg42KWcXTx4gJJTadDPektpCPb8KkrvAag\", \"reason\": \"nnxyz nnotb #282 repeats the flat-topped hat and scattered oval motifs visible in #281, but shifts to a dark ground with radiating blue lines, making the shared hat-and-oval vocabulary land with a different weight.\"}], \"tags\": [\"red ground\", \"white outline\", \"crown shapes\", \"spiral marks\", \"oval chain\", \"grid teeth\"], \"interpretiveTags\": [\"confrontational\", \"ceremonial\"], \"lookingQuestion\": \"The lime-green oval chain and the yellow ovals on the right edge both orbit the central white-outlined form — do they feel like they belong to the same system, or do they pull in different directions?\", \"ambiguities\": [\"The flat black shape at the top is read here as a hat based on visual form alone; no metadata confirms this identification.\", \"nnxyz #10 (QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m) shares face-like structure and layered marks but belongs to a different title family and its orange-yellow ground offers no strong formal anchor to #281 beyond general compositional type, so it was omitted as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

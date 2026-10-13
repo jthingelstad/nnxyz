@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:41.591576-05:00",
+    "usage": {
+      "inputTokens": 6207,
+      "outputTokens": 774,
+      "totalTokens": 6981,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 15277
+    },
+    "requestId": "02d772dc-b5f6-4c80-bc60-87b412ede97f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dome-shaped transparent enclosure sits at center, its curved outline drawn in pale blue-white lines against a background of radiating yellow and gold bands that spread from an upper-center glow.\",\n    \"Inside the dome, a compact dark-blue form with rounded limbs occupies the lower half; above it, a rounder mass carries two large circular eye-like shapes filled with yellow swirls, all rendered in overlapping loose lines.\",\n    \"Scattered translucent white circles of varying sizes float across the composition—some inside the dome, some outside—softening the hard ray lines behind them.\"\n  ],\n  \"reading\": \"A figure sits sealed inside a bell-jar dome while gold rays push outward from behind it, as if the enclosure is both lit from within and pressed upon from without. The floating pale circles read as calm against that insistent radiance. The loose, layered lines inside the dome give the contained form a restless quality that the smooth dome wall holds just barely in check—suggesting tension between shelter and exposure.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #77 shares the same gold-ray burst and a centrally placed rounded machine form, while title neighbor nnxyz nnotb #79 shifts to a dark ground with glowing spiral eyes—making #78 a pivot between warm-field radiance and creature-weight darkness.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML\",\n      \"reason\": \"Both works use radiating gold-yellow bands as a dominant background structure and place a dense, mechanically detailed central form at the source of that light, though #77 fills the frame edge-to-edge while #78 contains its form inside a dome.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSbVrhHuUiQVWnHyx62U7pswZpteSer1LWBbRojBtV6kc\",\n      \"reason\": \"The large spiral-filled circular eye shapes visible inside the dome in #78 reappear as the dominant feature in #79, where they glow against a dark ground rather than a bright one—a direct formal echo with reversed tonal weight.\"\n    }\n  ],\n  \"tags\": [\n    \"dome enclosure\",\n    \"radiating ray lines\",\n    \"floating circles\",\n    \"blue figure\",\n    \"spiral eye forms\",\n    \"gold-yellow ground\"\n  ],\n  \"interpretiveTags\": [\n    \"containment\",\n    \"tension between shelter and exposure\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the boundary of the dome meet the radiating lines behind it, and does that edge hold or dissolve?\",\n  \"ambiguities\": [\n    \"The form inside the dome carries features that could read as a helmet, a face, or a layered mechanical object; the loose overlapping lines do not resolve to a single reading.\",\n    \"Title neighbor nnxyz nnotb #74 was inspected but shares no strong formal element with #78 beyond the gold palette common across the owned subset, so it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYgQr3wcTHe4qz1MFTxF8DLKY5XKeEAYqWo82KrvxHDAo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYgQr3wcTHe4qz1MFTxF8DLKY5XKeEAYqWo82KrvxHDAo/image.png",
+        "imageSHA256": "db620f6046000970886afca96d80f7e0299cf28ee164fe4cc8f63244ee43d187"
+      },
+      {
+        "artworkId": "QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML/image.png",
+        "imageSHA256": "445b8e3e10a0632c27f2f230dab02ff03fee2ea3287a5886d4a13b7011b3603f"
+      },
+      {
+        "artworkId": "QmSbVrhHuUiQVWnHyx62U7pswZpteSer1LWBbRojBtV6kc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSbVrhHuUiQVWnHyx62U7pswZpteSer1LWBbRojBtV6kc/image.png",
+        "imageSHA256": "7481a472a08da3084a4688adf5468a66d04cf0ffc0a6417c3fefc43b0c08817c"
+      },
+      {
+        "artworkId": "QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E/image.png",
+        "imageSHA256": "66e132d134d3c7e127c7d9bd0ef902afe867ff3759acb668641ff5f04003aa66"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:48.096652-05:00",
+    "usage": {
+      "inputTokens": 7003,
+      "outputTokens": 849,
+      "totalTokens": 7852,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6166
+    },
+    "requestId": "ef38923d-d0ed-4c65-bbfa-df2e79d1a244",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dome-shaped enclosure sits at center, its curved outline drawn in pale blue-white lines against radiating yellow and gold bands that spread from an upper-center bright area.\",\n    \"Inside the dome, a compact dark-blue form with rounded limbs occupies the lower half; above it, a rounder mass carries two large circular shapes filled with yellow swirls, rendered in overlapping loose lines.\",\n    \"Translucent white circles of varying sizes float across the composition—some inside the dome, some outside—softening the ray lines behind them.\"\n  ],\n  \"reading\": \"A form sits sealed inside a bell-jar dome while gold rays push outward from behind it, so the enclosure reads as both lit from within and pressed upon from without. The floating pale circles sit quietly against that insistent radiance. The loose layered lines inside the dome give the contained form a restless quality that the smooth dome wall holds just barely in check.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #77 shares the same gold-ray burst and a centrally placed dense form, while title neighbor nnxyz nnotb #79 shifts to a dark ground with glowing spiral eyes—placing #78 between warm-field radiance and creature-weight darkness.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML\",\n      \"reason\": \"Both works use radiating gold-yellow bands as dominant background structure and place a dense central form at the source of that light; #77 fills the frame edge-to-edge while #78 contains its form inside a dome.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSbVrhHuUiQVWnHyx62U7pswZpteSer1LWBbRojBtV6kc\",\n      \"reason\": \"The large spiral-filled circular shapes visible inside the dome in #78 reappear as the dominant feature in #79, glowing against a dark ground rather than a bright one—a direct formal echo with reversed tonal weight.\"\n    }\n  ],\n  \"tags\": [\"dome enclosure\", \"radiating ray lines\", \"floating circles\", \"dark-blue rounded form\", \"spiral-filled circular shapes\", \"gold-yellow ground\"],\n  \"interpretiveTags\": [\"containment\", \"tension between shelter and exposure\"],\n  \"lookingQuestion\": \"Where exactly does the boundary of the dome meet the radiating lines behind it, and does that edge hold or dissolve?\",\n  \"ambiguities\": [\n    \"The form inside the dome carries features that could read as a helmet, a face, or a layered mechanical object; the loose overlapping lines do not resolve to a single reading.\",\n    \"nnxyz nnotb #74 was inspected but shares no strong formal element with #78 beyond the gold palette common across the owned subset, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: radiating gold-yellow bands and dome outline with pale blue-white curved lines are directly visible in the primary image; no invented color or form found.\",\n    \"Confirmed: spiral-filled circular shapes appear inside the dome in #78 and as dominant glowing features in #79 image; comparison is grounded in inspected images.\",\n    \"Removed 'mechanically detailed' from #77 comparison reason as it implies unsupported technique; replaced with 'dense central form' to stay within visible evidence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYgQr3wcTHe4qz1MFTxF8DLKY5XKeEAYqWo82KrvxHDAo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYgQr3wcTHe4qz1MFTxF8DLKY5XKeEAYqWo82KrvxHDAo/image.png",
+        "imageSHA256": "db620f6046000970886afca96d80f7e0299cf28ee164fe4cc8f63244ee43d187"
+      },
+      {
+        "artworkId": "QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML/image.png",
+        "imageSHA256": "445b8e3e10a0632c27f2f230dab02ff03fee2ea3287a5886d4a13b7011b3603f"
+      },
+      {
+        "artworkId": "QmSbVrhHuUiQVWnHyx62U7pswZpteSer1LWBbRojBtV6kc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSbVrhHuUiQVWnHyx62U7pswZpteSer1LWBbRojBtV6kc/image.png",
+        "imageSHA256": "7481a472a08da3084a4688adf5468a66d04cf0ffc0a6417c3fefc43b0c08817c"
+      },
+      {
+        "artworkId": "QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaET5EdUPZqnPfMvyFfGUS8yuYvm877ByR8Jbzi8Qjc8E/image.png",
+        "imageSHA256": "66e132d134d3c7e127c7d9bd0ef902afe867ff3759acb668641ff5f04003aa66"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dome-shaped transparent enclosure sits at center, its curved outline drawn in pale blue-white lines against a background of radiating yellow and gold bands that spread from an upper-center glow.\", \"Inside the dome, a compact dark-blue form with rounded limbs occupies the lower half; above it, a rounder mass carries two large circular eye-like shapes filled with yellow swirls, all rendered in overlapping loose lines.\", \"Scattered translucent white circles of varying sizes float across the composition—some inside the dome, some outside—softening the hard ray lines behind them.\"], \"reading\": \"A figure sits sealed inside a bell-jar dome while gold rays push outward from behind it, as if the enclosure is both lit from within and pressed upon from without. The floating pale circles read as calm against that insistent radiance. The loose, layered lines inside the dome give the contained form a restless quality that the smooth dome wall holds just barely in check—suggesting tension between shelter and exposure.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #77 shares the same gold-ray burst and a centrally placed rounded machine form, while title neighbor nnxyz nnotb #79 shifts to a dark ground with glowing spiral eyes—making #78 a pivot between warm-field radiance and creature-weight darkness.\", \"connections\": [{\"targetArtworkId\": \"QmSXkwyGabHBZGiPErFAQa2SVK6Hqruk87y72ieGBnaxML\", \"reason\": \"Both works use radiating gold-yellow bands as a dominant background structure and place a dense, mechanically detailed central form at the source of that light, though #77 fills the frame edge-to-edge while #78 contains its form inside a dome.\"}, {\"targetArtworkId\": \"QmSbVrhHuUiQVWnHyx62U7pswZpteSer1LWBbRojBtV6kc\", \"reason\": \"The large spiral-filled circular eye shapes visible inside the dome in #78 reappear as the dominant feature in #79, where they glow against a dark ground rather than a bright one—a direct formal echo with reversed tonal weight.\"}], \"tags\": [\"dome enclosure\", \"radiating ray lines\", \"floating circles\", \"blue figure\", \"spiral eye forms\", \"gold-yellow ground\"], \"interpretiveTags\": [\"containment\", \"tension between shelter and exposure\"], \"lookingQuestion\": \"Where exactly does the boundary of the dome meet the radiating lines behind it, and does that edge hold or dissolve?\", \"ambiguities\": [\"The form inside the dome carries features that could read as a helmet, a face, or a layered mechanical object; the loose overlapping lines do not resolve to a single reading.\", \"Title neighbor nnxyz nnotb #74 was inspected but shares no strong formal element with #78 beyond the gold palette common across the owned subset, so it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

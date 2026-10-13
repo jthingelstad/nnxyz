@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:02.914162-05:00",
+    "usage": {
+      "inputTokens": 5921,
+      "outputTokens": 804,
+      "totalTokens": 6725,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13269
+    },
+    "requestId": "c79d59a3-3ad1-402a-b516-fcaae1eb2e7e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form fills most of the frame, rendered in layered golds, ochres, and warm browns against a muted taupe background, with the open lower section dropping into deep shadow.\",\n    \"Teal and black loose looping lines scatter across the right side and upper edge, sitting on top of the warm underlayer rather than defining the main shape.\",\n    \"A pale cream diagonal bar crosses the center of the form, flanked by a dark open cavity below it and two compressed pale shapes above that read as closed or squinting features.\"\n  ],\n  \"reading\": \"The gold mass pushes close to the picture edge, leaving little breathing room. That compressed space, combined with the dark open cavity below the pale bar, reads as strain or held tension rather than calm. The scattered teal loops feel loose against the tight warm core, a contrast that keeps the image unsettled. White lines inside the cavity suggest teeth or interior structure without resolving into certainty.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #166 and nnxyz nnotb #168, which both use open-mouth forms on flat grounds. Here the warm gold dominates where those neighbors lean on black line and saturated flat color, making this the quieter-toned entry of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\",\n      \"reason\": \"nnxyz nnotb #168 shares the open-cavity mouth form and layered looping lines, but its flat orange ground and hard black outlines make the structural contrast with this work's blended warm tones visible and direct.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\",\n      \"reason\": \"Scrimshaw 41 uses a similar gold-amber ground with scattered loose lines crossing a face-like form; the collector's noted visual link between scrimshaw and nnxyz is legible here in the shared warm field and overlaid mark behavior.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth form\",\n    \"gold and ochre palette\",\n    \"teal loop marks\",\n    \"dark interior cavity\",\n    \"pale diagonal bar\",\n    \"compressed framing\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"strain\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"Where does the pale diagonal bar end, and what happens to the forms on either side of it?\",\n  \"ambiguities\": [\n    \"The pale shapes above the diagonal bar could be read as closed eyes or as abstract compressed volumes; the image does not resolve this clearly.\",\n    \"The comparison with QmfUbbgNZZgoBmV2VGQLNmAABWzA48mTwFJWQQUj2nT8Y3 (nnxyz nnotb #166) was inspected but not selected because its flat gray ground and hard black outline structure differ enough from this work's blended warm field that the contrast adds less than the #168 pairing.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha/image.png",
+        "imageSHA256": "718a8e0ef7812da9f2c9fe88d38e17a434e366cd51b811565f90623f86041247"
+      },
+      {
+        "artworkId": "QmfUbbgNZZgoBmV2VGQLNmAABWzA48mTwFJWQQUj2nT8Y3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfUbbgNZZgoBmV2VGQLNmAABWzA48mTwFJWQQUj2nT8Y3/image.png",
+        "imageSHA256": "516e806de6151a27868b160ceb346d66b9046bb725a15da575dd57e9c68d140e"
+      },
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      },
+      {
+        "artworkId": "QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe/image.png",
+        "imageSHA256": "369481c24c3b39716ae9163bbe9f1083383b12c1cddaccc7ef16aca10c35f4f6"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:09.617852-05:00",
+    "usage": {
+      "inputTokens": 6745,
+      "outputTokens": 879,
+      "totalTokens": 7624,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6575
+    },
+    "requestId": "e909ca94-3ecb-40eb-a748-0ef15956d94f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form fills most of the frame in layered golds, ochres, and warm browns against a muted taupe background, with the lower section opening into deep shadow.\",\n    \"Teal and black loose looping lines scatter across the right side and upper edge, sitting over the warm underlayer rather than defining the main shape.\",\n    \"A pale cream diagonal bar crosses the center; below it a dark open cavity shows white lines suggesting interior structure, while two compressed pale shapes above read as closed or squinting features.\"\n  ],\n  \"reading\": \"The gold mass pushes close to the picture edge, leaving little breathing room. That compressed space, combined with the dark open cavity below the pale bar, reads as strain or held tension rather than calm. The scattered teal loops feel loose against the tight warm core, a contrast that keeps the image unsettled. White lines inside the cavity suggest teeth or interior structure without resolving into certainty.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #166 and nnxyz nnotb #168, both of which use open-mouth forms. The warm blended gold here contrasts with the hard black outlines and flat grounds of those neighbors, making this the quieter-toned entry of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\",\n      \"reason\": \"nnxyz nnotb #168 shares the open-cavity mouth form and layered looping lines, but its flat orange ground and hard black outlines make the contrast with this work's blended warm tones direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\",\n      \"reason\": \"Scrimshaw 41 shows a gold-amber ground with loose lines crossing a face-like form; the collector's noted visual link between scrimshaw and nnxyz is legible in the shared warm field and overlaid mark behavior.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth form\",\n    \"gold and ochre palette\",\n    \"teal loop marks\",\n    \"dark interior cavity\",\n    \"pale diagonal bar\",\n    \"compressed framing\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"strain\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"Where does the pale diagonal bar end, and what happens to the forms on either side of it?\",\n  \"ambiguities\": [\n    \"The pale shapes above the diagonal bar could be closed eyes or abstract compressed volumes; the image does not resolve this clearly.\",\n    \"nnxyz nnotb #166 was inspected but not selected as a connection: its flat gray ground and hard black outline structure differ enough from this work's blended warm field that the #168 pairing is more informative.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: gold-ochre mass, teal-black loops on right and upper edge, pale diagonal bar with dark cavity below and compressed pale shapes above.\",\n    \"Scrimshaw 41 comparison confirmed: gold-amber ground and overlaid loose lines visible in that image support the collector's cross-collection visual link; connection retained.\",\n    \"No invented intent, biography, media, or unsupported subject identities found in draft; word counts within limits; exact candidate IDs verified against supplied metadata.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSazRnxXD7VNwn7gyz2X6ZMJ2ypwxZukBrAzV7cnwERha/image.png",
+        "imageSHA256": "718a8e0ef7812da9f2c9fe88d38e17a434e366cd51b811565f90623f86041247"
+      },
+      {
+        "artworkId": "QmfUbbgNZZgoBmV2VGQLNmAABWzA48mTwFJWQQUj2nT8Y3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfUbbgNZZgoBmV2VGQLNmAABWzA48mTwFJWQQUj2nT8Y3/image.png",
+        "imageSHA256": "516e806de6151a27868b160ceb346d66b9046bb725a15da575dd57e9c68d140e"
+      },
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      },
+      {
+        "artworkId": "QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe/image.png",
+        "imageSHA256": "369481c24c3b39716ae9163bbe9f1083383b12c1cddaccc7ef16aca10c35f4f6"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded form fills most of the frame, rendered in layered golds, ochres, and warm browns against a muted taupe background, with the open lower section dropping into deep shadow.\", \"Teal and black loose looping lines scatter across the right side and upper edge, sitting on top of the warm underlayer rather than defining the main shape.\", \"A pale cream diagonal bar crosses the center of the form, flanked by a dark open cavity below it and two compressed pale shapes above that read as closed or squinting features.\"], \"reading\": \"The gold mass pushes close to the picture edge, leaving little breathing room. That compressed space, combined with the dark open cavity below the pale bar, reads as strain or held tension rather than calm. The scattered teal loops feel loose against the tight warm core, a contrast that keeps the image unsettled. White lines inside the cavity suggest teeth or interior structure without resolving into certainty.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #166 and nnxyz nnotb #168, which both use open-mouth forms on flat grounds. Here the warm gold dominates where those neighbors lean on black line and saturated flat color, making this the quieter-toned entry of the three.\", \"connections\": [{\"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\", \"reason\": \"nnxyz nnotb #168 shares the open-cavity mouth form and layered looping lines, but its flat orange ground and hard black outlines make the structural contrast with this work's blended warm tones visible and direct.\"}, {\"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\", \"reason\": \"Scrimshaw 41 uses a similar gold-amber ground with scattered loose lines crossing a face-like form; the collector's noted visual link between scrimshaw and nnxyz is legible here in the shared warm field and overlaid mark behavior.\"}], \"tags\": [\"open mouth form\", \"gold and ochre palette\", \"teal loop marks\", \"dark interior cavity\", \"pale diagonal bar\", \"compressed framing\"], \"interpretiveTags\": [\"tension\", \"strain\", \"unsettled\"], \"lookingQuestion\": \"Where does the pale diagonal bar end, and what happens to the forms on either side of it?\", \"ambiguities\": [\"The pale shapes above the diagonal bar could be read as closed eyes or as abstract compressed volumes; the image does not resolve this clearly.\", \"The comparison with QmfUbbgNZZgoBmV2VGQLNmAABWzA48mTwFJWQQUj2nT8Y3 (nnxyz nnotb #166) was inspected but not selected because its flat gray ground and hard black outline structure differ enough from this work's blended warm field that the contrast adds less than the #168 pairing.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

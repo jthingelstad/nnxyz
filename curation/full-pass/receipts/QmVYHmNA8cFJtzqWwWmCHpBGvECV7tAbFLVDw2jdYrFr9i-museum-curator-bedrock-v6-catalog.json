@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:13:59.966661-05:00",
+    "usage": {
+      "inputTokens": 6212,
+      "outputTokens": 713,
+      "totalTokens": 6925,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 23031
+    },
+    "requestId": "26e7f656-d9ca-48c9-bdd6-ba613e725007",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two mismatched eyes dominate the face: the left is a large dark-outlined oval filled with blue and rainbow stripes, while the right is a smaller teal rectangle with a pale iris.\",\n    \"A wide open mouth at the bottom shows vertical white teeth separated by dark lines, framed by a heavy blue jaw outline and flanked by pink lip marks.\",\n    \"The teal background is crossed by loose vertical strokes in lavender, orange, and magenta, with a bright magenta curve sweeping along the right edge behind the head.\"\n  ],\n  \"reading\": \"The two eyes refuse to agree—one swollen and ringed in black, the other boxed and watchful—giving the face a lopsided alertness that reads as startled or unsteady. Teeth bared in a wide rectangle of a mouth push the expression toward alarm rather than aggression. Warm yellows and oranges pile across the forehead while cool teal holds the edges, splitting the face between heat and calm. The title \\\"Wobbler\\\" fits: nothing here sits level.\",\n  \"contextAngle\": \"\\\"Wobbler\\\" sits near the end of the owned scrimshaw works by recorded creation, between \\\"Scrimshaw 40\\\" and \\\"Scrimshaw 41.\\\" Its face-forward composition and dense line layering connect it visually to several nnxyz pieces in the collection, where the collector sees shared raw mark-making across both artists.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both show asymmetric eyes and bared teeth against a saturated background, but \\\"nnotb #190\\\" buries its features under denser scribble, making its face harder to read than \\\"Wobbler\\\"'s open layout.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6\",\n      \"reason\": \"Both use a row of vertical white teeth as a strong horizontal anchor, though \\\"nifty faces #51\\\" frames its mouth inside a rigid rectangular scaffold while \\\"Wobbler\\\" lets the jaw float loosely.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth with teeth\",\n    \"mismatched eyes\",\n    \"teal background\",\n    \"heavy outline face\",\n    \"bright magenta accents\"\n  ],\n  \"lookingQuestion\": \"How does the size difference between the two eyes shift where your attention lands first, and does the surrounding color around each eye reinforce or undercut that pull?\",\n  \"ambiguities\": [\n    \"The title \\\"Wobbler\\\" is treated as content; it may or may not describe the depicted subject.\",\n    \"No numbered title family exists for this work, so sequence context relies on recorded creation neighbors only.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVYHmNA8cFJtzqWwWmCHpBGvECV7tAbFLVDw2jdYrFr9i",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVYHmNA8cFJtzqWwWmCHpBGvECV7tAbFLVDw2jdYrFr9i/image.png",
+        "imageSHA256": "bad93743c57c0aa8d1d58c89a2e8b033c16bdc96f16a9354bcc1ecd6bfa13d17"
+      },
+      {
+        "artworkId": "QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6/image.png",
+        "imageSHA256": "70f082b91f55ea9db6575966050dc4e7545cc5dc710e9d4fef7b7f40a5ff9154"
+      },
+      {
+        "artworkId": "QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9/image.png",
+        "imageSHA256": "0d928685e12470f9b07ac07ca927cef0f1a09c023665dfab8fbdb4c2492f3ca2"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:14:10.748350-05:00",
+    "usage": {
+      "inputTokens": 6959,
+      "outputTokens": 866,
+      "totalTokens": 7825,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10666
+    },
+    "requestId": "bc7135dc-0520-432a-b111-9f842c1c2223",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two mismatched eyes dominate the face: the left is a large dark-outlined oval filled with blue and rainbow stripes, while the right is a smaller teal rectangle with a pale iris.\",\n    \"A wide open mouth at the bottom shows vertical white teeth separated by dark lines, framed by a heavy blue jaw outline and flanked by pink marks at the corners.\",\n    \"The teal background is crossed by loose vertical strokes in lavender, orange, and magenta, with a bright magenta curve sweeping along the right edge behind the head.\"\n  ],\n  \"reading\": \"The two eyes refuse to agree—one swollen and ringed in black, the other boxed and watchful—giving the face a lopsided alertness that can read as startled or unsteady. Teeth bared in a wide rectangle of a mouth push the expression toward alarm rather than aggression. Warm yellows and oranges pile across the forehead while cool teal holds the edges, splitting the face between heat and calm. The title \\\"Wobbler\\\" fits: nothing here sits level.\",\n  \"contextAngle\": \"\\\"Wobbler\\\" sits near the end of the owned scrimshaw works by recorded creation, between \\\"Scrimshaw 40\\\" and \\\"Scrimshaw 41.\\\" Its face-forward composition and dense line layering connect it visually to several nnxyz pieces in the owned subset, where the collector sees shared raw mark-making across both artists.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\",\n      \"reason\": \"Both show asymmetric eyes and bared teeth against a saturated background, but \\\"nnotb #190\\\" buries its features under denser scribble, making its face harder to read than \\\"Wobbler\\\"'s open layout.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6\",\n      \"reason\": \"Both use a row of vertical white teeth as a strong horizontal anchor, though \\\"nifty faces #51\\\" frames its mouth inside a rigid rectangular scaffold while \\\"Wobbler\\\" lets the jaw float loosely.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth with teeth\",\n    \"mismatched eyes\",\n    \"teal background\",\n    \"heavy outline face\",\n    \"bright magenta accents\"\n  ],\n  \"lookingQuestion\": \"How does the size difference between the two eyes shift where your attention lands first, and does the surrounding color around each eye reinforce or undercut that pull?\",\n  \"ambiguities\": [\n    \"The title \\\"Wobbler\\\" is treated as content; it may or may not describe the depicted subject.\",\n    \"No numbered title family exists for this work, so sequence context relies on recorded creation neighbors only.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed left eye is a large dark-outlined oval with blue and multicolor fills; right eye is a smaller rectangular shape with teal and pale tones—both visible in the image.\",\n    \"Replaced 'pink lip marks' with 'pink marks at the corners' for accuracy: the pink strokes sit at the mouth corners rather than forming distinct lips.\",\n    \"Checked both comparison images: \\\"nnotb #190\\\" does show asymmetric eyes and teeth on a purple background with denser scribble; \\\"nifty faces #51\\\" does show vertical white teeth inside a rectangular scaffold—both comparisons hold.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVYHmNA8cFJtzqWwWmCHpBGvECV7tAbFLVDw2jdYrFr9i",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVYHmNA8cFJtzqWwWmCHpBGvECV7tAbFLVDw2jdYrFr9i/image.png",
+        "imageSHA256": "bad93743c57c0aa8d1d58c89a2e8b033c16bdc96f16a9354bcc1ecd6bfa13d17"
+      },
+      {
+        "artworkId": "QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6/image.png",
+        "imageSHA256": "70f082b91f55ea9db6575966050dc4e7545cc5dc710e9d4fef7b7f40a5ff9154"
+      },
+      {
+        "artworkId": "QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRgYY2yYkmLjYCEggAZ994nLRZ9GuCiBgmzC2KmaEobd9/image.png",
+        "imageSHA256": "0d928685e12470f9b07ac07ca927cef0f1a09c023665dfab8fbdb4c2492f3ca2"
+      },
+      {
+        "artworkId": "QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi/image.png",
+        "imageSHA256": "e5f89b8567894cf160601000bb337e22e44d3a155509af293963b00805166197"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two mismatched eyes dominate the face: the left is a large dark-outlined oval filled with blue and rainbow stripes, while the right is a smaller teal rectangle with a pale iris.\", \"A wide open mouth at the bottom shows vertical white teeth separated by dark lines, framed by a heavy blue jaw outline and flanked by pink lip marks.\", \"The teal background is crossed by loose vertical strokes in lavender, orange, and magenta, with a bright magenta curve sweeping along the right edge behind the head.\"], \"reading\": \"The two eyes refuse to agree—one swollen and ringed in black, the other boxed and watchful—giving the face a lopsided alertness that reads as startled or unsteady. Teeth bared in a wide rectangle of a mouth push the expression toward alarm rather than aggression. Warm yellows and oranges pile across the forehead while cool teal holds the edges, splitting the face between heat and calm. The title \\\"Wobbler\\\" fits: nothing here sits level.\", \"contextAngle\": \"\\\"Wobbler\\\" sits near the end of the owned scrimshaw works by recorded creation, between \\\"Scrimshaw 40\\\" and \\\"Scrimshaw 41.\\\" Its face-forward composition and dense line layering connect it visually to several nnxyz pieces in the collection, where the collector sees shared raw mark-making across both artists.\", \"connections\": [{\"targetArtworkId\": \"QmUVJmaJ6otd79pwpLxeaJzXVSghCNBKHMru1mfjoAFqoi\", \"reason\": \"Both show asymmetric eyes and bared teeth against a saturated background, but \\\"nnotb #190\\\" buries its features under denser scribble, making its face harder to read than \\\"Wobbler\\\"'s open layout.\"}, {\"targetArtworkId\": \"QmaX7QxHnLaKjyAXjGLxCq3Ye1fFEgJLjtzfbjuwGo2mi6\", \"reason\": \"Both use a row of vertical white teeth as a strong horizontal anchor, though \\\"nifty faces #51\\\" frames its mouth inside a rigid rectangular scaffold while \\\"Wobbler\\\" lets the jaw float loosely.\"}], \"tags\": [\"open mouth with teeth\", \"mismatched eyes\", \"teal background\", \"heavy outline face\", \"bright magenta accents\"], \"lookingQuestion\": \"How does the size difference between the two eyes shift where your attention lands first, and does the surrounding color around each eye reinforce or undercut that pull?\", \"ambiguities\": [\"The title \\\"Wobbler\\\" is treated as content; it may or may not describe the depicted subject.\", \"No numbered title family exists for this work, so sequence context relies on recorded creation neighbors only.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

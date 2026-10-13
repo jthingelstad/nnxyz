@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:36.900738-05:00",
+    "usage": {
+      "inputTokens": 6353,
+      "outputTokens": 762,
+      "totalTokens": 7115,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12970
+    },
+    "requestId": "f6679cf0-3ac7-4094-94a1-6ebee55eca2a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face fills most of the canvas against a bright yellow field that shifts to olive-green in the lower half; a faint light-blue rectangle overlays the face's center.\",\n    \"Red-orange marks accent both eyes and the mouth, with a thick red stroke running from the lower lip down the chin; white teardrop shapes hang below each eye.\",\n    \"Loose black zigzag lines and orange blobs crowd the upper edge, echoing the jagged fringe that surrounds the face outline on the left side.\"\n  ],\n  \"reading\": \"Yellow floods the upper field while olive-green pools below, splitting the face across two temperatures of the same hue. White drops beneath each eye read as tears without insisting on it. Red at the mouth and eyes pulls against the yellow calm, and the faint blue rectangle floats over the face like a second, cooler skin. The overall effect is one of contained pressure.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #295 and nnxyz nnotb #297. Where #295 builds its face on a saturated blue ground, #296 stays in the yellow-to-olive range that the collector links to scrimshaw's engraved-line quality.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u\",\n      \"reason\": \"Both works use a bold black outline to anchor a face against a saturated single-color ground, but #295 floods that ground in blue while #296 stays in yellow-olive, making the pair a direct color-temperature contrast on the same structural approach.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\",\n      \"reason\": \"rawblocks #42 shares the bright yellow ground and a face built from layered lines, but buries its features under dense overlapping marks where #296 keeps the face relatively open, showing how the same yellow field can read as either noise or space.\"\n    }\n  ],\n  \"tags\": [\n    \"yellow ground\",\n    \"olive-green lower field\",\n    \"continuous black outline\",\n    \"red accent marks\",\n    \"white teardrop forms\",\n    \"zigzag border lines\"\n  ],\n  \"interpretiveTags\": [\n    \"contained pressure\",\n    \"emotional ambiguity\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the white shapes below the eyes begin and end, and what other marks in the image share their weight and color?\",\n  \"ambiguities\": [\n    \"The faint light-blue rectangle overlaying the face may be a distinct drawn layer or a fill artifact; its edges are soft and its relationship to the face outline is unclear from the image alone.\",\n    \"The title-derived order and the recorded-creation order align here, but gaps exist elsewhere in the owned nnotb subset, so adjacency does not confirm sequential making.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn/image.png",
+        "imageSHA256": "cf7468142546e831420aae6b873cb909e93e25d199d31ba7de681d1be25b341c"
+      },
+      {
+        "artworkId": "QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u/image.png",
+        "imageSHA256": "280ee2323f3f2f06c526f05123b9b99cd9573c4243966b75b7b23476109207b9"
+      },
+      {
+        "artworkId": "QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi/image.png",
+        "imageSHA256": "8190f31405813db5091f0bb1d2f807e5faf7b9fefc270d0ab1d7a08d9a82a35f"
+      },
+      {
+        "artworkId": "QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL/image.png",
+        "imageSHA256": "c91f7b3e7f235e180ef34f754cc8869a61deb8cffa4e183977276e2ffe51f156"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:44.131115-05:00",
+    "usage": {
+      "inputTokens": 7137,
+      "outputTokens": 1031,
+      "totalTokens": 8168,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7178
+    },
+    "requestId": "6186da5c-32cf-4107-bfd2-879e1acfadf5",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face fills most of the canvas against a bright yellow field that shifts to olive-green in the lower half; a faint light-blue rectangle overlays the face's center.\",\n    \"Red-orange marks accent both eyes and the mouth, with a thick red stroke running from the lower lip down the chin; white teardrop shapes hang below each eye.\",\n    \"Loose black zigzag lines and orange blobs crowd the upper edge, echoing the jagged fringe that surrounds the face outline on the left side.\"\n  ],\n  \"reading\": \"Yellow floods the upper field while olive-green pools below, splitting the face across two tones of the same hue. White drops beneath each eye read as tears without insisting on it. Red at the mouth and eyes pulls against the yellow calm, and the faint blue rectangle floats over the face like a second, cooler layer. The result is one of contained pressure.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #295 and nnxyz nnotb #297. Where #295 builds its face on a saturated blue ground, #296 stays in yellow-to-olive — the engraved-line quality the collector links to scrimshaw.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u\",\n      \"reason\": \"Both works anchor a face with bold black outline against a saturated single-color ground, but #295 floods that ground in blue while #296 stays yellow-olive, making the pair a direct color-temperature contrast on the same structural approach.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\",\n      \"reason\": \"rawblocks #42 shares a bright yellow ground and a face built from layered lines, but buries its features under dense overlapping marks where #296 keeps the face relatively open, showing how the same yellow field can read as either noise or space.\"\n    }\n  ],\n  \"tags\": [\n    \"yellow ground\",\n    \"olive-green lower field\",\n    \"continuous black outline\",\n    \"red accent marks\",\n    \"white teardrop forms\",\n    \"zigzag border lines\"\n  ],\n  \"interpretiveTags\": [\n    \"contained pressure\",\n    \"emotional ambiguity\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the white shapes below the eyes begin and end, and what other marks in the image share their weight and color?\",\n  \"ambiguities\": [\n    \"The faint light-blue rectangle overlaying the face may be a distinct drawn layer or a fill artifact; its edges are soft and its relationship to the face outline is unclear from the image alone.\",\n    \"Title-derived order and recorded-creation order align for this work, but gaps exist elsewhere in the owned nnotb subset, so adjacency does not confirm sequential making.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: yellow upper field, olive-green lower half, light-blue rectangle, red-orange eye and mouth accents, white teardrop forms, and black zigzag upper border are all visible.\",\n    \"Comparison with QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u confirmed: #295 uses a blue ground with bold black face outline — color-temperature contrast claim is accurate; pink and taupe marks in #295 are distinct from #296 and not mentioned, no correction needed.\",\n    \"Comparison with QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi confirmed: rawblocks #42 does show a yellow ground and a face form buried under dense overlapping lines — open-versus-dense contrast claim is supported; removed draft phrase 'like a second, cooler skin' (stock metaphor) and replaced with 'layer'; reading remains within word limit.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn/image.png",
+        "imageSHA256": "cf7468142546e831420aae6b873cb909e93e25d199d31ba7de681d1be25b341c"
+      },
+      {
+        "artworkId": "QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u/image.png",
+        "imageSHA256": "280ee2323f3f2f06c526f05123b9b99cd9573c4243966b75b7b23476109207b9"
+      },
+      {
+        "artworkId": "QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi/image.png",
+        "imageSHA256": "8190f31405813db5091f0bb1d2f807e5faf7b9fefc270d0ab1d7a08d9a82a35f"
+      },
+      {
+        "artworkId": "QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL/image.png",
+        "imageSHA256": "c91f7b3e7f235e180ef34f754cc8869a61deb8cffa4e183977276e2ffe51f156"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large face fills most of the canvas against a bright yellow field that shifts to olive-green in the lower half; a faint light-blue rectangle overlays the face's center.\", \"Red-orange marks accent both eyes and the mouth, with a thick red stroke running from the lower lip down the chin; white teardrop shapes hang below each eye.\", \"Loose black zigzag lines and orange blobs crowd the upper edge, echoing the jagged fringe that surrounds the face outline on the left side.\"], \"reading\": \"Yellow floods the upper field while olive-green pools below, splitting the face across two temperatures of the same hue. White drops beneath each eye read as tears without insisting on it. Red at the mouth and eyes pulls against the yellow calm, and the faint blue rectangle floats over the face like a second, cooler skin. The overall effect is one of contained pressure.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #295 and nnxyz nnotb #297. Where #295 builds its face on a saturated blue ground, #296 stays in the yellow-to-olive range that the collector links to scrimshaw's engraved-line quality.\", \"connections\": [{\"targetArtworkId\": \"QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u\", \"reason\": \"Both works use a bold black outline to anchor a face against a saturated single-color ground, but #295 floods that ground in blue while #296 stays in yellow-olive, making the pair a direct color-temperature contrast on the same structural approach.\"}, {\"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\", \"reason\": \"rawblocks #42 shares the bright yellow ground and a face built from layered lines, but buries its features under dense overlapping marks where #296 keeps the face relatively open, showing how the same yellow field can read as either noise or space.\"}], \"tags\": [\"yellow ground\", \"olive-green lower field\", \"continuous black outline\", \"red accent marks\", \"white teardrop forms\", \"zigzag border lines\"], \"interpretiveTags\": [\"contained pressure\", \"emotional ambiguity\"], \"lookingQuestion\": \"Where exactly do the white shapes below the eyes begin and end, and what other marks in the image share their weight and color?\", \"ambiguities\": [\"The faint light-blue rectangle overlaying the face may be a distinct drawn layer or a fill artifact; its edges are soft and its relationship to the face outline is unclear from the image alone.\", \"The title-derived order and the recorded-creation order align here, but gaps exist elsewhere in the owned nnotb subset, so adjacency does not confirm sequential making.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:06:44.298387-05:00",
+    "usage": {
+      "inputTokens": 6904,
+      "outputTokens": 820,
+      "totalTokens": 7724,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 9681
+    },
+    "requestId": "cc607236-81b4-4988-85bd-0e04c6faf08f",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"A large face fills most of the canvas against a bright yellow field that shifts to olive-green in the lower half; a faint light-blue rectangle overlays the face's center.\",\n    \"Red-orange marks accent both eyes and the mouth, with a thick red stroke running from the lower lip down the chin; white teardrop shapes hang below each eye.\",\n    \"Loose black zigzag lines and orange blobs crowd the upper edge, echoing the jagged fringe that surrounds the face outline on the left side.\"\n  ],\n  \"reading\": \"Yellow floods the upper field while olive-green pools below, splitting the face across two tones of the same hue. White drops beneath each eye read as tears without insisting on it. Red at the mouth and eyes pulls against the yellow calm, and the faint blue rectangle floats over the face like a second, cooler layer. The result is one of contained pressure.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #295 and nnxyz nnotb #297. Where #295 builds its face on a saturated blue ground, #296 stays in yellow-to-olive — the scratched-line quality the collector relates to scrimshaw.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u\",\n      \"reason\": \"Both works anchor a face with bold black outline against a saturated single-color ground, but #295 floods that ground in blue while #296 stays yellow-olive, making the pair a direct color-temperature contrast on the same structural approach.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\",\n      \"reason\": \"rawblocks #42 shares a bright yellow ground and a face built from layered lines, but buries its features under dense overlapping marks where #296 keeps the face relatively open, showing how the same yellow field can read as either noise or space.\"\n    }\n  ],\n  \"tags\": [\n    \"yellow ground\",\n    \"olive-green lower field\",\n    \"continuous black outline\",\n    \"red accent marks\",\n    \"white teardrop forms\",\n    \"zigzag border lines\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the white shapes below the eyes begin and end, and what other marks in the image share their weight and color?\",\n  \"ambiguities\": [\n    \"The faint light-blue rectangle overlaying the face may be a distinct drawn layer or a fill artifact; its edges are soft and its relationship to the face outline is unclear from the image alone.\",\n    \"Title-derived order and recorded-creation order align for this work, but gaps exist elsewhere in the owned nnotb subset, so adjacency does not confirm sequential making.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'engraved-line quality' in contextAngle with 'scratched-line quality' to remove the named-media term flagged by the review rule.\",\n    \"Reading remains at 62 words, context at 35 words, within required ranges.\",\n    \"All other fields verified against visible content; no additional flags found.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn/image.png",
+        "imageSHA256": "cf7468142546e831420aae6b873cb909e93e25d199d31ba7de681d1be25b341c"
+      },
+      {
+        "artworkId": "QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u/image.png",
+        "imageSHA256": "280ee2323f3f2f06c526f05123b9b99cd9573c4243966b75b7b23476109207b9"
+      },
+      {
+        "artworkId": "QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi/image.png",
+        "imageSHA256": "8190f31405813db5091f0bb1d2f807e5faf7b9fefc270d0ab1d7a08d9a82a35f"
+      },
+      {
+        "artworkId": "QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmexPtVXw9pS4SnFYTFevyzAqt9W4DbSUrrXUHnCeFRoaL/image.png",
+        "imageSHA256": "c91f7b3e7f235e180ef34f754cc8869a61deb8cffa4e183977276e2ffe51f156"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large face fills most of the canvas against a bright yellow field that shifts to olive-green in the lower half; a faint light-blue rectangle overlays the face's center.\", \"Red-orange marks accent both eyes and the mouth, with a thick red stroke running from the lower lip down the chin; white teardrop shapes hang below each eye.\", \"Loose black zigzag lines and orange blobs crowd the upper edge, echoing the jagged fringe that surrounds the face outline on the left side.\"], \"reading\": \"Yellow floods the upper field while olive-green pools below, splitting the face across two tones of the same hue. White drops beneath each eye read as tears without insisting on it. Red at the mouth and eyes pulls against the yellow calm, and the faint blue rectangle floats over the face like a second, cooler layer. The result is one of contained pressure.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #295 and nnxyz nnotb #297. Where #295 builds its face on a saturated blue ground, #296 stays in yellow-to-olive — the engraved-line quality the collector links to scrimshaw.\", \"connections\": [{\"targetArtworkId\": \"QmdkNbgAx1tSkAA9WLWfJKocV2FqJXkDip9jKNAViSbY7u\", \"reason\": \"Both works anchor a face with bold black outline against a saturated single-color ground, but #295 floods that ground in blue while #296 stays yellow-olive, making the pair a direct color-temperature contrast on the same structural approach.\"}, {\"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\", \"reason\": \"rawblocks #42 shares a bright yellow ground and a face built from layered lines, but buries its features under dense overlapping marks where #296 keeps the face relatively open, showing how the same yellow field can read as either noise or space.\"}], \"tags\": [\"yellow ground\", \"olive-green lower field\", \"continuous black outline\", \"red accent marks\", \"white teardrop forms\", \"zigzag border lines\"], \"lookingQuestion\": \"Where exactly do the white shapes below the eyes begin and end, and what other marks in the image share their weight and color?\", \"ambiguities\": [\"The faint light-blue rectangle overlaying the face may be a distinct drawn layer or a fill artifact; its edges are soft and its relationship to the face outline is unclear from the image alone.\", \"Title-derived order and recorded-creation order align for this work, but gaps exist elsewhere in the owned nnotb subset, so adjacency does not confirm sequential making.\"]}\nFLAGS:\n[{\"artworkId\": \"QmTjjfSqDXHoNCbLMmAUUSUHE85VpDKMbJdxaH3pbZctNn\", \"field\": \"contextAngle\", \"rule\": \"named-media\", \"matches\": [\"engraved\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

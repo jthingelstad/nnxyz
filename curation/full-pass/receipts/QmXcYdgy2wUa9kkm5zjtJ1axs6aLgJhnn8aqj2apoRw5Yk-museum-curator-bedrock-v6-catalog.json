@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:25.612713-05:00",
+    "usage": {
+      "inputTokens": 6115,
+      "outputTokens": 729,
+      "totalTokens": 6844,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20218
+    },
+    "requestId": "03ae7f3a-9f16-4234-9974-58651210ba1c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A head in three-quarter view fills the frame, outlined in thick black lines, wearing a brimmed hat split between dense red-pink scribbles and grey crosshatched stripes.\",\n    \"The face is filled with flowing vertical stripes of purple, pink, yellow, and green; a spiral earring in yellow and black hangs below the hat brim near the jaw.\",\n    \"The background is a field of soft, overlapping translucent circles in yellow, green, pink, and blue, contrasting with the hard black outlines of the figure.\"\n  ],\n  \"reading\": \"The figure reads as armored in pattern: every surface carries a different fill, from the tangled scribble of the hat crown to the rainbow bands across the face. The spiral earring and the grid of white marks inside the red mouth feel like small puzzles nested inside a larger one. Against the bubbly, pastel background, the heavy black contour lines give the head a stained-glass quality, locking bright color into rigid compartments. The mood sits somewhere between swagger and disguise.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #17\\\" and \\\"nnxyz rawblocks #19.\\\" All three feature bold head compositions with thick black outlines, but #18 stands apart with its soft bokeh-like background circles, while its neighbors use flat polka dots and a solid pink field.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw\",\n      \"reason\": \"Both share a close-cropped head with hat, earring, sunglasses, and heavy black outlines, but #17 uses opaque polka dots while #18 replaces them with translucent overlapping circles.\"\n    },\n    {\n      \"targetArtworkId\": \"QmP5zbJsTNpDuYNzVK2b4EX3gR2pUbi2tePuDPSw88PN5X\",\n      \"reason\": \"#19 strips the face down to exposed interior marks and a single large eye, while #18 conceals the eyes behind reflective lenses, making them opposite approaches to revealing or hiding a face.\"\n    }\n  ],\n  \"tags\": [\n    \"thick black outlines\",\n    \"patterned fill zones\",\n    \"spiral earring\",\n    \"translucent background circles\",\n    \"striped face\",\n    \"hat with mixed textures\"\n  ],\n  \"lookingQuestion\": \"How do the translucent, floating circles in the background change the way you read the rigid black outlines that contain the figure?\",\n  \"ambiguities\": [\n    \"The reflective shapes in the sunglasses could be read as a building or abstract hatching; the source is unclear from the image alone.\",\n    \"A small monogram appears in the lower-right corner, but its exact letters are difficult to confirm at this resolution.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk/image.png",
+        "imageSHA256": "ede0a62fe791701cd934d701c92bcfb9711020ec4a9532fcb026f7086c91ae1a"
+      },
+      {
+        "artworkId": "QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw/image.png",
+        "imageSHA256": "ba798aa01f9bdc057fd37e59a29eeda4aa52edd08baf1b692bb80f4c029d57a9"
+      },
+      {
+        "artworkId": "QmXhg5HMsm9Wkfcdo73R3FAazoWmxSwPdHFmViBEtwASnw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXhg5HMsm9Wkfcdo73R3FAazoWmxSwPdHFmViBEtwASnw/image.png",
+        "imageSHA256": "a81c5239f792c103d06b8c2841befefb7a31f3f445d1455bf95c983079b950c3"
+      },
+      {
+        "artworkId": "QmP5zbJsTNpDuYNzVK2b4EX3gR2pUbi2tePuDPSw88PN5X",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP5zbJsTNpDuYNzVK2b4EX3gR2pUbi2tePuDPSw88PN5X/image.png",
+        "imageSHA256": "b500409d040e323d6e0457582314f09645673a35bc59a3ed0e3f3b55210b3fe8"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:37.256419-05:00",
+    "usage": {
+      "inputTokens": 6876,
+      "outputTokens": 833,
+      "totalTokens": 7709,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11564
+    },
+    "requestId": "28a87ff8-f17b-4f18-8c2a-1727afe98814",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A head in three-quarter view fills the frame, wearing a brimmed hat split between dense red-pink scribbles on the left and grey diagonal crosshatching on the right.\",\n    \"The face is filled with flowing vertical bands of purple, pink, yellow, and green; a yellow-and-black spiral earring hangs near the jaw, and large reflective lenses cover the eyes.\",\n    \"The background is a field of soft, overlapping translucent circles in yellow, green, pink, and blue, contrasting with the heavy black contour lines of the figure.\"\n  ],\n  \"reading\": \"Every surface carries a different fill—tangled scribble on the hat crown, rainbow bands across the face, diagonal hatching on the brim. The spiral earring and the grid of white marks inside the red mouth feel like small puzzles nested in a larger one. Against the bubbly, pastel background, the heavy black outlines lock bright color into rigid compartments, giving the head a stained-glass quality. The mood reads as somewhere between swagger and disguise.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #17\\\" and \\\"nnxyz rawblocks #19.\\\" All three feature bold head compositions with thick black outlines, but #18 stands apart with its soft translucent background circles, while its neighbors use flat polka dots and a solid pink field.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw\",\n      \"reason\": \"Both show a close-cropped head with hat, earring, large lenses, and heavy black outlines, but #17 uses opaque white polka dots while #18 replaces them with translucent overlapping circles.\"\n    },\n    {\n      \"targetArtworkId\": \"QmP5zbJsTNpDuYNzVK2b4EX3gR2pUbi2tePuDPSw88PN5X\",\n      \"reason\": \"#19 exposes interior marks and a single large eye on a flat pink ground, while #18 hides the eyes behind reflective lenses—opposite approaches to revealing or concealing a face.\"\n    }\n  ],\n  \"tags\": [\n    \"thick black outlines\",\n    \"patterned fill zones\",\n    \"spiral earring\",\n    \"translucent background circles\",\n    \"striped face\",\n    \"hat with mixed textures\"\n  ],\n  \"lookingQuestion\": \"How do the translucent, floating circles in the background change the way you read the rigid black outlines that contain the figure?\",\n  \"ambiguities\": [\n    \"The reflective shapes in the lenses could be read as a building facade or abstract hatching; the source is unclear from the image alone.\",\n    \"A small monogram appears in the lower-right corner, but its exact letters are difficult to confirm at this resolution.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed hat split: left half dense red-pink scribbles, right half grey diagonal crosshatching—draft description accurate.\",\n    \"Draft referenced 'sunglasses' but the lenses lack visible frames beyond the black outline; changed to 'large reflective lenses' for accuracy.\",\n    \"Reading trimmed from 80 to 75 words to stay within limit; removed redundant phrasing.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk/image.png",
+        "imageSHA256": "ede0a62fe791701cd934d701c92bcfb9711020ec4a9532fcb026f7086c91ae1a"
+      },
+      {
+        "artworkId": "QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw/image.png",
+        "imageSHA256": "ba798aa01f9bdc057fd37e59a29eeda4aa52edd08baf1b692bb80f4c029d57a9"
+      },
+      {
+        "artworkId": "QmXhg5HMsm9Wkfcdo73R3FAazoWmxSwPdHFmViBEtwASnw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXhg5HMsm9Wkfcdo73R3FAazoWmxSwPdHFmViBEtwASnw/image.png",
+        "imageSHA256": "a81c5239f792c103d06b8c2841befefb7a31f3f445d1455bf95c983079b950c3"
+      },
+      {
+        "artworkId": "QmP5zbJsTNpDuYNzVK2b4EX3gR2pUbi2tePuDPSw88PN5X",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP5zbJsTNpDuYNzVK2b4EX3gR2pUbi2tePuDPSw88PN5X/image.png",
+        "imageSHA256": "b500409d040e323d6e0457582314f09645673a35bc59a3ed0e3f3b55210b3fe8"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A head in three-quarter view fills the frame, outlined in thick black lines, wearing a brimmed hat split between dense red-pink scribbles and grey crosshatched stripes.\", \"The face is filled with flowing vertical stripes of purple, pink, yellow, and green; a spiral earring in yellow and black hangs below the hat brim near the jaw.\", \"The background is a field of soft, overlapping translucent circles in yellow, green, pink, and blue, contrasting with the hard black outlines of the figure.\"], \"reading\": \"The figure reads as armored in pattern: every surface carries a different fill, from the tangled scribble of the hat crown to the rainbow bands across the face. The spiral earring and the grid of white marks inside the red mouth feel like small puzzles nested inside a larger one. Against the bubbly, pastel background, the heavy black contour lines give the head a stained-glass quality, locking bright color into rigid compartments. The mood sits somewhere between swagger and disguise.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #17\\\" and \\\"nnxyz rawblocks #19.\\\" All three feature bold head compositions with thick black outlines, but #18 stands apart with its soft bokeh-like background circles, while its neighbors use flat polka dots and a solid pink field.\", \"connections\": [{\"targetArtworkId\": \"QmYn1eRGSFTwNf5CAfK2bCuEKj59PjhpeKj9JEBRE59xuw\", \"reason\": \"Both share a close-cropped head with hat, earring, sunglasses, and heavy black outlines, but #17 uses opaque polka dots while #18 replaces them with translucent overlapping circles.\"}, {\"targetArtworkId\": \"QmP5zbJsTNpDuYNzVK2b4EX3gR2pUbi2tePuDPSw88PN5X\", \"reason\": \"#19 strips the face down to exposed interior marks and a single large eye, while #18 conceals the eyes behind reflective lenses, making them opposite approaches to revealing or hiding a face.\"}], \"tags\": [\"thick black outlines\", \"patterned fill zones\", \"spiral earring\", \"translucent background circles\", \"striped face\", \"hat with mixed textures\"], \"lookingQuestion\": \"How do the translucent, floating circles in the background change the way you read the rigid black outlines that contain the figure?\", \"ambiguities\": [\"The reflective shapes in the sunglasses could be read as a building or abstract hatching; the source is unclear from the image alone.\", \"A small monogram appears in the lower-right corner, but its exact letters are difficult to confirm at this resolution.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

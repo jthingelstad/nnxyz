@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:14.064831-05:00",
+    "usage": {
+      "inputTokens": 6206,
+      "outputTokens": 767,
+      "totalTokens": 6973,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13961
+    },
+    "requestId": "b2961bdc-0044-4d01-bb7e-adea563e60f7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval outline, drawn in white, frames a dense layered face-like form against a flat bright blue field; the oval sits slightly left of center.\",\n    \"Two distinct inset shapes occupy the eye positions: a red heart pierced by a white bar on the left, and a yellow-green flower with a looped center on the right, each enclosed in its own rectangular boundary.\",\n    \"A wide open mouth near the bottom shows alternating black and white rectangular teeth under a pink zigzag lip line; loose yellow, black, and white scribble lines extend beyond the oval into all four corners.\"\n  ],\n  \"reading\": \"The face-like structure here feels almost festive rather than threatening: the heart and flower standing in for eyes give the layered form an oddly tender quality, even as the bared teeth and dense overlapping lines push toward agitation. The bright blue field keeps everything readable, holding the internal chaos at a certain distance. Two moods seem to coexist without resolving.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #172 and nnxyz nnotb #174. Where #172 uses a dark green field and compressed, shadowed forms, and #174 shifts to teal with angular eye shapes, #173 opens the palette to flat sky blue and replaces aggression with symbol-like eye forms.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa\",\n      \"reason\": \"Both works place a face-like oval on a flat bright blue field with loose scribble lines extending into the corners, making the blue ground and overall spatial layout the clearest formal link across the two collections in the owned subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV\",\n      \"reason\": \"Title neighbor nnxyz nnotb #172 shares the bared-teeth mouth structure and layered line density, but its dark green field and absence of symbol-like eye forms make the contrast in mood between the two works visible and direct.\"\n    }\n  ],\n  \"tags\": [\n    \"oval face-like form\",\n    \"heart eye symbol\",\n    \"flower eye symbol\",\n    \"bared teeth\",\n    \"flat blue ground\",\n    \"corner scribble lines\"\n  ],\n  \"interpretiveTags\": [\n    \"tender-aggressive contrast\",\n    \"festive unease\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the left eye shape and the right eye shape do to how you read the two halves of the face?\",\n  \"ambiguities\": [\n    \"The small mark at lower right resembles a signature but its exact content is not legible at this resolution.\",\n    \"The rawblocks #59 comparison shares the blue field and face structure but belongs to a different collection family; the formal link is real but cross-collection context is limited to what is visible in the inspected images.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1/image.png",
+        "imageSHA256": "64b4e4a11370b25f2fce44a13ded0c5cfbde4617845c0be396fcbe6b7c9246e0"
+      },
+      {
+        "artworkId": "QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV/image.png",
+        "imageSHA256": "bb9e72a385ede768d203f76d2fa1ca4032a532db474a3794abeaa23e79675eaa"
+      },
+      {
+        "artworkId": "QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa/image.png",
+        "imageSHA256": "b15005d2b9a721d53f486c079e929c326e9768f3b4e6931103eb85ba58d7a7d7"
+      },
+      {
+        "artworkId": "Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz/image.png",
+        "imageSHA256": "3ab92fb59f99813d9b90e6c0396db59e57668928fec523335b06ba45183e7505"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:20.678783-05:00",
+    "usage": {
+      "inputTokens": 6995,
+      "outputTokens": 921,
+      "totalTokens": 7916,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6538
+    },
+    "requestId": "e7c8dc19-2a9b-4f6e-902f-d4fe040a540e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval outline drawn in white frames a dense layered face-like form against a flat bright blue field; the oval sits slightly left of center.\",\n    \"Two inset shapes occupy the eye positions: a red heart pierced by a white bar on the left, and a yellow-green flower with a looped center on the right, each enclosed in its own rectangular boundary.\",\n    \"A wide open mouth near the bottom shows alternating black and white rectangular teeth under a pink zigzag lip line; loose yellow, black, and white scribble lines extend beyond the oval into all four corners.\"\n  ],\n  \"reading\": \"The face-like structure feels almost festive rather than threatening: a heart and a flower standing in for eyes give the layered form an oddly tender quality, even as the bared teeth and dense overlapping lines push toward agitation. The flat blue field keeps everything readable, holding the internal density at a distance. Two moods coexist without resolving.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #172 and nnxyz nnotb #174. Where #172 uses a dark green field with compressed shadowed forms, and #174 shifts to teal with angular eye shapes, #173 opens to flat sky blue with symbol-like eye forms.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa\",\n      \"reason\": \"Both works place a face-like oval on a flat bright blue field with loose scribble lines extending into the corners, making the shared blue ground and spatial layout the clearest formal link across the two owned collections.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV\",\n      \"reason\": \"Title neighbor nnxyz nnotb #172 shares the bared-teeth mouth structure and layered line density, but its dark green field and absence of symbol-like eye forms make the contrast in mood between the two works direct and visible.\"\n    }\n  ],\n  \"tags\": [\n    \"oval face-like form\",\n    \"heart eye shape\",\n    \"flower eye shape\",\n    \"bared teeth\",\n    \"flat blue ground\",\n    \"corner scribble lines\"\n  ],\n  \"interpretiveTags\": [\n    \"tender-aggressive contrast\",\n    \"festive unease\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the left eye shape and the right eye shape do to how you read the two halves of the face?\",\n  \"ambiguities\": [\n    \"The small mark at lower right resembles a signature but its exact content is not legible at this resolution.\",\n    \"The rawblocks #59 comparison belongs to a different collection family; the formal blue-field link is visible in the inspected images but cross-collection context is limited to what can be seen directly.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: white oval, heart/flower eye shapes with rectangular enclosures, pink zigzag lip line, and corner scribble lines are all visible.\",\n    \"Comparison with QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV confirmed: dark green field, bared teeth, and absence of symbol eye forms are all directly visible in that image.\",\n    \"Reading revised to remove 'almost' hedging on 'festive' and tighten to word-limit range; no invented intent, biography, or technique claims present in final text.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaashZqiVuNmoHV9JPj34ni8z7Q5VxzqiaWeYuUqWXiy1/image.png",
+        "imageSHA256": "64b4e4a11370b25f2fce44a13ded0c5cfbde4617845c0be396fcbe6b7c9246e0"
+      },
+      {
+        "artworkId": "QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV/image.png",
+        "imageSHA256": "bb9e72a385ede768d203f76d2fa1ca4032a532db474a3794abeaa23e79675eaa"
+      },
+      {
+        "artworkId": "QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa/image.png",
+        "imageSHA256": "b15005d2b9a721d53f486c079e929c326e9768f3b4e6931103eb85ba58d7a7d7"
+      },
+      {
+        "artworkId": "Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4JU942bRiG5bKoxAarpakj533g86pPWXuEkaGqfkHuz/image.png",
+        "imageSHA256": "3ab92fb59f99813d9b90e6c0396db59e57668928fec523335b06ba45183e7505"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large oval outline, drawn in white, frames a dense layered face-like form against a flat bright blue field; the oval sits slightly left of center.\", \"Two distinct inset shapes occupy the eye positions: a red heart pierced by a white bar on the left, and a yellow-green flower with a looped center on the right, each enclosed in its own rectangular boundary.\", \"A wide open mouth near the bottom shows alternating black and white rectangular teeth under a pink zigzag lip line; loose yellow, black, and white scribble lines extend beyond the oval into all four corners.\"], \"reading\": \"The face-like structure here feels almost festive rather than threatening: the heart and flower standing in for eyes give the layered form an oddly tender quality, even as the bared teeth and dense overlapping lines push toward agitation. The bright blue field keeps everything readable, holding the internal chaos at a certain distance. Two moods seem to coexist without resolving.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #172 and nnxyz nnotb #174. Where #172 uses a dark green field and compressed, shadowed forms, and #174 shifts to teal with angular eye shapes, #173 opens the palette to flat sky blue and replaces aggression with symbol-like eye forms.\", \"connections\": [{\"targetArtworkId\": \"QmNaQtEvMcHe4pSZaBGREJHD1q241mJjiGPBquSeuUoxpa\", \"reason\": \"Both works place a face-like oval on a flat bright blue field with loose scribble lines extending into the corners, making the blue ground and overall spatial layout the clearest formal link across the two collections in the owned subset.\"}, {\"targetArtworkId\": \"QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV\", \"reason\": \"Title neighbor nnxyz nnotb #172 shares the bared-teeth mouth structure and layered line density, but its dark green field and absence of symbol-like eye forms make the contrast in mood between the two works visible and direct.\"}], \"tags\": [\"oval face-like form\", \"heart eye symbol\", \"flower eye symbol\", \"bared teeth\", \"flat blue ground\", \"corner scribble lines\"], \"interpretiveTags\": [\"tender-aggressive contrast\", \"festive unease\"], \"lookingQuestion\": \"What does the difference between the left eye shape and the right eye shape do to how you read the two halves of the face?\", \"ambiguities\": [\"The small mark at lower right resembles a signature but its exact content is not legible at this resolution.\", \"The rawblocks #59 comparison shares the blue field and face structure but belongs to a different collection family; the formal link is real but cross-collection context is limited to what is visible in the inspected images.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

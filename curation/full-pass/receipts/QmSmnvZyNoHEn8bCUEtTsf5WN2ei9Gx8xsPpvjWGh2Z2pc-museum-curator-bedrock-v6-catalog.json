@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:12.340769-05:00",
+    "usage": {
+      "inputTokens": 6445,
+      "outputTokens": 744,
+      "totalTokens": 7189,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20337
+    },
+    "requestId": "d2cd4ebc-4228-4717-9e2e-d895e45eae01",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head-like form fills the center, built from overlapping rectangular and rounded shapes in red, blue, pink, and cyan against a flat orange background.\",\n    \"Two asymmetric eye-like openings sit mid-face—the left filled with dark crosshatching under pink, the right outlined in cyan and blue with a spiral center.\",\n    \"Loose purple, yellow, and magenta loops orbit the head, extending past its edges into the orange field, creating a buzzing halo of tangled lines.\"\n  ],\n  \"reading\": \"The head reads as a mask or container: rigid rectangular scaffolding in red and blue holds soft pink fills and dark voids. Zigzag lines across the forehead and teeth-like marks along the lower opening give the form a grinning, almost mechanical quality. The orbiting purple and yellow loops feel restless, as though the figure is vibrating against its own outline. Where many scrimshaw works let line define shape, here color blocks and line compete for the same space, producing a sense of pressure building inside the frame.\",\n  \"contextAngle\": \"In the owned subset, Scrimshaw 18 sits between \\\"Scrimshaw15\\\" and \\\"Scrimshaw 21\\\" by title number. Its flat orange ground and blocky internal geometry contrast with the looser, more linear approach visible in both neighbors, suggesting a shift toward heavier color fills within this part of the numbered family.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy\",\n      \"reason\": \"Both use a saturated yellow-orange ground and exposed teeth-like marks, but Scrimshaw 21 relies on thick black outlines while Scrimshaw 18 buries its outlines under layered color loops.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXqgtfJRVKeHc4VVbLZycCisGw8Q9kXrnfLTBX6dY8GnA\",\n      \"reason\": \"Both pack a head-like form with dense multicolor lines, yet nnxyz nifty faces #9 builds volume through thousands of fine scratches while Scrimshaw 18 uses fewer, bolder strokes and flat color blocks.\"\n    }\n  ],\n  \"tags\": [\n    \"head-like form\",\n    \"flat orange ground\",\n    \"overlapping color loops\",\n    \"zigzag lines\",\n    \"teeth-like marks\",\n    \"layered rectangles\"\n  ],\n  \"lookingQuestion\": \"Where do the loose purple and yellow loops connect to the rigid rectangular shapes inside the head, and where do they break free entirely?\",\n  \"ambiguities\": [\n    \"Whether the dark crosshatched areas inside the eye openings are a distinct layer or part of the same drawing pass as the surrounding color cannot be confirmed from the image alone.\",\n    \"The relationship between title number order and actual making sequence is unknown; Scrimshaw 18 and its neighbors may not have been created consecutively.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSmnvZyNoHEn8bCUEtTsf5WN2ei9Gx8xsPpvjWGh2Z2pc",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmSmnvZyNoHEn8bCUEtTsf5WN2ei9Gx8xsPpvjWGh2Z2pc/image.png",
+        "imageSHA256": "5a9eca6410f58a18e083bc719a0489ebcca184b349143d66dbdf4f1118632ebc"
+      },
+      {
+        "artworkId": "QmWePkMLbrGXkbUr6728P83CxynRSmY4R4RpTmsn6QVK2H",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmWePkMLbrGXkbUr6728P83CxynRSmY4R4RpTmsn6QVK2H/image.png",
+        "imageSHA256": "cac80e95ffdce106ef6c53d51ed9cc84632d7b44cbe1183f4267d7d582b551e1"
+      },
+      {
+        "artworkId": "QmXqgtfJRVKeHc4VVbLZycCisGw8Q9kXrnfLTBX6dY8GnA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXqgtfJRVKeHc4VVbLZycCisGw8Q9kXrnfLTBX6dY8GnA/image.png",
+        "imageSHA256": "3bcb484e1af1610c481f03507988c03fe26d0da3822d0f31f88cf566fc388338"
+      },
+      {
+        "artworkId": "QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy/image.png",
+        "imageSHA256": "721315da947b2eb5e6fefc1f390653e85c8fd975d9aaca3d231b86cf8f750a4b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:24.182328-05:00",
+    "usage": {
+      "inputTokens": 7221,
+      "outputTokens": 876,
+      "totalTokens": 8097,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11722
+    },
+    "requestId": "b332fb0b-e6eb-4366-a0f7-4841fd0e54a8",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head-like form fills the center, built from overlapping rectangular and rounded shapes in red, blue, pink, and cyan against a flat orange background.\",\n    \"Two asymmetric eye-like openings sit mid-face—the left filled with dark crosshatching under pink, the right outlined in cyan and blue with a rounded spiral center.\",\n    \"Loose purple, yellow, and magenta loops orbit the head, extending past its edges into the orange field, creating a tangled halo of looping lines.\"\n  ],\n  \"reading\": \"The head reads as a mask or container: rigid rectangular scaffolding in red and blue holds soft pink fills and dark voids. Zigzag lines across the forehead and teeth-like marks along the lower opening give the form a grinning, almost mechanical quality. The orbiting purple and yellow loops feel restless, as though the figure vibrates against its own outline. Here color blocks and line compete for the same space, producing a sense of pressure inside the frame.\",\n  \"contextAngle\": \"In the owned subset, Scrimshaw 18 sits between \\\"Scrimshaw15\\\" and \\\"Scrimshaw 21\\\" by title number. Its flat orange ground and blocky internal geometry contrast with the looser, more linear approach visible in both neighbors, marking a heavier use of color fills within this part of the numbered family.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy\",\n      \"reason\": \"Both use a saturated yellow-orange ground and exposed teeth-like marks, but Scrimshaw 21 relies on thick black outlines while Scrimshaw 18 buries its outlines under layered color loops.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXqgtfJRVKeHc4VVbLZycCisGw8Q9kXrnfLTBX6dY8GnA\",\n      \"reason\": \"Both pack a head-like form with dense multicolor lines, yet nnxyz nifty faces #9 builds volume through fine scratches while Scrimshaw 18 uses fewer, bolder strokes and flat color blocks.\"\n    }\n  ],\n  \"tags\": [\n    \"head-like form\",\n    \"flat orange ground\",\n    \"overlapping color loops\",\n    \"zigzag lines\",\n    \"teeth-like marks\",\n    \"layered rectangles\"\n  ],\n  \"lookingQuestion\": \"Where do the loose purple and yellow loops connect to the rigid rectangular shapes inside the head, and where do they break free entirely?\",\n  \"ambiguities\": [\n    \"Whether the dark crosshatched areas inside the eye openings are a distinct layer or part of the same drawing pass cannot be confirmed from the image alone.\",\n    \"The relationship between title number order and actual making sequence is unknown; neighbors may not have been created consecutively.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed orange background, red/blue/pink/cyan scaffolding, purple/yellow/magenta outer loops, and asymmetric eye openings all visible in the primary image.\",\n    \"Reading trimmed from 80+ words to within the 55–65 target; removed 'suggesting' phrasing implying series evolution and the clause about 'many scrimshaw works' which was unsupported.\",\n    \"Scrimshaw 21 comparison verified: yellow ground, teeth marks, and thick black outlines all visible; nnxyz nifty faces #9 comparison verified: dense fine multicolor scratches contrast with bolder strokes here.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSmnvZyNoHEn8bCUEtTsf5WN2ei9Gx8xsPpvjWGh2Z2pc",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmSmnvZyNoHEn8bCUEtTsf5WN2ei9Gx8xsPpvjWGh2Z2pc/image.png",
+        "imageSHA256": "5a9eca6410f58a18e083bc719a0489ebcca184b349143d66dbdf4f1118632ebc"
+      },
+      {
+        "artworkId": "QmWePkMLbrGXkbUr6728P83CxynRSmY4R4RpTmsn6QVK2H",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmWePkMLbrGXkbUr6728P83CxynRSmY4R4RpTmsn6QVK2H/image.png",
+        "imageSHA256": "cac80e95ffdce106ef6c53d51ed9cc84632d7b44cbe1183f4267d7d582b551e1"
+      },
+      {
+        "artworkId": "QmXqgtfJRVKeHc4VVbLZycCisGw8Q9kXrnfLTBX6dY8GnA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXqgtfJRVKeHc4VVbLZycCisGw8Q9kXrnfLTBX6dY8GnA/image.png",
+        "imageSHA256": "3bcb484e1af1610c481f03507988c03fe26d0da3822d0f31f88cf566fc388338"
+      },
+      {
+        "artworkId": "QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy/image.png",
+        "imageSHA256": "721315da947b2eb5e6fefc1f390653e85c8fd975d9aaca3d231b86cf8f750a4b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large head-like form fills the center, built from overlapping rectangular and rounded shapes in red, blue, pink, and cyan against a flat orange background.\", \"Two asymmetric eye-like openings sit mid-face—the left filled with dark crosshatching under pink, the right outlined in cyan and blue with a spiral center.\", \"Loose purple, yellow, and magenta loops orbit the head, extending past its edges into the orange field, creating a buzzing halo of tangled lines.\"], \"reading\": \"The head reads as a mask or container: rigid rectangular scaffolding in red and blue holds soft pink fills and dark voids. Zigzag lines across the forehead and teeth-like marks along the lower opening give the form a grinning, almost mechanical quality. The orbiting purple and yellow loops feel restless, as though the figure is vibrating against its own outline. Where many scrimshaw works let line define shape, here color blocks and line compete for the same space, producing a sense of pressure building inside the frame.\", \"contextAngle\": \"In the owned subset, Scrimshaw 18 sits between \\\"Scrimshaw15\\\" and \\\"Scrimshaw 21\\\" by title number. Its flat orange ground and blocky internal geometry contrast with the looser, more linear approach visible in both neighbors, suggesting a shift toward heavier color fills within this part of the numbered family.\", \"connections\": [{\"targetArtworkId\": \"QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy\", \"reason\": \"Both use a saturated yellow-orange ground and exposed teeth-like marks, but Scrimshaw 21 relies on thick black outlines while Scrimshaw 18 buries its outlines under layered color loops.\"}, {\"targetArtworkId\": \"QmXqgtfJRVKeHc4VVbLZycCisGw8Q9kXrnfLTBX6dY8GnA\", \"reason\": \"Both pack a head-like form with dense multicolor lines, yet nnxyz nifty faces #9 builds volume through thousands of fine scratches while Scrimshaw 18 uses fewer, bolder strokes and flat color blocks.\"}], \"tags\": [\"head-like form\", \"flat orange ground\", \"overlapping color loops\", \"zigzag lines\", \"teeth-like marks\", \"layered rectangles\"], \"lookingQuestion\": \"Where do the loose purple and yellow loops connect to the rigid rectangular shapes inside the head, and where do they break free entirely?\", \"ambiguities\": [\"Whether the dark crosshatched areas inside the eye openings are a distinct layer or part of the same drawing pass as the surrounding color cannot be confirmed from the image alone.\", \"The relationship between title number order and actual making sequence is unknown; Scrimshaw 18 and its neighbors may not have been created consecutively.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

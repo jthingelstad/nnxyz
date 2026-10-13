@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:05.988580-05:00",
+    "usage": {
+      "inputTokens": 6890,
+      "outputTokens": 805,
+      "totalTokens": 7695,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13562
+    },
+    "requestId": "bf6adf25-1704-40cf-b70d-ea4df49fa8df",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large central figure sits with limbs extended outward, outlined in layered black and blue lines over a warm field of red, ochre, and olive.\",\n    \"A white rectangular outline near the upper center floats against the background, unattached to any figure, with a bright white zigzag line descending from it toward the lower right.\",\n    \"At least four smaller tooth-baring mouths appear at the corners and edges—upper left, lower left, upper right—each rendered in tight black lines with white fill.\"\n  ],\n  \"reading\": \"The image crowds its space with figures and fragments: a seated central form, smaller crouching shapes at the bottom, and bared teeth recurring at the margins. Blue line work runs across warm reds and ochres, while the floating white rectangle holds open a gap in the density. The repeated mouth motif reads as agitation or warning, though the overall layering keeps any single reading unstable.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #18 and nnxyz nnotb #20—both also in the owned collection. Where #18 isolates a single figure on a plain ground and #20 dissolves into soft repeated organic forms, #19 packs multiple figures and motifs into a dense, warm-field composition.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje\",\n      \"reason\": \"Both works use white line to define a central figure against a colored ground, but #18 gives that figure open space while #19 surrounds its central form with overlapping figures and edge fragments.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\",\n      \"reason\": \"Both works feature a tooth-baring mouth as a focal element built from tight black lines with white fill, though rawblocks #42 centers that motif on a flat yellow ground while #19 scatters it across a dense multi-figure composition.\"\n    }\n  ],\n  \"tags\": [\n    \"multiple figures\",\n    \"repeated mouth motif\",\n    \"layered line work\",\n    \"warm red-ochre ground\",\n    \"floating geometric shape\",\n    \"blue over warm color\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded\",\n    \"agitated\",\n    \"unstable\"\n  ],\n  \"lookingQuestion\": \"The white rectangle near the upper center shares no visible connection to the figures around it—what does its placement do to how you move through the rest of the image?\",\n  \"ambiguities\": [\n    \"The smaller forms at the lower edge are ambiguous—they read as crouching figures or as isolated body-part fragments; the line work does not resolve this.\",\n    \"The candidate comparison QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr (nnotb #20) shares blue line work but its soft organic forms offer no strong formal parallel to #19's dense figure arrangement, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUwjsSUDpDxSboqD8BMyJXZiZwfZxZZjUr5Xq3KFX8tMu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUwjsSUDpDxSboqD8BMyJXZiZwfZxZZjUr5Xq3KFX8tMu/image.png",
+        "imageSHA256": "824409fdbe2030aab453c7434e15ba6499ad3902e98d9af172205b587c58263a"
+      },
+      {
+        "artworkId": "QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje/image.png",
+        "imageSHA256": "47f90dd166f1dbb538036bbb9092d66476531075c47a32eda3d9109d236fc0a7"
+      },
+      {
+        "artworkId": "QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi/image.png",
+        "imageSHA256": "8190f31405813db5091f0bb1d2f807e5faf7b9fefc270d0ab1d7a08d9a82a35f"
+      },
+      {
+        "artworkId": "QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr/image.png",
+        "imageSHA256": "6a2edf1542791c2d99ffa08abdf3ac49b0472da340b5e5bedae1887675b717b5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:14.188548-05:00",
+    "usage": {
+      "inputTokens": 7715,
+      "outputTokens": 1023,
+      "totalTokens": 8738,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 8107
+    },
+    "requestId": "2a3ccf8b-0bb0-4f56-99bd-9e8532ab0480",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large central figure sits with limbs extended outward, outlined in layered black and blue lines over a warm field of red, ochre, and olive.\",\n    \"A white rectangular outline near the upper center floats unattached to any figure, with a bright white zigzag line descending from it toward the lower right.\",\n    \"At least four smaller tooth-baring mouths appear at the corners and edges—upper left, lower left, upper right—each rendered in tight black lines with white fill.\"\n  ],\n  \"reading\": \"The image crowds its space with figures and fragments: a seated central form, smaller shapes at the bottom, and bared teeth recurring at the margins. Blue line work runs across warm reds and ochres, while the floating white rectangle holds open a gap in the density. The repeated mouth motif reads as agitation or warning, though the layering keeps any single reading unstable.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #18 and nnxyz nnotb #20. Where #18 isolates a single figure on a plain ground and #20 dissolves into soft repeated organic forms, #19 packs multiple figures and recurring mouth fragments into a dense warm-field composition.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje\",\n      \"reason\": \"Both works use white line to define a central figure against a colored ground, but #18 gives that figure open space while #19 surrounds its central form with overlapping figures and edge fragments.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\",\n      \"reason\": \"Both works feature tooth-baring mouths built from tight black lines with white fill, though rawblocks #42 centers that motif on a flat yellow ground while #19 scatters it across a dense multi-figure composition.\"\n    }\n  ],\n  \"tags\": [\n    \"multiple figures\",\n    \"repeated mouth motif\",\n    \"layered line work\",\n    \"warm red-ochre ground\",\n    \"floating rectangular outline\",\n    \"blue over warm color\"\n  ],\n  \"interpretiveTags\": [\n    \"crowded\",\n    \"agitated\",\n    \"unstable\"\n  ],\n  \"lookingQuestion\": \"The white rectangle near the upper center shares no visible connection to the figures around it—what does its placement do to how you move through the rest of the image?\",\n  \"ambiguities\": [\n    \"The smaller forms at the lower edge are ambiguous—they read as crouching figures or as isolated body-part fragments; the line work does not resolve this.\",\n    \"QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr (nnotb #20) shares blue line work but its soft organic forms offer no strong formal parallel to #19's dense figure arrangement, so it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: central seated figure with extended limbs, floating white rectangle with descending zigzag, and tooth-baring mouths at multiple edges are all visibly present.\",\n    \"Comparison with QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje confirmed: #18 shows a single figure on a plain teal ground with white and orange-blue line work—open-space contrast with #19 is accurate.\",\n    \"Comparison with QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi confirmed: rawblocks #42 shows a tooth-baring mouth in tight black lines with white fill on a flat yellow ground—mouth-motif parallel is visually supported; draft description 'focal element' softened to avoid implying sole subject.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUwjsSUDpDxSboqD8BMyJXZiZwfZxZZjUr5Xq3KFX8tMu",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUwjsSUDpDxSboqD8BMyJXZiZwfZxZZjUr5Xq3KFX8tMu/image.png",
+        "imageSHA256": "824409fdbe2030aab453c7434e15ba6499ad3902e98d9af172205b587c58263a"
+      },
+      {
+        "artworkId": "QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje/image.png",
+        "imageSHA256": "47f90dd166f1dbb538036bbb9092d66476531075c47a32eda3d9109d236fc0a7"
+      },
+      {
+        "artworkId": "QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi/image.png",
+        "imageSHA256": "8190f31405813db5091f0bb1d2f807e5faf7b9fefc270d0ab1d7a08d9a82a35f"
+      },
+      {
+        "artworkId": "QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr/image.png",
+        "imageSHA256": "6a2edf1542791c2d99ffa08abdf3ac49b0472da340b5e5bedae1887675b717b5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large central figure sits with limbs extended outward, outlined in layered black and blue lines over a warm field of red, ochre, and olive.\", \"A white rectangular outline near the upper center floats against the background, unattached to any figure, with a bright white zigzag line descending from it toward the lower right.\", \"At least four smaller tooth-baring mouths appear at the corners and edges—upper left, lower left, upper right—each rendered in tight black lines with white fill.\"], \"reading\": \"The image crowds its space with figures and fragments: a seated central form, smaller crouching shapes at the bottom, and bared teeth recurring at the margins. Blue line work runs across warm reds and ochres, while the floating white rectangle holds open a gap in the density. The repeated mouth motif reads as agitation or warning, though the overall layering keeps any single reading unstable.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #18 and nnxyz nnotb #20—both also in the owned collection. Where #18 isolates a single figure on a plain ground and #20 dissolves into soft repeated organic forms, #19 packs multiple figures and motifs into a dense, warm-field composition.\", \"connections\": [{\"targetArtworkId\": \"QmWrrSZCMiaobntPmGoos2U51Zri5HzmMaDgJG3nkg2Sje\", \"reason\": \"Both works use white line to define a central figure against a colored ground, but #18 gives that figure open space while #19 surrounds its central form with overlapping figures and edge fragments.\"}, {\"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\", \"reason\": \"Both works feature a tooth-baring mouth as a focal element built from tight black lines with white fill, though rawblocks #42 centers that motif on a flat yellow ground while #19 scatters it across a dense multi-figure composition.\"}], \"tags\": [\"multiple figures\", \"repeated mouth motif\", \"layered line work\", \"warm red-ochre ground\", \"floating geometric shape\", \"blue over warm color\"], \"interpretiveTags\": [\"crowded\", \"agitated\", \"unstable\"], \"lookingQuestion\": \"The white rectangle near the upper center shares no visible connection to the figures around it—what does its placement do to how you move through the rest of the image?\", \"ambiguities\": [\"The smaller forms at the lower edge are ambiguous—they read as crouching figures or as isolated body-part fragments; the line work does not resolve this.\", \"The candidate comparison QmNwgu79xP1QTzUwSkwawepFygmqNVk2zwNAA9p8pukBGr (nnotb #20) shares blue line work but its soft organic forms offer no strong formal parallel to #19's dense figure arrangement, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

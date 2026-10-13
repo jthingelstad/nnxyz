@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:43.666995-05:00",
+    "usage": {
+      "inputTokens": 6152,
+      "outputTokens": 724,
+      "totalTokens": 6876,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11539
+    },
+    "requestId": "2b78db15-52b8-4b38-969d-562f213f6688",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A tall black figure leans forward at a sharp angle, its elongated oval head tilted far to the right, marked with white X-cross eyes and small scribbled lines on a dark field.\",\n    \"White outline strokes define a loosely drawn coat or jacket with dangling, claw-like fingers hanging near the ground; small cross and dash marks scatter across the torso.\",\n    \"A single small yellow flower with a red center sits isolated in the lower-right corner against the flat grey background, the only warm color in the image.\"\n  ],\n  \"reading\": \"The figure's steep forward lean and crossed-out eyes read as exhaustion or collapse rather than aggression. Its long fingers nearly graze the ground while the body stays upright, caught mid-fall. The tiny yellow flower holds its position at the far edge, unaffected. That gap between the drooping figure and the bright, upright bloom carries the image's emotional weight without resolving it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work stands out for near-total color restraint—grey, black, white, and one small yellow accent. Title neighbors nnotb #120 and nnotb #122 both use saturated fields and spiral or jagged mark patterns, making #121's spare palette a clear contrast within the owned sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUi9RzMTmGUB2QX5dFegPShi6AbVNcqbiCKbcF6F1x8QT\",\n      \"reason\": \"nnotb #122 shares the flower-on-stem motif and black silhouette style, but places the flower as the dominant subject on a yellow-green ground rather than a marginal accent on grey.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUCycAQRKLqpuo1ouLJtCyRCmdkWAep4tUZT5XK5k9kKo\",\n      \"reason\": \"nnotb #120 uses the same black-mass figure with a large oval head and white facial marks, but fills the background with dense teal scribble lines where #121 leaves the grey field empty.\"\n    }\n  ],\n  \"tags\": [\n    \"black figure\",\n    \"forward lean\",\n    \"white outline\",\n    \"isolated flower\",\n    \"crossed-out eyes\",\n    \"grey ground\"\n  ],\n  \"interpretiveTags\": [\n    \"exhaustion\",\n    \"tension between collapse and resilience\"\n  ],\n  \"lookingQuestion\": \"What does the spatial distance between the figure's dangling fingers and the small flower tell you about how the two elements relate to each other?\",\n  \"ambiguities\": [\n    \"The marks on the torso (crosses, dashes) could be clothing detail or surface texture; the image does not clarify which.\",\n    \"The nifty-faces #101 comparison shows no formal overlap with this work beyond shared artist; it was inspected but not selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRBFVqhZPekk6tq3jtSE4WL7WEyKzwRvhR9Leem9qhFBm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRBFVqhZPekk6tq3jtSE4WL7WEyKzwRvhR9Leem9qhFBm/image.png",
+        "imageSHA256": "9a8e1e1e366db2712d27587125d8595bbf33050229dbd7fd253eae3ae874519e"
+      },
+      {
+        "artworkId": "QmUCycAQRKLqpuo1ouLJtCyRCmdkWAep4tUZT5XK5k9kKo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUCycAQRKLqpuo1ouLJtCyRCmdkWAep4tUZT5XK5k9kKo/image.png",
+        "imageSHA256": "8f546afda5d8a459be6470b5173269378ca5875feec84dd8678732c143f9ab96"
+      },
+      {
+        "artworkId": "QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV/image.png",
+        "imageSHA256": "e55a6cae552483214e63fe56234fb274efbd223ccd2717c133227622f43be760"
+      },
+      {
+        "artworkId": "QmUi9RzMTmGUB2QX5dFegPShi6AbVNcqbiCKbcF6F1x8QT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUi9RzMTmGUB2QX5dFegPShi6AbVNcqbiCKbcF6F1x8QT/image.png",
+        "imageSHA256": "f4162ffc9959b0562b4c76e3e7e6abad3ed462d290f82671b621226c5f5f9d7a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:49.526484-05:00",
+    "usage": {
+      "inputTokens": 6898,
+      "outputTokens": 842,
+      "totalTokens": 7740,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5810
+    },
+    "requestId": "9b0fae62-770b-4058-bab4-4e0e64821f58",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A tall black figure leans forward at a sharp angle, its elongated oval head tilted far to the right, marked with white X-cross eyes and small scribbled lines on a dark field.\",\n    \"White outline strokes define a loosely drawn coat or jacket with dangling, claw-like fingers hanging near the ground; small cross and dash marks scatter across the torso.\",\n    \"A single small yellow flower with a red center sits isolated in the lower-right corner against the flat grey background, the only warm color in the image.\"\n  ],\n  \"reading\": \"The figure's steep forward lean and crossed-out eyes read as exhaustion or collapse rather than aggression. Its long fingers nearly graze the ground while the body stays upright, caught mid-fall. The tiny yellow flower holds its position at the far edge, unaffected. That gap between the drooping figure and the bright, upright bloom carries the image's emotional weight without resolving it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work stands out for near-total color restraint—grey, black, white, and one small yellow accent. Title neighbors nnotb #120 and nnotb #122 both use saturated fields and spiral or jagged mark patterns, making #121's spare palette a clear contrast.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUi9RzMTmGUB2QX5dFegPShi6AbVNcqbiCKbcF6F1x8QT\",\n      \"reason\": \"nnotb #122 shares a flower-on-stem form and black silhouette style, but places the flower as the dominant subject on a yellow-green ground rather than a marginal accent on grey.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUCycAQRKLqpuo1ouLJtCyRCmdkWAep4tUZT5XK5k9kKo\",\n      \"reason\": \"nnotb #120 uses a black-mass figure with a large oval head and white facial marks, but fills the background with dense teal scribble lines where #121 leaves the grey field empty.\"\n    }\n  ],\n  \"tags\": [\"black figure\", \"forward lean\", \"white outline\", \"isolated flower\", \"crossed-out eyes\", \"grey ground\"],\n  \"interpretiveTags\": [\"exhaustion\", \"tension between collapse and resilience\"],\n  \"lookingQuestion\": \"What does the spatial distance between the figure's dangling fingers and the small flower tell you about how the two elements relate to each other?\",\n  \"ambiguities\": [\n    \"The marks on the torso (crosses, dashes) could be clothing detail or surface texture; the image does not clarify which.\",\n    \"nifty-faces #101 was inspected but shows no formal overlap with this work beyond shared artist and was not selected.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: oval head tilt, white outline coat with claw fingers, and isolated yellow-red flower in lower-right corner are all visible.\",\n    \"Both comparison connections verified: #122 does show a black flower-silhouette on yellow-green ground as dominant subject; #120 does show a black oval-headed figure with white facial marks against dense teal scribble background.\",\n    \"Word counts checked: reading is 68 words, contextAngle is 47 words, both within limits; no prohibited vocabulary (deliberately, intentional, evolving, etc.) found in final text.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRBFVqhZPekk6tq3jtSE4WL7WEyKzwRvhR9Leem9qhFBm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRBFVqhZPekk6tq3jtSE4WL7WEyKzwRvhR9Leem9qhFBm/image.png",
+        "imageSHA256": "9a8e1e1e366db2712d27587125d8595bbf33050229dbd7fd253eae3ae874519e"
+      },
+      {
+        "artworkId": "QmUCycAQRKLqpuo1ouLJtCyRCmdkWAep4tUZT5XK5k9kKo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUCycAQRKLqpuo1ouLJtCyRCmdkWAep4tUZT5XK5k9kKo/image.png",
+        "imageSHA256": "8f546afda5d8a459be6470b5173269378ca5875feec84dd8678732c143f9ab96"
+      },
+      {
+        "artworkId": "QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV/image.png",
+        "imageSHA256": "e55a6cae552483214e63fe56234fb274efbd223ccd2717c133227622f43be760"
+      },
+      {
+        "artworkId": "QmUi9RzMTmGUB2QX5dFegPShi6AbVNcqbiCKbcF6F1x8QT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUi9RzMTmGUB2QX5dFegPShi6AbVNcqbiCKbcF6F1x8QT/image.png",
+        "imageSHA256": "f4162ffc9959b0562b4c76e3e7e6abad3ed462d290f82671b621226c5f5f9d7a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A tall black figure leans forward at a sharp angle, its elongated oval head tilted far to the right, marked with white X-cross eyes and small scribbled lines on a dark field.\", \"White outline strokes define a loosely drawn coat or jacket with dangling, claw-like fingers hanging near the ground; small cross and dash marks scatter across the torso.\", \"A single small yellow flower with a red center sits isolated in the lower-right corner against the flat grey background, the only warm color in the image.\"], \"reading\": \"The figure's steep forward lean and crossed-out eyes read as exhaustion or collapse rather than aggression. Its long fingers nearly graze the ground while the body stays upright, caught mid-fall. The tiny yellow flower holds its position at the far edge, unaffected. That gap between the drooping figure and the bright, upright bloom carries the image's emotional weight without resolving it.\", \"contextAngle\": \"Within the owned nnotb subset, this work stands out for near-total color restraint—grey, black, white, and one small yellow accent. Title neighbors nnotb #120 and nnotb #122 both use saturated fields and spiral or jagged mark patterns, making #121's spare palette a clear contrast within the owned sequence.\", \"connections\": [{\"targetArtworkId\": \"QmUi9RzMTmGUB2QX5dFegPShi6AbVNcqbiCKbcF6F1x8QT\", \"reason\": \"nnotb #122 shares the flower-on-stem motif and black silhouette style, but places the flower as the dominant subject on a yellow-green ground rather than a marginal accent on grey.\"}, {\"targetArtworkId\": \"QmUCycAQRKLqpuo1ouLJtCyRCmdkWAep4tUZT5XK5k9kKo\", \"reason\": \"nnotb #120 uses the same black-mass figure with a large oval head and white facial marks, but fills the background with dense teal scribble lines where #121 leaves the grey field empty.\"}], \"tags\": [\"black figure\", \"forward lean\", \"white outline\", \"isolated flower\", \"crossed-out eyes\", \"grey ground\"], \"interpretiveTags\": [\"exhaustion\", \"tension between collapse and resilience\"], \"lookingQuestion\": \"What does the spatial distance between the figure's dangling fingers and the small flower tell you about how the two elements relate to each other?\", \"ambiguities\": [\"The marks on the torso (crosses, dashes) could be clothing detail or surface texture; the image does not clarify which.\", \"The nifty-faces #101 comparison shows no formal overlap with this work beyond shared artist; it was inspected but not selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

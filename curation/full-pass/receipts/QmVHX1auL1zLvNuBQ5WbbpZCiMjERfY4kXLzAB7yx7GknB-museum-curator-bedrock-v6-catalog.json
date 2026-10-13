@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:24.968101-05:00",
+    "usage": {
+      "inputTokens": 6351,
+      "outputTokens": 714,
+      "totalTokens": 7065,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19895
+    },
+    "requestId": "e7bbfc81-88ba-4613-87a9-4cc936d69771",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A seated figure fills the lower two-thirds, hunched forward with arms resting on dark legs, against broad horizontal bands of muted teal and grey.\",\n    \"The bright blue top is scored with thin vertical dark lines and scattered red-pink marks, contrasting sharply with the near-black lower half striped in white.\",\n    \"The face is built from overlapping brown and orange fills with loose white and dark contour lines; two dark, hollow eye shapes sit close together above a small red mouth.\"\n  ],\n  \"reading\": \"The figure slumps into itself, shoulders rounded, hands meeting at the lap. That bright blue shirt reads almost defiant against the heavy grey-green backdrop, yet the close-set dark eyes and downturned mouth pull the mood toward exhaustion or resignation. Thin vertical lines on the clothing echo the vertical white stripes below, binding the body into a single compressed block. The loose, tangled contour around the head lets the face feel unfinished, as though identity is still settling.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #8\\\" and \\\"nnxyz rawblocks #10.\\\" All three share loose contour drawing over flat color fills and muted backgrounds, but #9 is the most contained in posture—a full seated body rather than a cropped bust or raised arms.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy\",\n      \"reason\": \"Both use tangled white and dark contour lines over warm-toned faces, but #8's figure is cropped at the chest and uses red-orange hair, while #9 pulls back to show a full seated body.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic\",\n      \"reason\": \"Both place a blue accent on the head area against a green-teal background, but #10's figure reaches upward with extended arms, reversing the inward compression seen here.\"\n    }\n  ],\n  \"tags\": [\n    \"seated figure\",\n    \"striped clothing\",\n    \"loose contour lines\",\n    \"muted teal background\",\n    \"bright blue against dark tones\",\n    \"overlapping fills\"\n  ],\n  \"lookingQuestion\": \"How do the thin vertical lines on the blue shirt relate to the white stripes on the dark legs—do they unify the figure or split it into two separate zones?\",\n  \"ambiguities\": [\n    \"The small mark in the lower-right corner may be a signature or logo but is too compressed to read with certainty.\",\n    \"Whether the horizontal bands in the background represent a wall, steps, or abstract color blocks cannot be determined from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB/image.png",
+        "imageSHA256": "12ebe604c64e5cbdd03cac57bcebde8e6e350b6dc7a9a7488b8140a450208aaf"
+      },
+      {
+        "artworkId": "QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy/image.png",
+        "imageSHA256": "366f9fee10b634fa20c04fe2fd7571c1125049e75353d6cc3aee9a9dc8e748ee"
+      },
+      {
+        "artworkId": "QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ/image.png",
+        "imageSHA256": "b67347f8439804f05549a6bba2fdc9d5dc57d9bb107e959a3040a3d68bea70b2"
+      },
+      {
+        "artworkId": "QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic/image.png",
+        "imageSHA256": "3bec27a69d291903c1c5c25a89f1ae61ebf463f5dab39eba321f398cc22be473"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:37.497542-05:00",
+    "usage": {
+      "inputTokens": 7097,
+      "outputTokens": 834,
+      "totalTokens": 7931,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12451
+    },
+    "requestId": "634a58ae-bbb8-4e38-870d-ef292b5395bb",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A seated figure fills the lower two-thirds, hunched forward with arms resting on dark legs, against broad horizontal bands of muted teal and grey.\",\n    \"The bright blue top is scored with thin vertical dark lines and scattered red-pink marks, contrasting sharply with the near-black lower half striped in white.\",\n    \"The face is built from overlapping brown and orange fills with loose white and dark contour lines; two dark, hollow eye shapes sit close together above a small red mouth.\"\n  ],\n  \"reading\": \"The figure slumps into itself, shoulders rounded, hands meeting at the lap. That bright blue shirt reads almost defiant against the heavy grey-green backdrop, yet the close-set dark eyes and downturned mouth pull the mood toward exhaustion or resignation. Thin vertical lines on the shirt echo the white stripes below, binding the body into a single compressed block. The tangled contour around the head lets the face feel unfinished, as though identity is still settling.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #8\\\" and \\\"nnxyz rawblocks #10.\\\" All three share loose contour drawing over flat color fills and muted backgrounds, but #9 is the most contained in posture—a full seated body rather than a cropped bust or raised arms.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy\",\n      \"reason\": \"Both use tangled white and dark contour lines over warm-toned faces, but #8 is cropped at the chest with red-orange hair, while #9 pulls back to show a full seated body.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic\",\n      \"reason\": \"Both place a blue accent on the head area against a green-teal background, but #10's figure reaches upward with extended arms, reversing the inward compression seen here.\"\n    }\n  ],\n  \"tags\": [\n    \"seated figure\",\n    \"striped clothing\",\n    \"loose contour lines\",\n    \"muted teal background\",\n    \"bright blue against dark tones\",\n    \"overlapping fills\"\n  ],\n  \"lookingQuestion\": \"How do the thin vertical lines on the blue shirt relate to the white stripes on the dark legs—do they unify the figure or split it into two separate zones?\",\n  \"ambiguities\": [\n    \"The small mark in the lower-right corner may be a signature or logo but is too compressed to read with certainty.\",\n    \"Whether the horizontal bands in the background represent a wall, steps, or abstract color blocks cannot be determined from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed blue shirt with vertical dark lines and red-pink marks, and near-black lower half with white stripes, all visible in the image.\",\n    \"Checked #8 comparison: red-orange hair, cropped bust, tangled contour lines over warm face tones all confirmed; #10 comparison: blue accent on head, green background, raised arms all confirmed.\",\n    \"Reading trimmed from 80 to 65 words; removed a redundant adjective ('loose') to stay within limit.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVHX1auL1zLvNuBQ5WbbpZCiMjERfY4kXLzAB7yx7GknB/image.png",
+        "imageSHA256": "12ebe604c64e5cbdd03cac57bcebde8e6e350b6dc7a9a7488b8140a450208aaf"
+      },
+      {
+        "artworkId": "QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy/image.png",
+        "imageSHA256": "366f9fee10b634fa20c04fe2fd7571c1125049e75353d6cc3aee9a9dc8e748ee"
+      },
+      {
+        "artworkId": "QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ/image.png",
+        "imageSHA256": "b67347f8439804f05549a6bba2fdc9d5dc57d9bb107e959a3040a3d68bea70b2"
+      },
+      {
+        "artworkId": "QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic/image.png",
+        "imageSHA256": "3bec27a69d291903c1c5c25a89f1ae61ebf463f5dab39eba321f398cc22be473"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A seated figure fills the lower two-thirds, hunched forward with arms resting on dark legs, against broad horizontal bands of muted teal and grey.\", \"The bright blue top is scored with thin vertical dark lines and scattered red-pink marks, contrasting sharply with the near-black lower half striped in white.\", \"The face is built from overlapping brown and orange fills with loose white and dark contour lines; two dark, hollow eye shapes sit close together above a small red mouth.\"], \"reading\": \"The figure slumps into itself, shoulders rounded, hands meeting at the lap. That bright blue shirt reads almost defiant against the heavy grey-green backdrop, yet the close-set dark eyes and downturned mouth pull the mood toward exhaustion or resignation. Thin vertical lines on the clothing echo the vertical white stripes below, binding the body into a single compressed block. The loose, tangled contour around the head lets the face feel unfinished, as though identity is still settling.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #8\\\" and \\\"nnxyz rawblocks #10.\\\" All three share loose contour drawing over flat color fills and muted backgrounds, but #9 is the most contained in posture—a full seated body rather than a cropped bust or raised arms.\", \"connections\": [{\"targetArtworkId\": \"QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy\", \"reason\": \"Both use tangled white and dark contour lines over warm-toned faces, but #8's figure is cropped at the chest and uses red-orange hair, while #9 pulls back to show a full seated body.\"}, {\"targetArtworkId\": \"QmSpytb2AogFd2v1cGvDkD8dXARQC5BCHtX4J27PfuYHic\", \"reason\": \"Both place a blue accent on the head area against a green-teal background, but #10's figure reaches upward with extended arms, reversing the inward compression seen here.\"}], \"tags\": [\"seated figure\", \"striped clothing\", \"loose contour lines\", \"muted teal background\", \"bright blue against dark tones\", \"overlapping fills\"], \"lookingQuestion\": \"How do the thin vertical lines on the blue shirt relate to the white stripes on the dark legs—do they unify the figure or split it into two separate zones?\", \"ambiguities\": [\"The small mark in the lower-right corner may be a signature or logo but is too compressed to read with certainty.\", \"Whether the horizontal bands in the background represent a wall, steps, or abstract color blocks cannot be determined from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:47.787884-05:00",
+    "usage": {
+      "inputTokens": 6185,
+      "outputTokens": 756,
+      "totalTokens": 6941,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12549
+    },
+    "requestId": "bd191ee1-e079-4d1b-80e3-1440f149b629",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly rectangular head shape sits tilted slightly left on a dark brown background, filled with overlapping lines in white, blue, red, green, and yellow-orange.\",\n    \"Two eye zones are built from nested rectangles with white interiors crossed by red lines; a wide mouth below shows vertical white bars suggesting teeth against dark fill.\",\n    \"A bold yellow wavy stroke runs across the upper-left corner and pools at the lower-right edge, sitting outside the head shape as a separate flat element.\"\n  ],\n  \"reading\": \"The face pushes forward through a dense tangle of colored lines that never fully settle into clean edges. White crosses inside the eye rectangles and vertical bars in the mouth give the image a raw, pressured feeling. The yellow wave outside the head reads as a separate visual event, holding the composition open rather than framing it. The overall effect is confrontational without being legible as a single emotion.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #66 and #68. Where #66 uses a dark ground with sparse warm-colored lines over muted volume, #67 packs the same face format with saturated layered color and a flat yellow accent that #68 does not share.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG\",\n      \"reason\": \"Both works use a roughly square face structure filled with dense multi-color line layers over a flat background, with a wide tooth-like mouth zone built from repeated vertical marks.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ\",\n      \"reason\": \"Title neighbor #68 shares the rectangular eye format and open-mouth structure but replaces the layered warm color field with a cool teal ground and adds isolated dot elements absent in #67.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular eye zones\",\n    \"vertical tooth marks\",\n    \"flat yellow accent stroke\",\n    \"layered multi-color line fill\",\n    \"dark brown background\",\n    \"tilted head shape\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"pressured\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first — toward the white-crossed rectangles of the eyes, the vertical bars in the mouth, or the yellow wave outside the head — and what does that path suggest about how the image is organized?\",\n  \"ambiguities\": [\n    \"The yellow wavy element at upper-left and lower-right may be a single continuous stroke or two separate marks; the image does not resolve this clearly.\",\n    \"The nnotb comparison (QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG) is from a different owned collection family, so the formal similarity is noted without implying a shared series context.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS/image.png",
+        "imageSHA256": "64c4f51006df02d6fa50d6ee1c8aaa0bb1f8a2f4175e9fcf89c0cd85e115fe49"
+      },
+      {
+        "artworkId": "Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f/image.png",
+        "imageSHA256": "20ef3cd7545f6490eeb31c944a8ed98ac4cf422484f8d9e13ec623768115b834"
+      },
+      {
+        "artworkId": "QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG/image.png",
+        "imageSHA256": "8a841f005644c131b31cae6a90fca9d8878f6cc51d81c446f7f808660287f27a"
+      },
+      {
+        "artworkId": "QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ/image.png",
+        "imageSHA256": "b67347f8439804f05549a6bba2fdc9d5dc57d9bb107e959a3040a3d68bea70b2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:55.123926-05:00",
+    "usage": {
+      "inputTokens": 6963,
+      "outputTokens": 979,
+      "totalTokens": 7942,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7247
+    },
+    "requestId": "be49b009-d411-4794-a42d-c396024b88ec",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly rectangular head shape sits tilted slightly left on a dark brown background, filled with overlapping lines in white, blue, red, green, and yellow-orange.\",\n    \"Two eye zones are built from nested rectangles with white interiors crossed by red lines; a wide mouth below shows vertical white bars against a dark fill.\",\n    \"A bold yellow wavy stroke runs across the upper-left corner and pools at the lower-right edge, sitting outside the head shape as a distinct flat element.\"\n  ],\n  \"reading\": \"The face pushes forward through a dense tangle of colored lines that never settle into clean edges. White crosses inside the eye rectangles and vertical bars in the mouth give the image a raw, pressured quality. The yellow wave outside the head reads as a separate visual event, holding the composition open rather than enclosing it. The result is confrontational without resolving into a single legible expression.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #66 and #68. Where #66 uses a dark ground with sparse warm lines over muted volume, #67 packs the same face format with saturated layered color and a flat yellow accent absent from #68.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG\",\n      \"reason\": \"Both use a roughly square face structure filled with dense multi-color line layers over a flat background, with a wide mouth zone built from repeated vertical marks — though the nnotb work sits in a different owned collection family.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ\",\n      \"reason\": \"Title neighbor #68 shares the rectangular eye format and open-mouth structure but replaces the warm layered color field with a cool teal ground and adds isolated dot elements absent in #67.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular eye zones\",\n    \"vertical tooth marks\",\n    \"flat yellow accent stroke\",\n    \"layered multi-color line fill\",\n    \"dark brown background\",\n    \"tilted head shape\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"pressured\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first — toward the white-crossed rectangles of the eyes, the vertical bars in the mouth, or the yellow wave outside the head — and what does that path suggest about how the image is organized?\",\n  \"ambiguities\": [\n    \"The yellow wavy element at upper-left and lower-right may be one continuous stroke or two separate marks; the image does not resolve this clearly.\",\n    \"The nnotb comparison (QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG) is from a different owned collection family; the formal similarity is noted without implying a shared series context.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: tilted rectangular head, red-crossed white eye rectangles, vertical mouth bars, and yellow wavy stroke outside the head shape are all visibly present.\",\n    \"Comparison with QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ confirmed: #68 does show rectangular eye zones and open mouth but uses a cool teal ground with yellow dot border — contrast is accurate and specific.\",\n    \"Comparison with QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG confirmed: nnotb #199 does show a square face structure, dense multi-color line fill, and a tooth-like mouth zone with vertical marks — formal connection is supported; cross-collection caveat retained.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS/image.png",
+        "imageSHA256": "64c4f51006df02d6fa50d6ee1c8aaa0bb1f8a2f4175e9fcf89c0cd85e115fe49"
+      },
+      {
+        "artworkId": "Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f/image.png",
+        "imageSHA256": "20ef3cd7545f6490eeb31c944a8ed98ac4cf422484f8d9e13ec623768115b834"
+      },
+      {
+        "artworkId": "QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG/image.png",
+        "imageSHA256": "8a841f005644c131b31cae6a90fca9d8878f6cc51d81c446f7f808660287f27a"
+      },
+      {
+        "artworkId": "QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ/image.png",
+        "imageSHA256": "b67347f8439804f05549a6bba2fdc9d5dc57d9bb107e959a3040a3d68bea70b2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A roughly rectangular head shape sits tilted slightly left on a dark brown background, filled with overlapping lines in white, blue, red, green, and yellow-orange.\", \"Two eye zones are built from nested rectangles with white interiors crossed by red lines; a wide mouth below shows vertical white bars suggesting teeth against dark fill.\", \"A bold yellow wavy stroke runs across the upper-left corner and pools at the lower-right edge, sitting outside the head shape as a separate flat element.\"], \"reading\": \"The face pushes forward through a dense tangle of colored lines that never fully settle into clean edges. White crosses inside the eye rectangles and vertical bars in the mouth give the image a raw, pressured feeling. The yellow wave outside the head reads as a separate visual event, holding the composition open rather than framing it. The overall effect is confrontational without being legible as a single emotion.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #66 and #68. Where #66 uses a dark ground with sparse warm-colored lines over muted volume, #67 packs the same face format with saturated layered color and a flat yellow accent that #68 does not share.\", \"connections\": [{\"targetArtworkId\": \"QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG\", \"reason\": \"Both works use a roughly square face structure filled with dense multi-color line layers over a flat background, with a wide tooth-like mouth zone built from repeated vertical marks.\"}, {\"targetArtworkId\": \"QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ\", \"reason\": \"Title neighbor #68 shares the rectangular eye format and open-mouth structure but replaces the layered warm color field with a cool teal ground and adds isolated dot elements absent in #67.\"}], \"tags\": [\"rectangular eye zones\", \"vertical tooth marks\", \"flat yellow accent stroke\", \"layered multi-color line fill\", \"dark brown background\", \"tilted head shape\"], \"interpretiveTags\": [\"confrontational\", \"pressured\"], \"lookingQuestion\": \"Where does your eye move first — toward the white-crossed rectangles of the eyes, the vertical bars in the mouth, or the yellow wave outside the head — and what does that path suggest about how the image is organized?\", \"ambiguities\": [\"The yellow wavy element at upper-left and lower-right may be a single continuous stroke or two separate marks; the image does not resolve this clearly.\", \"The nnotb comparison (QmfVwYBNvDDP28jMQNeEG9QWZf7ueMZqaEs9vh9x2D1seG) is from a different owned collection family, so the formal similarity is noted without implying a shared series context.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

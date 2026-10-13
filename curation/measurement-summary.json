@@ -1,0 +1,70 @@
+{
+  "methodVersion": "curation-features-v1",
+  "generatedAtCentralTime": "2026-10-13T08:13:41.544775-05:00",
+  "measuredArtworks": 574,
+  "totalRecordedStrokes": 113369,
+  "totalSampledPoints": 21395046,
+  "uniformBorderBackgroundCandidates": 255,
+  "runtime": {
+    "python": "3.12.14",
+    "pillow": "12.3.0",
+    "numpy": "2.3.5"
+  },
+  "methods": {
+    "raster": "PNG composited on white, resampled to 128×128 with Lanczos; RGB histogram 8 bins/channel; Hellinger distance.",
+    "palette": "Median-cut 6-color quantization, reported weighted RGB means; not artist-chosen paint-color counts.",
+    "background": "Remove RGB pixels within Euclidean distance 24 of the modal border-bin median when at least 70% of border samples agree. Experimental heuristic, not semantic segmentation.",
+    "strokePercentile": "Midrank within imported collection; includes all recorded lines.",
+    "trajectory": "Sum of point-to-point polyline distances excluding explicitly marked background/ref passes, divided by smaller logical canvas dimension; not smoothed SVG length or creation time.",
+    "edge": "Share of adjacent 128px luminance samples differing by more than 20; a display-scale texture proxy, not artistic quality."
+  },
+  "limitations": [
+    "Palette similarities are candidate links requiring visual/editorial review.",
+    "Background removal may suppress meaningful interior colors or frames.",
+    "No per-point timestamps: duration, speed and effort cannot be recovered.",
+    "Sequence describes owned works, not a complete artist catalogue.",
+    "Metadata creation dates are recorded ink creation, not necessarily when the artist finished painting."
+  ],
+  "collections": {
+    "nifty-faces": {
+      "count": 134,
+      "minRecordedStrokes": 23,
+      "medianRecordedStrokes": 132.0,
+      "maxRecordedStrokes": 1020,
+      "firstRecordedCreation": "2021-10-26T12:35:25-05:00",
+      "lastRecordedCreation": "2022-07-20T10:56:55-05:00"
+    },
+    "nnotb": {
+      "count": 303,
+      "minRecordedStrokes": 25,
+      "medianRecordedStrokes": 148.0,
+      "maxRecordedStrokes": 1758,
+      "firstRecordedCreation": "2021-12-08T01:26:35-06:00",
+      "lastRecordedCreation": "2022-10-15T15:21:30-05:00"
+    },
+    "nnxyz-other": {
+      "count": 45,
+      "minRecordedStrokes": 69,
+      "medianRecordedStrokes": 219.0,
+      "maxRecordedStrokes": 737,
+      "firstRecordedCreation": "2021-10-20T10:17:10-05:00",
+      "lastRecordedCreation": "2024-12-04T19:12:15-06:00"
+    },
+    "rawblocks": {
+      "count": 66,
+      "minRecordedStrokes": 25,
+      "medianRecordedStrokes": 176.5,
+      "maxRecordedStrokes": 1061,
+      "firstRecordedCreation": "2022-05-08T18:47:50-05:00",
+      "lastRecordedCreation": "2023-03-15T00:39:00-05:00"
+    },
+    "scrimshaw": {
+      "count": 26,
+      "minRecordedStrokes": 52,
+      "medianRecordedStrokes": 140.0,
+      "maxRecordedStrokes": 442,
+      "firstRecordedCreation": "2021-02-16T11:21:00-06:00",
+      "lastRecordedCreation": "2023-12-14T12:33:50-06:00"
+    }
+  }
+}

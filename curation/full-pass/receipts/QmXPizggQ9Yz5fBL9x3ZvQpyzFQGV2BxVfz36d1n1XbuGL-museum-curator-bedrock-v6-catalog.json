@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:06.936985-05:00",
+    "usage": {
+      "inputTokens": 6292,
+      "outputTokens": 707,
+      "totalTokens": 6999,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 18357
+    },
+    "requestId": "edaf1afb-6fb7-444e-9aac-e10e7ba180e9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A round head shape ringed with alternating red and yellow spike-like marks sits at the top center, with large white rectangular teeth bared in an open mouth.\",\n    \"A full standing figure is outlined in thick black and coral-pink lines, with a blue rectangular torso, thin black legs, and splayed hands—one raised, one lowered.\",\n    \"Broad translucent washes of teal, olive, and orange fill the background behind the figure, layered over a deep red ground that dominates the composition's edges.\"\n  ],\n  \"reading\": \"A full-body figure stands stiff-legged against a saturated red field, its round head crowned with radiating spikes that read like a saw blade or sunburst. The bared teeth and wide stance lend the figure a confrontational presence, yet the soft teal and green washes behind it blur the boundary between body and space. The layered outlines—black, pink, yellow, white—compete for the figure's edge, making it feel both solid and unstable.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this is one of relatively few works showing a complete standing body rather than a head alone. Its title neighbors, rawblocks #61 and rawblocks #63, both focus tightly on faces, making this full-figure composition a notable shift in framing.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx\",\n      \"reason\": \"Both share a deep red background and bared white teeth, but nnxyz #43 crops to a dense head while #62 pulls back to reveal a full body.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ\",\n      \"reason\": \"Rawblocks #63 returns to a close-up split face with warm browns, contrasting sharply with #62's upright figure and cool teal washes.\"\n    }\n  ],\n  \"tags\": [\n    \"full standing figure\",\n    \"bared teeth\",\n    \"red ground\",\n    \"radiating head spikes\",\n    \"layered outlines\",\n    \"teal wash\"\n  ],\n  \"lookingQuestion\": \"How do the translucent teal and green washes interact with the figure's outlines—do they seem to belong to the body, the background, or something in between?\",\n  \"ambiguities\": [\n    \"The raised black shape at the end of the right arm could be read as a fist, a glove, or an undefined mass; the drawing does not resolve it.\",\n    \"Whether the radiating marks around the head represent hair, a headdress, or an abstract halo cannot be determined from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXPizggQ9Yz5fBL9x3ZvQpyzFQGV2BxVfz36d1n1XbuGL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXPizggQ9Yz5fBL9x3ZvQpyzFQGV2BxVfz36d1n1XbuGL/image.png",
+        "imageSHA256": "d31b3982fec8d7de2a411a7fda868d73e5edc95655d49346d02ffa57ce756bbe"
+      },
+      {
+        "artworkId": "QmWecLBjgqqKHFNumeJuUyhMYQbwxKPsapnxHPJGEHf24x",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWecLBjgqqKHFNumeJuUyhMYQbwxKPsapnxHPJGEHf24x/image.png",
+        "imageSHA256": "1a59d3374b1a7dc882a051837917c24e772a692bd88ba5268a2ecf76b564f922"
+      },
+      {
+        "artworkId": "QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx/image.png",
+        "imageSHA256": "627676ccadbbc7fc43e8dd3c294bd70c306ad15e8ef47d8c2cb09ffa89bc5aa6"
+      },
+      {
+        "artworkId": "QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ/image.png",
+        "imageSHA256": "4ef224f514be7fef5869b1ce3533bc04b27e913b3ccbc07c90f32ffd9fc77355"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:18.198993-05:00",
+    "usage": {
+      "inputTokens": 7031,
+      "outputTokens": 827,
+      "totalTokens": 7858,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11205
+    },
+    "requestId": "993f45f1-6126-4bb7-9cea-5e96d998c80e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A round head shape ringed with alternating red and yellow spike-like marks sits at top center, with large white rectangular teeth bared in an open mouth.\",\n    \"A full standing figure is outlined in thick black and coral-pink lines, with a blue rectangular torso, thin black legs, and splayed hands—one raised with a black mass, one lowered at right.\",\n    \"Broad translucent washes of teal, olive, and orange fill the background behind the figure, layered over a deep red ground that dominates the composition's edges.\"\n  ],\n  \"reading\": \"A full-body figure stands stiff-legged against a saturated red field, its round head crowned with radiating spikes that read like a saw blade or sunburst. The bared teeth and wide stance give the figure a confrontational presence, yet soft teal and green washes blur the boundary between body and space. Layered outlines—black, pink, yellow, white—compete for the figure's edge, making it feel both solid and unstable.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this is one of few works showing a complete standing body rather than a head alone. Its title neighbors, rawblocks #61 and rawblocks #63, both focus tightly on faces, making this full-figure composition a notable shift in framing.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx\",\n      \"reason\": \"Both share a deep red background and bared white teeth, but nnxyz #43 crops to a dense head while #62 pulls back to reveal a full body.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ\",\n      \"reason\": \"Rawblocks #63 returns to a close-up split face with warm browns, contrasting sharply with #62's upright figure and cool teal washes.\"\n    }\n  ],\n  \"tags\": [\n    \"full standing figure\",\n    \"bared teeth\",\n    \"red ground\",\n    \"radiating head spikes\",\n    \"layered outlines\",\n    \"teal wash\"\n  ],\n  \"lookingQuestion\": \"How do the translucent teal and green washes interact with the figure's outlines—do they seem to belong to the body, the background, or something in between?\",\n  \"ambiguities\": [\n    \"The raised black shape at the end of the left arm could be read as a fist, a glove, or an undefined mass; the drawing does not resolve it.\",\n    \"Whether the radiating marks around the head represent hair, a headdress, or an abstract halo cannot be determined from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Corrected arm reference: the black mass is on the figure's raised left arm (viewer's left), not right arm as implied in draft observation wording.\",\n    \"Confirmed teal/green washes, deep red ground, blue torso, white teeth, and yellow/red spikes all match the primary image.\",\n    \"Confirmed #63 shows a close-up split face with warm browns and #43 shows a dense head on red—both comparisons hold against inspected images.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXPizggQ9Yz5fBL9x3ZvQpyzFQGV2BxVfz36d1n1XbuGL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXPizggQ9Yz5fBL9x3ZvQpyzFQGV2BxVfz36d1n1XbuGL/image.png",
+        "imageSHA256": "d31b3982fec8d7de2a411a7fda868d73e5edc95655d49346d02ffa57ce756bbe"
+      },
+      {
+        "artworkId": "QmWecLBjgqqKHFNumeJuUyhMYQbwxKPsapnxHPJGEHf24x",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWecLBjgqqKHFNumeJuUyhMYQbwxKPsapnxHPJGEHf24x/image.png",
+        "imageSHA256": "1a59d3374b1a7dc882a051837917c24e772a692bd88ba5268a2ecf76b564f922"
+      },
+      {
+        "artworkId": "QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx/image.png",
+        "imageSHA256": "627676ccadbbc7fc43e8dd3c294bd70c306ad15e8ef47d8c2cb09ffa89bc5aa6"
+      },
+      {
+        "artworkId": "QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ/image.png",
+        "imageSHA256": "4ef224f514be7fef5869b1ce3533bc04b27e913b3ccbc07c90f32ffd9fc77355"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A round head shape ringed with alternating red and yellow spike-like marks sits at the top center, with large white rectangular teeth bared in an open mouth.\", \"A full standing figure is outlined in thick black and coral-pink lines, with a blue rectangular torso, thin black legs, and splayed hands—one raised, one lowered.\", \"Broad translucent washes of teal, olive, and orange fill the background behind the figure, layered over a deep red ground that dominates the composition's edges.\"], \"reading\": \"A full-body figure stands stiff-legged against a saturated red field, its round head crowned with radiating spikes that read like a saw blade or sunburst. The bared teeth and wide stance lend the figure a confrontational presence, yet the soft teal and green washes behind it blur the boundary between body and space. The layered outlines—black, pink, yellow, white—compete for the figure's edge, making it feel both solid and unstable.\", \"contextAngle\": \"Within the owned rawblocks subset, this is one of relatively few works showing a complete standing body rather than a head alone. Its title neighbors, rawblocks #61 and rawblocks #63, both focus tightly on faces, making this full-figure composition a notable shift in framing.\", \"connections\": [{\"targetArtworkId\": \"QmRbFxytPG8ARLCFyZFeyQDug4hP8jHysNqKe3ZpoesJbx\", \"reason\": \"Both share a deep red background and bared white teeth, but nnxyz #43 crops to a dense head while #62 pulls back to reveal a full body.\"}, {\"targetArtworkId\": \"QmPCxwBroi5ozioEP6od4NwU7VXH53RWnLH9B3wqMWxSGQ\", \"reason\": \"Rawblocks #63 returns to a close-up split face with warm browns, contrasting sharply with #62's upright figure and cool teal washes.\"}], \"tags\": [\"full standing figure\", \"bared teeth\", \"red ground\", \"radiating head spikes\", \"layered outlines\", \"teal wash\"], \"lookingQuestion\": \"How do the translucent teal and green washes interact with the figure's outlines—do they seem to belong to the body, the background, or something in between?\", \"ambiguities\": [\"The raised black shape at the end of the right arm could be read as a fist, a glove, or an undefined mass; the drawing does not resolve it.\", \"Whether the radiating marks around the head represent hair, a headdress, or an abstract halo cannot be determined from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

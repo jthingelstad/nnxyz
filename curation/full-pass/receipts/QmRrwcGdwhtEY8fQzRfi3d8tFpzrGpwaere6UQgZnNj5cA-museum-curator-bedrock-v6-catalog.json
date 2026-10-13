@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:06:53.722578-05:00",
+    "usage": {
+      "inputTokens": 6213,
+      "outputTokens": 726,
+      "totalTokens": 6939,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20304
+    },
+    "requestId": "cee119df-af1e-49ab-9e5b-ff74392d320f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the frame, outlined in heavy black lines with layered magenta, yellow, and white strokes radiating outward like spikes or hair.\",\n    \"Two red-centered circular eye forms sit inside separate rectangular compartments, each framed by jagged white tooth-like marks that repeat across the face as mouths, brows, and borders.\",\n    \"The dark olive-green background is crossed by horizontal bars of dark red and white on the right side, while short magenta dashes and yellow scribbles crowd the upper left and lower left corners.\"\n  ],\n  \"reading\": \"Rows of jagged white teeth appear everywhere—around the eyes, across the brow, lining the wide bottom mouth—so the whole head reads as a structure built from biting. The red pupils stare out from blue fields boxed inside the skull, giving the face a caged quality. Magenta spikes along the crown and scattered yellow lines press outward against the murky green ground, suggesting a contained pressure that the repeated tooth motif makes feel anxious rather than playful.\",\n  \"contextAngle\": \"Sitting between \\\"nnxyz rawblocks #4\\\" and \\\"nnxyz rawblocks #6\\\" in the owned subset, this piece shares the face-filling-the-frame approach of its title neighbors but packs more repeated tooth patterns into a darker, cooler palette than either adjacent work.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd\",\n      \"reason\": \"Both use a single large head with exposed teeth and crossed-out or ringed eye marks, but #4 favors warm ochre and teal while #5 shifts to olive green and magenta.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVnrBn9njT1oyS7D1VRJ6C4qKmV8vdgH25Xsns3zmsxmF\",\n      \"reason\": \"The nnotb piece surrounds its head with dense looping lines similar to the radiating spikes here, and both fill the interior with stacked tooth-rows and compartmentalized features.\"\n    }\n  ],\n  \"tags\": [\n    \"repeated tooth shapes\",\n    \"layered head outline\",\n    \"dark green ground\",\n    \"magenta spikes\",\n    \"boxed eye forms\",\n    \"dense line work\"\n  ],\n  \"lookingQuestion\": \"How do the jagged white tooth shapes change their meaning as they move from the mouth area up to the brow and around the eyes—do they still read as teeth, or do they become something else?\",\n  \"ambiguities\": [\n    \"Small letter-like marks appear inside the head (possibly 'VS' or similar) but are too tangled with overlapping lines to read with confidence.\",\n    \"Whether the horizontal bars at right are part of the figure or background is unclear due to overlapping outlines.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA/image.png",
+        "imageSHA256": "27994cde95f0a8f0a08e9479f8b9452fb0d25a533e99c857aec67b74a43aaa36"
+      },
+      {
+        "artworkId": "QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd/image.png",
+        "imageSHA256": "c87b2817581249389b145b1d5339b83253578268f557651c561c49cad7b88c63"
+      },
+      {
+        "artworkId": "QmVnrBn9njT1oyS7D1VRJ6C4qKmV8vdgH25Xsns3zmsxmF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVnrBn9njT1oyS7D1VRJ6C4qKmV8vdgH25Xsns3zmsxmF/image.png",
+        "imageSHA256": "5aa620f4997f8129fc009a8b361e56d35303f138599c51eb7c4e4e3fa59a3901"
+      },
+      {
+        "artworkId": "QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP/image.png",
+        "imageSHA256": "9e2b753a7ecf7a331382a530032e9b621bcdf47f18fe1e2595dbf4954661118d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:04.674236-05:00",
+    "usage": {
+      "inputTokens": 6971,
+      "outputTokens": 821,
+      "totalTokens": 7792,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10860
+    },
+    "requestId": "d61ea1fb-3b83-4a93-bed1-462a76b19d4f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the frame, outlined in heavy black lines with layered magenta, yellow, and white short strokes radiating outward from the crown.\",\n    \"Two red-centered circular eye forms sit inside separate rectangular compartments, each framed by jagged white tooth-like marks that repeat across the face as mouths, brows, and borders.\",\n    \"The dark olive-green background is crossed by horizontal bars of dark red and white on the right side, while short magenta dashes and yellow scribbles crowd the upper left and lower left corners.\"\n  ],\n  \"reading\": \"Rows of jagged white teeth appear everywhere—around the eyes, across the brow, lining the wide bottom mouth—so the whole head reads as a structure built from biting. The red pupils stare out from blue fields boxed inside the skull, giving the face a caged quality. Magenta dashes along the crown and scattered yellow lines press outward against the murky green ground, and the repeated tooth motif can feel anxious rather than playful.\",\n  \"contextAngle\": \"Sitting between \\\"nnxyz rawblocks #4\\\" and \\\"nnxyz rawblocks #6\\\" in the owned subset, this piece shares the face-filling-the-frame approach of its title neighbors but packs more repeated tooth patterns into a darker, cooler palette than either adjacent work.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd\",\n      \"reason\": \"Both use a single large head with exposed teeth and marked-up eye forms, but #4 favors warm ochre and teal while #5 shifts to olive green and magenta.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVnrBn9njT1oyS7D1VRJ6C4qKmV8vdgH25Xsns3zmsxmF\",\n      \"reason\": \"The nnotb piece surrounds its head with dense looping lines echoing the radiating strokes here, and both fill the interior with stacked tooth-rows and boxed features.\"\n    }\n  ],\n  \"tags\": [\n    \"repeated tooth shapes\",\n    \"layered head outline\",\n    \"dark green ground\",\n    \"magenta dashes\",\n    \"boxed eye forms\",\n    \"dense line work\"\n  ],\n  \"lookingQuestion\": \"How do the jagged white tooth shapes change as they move from the mouth area up to the brow and around the eyes—do they still read as teeth, or do they become something else?\",\n  \"ambiguities\": [\n    \"Small letter-like marks appear inside the head (possibly 'VS' or similar) but are too tangled with overlapping lines to read with confidence.\",\n    \"Whether the horizontal bars at right are part of the figure or background is unclear due to overlapping outlines.\"\n  ],\n  \"reviewFindings\": [\n    \"Changed 'spikes' at crown to 'short strokes/dashes'—image shows short magenta and yellow marks, not pointed spike forms.\",\n    \"Confirmed red-centered eyes inside rectangular compartments with surrounding tooth-like white marks match the image.\",\n    \"Replaced 'suggesting a contained pressure' phrasing to avoid implying intent; reworded as an offered reading using 'can feel.'\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA/image.png",
+        "imageSHA256": "27994cde95f0a8f0a08e9479f8b9452fb0d25a533e99c857aec67b74a43aaa36"
+      },
+      {
+        "artworkId": "QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd/image.png",
+        "imageSHA256": "c87b2817581249389b145b1d5339b83253578268f557651c561c49cad7b88c63"
+      },
+      {
+        "artworkId": "QmVnrBn9njT1oyS7D1VRJ6C4qKmV8vdgH25Xsns3zmsxmF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVnrBn9njT1oyS7D1VRJ6C4qKmV8vdgH25Xsns3zmsxmF/image.png",
+        "imageSHA256": "5aa620f4997f8129fc009a8b361e56d35303f138599c51eb7c4e4e3fa59a3901"
+      },
+      {
+        "artworkId": "QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP/image.png",
+        "imageSHA256": "9e2b753a7ecf7a331382a530032e9b621bcdf47f18fe1e2595dbf4954661118d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape fills most of the frame, outlined in heavy black lines with layered magenta, yellow, and white strokes radiating outward like spikes or hair.\", \"Two red-centered circular eye forms sit inside separate rectangular compartments, each framed by jagged white tooth-like marks that repeat across the face as mouths, brows, and borders.\", \"The dark olive-green background is crossed by horizontal bars of dark red and white on the right side, while short magenta dashes and yellow scribbles crowd the upper left and lower left corners.\"], \"reading\": \"Rows of jagged white teeth appear everywhere—around the eyes, across the brow, lining the wide bottom mouth—so the whole head reads as a structure built from biting. The red pupils stare out from blue fields boxed inside the skull, giving the face a caged quality. Magenta spikes along the crown and scattered yellow lines press outward against the murky green ground, suggesting a contained pressure that the repeated tooth motif makes feel anxious rather than playful.\", \"contextAngle\": \"Sitting between \\\"nnxyz rawblocks #4\\\" and \\\"nnxyz rawblocks #6\\\" in the owned subset, this piece shares the face-filling-the-frame approach of its title neighbors but packs more repeated tooth patterns into a darker, cooler palette than either adjacent work.\", \"connections\": [{\"targetArtworkId\": \"QmbyZB4bLoiht3e8vDH7xUBDot2CiyJzzahHZvXZUQpBYd\", \"reason\": \"Both use a single large head with exposed teeth and crossed-out or ringed eye marks, but #4 favors warm ochre and teal while #5 shifts to olive green and magenta.\"}, {\"targetArtworkId\": \"QmVnrBn9njT1oyS7D1VRJ6C4qKmV8vdgH25Xsns3zmsxmF\", \"reason\": \"The nnotb piece surrounds its head with dense looping lines similar to the radiating spikes here, and both fill the interior with stacked tooth-rows and compartmentalized features.\"}], \"tags\": [\"repeated tooth shapes\", \"layered head outline\", \"dark green ground\", \"magenta spikes\", \"boxed eye forms\", \"dense line work\"], \"lookingQuestion\": \"How do the jagged white tooth shapes change their meaning as they move from the mouth area up to the brow and around the eyes—do they still read as teeth, or do they become something else?\", \"ambiguities\": [\"Small letter-like marks appear inside the head (possibly 'VS' or similar) but are too tangled with overlapping lines to read with confidence.\", \"Whether the horizontal bars at right are part of the figure or background is unclear due to overlapping outlines.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

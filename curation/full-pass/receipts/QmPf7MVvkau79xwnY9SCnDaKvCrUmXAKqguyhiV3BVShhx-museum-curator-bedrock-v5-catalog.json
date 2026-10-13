@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:58.300782-05:00",
+    "usage": {
+      "inputTokens": 6290,
+      "outputTokens": 759,
+      "totalTokens": 7049,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14086
+    },
+    "requestId": "71aa489b-5d49-4e5a-bcfa-1f9a98433cc4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face fills the canvas against a solid purple field; a black crown shape sits at the upper left, and a white outline traces the face's outer edge like a sticker border.\",\n    \"The lower third shows a wide rectangular mouth area: white vertical bars on a black ground, framed by red zigzag lines above and below, sitting inside a dark rounded jaw.\",\n    \"The right side carries a column of small yellow spiral marks on a dark teal ground, echoing the looping white scribble lines that fill the purple background margin.\"\n  ],\n  \"reading\": \"Purple holds the whole image at a flat, even temperature while the face inside pushes outward with clashing warm and cool zones — sky blue across the cheeks, yellow slashing through the nose, red zigzags clenching the teeth. The sticker-style white border keeps that pressure contained, giving the face the feel of something posted rather than painted. The spiral column on the right reads as decoration or armor, cool against the heat of the central forms.\",\n  \"contextAngle\": \"Within the owned subset of the nnxyz-numbered family, this work shares its purple ground and wide tooth grid with nnxyz nifty faces #97 from the separate nifty-faces collection — the collector links these across collections through that repeated color and repeating bar-tooth form.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo\",\n      \"reason\": \"Both works use the same flat purple ground and a wide horizontal bar of white vertical teeth as the dominant lower-face element, making the formal echo direct and specific across two different owned collections.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m\",\n      \"reason\": \"nnxyz #10 shares the large close-cropped face format and a red-framed tooth grid, but replaces the contained purple field with an exploding orange ground — a strong contrast in how each image handles the space outside the face.\"\n    }\n  ],\n  \"tags\": [\n    \"purple ground\",\n    \"white sticker border\",\n    \"bar-tooth grid\",\n    \"crown form\",\n    \"spiral column\",\n    \"red zigzag line\"\n  ],\n  \"interpretiveTags\": [\n    \"contained intensity\",\n    \"confrontational\"\n  ],\n  \"lookingQuestion\": \"What does the white sticker-style border do to the relationship between the face and the purple field behind it — does it push the face forward, hold it back, or something else?\",\n  \"ambiguities\": [\n    \"The small yellow spiral marks along the right edge could be read as a decorative border, a chain, or repeated mark-making with no representational function — the image alone does not resolve this.\",\n    \"nnxyz #12 shares the same recorded-creation and title-order neighbors but shifts to a pink multi-figure scene with no formal overlap strong enough to warrant a connection entry.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx/image.png",
+        "imageSHA256": "65fffd90caa259b0bb16965b28fc35f714ec19b08d995109f9404ff5e1806a82"
+      },
+      {
+        "artworkId": "QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m/image.png",
+        "imageSHA256": "170a189de09704a85492113ec061f8e2b696438632febd630c33e42ceda5e48a"
+      },
+      {
+        "artworkId": "QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo/image.png",
+        "imageSHA256": "05047569572b0579a0ac0eef56e37b4a4bc07c4ef6725e0e49ba198460368f90"
+      },
+      {
+        "artworkId": "QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK/image.png",
+        "imageSHA256": "6ad8bdeb7282d0a4392acbfbb81974dd5f5f613bb9d83cd06238f8d49c6020bf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:05.471975-05:00",
+    "usage": {
+      "inputTokens": 7071,
+      "outputTokens": 974,
+      "totalTokens": 8045,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7098
+    },
+    "requestId": "8f86fe20-a343-44cd-98dc-9e388ba5b33c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large face fills the canvas against a flat purple field; a black crown shape sits at the upper left, and a thick white outline traces the face's outer edge like a sticker border.\",\n    \"The lower third shows a wide rectangular mouth area: white vertical bars on a black ground, framed by red zigzag lines above and below, set inside a dark rounded jaw.\",\n    \"The right side carries a column of small yellow spiral marks on a dark teal ground, echoing the looping white scribble lines scattered across the purple background margin.\"\n  ],\n  \"reading\": \"Purple holds the whole image at a flat, even temperature while the face inside pushes outward with clashing warm and cool zones — sky blue across the cheeks, yellow slashing through the nose bridge, red zigzags clenching the teeth. The white border keeps that pressure contained, giving the face the feel of something posted rather than embedded. The spiral column on the right reads as decoration or armor, cool against the heat of the central forms.\",\n  \"contextAngle\": \"Within the owned subset of the nnxyz-numbered family, this work sits between nnxyz #10 and nnxyz #12 in both title and recorded-creation order. The flat purple ground and wide bar-tooth form also appear in nnxyz nifty faces #97 from the separate nifty-faces collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo\",\n      \"reason\": \"Both works share the same flat purple ground and a wide horizontal bar of white vertical teeth as the dominant lower-face element, making the formal echo direct and specific across two different owned collections.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m\",\n      \"reason\": \"nnxyz #10 uses the same large close-cropped face format and a red-framed tooth grid, but replaces the contained purple field with an exploding orange ground — a strong contrast in how each image handles space outside the face.\"\n    }\n  ],\n  \"tags\": [\"purple ground\", \"white sticker border\", \"bar-tooth grid\", \"crown form\", \"spiral column\", \"red zigzag line\"],\n  \"interpretiveTags\": [\"contained intensity\", \"confrontational\"],\n  \"lookingQuestion\": \"What does the white sticker-style border do to the relationship between the face and the purple field behind it — does it push the face forward, hold it back, or something else?\",\n  \"ambiguities\": [\n    \"The small yellow spiral marks along the right edge could be read as a decorative border, a chain, or repeated mark-making with no representational function — the image alone does not resolve this.\",\n    \"nnxyz #12 shares the same recorded-creation and title-order neighbors but shifts to a pink multi-figure scene with no formal overlap strong enough to warrant a connection entry.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: crown form upper left, white sticker border, red zigzag framing the tooth grid, and yellow spiral column on teal right edge are all directly visible.\",\n    \"Comparison with QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo confirmed: flat purple ground and wide white vertical-bar tooth grid are present in both images — connection retained.\",\n    \"Comparison with QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m confirmed: orange exploding ground versus contained purple is a genuine visible contrast; red-framed tooth area visible in both — connection retained. No invented intent or unsupported claims found in draft; minor phrasing tightened in contextAngle to stay within word limit.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPf7MVvkau79xwnY9SCnDaKvCrUmXAKqguyhiV3BVShhx/image.png",
+        "imageSHA256": "65fffd90caa259b0bb16965b28fc35f714ec19b08d995109f9404ff5e1806a82"
+      },
+      {
+        "artworkId": "QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m/image.png",
+        "imageSHA256": "170a189de09704a85492113ec061f8e2b696438632febd630c33e42ceda5e48a"
+      },
+      {
+        "artworkId": "QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo/image.png",
+        "imageSHA256": "05047569572b0579a0ac0eef56e37b4a4bc07c4ef6725e0e49ba198460368f90"
+      },
+      {
+        "artworkId": "QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK/image.png",
+        "imageSHA256": "6ad8bdeb7282d0a4392acbfbb81974dd5f5f613bb9d83cd06238f8d49c6020bf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large face fills the canvas against a solid purple field; a black crown shape sits at the upper left, and a white outline traces the face's outer edge like a sticker border.\", \"The lower third shows a wide rectangular mouth area: white vertical bars on a black ground, framed by red zigzag lines above and below, sitting inside a dark rounded jaw.\", \"The right side carries a column of small yellow spiral marks on a dark teal ground, echoing the looping white scribble lines that fill the purple background margin.\"], \"reading\": \"Purple holds the whole image at a flat, even temperature while the face inside pushes outward with clashing warm and cool zones — sky blue across the cheeks, yellow slashing through the nose, red zigzags clenching the teeth. The sticker-style white border keeps that pressure contained, giving the face the feel of something posted rather than painted. The spiral column on the right reads as decoration or armor, cool against the heat of the central forms.\", \"contextAngle\": \"Within the owned subset of the nnxyz-numbered family, this work shares its purple ground and wide tooth grid with nnxyz nifty faces #97 from the separate nifty-faces collection — the collector links these across collections through that repeated color and repeating bar-tooth form.\", \"connections\": [{\"targetArtworkId\": \"QmdCL4gv3ViDnWmcXDqYkjPkTHypo6MXeSncsfXWCjWAUo\", \"reason\": \"Both works use the same flat purple ground and a wide horizontal bar of white vertical teeth as the dominant lower-face element, making the formal echo direct and specific across two different owned collections.\"}, {\"targetArtworkId\": \"QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m\", \"reason\": \"nnxyz #10 shares the large close-cropped face format and a red-framed tooth grid, but replaces the contained purple field with an exploding orange ground — a strong contrast in how each image handles the space outside the face.\"}], \"tags\": [\"purple ground\", \"white sticker border\", \"bar-tooth grid\", \"crown form\", \"spiral column\", \"red zigzag line\"], \"interpretiveTags\": [\"contained intensity\", \"confrontational\"], \"lookingQuestion\": \"What does the white sticker-style border do to the relationship between the face and the purple field behind it — does it push the face forward, hold it back, or something else?\", \"ambiguities\": [\"The small yellow spiral marks along the right edge could be read as a decorative border, a chain, or repeated mark-making with no representational function — the image alone does not resolve this.\", \"nnxyz #12 shares the same recorded-creation and title-order neighbors but shifts to a pink multi-figure scene with no formal overlap strong enough to warrant a connection entry.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:08.001098-05:00",
+    "usage": {
+      "inputTokens": 6353,
+      "outputTokens": 765,
+      "totalTokens": 7118,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12512
+    },
+    "requestId": "0f18e03c-4da0-419a-9ce4-baac5b7b7c3a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide dark form fills the lower half; a row of white irregular tooth shapes runs across it in a loose arc, framed by a pink looping outline.\",\n    \"Two asymmetric eye zones sit in the upper half: the left has a large white circle on black with yellow spike shapes above; the right has a white spiral on black with an orange rectangle beside it.\",\n    \"Blue concentric rectangles appear at far left and far right, and a light-blue triangular shape sits near center, all against a flat slate-blue background.\"\n  ],\n  \"reading\": \"The face here is built from mismatched parts held together by a single pink looping line that wanders across the whole surface. The left eye reads as wide and staring; the right coils inward. Yellow spikes above one eye and an orange block above the other give the upper zone a lopsided, almost ceremonial weight. The wide tooth arc below reads as a grin, though the overall mood feels more unsettled than cheerful.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #117 and #119. Where #117 fills its surface with dense overlapping color, #118 uses a cooler, sparser palette and lets the slate background show through, giving the looping lines more room to read individually.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy\",\n      \"reason\": \"Both works share a wide tooth row across the lower zone and a pink looping outline, but #117 layers many colors densely while #118 keeps large areas of background open.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC\",\n      \"reason\": \"Both #118 and #119 use paired rectangular eye zones with spiral or circular marks inside them, though #119 sits on a warm brown ground and replaces the tooth arc with a beaded chain form.\"\n    }\n  ],\n  \"tags\": [\n    \"tooth-row arc\",\n    \"asymmetric eye zones\",\n    \"looping pink outline\",\n    \"blue concentric rectangles\",\n    \"yellow spike forms\",\n    \"slate-blue ground\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled mood\",\n    \"ceremonial weight\"\n  ],\n  \"lookingQuestion\": \"Does the pink looping line connect the left and right sides of the face into a single shape, or does it read as two separate paths that happen to cross?\",\n  \"ambiguities\": [\n    \"The light-blue triangular form near center is partially obscured by overlapping lines; its relationship to the surrounding marks is unclear.\",\n    \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q was inspected but its dense multi-color layering and circular overall form offer no specific formal connection stronger than the two selected comparisons.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc/image.png",
+        "imageSHA256": "c766949d939386b3c30f75c48c5906edce0ed6b684253719ec6436ad556d4b73"
+      },
+      {
+        "artworkId": "QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy/image.png",
+        "imageSHA256": "b78b35ca0d53c98a8552b0b373bef6bcda35e7490e6e5f7b9221ba4888d132d3"
+      },
+      {
+        "artworkId": "QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q/image.png",
+        "imageSHA256": "f5b357f777cdc7a9434ed7db0586bfb9ec7bb761ee1d5dd5ebbf2541c7150c95"
+      },
+      {
+        "artworkId": "QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC/image.png",
+        "imageSHA256": "4d920123eed7b43e2b6d90aa90570f89bf57f142e368535c17571c67938c6084"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:14.007915-05:00",
+    "usage": {
+      "inputTokens": 7140,
+      "outputTokens": 964,
+      "totalTokens": 8104,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5937
+    },
+    "requestId": "e08977b9-1c07-4e44-858a-98ff0fda37d0",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide dark form fills the lower half; a row of white irregular tooth shapes runs across it in a loose arc, traced by a pink looping outline.\",\n    \"Two asymmetric eye zones sit in the upper half: the left has a large white circle on black with yellow spike shapes above; the right has a white spiral on black with an orange rectangle beside it.\",\n    \"Blue concentric rectangles appear at far left and far right edges, and a light-blue triangular shape sits near center, all against a flat slate-blue background.\"\n  ],\n  \"reading\": \"The face is built from mismatched parts held together by a single pink looping line that wanders across the whole surface. The left eye reads as wide and staring; the right coils inward. Yellow spikes above one eye and an orange block above the other give the upper zone a lopsided, almost ceremonial weight. The wide tooth arc below reads as a grin, though the overall mood feels more unsettled than cheerful.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #117 and #119. Where #117 fills its surface with dense overlapping color, #118 uses a cooler, sparser palette and lets the slate background show through, giving the looping lines more room to read individually.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy\",\n      \"reason\": \"Both works show a wide tooth row across the lower zone and a pink looping outline, but #117 layers many colors densely while #118 keeps large areas of background open.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC\",\n      \"reason\": \"Both #118 and #119 use paired rectangular eye zones with spiral or circular marks inside them, though #119 sits on a warm brown ground and replaces the tooth arc with a beaded chain form.\"\n    }\n  ],\n  \"tags\": [\n    \"tooth-row arc\",\n    \"asymmetric eye zones\",\n    \"looping pink outline\",\n    \"blue concentric rectangles\",\n    \"yellow spike forms\",\n    \"slate-blue ground\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled mood\",\n    \"ceremonial weight\"\n  ],\n  \"lookingQuestion\": \"Does the pink looping line connect the left and right sides of the face into a single shape, or does it read as two separate paths that happen to cross?\",\n  \"ambiguities\": [\n    \"The light-blue triangular form near center is partially obscured by overlapping lines; its relationship to the surrounding marks is unclear.\",\n    \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q was inspected but its dense multi-color layering and circular overall form offer no specific formal connection stronger than the two selected comparisons.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: tooth arc, asymmetric eye zones, blue concentric rectangles at edges, and slate-blue ground are all visible.\",\n    \"Comparison with QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy confirmed: #117 does show a pink looping outline and a tooth row, and its surface is markedly denser with color than #118.\",\n    \"Comparison with QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC confirmed: #119 shows paired rectangular eye zones with spiral/circular marks and a beaded lower row on a warm brown ground; no draft claims required correction.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc/image.png",
+        "imageSHA256": "c766949d939386b3c30f75c48c5906edce0ed6b684253719ec6436ad556d4b73"
+      },
+      {
+        "artworkId": "QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy/image.png",
+        "imageSHA256": "b78b35ca0d53c98a8552b0b373bef6bcda35e7490e6e5f7b9221ba4888d132d3"
+      },
+      {
+        "artworkId": "QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q/image.png",
+        "imageSHA256": "f5b357f777cdc7a9434ed7db0586bfb9ec7bb761ee1d5dd5ebbf2541c7150c95"
+      },
+      {
+        "artworkId": "QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC/image.png",
+        "imageSHA256": "4d920123eed7b43e2b6d90aa90570f89bf57f142e368535c17571c67938c6084"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A wide dark form fills the lower half; a row of white irregular tooth shapes runs across it in a loose arc, framed by a pink looping outline.\", \"Two asymmetric eye zones sit in the upper half: the left has a large white circle on black with yellow spike shapes above; the right has a white spiral on black with an orange rectangle beside it.\", \"Blue concentric rectangles appear at far left and far right, and a light-blue triangular shape sits near center, all against a flat slate-blue background.\"], \"reading\": \"The face here is built from mismatched parts held together by a single pink looping line that wanders across the whole surface. The left eye reads as wide and staring; the right coils inward. Yellow spikes above one eye and an orange block above the other give the upper zone a lopsided, almost ceremonial weight. The wide tooth arc below reads as a grin, though the overall mood feels more unsettled than cheerful.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #117 and #119. Where #117 fills its surface with dense overlapping color, #118 uses a cooler, sparser palette and lets the slate background show through, giving the looping lines more room to read individually.\", \"connections\": [{\"targetArtworkId\": \"QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy\", \"reason\": \"Both works share a wide tooth row across the lower zone and a pink looping outline, but #117 layers many colors densely while #118 keeps large areas of background open.\"}, {\"targetArtworkId\": \"QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC\", \"reason\": \"Both #118 and #119 use paired rectangular eye zones with spiral or circular marks inside them, though #119 sits on a warm brown ground and replaces the tooth arc with a beaded chain form.\"}], \"tags\": [\"tooth-row arc\", \"asymmetric eye zones\", \"looping pink outline\", \"blue concentric rectangles\", \"yellow spike forms\", \"slate-blue ground\"], \"interpretiveTags\": [\"unsettled mood\", \"ceremonial weight\"], \"lookingQuestion\": \"Does the pink looping line connect the left and right sides of the face into a single shape, or does it read as two separate paths that happen to cross?\", \"ambiguities\": [\"The light-blue triangular form near center is partially obscured by overlapping lines; its relationship to the surrounding marks is unclear.\", \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q was inspected but its dense multi-color layering and circular overall form offer no specific formal connection stronger than the two selected comparisons.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:21.676274-05:00",
+    "usage": {
+      "inputTokens": 6881,
+      "outputTokens": 827,
+      "totalTokens": 7708,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10777
+    },
+    "requestId": "9856821b-9d40-402b-ac94-6ec1a4260a86",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"A wide dark form fills the lower half; a row of white irregular tooth shapes runs across it in a loose arc, traced by a pink looping outline.\",\n    \"Two asymmetric eye zones sit in the upper half: the left has a large white circle on black with yellow spike shapes above; the right has a white spiral on black with an orange rectangle beside it.\",\n    \"Blue concentric rectangles appear at far left and far right edges, and a light-blue triangular shape sits near center, all against a flat slate-blue background.\"\n  ],\n  \"reading\": \"Pink loops wander across the entire surface, stitching mismatched parts into a single sprawling structure. The left eye reads as wide and staring; the right coils inward. Yellow spikes above one eye and an orange block above the other give the upper zone a lopsided, almost ceremonial weight. The white tooth arc below suggests a grin, though the overall mood feels more unsettled than cheerful.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #117 and #119. Where #117 fills its surface with dense overlapping color, #118 uses a cooler, sparser palette and lets the slate background show through, giving the looping lines more room to read individually.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy\",\n      \"reason\": \"Both works show a wide tooth row across the lower zone and a pink looping outline, but #117 layers many colors densely while #118 keeps large areas of background open.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC\",\n      \"reason\": \"Both #118 and #119 use paired rectangular eye zones with spiral or circular marks inside them, though #119 sits on a warm brown ground and replaces the tooth arc with a beaded chain form.\"\n    }\n  ],\n  \"tags\": [\n    \"tooth-row arc\",\n    \"asymmetric eye zones\",\n    \"looping pink outline\",\n    \"blue concentric rectangles\",\n    \"yellow spike forms\",\n    \"slate-blue ground\"\n  ],\n  \"lookingQuestion\": \"Does the pink looping line connect the left and right sides of the face into a single shape, or does it read as two separate paths that happen to cross?\",\n  \"ambiguities\": [\n    \"The light-blue triangular form near center is partially obscured by overlapping lines; its relationship to the surrounding marks is unclear.\",\n    \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q was inspected but its dense multi-color layering and circular overall form offer no specific formal connection stronger than the two selected comparisons.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced opening phrase 'The face is built from' with a concrete visual entry point referencing the pink loops.\",\n    \"Reading remains 55–65 words; context remains 30–40 words.\",\n    \"Mouth-openness check: the tooth row is described as an arc of white shapes, not as a wide-open mouth; no change needed.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYrov6QAYRdjrpVzeAVoR7A23XyMdnwF5A9KquhcFQoEc/image.png",
+        "imageSHA256": "c766949d939386b3c30f75c48c5906edce0ed6b684253719ec6436ad556d4b73"
+      },
+      {
+        "artworkId": "QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy/image.png",
+        "imageSHA256": "b78b35ca0d53c98a8552b0b373bef6bcda35e7490e6e5f7b9221ba4888d132d3"
+      },
+      {
+        "artworkId": "QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q/image.png",
+        "imageSHA256": "f5b357f777cdc7a9434ed7db0586bfb9ec7bb761ee1d5dd5ebbf2541c7150c95"
+      },
+      {
+        "artworkId": "QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC/image.png",
+        "imageSHA256": "4d920123eed7b43e2b6d90aa90570f89bf57f142e368535c17571c67938c6084"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A wide dark form fills the lower half; a row of white irregular tooth shapes runs across it in a loose arc, traced by a pink looping outline.\", \"Two asymmetric eye zones sit in the upper half: the left has a large white circle on black with yellow spike shapes above; the right has a white spiral on black with an orange rectangle beside it.\", \"Blue concentric rectangles appear at far left and far right edges, and a light-blue triangular shape sits near center, all against a flat slate-blue background.\"], \"reading\": \"The face is built from mismatched parts held together by a single pink looping line that wanders across the whole surface. The left eye reads as wide and staring; the right coils inward. Yellow spikes above one eye and an orange block above the other give the upper zone a lopsided, almost ceremonial weight. The wide tooth arc below reads as a grin, though the overall mood feels more unsettled than cheerful.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #117 and #119. Where #117 fills its surface with dense overlapping color, #118 uses a cooler, sparser palette and lets the slate background show through, giving the looping lines more room to read individually.\", \"connections\": [{\"targetArtworkId\": \"QmNbX5iCjVkmEFcHe4PdwBeSBs2ghBoXnixDMhyG65ahLy\", \"reason\": \"Both works show a wide tooth row across the lower zone and a pink looping outline, but #117 layers many colors densely while #118 keeps large areas of background open.\"}, {\"targetArtworkId\": \"QmXA45RhtE1nFJ9cBPDP945gRepQoAtkrdu2hbA9Srj7BC\", \"reason\": \"Both #118 and #119 use paired rectangular eye zones with spiral or circular marks inside them, though #119 sits on a warm brown ground and replaces the tooth arc with a beaded chain form.\"}], \"tags\": [\"tooth-row arc\", \"asymmetric eye zones\", \"looping pink outline\", \"blue concentric rectangles\", \"yellow spike forms\", \"slate-blue ground\"], \"lookingQuestion\": \"Does the pink looping line connect the left and right sides of the face into a single shape, or does it read as two separate paths that happen to cross?\", \"ambiguities\": [\"The light-blue triangular form near center is partially obscured by overlapping lines; its relationship to the surrounding marks is unclear.\", \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q was inspected but its dense multi-color layering and circular overall form offer no specific formal connection stronger than the two selected comparisons.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the face is built from\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

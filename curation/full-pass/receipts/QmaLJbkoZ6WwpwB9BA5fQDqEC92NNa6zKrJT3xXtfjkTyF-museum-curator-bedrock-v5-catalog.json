@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:46.980959-05:00",
+    "usage": {
+      "inputTokens": 6286,
+      "outputTokens": 677,
+      "totalTokens": 6963,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11853
+    },
+    "requestId": "7a4ba374-322d-4bb6-a62f-0d11232a5eb8",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large teal-outlined rectangular form dominates the right half, filled with dense black hatching, red crosshatch marks, and a band of white wave-like lines near its base.\",\n    \"Loose blue horizontal scribble lines run across the warm tan background, while a small pink flower-like cluster and yellow-green looping lines float in the upper-left and center-left areas.\",\n    \"A white diagonal shape on the left, resembling a narrow elongated form, stands apart from the surrounding black line tangle, with a small artist mark visible in the lower-left corner.\"\n  ],\n  \"reading\": \"A tan field holds two distinct zones in tension: a dense, tightly bounded structure on the right packed with hatching, red crossing marks, and a rippling white band, and a looser scatter of colored loops and lines on the left. The bounded form reads as pressured, even agitated, while the drifting pink cluster and yellow-green loops carry a lighter, more wandering feeling. The contrast between containment and open drift gives the image its pull.\",\n  \"contextAngle\": \"Within the owned numbered subset, nnxyz #6 sits between nnxyz #5 and nnxyz #7. Where nnxyz #5 spreads its density across the full field on a gray ground, nnxyz #6 concentrates weight into one bounded zone against a warmer tan, making the open left side feel more exposed.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9\",\n      \"reason\": \"nnxyz #5 shares the teal-outlined rectangular structure and red crosshatch interior, but distributes that density across a cooler gray field rather than isolating it against warm tan.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular bounded form\",\n    \"hatched interior\",\n    \"wave-line band\",\n    \"scattered color loops\",\n    \"tan ground\",\n    \"teal outline\"\n  ],\n  \"interpretiveTags\": [\n    \"containment versus drift\",\n    \"agitation and lightness in contrast\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the white wave-line band sit within the dark rectangular form, and how does its placement change how you read the space above and below it?\",\n  \"ambiguities\": [\n    \"The white diagonal form on the left is ambiguous in shape; it could be read as a tool, a limb, or an abstract mark — no identification is made here.\",\n    \"nnxyz #7 and nnxyz nifty faces #0000 were inspected but neither offered a specific formal connection stronger than the nnxyz #5 comparison, so they are omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaLJbkoZ6WwpwB9BA5fQDqEC92NNa6zKrJT3xXtfjkTyF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaLJbkoZ6WwpwB9BA5fQDqEC92NNa6zKrJT3xXtfjkTyF/image.png",
+        "imageSHA256": "d62e13eb5acdb51f8d882e93deec749b5b397b397d8624965667de64012460f4"
+      },
+      {
+        "artworkId": "QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9/image.png",
+        "imageSHA256": "4d361181bbd3e4e755740f6abb4e2e3686dc02f21fecbf92e59758990691d77d"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs/image.png",
+        "imageSHA256": "b35c263462562ca153f147842fca5152f5ec350e79ba77bd47dc74f94004747f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:54.351779-05:00",
+    "usage": {
+      "inputTokens": 6994,
+      "outputTokens": 817,
+      "totalTokens": 7811,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7018
+    },
+    "requestId": "b0dd4164-077b-44d0-9e24-141670170273",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large teal-outlined rectangular form dominates the right half, filled with dense black hatching, red crosshatch marks, and a band of white wave-like lines near its base.\",\n    \"Loose blue horizontal scribble lines run across the warm tan background, while a small pink cluster and yellow-green looping lines float in the upper-left and center-left areas.\",\n    \"A white diagonal elongated shape on the left stands apart from the surrounding black line tangle, with a small artist mark visible in the lower-left corner.\"\n  ],\n  \"reading\": \"A tan field holds two zones in tension: a tightly bounded structure on the right packed with hatching, red crossing marks, and a rippling white band, and a looser scatter of colored loops and lines on the left. The bounded form reads as pressured, even agitated, while the drifting pink cluster and yellow-green loops carry a lighter, more wandering feeling. The contrast between containment and open drift gives the image its pull.\",\n  \"contextAngle\": \"Within the owned numbered subset, nnxyz #6 sits between nnxyz #5 and nnxyz #7 in both title and recorded creation order. Where nnxyz #5 spreads density across a full gray field, nnxyz #6 concentrates weight into one bounded zone against warmer tan, leaving the left side more exposed.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9\",\n      \"reason\": \"nnxyz #5 shares a teal-outlined rectangular structure and red crosshatch interior, but spreads that density across a cooler gray field rather than isolating it against warm tan with an open left zone.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular bounded form\",\n    \"hatched interior\",\n    \"wave-line band\",\n    \"scattered color loops\",\n    \"tan ground\",\n    \"teal outline\"\n  ],\n  \"interpretiveTags\": [\n    \"containment versus drift\",\n    \"agitation and lightness in contrast\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the white wave-line band sit within the dark rectangular form, and how does its placement change how you read the space above and below it?\",\n  \"ambiguities\": [\n    \"The white diagonal form on the left is ambiguous; it could be read as a tool, a limb, or an abstract mark — no identification is made here.\",\n    \"nnxyz #7 and nnxyz nifty faces #0000 were inspected but neither offered a formal connection stronger than the nnxyz #5 comparison, so they are omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed against image: teal outline, red crosshatch, white wave band, tan ground, blue scribbles, pink cluster, and yellow-green loops all visually verified.\",\n    \"Draft described the pink element as 'flower-like'; revised to 'pink cluster' to avoid unsupported subject identification — the form is suggestive but not clearly a flower.\",\n    \"Word counts verified: reading is within 55–80 words, contextAngle within 30–55 words, all observations under 35 words, comparison reason under 35 words; no numerical technical facts appear in prose.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaLJbkoZ6WwpwB9BA5fQDqEC92NNa6zKrJT3xXtfjkTyF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaLJbkoZ6WwpwB9BA5fQDqEC92NNa6zKrJT3xXtfjkTyF/image.png",
+        "imageSHA256": "d62e13eb5acdb51f8d882e93deec749b5b397b397d8624965667de64012460f4"
+      },
+      {
+        "artworkId": "QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9/image.png",
+        "imageSHA256": "4d361181bbd3e4e755740f6abb4e2e3686dc02f21fecbf92e59758990691d77d"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNgVT7QNrv1KZxDFicSgxKAeu9HFkRb3h2FaEareuNpKs/image.png",
+        "imageSHA256": "b35c263462562ca153f147842fca5152f5ec350e79ba77bd47dc74f94004747f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large teal-outlined rectangular form dominates the right half, filled with dense black hatching, red crosshatch marks, and a band of white wave-like lines near its base.\", \"Loose blue horizontal scribble lines run across the warm tan background, while a small pink flower-like cluster and yellow-green looping lines float in the upper-left and center-left areas.\", \"A white diagonal shape on the left, resembling a narrow elongated form, stands apart from the surrounding black line tangle, with a small artist mark visible in the lower-left corner.\"], \"reading\": \"A tan field holds two distinct zones in tension: a dense, tightly bounded structure on the right packed with hatching, red crossing marks, and a rippling white band, and a looser scatter of colored loops and lines on the left. The bounded form reads as pressured, even agitated, while the drifting pink cluster and yellow-green loops carry a lighter, more wandering feeling. The contrast between containment and open drift gives the image its pull.\", \"contextAngle\": \"Within the owned numbered subset, nnxyz #6 sits between nnxyz #5 and nnxyz #7. Where nnxyz #5 spreads its density across the full field on a gray ground, nnxyz #6 concentrates weight into one bounded zone against a warmer tan, making the open left side feel more exposed.\", \"connections\": [{\"targetArtworkId\": \"QmVivEo2gnz8v5eNoG2BeKz4KNyzCpapTKy2ba7Ca7NcQ9\", \"reason\": \"nnxyz #5 shares the teal-outlined rectangular structure and red crosshatch interior, but distributes that density across a cooler gray field rather than isolating it against warm tan.\"}], \"tags\": [\"rectangular bounded form\", \"hatched interior\", \"wave-line band\", \"scattered color loops\", \"tan ground\", \"teal outline\"], \"interpretiveTags\": [\"containment versus drift\", \"agitation and lightness in contrast\"], \"lookingQuestion\": \"Where exactly does the white wave-line band sit within the dark rectangular form, and how does its placement change how you read the space above and below it?\", \"ambiguities\": [\"The white diagonal form on the left is ambiguous in shape; it could be read as a tool, a limb, or an abstract mark — no identification is made here.\", \"nnxyz #7 and nnxyz nifty faces #0000 were inspected but neither offered a specific formal connection stronger than the nnxyz #5 comparison, so they are omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

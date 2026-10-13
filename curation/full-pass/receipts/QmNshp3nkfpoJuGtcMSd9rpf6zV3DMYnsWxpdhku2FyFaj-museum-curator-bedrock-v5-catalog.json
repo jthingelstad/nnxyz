@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:07.133169-05:00",
+    "usage": {
+      "inputTokens": 6394,
+      "outputTokens": 752,
+      "totalTokens": 7146,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13345
+    },
+    "requestId": "bf1f19e4-8253-4cb2-96e6-f0604fffb01f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large masked form dominates the center, its face split between a glossy black dome and a broad yellow panel; small red-orange shapes glow within two eye openings.\",\n    \"Radiating blue-grey bands spread outward from behind the figure across the background, while the lower body dissolves into dense overlapping black scribble lines threaded with red and gold.\",\n    \"Two yellow spike shapes rise from the top of the mask, and a white wavy line runs horizontally across the yellow panel, sitting just below the eye level.\"\n  ],\n  \"reading\": \"A masked form rises from a tangle of scribbled lines, its glossy dome and yellow face panel pulling the eye upward while red glints inside the eye slots suggest something lit from within. The radiating background bands push the figure forward rather than receding. Below the shoulders, tight looping marks replace any solid body, giving the lower half a restless, unresolved quality that contrasts with the smooth upper mask.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #94 and nnxyz nnotb #96. The #94 image shares the yellow-on-dark color pairing and layered scribble marks, while #96 shifts to a flat yellow-green field and silhouette lines — a sharp tonal contrast to this work's dense, dark atmosphere.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco\",\n      \"reason\": \"Both works place a large masked or helmeted form against a dark ground and use yellow as the dominant accent color inside deep shadow, with loose scribble lines filling the surrounding space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ\",\n      \"reason\": \"Both images use yellow slots set into deep black eye cavities against a blue-toned ground, creating a similar contrast between a hard-edged lit interior and a dark surrounding form.\"\n    }\n  ],\n  \"tags\": [\n    \"masked form\",\n    \"radiating background bands\",\n    \"yellow and black contrast\",\n    \"dense scribble lines\",\n    \"red accent within eye openings\",\n    \"spike shapes at crown\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational presence\",\n    \"tension between order and chaos\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the smooth, solid surface of the mask end and the scribbled lines begin — and what happens to the figure's outline at that boundary?\",\n  \"ambiguities\": [\n    \"The white wavy line across the yellow panel may be a mouth, a seam, or a mark unrelated to facial anatomy — the image does not resolve this clearly.\",\n    \"Title and recorded-creation neighbors align here, but the metadata notes gaps may exist in the broader nnotb family, so adjacency does not confirm unbroken sequence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNshp3nkfpoJuGtcMSd9rpf6zV3DMYnsWxpdhku2FyFaj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNshp3nkfpoJuGtcMSd9rpf6zV3DMYnsWxpdhku2FyFaj/image.png",
+        "imageSHA256": "978ea8fee9b70fa5fbdf5a3c563de4e621dfaae69c9d91392276a20987d1f2c2"
+      },
+      {
+        "artworkId": "QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco/image.png",
+        "imageSHA256": "035fad10dd1c8e063c2be5966f1452e848d41c2faa2589a95a199237bc96d088"
+      },
+      {
+        "artworkId": "QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ/image.png",
+        "imageSHA256": "4d98983c2744affaaea9204a2dfca8feb2c16c74ce0bcef866ae450d6e85fae9"
+      },
+      {
+        "artworkId": "QmYFknz1yRhtQifr7tMJStKHuLgs8AdHepunYFwjo4yiER",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYFknz1yRhtQifr7tMJStKHuLgs8AdHepunYFwjo4yiER/image.png",
+        "imageSHA256": "7f7c8e61b7f6eddae07c8b26806eb5802b73911ca183ba285959362abf410b9f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:18.295913-05:00",
+    "usage": {
+      "inputTokens": 7168,
+      "outputTokens": 962,
+      "totalTokens": 8130,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11086
+    },
+    "requestId": "591a1f4e-2020-440b-ac2a-a5063a200dd4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large masked form dominates the center, its face split between a glossy black dome and a broad yellow panel; small red-orange shapes glow within two eye openings.\",\n    \"Radiating blue-grey bands spread outward from behind the figure across the background, while the lower body dissolves into dense overlapping black scribble lines threaded with red and gold.\",\n    \"Two yellow spike shapes rise from the top of the mask, and a white wavy line runs horizontally across the yellow panel, sitting just below the eye openings.\"\n  ],\n  \"reading\": \"A masked form rises from a tangle of scribbled lines, its glossy dome and yellow face panel pulling the eye upward while red glints inside the eye slots suggest something lit from within. The radiating background bands push the figure forward. Below the shoulders, tight looping marks replace any solid body, giving the lower half a restless, unresolved quality that contrasts with the smooth upper mask.\",\n  \"contextAngle\": \"Within the owned nnotb subset, immediate title neighbors are nnxyz nnotb #94 and nnxyz nnotb #96. The #94 image shares yellow-on-dark color pairing and layered scribble marks; #96 shifts to a flat yellow-green field with silhouette lines — a sharp tonal contrast to this work's dense, dark atmosphere.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco\",\n      \"reason\": \"Both works place a large masked or helmeted form against a dark ground and use yellow as the dominant accent color inside deep shadow, with loose scribble lines filling the surrounding space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ\",\n      \"reason\": \"Both images use yellow slots set into deep black eye cavities against a blue-toned ground, creating a similar contrast between a hard-edged lit interior and a dark surrounding form.\"\n    }\n  ],\n  \"tags\": [\n    \"masked form\",\n    \"radiating background bands\",\n    \"yellow and black contrast\",\n    \"dense scribble lines\",\n    \"red accent within eye openings\",\n    \"spike shapes at crown\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational presence\",\n    \"tension between order and chaos\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the smooth, solid surface of the mask end and the scribbled lines begin — and what happens to the figure's outline at that boundary?\",\n  \"ambiguities\": [\n    \"The white wavy line across the yellow panel may be a mouth, a seam, or a mark unrelated to facial anatomy — the image does not resolve this clearly.\",\n    \"Title and recorded-creation neighbors align here, but the metadata notes gaps may exist in the broader nnotb family, so adjacency does not confirm unbroken sequence.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: glossy black dome, yellow panel, red-orange eye glints, radiating blue-grey bands, scribble-filled lower body, yellow spikes, and white wavy line are all visible.\",\n    \"QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco (#94) confirmed: yellow-dominant masked form on dark ground with surrounding scribble lines — comparison is well-supported by the inspected image.\",\n    \"QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ (#38) confirmed: yellow slots in black eye cavities against blue-toned ground are clearly visible — comparison is specific and supported; no invented subject identity or intent added.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNshp3nkfpoJuGtcMSd9rpf6zV3DMYnsWxpdhku2FyFaj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNshp3nkfpoJuGtcMSd9rpf6zV3DMYnsWxpdhku2FyFaj/image.png",
+        "imageSHA256": "978ea8fee9b70fa5fbdf5a3c563de4e621dfaae69c9d91392276a20987d1f2c2"
+      },
+      {
+        "artworkId": "QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco/image.png",
+        "imageSHA256": "035fad10dd1c8e063c2be5966f1452e848d41c2faa2589a95a199237bc96d088"
+      },
+      {
+        "artworkId": "QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ/image.png",
+        "imageSHA256": "4d98983c2744affaaea9204a2dfca8feb2c16c74ce0bcef866ae450d6e85fae9"
+      },
+      {
+        "artworkId": "QmYFknz1yRhtQifr7tMJStKHuLgs8AdHepunYFwjo4yiER",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYFknz1yRhtQifr7tMJStKHuLgs8AdHepunYFwjo4yiER/image.png",
+        "imageSHA256": "7f7c8e61b7f6eddae07c8b26806eb5802b73911ca183ba285959362abf410b9f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large masked form dominates the center, its face split between a glossy black dome and a broad yellow panel; small red-orange shapes glow within two eye openings.\", \"Radiating blue-grey bands spread outward from behind the figure across the background, while the lower body dissolves into dense overlapping black scribble lines threaded with red and gold.\", \"Two yellow spike shapes rise from the top of the mask, and a white wavy line runs horizontally across the yellow panel, sitting just below the eye level.\"], \"reading\": \"A masked form rises from a tangle of scribbled lines, its glossy dome and yellow face panel pulling the eye upward while red glints inside the eye slots suggest something lit from within. The radiating background bands push the figure forward rather than receding. Below the shoulders, tight looping marks replace any solid body, giving the lower half a restless, unresolved quality that contrasts with the smooth upper mask.\", \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #94 and nnxyz nnotb #96. The #94 image shares the yellow-on-dark color pairing and layered scribble marks, while #96 shifts to a flat yellow-green field and silhouette lines — a sharp tonal contrast to this work's dense, dark atmosphere.\", \"connections\": [{\"targetArtworkId\": \"QmXHJrQoWu6Cx6WEdAwcFLC1htLMJx2qL49Y9LywaMBmco\", \"reason\": \"Both works place a large masked or helmeted form against a dark ground and use yellow as the dominant accent color inside deep shadow, with loose scribble lines filling the surrounding space.\"}, {\"targetArtworkId\": \"QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ\", \"reason\": \"Both images use yellow slots set into deep black eye cavities against a blue-toned ground, creating a similar contrast between a hard-edged lit interior and a dark surrounding form.\"}], \"tags\": [\"masked form\", \"radiating background bands\", \"yellow and black contrast\", \"dense scribble lines\", \"red accent within eye openings\", \"spike shapes at crown\"], \"interpretiveTags\": [\"confrontational presence\", \"tension between order and chaos\"], \"lookingQuestion\": \"Where exactly does the smooth, solid surface of the mask end and the scribbled lines begin — and what happens to the figure's outline at that boundary?\", \"ambiguities\": [\"The white wavy line across the yellow panel may be a mouth, a seam, or a mark unrelated to facial anatomy — the image does not resolve this clearly.\", \"Title and recorded-creation neighbors align here, but the metadata notes gaps may exist in the broader nnotb family, so adjacency does not confirm unbroken sequence.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

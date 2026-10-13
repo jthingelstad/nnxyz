@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:45.277276-05:00",
+    "usage": {
+      "inputTokens": 6314,
+      "outputTokens": 776,
+      "totalTokens": 7090,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13844
+    },
+    "requestId": "eaa249c3-8e7c-4b71-b223-acd76f0ed747",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the canvas, outlined in thick black lines against a flat grey background, with a broad yellow band sweeping across the upper third.\",\n    \"Two eye zones are built from overlapping looping circles in purple, blue, and red, each containing smaller scribbled marks; the left eye reads as a spiral, the right as a rectangular recess.\",\n    \"A wide open mouth near the lower centre shows white rectangular tooth shapes framed in red and black hatching, while loose multicoloured lines—pink, teal, green—scatter across the face and spill beyond the head outline.\"\n  ],\n  \"reading\": \"The head pushes close to the frame, leaving little breathing room. Layered loops mark the eyes with a restless, wound-up quality, while the open mouth and exposed teeth carry something between a shout and a grimace. The grey ground keeps the yellow band and scattered colour lines from merging into noise, giving each hue a moment to register before the next one crowds in.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #3 sits between title neighbours nnxyz #2 and nnxyz #4. Where nnxyz #2 packs multiple head forms into a dark field, this work isolates a single head on grey, making the yellow sweep and looping eye marks the dominant structural moves.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw\",\n      \"reason\": \"nnxyz #2 shares the same vocabulary of thick black outlines, looping eye circles, and bared teeth, but crowds two or three head forms into a near-black ground rather than isolating one against grey.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY\",\n      \"reason\": \"nnxyz nnotb #178 also centres a single rounded head with asymmetric eye treatments—one spiral, one smaller symbol—offering a direct formal parallel to the eye-zone construction in nnxyz #3, though on an olive ground.\"\n    }\n  ],\n  \"tags\": [\n    \"single head form\",\n    \"looping eye circles\",\n    \"open mouth with tooth marks\",\n    \"yellow horizontal band\",\n    \"grey ground\",\n    \"multicolour scattered lines\"\n  ],\n  \"interpretiveTags\": [\n    \"agitated\",\n    \"confrontational\"\n  ],\n  \"lookingQuestion\": \"How does the grey ground change the way the yellow band and the looping eye marks compete for your attention compared to the darker grounds in the comparison works?\",\n  \"ambiguities\": [\n    \"The title-derived order and the recorded-creation order align here, but the metadata notes gaps may exist in the broader numbered family; no creation chronology can be confirmed.\",\n    \"The rectangular form at the upper left edge of the head is ambiguous—it reads as either an ear or an attached object, and the image does not resolve this clearly.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS/image.png",
+        "imageSHA256": "e08fa2b3caeb9c4f1578c6d0906018135a1ec3c005be2a62af390ba0ec4f971d"
+      },
+      {
+        "artworkId": "QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw/image.png",
+        "imageSHA256": "12da0ff52daf08159d317b8dbcb13fb2f67af76b6b5221c7c50fcb8e010f7eba"
+      },
+      {
+        "artworkId": "QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY/image.png",
+        "imageSHA256": "cbffe02b7b281b418f26a21a83e6a34f80afdc8bb3cf2bbf6ab261e28ba6cbb9"
+      },
+      {
+        "artworkId": "QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe/image.png",
+        "imageSHA256": "79571f1753e94ca260f28aa86a3dff93e12ebb2999424128fc120689562c9023"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:52.491281-05:00",
+    "usage": {
+      "inputTokens": 7112,
+      "outputTokens": 938,
+      "totalTokens": 8050,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7123
+    },
+    "requestId": "9f5a9445-bb22-4cf5-bbd5-8a114f7f25b4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the canvas, outlined in thick black lines against a flat grey background, with a broad yellow band sweeping across the upper third.\",\n    \"Two eye zones are built from overlapping looping circles in purple, blue, and red; the left reads as a tight spiral, the right as a rectangular recess with smaller scribbled marks inside.\",\n    \"A wide open mouth near the lower centre shows white rectangular tooth shapes framed in red and black hatching, while loose lines in pink, teal, and green scatter across the face and spill beyond the head outline.\"\n  ],\n  \"reading\": \"The head pushes close to the frame, leaving little open space around it. Layered loops mark the eyes with a wound-up, restless quality, while the open mouth and exposed teeth sit somewhere between a shout and a grimace. The grey ground keeps the yellow band and scattered colour lines from merging into noise, giving each hue a moment before the next crowds in.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #3 sits between title neighbours nnxyz #2 and nnxyz #4. Where nnxyz #2 packs multiple head forms into a near-black field, this work isolates one head on grey, making the yellow sweep and looping eye marks the dominant structural moves.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw\",\n      \"reason\": \"nnxyz #2 shares thick black outlines, looping eye circles, and bared teeth, but crowds two or three head forms into a near-black ground rather than isolating one against grey.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY\",\n      \"reason\": \"nnxyz nnotb #178 centres a single rounded head with asymmetric eye treatments—one concentric spiral, one smaller enclosed symbol—offering a direct parallel to the eye-zone construction here, though set on an olive ground.\"\n    }\n  ],\n  \"tags\": [\n    \"single head form\",\n    \"looping eye circles\",\n    \"open mouth with tooth marks\",\n    \"yellow horizontal band\",\n    \"grey ground\",\n    \"multicolour scattered lines\"\n  ],\n  \"interpretiveTags\": [\n    \"agitated\",\n    \"confrontational\"\n  ],\n  \"lookingQuestion\": \"How does the grey ground change the way the yellow band and the looping eye marks compete for your attention compared to the darker grounds in the comparison works?\",\n  \"ambiguities\": [\n    \"The rectangular form at the upper left edge of the head is ambiguous—it reads as either an ear or an attached object, and the image does not resolve this clearly.\",\n    \"Title-derived order and recorded-creation order align for this work, but metadata notes gaps may exist in the broader numbered family; no creation chronology can be confirmed.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: grey ground, yellow band, looping eye zones, open mouth with tooth shapes, and scattered multicolour lines are all visibly present.\",\n    \"Both comparison connections verified against inspected images: nnxyz #2 shows multiple heads on a dark ground with matching outline and eye vocabulary; nnxyz nnotb #178 shows a single rounded head with one concentric spiral eye and one smaller symbol eye on an olive ground—formal parallel holds.\",\n    \"No invented intent, biography, media, or unsupported subject identities found in draft; minor phrasing tightened to stay within word limits and remove marginal stock phrasing ('breathing room' softened to 'open space').\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS/image.png",
+        "imageSHA256": "e08fa2b3caeb9c4f1578c6d0906018135a1ec3c005be2a62af390ba0ec4f971d"
+      },
+      {
+        "artworkId": "QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw/image.png",
+        "imageSHA256": "12da0ff52daf08159d317b8dbcb13fb2f67af76b6b5221c7c50fcb8e010f7eba"
+      },
+      {
+        "artworkId": "QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY/image.png",
+        "imageSHA256": "cbffe02b7b281b418f26a21a83e6a34f80afdc8bb3cf2bbf6ab261e28ba6cbb9"
+      },
+      {
+        "artworkId": "QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe/image.png",
+        "imageSHA256": "79571f1753e94ca260f28aa86a3dff93e12ebb2999424128fc120689562c9023"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape fills most of the canvas, outlined in thick black lines against a flat grey background, with a broad yellow band sweeping across the upper third.\", \"Two eye zones are built from overlapping looping circles in purple, blue, and red, each containing smaller scribbled marks; the left eye reads as a spiral, the right as a rectangular recess.\", \"A wide open mouth near the lower centre shows white rectangular tooth shapes framed in red and black hatching, while loose multicoloured lines—pink, teal, green—scatter across the face and spill beyond the head outline.\"], \"reading\": \"The head pushes close to the frame, leaving little breathing room. Layered loops mark the eyes with a restless, wound-up quality, while the open mouth and exposed teeth carry something between a shout and a grimace. The grey ground keeps the yellow band and scattered colour lines from merging into noise, giving each hue a moment to register before the next one crowds in.\", \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #3 sits between title neighbours nnxyz #2 and nnxyz #4. Where nnxyz #2 packs multiple head forms into a dark field, this work isolates a single head on grey, making the yellow sweep and looping eye marks the dominant structural moves.\", \"connections\": [{\"targetArtworkId\": \"QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw\", \"reason\": \"nnxyz #2 shares the same vocabulary of thick black outlines, looping eye circles, and bared teeth, but crowds two or three head forms into a near-black ground rather than isolating one against grey.\"}, {\"targetArtworkId\": \"QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY\", \"reason\": \"nnxyz nnotb #178 also centres a single rounded head with asymmetric eye treatments—one spiral, one smaller symbol—offering a direct formal parallel to the eye-zone construction in nnxyz #3, though on an olive ground.\"}], \"tags\": [\"single head form\", \"looping eye circles\", \"open mouth with tooth marks\", \"yellow horizontal band\", \"grey ground\", \"multicolour scattered lines\"], \"interpretiveTags\": [\"agitated\", \"confrontational\"], \"lookingQuestion\": \"How does the grey ground change the way the yellow band and the looping eye marks compete for your attention compared to the darker grounds in the comparison works?\", \"ambiguities\": [\"The title-derived order and the recorded-creation order align here, but the metadata notes gaps may exist in the broader numbered family; no creation chronology can be confirmed.\", \"The rectangular form at the upper left edge of the head is ambiguous—it reads as either an ear or an attached object, and the image does not resolve this clearly.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:17:57.340226-05:00",
+    "usage": {
+      "inputTokens": 6910,
+      "outputTokens": 867,
+      "totalTokens": 7777,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11521
+    },
+    "requestId": "d0e9e608-3e06-4e7a-a13d-b4acf030d561",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the canvas, outlined in thick black lines against a flat grey background, with a broad yellow band sweeping across the upper third.\",\n    \"Two eye zones are built from overlapping looping circles in purple, blue, and red; the left reads as a tight spiral, the right as a rectangular recess with smaller scribbled marks inside.\",\n    \"A mouth near the lower centre shows white rectangular tooth shapes framed in red and black hatching, with a dark gap visible between the rows; loose lines in pink, teal, and green scatter across the face and spill beyond the head outline.\"\n  ],\n  \"reading\": \"The head pushes close to the frame, leaving little open space around it. Layered loops mark the eyes with a wound-up, restless quality, while the exposed tooth rows and dark gap between them sit somewhere between a shout and a grimace. The grey ground keeps the yellow band and scattered colour lines from merging into noise, giving each hue a moment before the next crowds in.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #3 sits between title neighbours nnxyz #2 and nnxyz #4. Where nnxyz #2 packs multiple head forms into a near-black field, this work isolates one head on grey, making the yellow sweep and looping eye marks the dominant structural moves.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw\",\n      \"reason\": \"nnxyz #2 shares thick black outlines, looping eye circles, and bared teeth, but crowds two or three head forms into a near-black ground rather than isolating one against grey.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY\",\n      \"reason\": \"nnxyz nnotb #178 centres a single rounded head with asymmetric eye treatments—one concentric spiral, one smaller enclosed symbol—offering a direct parallel to the eye-zone construction here, though set on an olive ground.\"\n    }\n  ],\n  \"tags\": [\n    \"single head form\",\n    \"looping eye circles\",\n    \"bared tooth rows\",\n    \"yellow horizontal band\",\n    \"grey ground\",\n    \"multicolour scattered lines\"\n  ],\n  \"lookingQuestion\": \"How does the grey ground change the way the yellow band and the looping eye marks compete for your attention compared to the darker grounds in the comparison works?\",\n  \"ambiguities\": [\n    \"The rectangular form at the upper left edge of the head is ambiguous—it reads as either an ear or an attached object, and the image does not resolve this clearly.\",\n    \"Title-derived order and recorded-creation order align for this work, but metadata notes gaps may exist in the broader numbered family; no creation chronology can be confirmed.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide open mouth' in observation 3 with 'a mouth near the lower centre' and described the visible dark gap between tooth rows rather than asserting full openness.\",\n    \"Updated reading to reference 'exposed tooth rows and dark gap' instead of 'open mouth,' grounding the description in visible structure.\",\n    \"Tag changed from 'open mouth with tooth marks' to 'bared tooth rows' to reflect what is directly visible without overstating openness.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS/image.png",
+        "imageSHA256": "e08fa2b3caeb9c4f1578c6d0906018135a1ec3c005be2a62af390ba0ec4f971d"
+      },
+      {
+        "artworkId": "QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw/image.png",
+        "imageSHA256": "12da0ff52daf08159d317b8dbcb13fb2f67af76b6b5221c7c50fcb8e010f7eba"
+      },
+      {
+        "artworkId": "QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY/image.png",
+        "imageSHA256": "cbffe02b7b281b418f26a21a83e6a34f80afdc8bb3cf2bbf6ab261e28ba6cbb9"
+      },
+      {
+        "artworkId": "QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmewT1AZNDe2KpJjdVnSDjshrtZ3GxqjKjmqxUWiptQkNe/image.png",
+        "imageSHA256": "79571f1753e94ca260f28aa86a3dff93e12ebb2999424128fc120689562c9023"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large rounded head shape fills most of the canvas, outlined in thick black lines against a flat grey background, with a broad yellow band sweeping across the upper third.\", \"Two eye zones are built from overlapping looping circles in purple, blue, and red; the left reads as a tight spiral, the right as a rectangular recess with smaller scribbled marks inside.\", \"A wide open mouth near the lower centre shows white rectangular tooth shapes framed in red and black hatching, while loose lines in pink, teal, and green scatter across the face and spill beyond the head outline.\"], \"reading\": \"The head pushes close to the frame, leaving little open space around it. Layered loops mark the eyes with a wound-up, restless quality, while the open mouth and exposed teeth sit somewhere between a shout and a grimace. The grey ground keeps the yellow band and scattered colour lines from merging into noise, giving each hue a moment before the next crowds in.\", \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #3 sits between title neighbours nnxyz #2 and nnxyz #4. Where nnxyz #2 packs multiple head forms into a near-black field, this work isolates one head on grey, making the yellow sweep and looping eye marks the dominant structural moves.\", \"connections\": [{\"targetArtworkId\": \"QmYxnAaPAuPyHnj65G5bQ4jfvJRDHTfG9AYcHtq4jCZRnw\", \"reason\": \"nnxyz #2 shares thick black outlines, looping eye circles, and bared teeth, but crowds two or three head forms into a near-black ground rather than isolating one against grey.\"}, {\"targetArtworkId\": \"QmaJSxRQkVT9pS1d7HPxY17Gkj2muBZ2iQ3L8GYU7FSozY\", \"reason\": \"nnxyz nnotb #178 centres a single rounded head with asymmetric eye treatments—one concentric spiral, one smaller enclosed symbol—offering a direct parallel to the eye-zone construction here, though set on an olive ground.\"}], \"tags\": [\"single head form\", \"looping eye circles\", \"open mouth with tooth marks\", \"yellow horizontal band\", \"grey ground\", \"multicolour scattered lines\"], \"lookingQuestion\": \"How does the grey ground change the way the yellow band and the looping eye marks compete for your attention compared to the darker grounds in the comparison works?\", \"ambiguities\": [\"The rectangular form at the upper left edge of the head is ambiguous—it reads as either an ear or an attached object, and the image does not resolve this clearly.\", \"Title-derived order and recorded-creation order align for this work, but metadata notes gaps may exist in the broader numbered family; no creation chronology can be confirmed.\"]}\nFLAGS:\n[{\"artworkId\": \"QmQEGZYdgeMrKKZ7pBuq6g6z98xZXGJtABWqBRiGk93pWS\", \"field\": \"observations\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

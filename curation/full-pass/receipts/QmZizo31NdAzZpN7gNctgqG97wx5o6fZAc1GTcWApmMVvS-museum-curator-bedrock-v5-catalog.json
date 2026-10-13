@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:06.446774-05:00",
+    "usage": {
+      "inputTokens": 6047,
+      "outputTokens": 804,
+      "totalTokens": 6851,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13096
+    },
+    "requestId": "704f8804-4cb3-49c3-aa39-b18bd0b75d9e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A compact, rounded animal form fills the center-left, its body built from dense overlapping black scribble lines layered over yellow-green and blue-tinted color beneath.\",\n    \"A burst of jagged orange and yellow strokes erupts from the top of the figure's head and a smaller matching flare appears at the tail end, both set against a flat saturated yellow background.\",\n    \"Two large round eyes with blue-white highlights sit high on the face, and a coiled trunk-like form hangs to the lower left, its ridges drawn with tight curved parallel lines.\"\n  ],\n  \"reading\": \"The figure sits low and wide, its bulk pressed toward the viewer by a yellow field that leaves almost no breathing room. Dense black scribble lines hold the body together while flashes of blue and red show through underneath, giving the dark mass an uneasy warmth. The twin flame bursts at head and tail read as heat or alarm rather than decoration. The large, reflective eyes pull against the surrounding weight, suggesting something watchful inside the heaviness.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #58 and nnxyz nnotb #60. All three use a flat saturated field behind a dark figure with yellow line marks, but #59 replaces the flat silhouette approach of its neighbors with dense layered scribble that builds volume rather than outline.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXgMSxtaH5PUPxzYrgvJTG7mQb72fddCxKvSqyi8ToFw8\",\n      \"reason\": \"Both #59 and #60 place a single dark figure against a flat yellow-green field with radiating yellow line marks, but #60 keeps the body as a clean silhouette while #59 fills the same dark mass with layered scribble and color underneath.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ\",\n      \"reason\": \"nnxyz #30 shares the same dense overlapping black line work over yellow-gold color and the same large round eyes with highlights, making it the closest formal match to #59 across the two owned collections.\"\n    }\n  ],\n  \"tags\": [\n    \"dense scribble line work\",\n    \"flat saturated yellow background\",\n    \"coiled ridged form\",\n    \"flame burst marks\",\n    \"round reflective eyes\",\n    \"dark layered figure\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful\",\n    \"heavy\",\n    \"uneasy warmth\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the flame marks at the head and tail touch the body, and does that contact point change how you read the dark mass between them?\",\n  \"ambiguities\": [\n    \"The coiled lower-left form reads as a trunk but could be another body part; no external confirmation is available.\",\n    \"Candidate nnxyz nnotb #58 shares the yellow-on-red color family but its flat graphic style contrasts strongly with #59's scribble volume, making it a weaker formal connection than #60 or nnxyz #30.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZizo31NdAzZpN7gNctgqG97wx5o6fZAc1GTcWApmMVvS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZizo31NdAzZpN7gNctgqG97wx5o6fZAc1GTcWApmMVvS/image.png",
+        "imageSHA256": "09978211718373c875fb2b435a7fc4ce22e61eb8d08d18bf96fe1a614a7c385d"
+      },
+      {
+        "artworkId": "QmbJgKJySUFXQxdVQjrB4VQWCA8oqBY2PCgoVjVz6Rc7P9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbJgKJySUFXQxdVQjrB4VQWCA8oqBY2PCgoVjVz6Rc7P9/image.png",
+        "imageSHA256": "cc53178d387481e66e624fe2cebba34615fe4c75c473af6fcf7bd9fdd41c458e"
+      },
+      {
+        "artworkId": "QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ/image.png",
+        "imageSHA256": "bcb195a27ddc3920341b965afda83a25473963fcfafb67c1603148aee1550db7"
+      },
+      {
+        "artworkId": "QmXgMSxtaH5PUPxzYrgvJTG7mQb72fddCxKvSqyi8ToFw8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXgMSxtaH5PUPxzYrgvJTG7mQb72fddCxKvSqyi8ToFw8/image.png",
+        "imageSHA256": "e6e19a9c4f0f0294cc67857d34a0d7fefd1fa3a6ce11231e1192ddabb8b68fef"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:13.132050-05:00",
+    "usage": {
+      "inputTokens": 6871,
+      "outputTokens": 929,
+      "totalTokens": 7800,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6600
+    },
+    "requestId": "8032b043-5a2c-43d0-818a-2984dfd47c2a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A compact, rounded animal form fills the center-left, its body built from dense overlapping black scribble lines layered over yellow-green and blue-tinted color beneath.\",\n    \"A burst of jagged orange and yellow strokes erupts from the top of the figure's head and a smaller matching flare appears at the tail end, both set against a flat saturated yellow background.\",\n    \"Two large round eyes with blue-white highlights sit high on the face, and a coiled form hangs to the lower left, its ridges drawn with tight curved parallel lines.\"\n  ],\n  \"reading\": \"The figure sits low and wide, its bulk pressed toward the viewer by a yellow field that leaves almost no breathing room. Dense black scribble lines hold the body together while flashes of blue and red show through underneath, giving the dark mass an uneasy warmth. The twin flame bursts at head and tail read as heat or alarm rather than decoration. The large, reflective eyes pull against the surrounding weight, suggesting something watchful inside the heaviness.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #58 and nnxyz nnotb #60. All three use a flat saturated field behind a dark figure with yellow line marks, but #59 replaces the flat silhouette of its neighbors with dense layered scribble that builds volume rather than outline.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXgMSxtaH5PUPxzYrgvJTG7mQb72fddCxKvSqyi8ToFw8\",\n      \"reason\": \"Both #59 and #60 place a single dark figure against a flat yellow-green field with radiating yellow line marks, but #60 keeps the body as a clean silhouette while #59 fills the same dark mass with layered scribble and color beneath.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ\",\n      \"reason\": \"nnxyz #30 shares dense overlapping black line work over yellow-gold color and large round eyes with highlights, making it the closest formal match to #59 across the two owned collection subsets.\"\n    }\n  ],\n  \"tags\": [\n    \"dense scribble line work\",\n    \"flat saturated yellow background\",\n    \"coiled ridged form\",\n    \"flame burst marks\",\n    \"round reflective eyes\",\n    \"dark layered figure\"\n  ],\n  \"interpretiveTags\": [\"watchful\", \"heavy\", \"uneasy warmth\"],\n  \"lookingQuestion\": \"Where exactly do the flame marks at the head and tail touch the body, and does that contact point change how you read the dark mass between them?\",\n  \"ambiguities\": [\n    \"The coiled lower-left form reads as a trunk but could be another body part; no external confirmation is available.\",\n    \"Candidate nnxyz nnotb #58 shares a warm-field-plus-dark-figure structure but its flat graphic style contrasts strongly with #59's scribble volume, so it was omitted in favor of stronger formal matches.\"\n  ],\n  \"reviewFindings\": [\n    \"Trunk label softened to 'coiled form' in observation 3 to avoid unsupported subject identification; interpretive reading retains the coiled description without naming the animal.\",\n    \"Context angle confirmed: #58 uses flat red field and clean silhouette, #60 uses flat yellow-green field and clean silhouette — both contrast with #59's scribble volume; claim is visually supported.\",\n    \"nnxyz #30 comparison confirmed against image: dense black scribble over yellow-gold ground and large round highlighted eyes are both visible, supporting the formal connection claim.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZizo31NdAzZpN7gNctgqG97wx5o6fZAc1GTcWApmMVvS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZizo31NdAzZpN7gNctgqG97wx5o6fZAc1GTcWApmMVvS/image.png",
+        "imageSHA256": "09978211718373c875fb2b435a7fc4ce22e61eb8d08d18bf96fe1a614a7c385d"
+      },
+      {
+        "artworkId": "QmbJgKJySUFXQxdVQjrB4VQWCA8oqBY2PCgoVjVz6Rc7P9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbJgKJySUFXQxdVQjrB4VQWCA8oqBY2PCgoVjVz6Rc7P9/image.png",
+        "imageSHA256": "cc53178d387481e66e624fe2cebba34615fe4c75c473af6fcf7bd9fdd41c458e"
+      },
+      {
+        "artworkId": "QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ/image.png",
+        "imageSHA256": "bcb195a27ddc3920341b965afda83a25473963fcfafb67c1603148aee1550db7"
+      },
+      {
+        "artworkId": "QmXgMSxtaH5PUPxzYrgvJTG7mQb72fddCxKvSqyi8ToFw8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXgMSxtaH5PUPxzYrgvJTG7mQb72fddCxKvSqyi8ToFw8/image.png",
+        "imageSHA256": "e6e19a9c4f0f0294cc67857d34a0d7fefd1fa3a6ce11231e1192ddabb8b68fef"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A compact, rounded animal form fills the center-left, its body built from dense overlapping black scribble lines layered over yellow-green and blue-tinted color beneath.\", \"A burst of jagged orange and yellow strokes erupts from the top of the figure's head and a smaller matching flare appears at the tail end, both set against a flat saturated yellow background.\", \"Two large round eyes with blue-white highlights sit high on the face, and a coiled trunk-like form hangs to the lower left, its ridges drawn with tight curved parallel lines.\"], \"reading\": \"The figure sits low and wide, its bulk pressed toward the viewer by a yellow field that leaves almost no breathing room. Dense black scribble lines hold the body together while flashes of blue and red show through underneath, giving the dark mass an uneasy warmth. The twin flame bursts at head and tail read as heat or alarm rather than decoration. The large, reflective eyes pull against the surrounding weight, suggesting something watchful inside the heaviness.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #58 and nnxyz nnotb #60. All three use a flat saturated field behind a dark figure with yellow line marks, but #59 replaces the flat silhouette approach of its neighbors with dense layered scribble that builds volume rather than outline.\", \"connections\": [{\"targetArtworkId\": \"QmXgMSxtaH5PUPxzYrgvJTG7mQb72fddCxKvSqyi8ToFw8\", \"reason\": \"Both #59 and #60 place a single dark figure against a flat yellow-green field with radiating yellow line marks, but #60 keeps the body as a clean silhouette while #59 fills the same dark mass with layered scribble and color underneath.\"}, {\"targetArtworkId\": \"QmbLLcERYAnHm2takUWCd2YCghS4d9RAWkhHBL5ko4oNoZ\", \"reason\": \"nnxyz #30 shares the same dense overlapping black line work over yellow-gold color and the same large round eyes with highlights, making it the closest formal match to #59 across the two owned collections.\"}], \"tags\": [\"dense scribble line work\", \"flat saturated yellow background\", \"coiled ridged form\", \"flame burst marks\", \"round reflective eyes\", \"dark layered figure\"], \"interpretiveTags\": [\"watchful\", \"heavy\", \"uneasy warmth\"], \"lookingQuestion\": \"Where exactly do the flame marks at the head and tail touch the body, and does that contact point change how you read the dark mass between them?\", \"ambiguities\": [\"The coiled lower-left form reads as a trunk but could be another body part; no external confirmation is available.\", \"Candidate nnxyz nnotb #58 shares the yellow-on-red color family but its flat graphic style contrasts strongly with #59's scribble volume, making it a weaker formal connection than #60 or nnxyz #30.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

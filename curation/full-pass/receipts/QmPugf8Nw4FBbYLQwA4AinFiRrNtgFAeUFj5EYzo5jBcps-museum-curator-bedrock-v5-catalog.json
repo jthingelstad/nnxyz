@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:28.998233-05:00",
+    "usage": {
+      "inputTokens": 6173,
+      "outputTokens": 633,
+      "totalTokens": 6806,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12061
+    },
+    "requestId": "874280c1-c9bb-4e3b-9d1e-875a675f71b7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large skull form dominates the center-left, its single visible eye socket filled with concentric rings of orange, red, and brown lines converging on a pink starburst shape.\",\n    \"A circular face with bared teeth and dot eyes sits in the upper right against a field of yellow radiating lines, smaller in scale than the central skull but similarly outlined in black.\",\n    \"A bright blue dashed line curves from the lower left up through the mid-ground, threading between the skull's jaw and a row of white rectangular teeth along the bottom edge.\"\n  ],\n  \"reading\": \"Two bared-mouth forms share the image without touching — one massive and layered with nested rings, one compact and sun-like in the corner. The skull reads as heavy, even burdened; the smaller face carries something closer to a grimace or grin. The blue dashed line moves through the gap between them like a dividing current, while scattered purple ovals and white loops fill the dark background with restless small marks.\",\n  \"contextAngle\": \"In the owned nnotb subset, this work carries title number #0000 while its recorded-creation position sits at the opposite end of the sequence from nnotb #1. That gap between title order and creation order makes it an unusual anchor for the collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ\",\n      \"reason\": \"Both images place open-mouthed forms with visible teeth against dense layered line-work, but #1 spreads multiple figures across a bright blue field while #0000 compresses its forms into a dark, tightly wound background.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"concentric rings\",\n    \"bared teeth\",\n    \"radiating lines\",\n    \"dashed curve\",\n    \"dark background with scattered marks\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between heavy and light\",\n    \"dual presences\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move between the large nested eye socket and the smaller toothed circle in the corner — and what does the blue dashed line do to that path?\",\n  \"ambiguities\": [\n    \"The nnotb #87 comparison image contains lettering treated as content; no strong formal connection to #0000 was found, so it was omitted.\",\n    \"The nifty-faces #0000 comparison shares dense line-work but its forms are more architectural than figural, making the connection too loose to include.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPugf8Nw4FBbYLQwA4AinFiRrNtgFAeUFj5EYzo5jBcps",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPugf8Nw4FBbYLQwA4AinFiRrNtgFAeUFj5EYzo5jBcps/image.png",
+        "imageSHA256": "4fa331b62cb0d19d94bdc46622209f82e6295e7763575d5675cd5d712626b66f"
+      },
+      {
+        "artworkId": "QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ/image.png",
+        "imageSHA256": "ead3ede709c7cef336841695645bfeeca0d377a12a9db7433b93aff2f77ced3f"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b/image.png",
+        "imageSHA256": "f148a09e2f3a8abb9411b0b2522fb87f9e5af7ba2130132376163caa82418ac0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:35.702908-05:00",
+    "usage": {
+      "inputTokens": 6837,
+      "outputTokens": 811,
+      "totalTokens": 7648,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6601
+    },
+    "requestId": "54487656-1069-45e5-b9f0-0faa0e32e35c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large skull form dominates the center-left, its single visible eye socket filled with concentric rings of orange, red, and brown lines converging on a pink starburst shape.\",\n    \"A circular face with bared teeth and dot eyes sits in the upper right against a field of yellow radiating lines, smaller in scale than the central skull but similarly outlined in black.\",\n    \"A bright blue dashed line curves from the lower left up through the mid-ground, threading between the skull's jaw and a row of white rectangular teeth along the bottom edge.\"\n  ],\n  \"reading\": \"Two bared-mouth forms share the image without touching — one massive and layered with nested rings, one compact and sun-like in the corner. The skull reads as heavy, even burdened; the smaller face carries something closer to a grimace. The blue dashed line moves through the gap between them, while scattered purple ovals and white loops fill the dark background with restless small marks.\",\n  \"contextAngle\": \"In the owned nnotb subset, this work carries title number #0000 while its recorded-creation position sits at the opposite end of the sequence from nnotb #1. That gap between title order and creation order makes it an unusual anchor for the collection.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ\",\n      \"reason\": \"Both images place open-mouthed forms with visible teeth against dense layered line-work, but nnotb #1 spreads multiple figures across a bright blue field while nnotb #0000 compresses its forms into a dark, tightly wound background.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"concentric rings\",\n    \"bared teeth\",\n    \"radiating lines\",\n    \"dashed curve\",\n    \"dark background with scattered marks\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between heavy and light\",\n    \"dual presences\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move between the large nested eye socket and the smaller toothed circle in the corner — and what does the blue dashed line do to that path?\",\n  \"ambiguities\": [\n    \"nnotb #87 contains lettering treated as content; no strong formal connection to #0000 was found, so it was omitted.\",\n    \"nifty-faces #0000 shares dense line-work but its forms are more architectural than figural, making the connection too loose to include.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: concentric rings in the eye socket, yellow radiating lines around the upper-right circular face, and the blue dashed curve threading near the jaw and white teeth are all visible.\",\n    \"Reading trimmed to fit within the 55–65 word target; 'dividing current' stock metaphor removed and replaced with plain description; no invented intent or biography present.\",\n    \"Comparison with QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ confirmed against inspected image: open-mouthed toothed forms and dense line-work are visible in both; the contrast between blue open field and dark compressed background is accurate.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPugf8Nw4FBbYLQwA4AinFiRrNtgFAeUFj5EYzo5jBcps",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPugf8Nw4FBbYLQwA4AinFiRrNtgFAeUFj5EYzo5jBcps/image.png",
+        "imageSHA256": "4fa331b62cb0d19d94bdc46622209f82e6295e7763575d5675cd5d712626b66f"
+      },
+      {
+        "artworkId": "QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ/image.png",
+        "imageSHA256": "ead3ede709c7cef336841695645bfeeca0d377a12a9db7433b93aff2f77ced3f"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b/image.png",
+        "imageSHA256": "f148a09e2f3a8abb9411b0b2522fb87f9e5af7ba2130132376163caa82418ac0"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large skull form dominates the center-left, its single visible eye socket filled with concentric rings of orange, red, and brown lines converging on a pink starburst shape.\", \"A circular face with bared teeth and dot eyes sits in the upper right against a field of yellow radiating lines, smaller in scale than the central skull but similarly outlined in black.\", \"A bright blue dashed line curves from the lower left up through the mid-ground, threading between the skull's jaw and a row of white rectangular teeth along the bottom edge.\"], \"reading\": \"Two bared-mouth forms share the image without touching — one massive and layered with nested rings, one compact and sun-like in the corner. The skull reads as heavy, even burdened; the smaller face carries something closer to a grimace or grin. The blue dashed line moves through the gap between them like a dividing current, while scattered purple ovals and white loops fill the dark background with restless small marks.\", \"contextAngle\": \"In the owned nnotb subset, this work carries title number #0000 while its recorded-creation position sits at the opposite end of the sequence from nnotb #1. That gap between title order and creation order makes it an unusual anchor for the collection.\", \"connections\": [{\"targetArtworkId\": \"QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ\", \"reason\": \"Both images place open-mouthed forms with visible teeth against dense layered line-work, but #1 spreads multiple figures across a bright blue field while #0000 compresses its forms into a dark, tightly wound background.\"}], \"tags\": [\"skull form\", \"concentric rings\", \"bared teeth\", \"radiating lines\", \"dashed curve\", \"dark background with scattered marks\"], \"interpretiveTags\": [\"tension between heavy and light\", \"dual presences\"], \"lookingQuestion\": \"Where does your eye move between the large nested eye socket and the smaller toothed circle in the corner — and what does the blue dashed line do to that path?\", \"ambiguities\": [\"The nnotb #87 comparison image contains lettering treated as content; no strong formal connection to #0000 was found, so it was omitted.\", \"The nifty-faces #0000 comparison shares dense line-work but its forms are more architectural than figural, making the connection too loose to include.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:51.992094-05:00",
+    "usage": {
+      "inputTokens": 6685,
+      "outputTokens": 721,
+      "totalTokens": 7406,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 8399
+    },
+    "requestId": "ba1ce60d-7790-4350-b994-72d9e4d1bfeb",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large skull outline occupies the center-left, and inside it sits a smaller nested face with two distinct features: a left eye rendered as a pink starburst surrounded by concentric orange and brown rings, and a right eye marked with a red cross on a yellow-brown ground.\",\n    \"A circular face with dot eyes and a row of bared teeth appears in the upper right against a field of yellow radiating lines, drawn at a noticeably smaller scale than the central skull and outlined in black.\",\n    \"A bright blue dashed line curves from the lower left up through the mid-ground, passing between the outer skull's jaw and a row of white rectangular teeth visible along the lower edge of the nested inner face.\"\n  ],\n  \"reading\": \"A skull contains a second face within it — the outer form providing the frame, the inner face carrying its own two eyes and expression. That nesting gives the image a sense of something enclosed or watched from inside. The smaller sun-like face in the corner reads as a separate presence, cooler in scale. The blue dashed line threads the gap between these forms, while purple ovals and white loops keep the dark ground restless.\",\n  \"contextAngle\": \"In the owned nnotb subset, this work holds title number #0000 while its recorded-creation position sits at the opposite end of the sequence from nnotb #1 — an unusual pairing of first title and last recorded creation.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ\",\n      \"reason\": \"Both images build figures from nested outlines with visible teeth, but nnotb #1 distributes multiple forms across an open bright-blue field while nnotb #0000 compresses its nested structure into a dark, tightly packed ground.\"\n    }\n  ],\n  \"tags\": [\"nested skull and face\", \"concentric ring eye\", \"cross-marked eye\", \"radiating lines\", \"dashed curve\", \"dark background with scattered marks\"],\n  \"lookingQuestion\": \"Can you trace where the outer skull's boundary ends and the inner face's boundary begins — and does the blue dashed line stay inside or outside that threshold?\",\n  \"ambiguities\": [\n    \"nnotb #87 contains lettering treated as content per instructions; no strong formal connection to #0000 was found, so it was omitted.\",\n    \"nifty-faces #0000 shares dense line-work but its forms are more architectural than figural, making the connection too loose to include.\"\n  ],\n  \"reviewFindings\": [\n    \"Observation 1 revised: the nested structure is now described as an outer skull enclosing a smaller inner face with two separately identifiable eyes, rather than a single eye socket.\",\n    \"Reading revised to reflect the containment relationship between outer skull and inner face, replacing the earlier single-eye-socket framing.\",\n    \"No other flags required structural changes; connection, tags, and question updated to align with corrected observations.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPugf8Nw4FBbYLQwA4AinFiRrNtgFAeUFj5EYzo5jBcps",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPugf8Nw4FBbYLQwA4AinFiRrNtgFAeUFj5EYzo5jBcps/image.png",
+        "imageSHA256": "4fa331b62cb0d19d94bdc46622209f82e6295e7763575d5675cd5d712626b66f"
+      },
+      {
+        "artworkId": "QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ/image.png",
+        "imageSHA256": "ead3ede709c7cef336841695645bfeeca0d377a12a9db7433b93aff2f77ced3f"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUGFsLnj11KsKPPogSF7b9Evv7cNuCAQ44Ku4AQBpX33b/image.png",
+        "imageSHA256": "f148a09e2f3a8abb9411b0b2522fb87f9e5af7ba2130132376163caa82418ac0"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large skull form dominates the center-left, its single visible eye socket filled with concentric rings of orange, red, and brown lines converging on a pink starburst shape.\", \"A circular face with bared teeth and dot eyes sits in the upper right against a field of yellow radiating lines, smaller in scale than the central skull but similarly outlined in black.\", \"A bright blue dashed line curves from the lower left up through the mid-ground, threading between the skull's jaw and a row of white rectangular teeth along the bottom edge.\"], \"reading\": \"Two bared-mouth forms share the image without touching — one massive and layered with nested rings, one compact and sun-like in the corner. The skull reads as heavy, even burdened; the smaller face carries something closer to a grimace. The blue dashed line moves through the gap between them, while scattered purple ovals and white loops fill the dark background with restless small marks.\", \"contextAngle\": \"In the owned nnotb subset, this work carries title number #0000 while its recorded-creation position sits at the opposite end of the sequence from nnotb #1. That gap between title order and creation order makes it an unusual anchor for the collection.\", \"connections\": [{\"targetArtworkId\": \"QmZiJPaKF6Fn5htuPYfLGgr6t47YpNLFLyWFv65swsoniJ\", \"reason\": \"Both images place open-mouthed forms with visible teeth against dense layered line-work, but nnotb #1 spreads multiple figures across a bright blue field while nnotb #0000 compresses its forms into a dark, tightly wound background.\"}], \"tags\": [\"skull form\", \"concentric rings\", \"bared teeth\", \"radiating lines\", \"dashed curve\", \"dark background with scattered marks\"], \"lookingQuestion\": \"Where does your eye move between the large nested eye socket and the smaller toothed circle in the corner — and what does the blue dashed line do to that path?\", \"ambiguities\": [\"nnotb #87 contains lettering treated as content; no strong formal connection to #0000 was found, so it was omitted.\", \"nifty-faces #0000 shares dense line-work but its forms are more architectural than figural, making the connection too loose to include.\"]}\nFLAGS:\n[{\"artworkId\": \"QmPugf8Nw4FBbYLQwA4AinFiRrNtgFAeUFj5EYzo5jBcps\", \"rule\": \"assistant-original-image-check\", \"detail\": \"Observation 1 mistakes a nested face/head for one eye socket. Re-examine the primary image: a large outer skull frame encloses a smaller face, with a sunburst eye on the left and a cross-marked eye on the right. There is also a separate sun-like face at upper right. Describe the nested structure accurately, and revise the reading accordingly rather than calling every concentric ring an eye.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

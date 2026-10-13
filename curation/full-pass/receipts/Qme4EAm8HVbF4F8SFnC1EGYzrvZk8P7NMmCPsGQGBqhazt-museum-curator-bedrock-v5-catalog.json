@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:48.545433-05:00",
+    "usage": {
+      "inputTokens": 7335,
+      "outputTokens": 763,
+      "totalTokens": 8098,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13137
+    },
+    "requestId": "6d629383-3121-4d53-a5d2-fe5ece7e6608",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large purple-red rounded form dominates the center, containing three distinct toothed-mouth shapes and spiral-coiled eye marks at different scales.\",\n    \"White outline lines run loosely over the whole surface, while yellow and orange loops accent the eye areas against the underlying purple and blue cross-hatched fill.\",\n    \"The olive-green background is covered edge-to-edge with small rectangular scribble units in yellow, orange, and teal, creating a dense grid-like surround.\"\n  ],\n  \"reading\": \"Three grinning, toothed openings are stacked and nested inside one bulging form, each with its own coiled eye marks, so the image reads as faces within a face. The white outline sits above the dense purple and blue cross-hatching rather than containing it, giving the surface a layered, pressured feeling. The surrounding grid of small scribbled rectangles holds the central form in without framing it calmly.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #9 and nnxyz nnotb #11 show how differently the same line vocabulary can land: #9 spreads figures across open space, #11 dissolves into an all-over field, while #10 compresses both impulses into one dense, stacked form.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe\",\n      \"reason\": \"Both works layer loose white outlines over a dense, multi-color scribbled fill, and both use that white line to define large shapes against a busy ground — the collector's noted visual link between nnxyz and scrimshaw.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew\",\n      \"reason\": \"nnxyz nnotb #11 replaces all figural structure with a pure cross-hatched field, making it a direct contrast to #10's use of the same cross-hatch as interior fill beneath recognizable forms.\"\n    }\n  ],\n  \"tags\": [\n    \"nested faces\",\n    \"toothed mouth forms\",\n    \"spiral eye marks\",\n    \"white outline over fill\",\n    \"grid scribble background\",\n    \"purple-red massed form\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed\",\n    \"pressured\",\n    \"confrontational\"\n  ],\n  \"lookingQuestion\": \"How many separate toothed openings can you locate, and do they all sit at the same depth within the form or does the layering suggest some are behind others?\",\n  \"ambiguities\": [\n    \"Title-derived order and recorded-creation order align for this work in the owned subset, but gaps elsewhere in the nnotb family mean neither confirms an unbroken sequence.\",\n    \"The scrimshaw GM connection rests on the collector's stated visual perspective; no shared subject or confirmed formal influence can be established from the images alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt/image.png",
+        "imageSHA256": "e8283ca46fc1a96e8d73f492eefc2730226a0411da6b715305e42acc8c45e704"
+      },
+      {
+        "artworkId": "QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw/image.png",
+        "imageSHA256": "fd29e4090e515b0dcfbb1deef000b9f67e769ad949551adbeb6e683a1d7dafed"
+      },
+      {
+        "artworkId": "QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe/image.png",
+        "imageSHA256": "0d3f93195d69021ed0166a9c36466c54b02de607267465bcdd897a11a4915e60"
+      },
+      {
+        "artworkId": "QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew/image.png",
+        "imageSHA256": "437edaca3ffff994406d54fb7653f5913cdc871917332d7cddd0f16928992e18"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:56.549821-05:00",
+    "usage": {
+      "inputTokens": 8118,
+      "outputTokens": 992,
+      "totalTokens": 9110,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7886
+    },
+    "requestId": "25a7377a-dfbc-4bfd-b6db-29392be6c973",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large purple-red rounded form dominates the center, containing three distinct toothed-mouth shapes and spiral-coiled eye marks at different scales.\",\n    \"White outline lines run loosely over the whole surface, while yellow and orange loops accent the eye areas against the underlying purple and blue cross-hatched fill.\",\n    \"The olive-green background is covered edge-to-edge with small rectangular scribble units in yellow, orange, and teal, creating a dense grid-like surround.\"\n  ],\n  \"reading\": \"Three toothed openings are stacked and nested inside one bulging form, each paired with coiled eye marks, so the image reads as faces within a face. The white outline sits above dense purple and blue cross-hatching rather than containing it, giving the surface a layered, pressured feeling. The surrounding grid of small scribbled rectangles holds the central form in without framing it calmly.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #9 and nnxyz nnotb #11 show how differently the same line vocabulary can land: #9 spreads figures across open space, #11 dissolves into an all-over field, while #10 compresses both impulses into one dense stacked form.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe\",\n      \"reason\": \"Both works layer loose white outlines over a dense multi-color scribbled fill, using that white line to define large shapes against a busy ground — the collector's noted visual link between nnxyz and scrimshaw.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew\",\n      \"reason\": \"nnxyz nnotb #11 replaces all figural structure with a pure cross-hatched field, making it a direct contrast to #10's use of the same cross-hatch as interior fill beneath recognizable stacked forms.\"\n    }\n  ],\n  \"tags\": [\n    \"nested face forms\",\n    \"toothed mouth shapes\",\n    \"spiral eye marks\",\n    \"white outline over fill\",\n    \"grid scribble background\",\n    \"purple-red massed form\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed\",\n    \"pressured\",\n    \"confrontational\"\n  ],\n  \"lookingQuestion\": \"How many separate toothed openings can you locate, and does the layering suggest some sit behind others or do they all appear on the same surface?\",\n  \"ambiguities\": [\n    \"Title-derived order and recorded-creation order align for this work in the owned subset, but gaps elsewhere in the nnotb family mean neither confirms an unbroken sequence.\",\n    \"The scrimshaw GM connection rests on the collector's stated visual perspective; no shared subject or confirmed formal influence can be established from the images alone.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: purple-red central form with three toothed mouths and spiral eyes, white outlines over cross-hatched fill, and olive-green background with rectangular scribble units in yellow, orange, and teal.\",\n    \"Reading revised to remove 'grinning' (inferred expression) and tightened to stay within word limit; 'pressured' retained as a reading, not an assertion of intent.\",\n    \"Both comparison IDs inspected: QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe confirmed to show white outlines over dense multi-color scribbled fill; QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew confirmed as all-over cross-hatch field with no figural structure — both comparisons supported by image evidence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme4EAm8HVbF4F8SFnC1EGYzrvZk8P7NMmCPsGQGBqhazt/image.png",
+        "imageSHA256": "e8283ca46fc1a96e8d73f492eefc2730226a0411da6b715305e42acc8c45e704"
+      },
+      {
+        "artworkId": "QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXYQdUuotfrhedV9jGt3mJLGg1R3YpimNwjRtJj8NYXxw/image.png",
+        "imageSHA256": "fd29e4090e515b0dcfbb1deef000b9f67e769ad949551adbeb6e683a1d7dafed"
+      },
+      {
+        "artworkId": "QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe/image.png",
+        "imageSHA256": "0d3f93195d69021ed0166a9c36466c54b02de607267465bcdd897a11a4915e60"
+      },
+      {
+        "artworkId": "QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew/image.png",
+        "imageSHA256": "437edaca3ffff994406d54fb7653f5913cdc871917332d7cddd0f16928992e18"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large purple-red rounded form dominates the center, containing three distinct toothed-mouth shapes and spiral-coiled eye marks at different scales.\", \"White outline lines run loosely over the whole surface, while yellow and orange loops accent the eye areas against the underlying purple and blue cross-hatched fill.\", \"The olive-green background is covered edge-to-edge with small rectangular scribble units in yellow, orange, and teal, creating a dense grid-like surround.\"], \"reading\": \"Three grinning, toothed openings are stacked and nested inside one bulging form, each with its own coiled eye marks, so the image reads as faces within a face. The white outline sits above the dense purple and blue cross-hatching rather than containing it, giving the surface a layered, pressured feeling. The surrounding grid of small scribbled rectangles holds the central form in without framing it calmly.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #9 and nnxyz nnotb #11 show how differently the same line vocabulary can land: #9 spreads figures across open space, #11 dissolves into an all-over field, while #10 compresses both impulses into one dense, stacked form.\", \"connections\": [{\"targetArtworkId\": \"QmeTqnnNpvToNs5ACXfshFrvFfdvfxTHJ1XSoowf3mwGAe\", \"reason\": \"Both works layer loose white outlines over a dense, multi-color scribbled fill, and both use that white line to define large shapes against a busy ground — the collector's noted visual link between nnxyz and scrimshaw.\"}, {\"targetArtworkId\": \"QmZQtvgHSWqgfjD6CcbujHWv4c1CTZANLTti5nBBwtugew\", \"reason\": \"nnxyz nnotb #11 replaces all figural structure with a pure cross-hatched field, making it a direct contrast to #10's use of the same cross-hatch as interior fill beneath recognizable forms.\"}], \"tags\": [\"nested faces\", \"toothed mouth forms\", \"spiral eye marks\", \"white outline over fill\", \"grid scribble background\", \"purple-red massed form\"], \"interpretiveTags\": [\"compressed\", \"pressured\", \"confrontational\"], \"lookingQuestion\": \"How many separate toothed openings can you locate, and do they all sit at the same depth within the form or does the layering suggest some are behind others?\", \"ambiguities\": [\"Title-derived order and recorded-creation order align for this work in the owned subset, but gaps elsewhere in the nnotb family mean neither confirms an unbroken sequence.\", \"The scrimshaw GM connection rests on the collector's stated visual perspective; no shared subject or confirmed formal influence can be established from the images alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

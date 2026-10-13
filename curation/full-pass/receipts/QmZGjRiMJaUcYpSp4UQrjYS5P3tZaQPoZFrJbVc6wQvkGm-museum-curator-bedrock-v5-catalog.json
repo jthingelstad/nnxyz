@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:50.099854-05:00",
+    "usage": {
+      "inputTokens": 6672,
+      "outputTokens": 750,
+      "totalTokens": 7422,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12663
+    },
+    "requestId": "f9b36404-82cb-4c62-9cfd-f5de4bb0b551",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large yellow-outlined squares with orange spiral fills dominate the upper center, sitting inside a broad black arch edged with orange spikes along the top.\",\n    \"A cluster of smaller black-outlined rectangles and crossed boxes fills the middle zone, overlaid with white diagonal stripes and a white coil shape at center-right.\",\n    \"Along the bottom, a black-and-white striped oval form sits above a red zigzag line, while a deep red shape with yellow border anchors the lower right on a mid-gray ground.\"\n  ],\n  \"reading\": \"The gray field holds its ground while yellow and black forms press forward in layers. The two spiral-filled squares read as focal anchors, but the crossed boxes below them pull attention downward in a different rhythm. White lines cut through without resolving into a single path. The striped oval at the base adds a closed, contained note against the open scatter above, giving the image an uneven, unresolved tension.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #158 and nnxyz nnotb #160. Where #158 spreads across open landscape bands and #160 builds a dark, dense mass, #159 holds a gray middle ground packed with competing geometric units.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf\",\n      \"reason\": \"Both works layer rectangular frames, spiral forms, and zigzag lines across a busy field, and both use yellow as a structural color against darker marks, though nifty faces #26 fills its ground with red and teal where #159 keeps gray.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf\",\n      \"reason\": \"nnotb #160 contrasts sharply: its black ground and blended dark mass replace the flat gray and hard-edged geometry of #159, making the two works a direct study in ground color and mark density.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral forms\",\n    \"crossed rectangles\",\n    \"arch shape\",\n    \"zigzag line\",\n    \"gray ground\",\n    \"layered outlines\"\n  ],\n  \"interpretiveTags\": [\n    \"unresolved tension\",\n    \"competing focal points\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle after moving between the two large spiral squares at the top and the striped oval at the bottom — and what in the image pulls it back up?\",\n  \"ambiguities\": [\n    \"The black arch with orange spikes along the top edge could be read as a separate framing device or as part of the central mass; the image does not resolve this clearly.\",\n    \"Title order and recorded creation order align for this work in the owned subset, but gaps exist elsewhere in the nnotb family, so sequence position does not confirm making order.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm/image.png",
+        "imageSHA256": "e655b42ebb3ad083e6d5d37577451d747c3e12779a4ad2d21bd64593a22d3c67"
+      },
+      {
+        "artworkId": "QmWGLvS2QW1QcdsJ9tDLzwRCTvQJpCqsw8DcYeTArUMiwS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWGLvS2QW1QcdsJ9tDLzwRCTvQJpCqsw8DcYeTArUMiwS/image.png",
+        "imageSHA256": "f8ffbde83870b08340e0f8aa31f6bcae7663d3091126cb22de90db79f6067558"
+      },
+      {
+        "artworkId": "QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf/image.png",
+        "imageSHA256": "ede3560c9c1e93a94569db035f467613fe7c4604548f45f4108ca4b025c95143"
+      },
+      {
+        "artworkId": "QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf/image.png",
+        "imageSHA256": "74faf9943832dc3fc35c08638afcd9e6aa02d1c2089289c399ac74c14c83cd41"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:56.860149-05:00",
+    "usage": {
+      "inputTokens": 7444,
+      "outputTokens": 926,
+      "totalTokens": 8370,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6670
+    },
+    "requestId": "2950632d-6c49-49d0-a799-2c862ecb25fe",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large yellow-outlined squares with orange spiral fills dominate the upper center, sitting inside a broad black arch edged with orange spikes along the top.\",\n    \"A cluster of smaller black-outlined rectangles and crossed boxes fills the middle zone, overlaid with white diagonal stripes and a white coil shape at center-right.\",\n    \"Along the bottom, a black-and-white striped oval form sits above a red zigzag line, while a deep red shape with yellow border anchors the lower right on a mid-gray ground.\"\n  ],\n  \"reading\": \"The gray field holds its ground while yellow and black forms press forward in layers. The two spiral-filled squares act as focal anchors, but the crossed boxes below pull attention downward in a different rhythm. White lines cut through without resolving into a single path. The striped oval at the base adds a closed, contained note against the open scatter above, leaving the image with an uneven, unresolved tension.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #158 and nnxyz nnotb #160. Where #158 spreads across open landscape bands and #160 builds a dark dense mass, #159 holds a gray middle ground packed with competing geometric units.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf\",\n      \"reason\": \"Both works layer rectangular frames, spiral forms, and zigzag lines across a busy field, using yellow as a structural color against darker marks, though nifty faces #26 fills its ground with red and teal where #159 keeps gray.\"\n    },\n    {\n      \"targetArtworkId\": \"QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf\",\n      \"reason\": \"nnotb #160 contrasts directly: its black ground and blended dark mass replace the flat gray and hard-edged geometry of #159, making the pair a clear study in ground color and mark density.\"\n    }\n  ],\n  \"tags\": [\"spiral forms\", \"crossed rectangles\", \"arch shape\", \"zigzag line\", \"gray ground\", \"layered outlines\"],\n  \"interpretiveTags\": [\"unresolved tension\", \"competing focal points\"],\n  \"lookingQuestion\": \"Where does your eye settle after moving between the two large spiral squares at the top and the striped oval at the bottom — and what in the image pulls it back up?\",\n  \"ambiguities\": [\n    \"The black arch with orange spikes along the top edge could be read as a separate framing device or as part of the central mass; the image does not resolve this clearly.\",\n    \"Title order and recorded creation order align for this work in the owned subset, but gaps exist elsewhere in the nnotb family, so sequence position does not confirm making order.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: spiral squares, crossed rectangles with white overlays, and striped oval with red zigzag and deep red lower-right shape are all visible.\",\n    \"Comparison with QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf confirmed: spiral forms, rectangular frames, zigzag lines, and yellow structural color are present in both images; ground color contrast is accurate.\",\n    \"Comparison with QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf confirmed: black ground and blended dark mass in #160 contrast clearly with the flat gray and hard-edged geometry of #159; no invented claims found.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm/image.png",
+        "imageSHA256": "e655b42ebb3ad083e6d5d37577451d747c3e12779a4ad2d21bd64593a22d3c67"
+      },
+      {
+        "artworkId": "QmWGLvS2QW1QcdsJ9tDLzwRCTvQJpCqsw8DcYeTArUMiwS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWGLvS2QW1QcdsJ9tDLzwRCTvQJpCqsw8DcYeTArUMiwS/image.png",
+        "imageSHA256": "f8ffbde83870b08340e0f8aa31f6bcae7663d3091126cb22de90db79f6067558"
+      },
+      {
+        "artworkId": "QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf/image.png",
+        "imageSHA256": "ede3560c9c1e93a94569db035f467613fe7c4604548f45f4108ca4b025c95143"
+      },
+      {
+        "artworkId": "QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf/image.png",
+        "imageSHA256": "74faf9943832dc3fc35c08638afcd9e6aa02d1c2089289c399ac74c14c83cd41"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two large yellow-outlined squares with orange spiral fills dominate the upper center, sitting inside a broad black arch edged with orange spikes along the top.\", \"A cluster of smaller black-outlined rectangles and crossed boxes fills the middle zone, overlaid with white diagonal stripes and a white coil shape at center-right.\", \"Along the bottom, a black-and-white striped oval form sits above a red zigzag line, while a deep red shape with yellow border anchors the lower right on a mid-gray ground.\"], \"reading\": \"The gray field holds its ground while yellow and black forms press forward in layers. The two spiral-filled squares read as focal anchors, but the crossed boxes below them pull attention downward in a different rhythm. White lines cut through without resolving into a single path. The striped oval at the base adds a closed, contained note against the open scatter above, giving the image an uneven, unresolved tension.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #158 and nnxyz nnotb #160. Where #158 spreads across open landscape bands and #160 builds a dark, dense mass, #159 holds a gray middle ground packed with competing geometric units.\", \"connections\": [{\"targetArtworkId\": \"QmaUkborYKZfVLDHYxgHVdKwPtmWCdKnnxwGEndpLY4iXf\", \"reason\": \"Both works layer rectangular frames, spiral forms, and zigzag lines across a busy field, and both use yellow as a structural color against darker marks, though nifty faces #26 fills its ground with red and teal where #159 keeps gray.\"}, {\"targetArtworkId\": \"QmdQP8caXWTtsJ49bo3doWJnhnvccfyGdSTdXxsUZsoDMf\", \"reason\": \"nnotb #160 contrasts sharply: its black ground and blended dark mass replace the flat gray and hard-edged geometry of #159, making the two works a direct study in ground color and mark density.\"}], \"tags\": [\"spiral forms\", \"crossed rectangles\", \"arch shape\", \"zigzag line\", \"gray ground\", \"layered outlines\"], \"interpretiveTags\": [\"unresolved tension\", \"competing focal points\"], \"lookingQuestion\": \"Where does your eye settle after moving between the two large spiral squares at the top and the striped oval at the bottom — and what in the image pulls it back up?\", \"ambiguities\": [\"The black arch with orange spikes along the top edge could be read as a separate framing device or as part of the central mass; the image does not resolve this clearly.\", \"Title order and recorded creation order align for this work in the owned subset, but gaps exist elsewhere in the nnotb family, so sequence position does not confirm making order.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

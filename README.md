@@ -1,0 +1,107 @@
+# nnxyz gallery
+
+Working project for an online gallery of the collector's owned nnxyz artwork, with scrimshaw as a related collection. The local gallery baseline is built with Astro and TypeScript from the approved October 13 design. GitHub Actions validates and deploys the gallery to private S3 storage behind CloudFront.
+
+The gallery's public domain will be **nnxyz.thingelstad.xyz**. Deployment and DNS instructions are in [docs/deployment.md](docs/deployment.md).
+
+Tinylytics configuration and per-artwork kudos guidance are saved in [design/tinylytics.md](design/tinylytics.md). Production analytics and per-artwork kudos are integrated, gated by an explicit build flag and the production hostname. Local review sends no Tinylytics requests.
+
+Source artwork lives in a private, versioned S3 snapshot; `collection/` is excluded from Git. The pipeline restores exact independent copies and verifies them before building. See [storage, CI and deployment](docs/deployment.md) for paths, validation, DNS and rollback.
+
+The project contains **548 nnxyz artworks and 26 scrimshaw artworks**, representing **633 owned editions**. No other artists' artwork files are included.
+
+Offline curation is complete: all **574 artworks** have verified technical dossiers, AI-reviewed museum readings and collection context. The catalog also includes inspected-image connections and five curatorial routes. See [curation/README.md](curation/README.md) for the saved records, review evidence and verification commands. The gallery uses these saved records offline. A conversational curator and PixiJS flourishes can follow later.
+
+## Run the gallery
+
+```sh
+npm ci
+AWS_PROFILE=cloud-engineer npm run hydrate
+npm run assets
+npm run dev
+```
+
+Open http://127.0.0.1:4321/. The collection opens directly on the artwork. A quiet Dark/Light header switch changes the gallery surround between white and black and remembers the visitor’s choice. Every detail page offers native SVG, continuous stroke playback, speed/seek controls, enlargement, AI reading, owned collection position, related works and downloadable metadata/provenance. The About page contains an edited draft of the collector introduction; five curated walks are linked there.
+
+```sh
+npm run check
+npm test
+npm run build
+```
+
+The build creates 588 static pages in `dist/`, including all 574 artworks. Artwork paths use immutable drawing CIDs. No model invocation or cloud service is needed.
+
+For browser checks, with a local server running:
+
+```sh
+npx playwright install chromium
+npm run test:browser
+```
+
+Alternatively set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to an existing Chromium executable. Tests cover playback, downloads, five collection filters, navigation, mobile/tablet/desktop/landscape layouts, reduced motion, SVG fidelity and the replay error path. Temporary screenshots/results go to `/tmp/nnxyz-gallery-qa`.
+
+The full-precision SVG collection is about 1.5 GiB uncompressed; the largest drawing is about 19 MiB. Dense browsing thumbnails use the original PNG, while every full artwork view and replay uses SVG. Production hosting must provide compressed SVG delivery. The permanent archive and imported artwork bytes remain unchanged.
+
+Copy `.env.example` to `.env` and enable `PUBLIC_TINYLYTICS_ENABLED=true` only for production. The hostname guard additionally limits the embed to `nnxyz.thingelstad.xyz`. Preview kudos explain that giving kudos becomes available on the published gallery.
+
+Design decisions and review evidence: [implementation](design/implementation.md), [QA baseline](design/qa-baseline.md), [approved concepts](design/concepts/2026-10-13-v2/review.md).
+
+## Collections
+
+The three primary nnxyz series are inferred from the archived artwork titles:
+
+| Collection        | Distinct artworks |
+| ----------------- | ----------------: |
+| Nifty Faces       |               134 |
+| NNOTB             |               303 |
+| Rawblocks         |                66 |
+| Other nnxyz works |                45 |
+| Scrimshaw         |                26 |
+| Total             |               574 |
+
+Faces includes the Christmas special. Other nnxyz works retain the numbered `nnxyz` series, commemorative pieces and other titles. All artwork from both archived nnxyz creator addresses is included. Multiple owned editions and artworks appearing in both wallets keep their ownership records and share one gallery entry.
+
+## Files
+
+- `data/gallery.json`: compact website catalog, grouped by series, with title, series number, creator address, dimensions, stroke counts, owned edition count, source paths and provenance. Its paths are relative to this project root.
+- `data/collections.json`: primary series, other nnxyz works, scrimshaw, and an empty placeholder for a future related collection. Scrimshaw is the only related artist included now.
+- `collection/artists/`: independent copies of each selected artist's original PNGs, published metadata, compressed strokes, decoded strokes, stroke summaries, artist records, and artwork-specific history/provenance. Imported paths are relative to `collection/`.
+- `collection/catalog.json`, `artists.json`, `holdings.json`: selected archival catalog and ownership evidence.
+- `collection/snapshots/`: the selected artworks' raw IPFS assets and on-chain token records, plus block-pinned wallet inventories, source provenance and schema/contract context. Original wallet inventories can mention other holdings; only the selected artwork media is copied.
+- `previews/`: existing self-contained PNG/stroke replay examples, SVG spot checks, and comparison page, updated to use the project copies.
+- Original renderer/codec vendor distributions and licenses remain in the permanent archive; they are not copied into this website project.
+- `source/archive/`: exact copies of the original preview/exporter reference files.
+- `source/import-manifest.json`: each copied source file's archive path, project path and SHA-256, plus the original archive checksum baseline and copy time.
+- `tools/`: import, verification and SVG export utilities.
+
+The complete permanent archive remains at `../nifty-ink-archive`. This website project uses regular-file copies with independent file identities. It has no links into the archive and can be moved without breaking its collection paths. Full transaction receipts, block headers, raw index/RPC responses and unrelated holdings remain in the permanent archive.
+
+Keep the imported source bytes intact. Build thumbnails, optimized assets, SVG exports and website output in separate directories. The gallery build can publish the media it needs; the provenance/vendor directories do not need to be served wholesale.
+
+## Verify the copied data
+
+```sh
+python3 tools/verify-collection.py
+python3 tools/verify-collection.py --compare-archive
+```
+
+The first command works without the archive. The second also compares each copied file with its original and confirms the files do not share archive inodes. Verification checks catalog membership, all owned editions, provenance paths, retained IPFS objects, preview sources and SVG references.
+
+Python 3.11 or newer is sufficient; no packages or network access are required.
+
+## Source import and SVG export
+
+```sh
+python3 tools/import-archive.py
+python3 tools/export-svg.py
+```
+
+The import reads the permanent archive and copies nnxyz plus scrimshaw. Existing imported files must still match their source hashes; it refuses to overwrite changed copies. It never changes the archive. Additional artists can be imported later with `--include-related` after choosing to expand the gallery.
+
+The exporter regenerates the three existing native-vector SVG spot checks. It can also export any copied drawing:
+
+```sh
+python3 tools/export-svg.py "collection/artists/<artist>/artworks/<CID>/strokes.json" --output /tmp/artwork.svg --title "Artwork title"
+```
+
+The stroke data preserves geometry, colors, brush radii and drawing order, with full coordinate precision. It can support self-hosted playback and SVG rendering without depending on nifty.ink.

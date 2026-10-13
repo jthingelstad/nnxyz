@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:48.527661-05:00",
+    "usage": {
+      "inputTokens": 6222,
+      "outputTokens": 837,
+      "totalTokens": 7059,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13665
+    },
+    "requestId": "56d52433-ae8a-489a-8f38-e737a22b079b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two roughly circular forms sit left and right of a thick vertical black bar near center; the left circle contains layered blue and red loops, the right is a looser rectangle of white scribble on dark ground.\",\n    \"A horizontal pink-lavender band cuts across the middle-right, flanked above by warm amber and below by gray; red, yellow, and blue lines cross the whole surface in short diagonal bursts.\",\n    \"Along the lower edge, a jagged zigzag line in black runs above a white horizontal bar, with dense black scribble filling the lower-center zone and a small artist mark in the bottom-right corner.\"\n  ],\n  \"reading\": \"Two looping orbital forms flank a heavy black vertical, giving the surface a face-like structure without resolving into one. The pink band holds a moment of quiet against the surrounding red and amber heat. That zigzag border at the bottom reads as a barrier or a grin depending on where attention lands — the image keeps both possibilities open at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #193 and nnxyz nnotb #195 share the same face-like two-circle layout and zigzag lower edge, suggesting this configuration recurs across the group. The rawblocks works in the owned collection use a quieter, more open ground by contrast.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF\",\n      \"reason\": \"nnxyz nnotb #195 repeats the paired-circle structure and zigzag lower line seen here, but swaps the gray-and-red ground for a saturated orange field, sharpening the contrast between the two works.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w\",\n      \"reason\": \"nnxyz nnotb #193 uses the same dense overlapping line language and a horizontal yellow bar, but its ground is cool gray-green rather than warm red-amber, making the color temperature shift between the two works visible.\"\n    }\n  ],\n  \"tags\": [\n    \"circular looping forms\",\n    \"vertical black bar\",\n    \"horizontal color band\",\n    \"zigzag border line\",\n    \"layered diagonal marks\",\n    \"face-like structure\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between containment and overflow\",\n    \"ambiguous barrier or grin\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the two orbital forms, the pink horizontal band, or the zigzag line at the bottom — and does that entry point change what the vertical black bar seems to be doing?\",\n  \"ambiguities\": [\n    \"The face-like reading is a visual inference from the two-circle and lower-bar arrangement; no subject identification is confirmed by metadata.\",\n    \"nnxyz rawblocks #8 (QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy) shows a figurative head with a quieter ground and was inspected, but the formal overlap with #194 is too limited to support a useful connection beyond collection contrast.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfT7CunjsKenygg3oymRQRHrKywqZ7r2BZtjBHd6m8M7j",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfT7CunjsKenygg3oymRQRHrKywqZ7r2BZtjBHd6m8M7j/image.png",
+        "imageSHA256": "940b81ae1c53a3a41b7a0fcbd45467afbe57cddb0cd0169ddd2692f31ef3bfe9"
+      },
+      {
+        "artworkId": "QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w/image.png",
+        "imageSHA256": "526a36144be11d7301b32cdd65b29d9ddfb9503a84b10b400264afdfe6e40d34"
+      },
+      {
+        "artworkId": "QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy/image.png",
+        "imageSHA256": "366f9fee10b634fa20c04fe2fd7571c1125049e75353d6cc3aee9a9dc8e748ee"
+      },
+      {
+        "artworkId": "QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF/image.png",
+        "imageSHA256": "d4c179828ec61a4eb2744cfd3b5b3d6af2398bb9851c8d11fdaad59c1d86fa10"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:55.268435-05:00",
+    "usage": {
+      "inputTokens": 7081,
+      "outputTokens": 909,
+      "totalTokens": 7990,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6664
+    },
+    "requestId": "112601e9-5de0-4305-90fb-2d4105b595a9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two roughly circular forms flank a thick vertical black bar near center; the left circle holds layered blue and red loops, the right is a looser rectangle of white scribble on a dark ground.\",\n    \"A horizontal pink-lavender band cuts across the middle-right, flanked above by warm amber and below by gray; red, yellow, and blue lines cross the surface in short diagonal bursts.\",\n    \"Along the lower edge, a jagged zigzag line in black runs above a white horizontal bar, with dense black scribble filling the lower-center zone and a small artist mark in the bottom-right corner.\"\n  ],\n  \"reading\": \"Two looping orbital forms flank a heavy black vertical, giving the surface a face-like structure without resolving into one. The pink band holds a moment of quiet against the surrounding red and amber. That zigzag border at the bottom reads as a barrier or a grin depending on where attention lands — the image keeps both possibilities open at once.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #193 and nnxyz nnotb #195 share a similar two-circle layout and zigzag lower edge. The rawblocks works in the owned collection use a quieter, more open ground by contrast.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF\",\n      \"reason\": \"nnxyz nnotb #195 repeats the paired-circle structure and zigzag lower line visible here, but replaces the gray-and-red ground with a saturated orange field, sharpening the color contrast between the two works.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w\",\n      \"reason\": \"nnxyz nnotb #193 shares the dense overlapping line language and a strong horizontal bar, but its ground is cool gray-green rather than warm red-amber, making the temperature shift between the two works visible.\"\n    }\n  ],\n  \"tags\": [\n    \"circular looping forms\",\n    \"vertical black bar\",\n    \"horizontal color band\",\n    \"zigzag border line\",\n    \"layered diagonal marks\",\n    \"face-like structure\"\n  ],\n  \"interpretiveTags\": [\n    \"ambiguous barrier or grin\",\n    \"tension between containment and overflow\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the two orbital forms, the pink horizontal band, or the zigzag line at the bottom — and does that entry point change what the vertical black bar seems to be doing?\",\n  \"ambiguities\": [\n    \"The face-like reading is a visual inference from the two-circle and lower-bar arrangement; no subject identification is confirmed by metadata.\",\n    \"nnxyz rawblocks #8 was inspected but its figurative, quieter ground offers too limited a formal overlap with #194 to support a useful connection beyond general collection contrast.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: pink-lavender band, paired circular forms, zigzag lower edge, and vertical black bar are all visible.\",\n    \"Both comparison connections verified against inspected images: #195 shows paired circles and zigzag on orange ground; #193 shows dense line work and horizontal bar on cool gray-green ground — temperature contrast claim holds.\",\n    \"No invented biography, intent, technique, or subject identity found in draft; face-like reading correctly framed as inference; rawblocks connection correctly excluded from connections field.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfT7CunjsKenygg3oymRQRHrKywqZ7r2BZtjBHd6m8M7j",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfT7CunjsKenygg3oymRQRHrKywqZ7r2BZtjBHd6m8M7j/image.png",
+        "imageSHA256": "940b81ae1c53a3a41b7a0fcbd45467afbe57cddb0cd0169ddd2692f31ef3bfe9"
+      },
+      {
+        "artworkId": "QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w/image.png",
+        "imageSHA256": "526a36144be11d7301b32cdd65b29d9ddfb9503a84b10b400264afdfe6e40d34"
+      },
+      {
+        "artworkId": "QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy/image.png",
+        "imageSHA256": "366f9fee10b634fa20c04fe2fd7571c1125049e75353d6cc3aee9a9dc8e748ee"
+      },
+      {
+        "artworkId": "QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF/image.png",
+        "imageSHA256": "d4c179828ec61a4eb2744cfd3b5b3d6af2398bb9851c8d11fdaad59c1d86fa10"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two roughly circular forms sit left and right of a thick vertical black bar near center; the left circle contains layered blue and red loops, the right is a looser rectangle of white scribble on dark ground.\", \"A horizontal pink-lavender band cuts across the middle-right, flanked above by warm amber and below by gray; red, yellow, and blue lines cross the whole surface in short diagonal bursts.\", \"Along the lower edge, a jagged zigzag line in black runs above a white horizontal bar, with dense black scribble filling the lower-center zone and a small artist mark in the bottom-right corner.\"], \"reading\": \"Two looping orbital forms flank a heavy black vertical, giving the surface a face-like structure without resolving into one. The pink band holds a moment of quiet against the surrounding red and amber heat. That zigzag border at the bottom reads as a barrier or a grin depending on where attention lands — the image keeps both possibilities open at once.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #193 and nnxyz nnotb #195 share the same face-like two-circle layout and zigzag lower edge, suggesting this configuration recurs across the group. The rawblocks works in the owned collection use a quieter, more open ground by contrast.\", \"connections\": [{\"targetArtworkId\": \"QmP3pUx1yPX8gF9ipHL5Yb4VBJrNwn7DSDssB4vx7jQrAF\", \"reason\": \"nnxyz nnotb #195 repeats the paired-circle structure and zigzag lower line seen here, but swaps the gray-and-red ground for a saturated orange field, sharpening the contrast between the two works.\"}, {\"targetArtworkId\": \"QmPW4unigvh4jigEMxL93DEwnVJdS4dPhpP8x7gijXvC8w\", \"reason\": \"nnxyz nnotb #193 uses the same dense overlapping line language and a horizontal yellow bar, but its ground is cool gray-green rather than warm red-amber, making the color temperature shift between the two works visible.\"}], \"tags\": [\"circular looping forms\", \"vertical black bar\", \"horizontal color band\", \"zigzag border line\", \"layered diagonal marks\", \"face-like structure\"], \"interpretiveTags\": [\"tension between containment and overflow\", \"ambiguous barrier or grin\"], \"lookingQuestion\": \"Where does your eye settle first — on the two orbital forms, the pink horizontal band, or the zigzag line at the bottom — and does that entry point change what the vertical black bar seems to be doing?\", \"ambiguities\": [\"The face-like reading is a visual inference from the two-circle and lower-bar arrangement; no subject identification is confirmed by metadata.\", \"nnxyz rawblocks #8 (QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy) shows a figurative head with a quieter ground and was inspected, but the formal overlap with #194 is too limited to support a useful connection beyond collection contrast.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:10.589399-05:00",
+    "usage": {
+      "inputTokens": 6179,
+      "outputTokens": 749,
+      "totalTokens": 6928,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13172
+    },
+    "requestId": "a822ba83-bce7-4848-ba29-b6f70540af0b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly rectangular head shape sits against layered dark-green shadow blobs; a white outline traces the outer edge while dense brown and blue scribble lines fill the interior.\",\n    \"Two eye sockets hold white oval highlights with black pupils; the left eye is larger and more open, the right smaller and partially shadowed, creating visible asymmetry.\",\n    \"A wide rectangular mouth near the lower third shows two rows of cream and white teeth outlined in red-orange, set against a black interior gap.\"\n  ],\n  \"reading\": \"The face pushes forward from its green ground, its lopsided eyes giving it an off-balance stare that reads as wary rather than aggressive. Brown scribble lines layer over the olive mass without fully covering it, leaving the surface feeling raw. The red-orange lip line is the only warm accent in an otherwise cool, dark field, pulling the eye down to the wide tooth-filled mouth.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #83 and nnxyz nifty faces #85. All three share the rectangular tooth-grid motif and white outline convention, though #84 strips the palette to near-monochrome olive and black where its neighbors use warmer or more varied hues.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8\",\n      \"reason\": \"nnxyz nifty faces #85 repeats the same red-outlined rectangular tooth grid and paired rectangular eye sockets, but shifts the ground to grey and adds a brimmed shape at the top, making the structural similarities easy to compare directly.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV\",\n      \"reason\": \"nnxyz nnotb #172 shares the dark-green background field and a wide tooth-baring mouth, but its scribble lines are multicolored and far denser, offering a strong contrast in how the same face-on-green format can feel saturated versus restrained.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye sockets\",\n    \"rectangular tooth grid\",\n    \"olive-green palette\",\n    \"white outline contour\",\n    \"layered scribble fill\",\n    \"red-orange lip accent\"\n  ],\n  \"lookingQuestion\": \"The two eyes are noticeably different in size and shading — what does that asymmetry do to where your gaze settles on the face?\",\n  \"ambiguities\": [\n    \"Title-derived and recorded-creation neighbor orders align here, but gaps exist elsewhere in the owned subset, so adjacency is not confirmed as making sequence.\",\n    \"The scribble lines read as brown and blue in the image; whether these are separate line layers or a single mixed pass cannot be determined from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE/image.png",
+        "imageSHA256": "d7e2b334061b3fa475290ff89d5f5a56b684f06de85ff9926f2d45edd26a6ef9"
+      },
+      {
+        "artworkId": "QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw/image.png",
+        "imageSHA256": "d1d6fb379807fce48da6bfc7cb7de572ac2dfe3d7fb439ffbc83d2713d3bbad1"
+      },
+      {
+        "artworkId": "QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV/image.png",
+        "imageSHA256": "bb9e72a385ede768d203f76d2fa1ca4032a532db474a3794abeaa23e79675eaa"
+      },
+      {
+        "artworkId": "QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8/image.png",
+        "imageSHA256": "e8cca3217d04a2fc63be89c62eb8bbcfa303425e76314a4d88d95d6d139bbb79"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:17.292179-05:00",
+    "usage": {
+      "inputTokens": 6960,
+      "outputTokens": 963,
+      "totalTokens": 7923,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6629
+    },
+    "requestId": "9f387a11-04b5-41da-84bb-26eab815a8e4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly rectangular head shape sits against layered dark-green shadow blobs; a white outline traces the outer edge while dense brown and blue scribble lines fill the interior.\",\n    \"Two eye sockets hold white oval highlights with black pupils; the left eye is larger and more open, the right smaller and partially shadowed, creating visible asymmetry.\",\n    \"A wide rectangular mouth near the lower third shows two rows of cream and white teeth outlined in red-orange, set against a black interior gap.\"\n  ],\n  \"reading\": \"The face pushes forward from its green ground, its lopsided eyes giving it an off-balance stare that reads as wary rather than aggressive. Brown scribble lines layer over the olive mass without fully covering it, leaving the surface feeling raw. The red-orange lip line is the only warm accent in an otherwise cool, dark field, pulling the eye down to the wide tooth-filled mouth.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #83 and nnxyz nifty faces #85. All three share a rectangular tooth-grid and white outline convention, though #84 holds closer to olive and black where its neighbors use warmer or more varied hues.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8\",\n      \"reason\": \"nnxyz nifty faces #85 repeats the red-outlined rectangular tooth grid and paired rectangular eye sockets, but shifts the ground to grey and adds a flat brimmed shape at the top, making the structural similarities and palette differences easy to compare directly.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV\",\n      \"reason\": \"nnxyz nnotb #172 shares a dark-green background and a wide tooth-baring mouth, but its scribble lines are multicolored and far denser, offering a direct contrast between saturated and restrained treatments of the same face-on-green format.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye sockets\",\n    \"rectangular tooth grid\",\n    \"olive-green palette\",\n    \"white outline contour\",\n    \"layered scribble fill\",\n    \"red-orange lip accent\"\n  ],\n  \"lookingQuestion\": \"The two eyes differ noticeably in size and shading — what does that asymmetry do to where your gaze settles on the face?\",\n  \"ambiguities\": [\n    \"Title-derived and recorded-creation neighbor orders align here, but gaps exist elsewhere in the owned subset, so adjacency is not confirmed as a making sequence.\",\n    \"The scribble lines read as brown and blue in the image; whether these are separate line layers or a single mixed pass cannot be determined from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: olive-green ground blobs, brown and blue scribble fill, red-orange lip outline, and cream-white teeth are all visible.\",\n    \"Comparison with QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8 confirmed: grey ground, brimmed shape, and matching red-outlined rectangular tooth grid are all visible in that image.\",\n    \"Comparison with QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV confirmed: dark-green background and wide tooth-baring mouth present; multicolored dense scribble lines contrast clearly with #84's restrained olive-and-brown fill — connection is well-supported.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE/image.png",
+        "imageSHA256": "d7e2b334061b3fa475290ff89d5f5a56b684f06de85ff9926f2d45edd26a6ef9"
+      },
+      {
+        "artworkId": "QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw/image.png",
+        "imageSHA256": "d1d6fb379807fce48da6bfc7cb7de572ac2dfe3d7fb439ffbc83d2713d3bbad1"
+      },
+      {
+        "artworkId": "QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV/image.png",
+        "imageSHA256": "bb9e72a385ede768d203f76d2fa1ca4032a532db474a3794abeaa23e79675eaa"
+      },
+      {
+        "artworkId": "QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8/image.png",
+        "imageSHA256": "e8cca3217d04a2fc63be89c62eb8bbcfa303425e76314a4d88d95d6d139bbb79"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A roughly rectangular head shape sits against layered dark-green shadow blobs; a white outline traces the outer edge while dense brown and blue scribble lines fill the interior.\", \"Two eye sockets hold white oval highlights with black pupils; the left eye is larger and more open, the right smaller and partially shadowed, creating visible asymmetry.\", \"A wide rectangular mouth near the lower third shows two rows of cream and white teeth outlined in red-orange, set against a black interior gap.\"], \"reading\": \"The face pushes forward from its green ground, its lopsided eyes giving it an off-balance stare that reads as wary rather than aggressive. Brown scribble lines layer over the olive mass without fully covering it, leaving the surface feeling raw. The red-orange lip line is the only warm accent in an otherwise cool, dark field, pulling the eye down to the wide tooth-filled mouth.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #83 and nnxyz nifty faces #85. All three share the rectangular tooth-grid motif and white outline convention, though #84 strips the palette to near-monochrome olive and black where its neighbors use warmer or more varied hues.\", \"connections\": [{\"targetArtworkId\": \"QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8\", \"reason\": \"nnxyz nifty faces #85 repeats the same red-outlined rectangular tooth grid and paired rectangular eye sockets, but shifts the ground to grey and adds a brimmed shape at the top, making the structural similarities easy to compare directly.\"}, {\"targetArtworkId\": \"QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV\", \"reason\": \"nnxyz nnotb #172 shares the dark-green background field and a wide tooth-baring mouth, but its scribble lines are multicolored and far denser, offering a strong contrast in how the same face-on-green format can feel saturated versus restrained.\"}], \"tags\": [\"asymmetric eye sockets\", \"rectangular tooth grid\", \"olive-green palette\", \"white outline contour\", \"layered scribble fill\", \"red-orange lip accent\"], \"lookingQuestion\": \"The two eyes are noticeably different in size and shading — what does that asymmetry do to where your gaze settles on the face?\", \"ambiguities\": [\"Title-derived and recorded-creation neighbor orders align here, but gaps exist elsewhere in the owned subset, so adjacency is not confirmed as making sequence.\", \"The scribble lines read as brown and blue in the image; whether these are separate line layers or a single mixed pass cannot be determined from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:41.906158-05:00",
+    "usage": {
+      "inputTokens": 6745,
+      "outputTokens": 839,
+      "totalTokens": 7584,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5986
+    },
+    "requestId": "4964b430-06cd-4640-ade1-8f2a7b5f5357",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly rectangular head shape sits against layered dark-green shadow blobs; a white outline traces the outer edge while dense brown and blue scribble lines fill the interior.\",\n    \"Two eye sockets hold white oval highlights with black pupils; the left eye is larger and more open, the right smaller and partially shadowed, creating visible asymmetry.\",\n    \"A wide rectangular mouth near the lower third shows two rows of cream and white teeth outlined in red-orange, set against a black interior gap.\"\n  ],\n  \"reading\": \"The face pushes forward from its green ground, its lopsided eyes giving it an off-balance stare that reads as wary rather than aggressive. Brown scribble lines layer over the olive mass without fully covering it, leaving the surface feeling raw. The red-orange lip line is the only warm accent in an otherwise cool, dark field, pulling the eye down to the wide tooth-filled mouth.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #83 and nnxyz nifty faces #85. All three show a rectangular tooth grid and white outline, though #84 holds closer to olive and black where its neighbors use warmer or more varied hues.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8\",\n      \"reason\": \"nnxyz nifty faces #85 repeats the red-outlined rectangular tooth grid and paired rectangular eye sockets, but shifts the ground to grey and adds a flat brimmed shape at the top, making the structural similarities and palette differences easy to compare directly.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV\",\n      \"reason\": \"nnxyz nnotb #172 shares a dark-green background and a wide tooth-baring mouth, but its scribble lines are multicolored and far denser, offering a direct contrast between saturated and restrained treatments of the same face-on-green format.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye sockets\",\n    \"rectangular tooth grid\",\n    \"olive-green palette\",\n    \"white outline contour\",\n    \"layered scribble fill\",\n    \"red-orange lip accent\"\n  ],\n  \"lookingQuestion\": \"The two eyes differ noticeably in size and shading — what does that asymmetry do to where your gaze settles on the face?\",\n  \"ambiguities\": [\n    \"Title-derived and recorded-creation neighbor orders align here, but gaps exist elsewhere in the owned subset, so adjacency is not confirmed as a making sequence.\",\n    \"The scribble lines read as brown and blue in the image; whether these are separate line layers or a single mixed pass cannot be determined from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Removed the word 'convention' from contextAngle; the shared rectangular tooth grid and white outline are now described as visible formal features observed across the three inspected images rather than attributed to a named practice.\",\n    \"Reading word count confirmed within 55–65 word range; no other flagged terms present.\",\n    \"All other fields retained without change; no additional flags triggered on re-examination.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE/image.png",
+        "imageSHA256": "d7e2b334061b3fa475290ff89d5f5a56b684f06de85ff9926f2d45edd26a6ef9"
+      },
+      {
+        "artworkId": "QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRHohHNq8fxPoRD5a52j8wCBhZrQP7nuWKUDbuVT65sLw/image.png",
+        "imageSHA256": "d1d6fb379807fce48da6bfc7cb7de572ac2dfe3d7fb439ffbc83d2713d3bbad1"
+      },
+      {
+        "artworkId": "QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV/image.png",
+        "imageSHA256": "bb9e72a385ede768d203f76d2fa1ca4032a532db474a3794abeaa23e79675eaa"
+      },
+      {
+        "artworkId": "QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8/image.png",
+        "imageSHA256": "e8cca3217d04a2fc63be89c62eb8bbcfa303425e76314a4d88d95d6d139bbb79"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A roughly rectangular head shape sits against layered dark-green shadow blobs; a white outline traces the outer edge while dense brown and blue scribble lines fill the interior.\", \"Two eye sockets hold white oval highlights with black pupils; the left eye is larger and more open, the right smaller and partially shadowed, creating visible asymmetry.\", \"A wide rectangular mouth near the lower third shows two rows of cream and white teeth outlined in red-orange, set against a black interior gap.\"], \"reading\": \"The face pushes forward from its green ground, its lopsided eyes giving it an off-balance stare that reads as wary rather than aggressive. Brown scribble lines layer over the olive mass without fully covering it, leaving the surface feeling raw. The red-orange lip line is the only warm accent in an otherwise cool, dark field, pulling the eye down to the wide tooth-filled mouth.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #83 and nnxyz nifty faces #85. All three share a rectangular tooth-grid and white outline convention, though #84 holds closer to olive and black where its neighbors use warmer or more varied hues.\", \"connections\": [{\"targetArtworkId\": \"QmdU1T8KX1eg8EQJqkbxVxwpbqLgbT6zoe44c5AyNigXk8\", \"reason\": \"nnxyz nifty faces #85 repeats the red-outlined rectangular tooth grid and paired rectangular eye sockets, but shifts the ground to grey and adds a flat brimmed shape at the top, making the structural similarities and palette differences easy to compare directly.\"}, {\"targetArtworkId\": \"QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV\", \"reason\": \"nnxyz nnotb #172 shares a dark-green background and a wide tooth-baring mouth, but its scribble lines are multicolored and far denser, offering a direct contrast between saturated and restrained treatments of the same face-on-green format.\"}], \"tags\": [\"asymmetric eye sockets\", \"rectangular tooth grid\", \"olive-green palette\", \"white outline contour\", \"layered scribble fill\", \"red-orange lip accent\"], \"lookingQuestion\": \"The two eyes differ noticeably in size and shading — what does that asymmetry do to where your gaze settles on the face?\", \"ambiguities\": [\"Title-derived and recorded-creation neighbor orders align here, but gaps exist elsewhere in the owned subset, so adjacency is not confirmed as a making sequence.\", \"The scribble lines read as brown and blue in the image; whether these are separate line layers or a single mixed pass cannot be determined from the image alone.\"]}\nFLAGS:\n[{\"artworkId\": \"Qmd4eJTH1Mx3Kbmj54LbCne7KCyFTLzZtWVJfPqcA5X4RE\", \"field\": \"contextAngle\", \"rule\": \"unsourced-convention\", \"matches\": [\"convention\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

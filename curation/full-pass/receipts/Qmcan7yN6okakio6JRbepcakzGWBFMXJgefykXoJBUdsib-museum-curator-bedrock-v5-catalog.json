@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:51.151186-05:00",
+    "usage": {
+      "inputTokens": 6258,
+      "outputTokens": 703,
+      "totalTokens": 6961,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12749
+    },
+    "requestId": "65f7a78c-687a-4560-832a-f603ab1bd776",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark purple hooded form fills the frame against solid black; a string of evenly spaced yellow dots arcs from upper left, across the shoulders, and down to the lower corners.\",\n    \"The face is divided into two stacked white rectangular blocks—upper eyes, lower teeth—each outlined in red, with bursting yellow and red spiky marks at the left eye socket.\",\n    \"Loose yellow lines radiate outward from the shoulders and hat brim, overlapping the purple mass without following its contours.\"\n  ],\n  \"reading\": \"The yellow dot chain draws the eye around the figure before landing on the white blocks at its center. Those blocks read as a mask rather than a face—flat, segmented, held in place by red outlines. The spiky marks at the eye suggest heat or alarm. Purple and black absorb most of the image, making the white and yellow feel exposed rather than bright.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors are nnxyz nifty faces #72 and nnxyz nifty faces #74. Title order and recorded creation order align here, though gaps exist elsewhere in the family. The dot-chain ornament appears in no other inspected comparison image.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5\",\n      \"reason\": \"Both works use stacked white rectangular blocks for eyes and teeth against a dark hooded form, but #72 strips away all color accent, relying on red scrawl alone where #73 adds the yellow dot chain and spiky bursts.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo\",\n      \"reason\": \"nnotb #57 shares the yellow-orange iris marks inside dark eye sockets and the wide white tooth grid, offering a cross-collection parallel in how both images use yellow to activate otherwise dark eye areas.\"\n    }\n  ],\n  \"tags\": [\n    \"dot chain\",\n    \"segmented white blocks\",\n    \"hooded form\",\n    \"yellow radiating lines\",\n    \"red outline\",\n    \"black ground\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"masked\",\n    \"high contrast tension\"\n  ],\n  \"lookingQuestion\": \"Does the arc of yellow dots lead your eye toward the face or away from it—and where does the path end?\",\n  \"ambiguities\": [\n    \"The lettering visible on the hat brim is treated as image content; its meaning is not interpreted.\",\n    \"The dot chain is a strong visual feature with no direct parallel in the inspected comparisons, so its role within the broader collection remains unresolved.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib/image.png",
+        "imageSHA256": "16322745b72186c499d967540e0eaa0274f496da4150183bb5f6a98f0218106b"
+      },
+      {
+        "artworkId": "QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5/image.png",
+        "imageSHA256": "17071a3f475a9818d777e4235cfb7a2f1836635234e45d7fc3ba9b55cb73d0e0"
+      },
+      {
+        "artworkId": "QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo/image.png",
+        "imageSHA256": "d3085c18f28d29c84a01950afb7adbabb89ec565dbe47b7d03150b9c00faa01c"
+      },
+      {
+        "artworkId": "QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH/image.png",
+        "imageSHA256": "bb61acbe5f679b4856b0e3f8575add40902e77f3a8a86ef97a8bb3aafb793ce2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:57.015394-05:00",
+    "usage": {
+      "inputTokens": 6981,
+      "outputTokens": 884,
+      "totalTokens": 7865,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5795
+    },
+    "requestId": "96f632c8-2d52-458c-899d-88aa8b636834",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark purple hooded form fills the frame against solid black; a string of evenly spaced yellow dots arcs from upper left, across the shoulders, and down to the lower corners.\",\n    \"The face is divided into two stacked white rectangular blocks—upper eyes, lower teeth—each outlined in red, with bursting yellow and red spiky marks concentrated at the left eye socket.\",\n    \"Loose yellow lines radiate outward from the shoulders and hat brim, overlapping the purple mass without following its contours.\"\n  ],\n  \"reading\": \"The yellow dot chain pulls the eye around the figure before landing on the white blocks at its center. Those blocks read as a mask rather than a face—flat, segmented, held in place by red outlines. The spiky marks at the left eye suggest heat or alarm. Purple and black absorb most of the image, making the white and yellow feel exposed rather than bright.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors are nnxyz nifty faces #72 and nnxyz nifty faces #74. Title order and recorded creation order align here, though gaps exist elsewhere in the family. The dot-chain ornament appears in none of the other inspected comparison images.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5\",\n      \"reason\": \"Both works use stacked white rectangular blocks for eyes and teeth set against a dark hooded form, but #72 relies on red scrawl alone where #73 adds the yellow dot chain and spiky bursts.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo\",\n      \"reason\": \"nnotb #57 shares yellow-orange marks inside dark eye areas and a wide white tooth grid, offering a cross-collection parallel in how yellow activates otherwise dark eye zones.\"\n    }\n  ],\n  \"tags\": [\"dot chain\", \"segmented white blocks\", \"hooded form\", \"yellow radiating lines\", \"red outline\", \"black ground\"],\n  \"interpretiveTags\": [\"confrontational\", \"masked\", \"high contrast tension\"],\n  \"lookingQuestion\": \"Does the arc of yellow dots lead your eye toward the face or away from it—and where does the path end?\",\n  \"ambiguities\": [\n    \"Lettering visible on the hat brim is treated as image content; its meaning is not interpreted.\",\n    \"The dot chain is a strong visual feature with no direct parallel in the inspected comparisons, so its role within the broader collection remains unresolved.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: purple hood, solid black ground, yellow dot arc, stacked white rectangular blocks with red outlines, and spiky yellow-red marks at left eye socket all verified against the primary image.\",\n    \"Comparison with QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5 confirmed: stacked white blocks and dark hooded form present in both; #72 uses red scrawl without yellow dots or spiky bursts, contrast is accurate.\",\n    \"Comparison with QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo confirmed: yellow-orange iris marks in dark eye sockets and wide white tooth grid visible; cross-collection parallel is supported by inspected image.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib/image.png",
+        "imageSHA256": "16322745b72186c499d967540e0eaa0274f496da4150183bb5f6a98f0218106b"
+      },
+      {
+        "artworkId": "QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5/image.png",
+        "imageSHA256": "17071a3f475a9818d777e4235cfb7a2f1836635234e45d7fc3ba9b55cb73d0e0"
+      },
+      {
+        "artworkId": "QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo/image.png",
+        "imageSHA256": "d3085c18f28d29c84a01950afb7adbabb89ec565dbe47b7d03150b9c00faa01c"
+      },
+      {
+        "artworkId": "QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH/image.png",
+        "imageSHA256": "bb61acbe5f679b4856b0e3f8575add40902e77f3a8a86ef97a8bb3aafb793ce2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dark purple hooded form fills the frame against solid black; a string of evenly spaced yellow dots arcs from upper left, across the shoulders, and down to the lower corners.\", \"The face is divided into two stacked white rectangular blocks—upper eyes, lower teeth—each outlined in red, with bursting yellow and red spiky marks at the left eye socket.\", \"Loose yellow lines radiate outward from the shoulders and hat brim, overlapping the purple mass without following its contours.\"], \"reading\": \"The yellow dot chain draws the eye around the figure before landing on the white blocks at its center. Those blocks read as a mask rather than a face—flat, segmented, held in place by red outlines. The spiky marks at the eye suggest heat or alarm. Purple and black absorb most of the image, making the white and yellow feel exposed rather than bright.\", \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbors are nnxyz nifty faces #72 and nnxyz nifty faces #74. Title order and recorded creation order align here, though gaps exist elsewhere in the family. The dot-chain ornament appears in no other inspected comparison image.\", \"connections\": [{\"targetArtworkId\": \"QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5\", \"reason\": \"Both works use stacked white rectangular blocks for eyes and teeth against a dark hooded form, but #72 strips away all color accent, relying on red scrawl alone where #73 adds the yellow dot chain and spiky bursts.\"}, {\"targetArtworkId\": \"QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo\", \"reason\": \"nnotb #57 shares the yellow-orange iris marks inside dark eye sockets and the wide white tooth grid, offering a cross-collection parallel in how both images use yellow to activate otherwise dark eye areas.\"}], \"tags\": [\"dot chain\", \"segmented white blocks\", \"hooded form\", \"yellow radiating lines\", \"red outline\", \"black ground\"], \"interpretiveTags\": [\"confrontational\", \"masked\", \"high contrast tension\"], \"lookingQuestion\": \"Does the arc of yellow dots lead your eye toward the face or away from it—and where does the path end?\", \"ambiguities\": [\"The lettering visible on the hat brim is treated as image content; its meaning is not interpreted.\", \"The dot chain is a strong visual feature with no direct parallel in the inspected comparisons, so its role within the broader collection remains unresolved.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

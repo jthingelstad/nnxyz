@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:24.384614-05:00",
+    "usage": {
+      "inputTokens": 6927,
+      "outputTokens": 661,
+      "totalTokens": 7588,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12534
+    },
+    "requestId": "7c93a44c-dce3-46a0-9756-b856731ad1ff",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"The face is split down the middle: the left half sits against a pale, softly blurred ground while the right half is buried under dense red-brown cross-hatching, creating a hard tonal divide.\",\n    \"Each eye socket holds a small yellow-green disc with a blue-teal dot at its centre; the left socket is ringed by a large oval of looping lines, the right is framed by a rectangular scribble block.\",\n    \"Four white rectangular teeth protrude at the lower centre, outlined in black, sitting below a compressed mouth area where pink, teal and red lines tangle without resolving into a clear lip form.\"\n  ],\n  \"reading\": \"A face split cleanly between open air and dense red scrawl reads less as a person than as two competing states sharing one skull. The mismatched eye treatments — one wide and orbiting, one boxed and compressed — push that split further. The exposed teeth at the bottom anchor the image in something blunt and physical, while the soft blurred ground behind the pale half offers an odd calm against the friction on the other side.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #48 and #50. Where #48 fills its surface with flat, high-contrast graphic blocks and lettering, #49 builds the same density through layered line rather than flat fill, and #50 abandons the face structure almost entirely for loose marks on a dark ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt\",\n      \"reason\": \"Both works center a face-like form with two distinct eye zones and exposed teeth, and both use a warm-to-neutral background that bleeds through the line work rather than sitting behind it.\"\n    }\n  ],\n  \"tags\": [\n    \"bilateral asymmetry\",\n    \"cross-hatched red field\",\n    \"looping eye rings\",\n    \"exposed teeth\",\n    \"split ground\",\n    \"layered line over soft blur\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"duality\",\n    \"unease\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the pale left ground end and the red-brown hatching begin — is there a clean edge, a gradual overlap, or something else?\",\n  \"ambiguities\": [\n    \"The soft circular blurs in the background may be a separate layer or part of the same mark-making pass; the image alone cannot confirm which.\",\n    \"The nnotb #93 comparison shares face structure and warm tones but comes from a different collection; the formal link is meaningful but the owned-subset context differs.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2/image.png",
+        "imageSHA256": "98a770300ef0d8cdc65c7c560f610e10409fec0fe42be343c6665775a2c3553a"
+      },
+      {
+        "artworkId": "QmWNiq7JW1LY5rwcquWFAch3JWsx3x2Be6iQ3kN4VGyf2Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWNiq7JW1LY5rwcquWFAch3JWsx3x2Be6iQ3kN4VGyf2Q/image.png",
+        "imageSHA256": "c8a7a12a2a04658e033c47813993e31ad53193effdca92660297b38f3133f035"
+      },
+      {
+        "artworkId": "QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt/image.png",
+        "imageSHA256": "3fc438063eeb938f5dd65a5331835825d5f4ca1bc2ef432ef7dbb059ebb1c123"
+      },
+      {
+        "artworkId": "QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t/image.png",
+        "imageSHA256": "697b2300a608e8b7e002530b7438440dca72e91acf060ff71f0262a095ed4d06"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:32.804863-05:00",
+    "usage": {
+      "inputTokens": 7617,
+      "outputTokens": 896,
+      "totalTokens": 8513,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 8324
+    },
+    "requestId": "a25e96b1-fd06-4715-bf0e-426db51bb275",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"The face is split down the middle: the left half sits against a pale, softly blurred ground while the right half is buried under dense red-brown cross-hatching, creating a hard tonal divide.\",\n    \"Each eye socket holds a small yellow-green disc with a blue-teal dot at its centre; the left socket is ringed by a large oval of looping lines, the right is framed by a rectangular scribble block.\",\n    \"Four white rectangular teeth protrude at the lower centre, outlined in black, below a compressed mouth area where pink, teal and red lines tangle without resolving into a clear lip form.\"\n  ],\n  \"reading\": \"A face split between open air and dense red scrawl reads less as a person than as two competing states sharing one skull. The mismatched eye treatments — one wide and orbiting, one boxed and compressed — push that split further. The exposed teeth anchor the image in something blunt and physical, while the soft blurred ground behind the pale half offers an odd calm against the friction on the other side.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #48 and #50. Where #48 fills its surface with flat graphic blocks and lettering, #49 builds density through layered line rather than flat fill, and #50 abandons face structure almost entirely for loose marks on a dark ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt\",\n      \"reason\": \"Both center a face-like form with two distinct eye zones and exposed teeth, and both use a warm background that bleeds through the line work rather than sitting cleanly behind it.\"\n    }\n  ],\n  \"tags\": [\n    \"bilateral asymmetry\",\n    \"cross-hatched red field\",\n    \"looping eye rings\",\n    \"exposed teeth\",\n    \"split ground\",\n    \"layered line over soft blur\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"duality\",\n    \"unease\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the pale left ground end and the red-brown hatching begin — is there a clean edge, a gradual overlap, or something else?\",\n  \"ambiguities\": [\n    \"The soft circular blurs in the background may be a separate layer or part of the same mark-making pass; the image alone cannot confirm which.\",\n    \"The nnotb #93 comparison comes from a different collection; the formal link is meaningful but it falls outside the owned nifty-faces subset.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: bilateral tonal split, mismatched eye treatments with yellow-green discs and blue-teal centres, and four white rectangular teeth are all directly visible.\",\n    \"QmWNiq7JW1LY5rwcquWFAch3JWsx3x2Be6iQ3kN4VGyf2Q (#48) confirmed as flat graphic blocks and lettering — contrast with #49 layered-line approach is accurate; QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t (#50) confirmed as dark ground with loose marks, face structure largely absent.\",\n    \"QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt (nnotb #93) confirmed: two glowing eye zones, exposed teeth area, and warm tones bleeding through line work are all visible — comparison retained as formally grounded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSa6tdRDpPw57mweKLCHVSvkpTjMNPtBBzrHPmfnubaH2/image.png",
+        "imageSHA256": "98a770300ef0d8cdc65c7c560f610e10409fec0fe42be343c6665775a2c3553a"
+      },
+      {
+        "artworkId": "QmWNiq7JW1LY5rwcquWFAch3JWsx3x2Be6iQ3kN4VGyf2Q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWNiq7JW1LY5rwcquWFAch3JWsx3x2Be6iQ3kN4VGyf2Q/image.png",
+        "imageSHA256": "c8a7a12a2a04658e033c47813993e31ad53193effdca92660297b38f3133f035"
+      },
+      {
+        "artworkId": "QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt/image.png",
+        "imageSHA256": "3fc438063eeb938f5dd65a5331835825d5f4ca1bc2ef432ef7dbb059ebb1c123"
+      },
+      {
+        "artworkId": "QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQYbdHUb8QBxdARe8naj4urELR2GkbwPaerNtkWPns72t/image.png",
+        "imageSHA256": "697b2300a608e8b7e002530b7438440dca72e91acf060ff71f0262a095ed4d06"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"The face is split down the middle: the left half sits against a pale, softly blurred ground while the right half is buried under dense red-brown cross-hatching, creating a hard tonal divide.\", \"Each eye socket holds a small yellow-green disc with a blue-teal dot at its centre; the left socket is ringed by a large oval of looping lines, the right is framed by a rectangular scribble block.\", \"Four white rectangular teeth protrude at the lower centre, outlined in black, sitting below a compressed mouth area where pink, teal and red lines tangle without resolving into a clear lip form.\"], \"reading\": \"A face split cleanly between open air and dense red scrawl reads less as a person than as two competing states sharing one skull. The mismatched eye treatments — one wide and orbiting, one boxed and compressed — push that split further. The exposed teeth at the bottom anchor the image in something blunt and physical, while the soft blurred ground behind the pale half offers an odd calm against the friction on the other side.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #48 and #50. Where #48 fills its surface with flat, high-contrast graphic blocks and lettering, #49 builds the same density through layered line rather than flat fill, and #50 abandons the face structure almost entirely for loose marks on a dark ground.\", \"connections\": [{\"targetArtworkId\": \"QmdMCngPkLoPXgBjgT1vQ6vttbeq93GikF81XLR1BoDStt\", \"reason\": \"Both works center a face-like form with two distinct eye zones and exposed teeth, and both use a warm-to-neutral background that bleeds through the line work rather than sitting behind it.\"}], \"tags\": [\"bilateral asymmetry\", \"cross-hatched red field\", \"looping eye rings\", \"exposed teeth\", \"split ground\", \"layered line over soft blur\"], \"interpretiveTags\": [\"tension\", \"duality\", \"unease\"], \"lookingQuestion\": \"Where exactly does the pale left ground end and the red-brown hatching begin — is there a clean edge, a gradual overlap, or something else?\", \"ambiguities\": [\"The soft circular blurs in the background may be a separate layer or part of the same mark-making pass; the image alone cannot confirm which.\", \"The nnotb #93 comparison shares face structure and warm tones but comes from a different collection; the formal link is meaningful but the owned-subset context differs.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

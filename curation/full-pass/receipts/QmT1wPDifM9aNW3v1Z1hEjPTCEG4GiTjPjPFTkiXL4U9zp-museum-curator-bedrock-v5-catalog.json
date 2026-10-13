@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:03.677761-05:00",
+    "usage": {
+      "inputTokens": 6179,
+      "outputTokens": 800,
+      "totalTokens": 6979,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12431
+    },
+    "requestId": "994ef087-b30c-418e-a288-d50801a50793",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large black mask-like form dominates the center, with two mismatched eyes: a red spiral on the left and a blue spiral on the right, each ringed by yellow jagged lines.\",\n    \"The background is packed with overlapping horizontal bands of yellow, blue, grey, and red, crossed by loose black, white, and colored line work that runs in all directions.\",\n    \"A white rectangular spiral sits in the lower left corner, echoing the eye spirals but isolated from the central form, while a thick dark red diagonal line cuts from upper center toward the mask.\"\n  ],\n  \"reading\": \"A black mask-like shape holds two unmatched spiral eyes—one red, one blue—that pull attention in opposite directions, giving the face an off-balance feeling. Jagged yellow rings around each eye add a raw, wired quality. The surrounding field of crossed bands and loose lines neither frames nor recedes; it presses in, making the central form feel crowded rather than dominant. The isolated white spiral in the corner reads as an echo left behind.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #239 and nnxyz nnotb #241 share the spiral-eye motif and dense layered line work, though #239 leans toward earth tones and #241 toward warm amber. Title order and recorded creation order align for these three works in the owned subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1\",\n      \"reason\": \"Both works center a large spiral eye ringed by jagged lines against a dense crossed-line background, but #239 uses a single dominant spiral in earth and purple tones where #240 splits the eye motif into two mismatched spirals in red and blue.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy\",\n      \"reason\": \"nnxyz nnotb #241 repeats the concentric-circle motif scattered across the lower field and uses a similar crown-like spike form at the top of its central shape, offering a direct formal echo to the jagged yellow rings in #240.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral eyes\",\n    \"mask form\",\n    \"mismatched bilateral symmetry\",\n    \"crossed line field\",\n    \"jagged yellow outline\",\n    \"isolated corner spiral\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled\",\n    \"confrontational\",\n    \"fragmented\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the red spiral eye and the blue spiral eye—in color, in tightness of coil, in surrounding line weight—do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The dark red diagonal line entering from the upper center could be read as a separate element or as part of the mask form; the image does not resolve this clearly.\",\n    \"The white rectangular spiral in the lower left shares the eye motif's form but its spatial relationship to the central figure is not established by any connecting line or overlap.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp/image.png",
+        "imageSHA256": "de2eeb424f2fd70cf8f072608fa42fb12371e4512ee6883262f963d08fbd1f42"
+      },
+      {
+        "artworkId": "QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1/image.png",
+        "imageSHA256": "d147cba4feac5802491e612ac876b161a8146807d2a80b4ddbb847b909f84e94"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy/image.png",
+        "imageSHA256": "1254ce78cb99421711bf0a55bd6206f1ac84f4412f3a6fc234a75366e482db8f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:10.594405-05:00",
+    "usage": {
+      "inputTokens": 6999,
+      "outputTokens": 905,
+      "totalTokens": 7904,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6836
+    },
+    "requestId": "f8703c02-33e8-43d7-8204-5fcca1fc8f47",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large black mask-like form dominates the center, with two mismatched eyes: a red spiral on the left and a blue spiral on the right, each ringed by yellow jagged lines.\",\n    \"The background is packed with overlapping horizontal bands of yellow, blue, grey, and red, crossed by loose black, white, and colored line work running in all directions.\",\n    \"A white concentric-circle form sits in the lower left corner, echoing the eye spirals but isolated from the central form, while a thick dark red diagonal line descends from upper center toward the mask.\"\n  ],\n  \"reading\": \"A black mask-like shape holds two unmatched spiral eyes—one red, one blue—that pull attention in opposite directions, giving the face an off-balance quality. Jagged yellow rings around each eye add a raw, wired edge. The surrounding field of crossed bands and loose lines neither frames nor recedes; it presses in, making the central form feel crowded rather than dominant. The isolated white spiral in the corner reads as a detached echo.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #239 and nnxyz nnotb #241 share the spiral-eye motif and dense layered line work. Title order and recorded creation order align for these three works in the owned subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1\",\n      \"reason\": \"Both works center a large spiral eye ringed by jagged lines against a dense crossed-line background, but #239 uses a single dominant spiral in earth and purple tones where #240 splits the motif into two mismatched spirals in red and blue.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy\",\n      \"reason\": \"#241 repeats concentric-circle forms scattered across its lower field and carries a similar spike-edged crown at the top of its central shape, offering a direct formal echo to the jagged yellow rings and upper ear-like points in #240.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral eyes\",\n    \"mask form\",\n    \"mismatched bilateral symmetry\",\n    \"crossed line field\",\n    \"jagged yellow outline\",\n    \"isolated corner spiral\"\n  ],\n  \"interpretiveTags\": [\"unsettled\", \"confrontational\", \"fragmented\"],\n  \"lookingQuestion\": \"What does the difference between the red spiral eye and the blue spiral eye—in color, in tightness of coil, in surrounding line weight—do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The dark red diagonal line entering from upper center could be read as a separate element or as part of the mask form; the image does not resolve this clearly.\",\n    \"The white concentric-circle form in the lower left shares the eye motif's structure but no connecting line or overlap establishes its spatial relationship to the central figure.\"\n  ],\n  \"reviewFindings\": [\n    \"Draft called the lower-left form a 'rectangular spiral'; inspecting the image it is a concentric-circle form without a rectangular border—corrected to 'concentric-circle form'.\",\n    \"Comparison with #241 confirmed: concentric circles in lower field and spike-crown form are both visible in that image, supporting the stated formal echo; connection retained.\",\n    \"Word counts checked: reading is 62 words, contextAngle is 38 words, both within limits; no invented intent, biography, or unsupported technique claims found.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT1wPDifM9aNW3v1Z1hEjPTCEG4GiTjPjPFTkiXL4U9zp/image.png",
+        "imageSHA256": "de2eeb424f2fd70cf8f072608fa42fb12371e4512ee6883262f963d08fbd1f42"
+      },
+      {
+        "artworkId": "QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1/image.png",
+        "imageSHA256": "d147cba4feac5802491e612ac876b161a8146807d2a80b4ddbb847b909f84e94"
+      },
+      {
+        "artworkId": "QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaMmKJ355miEc4mHu2aFp8XrhnixDuTU23bA7gGMbeaBg/image.png",
+        "imageSHA256": "8046242d4b8deeb0d9575cfbe5c63a25c22bf491bdf11c3855b6423ab41fadbd"
+      },
+      {
+        "artworkId": "QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy/image.png",
+        "imageSHA256": "1254ce78cb99421711bf0a55bd6206f1ac84f4412f3a6fc234a75366e482db8f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large black mask-like form dominates the center, with two mismatched eyes: a red spiral on the left and a blue spiral on the right, each ringed by yellow jagged lines.\", \"The background is packed with overlapping horizontal bands of yellow, blue, grey, and red, crossed by loose black, white, and colored line work that runs in all directions.\", \"A white rectangular spiral sits in the lower left corner, echoing the eye spirals but isolated from the central form, while a thick dark red diagonal line cuts from upper center toward the mask.\"], \"reading\": \"A black mask-like shape holds two unmatched spiral eyes—one red, one blue—that pull attention in opposite directions, giving the face an off-balance feeling. Jagged yellow rings around each eye add a raw, wired quality. The surrounding field of crossed bands and loose lines neither frames nor recedes; it presses in, making the central form feel crowded rather than dominant. The isolated white spiral in the corner reads as an echo left behind.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #239 and nnxyz nnotb #241 share the spiral-eye motif and dense layered line work, though #239 leans toward earth tones and #241 toward warm amber. Title order and recorded creation order align for these three works in the owned subset.\", \"connections\": [{\"targetArtworkId\": \"QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1\", \"reason\": \"Both works center a large spiral eye ringed by jagged lines against a dense crossed-line background, but #239 uses a single dominant spiral in earth and purple tones where #240 splits the eye motif into two mismatched spirals in red and blue.\"}, {\"targetArtworkId\": \"QmNiUGLsVADdeFfjanWt3LaHiRSzZ8vCgMMCn1HZKDUTiy\", \"reason\": \"nnxyz nnotb #241 repeats the concentric-circle motif scattered across the lower field and uses a similar crown-like spike form at the top of its central shape, offering a direct formal echo to the jagged yellow rings in #240.\"}], \"tags\": [\"spiral eyes\", \"mask form\", \"mismatched bilateral symmetry\", \"crossed line field\", \"jagged yellow outline\", \"isolated corner spiral\"], \"interpretiveTags\": [\"unsettled\", \"confrontational\", \"fragmented\"], \"lookingQuestion\": \"What does the difference between the red spiral eye and the blue spiral eye—in color, in tightness of coil, in surrounding line weight—do to how you read the face as a whole?\", \"ambiguities\": [\"The dark red diagonal line entering from the upper center could be read as a separate element or as part of the mask form; the image does not resolve this clearly.\", \"The white rectangular spiral in the lower left shares the eye motif's form but its spatial relationship to the central figure is not established by any connecting line or overlap.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

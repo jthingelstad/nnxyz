@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:09:01.783725-05:00",
+    "usage": {
+      "inputTokens": 6108,
+      "outputTokens": 726,
+      "totalTokens": 6834,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 18962
+    },
+    "requestId": "50722046-8f6a-4b1a-ac38-7eaab0c335bf",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head dominates the frame against a flat deep-red background, with a thin stick-like neck and narrow torso visible below.\",\n    \"Dense yellow scribble lines form a mass of curly hair on the left side, while scattered green, yellow, and pink dots cluster across the right cheek area.\",\n    \"Wide blue-framed sunglasses with dark lenses contain paired yellow pill-shaped reflections; a small red-brown sphere sits at the nose, and pink short lines radiate from the right temple.\"\n  ],\n  \"reading\": \"The oversized head floats against unbroken red like a balloon tethered to a wire-thin body. Those mirrored sunglasses, with their doubled yellow shapes, give the face a sealed, unreadable quality—playful but guarded. The scribbled yellow hair and scattered dot patterns across the cheek read as ornament piled onto opacity, suggesting a figure that invites attention while deflecting scrutiny. A wavy multicolored line drifts from the right side like exhaled smoke or a loose thread.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #27\\\" and \\\"nnxyz rawblocks #29.\\\" All three share the oversized-head-on-thin-neck structure, but #28 stands apart with its flat saturated red ground and opaque sunglasses, trading the exposed features of its neighbors for concealment.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7\",\n      \"reason\": \"Both place a dark rounded head on a skeletal neck, but #27 uses orange beams and an open mouth to project outward, while #28 hides behind reflective glasses.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS\",\n      \"reason\": \"#29 fills its head with tangled overlapping lines and exposed spiral eyes, contrasting sharply with #28's smooth color-blocked face and covered eyes.\"\n    }\n  ],\n  \"tags\": [\n    \"oversized head\",\n    \"flat red background\",\n    \"sunglasses\",\n    \"dot patterns\",\n    \"scribbled hair\",\n    \"thin stick figure body\"\n  ],\n  \"lookingQuestion\": \"What effect do the sealed, reflective sunglasses have on how you read the scattered dots and open mouth below them—do they make the face feel more approachable or more hidden?\",\n  \"ambiguities\": [\n    \"The wavy multicolored line at the right edge could be read as smoke, a ribbon, or a separate decorative element; its relationship to the figure is unclear.\",\n    \"The small blue-and-white shape at the torso may be clothing or an unrelated mark.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmerDAekbWWmMWdzmN61q72u3VBZcDCR9cwLzZr7SqqcU8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmerDAekbWWmMWdzmN61q72u3VBZcDCR9cwLzZr7SqqcU8/image.png",
+        "imageSHA256": "e24dac99118d4dc0019f941f6e70b40867e7113fd82f1f179dccf2b42aa08743"
+      },
+      {
+        "artworkId": "QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7/image.png",
+        "imageSHA256": "6a53707797825194101aa86f41348301f548003fb816f34097c19c9fd768d06b"
+      },
+      {
+        "artworkId": "QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx/image.png",
+        "imageSHA256": "5622a58d545eefad34d1cda69f512f7ff32f21348691d5101343f420949523fb"
+      },
+      {
+        "artworkId": "QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS/image.png",
+        "imageSHA256": "8b97097ae3b231f0f8b1f805688554a4bf4969d7cbca0638653f87520e92ed25"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:09:14.180870-05:00",
+    "usage": {
+      "inputTokens": 6866,
+      "outputTokens": 865,
+      "totalTokens": 7731,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12057
+    },
+    "requestId": "10fc7010-ecc0-4fbd-9d77-25652689ff82",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head fills most of the frame against a flat deep-red background, with a wire-thin neck and a narrow torso wearing a small blue-and-white striped top.\",\n    \"Dense yellow scribble lines form a mass of curly hair on the left side, while scattered green, yellow, and pink dots cluster across the right cheek and below the nose.\",\n    \"Wide blue-framed sunglasses with dark lenses contain paired yellow pill-shaped reflections; a small red-brown sphere marks the nose, and short pink lines radiate from the right temple.\"\n  ],\n  \"reading\": \"The oversized head floats against unbroken red like a balloon tethered to a wire-thin body. Those mirrored sunglasses, with their doubled yellow shapes, lend the face a sealed, unreadable quality—playful but guarded. Scribbled yellow hair and scattered dot patterns across the cheek read as ornament piled onto opacity, a figure that invites attention while deflecting scrutiny. A wavy multicolored line drifts from the right side like exhaled smoke or a loose thread.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #27\\\" and \\\"nnxyz rawblocks #29.\\\" All three share the oversized-head-on-thin-neck structure, but #28 stands apart with its flat saturated red ground and opaque sunglasses, trading the exposed features of its neighbors for concealment.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7\",\n      \"reason\": \"Both place a dark rounded head on a skeletal neck, but #27 uses orange beams and an open mouth to project outward, while #28 hides behind reflective glasses.\"\n    },\n    {\n      \"targetArtworkId\": \"QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS\",\n      \"reason\": \"#29 fills its head with tangled overlapping lines and exposed spiral eyes, contrasting with #28's smooth color-blocked face and covered eyes.\"\n    }\n  ],\n  \"tags\": [\n    \"oversized head\",\n    \"flat red background\",\n    \"sunglasses\",\n    \"dot patterns\",\n    \"scribbled hair\",\n    \"thin stick body\"\n  ],\n  \"lookingQuestion\": \"What effect do the sealed, reflective sunglasses have on how you read the scattered dots and open mouth below them—do they make the face feel more approachable or more hidden?\",\n  \"ambiguities\": [\n    \"The wavy multicolored line at the right edge could be read as smoke, a ribbon, or a separate decorative element; its relationship to the figure is unclear.\",\n    \"The small blue-and-white shape at the torso may be a striped garment or an unrelated mark.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: blue-framed sunglasses with paired yellow pill shapes, red-brown nose sphere, and pink radiating lines at right temple all verified against image.\",\n    \"Revised torso description: image shows a small blue-and-white striped shape consistent with a garment, now noted in observations; draft's vague 'unrelated mark' softened.\",\n    \"Reading trimmed from 80 to 75 words to stay within limit; removed 'suggesting' clause to avoid implying intent.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmerDAekbWWmMWdzmN61q72u3VBZcDCR9cwLzZr7SqqcU8",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmerDAekbWWmMWdzmN61q72u3VBZcDCR9cwLzZr7SqqcU8/image.png",
+        "imageSHA256": "e24dac99118d4dc0019f941f6e70b40867e7113fd82f1f179dccf2b42aa08743"
+      },
+      {
+        "artworkId": "QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7/image.png",
+        "imageSHA256": "6a53707797825194101aa86f41348301f548003fb816f34097c19c9fd768d06b"
+      },
+      {
+        "artworkId": "QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTN8nR8LbkVMvYnqLQChEWV7Cq2ejHvH99BSCbGjM57vx/image.png",
+        "imageSHA256": "5622a58d545eefad34d1cda69f512f7ff32f21348691d5101343f420949523fb"
+      },
+      {
+        "artworkId": "QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS/image.png",
+        "imageSHA256": "8b97097ae3b231f0f8b1f805688554a4bf4969d7cbca0638653f87520e92ed25"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head dominates the frame against a flat deep-red background, with a thin stick-like neck and narrow torso visible below.\", \"Dense yellow scribble lines form a mass of curly hair on the left side, while scattered green, yellow, and pink dots cluster across the right cheek area.\", \"Wide blue-framed sunglasses with dark lenses contain paired yellow pill-shaped reflections; a small red-brown sphere sits at the nose, and pink short lines radiate from the right temple.\"], \"reading\": \"The oversized head floats against unbroken red like a balloon tethered to a wire-thin body. Those mirrored sunglasses, with their doubled yellow shapes, give the face a sealed, unreadable quality—playful but guarded. The scribbled yellow hair and scattered dot patterns across the cheek read as ornament piled onto opacity, suggesting a figure that invites attention while deflecting scrutiny. A wavy multicolored line drifts from the right side like exhaled smoke or a loose thread.\", \"contextAngle\": \"Within the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #27\\\" and \\\"nnxyz rawblocks #29.\\\" All three share the oversized-head-on-thin-neck structure, but #28 stands apart with its flat saturated red ground and opaque sunglasses, trading the exposed features of its neighbors for concealment.\", \"connections\": [{\"targetArtworkId\": \"QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7\", \"reason\": \"Both place a dark rounded head on a skeletal neck, but #27 uses orange beams and an open mouth to project outward, while #28 hides behind reflective glasses.\"}, {\"targetArtworkId\": \"QmbDbX9GSVyDjWFdPAoYGquwnAYn9RkPy2QhFP7bMgLtCS\", \"reason\": \"#29 fills its head with tangled overlapping lines and exposed spiral eyes, contrasting sharply with #28's smooth color-blocked face and covered eyes.\"}], \"tags\": [\"oversized head\", \"flat red background\", \"sunglasses\", \"dot patterns\", \"scribbled hair\", \"thin stick figure body\"], \"lookingQuestion\": \"What effect do the sealed, reflective sunglasses have on how you read the scattered dots and open mouth below them—do they make the face feel more approachable or more hidden?\", \"ambiguities\": [\"The wavy multicolored line at the right edge could be read as smoke, a ribbon, or a separate decorative element; its relationship to the figure is unclear.\", \"The small blue-and-white shape at the torso may be clothing or an unrelated mark.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "nnxyz HTTPS certificate with external DNS validation",
+  "Resources": {
+    "Certificate": {
+      "Type": "AWS::CertificateManager::Certificate",
+      "Properties": {
+        "DomainName": "nnxyz.thingelstad.xyz",
+        "ValidationMethod": "DNS"
+      }
+    }
+  },
+  "Outputs": {
+    "CertificateArn": {
+      "Value": {
+        "Ref": "Certificate"
+      },
+      "Description": "nnxyz HTTPS certificate"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:08:59.453308-05:00",
+    "usage": {
+      "inputTokens": 6309,
+      "outputTokens": 719,
+      "totalTokens": 7028,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19985
+    },
+    "requestId": "8296b9b7-94ac-4069-bb9f-12a1a061e2e6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the frame, built from overlapping translucent patches of brown, olive, pink, and red against a flat deep-red background.\",\n    \"Two asymmetric yellow-and-black eyes sit at different heights; pink lash-like spikes radiate from each, and a row of pointed white teeth lines a wide mouth at the bottom.\",\n    \"Thin white scribbled lines cross the upper-left face area, while a black silhouette of a raised hand and pointed ear-like horn emerge from the right edge.\"\n  ],\n  \"reading\": \"The face reads as swollen and layered, its translucent color patches pooling like bruises beneath skin. Mismatched eyes—one higher, one smaller—lend a feeling of disorientation, as though the figure is caught mid-turn. The bared teeth and pink lash spikes could suggest threat or vulnerability in equal measure. Against the unbroken red field, the head floats without a body, giving it the quality of a mask held up for inspection.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #25\\\" and \\\"nnxyz rawblocks #27.\\\" All three feature oversized heads with exposed teeth, but #26 stands apart through its flat monochrome background and softer, blended color fills rather than heavy black outlines.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt\",\n      \"reason\": \"Both share bared zigzag teeth and yellow dot-pupil eyes, but #25 uses thick white bone scaffolding and radiating red lines absent from #26's soft blended masses.\"\n    },\n    {\n      \"targetArtworkId\": \"QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7\",\n      \"reason\": \"#27 echoes the single oversized head on a solid-color field, yet replaces #26's pink lash spikes with a ring of red dots and orange finger-like projections.\"\n    }\n  ],\n  \"tags\": [\n    \"bared teeth\",\n    \"asymmetric eyes\",\n    \"flat red background\",\n    \"translucent color layers\",\n    \"single head composition\",\n    \"black silhouette hand\"\n  ],\n  \"lookingQuestion\": \"How do the translucent overlapping color patches inside the head shape differ from the flat, opaque red surrounding it, and what effect does that contrast create?\",\n  \"ambiguities\": [\n    \"The black shape at the right edge could be read as a horn, ear, or separate hand; the silhouette is ambiguous.\",\n    \"White scribbled lines on the upper face may be hair, cracks, or a separate drawn layer—their role is unclear.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj/image.png",
+        "imageSHA256": "bc8a01343d30fc1108be79600ee2579114463a5e1fe53ac139948c6495ff1978"
+      },
+      {
+        "artworkId": "QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt/image.png",
+        "imageSHA256": "eaab78c7f4fb25f529e0ed40d5c5e45f1d3c70e8480440ac4abf36402136ceb7"
+      },
+      {
+        "artworkId": "QmaLdgsUDWGU63WbqUTuLWGAfh13C19vytraA72mqdb6yP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaLdgsUDWGU63WbqUTuLWGAfh13C19vytraA72mqdb6yP/image.png",
+        "imageSHA256": "287144fbddf9d70cbc9de01605f1c2a405855faaf22efd558c384ade4ee6d0db"
+      },
+      {
+        "artworkId": "QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7/image.png",
+        "imageSHA256": "6a53707797825194101aa86f41348301f548003fb816f34097c19c9fd768d06b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:09:10.562694-05:00",
+    "usage": {
+      "inputTokens": 7060,
+      "outputTokens": 821,
+      "totalTokens": 7881,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10872
+    },
+    "requestId": "f20d61b1-7419-4467-ae4c-cfa95454a98f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded head shape fills most of the frame, built from overlapping translucent patches of brown, olive, pink, and red against a flat deep-red background.\",\n    \"Two asymmetric yellow-and-black eyes sit at different heights; pink lash-like spikes radiate from each, and a row of pointed white teeth lines a wide mouth at the bottom.\",\n    \"Thin white scribbled lines cross the upper-left face area, while a black silhouette with a raised finger and a pointed horn-like protrusion emerge along the right edge.\"\n  ],\n  \"reading\": \"The face reads as swollen and layered, its translucent color patches pooling like bruises beneath skin. Mismatched eyes—one higher, one smaller—lend a feeling of disorientation. The bared teeth and pink lash spikes could suggest threat or vulnerability in equal measure. Against the unbroken red field, the head floats without a body, giving it the quality of a mask held up for inspection.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #25\\\" and \\\"nnxyz rawblocks #27.\\\" All three feature oversized heads with exposed teeth, but #26 stands apart through its flat monochrome background and softer, blended color fills rather than heavy black outlines.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt\",\n      \"reason\": \"Both share bared zigzag teeth and yellow dot-pupil eyes, but #25 uses thick white bone scaffolding and radiating red lines absent from #26's soft blended masses.\"\n    },\n    {\n      \"targetArtworkId\": \"QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7\",\n      \"reason\": \"#27 echoes the single oversized head on a solid-color field, yet replaces #26's pink lash spikes with a ring of red dots and orange finger-like projections.\"\n    }\n  ],\n  \"tags\": [\n    \"bared teeth\",\n    \"asymmetric eyes\",\n    \"flat red background\",\n    \"translucent color layers\",\n    \"single head composition\",\n    \"black silhouette hand\"\n  ],\n  \"lookingQuestion\": \"How do the translucent overlapping color patches inside the head shape differ from the flat, opaque red surrounding it, and what effect does that contrast create?\",\n  \"ambiguities\": [\n    \"The black shape at the right edge could be read as a horn, ear, or a separate hand—the silhouette is ambiguous.\",\n    \"White scribbled lines on the upper face may be hair, cracks, or a separate drawn layer—their role is unclear.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed two yellow-pupil eyes at different heights, pink radiating spikes, and pointed white teeth against the actual image.\",\n    \"Revised 'raised hand' to 'raised finger' in observation three—the silhouette shows a single pointing finger, not a full open hand.\",\n    \"Reading trimmed from 80 to 63 words to stay within target range; no unsupported intent or identity claims found.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj/image.png",
+        "imageSHA256": "bc8a01343d30fc1108be79600ee2579114463a5e1fe53ac139948c6495ff1978"
+      },
+      {
+        "artworkId": "QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt/image.png",
+        "imageSHA256": "eaab78c7f4fb25f529e0ed40d5c5e45f1d3c70e8480440ac4abf36402136ceb7"
+      },
+      {
+        "artworkId": "QmaLdgsUDWGU63WbqUTuLWGAfh13C19vytraA72mqdb6yP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaLdgsUDWGU63WbqUTuLWGAfh13C19vytraA72mqdb6yP/image.png",
+        "imageSHA256": "287144fbddf9d70cbc9de01605f1c2a405855faaf22efd558c384ade4ee6d0db"
+      },
+      {
+        "artworkId": "QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7/image.png",
+        "imageSHA256": "6a53707797825194101aa86f41348301f548003fb816f34097c19c9fd768d06b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded head shape fills most of the frame, built from overlapping translucent patches of brown, olive, pink, and red against a flat deep-red background.\", \"Two asymmetric yellow-and-black eyes sit at different heights; pink lash-like spikes radiate from each, and a row of pointed white teeth lines a wide mouth at the bottom.\", \"Thin white scribbled lines cross the upper-left face area, while a black silhouette of a raised hand and pointed ear-like horn emerge from the right edge.\"], \"reading\": \"The face reads as swollen and layered, its translucent color patches pooling like bruises beneath skin. Mismatched eyes—one higher, one smaller—lend a feeling of disorientation, as though the figure is caught mid-turn. The bared teeth and pink lash spikes could suggest threat or vulnerability in equal measure. Against the unbroken red field, the head floats without a body, giving it the quality of a mask held up for inspection.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #25\\\" and \\\"nnxyz rawblocks #27.\\\" All three feature oversized heads with exposed teeth, but #26 stands apart through its flat monochrome background and softer, blended color fills rather than heavy black outlines.\", \"connections\": [{\"targetArtworkId\": \"QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt\", \"reason\": \"Both share bared zigzag teeth and yellow dot-pupil eyes, but #25 uses thick white bone scaffolding and radiating red lines absent from #26's soft blended masses.\"}, {\"targetArtworkId\": \"QmR9guP1Wzozk1sesvgStyLW6F3bapf7AeCS8sbmdu3QH7\", \"reason\": \"#27 echoes the single oversized head on a solid-color field, yet replaces #26's pink lash spikes with a ring of red dots and orange finger-like projections.\"}], \"tags\": [\"bared teeth\", \"asymmetric eyes\", \"flat red background\", \"translucent color layers\", \"single head composition\", \"black silhouette hand\"], \"lookingQuestion\": \"How do the translucent overlapping color patches inside the head shape differ from the flat, opaque red surrounding it, and what effect does that contrast create?\", \"ambiguities\": [\"The black shape at the right edge could be read as a horn, ear, or separate hand; the silhouette is ambiguous.\", \"White scribbled lines on the upper face may be hair, cracks, or a separate drawn layer—their role is unclear.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

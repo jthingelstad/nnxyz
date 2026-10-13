@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:51.992627-05:00",
+    "usage": {
+      "inputTokens": 6298,
+      "outputTokens": 763,
+      "totalTokens": 7061,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11999
+    },
+    "requestId": "1b9fc730-7eae-4c01-b3b1-0f793db9a901",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded dark form occupies the left-center, overlaid with dense scribbled lines in gray and blue; a circular eye area contains a yellow X shape ringed by concentric dark arcs.\",\n    \"A red rectangular mouth zone sits lower-right on the face, filled with white tooth-like marks and black scrawl; a thick orange diagonal band cuts across the right side of the composition.\",\n    \"The yellow-green background carries a white grid of small rectangles on the left edge and a cluster of pale oval shapes in the upper-right corner, with loose blue and teal line work scattered across the border.\"\n  ],\n  \"reading\": \"A dark rounded form anchors the center, its surface buried under layered scribble work in gray, blue, and white. The circular eye socket holds a yellow X that reads as both target and ornament. A red mouth zone below it carries white marks that suggest teeth without resolving into them. The yellow-green field and scattered oval cluster keep the mood unsettled — neither threatening nor calm.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #9 sits between title neighbors nnxyz #8 and nnxyz #10. Where nnxyz #8 uses a flat teal field and open figure, this work compresses layered marks onto a yellow-green ground — a shift in density rather than subject.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o\",\n      \"reason\": \"Both works share a yellow-dominant ground, circular eye forms containing X marks, and a red zigzag mouth band — making nnxyz nnotb #124 the closest formal echo across the owned collection's two title families.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m\",\n      \"reason\": \"nnxyz #10 uses a similar close-cropped face structure with layered scribble work, but replaces the muted yellow-green ground with high-contrast orange and adds radiating yellow strokes that nnxyz #9 withholds.\"\n    }\n  ],\n  \"tags\": [\n    \"circular eye form\",\n    \"X mark\",\n    \"yellow-green ground\",\n    \"red mouth zone\",\n    \"dense scribble overlay\",\n    \"grid border marks\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled\",\n    \"mask-like\"\n  ],\n  \"lookingQuestion\": \"Where does the orange diagonal band begin and end, and what happens to the lines around it as it crosses the face?\",\n  \"ambiguities\": [\n    \"The pale oval cluster in the upper-right corner may be a hand form or purely abstract shapes; the image does not resolve this clearly.\",\n    \"nnxyz #8 was inspected but offers no strong formal parallel beyond shared artist signature; the connection was omitted in favor of more specific matches.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdruSFiEK2FiTeYY1jgLdX4Xvx7Nojt6rcH6G1TkFtNgy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdruSFiEK2FiTeYY1jgLdX4Xvx7Nojt6rcH6G1TkFtNgy/image.png",
+        "imageSHA256": "364f78b8e59c41b58624bdcee9a4ea5b29f9619263bc13b706e147da3cca6b83"
+      },
+      {
+        "artworkId": "QmSkHfHUDJGBWfQFo4EoijVqZd2rqem8rEJJfcrVN4sCGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSkHfHUDJGBWfQFo4EoijVqZd2rqem8rEJJfcrVN4sCGy/image.png",
+        "imageSHA256": "594404a3076f13971206235745048fce49d6406063337713d20d0afe68af0dc8"
+      },
+      {
+        "artworkId": "QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o/image.png",
+        "imageSHA256": "19844051723496c00723a35d6b81521eb0c91193b1432c5792c2be0e39018644"
+      },
+      {
+        "artworkId": "QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m/image.png",
+        "imageSHA256": "170a189de09704a85492113ec061f8e2b696438632febd630c33e42ceda5e48a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:58.666488-05:00",
+    "usage": {
+      "inputTokens": 7083,
+      "outputTokens": 925,
+      "totalTokens": 8008,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6594
+    },
+    "requestId": "6d3aea28-b45e-4748-a62c-25736db16f3e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded dark form occupies the left-center, overlaid with dense scribbled lines in gray and blue; a circular eye area contains a yellow X shape ringed by concentric dark arcs.\",\n    \"A red rectangular mouth zone sits lower-right on the face, filled with white tooth-like marks and black scrawl; a thick orange diagonal band cuts across the right side of the composition.\",\n    \"The yellow-green background carries a white grid of small rectangles on the left edge and a cluster of pale oval shapes in the upper-right corner, with loose blue and teal line work scattered across the border.\"\n  ],\n  \"reading\": \"A dark rounded form anchors the center, its surface buried under layered scribble work in gray, blue, and white. The circular eye socket holds a yellow X that reads as both target and ornament. A red mouth zone below carries white marks that suggest teeth without resolving into them. The yellow-green field and scattered oval cluster in the upper corner keep the mood unsettled — neither threatening nor calm.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #9 sits between title neighbors nnxyz #8 and nnxyz #10. Where nnxyz #8 uses a flat teal field and an open figure, this work compresses layered marks onto a yellow-green ground — a shift in density rather than subject.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o\",\n      \"reason\": \"nnxyz nnotb #124 shares a yellow-dominant ground, circular eye forms each containing an X mark, and a red zigzag band at the mouth — the closest formal echo across the two owned title families.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m\",\n      \"reason\": \"nnxyz #10 uses a similar close-cropped face structure with dense scribble overlay, but replaces the yellow-green ground with high-contrast orange and adds radiating yellow strokes absent from nnxyz #9.\"\n    }\n  ],\n  \"tags\": [\n    \"circular eye form\",\n    \"X mark\",\n    \"yellow-green ground\",\n    \"red mouth zone\",\n    \"dense scribble overlay\",\n    \"grid border marks\"\n  ],\n  \"interpretiveTags\": [\"unsettled\", \"mask-like\"],\n  \"lookingQuestion\": \"Where does the orange diagonal band begin and end, and what happens to the lines around it as it crosses the face?\",\n  \"ambiguities\": [\n    \"The pale oval cluster in the upper-right corner may be a hand form or purely abstract shapes; the image does not resolve this clearly.\",\n    \"nnxyz #8 was inspected but offers no strong formal parallel beyond shared artist signature; it was omitted in favor of more specific matches.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: yellow X in circular eye, red rectangular mouth with white marks, orange diagonal band, yellow-green ground, white grid left edge, pale oval cluster upper-right.\",\n    \"QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o confirmed: yellow ground, circular eye with X mark, and red zigzag mouth band all visible — comparison is specific and supported.\",\n    \"Reading trimmed by two words to stay within 65-word target; no invented intent, biography, or technique claims present; 'unsettled' moved to interpretiveTags only.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdruSFiEK2FiTeYY1jgLdX4Xvx7Nojt6rcH6G1TkFtNgy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdruSFiEK2FiTeYY1jgLdX4Xvx7Nojt6rcH6G1TkFtNgy/image.png",
+        "imageSHA256": "364f78b8e59c41b58624bdcee9a4ea5b29f9619263bc13b706e147da3cca6b83"
+      },
+      {
+        "artworkId": "QmSkHfHUDJGBWfQFo4EoijVqZd2rqem8rEJJfcrVN4sCGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSkHfHUDJGBWfQFo4EoijVqZd2rqem8rEJJfcrVN4sCGy/image.png",
+        "imageSHA256": "594404a3076f13971206235745048fce49d6406063337713d20d0afe68af0dc8"
+      },
+      {
+        "artworkId": "QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o/image.png",
+        "imageSHA256": "19844051723496c00723a35d6b81521eb0c91193b1432c5792c2be0e39018644"
+      },
+      {
+        "artworkId": "QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m/image.png",
+        "imageSHA256": "170a189de09704a85492113ec061f8e2b696438632febd630c33e42ceda5e48a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded dark form occupies the left-center, overlaid with dense scribbled lines in gray and blue; a circular eye area contains a yellow X shape ringed by concentric dark arcs.\", \"A red rectangular mouth zone sits lower-right on the face, filled with white tooth-like marks and black scrawl; a thick orange diagonal band cuts across the right side of the composition.\", \"The yellow-green background carries a white grid of small rectangles on the left edge and a cluster of pale oval shapes in the upper-right corner, with loose blue and teal line work scattered across the border.\"], \"reading\": \"A dark rounded form anchors the center, its surface buried under layered scribble work in gray, blue, and white. The circular eye socket holds a yellow X that reads as both target and ornament. A red mouth zone below it carries white marks that suggest teeth without resolving into them. The yellow-green field and scattered oval cluster keep the mood unsettled — neither threatening nor calm.\", \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #9 sits between title neighbors nnxyz #8 and nnxyz #10. Where nnxyz #8 uses a flat teal field and open figure, this work compresses layered marks onto a yellow-green ground — a shift in density rather than subject.\", \"connections\": [{\"targetArtworkId\": \"QmZtRBs3gfGjnmNodEDfXZgKxTQd4ekCS8HmpHBdb7RU6o\", \"reason\": \"Both works share a yellow-dominant ground, circular eye forms containing X marks, and a red zigzag mouth band — making nnxyz nnotb #124 the closest formal echo across the owned collection's two title families.\"}, {\"targetArtworkId\": \"QmXj7cvMZKCLywh7PgpV2baL9gtTs8zjp9zSgEhKK4dM7m\", \"reason\": \"nnxyz #10 uses a similar close-cropped face structure with layered scribble work, but replaces the muted yellow-green ground with high-contrast orange and adds radiating yellow strokes that nnxyz #9 withholds.\"}], \"tags\": [\"circular eye form\", \"X mark\", \"yellow-green ground\", \"red mouth zone\", \"dense scribble overlay\", \"grid border marks\"], \"interpretiveTags\": [\"unsettled\", \"mask-like\"], \"lookingQuestion\": \"Where does the orange diagonal band begin and end, and what happens to the lines around it as it crosses the face?\", \"ambiguities\": [\"The pale oval cluster in the upper-right corner may be a hand form or purely abstract shapes; the image does not resolve this clearly.\", \"nnxyz #8 was inspected but offers no strong formal parallel beyond shared artist signature; the connection was omitted in favor of more specific matches.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

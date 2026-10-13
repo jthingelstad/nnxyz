@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:11:35.895420-05:00",
+    "usage": {
+      "inputTokens": 6223,
+      "outputTokens": 703,
+      "totalTokens": 6926,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20987
+    },
+    "requestId": "f371a50d-9fec-4698-8f18-d71a38b30916",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large open mouth dominates the lower center, filled with white block-like teeth outlined in black, framed by deep red and dripping lines below the lip.\",\n    \"A single visible eye sits left of center with concentric gold-and-black rings inside a white almond shape, surrounded by dense overlapping scribbles in blue, yellow, and red.\",\n    \"Loose neon-yellow, green, and red lines scatter across the top and edges, floating above a muted brown-gray background that darkens toward the corners.\"\n  ],\n  \"reading\": \"The face is almost all mouth and one staring eye—an imbalance that reads as alarm or a shout caught mid-breath. Heavy black outlines hold the form together while thin colored lines break free at every edge, as if the figure is dissolving into its own noise. Teal and red patches bleed through the scribble layers, giving the brown ground unexpected warmth. The white teeth anchor the composition with blunt, rigid shapes against the surrounding chaos.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between nnxyz rawblocks #54 and nnxyz rawblocks #56. All three feature face-like forms built from layered scribbles and exposed teeth, but #55 stands apart with its single-eye composition and wider color spread across a lighter ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWANAZzFmpi4ivX9dvCsHnVDvjjRVzuyHWdbrcxX8MAQh\",\n      \"reason\": \"Both share white block teeth at the bottom and dense black scribble outlines, but #54 uses a darker, tighter background while #55 lets bright color escape far beyond the face.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG\",\n      \"reason\": \"The nnotb piece uses paired red-ringed eye shapes and zigzag white marks in a similar way to #55's concentric eye, though its composition fills the frame more evenly without a dominant mouth.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"exposed teeth\",\n    \"single eye\",\n    \"layered scribble lines\",\n    \"brown ground\",\n    \"scattered neon marks\"\n  ],\n  \"lookingQuestion\": \"Where do the thin colored lines at the top of the image connect to the face below, and where do they float free—what does that boundary between figure and loose mark look like?\",\n  \"ambiguities\": [\n    \"Whether the right side of the face contains a second eye or is simply overlapping scribble is unclear at this resolution.\",\n    \"Small text-like marks appear in the lower-right corner but are too compressed to read with certainty.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB/image.png",
+        "imageSHA256": "5a91f6a0bc3273bf9c259b46798d8f3037cabb5b210373e5e9327aefa9b64724"
+      },
+      {
+        "artworkId": "QmWANAZzFmpi4ivX9dvCsHnVDvjjRVzuyHWdbrcxX8MAQh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWANAZzFmpi4ivX9dvCsHnVDvjjRVzuyHWdbrcxX8MAQh/image.png",
+        "imageSHA256": "9c13ea246759468fcbcdd165c7c02a778d8cb70fbea390feb1a6c73b9637c70d"
+      },
+      {
+        "artworkId": "QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG/image.png",
+        "imageSHA256": "0e30d7f28bccbc06b4194e1656409b552461098aeac2d57f392a0723a9e37d46"
+      },
+      {
+        "artworkId": "QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se/image.png",
+        "imageSHA256": "041b50f10e8a2234b6a4e0d756c48168242a34eea2a2e2bfd14f958f9dbd6b10"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:11:48.505286-05:00",
+    "usage": {
+      "inputTokens": 6958,
+      "outputTokens": 819,
+      "totalTokens": 7777,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12535
+    },
+    "requestId": "65049434-ef33-4cbc-8c96-d9dd1d1418f9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-open mouth fills the lower center, lined with white rectangular teeth outlined in black, bordered by deep red and dripping marks beneath the lower lip.\",\n    \"A single large eye sits left of center with concentric gold-and-black rings inside a white almond outline, surrounded by tangled blue, yellow, and red scribbles.\",\n    \"Thin neon-yellow, green, and red lines scatter across the top and right edges, floating above a muted brown-gray ground that darkens toward the corners.\"\n  ],\n  \"reading\": \"The face is almost all mouth and one staring eye—an imbalance that can read as alarm or a shout caught mid-breath. Heavy black outlines hold the form together while thin colored lines break free at every edge, as if the figure is dissolving into its own noise. Teal and red patches bleed through the scribble layers, lending the brown ground unexpected warmth. The rigid white teeth anchor the composition against the surrounding tangle.\",\n  \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between nnxyz rawblocks #54 and nnxyz rawblocks #56. All three feature face-like forms built from layered scribbles and exposed teeth, but #55 stands apart with its single-eye layout and wider color spread across a lighter ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWANAZzFmpi4ivX9dvCsHnVDvjjRVzuyHWdbrcxX8MAQh\",\n      \"reason\": \"Both share white block teeth and dense black outlines, but #54 keeps its scribbles tight against a darker ground while #55 lets bright lines escape well beyond the face.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se\",\n      \"reason\": \"#56 also builds a face from overlapping colored scribbles and grid-like teeth, but its purple-teal palette and pointed ear-like peaks at the top contrast with #55's warm brown field and single round eye.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"exposed teeth\",\n    \"single eye\",\n    \"layered scribble lines\",\n    \"brown ground\",\n    \"scattered neon marks\"\n  ],\n  \"lookingQuestion\": \"Where do the thin colored lines at the top of the image connect to the face below, and where do they float free—what does that boundary between figure and loose mark look like?\",\n  \"ambiguities\": [\n    \"Whether the right side of the face contains a second eye or is simply overlapping scribble is unclear at this resolution.\",\n    \"Small stacked text-like marks appear in the lower-right corner but are too compressed to read with certainty.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced nnotb comparison with rawblocks #56, which offers a stronger formal contrast visible in the inspected image (purple-teal palette, ear-like peaks vs. brown ground, single eye).\",\n    \"Confirmed single visible eye with gold-black concentric rings, white teeth, and red drip marks all match the primary image.\",\n    \"Reading trimmed from 80 to 65 words to sit within target range; no unsupported intent language found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB/image.png",
+        "imageSHA256": "5a91f6a0bc3273bf9c259b46798d8f3037cabb5b210373e5e9327aefa9b64724"
+      },
+      {
+        "artworkId": "QmWANAZzFmpi4ivX9dvCsHnVDvjjRVzuyHWdbrcxX8MAQh",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWANAZzFmpi4ivX9dvCsHnVDvjjRVzuyHWdbrcxX8MAQh/image.png",
+        "imageSHA256": "9c13ea246759468fcbcdd165c7c02a778d8cb70fbea390feb1a6c73b9637c70d"
+      },
+      {
+        "artworkId": "QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG/image.png",
+        "imageSHA256": "0e30d7f28bccbc06b4194e1656409b552461098aeac2d57f392a0723a9e37d46"
+      },
+      {
+        "artworkId": "QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se/image.png",
+        "imageSHA256": "041b50f10e8a2234b6a4e0d756c48168242a34eea2a2e2bfd14f958f9dbd6b10"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large open mouth dominates the lower center, filled with white block-like teeth outlined in black, framed by deep red and dripping lines below the lip.\", \"A single visible eye sits left of center with concentric gold-and-black rings inside a white almond shape, surrounded by dense overlapping scribbles in blue, yellow, and red.\", \"Loose neon-yellow, green, and red lines scatter across the top and edges, floating above a muted brown-gray background that darkens toward the corners.\"], \"reading\": \"The face is almost all mouth and one staring eye—an imbalance that reads as alarm or a shout caught mid-breath. Heavy black outlines hold the form together while thin colored lines break free at every edge, as if the figure is dissolving into its own noise. Teal and red patches bleed through the scribble layers, giving the brown ground unexpected warmth. The white teeth anchor the composition with blunt, rigid shapes against the surrounding chaos.\", \"contextAngle\": \"Within the owned rawblocks subset, this piece sits between nnxyz rawblocks #54 and nnxyz rawblocks #56. All three feature face-like forms built from layered scribbles and exposed teeth, but #55 stands apart with its single-eye composition and wider color spread across a lighter ground.\", \"connections\": [{\"targetArtworkId\": \"QmWANAZzFmpi4ivX9dvCsHnVDvjjRVzuyHWdbrcxX8MAQh\", \"reason\": \"Both share white block teeth at the bottom and dense black scribble outlines, but #54 uses a darker, tighter background while #55 lets bright color escape far beyond the face.\"}, {\"targetArtworkId\": \"QmUTRNfS816YYW3KyvhicGCYC6w4Z5DpQuPqeCo4gF2RSG\", \"reason\": \"The nnotb piece uses paired red-ringed eye shapes and zigzag white marks in a similar way to #55's concentric eye, though its composition fills the frame more evenly without a dominant mouth.\"}], \"tags\": [\"open mouth\", \"exposed teeth\", \"single eye\", \"layered scribble lines\", \"brown ground\", \"scattered neon marks\"], \"lookingQuestion\": \"Where do the thin colored lines at the top of the image connect to the face below, and where do they float free—what does that boundary between figure and loose mark look like?\", \"ambiguities\": [\"Whether the right side of the face contains a second eye or is simply overlapping scribble is unclear at this resolution.\", \"Small text-like marks appear in the lower-right corner but are too compressed to read with certainty.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

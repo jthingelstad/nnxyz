@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:06.184398-05:00",
+    "usage": {
+      "inputTokens": 6955,
+      "outputTokens": 795,
+      "totalTokens": 7750,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13659
+    },
+    "requestId": "c4d98a81-e18e-4f97-a6ae-0f9c192cc728",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large rectangular eye zones sit side by side in the upper half, each filled with a white oval crossed by a red horizontal bar, set against layered blue, red, orange and yellow lines.\",\n    \"A wide rectangular mouth zone in the lower third holds three white triangular tooth shapes separated by dark gaps, framed by heavy red and white outlines.\",\n    \"The overall head shape is blocky and nearly square, built from overlapping straight and curved lines in blue, red, orange, yellow, white and purple on a dark teal background.\"\n  ],\n  \"reading\": \"The face here is assembled from stacked rectangular compartments — eye boxes, a nose bridge, a tooth-filled mouth — each zone packed with crossing lines that compete rather than blend. The white ovals and tooth shapes hold their brightness against the surrounding noise. The result reads as confrontational: wide-open, flat-on, and loud in color even before any expression is assigned.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between #38 and #40 in both title and recorded-creation order. Where #38 uses deep black grounds to make its face recede, #39 pushes every zone forward with equal brightness, and #40 shifts to a white ground with black line dominance.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ\",\n      \"reason\": \"Both works share the same rectangular eye-box structure and tooth shapes, but #38 buries them in near-black shadow while #39 floods the same zones with competing bright lines, making the contrast in emotional weight direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPsjFFmpt5AiszrbjBKWAiPYwDSZX8bAbVd1QhacPa5uL\",\n      \"reason\": \"#40 uses the same blocky compartment layout and tooth row as #39, but replaces the dark teal ground with white and shifts line dominance to black, showing how background tone alone changes the face's apparent weight.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular compartments\",\n    \"crossed-bar eye shapes\",\n    \"tooth row\",\n    \"overlapping straight lines\",\n    \"blue-red-orange palette\",\n    \"dark teal background\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"loud\",\n    \"flat-on intensity\"\n  ],\n  \"lookingQuestion\": \"How do the white ovals in the eye zones hold their brightness against the surrounding tangle of lines, and what happens to your eye when it moves from those ovals down to the tooth shapes?\",\n  \"ambiguities\": [\n    \"The red horizontal bars crossing each eye oval could be read as pupils, lids, or purely abstract marks — the image does not resolve this.\",\n    \"Candidate Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv (nnotb #292) shares a face-like structure but its diagonal composition and soft background blobs differ enough from #39's flat grid that no specific formal connection is strong enough to include.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf/image.png",
+        "imageSHA256": "fbbf717bfca866dc128312c233b8a7c01d00ca135127f72267cbdd92728f200f"
+      },
+      {
+        "artworkId": "QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ/image.png",
+        "imageSHA256": "4d98983c2744affaaea9204a2dfca8feb2c16c74ce0bcef866ae450d6e85fae9"
+      },
+      {
+        "artworkId": "Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv/image.png",
+        "imageSHA256": "6ea5e7857de938cc8ca218d27a915288e1dda9ac4304df7e9fd54b94af1fffcc"
+      },
+      {
+        "artworkId": "QmPsjFFmpt5AiszrbjBKWAiPYwDSZX8bAbVd1QhacPa5uL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPsjFFmpt5AiszrbjBKWAiPYwDSZX8bAbVd1QhacPa5uL/image.png",
+        "imageSHA256": "bf024059773b241fc8170f1f4598be2fe92487216551e16a2ba48fc5b587b10d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:13.077640-05:00",
+    "usage": {
+      "inputTokens": 7770,
+      "outputTokens": 931,
+      "totalTokens": 8701,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6757
+    },
+    "requestId": "1ece502b-d0a5-48a5-8718-8f49bca42fd6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large rectangular eye zones sit side by side in the upper half, each filled with a white oval crossed by a red horizontal bar, set against layered blue, red, orange and yellow lines.\",\n    \"A wide rectangular mouth zone in the lower third holds three white triangular tooth shapes separated by dark gaps, framed by heavy red and white outlines.\",\n    \"The overall head shape is blocky and nearly square, built from overlapping straight and curved lines in blue, red, orange, yellow, white and purple on a dark teal background.\"\n  ],\n  \"reading\": \"The face is assembled from stacked rectangular compartments — eye boxes, a nose bridge, a tooth-filled mouth — each zone packed with crossing lines that compete rather than blend. The white ovals and tooth shapes hold their brightness against the surrounding noise. The result reads as confrontational: wide-open, flat-on, and loud in color even before any expression is assigned.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between #38 and #40 in both title and recorded-creation order. Where #38 uses deep black grounds to pull its face back, #39 pushes every zone forward with equal brightness, and #40 shifts to a white ground with black line dominance.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ\",\n      \"reason\": \"Both works share rectangular eye-box structure and tooth shapes, but #38 buries them in near-black shadow while #39 floods the same zones with competing bright lines, making the contrast in emotional weight direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPsjFFmpt5AiszrbjBKWAiPYwDSZX8bAbVd1QhacPa5uL\",\n      \"reason\": \"#40 uses the same blocky compartment layout and tooth row as #39, but replaces the dark teal ground with white and shifts line dominance to black, showing how background tone changes the face's apparent weight.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular compartments\",\n    \"crossed-bar eye shapes\",\n    \"tooth row\",\n    \"overlapping straight lines\",\n    \"blue-red-orange palette\",\n    \"dark teal background\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"flat-on intensity\",\n    \"loud color\"\n  ],\n  \"lookingQuestion\": \"How do the white ovals in the eye zones hold their brightness against the surrounding tangle of lines, and what happens to your eye when it moves from those ovals down to the tooth shapes?\",\n  \"ambiguities\": [\n    \"The red horizontal bars crossing each eye oval could be read as pupils, lids, or purely abstract marks — the image does not resolve this.\",\n    \"Candidate Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv (nnotb #292) shares a face-like structure but its diagonal composition and soft background blobs differ enough from #39's flat grid that no specific formal connection is strong enough to include.\"\n  ],\n  \"reviewFindings\": [\n    \"All three visual observations confirmed against the primary image: rectangular eye zones with white ovals and red bars, triangular tooth shapes in the lower zone, and blocky head on dark teal ground are all directly visible.\",\n    \"Both comparison connections verified against inspected images: #38 image confirms near-black ground contrasting with #39's brightness; #40 image confirms white ground and black line dominance with matching compartment layout.\",\n    \"Reading word count confirmed within 55–65 word target; no invented intent, biography, media, or duration language present; prohibited words checked and absent.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf/image.png",
+        "imageSHA256": "fbbf717bfca866dc128312c233b8a7c01d00ca135127f72267cbdd92728f200f"
+      },
+      {
+        "artworkId": "QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ/image.png",
+        "imageSHA256": "4d98983c2744affaaea9204a2dfca8feb2c16c74ce0bcef866ae450d6e85fae9"
+      },
+      {
+        "artworkId": "Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv/image.png",
+        "imageSHA256": "6ea5e7857de938cc8ca218d27a915288e1dda9ac4304df7e9fd54b94af1fffcc"
+      },
+      {
+        "artworkId": "QmPsjFFmpt5AiszrbjBKWAiPYwDSZX8bAbVd1QhacPa5uL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPsjFFmpt5AiszrbjBKWAiPYwDSZX8bAbVd1QhacPa5uL/image.png",
+        "imageSHA256": "bf024059773b241fc8170f1f4598be2fe92487216551e16a2ba48fc5b587b10d"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two large rectangular eye zones sit side by side in the upper half, each filled with a white oval crossed by a red horizontal bar, set against layered blue, red, orange and yellow lines.\", \"A wide rectangular mouth zone in the lower third holds three white triangular tooth shapes separated by dark gaps, framed by heavy red and white outlines.\", \"The overall head shape is blocky and nearly square, built from overlapping straight and curved lines in blue, red, orange, yellow, white and purple on a dark teal background.\"], \"reading\": \"The face here is assembled from stacked rectangular compartments — eye boxes, a nose bridge, a tooth-filled mouth — each zone packed with crossing lines that compete rather than blend. The white ovals and tooth shapes hold their brightness against the surrounding noise. The result reads as confrontational: wide-open, flat-on, and loud in color even before any expression is assigned.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between #38 and #40 in both title and recorded-creation order. Where #38 uses deep black grounds to make its face recede, #39 pushes every zone forward with equal brightness, and #40 shifts to a white ground with black line dominance.\", \"connections\": [{\"targetArtworkId\": \"QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ\", \"reason\": \"Both works share the same rectangular eye-box structure and tooth shapes, but #38 buries them in near-black shadow while #39 floods the same zones with competing bright lines, making the contrast in emotional weight direct and visible.\"}, {\"targetArtworkId\": \"QmPsjFFmpt5AiszrbjBKWAiPYwDSZX8bAbVd1QhacPa5uL\", \"reason\": \"#40 uses the same blocky compartment layout and tooth row as #39, but replaces the dark teal ground with white and shifts line dominance to black, showing how background tone alone changes the face's apparent weight.\"}], \"tags\": [\"rectangular compartments\", \"crossed-bar eye shapes\", \"tooth row\", \"overlapping straight lines\", \"blue-red-orange palette\", \"dark teal background\"], \"interpretiveTags\": [\"confrontational\", \"loud\", \"flat-on intensity\"], \"lookingQuestion\": \"How do the white ovals in the eye zones hold their brightness against the surrounding tangle of lines, and what happens to your eye when it moves from those ovals down to the tooth shapes?\", \"ambiguities\": [\"The red horizontal bars crossing each eye oval could be read as pupils, lids, or purely abstract marks — the image does not resolve this.\", \"Candidate Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv (nnotb #292) shares a face-like structure but its diagonal composition and soft background blobs differ enough from #39's flat grid that no specific formal connection is strong enough to include.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:17.780109-05:00",
+    "usage": {
+      "inputTokens": 7582,
+      "outputTokens": 872,
+      "totalTokens": 8454,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7063
+    },
+    "requestId": "30838a6e-1fa8-40b2-9049-adf9d73e2a37",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large rectangular eye zones sit side by side in the upper half, each filled with a white oval crossed by a red horizontal bar, set against layered blue, red, orange and yellow lines.\",\n    \"A wide rectangular mouth zone in the lower third holds three white triangular tooth shapes separated by dark gaps, framed by heavy red and white outlines.\",\n    \"The overall head shape is blocky and nearly square, built from overlapping straight and curved lines in blue, red, orange, yellow, white and purple on a dark teal background.\"\n  ],\n  \"reading\": \"Stacked rectangular compartments — eye boxes, a nose bridge, a tooth-filled lower zone — pack each region with crossing lines that compete rather than blend. The white ovals and triangular tooth shapes hold their brightness against the surrounding noise. That contrast reads as confrontational: flat-on, loud in color, with the mouth outline closed tight around the tooth row rather than gaping.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between #38 and #40 in both title and recorded-creation order. Where #38 pulls its face back into near-black shadow, #39 pushes every zone forward with equal brightness, and #40 shifts to a white ground with black line dominance.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ\",\n      \"reason\": \"Both works share rectangular eye-box structure and tooth shapes, but #38 buries them in near-black shadow while #39 floods the same zones with competing bright lines, making the contrast in emotional weight direct and visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPsjFFmpt5AiszrbjBKWAiPYwDSZX8bAbVd1QhacPa5uL\",\n      \"reason\": \"#40 uses the same blocky compartment layout and tooth row as #39, but replaces the dark teal ground with white and shifts line dominance to black, showing how background tone changes the face's apparent weight.\"\n    }\n  ],\n  \"tags\": [\"rectangular compartments\", \"crossed-bar eye shapes\", \"tooth row\", \"overlapping straight lines\", \"blue-red-orange palette\", \"dark teal background\"],\n  \"lookingQuestion\": \"How do the white ovals in the eye zones hold their brightness against the surrounding tangle of lines, and what happens to your eye when it moves from those ovals down to the tooth shapes?\",\n  \"ambiguities\": [\n    \"The red horizontal bars crossing each eye oval could be read as pupils, lids, or purely abstract marks — the image does not resolve this.\",\n    \"The mouth outline appears closed around the tooth row rather than open; 'wide-open' was removed as unsupported by a visible dark interior gap.\",\n    \"Candidate Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv (nnotb #292) shares a face-like structure but its diagonal composition and soft background blobs differ enough from #39's flat grid that no specific formal connection is strong enough to include.\"\n  ],\n  \"reviewFindings\": [\n    \"'Wide-open' removed from reading: the mouth zone shows a tooth row held within a closed rectangular outline with no visible dark interior gap large enough to confirm an open mouth.\",\n    \"Opening sentence rewritten to lead with a specific structural observation — stacked rectangular compartments — rather than the flagged stock phrase.\",\n    \"Word count and field constraints verified against revised text.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf/image.png",
+        "imageSHA256": "fbbf717bfca866dc128312c233b8a7c01d00ca135127f72267cbdd92728f200f"
+      },
+      {
+        "artworkId": "QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ/image.png",
+        "imageSHA256": "4d98983c2744affaaea9204a2dfca8feb2c16c74ce0bcef866ae450d6e85fae9"
+      },
+      {
+        "artworkId": "Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv/image.png",
+        "imageSHA256": "6ea5e7857de938cc8ca218d27a915288e1dda9ac4304df7e9fd54b94af1fffcc"
+      },
+      {
+        "artworkId": "QmPsjFFmpt5AiszrbjBKWAiPYwDSZX8bAbVd1QhacPa5uL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPsjFFmpt5AiszrbjBKWAiPYwDSZX8bAbVd1QhacPa5uL/image.png",
+        "imageSHA256": "bf024059773b241fc8170f1f4598be2fe92487216551e16a2ba48fc5b587b10d"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"Two large rectangular eye zones sit side by side in the upper half, each filled with a white oval crossed by a red horizontal bar, set against layered blue, red, orange and yellow lines.\", \"A wide rectangular mouth zone in the lower third holds three white triangular tooth shapes separated by dark gaps, framed by heavy red and white outlines.\", \"The overall head shape is blocky and nearly square, built from overlapping straight and curved lines in blue, red, orange, yellow, white and purple on a dark teal background.\"], \"reading\": \"The face is assembled from stacked rectangular compartments — eye boxes, a nose bridge, a tooth-filled mouth — each zone packed with crossing lines that compete rather than blend. The white ovals and tooth shapes hold their brightness against the surrounding noise. The result reads as confrontational: wide-open, flat-on, and loud in color even before any expression is assigned.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between #38 and #40 in both title and recorded-creation order. Where #38 uses deep black grounds to pull its face back, #39 pushes every zone forward with equal brightness, and #40 shifts to a white ground with black line dominance.\", \"connections\": [{\"targetArtworkId\": \"QmeFwDKx7WBocGankyFFbBv7mEZw4Bxd15eFxhEpzzCkyJ\", \"reason\": \"Both works share rectangular eye-box structure and tooth shapes, but #38 buries them in near-black shadow while #39 floods the same zones with competing bright lines, making the contrast in emotional weight direct and visible.\"}, {\"targetArtworkId\": \"QmPsjFFmpt5AiszrbjBKWAiPYwDSZX8bAbVd1QhacPa5uL\", \"reason\": \"#40 uses the same blocky compartment layout and tooth row as #39, but replaces the dark teal ground with white and shifts line dominance to black, showing how background tone changes the face's apparent weight.\"}], \"tags\": [\"rectangular compartments\", \"crossed-bar eye shapes\", \"tooth row\", \"overlapping straight lines\", \"blue-red-orange palette\", \"dark teal background\"], \"lookingQuestion\": \"How do the white ovals in the eye zones hold their brightness against the surrounding tangle of lines, and what happens to your eye when it moves from those ovals down to the tooth shapes?\", \"ambiguities\": [\"The red horizontal bars crossing each eye oval could be read as pupils, lids, or purely abstract marks — the image does not resolve this.\", \"Candidate Qmd7ktmczj66Vcdj9ejXjunYkrpVvknpwKgHVgwH8cQSDv (nnotb #292) shares a face-like structure but its diagonal composition and soft background blobs differ enough from #39's flat grid that no specific formal connection is strong enough to include.\"]}\nFLAGS:\n[{\"artworkId\": \"QmRDTK5rjkm5Buu8p4DLw3FPU6pupTJGNwTQBBgAkrVVwf\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}, {\"rule\": \"repeated-opening\", \"text\": \"the face is assembled from\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

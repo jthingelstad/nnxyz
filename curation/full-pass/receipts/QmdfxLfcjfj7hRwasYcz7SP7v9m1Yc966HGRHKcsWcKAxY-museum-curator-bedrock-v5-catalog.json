@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:45.787131-05:00",
+    "usage": {
+      "inputTokens": 6386,
+      "outputTokens": 772,
+      "totalTokens": 7158,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13313
+    },
+    "requestId": "2b4c439c-bab1-4643-9297-daef8caf7318",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal face fills the canvas, built from looping dark outlines layered over broad, overlapping color fields of teal, rust, olive, and pale pink, with a spiral form at the right cheek.\",\n    \"The background is divided into diagonal bands of muted teal and dark red-brown, giving the face a sense of being pressed against a striped surface rather than floating freely.\",\n    \"A cluster of gold, sky-blue, and yellow shapes sits at the upper center of the face, brighter and more saturated than the surrounding muted tones, drawing the eye before it settles on the narrow, half-closed eyes below.\"\n  ],\n  \"reading\": \"The face here is quiet where others in this owned subset are loud. Muted teal and rust bands hold the form in place, and the looping outlines read less as agitation than as slow accumulation. The spiral at the cheek and the compressed, downward-looking eyes suggest something withheld. The burst of gold and blue at the crown feels like the only place the image lets pressure out.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #99 and #101. Where #99 blazes on saturated yellow and #101 is dense with crossed black lines on red, this piece pulls toward cooler, more muted ground — the collector's interest in emotional range is visible across these three alone.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc\",\n      \"reason\": \"Both works use a large frontal face with a prominent tooth-row at the bottom, but #99 is high-contrast and saturated yellow while this work is muted and cool — a direct tonal contrast between title neighbors in the owned subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK\",\n      \"reason\": \"Both faces use layered looping outlines over broad color fields with a concentrated bright zone near the eyes, but nnotb #230 is high-energy and fractured where this work is subdued and contained.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face\",\n    \"looping outlines\",\n    \"diagonal background bands\",\n    \"spiral form\",\n    \"muted teal and rust palette\",\n    \"compressed eyes\"\n  ],\n  \"interpretiveTags\": [\n    \"withheld\",\n    \"quiet tension\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move first — to the bright gold-and-blue cluster at the crown or to the narrow eyes below it — and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The spiral form at the right cheek could be read as an ear or as a purely abstract loop; the image does not resolve this clearly.\",\n    \"Title-derived and recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency does not confirm these three were made in sequence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY/image.png",
+        "imageSHA256": "35071101d5a52604a4979b2386732acfc14944b8d89725661cd94480fa78b973"
+      },
+      {
+        "artworkId": "QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc/image.png",
+        "imageSHA256": "8693d1519b420bbb29a5dd7011dfcd8df2e324c25db0d3c44a23ce3277e40b81"
+      },
+      {
+        "artworkId": "QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK/image.png",
+        "imageSHA256": "88b1e757ab4591ad823c2c714a73e1bce995d39683c48770d581d15bbee5c612"
+      },
+      {
+        "artworkId": "QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV/image.png",
+        "imageSHA256": "e55a6cae552483214e63fe56234fb274efbd223ccd2717c133227622f43be760"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:52.639844-05:00",
+    "usage": {
+      "inputTokens": 7180,
+      "outputTokens": 990,
+      "totalTokens": 8170,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6765
+    },
+    "requestId": "0db9e669-94e2-4e70-b3fb-95f8ea589e56",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large frontal face fills the canvas, built from looping dark outlines layered over broad, overlapping color fields of teal, rust, olive, and pale pink, with a spiral form at the right cheek.\",\n    \"The background is divided into diagonal bands of muted teal and dark red-brown, giving the face a sense of being pressed against a striped surface rather than floating freely.\",\n    \"A cluster of gold, sky-blue, and yellow shapes sits at the upper center of the face, brighter and more saturated than the surrounding muted tones, drawing the eye before it settles on the narrow, half-closed eyes below.\"\n  ],\n  \"reading\": \"The face is quiet where others in this owned subset are loud. Muted teal and rust bands hold the form in place, and the looping outlines read less as agitation than as slow accumulation. The spiral at the cheek and the compressed, downward-cast eyes suggest something withheld. The burst of gold and blue at the crown feels like the one place the image releases pressure.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #99 and #101. Where #99 blazes on saturated yellow and #101 is dense with crossed black lines on red, this piece pulls toward cooler, more muted ground — the collector's interest in emotional range is visible across these three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc\",\n      \"reason\": \"Both works use a large frontal face with a prominent tooth-row at the bottom, but #99 blazes on saturated yellow with high-contrast scribbled lines while this work is cool and muted — a direct tonal contrast between title neighbors in the owned subset.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK\",\n      \"reason\": \"Both faces layer looping outlines over broad color fields with a concentrated bright zone near the upper face, but nnotb #230 is fractured and high-energy where this work is subdued and contained.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face\",\n    \"looping outlines\",\n    \"diagonal background bands\",\n    \"spiral form at cheek\",\n    \"muted teal and rust palette\",\n    \"compressed half-closed eyes\"\n  ],\n  \"interpretiveTags\": [\"withheld\", \"quiet tension\"],\n  \"lookingQuestion\": \"Where does your eye move first — to the bright gold-and-blue cluster at the crown or to the narrow eyes below it — and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The spiral form at the right cheek could be read as an ear or as a purely abstract loop; the image does not resolve this clearly.\",\n    \"Title-derived and recorded-creation order align for this work, but gaps exist elsewhere in the owned subset, so adjacency does not confirm these three were made in sequence.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: teal/rust diagonal bands, muted face fields, and the gold-blue cluster at the upper center are all visible.\",\n    \"Comparison with QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc confirmed: saturated yellow ground and prominent tooth-row in #99 support the tonal contrast claim; no invented details found.\",\n    \"Comparison with QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK confirmed: looping outlines and bright upper-face zone are visible in nnotb #230; 'fractured and high-energy' is supported by the dense scribbled lines and red horizontal bars visible in that image.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdfxLfcjfj7hRwasYcz7SP7v9m1Yc966HGRHKcsWcKAxY/image.png",
+        "imageSHA256": "35071101d5a52604a4979b2386732acfc14944b8d89725661cd94480fa78b973"
+      },
+      {
+        "artworkId": "QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc/image.png",
+        "imageSHA256": "8693d1519b420bbb29a5dd7011dfcd8df2e324c25db0d3c44a23ce3277e40b81"
+      },
+      {
+        "artworkId": "QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK/image.png",
+        "imageSHA256": "88b1e757ab4591ad823c2c714a73e1bce995d39683c48770d581d15bbee5c612"
+      },
+      {
+        "artworkId": "QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWgiybA55YK5rxDmqZPxN8ikVDnAKEmLxwzUMyaAhZaEV/image.png",
+        "imageSHA256": "e55a6cae552483214e63fe56234fb274efbd223ccd2717c133227622f43be760"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large frontal face fills the canvas, built from looping dark outlines layered over broad, overlapping color fields of teal, rust, olive, and pale pink, with a spiral form at the right cheek.\", \"The background is divided into diagonal bands of muted teal and dark red-brown, giving the face a sense of being pressed against a striped surface rather than floating freely.\", \"A cluster of gold, sky-blue, and yellow shapes sits at the upper center of the face, brighter and more saturated than the surrounding muted tones, drawing the eye before it settles on the narrow, half-closed eyes below.\"], \"reading\": \"The face here is quiet where others in this owned subset are loud. Muted teal and rust bands hold the form in place, and the looping outlines read less as agitation than as slow accumulation. The spiral at the cheek and the compressed, downward-looking eyes suggest something withheld. The burst of gold and blue at the crown feels like the only place the image lets pressure out.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #99 and #101. Where #99 blazes on saturated yellow and #101 is dense with crossed black lines on red, this piece pulls toward cooler, more muted ground — the collector's interest in emotional range is visible across these three alone.\", \"connections\": [{\"targetArtworkId\": \"QmQ7i86iTkJvrpTURhx8Ltw8kPKHku9gHRqjoDSZ6yvYyc\", \"reason\": \"Both works use a large frontal face with a prominent tooth-row at the bottom, but #99 is high-contrast and saturated yellow while this work is muted and cool — a direct tonal contrast between title neighbors in the owned subset.\"}, {\"targetArtworkId\": \"QmVvsSdZwycifiUjLrcfDa2psmVQr1ckVrYZJVMbWSC5zK\", \"reason\": \"Both faces use layered looping outlines over broad color fields with a concentrated bright zone near the eyes, but nnotb #230 is high-energy and fractured where this work is subdued and contained.\"}], \"tags\": [\"frontal face\", \"looping outlines\", \"diagonal background bands\", \"spiral form\", \"muted teal and rust palette\", \"compressed eyes\"], \"interpretiveTags\": [\"withheld\", \"quiet tension\"], \"lookingQuestion\": \"Where does your eye move first — to the bright gold-and-blue cluster at the crown or to the narrow eyes below it — and what does that path through the image feel like?\", \"ambiguities\": [\"The spiral form at the right cheek could be read as an ear or as a purely abstract loop; the image does not resolve this clearly.\", \"Title-derived and recorded-creation order align here, but gaps exist elsewhere in the owned subset, so adjacency does not confirm these three were made in sequence.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

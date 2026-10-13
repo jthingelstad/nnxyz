@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:14.330567-05:00",
+    "usage": {
+      "inputTokens": 6480,
+      "outputTokens": 748,
+      "totalTokens": 7228,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12852
+    },
+    "requestId": "34435f02-71d1-4196-8897-5e5ead2208e2",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large white figure with a spiky crown and round green-outlined eyes sits centrally, its body formed by loose black outlines over white and grey fill, with a red rectangular shape at the throat.\",\n    \"A yellow bird perches on a horizontal black line at upper left, beside a small yellow structure; a small dark cat sits at lower left corner, rendered in solid black with yellow outline.\",\n    \"The background layers yellow and orange soft washes with horizontal grey hatching lines; a hanging bulb shape appears upper right, and a second smaller crowned figure with a face is sketched in yellow at the far right.\"\n  ],\n  \"reading\": \"A crowned white figure dominates the center, its posture upright and contained while the lines describing it stay loose and open. The red throat mark and wide green-ringed eyes give the face a watchful quality. Smaller figures—bird, cat, a distant yellow form—occupy the edges without competing for the same weight, suggesting a world with more than one kind of presence in it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the small dark cat here reappears as the main subject in title-neighbor nnxyz nnotb #246, and the crowned animal figure carries forward into title-neighbor nnxyz nnotb #248—though title order is not confirmed creation order.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV\",\n      \"reason\": \"The small dark cat with yellow outline at lower left of #247 matches the large black cat with yellow outline that is the central figure in #246, making the same form appear at radically different scales across the two works.\"\n    },\n    {\n      \"targetArtworkId\": \"QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m\",\n      \"reason\": \"Both #247 and #248 place a dark animal figure with a spiky crown and round outlined eyes at center against a warm layered background, but #248 strips the composition to that single figure while #247 surrounds it with secondary figures and hatching.\"\n    }\n  ],\n  \"tags\": [\n    \"crowned figure\",\n    \"layered hatching\",\n    \"yellow-orange wash\",\n    \"multiple figures at different scales\",\n    \"spiral and loop marks\",\n    \"black outline over white fill\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful mood\",\n    \"crowded yet spacious feeling\"\n  ],\n  \"lookingQuestion\": \"What does the difference in line density between the central white figure and the smaller figures at the edges tell you about how space is being organized here?\",\n  \"ambiguities\": [\n    \"The hanging form at upper right could be a light bulb or a pendant; the image does not resolve this clearly.\",\n    \"Title order and recorded creation order align for this work in the owned subset, but gaps elsewhere in the nnotb family mean no broader sequence claims are supported.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTRvApeYZsqRWZvsw7yLpbfBijBpdhpYVtRiZ9ZQQhRqs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTRvApeYZsqRWZvsw7yLpbfBijBpdhpYVtRiZ9ZQQhRqs/image.png",
+        "imageSHA256": "05e08ee29bf21acfe81e8ebcd08fb1cc2b4e3324c3ba13f415283e8f6070499c"
+      },
+      {
+        "artworkId": "Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV/image.png",
+        "imageSHA256": "26ace1676f37ae27b9c70ee2156c0ac2a383df0bc817859fdfd1969f4210ac39"
+      },
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      },
+      {
+        "artworkId": "QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m/image.png",
+        "imageSHA256": "fd8e99494de0002315569673c79fa1198384bea974a3dc752c0d27339166ebcf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:21.016007-05:00",
+    "usage": {
+      "inputTokens": 7250,
+      "outputTokens": 965,
+      "totalTokens": 8215,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6606
+    },
+    "requestId": "93bde52f-1d1b-4d7f-a38c-2955d49957c4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large white figure with a spiky crown and round green-outlined eyes sits centrally, its body formed by loose black outlines over white and grey fill, with a red rectangular shape at the throat.\",\n    \"A yellow bird perches on a horizontal black line at upper left, beside a small yellow structure; a small dark cat sits at lower left corner, rendered in solid black with yellow outline.\",\n    \"The background layers yellow and orange soft washes with horizontal grey hatching lines; a hanging rounded shape appears upper right, and a second smaller crowned figure with a face is sketched in yellow-green at the far right.\"\n  ],\n  \"reading\": \"A crowned white figure dominates the center, its posture upright and contained while the lines describing it stay loose and open. The red throat mark and wide green-ringed eyes give the face a watchful quality. Smaller figures—bird, cat, a distant yellow-green form—occupy the edges without competing for the same weight, suggesting a world with more than one kind of presence in it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the small dark cat here reappears as the main subject in title-neighbor nnxyz nnotb #246, and a crowned animal figure carries into title-neighbor nnxyz nnotb #248—though title order is not confirmed creation order.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV\",\n      \"reason\": \"The small dark cat with yellow outline at lower left of #247 matches the large black cat with yellow outline that is the central figure in #246, making the same form appear at radically different scales across the two works.\"\n    },\n    {\n      \"targetArtworkId\": \"QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m\",\n      \"reason\": \"Both #247 and #248 place a dark animal figure with a spiky crown and round outlined eyes at center against a warm layered background, but #248 strips the composition to that single figure while #247 surrounds it with secondary figures and hatching.\"\n    }\n  ],\n  \"tags\": [\n    \"crowned figure\",\n    \"layered hatching\",\n    \"yellow-orange wash\",\n    \"multiple figures at different scales\",\n    \"spiral and loop marks\",\n    \"black outline over white fill\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful mood\",\n    \"crowded yet spacious feeling\"\n  ],\n  \"lookingQuestion\": \"What does the difference in line density between the central white figure and the smaller figures at the edges tell you about how space is being organized here?\",\n  \"ambiguities\": [\n    \"The hanging form at upper right reads as a rounded bulb shape but the image does not resolve whether it is a light fixture or another object.\",\n    \"Title order and recorded creation order align for this work in the owned subset, but gaps elsewhere in the nnotb family mean no broader sequence claims are supported.\"\n  ],\n  \"reviewFindings\": [\n    \"Draft described the right-side secondary figure as 'yellow'; image shows it is rendered in yellow-green, corrected in observation 3 and reading.\",\n    \"Confirmed: small dark cat with yellow outline is visible at lower left in #247 and matches the central figure in #246 (Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV); comparison is supported by direct image inspection.\",\n    \"Confirmed: #248 (QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m) shows a single crowned dark animal against a warm background, contrasting with #247's multi-figure composition; comparison is supported by direct image inspection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTRvApeYZsqRWZvsw7yLpbfBijBpdhpYVtRiZ9ZQQhRqs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTRvApeYZsqRWZvsw7yLpbfBijBpdhpYVtRiZ9ZQQhRqs/image.png",
+        "imageSHA256": "05e08ee29bf21acfe81e8ebcd08fb1cc2b4e3324c3ba13f415283e8f6070499c"
+      },
+      {
+        "artworkId": "Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV/image.png",
+        "imageSHA256": "26ace1676f37ae27b9c70ee2156c0ac2a383df0bc817859fdfd1969f4210ac39"
+      },
+      {
+        "artworkId": "QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWhRFugbdWEm11Ze2F5W8ixqreYEpt1D7D81UA3DqxYX2/image.png",
+        "imageSHA256": "ec4869a23688dc807cc68b506f9f66c35b78e698d5636c78a1e7782310445a07"
+      },
+      {
+        "artworkId": "QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m/image.png",
+        "imageSHA256": "fd8e99494de0002315569673c79fa1198384bea974a3dc752c0d27339166ebcf"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large white figure with a spiky crown and round green-outlined eyes sits centrally, its body formed by loose black outlines over white and grey fill, with a red rectangular shape at the throat.\", \"A yellow bird perches on a horizontal black line at upper left, beside a small yellow structure; a small dark cat sits at lower left corner, rendered in solid black with yellow outline.\", \"The background layers yellow and orange soft washes with horizontal grey hatching lines; a hanging bulb shape appears upper right, and a second smaller crowned figure with a face is sketched in yellow at the far right.\"], \"reading\": \"A crowned white figure dominates the center, its posture upright and contained while the lines describing it stay loose and open. The red throat mark and wide green-ringed eyes give the face a watchful quality. Smaller figures—bird, cat, a distant yellow form—occupy the edges without competing for the same weight, suggesting a world with more than one kind of presence in it.\", \"contextAngle\": \"Within the owned nnotb subset, the small dark cat here reappears as the main subject in title-neighbor nnxyz nnotb #246, and the crowned animal figure carries forward into title-neighbor nnxyz nnotb #248—though title order is not confirmed creation order.\", \"connections\": [{\"targetArtworkId\": \"Qmat1UzAVgKaKc743SxE4ZLi1qN7oZC8RiAAHP5S2zrZHV\", \"reason\": \"The small dark cat with yellow outline at lower left of #247 matches the large black cat with yellow outline that is the central figure in #246, making the same form appear at radically different scales across the two works.\"}, {\"targetArtworkId\": \"QmfCMBrPEjYvwpgXrKNphxqV4HahcQ9PERSRaBrFLjiQ8m\", \"reason\": \"Both #247 and #248 place a dark animal figure with a spiky crown and round outlined eyes at center against a warm layered background, but #248 strips the composition to that single figure while #247 surrounds it with secondary figures and hatching.\"}], \"tags\": [\"crowned figure\", \"layered hatching\", \"yellow-orange wash\", \"multiple figures at different scales\", \"spiral and loop marks\", \"black outline over white fill\"], \"interpretiveTags\": [\"watchful mood\", \"crowded yet spacious feeling\"], \"lookingQuestion\": \"What does the difference in line density between the central white figure and the smaller figures at the edges tell you about how space is being organized here?\", \"ambiguities\": [\"The hanging form at upper right could be a light bulb or a pendant; the image does not resolve this clearly.\", \"Title order and recorded creation order align for this work in the owned subset, but gaps elsewhere in the nnotb family mean no broader sequence claims are supported.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

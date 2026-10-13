@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:48.068241-05:00",
+    "usage": {
+      "inputTokens": 6273,
+      "outputTokens": 650,
+      "totalTokens": 6923,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11585
+    },
+    "requestId": "6e0524d5-ee76-4190-b664-9149d9389832",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad, roughly rectangular head shape sits centered on a flat orange background, outlined in white and filled with overlapping patches of teal, blue, pink, red, and yellow.\",\n    \"Two eye zones each contain a red-and-white crosshatched rectangle, framed by looping black lines; yellow curved strokes cluster beside each eye and below the nose area.\",\n    \"A wide mouth near the bottom holds a row of white rectangular teeth outlined in black, with loose white scribble lines radiating across the top of the head like unruly hair.\"\n  ],\n  \"reading\": \"The flat orange field pushes the head forward, giving it the blunt presence of a mask rather than a face. Crosshatched red rectangles where eyes would be read as blocked or sealed, while the wide tooth-filled mouth pulls in the opposite direction—open, loud. Layered color patches and white scribble lines sit on top of each other without blending, so the surface feels assembled rather than modeled. The overall effect is confrontational and a little absurd at once.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #69 and #71. Where #69 uses a muted olive-and-grey palette with long parallel strokes, and #71 strips color to near-monochrome grey and black, #70 is the loudest of the three in both hue and surface density.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\",\n      \"reason\": \"Both works share the same flat orange background, a roughly square head with visible teeth, and layered scribble lines over color patches—though nnotb #168 uses heavier black outlines and a darker interior, making the contrast starker.\"\n    }\n  ],\n  \"tags\": [\n    \"orange background\",\n    \"crosshatched eye zones\",\n    \"visible teeth\",\n    \"layered color patches\",\n    \"white scribble lines\",\n    \"mask-like head shape\"\n  ],\n  \"lookingQuestion\": \"The two eye rectangles are filled with the same red-and-white crosshatch pattern—do they read as identical to you, or does the difference in their surrounding colors make one feel distinct from the other?\",\n  \"ambiguities\": [\n    \"The collector's noted connection between scrimshaw and nnxyz rests on visual pattern qualities; no artist statement or external source confirms this relationship.\",\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps and variants exist across the full series, so adjacency is not confirmed continuity.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUEtrGFWjrLdpExsLKLPDAeHZob2Kn5TmYzSp9ph8BRVo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUEtrGFWjrLdpExsLKLPDAeHZob2Kn5TmYzSp9ph8BRVo/image.png",
+        "imageSHA256": "24fb7b4a26f71f9a195d264302ee2d49d9521c063b5943cbe420cbb00488f335"
+      },
+      {
+        "artworkId": "QmaToVng2vXr8An25dTLaZ1fL5tGLVxoVg8dNhyLzhMLUZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaToVng2vXr8An25dTLaZ1fL5tGLVxoVg8dNhyLzhMLUZ/image.png",
+        "imageSHA256": "b47c7a526905734ad916e2110cd8ee5cd367e9e4ea5db87bf4345c578dc0b30c"
+      },
+      {
+        "artworkId": "QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe/image.png",
+        "imageSHA256": "369481c24c3b39716ae9163bbe9f1083383b12c1cddaccc7ef16aca10c35f4f6"
+      },
+      {
+        "artworkId": "QmWbdUPj39Zf8zsq7Ukprm3gKikQ53GSdfWJzcCVpW3ZRs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWbdUPj39Zf8zsq7Ukprm3gKikQ53GSdfWJzcCVpW3ZRs/image.png",
+        "imageSHA256": "9b6cd6d67aeca95c46a005aeed7035c97b736115a991bb487eb2c4ae8c1efa52"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:54.508116-05:00",
+    "usage": {
+      "inputTokens": 6964,
+      "outputTokens": 838,
+      "totalTokens": 7802,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6364
+    },
+    "requestId": "a9759f7f-4b25-43aa-aebd-cd116bbd4443",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad, roughly rectangular head shape sits centered on a flat orange background, outlined in white and filled with overlapping patches of teal, blue, pink, red, and yellow.\",\n    \"Two eye zones each contain a red-and-white crosshatched rectangle, framed by looping black lines; yellow curved strokes cluster beside each eye and below the nose area.\",\n    \"A wide mouth near the bottom holds a row of white rectangular teeth outlined in black, with loose white scribble lines radiating across the top of the head.\"\n  ],\n  \"reading\": \"The flat orange field pushes the head forward, giving it the blunt presence of a mask rather than a face. Crosshatched red rectangles where eyes would be read as blocked or sealed, while the wide tooth-filled mouth pulls in the opposite direction—open, loud. Layered color patches and white scribble lines sit on top of each other without blending, so the surface feels assembled rather than modeled. The effect is confrontational and a little absurd at once.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #69 and #71. Where #69 uses a muted olive-and-grey palette with long parallel strokes, and #71 strips color to near-monochrome grey and black, #70 is the loudest of the three in both hue and surface density.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\",\n      \"reason\": \"Both works share the same flat orange background and a roughly square head with visible teeth and layered scribble lines over color patches; nnotb #168 uses heavier black outlines and a darker interior, making its contrasts starker.\"\n    }\n  ],\n  \"tags\": [\n    \"orange background\",\n    \"crosshatched eye zones\",\n    \"visible teeth\",\n    \"layered color patches\",\n    \"white scribble lines\",\n    \"mask-like head shape\"\n  ],\n  \"lookingQuestion\": \"The two eye rectangles are filled with the same red-and-white crosshatch pattern—do they read as identical to you, or does the difference in their surrounding colors make one feel distinct from the other?\",\n  \"ambiguities\": [\n    \"The collector's noted connection between scrimshaw and nnxyz rests on visual pattern qualities; no artist statement or external source confirms this relationship.\",\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps and variants exist across the full series, so adjacency is not confirmed continuity.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: orange background, crosshatched red-and-white eye rectangles with yellow curved strokes, and white scribble lines at the top with a toothed mouth below.\",\n    \"Comparison with QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe confirmed visually: both share flat orange background, square head, visible teeth, and layered scribble lines; heavier black outlines and darker interior in nnotb #168 are visible in its image.\",\n    \"Draft phrase 'like unruly hair' removed from observation 3 as an unsupported subject identification; replaced with neutral placement description. Word counts for reading and contextAngle checked within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUEtrGFWjrLdpExsLKLPDAeHZob2Kn5TmYzSp9ph8BRVo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUEtrGFWjrLdpExsLKLPDAeHZob2Kn5TmYzSp9ph8BRVo/image.png",
+        "imageSHA256": "24fb7b4a26f71f9a195d264302ee2d49d9521c063b5943cbe420cbb00488f335"
+      },
+      {
+        "artworkId": "QmaToVng2vXr8An25dTLaZ1fL5tGLVxoVg8dNhyLzhMLUZ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaToVng2vXr8An25dTLaZ1fL5tGLVxoVg8dNhyLzhMLUZ/image.png",
+        "imageSHA256": "b47c7a526905734ad916e2110cd8ee5cd367e9e4ea5db87bf4345c578dc0b30c"
+      },
+      {
+        "artworkId": "QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe/image.png",
+        "imageSHA256": "369481c24c3b39716ae9163bbe9f1083383b12c1cddaccc7ef16aca10c35f4f6"
+      },
+      {
+        "artworkId": "QmWbdUPj39Zf8zsq7Ukprm3gKikQ53GSdfWJzcCVpW3ZRs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWbdUPj39Zf8zsq7Ukprm3gKikQ53GSdfWJzcCVpW3ZRs/image.png",
+        "imageSHA256": "9b6cd6d67aeca95c46a005aeed7035c97b736115a991bb487eb2c4ae8c1efa52"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad, roughly rectangular head shape sits centered on a flat orange background, outlined in white and filled with overlapping patches of teal, blue, pink, red, and yellow.\", \"Two eye zones each contain a red-and-white crosshatched rectangle, framed by looping black lines; yellow curved strokes cluster beside each eye and below the nose area.\", \"A wide mouth near the bottom holds a row of white rectangular teeth outlined in black, with loose white scribble lines radiating across the top of the head like unruly hair.\"], \"reading\": \"The flat orange field pushes the head forward, giving it the blunt presence of a mask rather than a face. Crosshatched red rectangles where eyes would be read as blocked or sealed, while the wide tooth-filled mouth pulls in the opposite direction—open, loud. Layered color patches and white scribble lines sit on top of each other without blending, so the surface feels assembled rather than modeled. The overall effect is confrontational and a little absurd at once.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #69 and #71. Where #69 uses a muted olive-and-grey palette with long parallel strokes, and #71 strips color to near-monochrome grey and black, #70 is the loudest of the three in both hue and surface density.\", \"connections\": [{\"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\", \"reason\": \"Both works share the same flat orange background, a roughly square head with visible teeth, and layered scribble lines over color patches—though nnotb #168 uses heavier black outlines and a darker interior, making the contrast starker.\"}], \"tags\": [\"orange background\", \"crosshatched eye zones\", \"visible teeth\", \"layered color patches\", \"white scribble lines\", \"mask-like head shape\"], \"lookingQuestion\": \"The two eye rectangles are filled with the same red-and-white crosshatch pattern—do they read as identical to you, or does the difference in their surrounding colors make one feel distinct from the other?\", \"ambiguities\": [\"The collector's noted connection between scrimshaw and nnxyz rests on visual pattern qualities; no artist statement or external source confirms this relationship.\", \"Title-derived order and recorded-creation order align here, but the metadata notes gaps and variants exist across the full series, so adjacency is not confirmed continuity.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

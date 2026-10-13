@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:47.215096-05:00",
+    "usage": {
+      "inputTokens": 6310,
+      "outputTokens": 808,
+      "totalTokens": 7118,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13792
+    },
+    "requestId": "dbe22db0-6869-4b5c-b037-05d69490d6c7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Overlapping loops of white, black, and brown line build a large head-like form tilted slightly right, with an open mouth area on the right side filled by two bold orange-rust marks.\",\n    \"Soft blobs of muted lavender, tan, and peach sit behind the line work as loose washes, while black ink drips descend from the lower left edge.\",\n    \"A cluster of sharp, branching black strokes erupts from the upper right corner, separate from the main form and unconnected to the wash layer beneath.\"\n  ],\n  \"reading\": \"Pale washes hold the form loosely while restless loops of white and black line pull it apart and reassemble it. The two orange-rust marks at the open mouth are the only saturated color, drawing the eye to what reads as a cry or gasp. Black drips at the lower edge and the detached branching strokes at the top give the image a sense of something spilling beyond its own boundary.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #64 and #66. Where #64 fills its field with dense, high-contrast color and #66 presses into near-black mass, #65 keeps its palette spare, letting the line carry the weight.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f\",\n      \"reason\": \"Both works use a large head-like form built from layered line over muted wash, but #66 floods the field with dark mass while #65 leaves the cream ground open, making the contrast in density visible across the two images.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS\",\n      \"reason\": \"Title neighbor #64 shares the open-mouth placement and white line overlay, but its saturated lime ground and dense color fill make the spare, wash-based palette of #65 stand out by direct comparison.\"\n    }\n  ],\n  \"tags\": [\n    \"overlapping line loops\",\n    \"open mouth form\",\n    \"ink drips\",\n    \"muted wash ground\",\n    \"isolated color accent\",\n    \"detached branching strokes\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"release\",\n    \"fragmentation\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move after it finds the two orange marks — does it follow the white lines inward, travel up to the branching strokes in the corner, or drop down with the black drips?\",\n  \"ambiguities\": [\n    \"The detached branching cluster at the upper right has no clear formal anchor to the main form; whether it reads as extension or separate element depends on viewing distance.\",\n    \"The nnotb comparison (QmQ2nrAFKaWpadAqpwwiesGQKqZ9yzPHRMKsU5ynhvVrGb) shares the warm-wash background and white line overlay but differs enough in subject and structure that no strong formal connection was found; it is omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq/image.png",
+        "imageSHA256": "4757e5aaac1bc7bd0433f6182d727f6a859676330eb4120d5b54b80d1ca05391"
+      },
+      {
+        "artworkId": "QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS/image.png",
+        "imageSHA256": "b36931cf15e053d6eed1da22cbdacc2c4f9c40c856f7097b3c5306fbe532b440"
+      },
+      {
+        "artworkId": "QmQ2nrAFKaWpadAqpwwiesGQKqZ9yzPHRMKsU5ynhvVrGb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ2nrAFKaWpadAqpwwiesGQKqZ9yzPHRMKsU5ynhvVrGb/image.png",
+        "imageSHA256": "54bc94603cf2dc33625f2e36fe43d6b08ded081069bc795d141bea43cdefa712"
+      },
+      {
+        "artworkId": "Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f/image.png",
+        "imageSHA256": "20ef3cd7545f6490eeb31c944a8ed98ac4cf422484f8d9e13ec623768115b834"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:53.733587-05:00",
+    "usage": {
+      "inputTokens": 7138,
+      "outputTokens": 917,
+      "totalTokens": 8055,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6437
+    },
+    "requestId": "ff60dacf-481a-4d72-8a7c-deffcebc16e4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Overlapping loops of white, black, and brown line build a large head-like form tilted slightly right, with an open mouth area on the right side filled by two bold orange-rust marks.\",\n    \"Soft blobs of muted lavender, tan, and peach sit behind the line work as loose washes, while black ink drips descend from the lower left edge.\",\n    \"A cluster of sharp, branching black strokes erupts from the upper right corner, separate from the main form and unconnected to the wash layer beneath.\"\n  ],\n  \"reading\": \"Pale washes hold the form loosely while restless loops of white and black line pull it apart and reassemble it. The two orange-rust marks at the open mouth are the only saturated color, drawing the eye to what reads as a cry or gasp. Black drips at the lower edge and the detached branching strokes at the top give the image a sense of something spilling beyond its own boundary.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #64 and #66. Where #64 fills its field with dense, high-contrast color and #66 presses into near-black mass, #65 keeps its palette spare, letting the line carry the weight.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f\",\n      \"reason\": \"Both works use a large head-like form built from layered line over muted wash, but #66 floods the field with dark mass while #65 leaves the cream ground open, making the contrast in density visible across the two images.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS\",\n      \"reason\": \"Title neighbor #64 shares the open-mouth placement and white line overlay, but its saturated lime ground and dense color fill make the spare, wash-based palette of #65 stand out by direct comparison.\"\n    }\n  ],\n  \"tags\": [\n    \"overlapping line loops\",\n    \"open mouth form\",\n    \"ink drips\",\n    \"muted wash ground\",\n    \"isolated color accent\",\n    \"detached branching strokes\"\n  ],\n  \"interpretiveTags\": [\"tension\", \"release\", \"fragmentation\"],\n  \"lookingQuestion\": \"Where does your eye move after it finds the two orange marks — does it follow the white lines inward, travel up to the branching strokes in the corner, or drop down with the black drips?\",\n  \"ambiguities\": [\n    \"The detached branching cluster at the upper right has no clear formal anchor to the main form; whether it reads as extension or separate element depends on viewing distance.\",\n    \"The nnotb comparison (candidate QmQ2nrAFKaWpadAqpwwiesGQKqZ9yzPHRMKsU5ynhvVrGb) shares warm-wash background and white line overlay but differs enough in structure that no strong formal connection was found; it is omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: orange-rust marks, lavender/tan/peach washes with drips, and detached branching cluster at upper right are all visible.\",\n    \"Both connections verified against inspected comparison images: #66 confirmed dark-mass contrast; #64 confirmed lime ground and dense fill versus spare palette of #65.\",\n    \"No invented biography, intent, technique, or unsupported subject identity found; reading stays within visible evidence; word counts within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNkQDSfQyWGH7o6q3qttp89Yikj5fD3F2JCJsqviZUFoq/image.png",
+        "imageSHA256": "4757e5aaac1bc7bd0433f6182d727f6a859676330eb4120d5b54b80d1ca05391"
+      },
+      {
+        "artworkId": "QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS/image.png",
+        "imageSHA256": "b36931cf15e053d6eed1da22cbdacc2c4f9c40c856f7097b3c5306fbe532b440"
+      },
+      {
+        "artworkId": "QmQ2nrAFKaWpadAqpwwiesGQKqZ9yzPHRMKsU5ynhvVrGb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ2nrAFKaWpadAqpwwiesGQKqZ9yzPHRMKsU5ynhvVrGb/image.png",
+        "imageSHA256": "54bc94603cf2dc33625f2e36fe43d6b08ded081069bc795d141bea43cdefa712"
+      },
+      {
+        "artworkId": "Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f/image.png",
+        "imageSHA256": "20ef3cd7545f6490eeb31c944a8ed98ac4cf422484f8d9e13ec623768115b834"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Overlapping loops of white, black, and brown line build a large head-like form tilted slightly right, with an open mouth area on the right side filled by two bold orange-rust marks.\", \"Soft blobs of muted lavender, tan, and peach sit behind the line work as loose washes, while black ink drips descend from the lower left edge.\", \"A cluster of sharp, branching black strokes erupts from the upper right corner, separate from the main form and unconnected to the wash layer beneath.\"], \"reading\": \"Pale washes hold the form loosely while restless loops of white and black line pull it apart and reassemble it. The two orange-rust marks at the open mouth are the only saturated color, drawing the eye to what reads as a cry or gasp. Black drips at the lower edge and the detached branching strokes at the top give the image a sense of something spilling beyond its own boundary.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #64 and #66. Where #64 fills its field with dense, high-contrast color and #66 presses into near-black mass, #65 keeps its palette spare, letting the line carry the weight.\", \"connections\": [{\"targetArtworkId\": \"Qma81A3A6p5sCfZx3sWYyJHM34sTu9MexLmm4U7Ys5yw3f\", \"reason\": \"Both works use a large head-like form built from layered line over muted wash, but #66 floods the field with dark mass while #65 leaves the cream ground open, making the contrast in density visible across the two images.\"}, {\"targetArtworkId\": \"QmRR6hXXcdwdYaVXU5rw1PNj6eyXMNhroVSWbw3ANLa9eS\", \"reason\": \"Title neighbor #64 shares the open-mouth placement and white line overlay, but its saturated lime ground and dense color fill make the spare, wash-based palette of #65 stand out by direct comparison.\"}], \"tags\": [\"overlapping line loops\", \"open mouth form\", \"ink drips\", \"muted wash ground\", \"isolated color accent\", \"detached branching strokes\"], \"interpretiveTags\": [\"tension\", \"release\", \"fragmentation\"], \"lookingQuestion\": \"Where does your eye move after it finds the two orange marks — does it follow the white lines inward, travel up to the branching strokes in the corner, or drop down with the black drips?\", \"ambiguities\": [\"The detached branching cluster at the upper right has no clear formal anchor to the main form; whether it reads as extension or separate element depends on viewing distance.\", \"The nnotb comparison (QmQ2nrAFKaWpadAqpwwiesGQKqZ9yzPHRMKsU5ynhvVrGb) shares the warm-wash background and white line overlay but differs enough in subject and structure that no strong formal connection was found; it is omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

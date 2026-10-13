@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:09.428888-05:00",
+    "usage": {
+      "inputTokens": 6083,
+      "outputTokens": 821,
+      "totalTokens": 6904,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12912
+    },
+    "requestId": "a567083c-3584-4183-9491-66814c7c0a44",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark animal head fills the upper two-thirds of the image, with two pointed ears at the top and two gold-ringed eyes built from layered zigzag lines and white highlights at center.\",\n    \"The background is dominated by broad yellow-gold strokes on the left and upper areas, with bursts of magenta, teal, and red lines scattered across all four corners as loose cross-hatching.\",\n    \"Below the head, a narrow dark torso is outlined in black with white horizontal dashes running across it, flanked on the right by a vertical magenta wash and on the lower left by a dense red grid of overlapping rectangles.\"\n  ],\n  \"reading\": \"A dark, heavily layered animal head pushes close to the picture edge, its gold-ringed eyes built from stacked zigzag lines that read as both mechanical and alert. The warm yellow field behind it presses forward rather than receding, so figure and ground compete for the same plane. White dashes crossing the torso below carry a different rhythm from the jagged eye rings, and the scattered magenta and teal lines at the margins feel like static around a signal.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors nnxyz nnotb #242 and nnxyz nnotb #244 share the same close-cropped animal-head format and zigzag eye construction, but #243 replaces the cool blue fields of both neighbors with a warm yellow ground, shifting the overall temperature noticeably.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf\",\n      \"reason\": \"nnxyz nnotb #242 uses the same gold-ringed, zigzag-built eye pair and a full-body animal figure on a busy layered ground, but its dominant blue field makes the warm yellow ground of #243 stand out as a direct contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH\",\n      \"reason\": \"nnxyz nnotb #244 repeats the close-cropped dark animal head with white-dash horizontal bands across the torso, making it the clearest structural echo of #243 while returning to a blue background.\"\n    }\n  ],\n  \"tags\": [\n    \"animal head close-crop\",\n    \"zigzag eye rings\",\n    \"yellow-gold ground\",\n    \"cross-hatched corners\",\n    \"white dash horizontal bands\",\n    \"magenta vertical wash\"\n  ],\n  \"interpretiveTags\": [\n    \"alert tension\",\n    \"warm-cool contrast\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the zigzag lines that form the eye rings end and the background lines begin, and what happens to your sense of the head's depth at that boundary?\",\n  \"ambiguities\": [\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps may exist elsewhere in the nnotb family, so neighbor proximity is not confirmed as making sequence.\",\n    \"The rawblocks #22 comparison image shows a figure with a different structure and no close formal match to #243's specific eye or ground treatment; it was inspected but not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95/image.png",
+        "imageSHA256": "5f3f28e2d85069a68ac6b2db7810b8219fc0c08964bc848fa533a873cf80c633"
+      },
+      {
+        "artworkId": "Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf/image.png",
+        "imageSHA256": "818d96ea1e3e3e76015fa983453677d51a725790c9f8ec31afcd41bb162aa0b6"
+      },
+      {
+        "artworkId": "QmTMztrF9fguSoP3Wh7WcuQJkQ1szr5uHBV7BvmSRHF4jw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTMztrF9fguSoP3Wh7WcuQJkQ1szr5uHBV7BvmSRHF4jw/image.png",
+        "imageSHA256": "367262ce618a02dcbbaa51fb4d91e12a47cabe24e860fff9cae7401343e65282"
+      },
+      {
+        "artworkId": "QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH/image.png",
+        "imageSHA256": "3a487eb235ad779ebfa2a6361e9a453fd1c4b2e4531c0bc876a16667b6f54952"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:16.179824-05:00",
+    "usage": {
+      "inputTokens": 6926,
+      "outputTokens": 964,
+      "totalTokens": 7890,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6673
+    },
+    "requestId": "60b55def-31f3-428b-b0f2-269eb8736101",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark animal head fills the upper two-thirds of the image, with two pointed ears at the top and two gold-ringed eyes built from layered zigzag lines and white highlights at center.\",\n    \"The background is dominated by broad yellow-gold strokes on the left and upper areas, with bursts of magenta, teal, and red lines scattered across all four corners as loose cross-hatching.\",\n    \"Below the head, a narrow dark torso is outlined in black with white horizontal dashes running across it, flanked on the right by a vertical magenta wash and on the lower left by a dense red grid of overlapping rectangles.\"\n  ],\n  \"reading\": \"A dark, heavily layered animal head pushes close to the picture edge, its gold-ringed eyes built from stacked zigzag lines that read as both mechanical and alert. The warm yellow field behind it presses forward rather than receding, so figure and ground compete for the same plane. White dashes crossing the torso carry a different rhythm from the jagged eye rings, and the scattered magenta and teal lines at the margins feel like static around a signal.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #242 and nnxyz nnotb #244 share the same close-cropped animal-head format and zigzag eye construction, but #243 replaces the cool blue fields of both neighbors with a warm yellow ground, shifting the overall temperature noticeably.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf\",\n      \"reason\": \"nnxyz nnotb #242 uses the same gold-ringed, zigzag-built eye pair and a full-body animal figure on a busy layered ground, but its dominant blue field makes the warm yellow ground of #243 a direct contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH\",\n      \"reason\": \"nnxyz nnotb #244 repeats the close-cropped dark animal head with white-dash horizontal bands across the torso, making it the clearest structural echo of #243 while returning to a blue background.\"\n    }\n  ],\n  \"tags\": [\n    \"animal head close-crop\",\n    \"zigzag eye rings\",\n    \"yellow-gold ground\",\n    \"cross-hatched corners\",\n    \"white dash horizontal bands\",\n    \"magenta vertical wash\"\n  ],\n  \"interpretiveTags\": [\n    \"alert tension\",\n    \"warm-cool contrast\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the zigzag lines that form the eye rings end and the background lines begin, and what happens to your sense of the head's depth at that boundary?\",\n  \"ambiguities\": [\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps may exist elsewhere in the nnotb family, so neighbor proximity is not confirmed as a making sequence.\",\n    \"The rawblocks #22 comparison image was inspected and shows a differently structured figure with no close formal match to #243's eye construction or ground treatment; it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: gold-ringed zigzag eyes, yellow-gold ground with magenta/teal/red corner lines, and white-dash torso with red lower-left grid are all visible.\",\n    \"Both comparison images inspected: #242 confirms blue ground and gold zigzag eyes as stated; #244 confirms blue ground, close-cropped dark head, and white-dash horizontal torso bands as stated.\",\n    \"One word-count trim made to reading (removed redundant 'below' phrase) to stay within 65-word target; no factual content changed.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVtTpBmpxB6dLWkLcyr3q214m23DBpdD7KANrRTzDCU95/image.png",
+        "imageSHA256": "5f3f28e2d85069a68ac6b2db7810b8219fc0c08964bc848fa533a873cf80c633"
+      },
+      {
+        "artworkId": "Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf/image.png",
+        "imageSHA256": "818d96ea1e3e3e76015fa983453677d51a725790c9f8ec31afcd41bb162aa0b6"
+      },
+      {
+        "artworkId": "QmTMztrF9fguSoP3Wh7WcuQJkQ1szr5uHBV7BvmSRHF4jw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTMztrF9fguSoP3Wh7WcuQJkQ1szr5uHBV7BvmSRHF4jw/image.png",
+        "imageSHA256": "367262ce618a02dcbbaa51fb4d91e12a47cabe24e860fff9cae7401343e65282"
+      },
+      {
+        "artworkId": "QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH/image.png",
+        "imageSHA256": "3a487eb235ad779ebfa2a6361e9a453fd1c4b2e4531c0bc876a16667b6f54952"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large dark animal head fills the upper two-thirds of the image, with two pointed ears at the top and two gold-ringed eyes built from layered zigzag lines and white highlights at center.\", \"The background is dominated by broad yellow-gold strokes on the left and upper areas, with bursts of magenta, teal, and red lines scattered across all four corners as loose cross-hatching.\", \"Below the head, a narrow dark torso is outlined in black with white horizontal dashes running across it, flanked on the right by a vertical magenta wash and on the lower left by a dense red grid of overlapping rectangles.\"], \"reading\": \"A dark, heavily layered animal head pushes close to the picture edge, its gold-ringed eyes built from stacked zigzag lines that read as both mechanical and alert. The warm yellow field behind it presses forward rather than receding, so figure and ground compete for the same plane. White dashes crossing the torso below carry a different rhythm from the jagged eye rings, and the scattered magenta and teal lines at the margins feel like static around a signal.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors nnxyz nnotb #242 and nnxyz nnotb #244 share the same close-cropped animal-head format and zigzag eye construction, but #243 replaces the cool blue fields of both neighbors with a warm yellow ground, shifting the overall temperature noticeably.\", \"connections\": [{\"targetArtworkId\": \"Qma77emCMv8FFpSZUMMfzctbbsGAjqujSAAtFUm8wReBDf\", \"reason\": \"nnxyz nnotb #242 uses the same gold-ringed, zigzag-built eye pair and a full-body animal figure on a busy layered ground, but its dominant blue field makes the warm yellow ground of #243 stand out as a direct contrast.\"}, {\"targetArtworkId\": \"QmTcDFTnxufXp6dZPk47XzMGReUgaspX47PghjVwpKxCNH\", \"reason\": \"nnxyz nnotb #244 repeats the close-cropped dark animal head with white-dash horizontal bands across the torso, making it the clearest structural echo of #243 while returning to a blue background.\"}], \"tags\": [\"animal head close-crop\", \"zigzag eye rings\", \"yellow-gold ground\", \"cross-hatched corners\", \"white dash horizontal bands\", \"magenta vertical wash\"], \"interpretiveTags\": [\"alert tension\", \"warm-cool contrast\"], \"lookingQuestion\": \"Where exactly do the zigzag lines that form the eye rings end and the background lines begin, and what happens to your sense of the head's depth at that boundary?\", \"ambiguities\": [\"Title-derived order and recorded-creation order align here, but the metadata notes gaps may exist elsewhere in the nnotb family, so neighbor proximity is not confirmed as making sequence.\", \"The rawblocks #22 comparison image shows a figure with a different structure and no close formal match to #243's specific eye or ground treatment; it was inspected but not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

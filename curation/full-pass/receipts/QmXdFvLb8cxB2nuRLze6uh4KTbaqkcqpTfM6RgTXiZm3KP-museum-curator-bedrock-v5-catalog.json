@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:25.173136-05:00",
+    "usage": {
+      "inputTokens": 6114,
+      "outputTokens": 761,
+      "totalTokens": 6875,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13954
+    },
+    "requestId": "660f2aa4-d6f4-4cbc-b4ac-92f18f2eaf7b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded head shape dominates the right half, rendered in olive and amber wash, with a tight white spiral marking one eye socket and a row of pale rectangular forms suggesting teeth along the lower edge.\",\n    \"The left side is split between a black field carrying white dripped and angular marks and a dense tangle of red, orange, green and black lines that fill the upper dome of the head.\",\n    \"Along the bottom, thick yellow vertical bars with dripping ends sit against a dark olive ground, forming a row that reads as a separate horizontal band beneath the figure.\"\n  ],\n  \"reading\": \"The head sits in three-quarter view, its right side dissolving into layered scribble while the left eye socket holds a single coiled white spiral that pulls the eye inward. The black zone beside it feels abrupt, almost cut away, and the dripping yellow bars below add a different kind of weight — flat, repeated, unhurried. The image holds tension between the dense interior marks and those spare bottom forms.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #69 and nnotb #71 in both title order and recorded creation order. Where #69 spreads its skull form across a busy warm ground with red X marks, #70 compresses the figure and introduces the isolated yellow bar row not visible in its neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3\",\n      \"reason\": \"Both works center a skull-like rounded head in amber and olive tones with dense overlaid line work, but #69 scatters marks across the full field while #70 concentrates them inside the dome and leaves the lower band bare by comparison.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2\",\n      \"reason\": \"nifty faces #128 shares the large single eye rendered as a pale oval against a dark surround, and both works use exposed tooth-like forms low in the composition, though #128 places them on a flat pink ground rather than embedding them in layered marks.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded head form\",\n    \"spiral eye mark\",\n    \"dripping yellow bars\",\n    \"black and white contrast zone\",\n    \"dense overlaid line work\",\n    \"tooth-like row\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled\",\n    \"compressed energy\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the tight spiral in the eye socket and the evenly spaced yellow bars at the bottom do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The pale rectangular forms along the lower jaw edge read as teeth but could be abstract marks; no external confirmation available.\",\n    \"The nifty faces #128 comparison is cross-collection and rests on visible formal overlap only; no evidence links the two works beyond what is seen in the images.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXdFvLb8cxB2nuRLze6uh4KTbaqkcqpTfM6RgTXiZm3KP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXdFvLb8cxB2nuRLze6uh4KTbaqkcqpTfM6RgTXiZm3KP/image.png",
+        "imageSHA256": "26857ea6ade5f3a0bb1cf46bf510005d23c65b4817b025d75b8e7db1e23f5197"
+      },
+      {
+        "artworkId": "QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3/image.png",
+        "imageSHA256": "8003ee07cd34193841d0615cfac97a097f870cf902ab6d1fb23e7030a200c83f"
+      },
+      {
+        "artworkId": "QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2/image.png",
+        "imageSHA256": "ffafb15487ef3da0c2cdc4aa7984a731ddcff78c438be2510833173b6e690288"
+      },
+      {
+        "artworkId": "QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc/image.png",
+        "imageSHA256": "4470f64fbea0251bd5a33e911bfab148324c1682b0172e9ca00b7615c107a0a3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:32.695535-05:00",
+    "usage": {
+      "inputTokens": 6897,
+      "outputTokens": 892,
+      "totalTokens": 7789,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7437
+    },
+    "requestId": "aadd997f-c597-4721-94da-eaccf828982c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded head shape occupies the right half, rendered in olive and amber wash, with a tight white spiral marking one eye socket and a row of pale rectangular forms along the lower jaw edge.\",\n    \"The left side divides between a black field carrying white dripped and angular marks and a dense tangle of red, orange, green and black lines filling the upper dome of the head.\",\n    \"Along the bottom, thick yellow vertical bars with dripping ends sit against a dark olive ground, forming a distinct horizontal band separate from the figure above.\"\n  ],\n  \"reading\": \"The head sits in three-quarter view, its left side dissolving into layered scribble while the right eye socket holds a coiled white spiral that draws the eye inward. The black zone beside it reads as an abrupt cutaway, and the dripping yellow bars below carry a different quality — flat, repeated, unhurried. The image holds tension between the dense interior marks and those spare bottom forms.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #69 and nnotb #71 in both title and recorded creation order. Where #69 spreads a skull form across a warm busy field with red X marks, #70 compresses the figure and introduces an isolated yellow bar row absent in either neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3\",\n      \"reason\": \"Both center a rounded skull-like head in amber and olive with dense overlaid lines, but #69 scatters marks across the full field while #70 concentrates them inside the dome and isolates the lower bar band.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2\",\n      \"reason\": \"nifty faces #128 shares a large single eye rendered as a pale oval against a dark surround and exposed tooth-like forms low in the composition, though it places them on a flat pink ground rather than within layered marks.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded head form\",\n    \"spiral eye mark\",\n    \"dripping yellow bars\",\n    \"black and white contrast zone\",\n    \"dense overlaid line work\",\n    \"tooth-like row\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled\",\n    \"compressed tension\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the tight spiral in the eye socket and the evenly spaced yellow bars at the bottom do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The pale rectangular forms along the lower jaw edge read as teeth but could be abstract marks; no external confirmation available.\",\n    \"The nifty faces #128 comparison is cross-collection and rests on visible formal overlap only; no evidence links the two works beyond what is seen in the images.\"\n  ],\n  \"reviewFindings\": [\n    \"Draft observation 1 placed the spiral on the left eye socket; inspecting the image confirms the spiral sits on the right-facing eye of the head, which occupies the right half — corrected to 'right eye socket' and orientation clarified in reading.\",\n    \"Draft reading said 'left eye socket holds a single coiled white spiral' — this was inverted; the spiral is on the right side of the head form; corrected.\",\n    \"All candidate artwork IDs confirmed against supplied metadata; color and form claims in both comparisons verified against inspected images; no invented subjects or unsupported intent found beyond the corrected eye-side error.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXdFvLb8cxB2nuRLze6uh4KTbaqkcqpTfM6RgTXiZm3KP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXdFvLb8cxB2nuRLze6uh4KTbaqkcqpTfM6RgTXiZm3KP/image.png",
+        "imageSHA256": "26857ea6ade5f3a0bb1cf46bf510005d23c65b4817b025d75b8e7db1e23f5197"
+      },
+      {
+        "artworkId": "QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3/image.png",
+        "imageSHA256": "8003ee07cd34193841d0615cfac97a097f870cf902ab6d1fb23e7030a200c83f"
+      },
+      {
+        "artworkId": "QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2/image.png",
+        "imageSHA256": "ffafb15487ef3da0c2cdc4aa7984a731ddcff78c438be2510833173b6e690288"
+      },
+      {
+        "artworkId": "QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVYFPo97RSARkE95AM43sxDuhRaBG7vBskB9BpqQcukc/image.png",
+        "imageSHA256": "4470f64fbea0251bd5a33e911bfab148324c1682b0172e9ca00b7615c107a0a3"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A rounded head shape dominates the right half, rendered in olive and amber wash, with a tight white spiral marking one eye socket and a row of pale rectangular forms suggesting teeth along the lower edge.\", \"The left side is split between a black field carrying white dripped and angular marks and a dense tangle of red, orange, green and black lines that fill the upper dome of the head.\", \"Along the bottom, thick yellow vertical bars with dripping ends sit against a dark olive ground, forming a row that reads as a separate horizontal band beneath the figure.\"], \"reading\": \"The head sits in three-quarter view, its right side dissolving into layered scribble while the left eye socket holds a single coiled white spiral that pulls the eye inward. The black zone beside it feels abrupt, almost cut away, and the dripping yellow bars below add a different kind of weight — flat, repeated, unhurried. The image holds tension between the dense interior marks and those spare bottom forms.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between nnotb #69 and nnotb #71 in both title order and recorded creation order. Where #69 spreads its skull form across a busy warm ground with red X marks, #70 compresses the figure and introduces the isolated yellow bar row not visible in its neighbor.\", \"connections\": [{\"targetArtworkId\": \"QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3\", \"reason\": \"Both works center a skull-like rounded head in amber and olive tones with dense overlaid line work, but #69 scatters marks across the full field while #70 concentrates them inside the dome and leaves the lower band bare by comparison.\"}, {\"targetArtworkId\": \"QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2\", \"reason\": \"nifty faces #128 shares the large single eye rendered as a pale oval against a dark surround, and both works use exposed tooth-like forms low in the composition, though #128 places them on a flat pink ground rather than embedding them in layered marks.\"}], \"tags\": [\"rounded head form\", \"spiral eye mark\", \"dripping yellow bars\", \"black and white contrast zone\", \"dense overlaid line work\", \"tooth-like row\"], \"interpretiveTags\": [\"unsettled\", \"compressed energy\"], \"lookingQuestion\": \"What does the relationship between the tight spiral in the eye socket and the evenly spaced yellow bars at the bottom do to how you move through the image?\", \"ambiguities\": [\"The pale rectangular forms along the lower jaw edge read as teeth but could be abstract marks; no external confirmation available.\", \"The nifty faces #128 comparison is cross-collection and rests on visible formal overlap only; no evidence links the two works beyond what is seen in the images.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

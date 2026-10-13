@@ -1,0 +1,16 @@
+---
+interface Props {
+  path: string;
+  title: string;
+  compact?: boolean;
+}
+const { path, title, compact = false } = Astro.props;
+---
+
+<button
+  class:list={['tinylytics_kudos', 'kudos', { compact }]}
+  data-path={path}
+  data-private="true"
+  aria-label={`Give kudos to ${title}`}
+  title={`Give kudos to ${title}`}
+></button>

@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:05.174678-05:00",
+    "usage": {
+      "inputTokens": 6061,
+      "outputTokens": 736,
+      "totalTokens": 6797,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12856
+    },
+    "requestId": "e984e587-9221-4460-b4a6-17e89d6c23df",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide rounded head shape sits against a flat red-orange background; large rounded ear-like forms flank the head on both sides, outlined in thin blue lines.\",\n    \"Two rectangular eye sockets, outlined in black and white, sit side by side in the upper face; each contains a smaller dark oval with a white highlight mark.\",\n    \"A wide open mouth in the lower half shows a row of white teeth framed by thick red lips and dark brown interior; loose yellow, blue, and white strokes cross the cheeks and forehead.\"\n  ],\n  \"reading\": \"The flat red-orange field pushes the head forward with no spatial retreat. Rectangular eye sockets give the face a mask-like flatness, while the bared teeth and smeared cheek strokes pull in opposite directions — one reads as fixed, the other as agitated. Yellow and white marks scatter across the surface without settling into features, leaving the expression somewhere between alarm and a forced grin.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #76 and #78. Where #76 uses a cool lavender field and hard geometric scaffolding, #77 swaps that for a hot red ground and looser, more layered mark-making across the face.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\",\n      \"reason\": \"Both works share rectangular eye sockets and a wide toothed mouth as the main face structure, but #76 keeps its lines open and geometric on lavender while #77 buries similar shapes under dense overlapping strokes on red.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt\",\n      \"reason\": \"rawblocks #25 also layers dense, crossing marks over a rounded head form with exposed teeth, offering a cross-collection contrast in complexity and color density against #77's simpler flat ground.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded head form\",\n    \"rectangular eye sockets\",\n    \"bared teeth\",\n    \"flat red-orange ground\",\n    \"overlapping loose strokes\",\n    \"mask-like face structure\"\n  ],\n  \"interpretiveTags\": [\n    \"alarm\",\n    \"forced grin\",\n    \"agitation\"\n  ],\n  \"lookingQuestion\": \"Where do the loose yellow and white marks on the cheeks follow the face's contours, and where do they cut across them?\",\n  \"ambiguities\": [\n    \"The rounded side forms could be read as ears, hair, or purely abstract shapes; the image does not resolve this clearly.\",\n    \"Comparison #78 (nifty faces #78) shows a heavily geometric teal-ground composition with little formal overlap with #77, so it was not selected as a connection despite title adjacency.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN/image.png",
+        "imageSHA256": "f548741885bb9cc5d9f96c53ca8eb64537f55aeb26f66bff8a0545a4abb4524e"
+      },
+      {
+        "artworkId": "QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD/image.png",
+        "imageSHA256": "71e1fb501a6f6a17291b51862a87a9a99d25a5fe5a454d229ee3b3b88f9c12d1"
+      },
+      {
+        "artworkId": "QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt/image.png",
+        "imageSHA256": "eaab78c7f4fb25f529e0ed40d5c5e45f1d3c70e8480440ac4abf36402136ceb7"
+      },
+      {
+        "artworkId": "QmRsR9cYrLSe6HUwRG5ozLB2FoJ4hpuR1XwWKZcRK3Foaa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRsR9cYrLSe6HUwRG5ozLB2FoJ4hpuR1XwWKZcRK3Foaa/image.png",
+        "imageSHA256": "7d85c56a8a1a227358e21c8163e9be7c24db7a6a1ce8f773c1ba2bd262d50f2c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:51:11.361982-05:00",
+    "usage": {
+      "inputTokens": 6817,
+      "outputTokens": 875,
+      "totalTokens": 7692,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6119
+    },
+    "requestId": "d1e5e271-0f8c-4bd2-bc5a-82612f8d144e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide rounded head shape sits against a flat red-orange background; large rounded forms flank the head on both sides, outlined in thin blue lines.\",\n    \"Two rectangular eye sockets, outlined in black and white, sit side by side in the upper face; each contains a smaller dark oval with a white highlight mark.\",\n    \"A wide open mouth in the lower half shows a row of white teeth framed by thick red lips and a dark interior; loose yellow, blue, and white strokes cross the cheeks and forehead.\"\n  ],\n  \"reading\": \"The flat red-orange field pushes the head forward with no spatial retreat. Rectangular eye sockets give the face a mask-like flatness, while the bared teeth and smeared cheek strokes pull in opposite directions — one reads as fixed, the other as agitated. Yellow and white marks scatter across the surface without settling into features, leaving the expression somewhere between alarm and a forced grin.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #76 and #78. Where #76 uses a cool lavender field and hard geometric scaffolding, #77 swaps that for a hot red ground and denser, more layered mark-making across the face.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\",\n      \"reason\": \"Both works share rectangular eye sockets and a wide toothed mouth as the main face structure, but #76 keeps its lines open on lavender while #77 buries similar shapes under dense overlapping strokes on red.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt\",\n      \"reason\": \"rawblocks #25 also layers dense crossing marks over a rounded head form with exposed teeth, offering a cross-collection contrast in color density and background complexity against #77's flat single-color ground.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded head form\",\n    \"rectangular eye sockets\",\n    \"bared teeth\",\n    \"flat red-orange ground\",\n    \"overlapping loose strokes\",\n    \"mask-like face structure\"\n  ],\n  \"interpretiveTags\": [\n    \"alarm\",\n    \"forced grin\",\n    \"agitation\"\n  ],\n  \"lookingQuestion\": \"Where do the loose yellow and white marks on the cheeks follow the face's contours, and where do they cut across them?\",\n  \"ambiguities\": [\n    \"The rounded side forms could be read as ears, hair, or purely abstract shapes; the image does not resolve this clearly.\",\n    \"Comparison #78 shows a heavily geometric teal-ground composition with little formal overlap with #77, so it was not selected despite title adjacency.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: red-orange ground, rectangular eye sockets with dark ovals and white highlights, red-framed toothed mouth, and loose yellow/blue/white cheek strokes all verified against the primary image.\",\n    \"Removed 'ear-like' from observation 1 per ambiguity rule; replaced with neutral 'rounded forms flanking the head'.\",\n    \"Both comparison images inspected: #76 lavender ground and geometric scaffolding confirmed; rawblocks #25 rounded head, dense crossing marks, and exposed teeth confirmed; #78 teal ground with minimal formal overlap confirmed as correctly excluded.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN/image.png",
+        "imageSHA256": "f548741885bb9cc5d9f96c53ca8eb64537f55aeb26f66bff8a0545a4abb4524e"
+      },
+      {
+        "artworkId": "QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD/image.png",
+        "imageSHA256": "71e1fb501a6f6a17291b51862a87a9a99d25a5fe5a454d229ee3b3b88f9c12d1"
+      },
+      {
+        "artworkId": "QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt/image.png",
+        "imageSHA256": "eaab78c7f4fb25f529e0ed40d5c5e45f1d3c70e8480440ac4abf36402136ceb7"
+      },
+      {
+        "artworkId": "QmRsR9cYrLSe6HUwRG5ozLB2FoJ4hpuR1XwWKZcRK3Foaa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRsR9cYrLSe6HUwRG5ozLB2FoJ4hpuR1XwWKZcRK3Foaa/image.png",
+        "imageSHA256": "7d85c56a8a1a227358e21c8163e9be7c24db7a6a1ce8f773c1ba2bd262d50f2c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A wide rounded head shape sits against a flat red-orange background; large rounded ear-like forms flank the head on both sides, outlined in thin blue lines.\", \"Two rectangular eye sockets, outlined in black and white, sit side by side in the upper face; each contains a smaller dark oval with a white highlight mark.\", \"A wide open mouth in the lower half shows a row of white teeth framed by thick red lips and dark brown interior; loose yellow, blue, and white strokes cross the cheeks and forehead.\"], \"reading\": \"The flat red-orange field pushes the head forward with no spatial retreat. Rectangular eye sockets give the face a mask-like flatness, while the bared teeth and smeared cheek strokes pull in opposite directions — one reads as fixed, the other as agitated. Yellow and white marks scatter across the surface without settling into features, leaving the expression somewhere between alarm and a forced grin.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #76 and #78. Where #76 uses a cool lavender field and hard geometric scaffolding, #77 swaps that for a hot red ground and looser, more layered mark-making across the face.\", \"connections\": [{\"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\", \"reason\": \"Both works share rectangular eye sockets and a wide toothed mouth as the main face structure, but #76 keeps its lines open and geometric on lavender while #77 buries similar shapes under dense overlapping strokes on red.\"}, {\"targetArtworkId\": \"QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt\", \"reason\": \"rawblocks #25 also layers dense, crossing marks over a rounded head form with exposed teeth, offering a cross-collection contrast in complexity and color density against #77's simpler flat ground.\"}], \"tags\": [\"rounded head form\", \"rectangular eye sockets\", \"bared teeth\", \"flat red-orange ground\", \"overlapping loose strokes\", \"mask-like face structure\"], \"interpretiveTags\": [\"alarm\", \"forced grin\", \"agitation\"], \"lookingQuestion\": \"Where do the loose yellow and white marks on the cheeks follow the face's contours, and where do they cut across them?\", \"ambiguities\": [\"The rounded side forms could be read as ears, hair, or purely abstract shapes; the image does not resolve this clearly.\", \"Comparison #78 (nifty faces #78) shows a heavily geometric teal-ground composition with little formal overlap with #77, so it was not selected as a connection despite title adjacency.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:17:55.628830-05:00",
+    "usage": {
+      "inputTokens": 6605,
+      "outputTokens": 793,
+      "totalTokens": 7398,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10265
+    },
+    "requestId": "68f568e9-51f6-40a9-ab54-dfbb00c85012",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide rounded head shape sits against a flat red-orange background; large rounded forms flank the head on both sides, outlined in thin blue and grey lines.\",\n    \"Two rectangular eye sockets, outlined in black and white, sit side by side in the upper face; each contains a smaller dark oval with a white highlight mark.\",\n    \"A mouth in the lower half shows a row of white teeth drawn as vertical black lines between thick red lips; a dark gap is visible above the teeth, and loose yellow, blue, and white strokes cross the cheeks and forehead.\"\n  ],\n  \"reading\": \"The flat red-orange field pushes the head forward with no spatial retreat. Rectangular eye sockets give the face a mask-like flatness, while the bared teeth and smeared cheek strokes pull in opposite directions — one reads as fixed, the other as agitated. Yellow and white marks scatter across the surface without settling into features, leaving the expression somewhere between alarm and a forced grin.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #76 and #78. Where #76 uses a cool lavender field and hard geometric scaffolding, #77 swaps that for a hot red ground and denser layered mark-making across the face.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\",\n      \"reason\": \"Both works share rectangular eye sockets and a toothed mouth as the main face structure, but #76 keeps its lines open on lavender while #77 buries similar shapes under dense overlapping strokes on red.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt\",\n      \"reason\": \"rawblocks #25 also layers dense crossing marks over a rounded head form with exposed teeth, offering a cross-collection contrast in color density and background complexity against #77's flat single-color ground.\"\n    }\n  ],\n  \"tags\": [\n    \"rounded head form\",\n    \"rectangular eye sockets\",\n    \"bared teeth\",\n    \"flat red-orange ground\",\n    \"overlapping loose strokes\",\n    \"mask-like face structure\"\n  ],\n  \"lookingQuestion\": \"Where do the loose yellow and white marks on the cheeks follow the face's contours, and where do they cut across them?\",\n  \"ambiguities\": [\n    \"The rounded side forms could be read as ears, hair, or purely abstract shapes; the image does not resolve this clearly.\",\n    \"Comparison #78 shows a heavily geometric teal-ground composition with little formal overlap with #77, so it was not selected despite title adjacency.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide open mouth' with a specific description of the tooth row, red lip outlines, and dark gap above the teeth, avoiding an unsupported openness claim.\",\n    \"Context angle trimmed to stay within 30–40 words for the owned subset.\",\n    \"All other fields verified against visible content in supplied images; no unscoped superlatives found.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN/image.png",
+        "imageSHA256": "f548741885bb9cc5d9f96c53ca8eb64537f55aeb26f66bff8a0545a4abb4524e"
+      },
+      {
+        "artworkId": "QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD/image.png",
+        "imageSHA256": "71e1fb501a6f6a17291b51862a87a9a99d25a5fe5a454d229ee3b3b88f9c12d1"
+      },
+      {
+        "artworkId": "QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt/image.png",
+        "imageSHA256": "eaab78c7f4fb25f529e0ed40d5c5e45f1d3c70e8480440ac4abf36402136ceb7"
+      },
+      {
+        "artworkId": "QmRsR9cYrLSe6HUwRG5ozLB2FoJ4hpuR1XwWKZcRK3Foaa",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRsR9cYrLSe6HUwRG5ozLB2FoJ4hpuR1XwWKZcRK3Foaa/image.png",
+        "imageSHA256": "7d85c56a8a1a227358e21c8163e9be7c24db7a6a1ce8f773c1ba2bd262d50f2c"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A wide rounded head shape sits against a flat red-orange background; large rounded forms flank the head on both sides, outlined in thin blue lines.\", \"Two rectangular eye sockets, outlined in black and white, sit side by side in the upper face; each contains a smaller dark oval with a white highlight mark.\", \"A wide open mouth in the lower half shows a row of white teeth framed by thick red lips and a dark interior; loose yellow, blue, and white strokes cross the cheeks and forehead.\"], \"reading\": \"The flat red-orange field pushes the head forward with no spatial retreat. Rectangular eye sockets give the face a mask-like flatness, while the bared teeth and smeared cheek strokes pull in opposite directions — one reads as fixed, the other as agitated. Yellow and white marks scatter across the surface without settling into features, leaving the expression somewhere between alarm and a forced grin.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #76 and #78. Where #76 uses a cool lavender field and hard geometric scaffolding, #77 swaps that for a hot red ground and denser, more layered mark-making across the face.\", \"connections\": [{\"targetArtworkId\": \"QmfWmVmNH16MNNkkoBJuxw3LRuLFvebwp5wivzHHSMQsHD\", \"reason\": \"Both works share rectangular eye sockets and a wide toothed mouth as the main face structure, but #76 keeps its lines open on lavender while #77 buries similar shapes under dense overlapping strokes on red.\"}, {\"targetArtworkId\": \"QmSXVtCCQWtmsUqdm3fBr4fSLTE8MiE7wSAxV3x6H65PEt\", \"reason\": \"rawblocks #25 also layers dense crossing marks over a rounded head form with exposed teeth, offering a cross-collection contrast in color density and background complexity against #77's flat single-color ground.\"}], \"tags\": [\"rounded head form\", \"rectangular eye sockets\", \"bared teeth\", \"flat red-orange ground\", \"overlapping loose strokes\", \"mask-like face structure\"], \"lookingQuestion\": \"Where do the loose yellow and white marks on the cheeks follow the face's contours, and where do they cut across them?\", \"ambiguities\": [\"The rounded side forms could be read as ears, hair, or purely abstract shapes; the image does not resolve this clearly.\", \"Comparison #78 shows a heavily geometric teal-ground composition with little formal overlap with #77, so it was not selected despite title adjacency.\"]}\nFLAGS:\n[{\"artworkId\": \"QmPAX4YRhQnNPSigRgw3r5miRvc2AAvty5GtpzGMpe82ZN\", \"field\": \"observations\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:11:35.823208-05:00",
+    "usage": {
+      "inputTokens": 6338,
+      "outputTokens": 725,
+      "totalTokens": 7063,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20428
+    },
+    "requestId": "74892bd9-aef7-413d-b0ba-033f6e3fad13",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head-like form with pointed ear shapes at the top fills the frame, built from overlapping black, magenta, teal, and yellow strokes against a dark teal-gray background.\",\n    \"A row of short white vertical marks near the bottom center reads as bared teeth, framed by heavy black outlines and pink-orange patches suggesting a jaw or muzzle.\",\n    \"Thin red and yellow lines extend outward from the right side of the head, crossing over denser interior scribbles and creating a sense of whisker-like projections.\"\n  ],\n  \"reading\": \"The pointed ear silhouette and whisker-like lines give this head an animal quality—something feline or bat-like staring out from tangled color. Teal fills peek through gaps in the black scaffolding, lending a cold undertone beneath the warmer magenta and orange scrawl. The exposed teeth at the bottom anchor the composition with a grin that can read as playful or threatening. Dense interior hatching makes the face feel caged inside its own lines.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #55\\\" and \\\"nnxyz rawblocks #57.\\\" Where #55 centers on an open-mouthed human-like head and #57 shifts to a full-body figure, #56 occupies a middle ground: animal-shaped, tightly cropped, and heavily layered.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB\",\n      \"reason\": \"Both share bared white teeth at the lower center and dense multi-color scribble over a dark ground, but #55 uses a warm brown background while #56 shifts to cold teal.\"\n    },\n    {\n      \"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\",\n      \"reason\": \"nnotb #210 packs a similar spiral-eye density and exposed teeth motif, though its line work spirals inward while #56 spreads outward through whisker-like extensions.\"\n    }\n  ],\n  \"tags\": [\n    \"animal head\",\n    \"bared teeth\",\n    \"overlapping line layers\",\n    \"teal and magenta\",\n    \"dense scribble\",\n    \"dark background\"\n  ],\n  \"lookingQuestion\": \"Where do the thin red and yellow lines that escape the head's outline begin inside the face—can you trace them back to a specific feature?\",\n  \"ambiguities\": [\n    \"Whether the pointed shapes at top are ears, horns, or abstract spikes cannot be confirmed from the image alone.\",\n    \"A small blue diamond-like mark near the lower right may be a signature or incidental mark; its role is unclear.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se/image.png",
+        "imageSHA256": "041b50f10e8a2234b6a4e0d756c48168242a34eea2a2e2bfd14f958f9dbd6b10"
+      },
+      {
+        "artworkId": "QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB/image.png",
+        "imageSHA256": "5a91f6a0bc3273bf9c259b46798d8f3037cabb5b210373e5e9327aefa9b64724"
+      },
+      {
+        "artworkId": "QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t/image.png",
+        "imageSHA256": "8ab4959fa95189edf040b46be1e07fe4ed6681ab12c1acf49f05e9dea96bdd33"
+      },
+      {
+        "artworkId": "QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk/image.png",
+        "imageSHA256": "2c4d6e30021e364daf33d8236a880a0ed40c9ed2aeb6b0110feb490249b104ec"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:11:47.446361-05:00",
+    "usage": {
+      "inputTokens": 7095,
+      "outputTokens": 826,
+      "totalTokens": 7921,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11552
+    },
+    "requestId": "dc0982cf-710f-490f-b63f-62e56b1726ef",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head-like form with two pointed shapes at the top fills the frame, built from overlapping black, magenta, teal, and yellow strokes against a dark teal-gray background.\",\n    \"A row of short white vertical marks near the bottom center reads as bared teeth, framed by heavy black outlines and pink-orange patches forming a jaw-like area.\",\n    \"Thin red and yellow lines extend outward from the right side of the head, crossing over denser interior scribbles and suggesting whisker-like projections.\"\n  ],\n  \"reading\": \"The pointed silhouette and whisker-like lines give this head an animal quality—something feline or bat-like staring out from tangled color. Teal fills peek through gaps in the black scaffolding, lending a cold undertone beneath warmer magenta and orange scrawl. The exposed teeth at the bottom anchor the composition with a grin that can read as playful or threatening. Dense interior hatching makes the face feel caged inside its own lines.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #55\\\" and \\\"nnxyz rawblocks #57.\\\" Where #55 centers on an open-mouthed head and #57 shifts to a full-body figure, #56 occupies a middle ground: animal-shaped, tightly cropped, and heavily layered.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB\",\n      \"reason\": \"Both share bared white teeth at the lower center and dense multi-color scribble over a dark ground, but #55 uses a warm brown background while #56 shifts to cold teal.\"\n    },\n    {\n      \"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\",\n      \"reason\": \"nnotb #210 shares exposed teeth and dense layered lines, though its dominant spiral-eye motif pulls inward while #56 spreads outward through whisker-like extensions.\"\n    }\n  ],\n  \"tags\": [\n    \"animal head\",\n    \"bared teeth\",\n    \"overlapping line layers\",\n    \"teal and magenta\",\n    \"dense scribble\",\n    \"dark background\"\n  ],\n  \"lookingQuestion\": \"Where do the thin red and yellow lines that escape the head's outline begin inside the face—can you trace them back to a specific feature?\",\n  \"ambiguities\": [\n    \"Whether the pointed shapes at top are ears, horns, or abstract spikes cannot be confirmed from the image alone.\",\n    \"A small blue diamond-like mark near the lower right may be a signature or incidental mark; its role is unclear.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed pointed shapes at top, bared white teeth at bottom center, and whisker-like red/yellow lines at right all visible in the primary image.\",\n    \"Removed 'human-like' label from #55 context description; the head in #55 is not clearly human, just open-mouthed.\",\n    \"Verified #57 shows a full-body yellow figure with bones, confirming the contrast described in contextAngle.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se/image.png",
+        "imageSHA256": "041b50f10e8a2234b6a4e0d756c48168242a34eea2a2e2bfd14f958f9dbd6b10"
+      },
+      {
+        "artworkId": "QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB/image.png",
+        "imageSHA256": "5a91f6a0bc3273bf9c259b46798d8f3037cabb5b210373e5e9327aefa9b64724"
+      },
+      {
+        "artworkId": "QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t/image.png",
+        "imageSHA256": "8ab4959fa95189edf040b46be1e07fe4ed6681ab12c1acf49f05e9dea96bdd33"
+      },
+      {
+        "artworkId": "QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk/image.png",
+        "imageSHA256": "2c4d6e30021e364daf33d8236a880a0ed40c9ed2aeb6b0110feb490249b104ec"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large head-like form with pointed ear shapes at the top fills the frame, built from overlapping black, magenta, teal, and yellow strokes against a dark teal-gray background.\", \"A row of short white vertical marks near the bottom center reads as bared teeth, framed by heavy black outlines and pink-orange patches suggesting a jaw or muzzle.\", \"Thin red and yellow lines extend outward from the right side of the head, crossing over denser interior scribbles and creating a sense of whisker-like projections.\"], \"reading\": \"The pointed ear silhouette and whisker-like lines give this head an animal quality—something feline or bat-like staring out from tangled color. Teal fills peek through gaps in the black scaffolding, lending a cold undertone beneath the warmer magenta and orange scrawl. The exposed teeth at the bottom anchor the composition with a grin that can read as playful or threatening. Dense interior hatching makes the face feel caged inside its own lines.\", \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"nnxyz rawblocks #55\\\" and \\\"nnxyz rawblocks #57.\\\" Where #55 centers on an open-mouthed human-like head and #57 shifts to a full-body figure, #56 occupies a middle ground: animal-shaped, tightly cropped, and heavily layered.\", \"connections\": [{\"targetArtworkId\": \"QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB\", \"reason\": \"Both share bared white teeth at the lower center and dense multi-color scribble over a dark ground, but #55 uses a warm brown background while #56 shifts to cold teal.\"}, {\"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\", \"reason\": \"nnotb #210 packs a similar spiral-eye density and exposed teeth motif, though its line work spirals inward while #56 spreads outward through whisker-like extensions.\"}], \"tags\": [\"animal head\", \"bared teeth\", \"overlapping line layers\", \"teal and magenta\", \"dense scribble\", \"dark background\"], \"lookingQuestion\": \"Where do the thin red and yellow lines that escape the head's outline begin inside the face—can you trace them back to a specific feature?\", \"ambiguities\": [\"Whether the pointed shapes at top are ears, horns, or abstract spikes cannot be confirmed from the image alone.\", \"A small blue diamond-like mark near the lower right may be a signature or incidental mark; its role is unclear.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

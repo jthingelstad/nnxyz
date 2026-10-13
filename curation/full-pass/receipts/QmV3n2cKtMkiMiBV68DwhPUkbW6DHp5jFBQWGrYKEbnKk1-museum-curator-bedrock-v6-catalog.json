@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:32.585859-05:00",
+    "usage": {
+      "inputTokens": 6373,
+      "outputTokens": 679,
+      "totalTokens": 7052,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19655
+    },
+    "requestId": "b51f12ad-7098-429f-82a1-ade0c1939ba1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head-like form fills most of the burnt-orange field, built from overlapping black shapes, gray patches, and thin colored outlines in yellow, pink, cyan, and teal.\",\n    \"The left eye socket holds a teal X-mark inside a yellow-outlined rectangle, while the right side dissolves into dense black marks and a spiral ear shape at the profile edge.\",\n    \"A row of small white rectangles near the bottom reads as bared teeth, framed by pink and yellow looping lines that trace a jaw and open mouth.\"\n  ],\n  \"reading\": \"The head emerges from a hot orange ground as a collision of flat black fragments and thin wire-like outlines. That teal X in the eye socket feels like a struck-out word—something refused or sealed off. The white tooth-row anchors the lower face with blunt regularity, a hard grid against the loose scrawl above. The overall effect can read as confrontation held just short of a shout.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"rawblocks #42\\\" and \\\"rawblocks #44.\\\" All three share a head-on-flat-ground structure, but each shifts its dominant color drastically—yellow, orange, hot pink—giving the group a mood swing quality across title neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\",\n      \"reason\": \"Both place a single head against a saturated flat background, but #42 uses a boxy red outline for the skull while #43 dissolves the contour into overlapping black patches.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\",\n      \"reason\": \"Shares the burnt-orange ground and X-marked eyes, but the nifty faces piece stacks rigid rectangular blocks while #43 lets forms bleed into each other.\"\n    }\n  ],\n  \"tags\": [\n    \"head form\",\n    \"flat saturated ground\",\n    \"overlapping black fragments\",\n    \"thin colored outlines\",\n    \"exposed teeth row\",\n    \"X-marked eye\"\n  ],\n  \"lookingQuestion\": \"Where does the head's outline actually begin and end—can you trace a single continuous edge, or does the boundary keep breaking into separate black shapes?\",\n  \"ambiguities\": [\n    \"Gray patches could be a separate layer or partially erased black marks; the technique is not confirmed.\",\n    \"Small letter-like shapes appear in the black fragments but are too tangled to confirm as readable text.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmV3n2cKtMkiMiBV68DwhPUkbW6DHp5jFBQWGrYKEbnKk1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV3n2cKtMkiMiBV68DwhPUkbW6DHp5jFBQWGrYKEbnKk1/image.png",
+        "imageSHA256": "9c56aa54a4e801ecb5aa6bb37a5c35d771e49d4f470d1cc5cce2a6495700ec95"
+      },
+      {
+        "artworkId": "QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi/image.png",
+        "imageSHA256": "8190f31405813db5091f0bb1d2f807e5faf7b9fefc270d0ab1d7a08d9a82a35f"
+      },
+      {
+        "artworkId": "QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2/image.png",
+        "imageSHA256": "a8c39c99721e0c1034f741de062fa3c16d37b8c2cd005617085e3df3c23ef4ac"
+      },
+      {
+        "artworkId": "QmZuWBTZLwPBu3nRhR53M2HsGtfJa97a848zsUj2sfCkdB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZuWBTZLwPBu3nRhR53M2HsGtfJa97a848zsUj2sfCkdB/image.png",
+        "imageSHA256": "6aa19bb9d0d9a6c7d847d9b504af2b564f60a6cb0f70a884b797e80e63d207dc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:43.350888-05:00",
+    "usage": {
+      "inputTokens": 7084,
+      "outputTokens": 801,
+      "totalTokens": 7885,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10534
+    },
+    "requestId": "3043689d-63ec-4283-b406-3ecd9d8e3f6f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large head-like form fills most of the burnt-orange field, built from overlapping black shapes, gray patches, and thin outlines in yellow, pink, cyan, and teal.\",\n    \"The left eye area holds a teal X-mark inside a yellow-outlined rectangle, while the right side dissolves into dense black marks and a spiral shape at the profile edge.\",\n    \"A row of small white rectangles near the bottom suggests bared teeth, framed by pink and yellow looping lines that trace a jaw and open mouth.\"\n  ],\n  \"reading\": \"The head emerges from a hot orange ground as a collision of flat black fragments and thin wire-like outlines. That teal X in the eye area feels like a struck-out word—something refused or sealed off. The white tooth-row anchors the lower face with blunt regularity, a hard grid against the loose scrawl above. The overall effect can read as confrontation held just short of a shout.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"rawblocks #42\\\" and \\\"rawblocks #44.\\\" All three share a head-on-flat-ground structure, but each shifts its dominant color drastically—yellow, orange, hot pink—giving the group a mood-swing quality across title neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\",\n      \"reason\": \"Both place a single head against a saturated flat background, but #42 uses a boxy red outline for the skull while #43 dissolves the contour into overlapping black patches.\"\n    },\n    {\n      \"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\",\n      \"reason\": \"Shares the burnt-orange ground and X-marked eyes, but the nifty faces piece stacks rigid rectangular blocks while #43 lets forms bleed into each other.\"\n    }\n  ],\n  \"tags\": [\n    \"head form\",\n    \"flat saturated ground\",\n    \"overlapping black fragments\",\n    \"thin colored outlines\",\n    \"exposed teeth row\",\n    \"X-marked eye\"\n  ],\n  \"lookingQuestion\": \"Where does the head's outline actually begin and end—can you trace a single continuous edge, or does the boundary keep breaking into separate black shapes?\",\n  \"ambiguities\": [\n    \"Gray patches could be a separate layer or partially erased black marks; the technique is not confirmed.\",\n    \"Small letter-like shapes appear in the black fragments but are too tangled to confirm as readable text.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed teal X in left eye area, yellow rectangle outline, and white tooth-row rectangles against the primary image.\",\n    \"Verified #42 comparison: yellow ground, red boxy head outline, and hand-like forms at edges all visible in its image, contrasting with #43's dissolved contour.\",\n    \"Verified nifty faces #96 comparison: same burnt-orange ground confirmed; stacked rectangular blocks and red X-marked eyes both visible, supporting the structural contrast with #43.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmV3n2cKtMkiMiBV68DwhPUkbW6DHp5jFBQWGrYKEbnKk1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV3n2cKtMkiMiBV68DwhPUkbW6DHp5jFBQWGrYKEbnKk1/image.png",
+        "imageSHA256": "9c56aa54a4e801ecb5aa6bb37a5c35d771e49d4f470d1cc5cce2a6495700ec95"
+      },
+      {
+        "artworkId": "QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi/image.png",
+        "imageSHA256": "8190f31405813db5091f0bb1d2f807e5faf7b9fefc270d0ab1d7a08d9a82a35f"
+      },
+      {
+        "artworkId": "QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2/image.png",
+        "imageSHA256": "a8c39c99721e0c1034f741de062fa3c16d37b8c2cd005617085e3df3c23ef4ac"
+      },
+      {
+        "artworkId": "QmZuWBTZLwPBu3nRhR53M2HsGtfJa97a848zsUj2sfCkdB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZuWBTZLwPBu3nRhR53M2HsGtfJa97a848zsUj2sfCkdB/image.png",
+        "imageSHA256": "6aa19bb9d0d9a6c7d847d9b504af2b564f60a6cb0f70a884b797e80e63d207dc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large head-like form fills most of the burnt-orange field, built from overlapping black shapes, gray patches, and thin colored outlines in yellow, pink, cyan, and teal.\", \"The left eye socket holds a teal X-mark inside a yellow-outlined rectangle, while the right side dissolves into dense black marks and a spiral ear shape at the profile edge.\", \"A row of small white rectangles near the bottom reads as bared teeth, framed by pink and yellow looping lines that trace a jaw and open mouth.\"], \"reading\": \"The head emerges from a hot orange ground as a collision of flat black fragments and thin wire-like outlines. That teal X in the eye socket feels like a struck-out word—something refused or sealed off. The white tooth-row anchors the lower face with blunt regularity, a hard grid against the loose scrawl above. The overall effect can read as confrontation held just short of a shout.\", \"contextAngle\": \"In the owned rawblocks subset, this piece sits between \\\"rawblocks #42\\\" and \\\"rawblocks #44.\\\" All three share a head-on-flat-ground structure, but each shifts its dominant color drastically—yellow, orange, hot pink—giving the group a mood swing quality across title neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmSqm5KCTB1nk1Hd39vMEgF5WTcNJr1ZYyeYEZ8GG6VqMi\", \"reason\": \"Both place a single head against a saturated flat background, but #42 uses a boxy red outline for the skull while #43 dissolves the contour into overlapping black patches.\"}, {\"targetArtworkId\": \"QmT2YEtDy5YFeuwcpaQENr4sUQu9minpeM3scqDDYKU9g2\", \"reason\": \"Shares the burnt-orange ground and X-marked eyes, but the nifty faces piece stacks rigid rectangular blocks while #43 lets forms bleed into each other.\"}], \"tags\": [\"head form\", \"flat saturated ground\", \"overlapping black fragments\", \"thin colored outlines\", \"exposed teeth row\", \"X-marked eye\"], \"lookingQuestion\": \"Where does the head's outline actually begin and end—can you trace a single continuous edge, or does the boundary keep breaking into separate black shapes?\", \"ambiguities\": [\"Gray patches could be a separate layer or partially erased black marks; the technique is not confirmed.\", \"Small letter-like shapes appear in the black fragments but are too tangled to confirm as readable text.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

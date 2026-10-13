@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:47.543878-05:00",
+    "usage": {
+      "inputTokens": 6668,
+      "outputTokens": 697,
+      "totalTokens": 7365,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11477
+    },
+    "requestId": "010f2a50-6ca1-4849-8cc4-b02508c15085",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad sweep of golden-yellow fills the right half and lower left, built from dense overlapping black scribble lines that texture the flat color beneath.\",\n    \"A narrow blue-white zigzag band cuts diagonally from upper left toward the lower center, flanked on both sides by the yellow mass.\",\n    \"A compact green form sits near the center, outlined in dark green with lighter green scribble fill, rising against the yellow and meeting the blue band at its base.\"\n  ],\n  \"reading\": \"Golden yellow dominates, broken only by a winding blue channel and a green mound at the image's heart. The black scribble lines layered over the flat color give the yellow areas a restless, almost vibrating surface, while the blue strip reads as cooler and more still by contrast. The green form holds the composition's weight, sitting where the two other colors converge — a point of tension rather than resolution.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work stands apart from its immediate neighbors: title neighbor nnxyz nnotb #157 is dense with flat purple and multi-color figure marks, and title neighbor nnxyz nnotb #159 works on a grey ground with geometric spirals. This piece is the most landscape-like of the three inspected.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx\",\n      \"reason\": \"Both works use heavy black scribble lines over flat color fills, but #157 packs those lines into a dense frontal figure on purple, while #158 spreads them across an open yellow field — a clear contrast in spatial arrangement.\"\n    }\n  ],\n  \"tags\": [\n    \"yellow field\",\n    \"blue diagonal band\",\n    \"green mound\",\n    \"black scribble overlay\",\n    \"flat color with line texture\",\n    \"landscape-like composition\"\n  ],\n  \"interpretiveTags\": [\n    \"tension at convergence point\",\n    \"stillness versus restlessness\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the blue band meet the green form, and how do the line marks change at that junction?\",\n  \"ambiguities\": [\n    \"The green form's exact shape is ambiguous — it could read as a ridge, a mound, or something else; no supplied metadata clarifies subject matter.\",\n    \"nnxyz nnotb #159 (QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm) shares the scribble-over-flat-color method but its grey ground and geometric marks offer no strong formal link to #158 beyond shared line behavior, so it was omitted as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWGLvS2QW1QcdsJ9tDLzwRCTvQJpCqsw8DcYeTArUMiwS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWGLvS2QW1QcdsJ9tDLzwRCTvQJpCqsw8DcYeTArUMiwS/image.png",
+        "imageSHA256": "f8ffbde83870b08340e0f8aa31f6bcae7663d3091126cb22de90db79f6067558"
+      },
+      {
+        "artworkId": "QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx/image.png",
+        "imageSHA256": "43c9e1a9a5700d242b0f48e8bee2d5aa2bb5bb82b49c2ed58fecf3f3830338e9"
+      },
+      {
+        "artworkId": "QmQqKizEG8Em3Y4qXXPpehWNYpyDdnvD9snbL1wju7WA6e",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQqKizEG8Em3Y4qXXPpehWNYpyDdnvD9snbL1wju7WA6e/image.png",
+        "imageSHA256": "eb681ff8ad428ccade38398222d53dd5240dce7ee0e5aa06296949ecd7f02cbe"
+      },
+      {
+        "artworkId": "QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm/image.png",
+        "imageSHA256": "e655b42ebb3ad083e6d5d37577451d747c3e12779a4ad2d21bd64593a22d3c67"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:54.109952-05:00",
+    "usage": {
+      "inputTokens": 7396,
+      "outputTokens": 798,
+      "totalTokens": 8194,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6484
+    },
+    "requestId": "f05b4cc5-3750-4158-a56b-48e88ba60c24",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad sweep of golden yellow fills the right half and lower left, built from dense overlapping black scribble lines layered over the flat color beneath.\",\n    \"A narrow blue-white zigzag band cuts diagonally from upper left toward lower center, flanked on both sides by the yellow mass.\",\n    \"A compact green form sits near the center, outlined in dark green with lighter green scribble fill, rising against the yellow and meeting the blue band at its base.\"\n  ],\n  \"reading\": \"Golden yellow dominates, broken by a winding blue channel and a green form at the image's center. Black scribble lines layered over the flat yellow give that area a restless, almost vibrating surface, while the blue strip reads as cooler and more still by contrast. The green form sits where the two other colors meet — a point of tension rather than resolution.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work contrasts sharply with its title neighbors: nnxyz nnotb #157 is dense with flat purple and multi-color figure marks, and nnxyz nnotb #159 works on a grey ground with geometric spirals. This piece is the most open and landscape-like of the three inspected.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx\",\n      \"reason\": \"Both works use heavy black scribble lines over flat color fills, but nnxyz nnotb #157 packs those lines into a dense frontal arrangement on purple, while nnxyz nnotb #158 spreads them across an open yellow field — a clear contrast in spatial distribution.\"\n    }\n  ],\n  \"tags\": [\n    \"yellow field\",\n    \"blue diagonal band\",\n    \"green central form\",\n    \"black scribble overlay\",\n    \"flat color with line texture\",\n    \"open spatial arrangement\"\n  ],\n  \"interpretiveTags\": [\n    \"tension at color convergence\",\n    \"stillness versus restlessness\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the blue band meet the green form, and how do the line marks change at that junction?\",\n  \"ambiguities\": [\n    \"The green form's exact shape is ambiguous — it reads as a ridge or mound but no supplied metadata clarifies subject matter.\",\n    \"nnxyz nnotb #159 shares scribble-over-flat-color line behavior but its grey ground and geometric marks offer no strong formal link beyond that, so it was omitted as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: golden yellow, blue-white diagonal band, and green central form are all clearly visible as described.\",\n    \"Comparison with QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx confirmed: purple ground and dense frontal figure marks contrast clearly with #158's open yellow field — connection retained as meaningful contrast.\",\n    \"Word counts checked: reading is 63 words, contextAngle is 44 words, both within limits; no invented intent, biography, or unsupported subject identities remain.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmWGLvS2QW1QcdsJ9tDLzwRCTvQJpCqsw8DcYeTArUMiwS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWGLvS2QW1QcdsJ9tDLzwRCTvQJpCqsw8DcYeTArUMiwS/image.png",
+        "imageSHA256": "f8ffbde83870b08340e0f8aa31f6bcae7663d3091126cb22de90db79f6067558"
+      },
+      {
+        "artworkId": "QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx/image.png",
+        "imageSHA256": "43c9e1a9a5700d242b0f48e8bee2d5aa2bb5bb82b49c2ed58fecf3f3830338e9"
+      },
+      {
+        "artworkId": "QmQqKizEG8Em3Y4qXXPpehWNYpyDdnvD9snbL1wju7WA6e",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQqKizEG8Em3Y4qXXPpehWNYpyDdnvD9snbL1wju7WA6e/image.png",
+        "imageSHA256": "eb681ff8ad428ccade38398222d53dd5240dce7ee0e5aa06296949ecd7f02cbe"
+      },
+      {
+        "artworkId": "QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm/image.png",
+        "imageSHA256": "e655b42ebb3ad083e6d5d37577451d747c3e12779a4ad2d21bd64593a22d3c67"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad sweep of golden-yellow fills the right half and lower left, built from dense overlapping black scribble lines that texture the flat color beneath.\", \"A narrow blue-white zigzag band cuts diagonally from upper left toward the lower center, flanked on both sides by the yellow mass.\", \"A compact green form sits near the center, outlined in dark green with lighter green scribble fill, rising against the yellow and meeting the blue band at its base.\"], \"reading\": \"Golden yellow dominates, broken only by a winding blue channel and a green mound at the image's heart. The black scribble lines layered over the flat color give the yellow areas a restless, almost vibrating surface, while the blue strip reads as cooler and more still by contrast. The green form holds the composition's weight, sitting where the two other colors converge — a point of tension rather than resolution.\", \"contextAngle\": \"Within the owned nnotb subset, this work stands apart from its immediate neighbors: title neighbor nnxyz nnotb #157 is dense with flat purple and multi-color figure marks, and title neighbor nnxyz nnotb #159 works on a grey ground with geometric spirals. This piece is the most landscape-like of the three inspected.\", \"connections\": [{\"targetArtworkId\": \"QmQPsRPEJkpSNoE719DCMRhJkHnvVPvRN8LKj3RJZmpoKx\", \"reason\": \"Both works use heavy black scribble lines over flat color fills, but #157 packs those lines into a dense frontal figure on purple, while #158 spreads them across an open yellow field — a clear contrast in spatial arrangement.\"}], \"tags\": [\"yellow field\", \"blue diagonal band\", \"green mound\", \"black scribble overlay\", \"flat color with line texture\", \"landscape-like composition\"], \"interpretiveTags\": [\"tension at convergence point\", \"stillness versus restlessness\"], \"lookingQuestion\": \"Where exactly does the blue band meet the green form, and how do the line marks change at that junction?\", \"ambiguities\": [\"The green form's exact shape is ambiguous — it could read as a ridge, a mound, or something else; no supplied metadata clarifies subject matter.\", \"nnxyz nnotb #159 (QmZGjRiMJaUcYpSp4UQrjYS5P3tZaQPoZFrJbVc6wQvkGm) shares the scribble-over-flat-color method but its grey ground and geometric marks offer no strong formal link to #158 beyond shared line behavior, so it was omitted as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

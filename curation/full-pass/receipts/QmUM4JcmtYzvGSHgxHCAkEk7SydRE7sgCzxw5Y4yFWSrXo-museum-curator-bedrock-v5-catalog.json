@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:41.017850-05:00",
+    "usage": {
+      "inputTokens": 6337,
+      "outputTokens": 825,
+      "totalTokens": 7162,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13862
+    },
+    "requestId": "ba88a7b0-b4c3-43b6-8728-9e5665ede54f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A saturated yellow field fills most of the background, against which a large black shape occupies the upper center and right, edged by a thick white outline that curves through the lower half.\",\n    \"Overlapping looping lines in red, blue, pink, white, and yellow accumulate across the surface, forming a cluster of coiled shapes near the center — a blue looped mass, a magenta-and-purple rounded form to its left, and a red-outlined rectangle with black fill at upper right.\",\n    \"Zigzag and wave lines in black appear at upper center; a red zigzag descends at lower right; the artist's signature mark sits at lower left in dark gray.\"\n  ],\n  \"reading\": \"Yellow presses outward from every edge while a black mass holds the center-right, and the tension between those two forces gives the image its charge. Coiled lines in blue, magenta, and red pile up in the middle zone — not quite resolving into objects, not quite dissolving into pure mark. The red-outlined box at upper right, packed with crossing lines, reads as something sealed off from the looser energy around it. The overall mood feels loud and compressed.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #153 and nnxyz nnotb #155 show the same multi-line layering approach but differ sharply in ground color — #153 uses a blue field, #155 a sky-blue — making #154's yellow ground a distinct tonal shift across these three consecutive owned titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1\",\n      \"reason\": \"nnxyz nnotb #155 shares the same dense zigzag border lines and coiled loop clusters, but its teal-gray central mass against sky blue creates a cooler, more open feel compared to #154's compressed yellow-and-black contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj\",\n      \"reason\": \"nnxyz rawblocks #26 also uses a single saturated ground color — deep red — with a concentrated central form and scattered line marks at the edges, offering a direct color-field contrast to #154's yellow while sharing the same structural logic of ground versus layered mark.\"\n    }\n  ],\n  \"tags\": [\n    \"yellow ground\",\n    \"coiled line clusters\",\n    \"black mass with white outline\",\n    \"zigzag marks\",\n    \"overlapping loops\",\n    \"enclosed rectangular form\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed energy\",\n    \"loud mood\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move when it tries to find a resting point — and what in the image keeps pulling it away from that spot?\",\n  \"ambiguities\": [\n    \"The central blue looped mass and the magenta rounded form could be read as objects or as pure accumulated line; no supplied evidence resolves which reading the artist intended.\",\n    \"Title order and recorded creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this alignment cannot be assumed collection-wide.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUM4JcmtYzvGSHgxHCAkEk7SydRE7sgCzxw5Y4yFWSrXo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUM4JcmtYzvGSHgxHCAkEk7SydRE7sgCzxw5Y4yFWSrXo/image.png",
+        "imageSHA256": "a5b834a37f0d699455ddfe54578444e9d70a1e8d1dd476970901d8ddd0af6764"
+      },
+      {
+        "artworkId": "QmUkNrNaGWGhc2ZxYbRDQCwrs4ryp7EAthpRpPXK4dvTvi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUkNrNaGWGhc2ZxYbRDQCwrs4ryp7EAthpRpPXK4dvTvi/image.png",
+        "imageSHA256": "d6ae85116132de2f3d2d4be09e7e120bc8e61218e05dd12a1e181e8538c6f28c"
+      },
+      {
+        "artworkId": "QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj/image.png",
+        "imageSHA256": "bc8a01343d30fc1108be79600ee2579114463a5e1fe53ac139948c6495ff1978"
+      },
+      {
+        "artworkId": "QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1/image.png",
+        "imageSHA256": "5bf46e56549283116b7417b00ae4de4c9f6609225bdda94f5f20965a81b8925a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:50.098763-05:00",
+    "usage": {
+      "inputTokens": 7184,
+      "outputTokens": 1112,
+      "totalTokens": 8296,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 9008
+    },
+    "requestId": "2eb3ffcb-5089-40cb-8a40-664a8ba66fa9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A saturated yellow field fills most of the background; a large black shape occupies upper center and right, edged by a thick white outline that curves through the lower half.\",\n    \"Overlapping looping lines in red, blue, pink, white, and yellow accumulate across the surface — a blue coiled mass near center, a magenta-and-purple rounded form to its left, and a red-outlined rectangle with dense crossing lines at upper right.\",\n    \"Zigzag and wave lines in black run across upper center; a red zigzag descends at lower right; a dark gray signature mark sits at lower left.\"\n  ],\n  \"reading\": \"Yellow presses outward from every edge while a black mass anchors center-right, and the pull between those two areas gives the image its charge. Coiled lines in blue, magenta, and red pile up in the middle — not quite resolving into objects, not quite dissolving into pure mark. The red-outlined box at upper right, packed with crossing lines, reads as something sealed off from the looser activity around it. The mood feels loud and compressed.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #153 and nnxyz nnotb #155 share the same multi-line layering but differ in ground color — #153 uses blue, #155 sky-blue — making #154's yellow ground a distinct tonal shift across these three consecutive owned titles.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1\",\n      \"reason\": \"nnxyz nnotb #155 shares dense zigzag border lines and coiled loop clusters, but its teal-gray central mass against sky blue produces a cooler, more open feel than #154's compressed yellow-and-black contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj\",\n      \"reason\": \"nnxyz rawblocks #26 also uses a single saturated ground — deep red — with a concentrated central form and scattered edge marks, offering a direct color-field contrast to #154's yellow while sharing the same structural logic of ground versus layered mark.\"\n    }\n  ],\n  \"tags\": [\n    \"yellow ground\",\n    \"coiled line clusters\",\n    \"black mass with white outline\",\n    \"zigzag marks\",\n    \"overlapping loops\",\n    \"enclosed rectangular form\"\n  ],\n  \"interpretiveTags\": [\n    \"compressed energy\",\n    \"loud mood\"\n  ],\n  \"lookingQuestion\": \"Where does your eye move when it tries to find a resting point — and what in the image keeps pulling it away from that spot?\",\n  \"ambiguities\": [\n    \"The central blue coiled mass and the magenta rounded form could be read as objects or as accumulated line; no supplied evidence resolves this.\",\n    \"Title order and recorded creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this alignment cannot be assumed collection-wide.\"\n  ],\n  \"reviewFindings\": [\n    \"All colors and placements confirmed against the primary image: yellow ground, black mass upper-center-right with white outline curve, blue coiled mass center, magenta-purple form left of center, red-outlined rectangle upper right, black zigzag upper center, red zigzag lower right, dark gray signature lower left — all verified.\",\n    \"Comparison claims checked: #155 (QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1) confirmed teal-gray central mass on sky blue with zigzag and coiled lines; #153 (QmUkNrNaGWGhc2ZxYbRDQCwrs4ryp7EAthpRpPXK4dvTvi) confirmed blue ground; rawblocks #26 (QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj) confirmed deep red ground with central concentrated form — no invented color claims found.\",\n    \"Draft reading phrase 'gives the image its charge' retained as a reading, not an intent claim; no unsupported biography, technique duration, or artist intention found; word counts within limits; no disallowed vocabulary detected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUM4JcmtYzvGSHgxHCAkEk7SydRE7sgCzxw5Y4yFWSrXo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUM4JcmtYzvGSHgxHCAkEk7SydRE7sgCzxw5Y4yFWSrXo/image.png",
+        "imageSHA256": "a5b834a37f0d699455ddfe54578444e9d70a1e8d1dd476970901d8ddd0af6764"
+      },
+      {
+        "artworkId": "QmUkNrNaGWGhc2ZxYbRDQCwrs4ryp7EAthpRpPXK4dvTvi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUkNrNaGWGhc2ZxYbRDQCwrs4ryp7EAthpRpPXK4dvTvi/image.png",
+        "imageSHA256": "d6ae85116132de2f3d2d4be09e7e120bc8e61218e05dd12a1e181e8538c6f28c"
+      },
+      {
+        "artworkId": "QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj/image.png",
+        "imageSHA256": "bc8a01343d30fc1108be79600ee2579114463a5e1fe53ac139948c6495ff1978"
+      },
+      {
+        "artworkId": "QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1/image.png",
+        "imageSHA256": "5bf46e56549283116b7417b00ae4de4c9f6609225bdda94f5f20965a81b8925a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A saturated yellow field fills most of the background, against which a large black shape occupies the upper center and right, edged by a thick white outline that curves through the lower half.\", \"Overlapping looping lines in red, blue, pink, white, and yellow accumulate across the surface, forming a cluster of coiled shapes near the center — a blue looped mass, a magenta-and-purple rounded form to its left, and a red-outlined rectangle with black fill at upper right.\", \"Zigzag and wave lines in black appear at upper center; a red zigzag descends at lower right; the artist's signature mark sits at lower left in dark gray.\"], \"reading\": \"Yellow presses outward from every edge while a black mass holds the center-right, and the tension between those two forces gives the image its charge. Coiled lines in blue, magenta, and red pile up in the middle zone — not quite resolving into objects, not quite dissolving into pure mark. The red-outlined box at upper right, packed with crossing lines, reads as something sealed off from the looser energy around it. The overall mood feels loud and compressed.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #153 and nnxyz nnotb #155 show the same multi-line layering approach but differ sharply in ground color — #153 uses a blue field, #155 a sky-blue — making #154's yellow ground a distinct tonal shift across these three consecutive owned titles.\", \"connections\": [{\"targetArtworkId\": \"QmWyABFcRcaLXke5pHVjNcCHMwwWigbQEHFyECXhuRciz1\", \"reason\": \"nnxyz nnotb #155 shares the same dense zigzag border lines and coiled loop clusters, but its teal-gray central mass against sky blue creates a cooler, more open feel compared to #154's compressed yellow-and-black contrast.\"}, {\"targetArtworkId\": \"QmNNgQNBLGeFrRjWhmpczBQBA4vVoz3yK6AooDgwpR6kfj\", \"reason\": \"nnxyz rawblocks #26 also uses a single saturated ground color — deep red — with a concentrated central form and scattered line marks at the edges, offering a direct color-field contrast to #154's yellow while sharing the same structural logic of ground versus layered mark.\"}], \"tags\": [\"yellow ground\", \"coiled line clusters\", \"black mass with white outline\", \"zigzag marks\", \"overlapping loops\", \"enclosed rectangular form\"], \"interpretiveTags\": [\"compressed energy\", \"loud mood\"], \"lookingQuestion\": \"Where does your eye move when it tries to find a resting point — and what in the image keeps pulling it away from that spot?\", \"ambiguities\": [\"The central blue looped mass and the magenta rounded form could be read as objects or as pure accumulated line; no supplied evidence resolves which reading the artist intended.\", \"Title order and recorded creation order align for this work and its immediate neighbors in the owned subset, but gaps elsewhere in the nnotb family mean this alignment cannot be assumed collection-wide.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

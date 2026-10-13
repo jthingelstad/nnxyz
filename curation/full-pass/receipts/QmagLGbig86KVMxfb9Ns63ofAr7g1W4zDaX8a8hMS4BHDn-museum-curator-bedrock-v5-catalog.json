@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:51.372027-05:00",
+    "usage": {
+      "inputTokens": 6202,
+      "outputTokens": 735,
+      "totalTokens": 6937,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12469
+    },
+    "requestId": "947b0bce-96a7-488c-8cee-395b9101bd47",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large white-outlined oval form dominates the center against a flat purple field, with a wide open mouth showing white teeth at both upper and lower registers of the face.\",\n    \"A bold horizontal red-orange bar cuts across the middle of the face, overlapping a yellow circular eye shape; a blue diagonal stroke crosses the right cheek area.\",\n    \"Yellow angular lines and black scribbled marks crowd the upper background, while loose teal and orange looping lines scatter across the purple ground at the edges.\"\n  ],\n  \"reading\": \"The white outline holds a face-like form together while everything inside it pulls apart — red bar, yellow eye, blue diagonal, and packed black marks all compete for the same space. The wide-open mouth, repeated twice in the composition, reads as raw noise rather than speech. Purple fills the ground with an almost pressurized stillness that makes the interior chaos feel louder.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #269 and nnxyz nnotb #271. Where #269 fills its ground with yellow and black patterning on a dark field, #270 clears space with flat purple, shifting the emotional weight from density to exposure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUoyWg4A9e61ijWCrHwsKxt5e14i8SMNMCx77qty9xJQp\",\n      \"reason\": \"Both works use a white outline to contain a face-like form packed with competing marks, but #269 builds outward with radiating yellow oval shapes while #270 opens inward against a bare purple ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46\",\n      \"reason\": \"#271 shares the double-mouth structure and a single large circular eye with #270, but replaces the purple ground with warm brown and distributes loose spiral lines across the lower half rather than concentrating them inside the face.\"\n    }\n  ],\n  \"tags\": [\n    \"white outline form\",\n    \"flat purple ground\",\n    \"open mouth repeated\",\n    \"horizontal color bar\",\n    \"circular eye shape\",\n    \"layered scribble marks\"\n  ],\n  \"interpretiveTags\": [\n    \"raw intensity\",\n    \"pressurized stillness\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the white outline holding the form together, or on the red bar and yellow circle pulling it apart — and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The white outline reads as a face-like form, but the doubling of the open-mouth shape is ambiguous — it may be a single form or two overlapping structures.\",\n    \"The teal looping lines in the upper interior could be background marks showing through or a separate layer placed over the face form; the image does not resolve this clearly.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn/image.png",
+        "imageSHA256": "ed40d42b65c35310f62bddd6eb33c8705e7500b0e92b5ce45afba13b3dcfea94"
+      },
+      {
+        "artworkId": "QmUoyWg4A9e61ijWCrHwsKxt5e14i8SMNMCx77qty9xJQp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUoyWg4A9e61ijWCrHwsKxt5e14i8SMNMCx77qty9xJQp/image.png",
+        "imageSHA256": "2d15370fdc6af63a44eca38c7c698239a3e4bc291cb26d2c3ada93bfcad9f07f"
+      },
+      {
+        "artworkId": "QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46/image.png",
+        "imageSHA256": "82de67868a115b65394b2e7066639878c43684f2ebb169087ee9c41efb386e35"
+      },
+      {
+        "artworkId": "QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1/image.png",
+        "imageSHA256": "d147cba4feac5802491e612ac876b161a8146807d2a80b4ddbb847b909f84e94"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:58.510752-05:00",
+    "usage": {
+      "inputTokens": 6959,
+      "outputTokens": 867,
+      "totalTokens": 7826,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7078
+    },
+    "requestId": "4f14a7a1-06a3-47a5-a0a8-beaf3c5d45a7",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large white-outlined oval form dominates the center against a flat purple field, with a wide open mouth showing white teeth visible at both the upper and lower areas of the form.\",\n    \"A bold horizontal red-orange bar cuts across the middle of the form, overlapping a yellow circular shape; a blue diagonal stroke crosses the right side of the composition.\",\n    \"Yellow angular lines and black scribbled marks crowd the upper background, while loose teal and orange looping lines scatter across the purple ground at the edges.\"\n  ],\n  \"reading\": \"The white outline holds a face-like form together while everything inside it pulls apart — red bar, yellow circle, blue diagonal, and packed black marks all compete for the same space. The wide-open tooth-lined shape appears twice in the composition, reading as noise rather than speech. Flat purple fills the ground with a stillness that makes the interior density feel louder by contrast.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #269 and nnxyz nnotb #271. Where #269 fills its ground with yellow ovals and black patterning on a dark field, #270 clears space with flat purple, shifting weight from density to exposure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUoyWg4A9e61ijWCrHwsKxt5e14i8SMNMCx77qty9xJQp\",\n      \"reason\": \"Both works use a white outline to contain a face-like form packed with competing marks, but #269 builds outward with radiating yellow oval shapes on a dark ground while #270 opens against bare purple.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46\",\n      \"reason\": \"#271 shares a large circular eye shape and tooth-lined mouth with #270, but replaces the flat purple ground with warm brown and spreads loose spiral lines across the lower half rather than concentrating marks inside the central form.\"\n    }\n  ],\n  \"tags\": [\n    \"white outline form\",\n    \"flat purple ground\",\n    \"repeated tooth-lined opening\",\n    \"horizontal color bar\",\n    \"circular eye shape\",\n    \"layered scribble marks\"\n  ],\n  \"interpretiveTags\": [\n    \"pressurized stillness\",\n    \"interior density\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first — on the white outline holding the form together, or on the red bar and yellow circle pulling it apart?\",\n  \"ambiguities\": [\n    \"The tooth-lined opening appears twice in the form; whether this represents two separate structures or one form with overlapping outlines is not resolved by the image.\",\n    \"The teal looping lines in the upper interior may be background marks visible through the form or marks placed over it; the image does not clarify layering order.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: flat purple ground, white oval outline, red-orange horizontal bar, yellow circular shape, blue diagonal stroke, and double tooth-lined opening are all directly visible in the primary image.\",\n    \"Confirmed: #269 shows dark ground with yellow radiating ovals and dense patterning — contrast with #270's purple ground is accurate and specific.\",\n    \"Revised 'registers' to 'areas' in observation 1 and softened the looking question to remove emotional prescription; 'pressurized stillness' moved to interpretiveTags only, not repeated in reading prose.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn/image.png",
+        "imageSHA256": "ed40d42b65c35310f62bddd6eb33c8705e7500b0e92b5ce45afba13b3dcfea94"
+      },
+      {
+        "artworkId": "QmUoyWg4A9e61ijWCrHwsKxt5e14i8SMNMCx77qty9xJQp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUoyWg4A9e61ijWCrHwsKxt5e14i8SMNMCx77qty9xJQp/image.png",
+        "imageSHA256": "2d15370fdc6af63a44eca38c7c698239a3e4bc291cb26d2c3ada93bfcad9f07f"
+      },
+      {
+        "artworkId": "QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46/image.png",
+        "imageSHA256": "82de67868a115b65394b2e7066639878c43684f2ebb169087ee9c41efb386e35"
+      },
+      {
+        "artworkId": "QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1/image.png",
+        "imageSHA256": "d147cba4feac5802491e612ac876b161a8146807d2a80b4ddbb847b909f84e94"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large white-outlined oval form dominates the center against a flat purple field, with a wide open mouth showing white teeth at both upper and lower registers of the face.\", \"A bold horizontal red-orange bar cuts across the middle of the face, overlapping a yellow circular eye shape; a blue diagonal stroke crosses the right cheek area.\", \"Yellow angular lines and black scribbled marks crowd the upper background, while loose teal and orange looping lines scatter across the purple ground at the edges.\"], \"reading\": \"The white outline holds a face-like form together while everything inside it pulls apart — red bar, yellow eye, blue diagonal, and packed black marks all compete for the same space. The wide-open mouth, repeated twice in the composition, reads as raw noise rather than speech. Purple fills the ground with an almost pressurized stillness that makes the interior chaos feel louder.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #269 and nnxyz nnotb #271. Where #269 fills its ground with yellow and black patterning on a dark field, #270 clears space with flat purple, shifting the emotional weight from density to exposure.\", \"connections\": [{\"targetArtworkId\": \"QmUoyWg4A9e61ijWCrHwsKxt5e14i8SMNMCx77qty9xJQp\", \"reason\": \"Both works use a white outline to contain a face-like form packed with competing marks, but #269 builds outward with radiating yellow oval shapes while #270 opens inward against a bare purple ground.\"}, {\"targetArtworkId\": \"QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46\", \"reason\": \"#271 shares the double-mouth structure and a single large circular eye with #270, but replaces the purple ground with warm brown and distributes loose spiral lines across the lower half rather than concentrating them inside the face.\"}], \"tags\": [\"white outline form\", \"flat purple ground\", \"open mouth repeated\", \"horizontal color bar\", \"circular eye shape\", \"layered scribble marks\"], \"interpretiveTags\": [\"raw intensity\", \"pressurized stillness\"], \"lookingQuestion\": \"Where does your eye settle first — on the white outline holding the form together, or on the red bar and yellow circle pulling it apart — and what does that path through the image feel like?\", \"ambiguities\": [\"The white outline reads as a face-like form, but the doubling of the open-mouth shape is ambiguous — it may be a single form or two overlapping structures.\", \"The teal looping lines in the upper interior could be background marks showing through or a separate layer placed over the face form; the image does not resolve this clearly.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:37.167833-05:00",
+    "usage": {
+      "inputTokens": 6720,
+      "outputTokens": 781,
+      "totalTokens": 7501,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5391
+    },
+    "requestId": "29e38cac-a98f-47ca-b375-df3b8fcd6e8b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large white-outlined oval form dominates the center against a flat purple field; a row of white teeth is visible in the upper interior and a second tooth row appears in the lower portion of the form.\",\n    \"A bold horizontal red-orange bar cuts across the middle of the form, overlapping a yellow circular shape; a blue diagonal stroke crosses the right side of the composition.\",\n    \"Yellow angular lines and black scribbled marks crowd the upper background, while loose teal and orange looping lines scatter across the purple ground at the edges.\"\n  ],\n  \"reading\": \"The white outline holds a face-like form together while everything inside it pulls apart — red bar, yellow circle, blue diagonal, and packed black marks all compete for the same space. Two tooth-lined shapes appear within the form, reading as noise rather than speech. Flat purple fills the ground with a stillness that makes the interior density feel louder by contrast.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #269 and nnxyz nnotb #271. Where #269 fills its ground with yellow ovals and black patterning on a dark field, #270 clears space with flat purple, shifting weight from density to exposure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUoyWg4A9e61ijWCrHwsKxt5e14i8SMNMCx77qty9xJQp\",\n      \"reason\": \"Both works use a white outline to contain a face-like form packed with competing marks, but #269 builds outward with radiating yellow oval shapes on a dark ground while #270 opens against bare purple.\"\n    },\n    {\n      \"targetArtworkId\": \"QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46\",\n      \"reason\": \"#271 shares a large circular eye shape and tooth-lined mouth with #270, but replaces the flat purple ground with warm brown and spreads loose spiral lines across the lower half rather than concentrating marks inside the central form.\"\n    }\n  ],\n  \"tags\": [\"white outline form\", \"flat purple ground\", \"repeated tooth-lined opening\", \"horizontal color bar\", \"circular eye shape\", \"layered scribble marks\"],\n  \"lookingQuestion\": \"Where does your eye settle first — on the white outline holding the form together, or on the red bar and yellow circle pulling it apart?\",\n  \"ambiguities\": [\n    \"The tooth-lined opening appears twice in the form; whether this represents two separate structures or one form with overlapping outlines is not resolved by the image.\",\n    \"The teal looping lines in the upper interior may be background marks visible through the form or marks placed over it; the image does not clarify layering order.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open mouth' with a description of two visible tooth rows, removing the unsupported openness claim while preserving the structural observation.\",\n    \"Reading adjusted to 'two tooth-lined shapes appear within the form' — grounded in visible evidence without asserting degree of opening.\",\n    \"All other fields retained; no counts, CIDs, or prohibited terms introduced.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn/image.png",
+        "imageSHA256": "ed40d42b65c35310f62bddd6eb33c8705e7500b0e92b5ce45afba13b3dcfea94"
+      },
+      {
+        "artworkId": "QmUoyWg4A9e61ijWCrHwsKxt5e14i8SMNMCx77qty9xJQp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUoyWg4A9e61ijWCrHwsKxt5e14i8SMNMCx77qty9xJQp/image.png",
+        "imageSHA256": "2d15370fdc6af63a44eca38c7c698239a3e4bc291cb26d2c3ada93bfcad9f07f"
+      },
+      {
+        "artworkId": "QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46/image.png",
+        "imageSHA256": "82de67868a115b65394b2e7066639878c43684f2ebb169087ee9c41efb386e35"
+      },
+      {
+        "artworkId": "QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXMTunss5kh4J6A6ikdjk7UtxNqHat3RAAogUzGjDEik1/image.png",
+        "imageSHA256": "d147cba4feac5802491e612ac876b161a8146807d2a80b4ddbb847b909f84e94"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large white-outlined oval form dominates the center against a flat purple field, with a wide open mouth showing white teeth visible at both the upper and lower areas of the form.\", \"A bold horizontal red-orange bar cuts across the middle of the form, overlapping a yellow circular shape; a blue diagonal stroke crosses the right side of the composition.\", \"Yellow angular lines and black scribbled marks crowd the upper background, while loose teal and orange looping lines scatter across the purple ground at the edges.\"], \"reading\": \"The white outline holds a face-like form together while everything inside it pulls apart — red bar, yellow circle, blue diagonal, and packed black marks all compete for the same space. The wide-open tooth-lined shape appears twice in the composition, reading as noise rather than speech. Flat purple fills the ground with a stillness that makes the interior density feel louder by contrast.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #269 and nnxyz nnotb #271. Where #269 fills its ground with yellow ovals and black patterning on a dark field, #270 clears space with flat purple, shifting weight from density to exposure.\", \"connections\": [{\"targetArtworkId\": \"QmUoyWg4A9e61ijWCrHwsKxt5e14i8SMNMCx77qty9xJQp\", \"reason\": \"Both works use a white outline to contain a face-like form packed with competing marks, but #269 builds outward with radiating yellow oval shapes on a dark ground while #270 opens against bare purple.\"}, {\"targetArtworkId\": \"QmNNtGqPM2Hg3yJkhztrEAMrSgnQMoBpWc9bUBL5ToVs46\", \"reason\": \"#271 shares a large circular eye shape and tooth-lined mouth with #270, but replaces the flat purple ground with warm brown and spreads loose spiral lines across the lower half rather than concentrating marks inside the central form.\"}], \"tags\": [\"white outline form\", \"flat purple ground\", \"repeated tooth-lined opening\", \"horizontal color bar\", \"circular eye shape\", \"layered scribble marks\"], \"lookingQuestion\": \"Where does your eye settle first — on the white outline holding the form together, or on the red bar and yellow circle pulling it apart?\", \"ambiguities\": [\"The tooth-lined opening appears twice in the form; whether this represents two separate structures or one form with overlapping outlines is not resolved by the image.\", \"The teal looping lines in the upper interior may be background marks visible through the form or marks placed over it; the image does not clarify layering order.\"]}\nFLAGS:\n[{\"artworkId\": \"QmagLGbig86KVMxfb9Ns63ofAr7g1W4zDaX8a8hMS4BHDn\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

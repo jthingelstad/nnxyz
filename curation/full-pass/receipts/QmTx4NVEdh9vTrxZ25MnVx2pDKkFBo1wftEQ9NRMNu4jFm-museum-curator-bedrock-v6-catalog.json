@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:03.639489-05:00",
+    "usage": {
+      "inputTokens": 6347,
+      "outputTokens": 718,
+      "totalTokens": 7065,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19809
+    },
+    "requestId": "9bb17f6a-944f-4092-9029-6fca4f0537db",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A deep crimson field fills the entire background, with a dense tangle of black, white, light blue, yellow, and pink lines forming a large rounded mass in the upper-left and center.\",\n    \"Parallel white and red diagonal strokes extend from the right side of the lower half, and horizontal white bars cut across a brown-orange curved opening near the bottom center.\",\n    \"A small lavender patch and two tan heart-like shapes appear at the bottom edge, while a yellow crosshatch cluster and a lavender arc sit near the center of the tangled mass.\"\n  ],\n  \"reading\": \"Against saturated red, overlapping loops of black, sky blue, and white line compete for space, producing a knotted density that reads as agitated or overwhelmed. The parallel white-and-red slashes at right feel like sound lines or expelled force, pushing outward from the central knot. Small hearts and a lavender spot at the base offer quiet, almost tender counterpoints buried beneath the commotion—easy to miss, which may be the point.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #37\\\" and \\\"nnxyz rawblocks #39.\\\" Where #37 uses solid black shapes on teal and #39 reduces to a stark black silhouette on yellow-green, #38 stands apart with its layered, tangled linework and hot red ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6\",\n      \"reason\": \"Both share a deep red background and white radiating lines, but nnotb #54 organizes its lines around a readable figure while #38 dissolves form into overlapping tangles.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmf3XADpBhuqtGJoqk34VhNYwPjoqCTJm7yDA3tzghcnQv\",\n      \"reason\": \"Rawblocks #39 strips nearly all color and line density away to a minimal black silhouette, making a stark contrast to #38's maximal layering on a similar-scale canvas.\"\n    }\n  ],\n  \"tags\": [\n    \"tangled lines\",\n    \"red ground\",\n    \"overlapping loops\",\n    \"hidden small shapes\",\n    \"parallel slashes\",\n    \"multi-color linework\"\n  ],\n  \"lookingQuestion\": \"Where do the small hearts and lavender shapes sit relative to the densest knot of lines, and how does finding them change the way the surrounding tangle feels?\",\n  \"ambiguities\": [\n    \"The central mass could suggest a head or face, but no clear features confirm this reading.\",\n    \"Whether the parallel white-red strokes at right are part of the same form or a separate element is unclear from the overlapping layers.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTx4NVEdh9vTrxZ25MnVx2pDKkFBo1wftEQ9NRMNu4jFm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTx4NVEdh9vTrxZ25MnVx2pDKkFBo1wftEQ9NRMNu4jFm/image.png",
+        "imageSHA256": "ac9ee6f0bde83bb2efe880548ca8f178ef5347bd53516c69e8e72e4c11fd83c6"
+      },
+      {
+        "artworkId": "QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G/image.png",
+        "imageSHA256": "69dcbfd6aa0ec72366770f32bee86adaacc5ed5403ca96b48aa1d212cc833532"
+      },
+      {
+        "artworkId": "QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6/image.png",
+        "imageSHA256": "42ad234a3a5a387dd8fac2acc7785aac0f1244eff33de5ac6ca0ed09b9315f6a"
+      },
+      {
+        "artworkId": "Qmf3XADpBhuqtGJoqk34VhNYwPjoqCTJm7yDA3tzghcnQv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf3XADpBhuqtGJoqk34VhNYwPjoqCTJm7yDA3tzghcnQv/image.png",
+        "imageSHA256": "011e63b5b7ba39ad14eb32c9ddf4838848e0bd9b6b313a8265c3286ebafbc1f4"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:10:13.833589-05:00",
+    "usage": {
+      "inputTokens": 7097,
+      "outputTokens": 833,
+      "totalTokens": 7930,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10137
+    },
+    "requestId": "fafcf621-4236-40e7-87bb-fed173a892c1",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A deep crimson field fills the background, with a dense tangle of black, white, light blue, yellow, and pink lines forming a large rounded mass in the upper-left and center.\",\n    \"Parallel white and red diagonal strokes extend from the right side of the lower half, and horizontal white bars cut across a brown-orange curved opening near the bottom center.\",\n    \"A small lavender patch and two tan heart-like shapes appear at the bottom edge, while a yellow crosshatch cluster and a lavender arc sit near the center of the tangled mass.\"\n  ],\n  \"reading\": \"Against saturated red, overlapping loops of black, sky blue, and white line compete for space, producing a knotted density that can read as agitated or overwhelmed. The parallel white-and-red slashes at right push outward from the central knot like expelled force. Small hearts and a lavender spot at the base offer quiet, almost tender counterpoints buried beneath the commotion—easy to miss, which may be the point.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #37\\\" and \\\"nnxyz rawblocks #39.\\\" Where #37 uses solid black shapes on teal and #39 reduces to a stark black silhouette on yellow-green, #38 stands apart with its layered, tangled linework and hot red ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6\",\n      \"reason\": \"Both share a deep red background and white radiating lines, but nnotb #54 organizes its lines around a readable figure while #38 dissolves form into overlapping tangles.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmf3XADpBhuqtGJoqk34VhNYwPjoqCTJm7yDA3tzghcnQv\",\n      \"reason\": \"Rawblocks #39 strips nearly all color and line density away to a minimal black silhouette, making a stark contrast to #38's maximal layering.\"\n    }\n  ],\n  \"tags\": [\n    \"tangled lines\",\n    \"red ground\",\n    \"overlapping loops\",\n    \"hidden small shapes\",\n    \"parallel slashes\",\n    \"multi-color linework\"\n  ],\n  \"lookingQuestion\": \"Where do the small hearts and lavender shapes sit relative to the densest knot of lines, and how does finding them change the way the surrounding tangle feels?\",\n  \"ambiguities\": [\n    \"The central mass could suggest a head or face, but no clear features confirm this reading.\",\n    \"Whether the parallel white-red strokes at right belong to the same form or a separate element is unclear from the overlapping layers.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed crimson background, sky-blue loops, yellow crosshatch, tan heart shapes, and lavender patches all visible in the image as described.\",\n    \"Removed 'sound lines' phrasing that implied intent; replaced with visible-result description of outward push.\",\n    \"Comparison images verified: #37 indeed shows solid black on teal, #39 shows black silhouette on yellow-green, and nnotb #54 shares the red ground with white radiating lines around a distinct figure.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmTx4NVEdh9vTrxZ25MnVx2pDKkFBo1wftEQ9NRMNu4jFm",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTx4NVEdh9vTrxZ25MnVx2pDKkFBo1wftEQ9NRMNu4jFm/image.png",
+        "imageSHA256": "ac9ee6f0bde83bb2efe880548ca8f178ef5347bd53516c69e8e72e4c11fd83c6"
+      },
+      {
+        "artworkId": "QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY71fXfB9ougVAHSTrvq73AWoTJfykiju3L1UuUtr6d3G/image.png",
+        "imageSHA256": "69dcbfd6aa0ec72366770f32bee86adaacc5ed5403ca96b48aa1d212cc833532"
+      },
+      {
+        "artworkId": "QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6/image.png",
+        "imageSHA256": "42ad234a3a5a387dd8fac2acc7785aac0f1244eff33de5ac6ca0ed09b9315f6a"
+      },
+      {
+        "artworkId": "Qmf3XADpBhuqtGJoqk34VhNYwPjoqCTJm7yDA3tzghcnQv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmf3XADpBhuqtGJoqk34VhNYwPjoqCTJm7yDA3tzghcnQv/image.png",
+        "imageSHA256": "011e63b5b7ba39ad14eb32c9ddf4838848e0bd9b6b313a8265c3286ebafbc1f4"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A deep crimson field fills the entire background, with a dense tangle of black, white, light blue, yellow, and pink lines forming a large rounded mass in the upper-left and center.\", \"Parallel white and red diagonal strokes extend from the right side of the lower half, and horizontal white bars cut across a brown-orange curved opening near the bottom center.\", \"A small lavender patch and two tan heart-like shapes appear at the bottom edge, while a yellow crosshatch cluster and a lavender arc sit near the center of the tangled mass.\"], \"reading\": \"Against saturated red, overlapping loops of black, sky blue, and white line compete for space, producing a knotted density that reads as agitated or overwhelmed. The parallel white-and-red slashes at right feel like sound lines or expelled force, pushing outward from the central knot. Small hearts and a lavender spot at the base offer quiet, almost tender counterpoints buried beneath the commotion—easy to miss, which may be the point.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #37\\\" and \\\"nnxyz rawblocks #39.\\\" Where #37 uses solid black shapes on teal and #39 reduces to a stark black silhouette on yellow-green, #38 stands apart with its layered, tangled linework and hot red ground.\", \"connections\": [{\"targetArtworkId\": \"QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6\", \"reason\": \"Both share a deep red background and white radiating lines, but nnotb #54 organizes its lines around a readable figure while #38 dissolves form into overlapping tangles.\"}, {\"targetArtworkId\": \"Qmf3XADpBhuqtGJoqk34VhNYwPjoqCTJm7yDA3tzghcnQv\", \"reason\": \"Rawblocks #39 strips nearly all color and line density away to a minimal black silhouette, making a stark contrast to #38's maximal layering on a similar-scale canvas.\"}], \"tags\": [\"tangled lines\", \"red ground\", \"overlapping loops\", \"hidden small shapes\", \"parallel slashes\", \"multi-color linework\"], \"lookingQuestion\": \"Where do the small hearts and lavender shapes sit relative to the densest knot of lines, and how does finding them change the way the surrounding tangle feels?\", \"ambiguities\": [\"The central mass could suggest a head or face, but no clear features confirm this reading.\", \"Whether the parallel white-red strokes at right are part of the same form or a separate element is unclear from the overlapping layers.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

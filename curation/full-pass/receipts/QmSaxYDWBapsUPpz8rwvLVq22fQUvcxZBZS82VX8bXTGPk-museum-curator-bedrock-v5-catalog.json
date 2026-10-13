@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:22.907904-05:00",
+    "usage": {
+      "inputTokens": 6121,
+      "outputTokens": 643,
+      "totalTokens": 6764,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11281
+    },
+    "requestId": "bf64e9e8-ce3e-4178-97f4-2f8a7e37e746",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A skull-like rounded form sits left of center, outlined in thick black with yellow and blue accent lines; the jaw hangs open, exposing white teeth rendered in tight parallel strokes.\",\n    \"Broad diagonal bands of cyan, green, orange, and magenta sweep across the interior of the form, while a vertical cyan-green stripe cuts down the right side of the face.\",\n    \"The olive-yellow background is covered in overlapping translucent circles of varying sizes, creating a repeating dot pattern that surrounds the central form on all sides.\"\n  ],\n  \"reading\": \"The open jaw and hollow eye sockets read as distress or a shout, yet the acid-yellow ground and soap-bubble circles push against that reading with something almost festive. Thick black outlines anchor the skull form while the diagonal color bands inside it pull in multiple directions at once. The collision between the buoyant background pattern and the skeletal subject gives the image its tension.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #286 shares the skull subject and multicolor interior fills but uses a dense scribble field on a lavender ground rather than the soft circle pattern seen here. Both title and recorded-creation order place #287 between #286 and #288.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmP4p51J5H425UMmoLBWziEMCqN8Xz6i6MLgjpaDhVmur9\",\n      \"reason\": \"Both works show a skull with an open jaw and multicolor diagonal fills inside the cranium, but #286 surrounds its form with tangled scribble lines on lavender, while #287 replaces that texture with translucent circles on olive-yellow.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"open jaw\",\n    \"diagonal color bands\",\n    \"repeating circle background\",\n    \"black outline\",\n    \"white teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between festive and unsettling\",\n    \"ambiguous emotional register\"\n  ],\n  \"lookingQuestion\": \"Where do your eyes settle first — on the repeating circles in the background or on the open jaw — and what does that order of attention do to how you read the image?\",\n  \"ambiguities\": [\n    \"The nifty-faces #106 comparison shares a yellow-green ground and open-mouth form but the line density and background treatment differ enough that no strong formal connection was found; it was not selected.\",\n    \"Whether the diagonal color bands inside the skull are a separate layer beneath the outline or drawn over it cannot be confirmed from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk/image.png",
+        "imageSHA256": "312b32750c21b8700dab8728790ec0ca63c05b5f02706fe869a663f1f8c4afcb"
+      },
+      {
+        "artworkId": "QmP4p51J5H425UMmoLBWziEMCqN8Xz6i6MLgjpaDhVmur9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP4p51J5H425UMmoLBWziEMCqN8Xz6i6MLgjpaDhVmur9/image.png",
+        "imageSHA256": "09f04c9195176cf6ce548c3bddcc29767bd749d8f6ba9ceb3e04969eb2ccf371"
+      },
+      {
+        "artworkId": "QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD/image.png",
+        "imageSHA256": "fd938c33934d2483b96900fe86b17ea40b6e0084fec70b90b37e5c69f642ec9a"
+      },
+      {
+        "artworkId": "QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1/image.png",
+        "imageSHA256": "e7c36c94757b5eacf3b1f8ae8f426d0beb8b170656a50f28caaa024f8278fef8"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:30.159652-05:00",
+    "usage": {
+      "inputTokens": 6795,
+      "outputTokens": 803,
+      "totalTokens": 7598,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7164
+    },
+    "requestId": "6088b958-c2cd-4d1c-8e33-8ab2d392edac",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A rounded skull form sits left of center, outlined in thick black with yellow and blue accent lines; the jaw hangs open, exposing white teeth rendered in tight parallel strokes.\",\n    \"Broad diagonal bands of cyan, green, orange, and magenta sweep across the interior of the form, while a vertical cyan-green stripe cuts down the right side of the face.\",\n    \"The olive-yellow background is covered in overlapping translucent circles of varying sizes, surrounding the central form on all sides.\"\n  ],\n  \"reading\": \"The open jaw and hollow eye sockets carry a reading of distress or a shout, yet the acid-yellow ground and soap-bubble circles push against that with something almost festive. Thick black outlines anchor the skull form while the diagonal color bands inside pull in multiple directions. The collision between the buoyant background pattern and the skeletal subject gives the image its tension.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #286 shares the skull subject and multicolor interior fills but uses a dense scribble field on a lavender ground rather than the soft circle pattern seen here. Both title and recorded-creation order place #287 between #286 and #288.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmP4p51J5H425UMmoLBWziEMCqN8Xz6i6MLgjpaDhVmur9\",\n      \"reason\": \"Both works show a skull with an open jaw and multicolor diagonal fills inside the cranium, but #286 surrounds its form with tangled scribble lines on lavender, while #287 replaces that texture with translucent circles on olive-yellow.\"\n    }\n  ],\n  \"tags\": [\"skull form\", \"open jaw\", \"diagonal color bands\", \"repeating circle background\", \"black outline\", \"white teeth\"],\n  \"interpretiveTags\": [\"tension between festive and unsettling\"],\n  \"lookingQuestion\": \"Where do your eyes settle first — on the repeating circles in the background or on the open jaw — and what does that order of attention do to how you read the image?\",\n  \"ambiguities\": [\n    \"The nifty-faces #106 comparison shares a yellow-green ground and open-mouth form but the line density and background treatment differ enough that no strong formal connection was found; it was not selected.\",\n    \"Whether the diagonal color bands inside the skull sit beneath the outline or over it cannot be confirmed from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: skull form left of center, diagonal interior bands, translucent circle background — no invented details found.\",\n    \"Reading removed no unsupported claims; 'hollow eye sockets' is visible in the image as dark recessed areas, retained as concrete description.\",\n    \"QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD (nifty faces #106) inspected and correctly excluded; QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1 (#288) inspected and not selected as its warm tan ground and open-eyed face offer weaker formal overlap than #286.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSaxYDWBapsUPpz8rwvLVq22fQUvcxZBZS82VX8bXTGPk/image.png",
+        "imageSHA256": "312b32750c21b8700dab8728790ec0ca63c05b5f02706fe869a663f1f8c4afcb"
+      },
+      {
+        "artworkId": "QmP4p51J5H425UMmoLBWziEMCqN8Xz6i6MLgjpaDhVmur9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmP4p51J5H425UMmoLBWziEMCqN8Xz6i6MLgjpaDhVmur9/image.png",
+        "imageSHA256": "09f04c9195176cf6ce548c3bddcc29767bd749d8f6ba9ceb3e04969eb2ccf371"
+      },
+      {
+        "artworkId": "QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZ7nh3P593xSKPbSTSx6TNrKKXkLFoVEVBXSADjoWykFD/image.png",
+        "imageSHA256": "fd938c33934d2483b96900fe86b17ea40b6e0084fec70b90b37e5c69f642ec9a"
+      },
+      {
+        "artworkId": "QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSd8a2C2zSRzmeJCjfdJNmQpGPJWKre8fikM7QQqBfVT1/image.png",
+        "imageSHA256": "e7c36c94757b5eacf3b1f8ae8f426d0beb8b170656a50f28caaa024f8278fef8"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A skull-like rounded form sits left of center, outlined in thick black with yellow and blue accent lines; the jaw hangs open, exposing white teeth rendered in tight parallel strokes.\", \"Broad diagonal bands of cyan, green, orange, and magenta sweep across the interior of the form, while a vertical cyan-green stripe cuts down the right side of the face.\", \"The olive-yellow background is covered in overlapping translucent circles of varying sizes, creating a repeating dot pattern that surrounds the central form on all sides.\"], \"reading\": \"The open jaw and hollow eye sockets read as distress or a shout, yet the acid-yellow ground and soap-bubble circles push against that reading with something almost festive. Thick black outlines anchor the skull form while the diagonal color bands inside it pull in multiple directions at once. The collision between the buoyant background pattern and the skeletal subject gives the image its tension.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #286 shares the skull subject and multicolor interior fills but uses a dense scribble field on a lavender ground rather than the soft circle pattern seen here. Both title and recorded-creation order place #287 between #286 and #288.\", \"connections\": [{\"targetArtworkId\": \"QmP4p51J5H425UMmoLBWziEMCqN8Xz6i6MLgjpaDhVmur9\", \"reason\": \"Both works show a skull with an open jaw and multicolor diagonal fills inside the cranium, but #286 surrounds its form with tangled scribble lines on lavender, while #287 replaces that texture with translucent circles on olive-yellow.\"}], \"tags\": [\"skull form\", \"open jaw\", \"diagonal color bands\", \"repeating circle background\", \"black outline\", \"white teeth\"], \"interpretiveTags\": [\"tension between festive and unsettling\", \"ambiguous emotional register\"], \"lookingQuestion\": \"Where do your eyes settle first — on the repeating circles in the background or on the open jaw — and what does that order of attention do to how you read the image?\", \"ambiguities\": [\"The nifty-faces #106 comparison shares a yellow-green ground and open-mouth form but the line density and background treatment differ enough that no strong formal connection was found; it was not selected.\", \"Whether the diagonal color bands inside the skull are a separate layer beneath the outline or drawn over it cannot be confirmed from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

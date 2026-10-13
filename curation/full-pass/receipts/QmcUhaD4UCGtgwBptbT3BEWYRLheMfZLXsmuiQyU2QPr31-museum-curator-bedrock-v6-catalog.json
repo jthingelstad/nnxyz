@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:44.401394-05:00",
+    "usage": {
+      "inputTokens": 5376,
+      "outputTokens": 707,
+      "totalTokens": 6083,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20130
+    },
+    "requestId": "1e0a7b03-e617-4192-9d38-a1c05795a6cc",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large skull-like form fills the frame in profile, facing left, built from overlapping loops of pink, yellow, cyan, and red lines against a solid black ground.\",\n    \"A jagged yellow crown shape sits at the upper right, resting on or near the top of the head, its five pointed peaks drawn in a single unbroken stroke.\",\n    \"Two spiral-centered eye forms appear at different depths—one purple with a white spiral core, one cyan loop to the right—while yellow horizontal bars suggest bared teeth at the bottom.\"\n  ],\n  \"reading\": \"Layered neon outlines trace and retrace a skull seen from the side, each color pass slightly offset so the form appears to vibrate against the black field. The crown reads less as decoration than as another restless loop, no more stable than the skull beneath it. A sense of grinning unease comes through the bared-teeth bars and the mismatched, staring eye spirals, which refuse to settle into a single expression.\",\n  \"contextAngle\": \"As the highest title number and last recorded creation in the owned Scrimshaw subset, this work sits at the current boundary of the collection. Its title neighbor Scrimshaw 41 shares the skull-and-teeth motif but uses a denser, darker tangle of black hatching rather than bright separated color loops.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\",\n      \"reason\": \"Both show skull forms with spiral eyes and exposed teeth, but Scrimshaw 41 buries its structure under heavy black cross-hatching while this work isolates each color line against open black space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYN7oaS82qnxyQV9aoFRAxPCqY3sMPgbvh3S431bveYe\",\n      \"reason\": \"Both pack a round head shape with competing neon colors and bared-teeth bars, though rawblocks #40 fills the background with pink and cyan blobs while Scrimshaw 42 keeps its black ground empty.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"crown shape\",\n    \"spiral eyes\",\n    \"neon line loops\",\n    \"black ground\",\n    \"bared teeth\"\n  ],\n  \"lookingQuestion\": \"Where the colored outlines overlap and diverge around the jaw, do they read as one skull shifting position or as several separate heads stacked together?\",\n  \"ambiguities\": [\n    \"Whether the profile faces strictly left or is a three-quarter view is unclear—the second eye and ear-like loop on the right could indicate a second facing direction.\",\n    \"Small colored marks inside the cranium area may be additional features or residual line crossings; their role is hard to resolve at this scale.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31/image.png",
+        "imageSHA256": "73593dbbab5258119a320ac8258ddd152853cf0cb20b715e48ba733b3a23dd58"
+      },
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      },
+      {
+        "artworkId": "Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj/image.png",
+        "imageSHA256": "82e73822cebcb076fa5c2a5cd8296d9e27b0fa5983ab2200380dc5e9c6db33e3"
+      },
+      {
+        "artworkId": "QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe/image.png",
+        "imageSHA256": "4432232fae9ee81bd00fa0e245871284775ab1e78693658130f4560f53083d2f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:12:56.955685-05:00",
+    "usage": {
+      "inputTokens": 6115,
+      "outputTokens": 848,
+      "totalTokens": 6963,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12485
+    },
+    "requestId": "e5454ceb-00f6-476a-b6dc-e4ffd9916fef",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large skull-like form fills the frame in profile, built from overlapping loops of pink, yellow, cyan, and red lines against a solid black ground.\",\n    \"A jagged yellow crown shape sits at the upper right, its five pointed peaks drawn in a continuous stroke, resting near the top of the head.\",\n    \"Two spiral-centered eye forms appear at different depths—one purple with a white spiral core at center-left, one cyan loop to the right—while yellow horizontal bars suggest bared teeth at the bottom.\"\n  ],\n  \"reading\": \"Layered neon outlines trace and retrace a skull seen from the side, each color pass slightly offset so the form appears to vibrate against the black field. The crown reads less as decoration than as another restless loop, no more stable than the skull beneath it. A grinning unease comes through the bared-teeth bars and the mismatched, staring eye spirals, which refuse to settle into a single expression.\",\n  \"contextAngle\": \"As the highest title number and last recorded creation in the owned Scrimshaw subset, this work sits at the current boundary of the collection. Its title neighbor Scrimshaw 41 shares the skull-and-teeth motif but uses denser black hatching rather than bright separated color loops.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\",\n      \"reason\": \"Both show skull forms with spiral eyes and exposed teeth, but Scrimshaw 41 buries its structure under heavy black cross-hatching while this work isolates each color line against open black space.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe\",\n      \"reason\": \"Both pack a round head shape with competing neon colors and bared-teeth bars, though rawblocks #40 fills the background with pink and cyan blobs while Scrimshaw 42 keeps its black ground empty.\"\n    }\n  ],\n  \"tags\": [\"skull form\", \"crown shape\", \"spiral eyes\", \"neon line loops\", \"black ground\", \"bared teeth\"],\n  \"lookingQuestion\": \"Where the colored outlines overlap and diverge around the jaw, do they read as one skull shifting position or as several separate heads stacked together?\",\n  \"ambiguities\": [\n    \"Whether the profile faces strictly left or is a three-quarter view is unclear—the second eye and ear-like loop on the right could indicate a second facing direction.\",\n    \"Small colored marks inside the cranium area may be additional features or residual line crossings; their role is hard to resolve at this scale.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed crown has five pointed peaks in yellow at upper right; draft accurate.\",\n    \"Corrected rawblocks connection ID from draft typo 'QmYN7oaS82qnxyQV9aoFRAxPCqY3sMPgbvh3S431bveYe' to correct ID 'QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe' matching supplied metadata.\",\n    \"Reading trimmed from 68 to 63 words; context trimmed from 44 to 38 words; both within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmcUhaD4UCGtgwBptbT3BEWYRLheMfZLXsmuiQyU2QPr31/image.png",
+        "imageSHA256": "73593dbbab5258119a320ac8258ddd152853cf0cb20b715e48ba733b3a23dd58"
+      },
+      {
+        "artworkId": "QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk/image.png",
+        "imageSHA256": "88814ccc01eb4e144b28fbbb44df70cedbfca71069813b3b75e7b20b540ac696"
+      },
+      {
+        "artworkId": "Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qme84ovgnMc182BUG6hZRVf7UhHunksSmEZFF7YyW5JJQj/image.png",
+        "imageSHA256": "82e73822cebcb076fa5c2a5cd8296d9e27b0fa5983ab2200380dc5e9c6db33e3"
+      },
+      {
+        "artworkId": "QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe/image.png",
+        "imageSHA256": "4432232fae9ee81bd00fa0e245871284775ab1e78693658130f4560f53083d2f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large skull-like form fills the frame in profile, facing left, built from overlapping loops of pink, yellow, cyan, and red lines against a solid black ground.\", \"A jagged yellow crown shape sits at the upper right, resting on or near the top of the head, its five pointed peaks drawn in a single unbroken stroke.\", \"Two spiral-centered eye forms appear at different depths—one purple with a white spiral core, one cyan loop to the right—while yellow horizontal bars suggest bared teeth at the bottom.\"], \"reading\": \"Layered neon outlines trace and retrace a skull seen from the side, each color pass slightly offset so the form appears to vibrate against the black field. The crown reads less as decoration than as another restless loop, no more stable than the skull beneath it. A sense of grinning unease comes through the bared-teeth bars and the mismatched, staring eye spirals, which refuse to settle into a single expression.\", \"contextAngle\": \"As the highest title number and last recorded creation in the owned Scrimshaw subset, this work sits at the current boundary of the collection. Its title neighbor Scrimshaw 41 shares the skull-and-teeth motif but uses a denser, darker tangle of black hatching rather than bright separated color loops.\", \"connections\": [{\"targetArtworkId\": \"QmVQqNLQZHDJDYTHBe2ry8pdSSAo6zLM5wVFVovU7uzmyk\", \"reason\": \"Both show skull forms with spiral eyes and exposed teeth, but Scrimshaw 41 buries its structure under heavy black cross-hatching while this work isolates each color line against open black space.\"}, {\"targetArtworkId\": \"QmYN7oaS82qnxyQV9aoFRAxPCqY3sMPgbvh3S431bveYe\", \"reason\": \"Both pack a round head shape with competing neon colors and bared-teeth bars, though rawblocks #40 fills the background with pink and cyan blobs while Scrimshaw 42 keeps its black ground empty.\"}], \"tags\": [\"skull form\", \"crown shape\", \"spiral eyes\", \"neon line loops\", \"black ground\", \"bared teeth\"], \"lookingQuestion\": \"Where the colored outlines overlap and diverge around the jaw, do they read as one skull shifting position or as several separate heads stacked together?\", \"ambiguities\": [\"Whether the profile faces strictly left or is a three-quarter view is unclear—the second eye and ear-like loop on the right could indicate a second facing direction.\", \"Small colored marks inside the cranium area may be additional features or residual line crossings; their role is hard to resolve at this scale.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

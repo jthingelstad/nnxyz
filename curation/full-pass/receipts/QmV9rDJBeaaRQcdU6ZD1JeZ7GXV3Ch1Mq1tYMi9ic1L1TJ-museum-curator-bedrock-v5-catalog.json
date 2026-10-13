@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:27.065867-05:00",
+    "usage": {
+      "inputTokens": 6444,
+      "outputTokens": 794,
+      "totalTokens": 7238,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13225
+    },
+    "requestId": "fc099a38-7805-4b8d-abbb-403129f95049",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A skull-like head fills the frame against a near-black background; thick black outlines define the jaw, cranium, and hollow eye sockets, with white tooth forms visible at the open mouth.\",\n    \"Two broad horizontal bands—one yellow-green, one yellow—cut across the mid-face like beams, overlapping the skull structure and extending beyond both edges of the image.\",\n    \"Dense looping yellow lines cover the upper cranium, while red, blue, teal, and orange marks layer inside the skull interior, with a small spiral form near the right ear and drip-like orange strokes below the nose cavity.\"\n  ],\n  \"reading\": \"The skull form sits in near-darkness, its interior lit by layered color rather than light from outside. Two flat horizontal bands slice through the face, indifferent to the anatomy beneath them. The effect reads as exposure rather than illumination—something interior made visible and uncomfortable. Looping lines at the crown suggest pressure or noise; the open jaw and hollow sockets hold that tension without resolving it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #289 and nnxyz nnotb #291 share the skull-and-jaw structure and horizontal beam motif, suggesting these elements recur across this run of the collection. The dark background here is notably starker than the warm brown field in #291.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG\",\n      \"reason\": \"nnxyz nnotb #291 shares the skull outline, exposed teeth, horizontal beam crossing the face, and a small spiral near the ear—making it the closest formal echo in the owned subset, though its warm brown ground contrasts with the near-black here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz\",\n      \"reason\": \"nnxyz nnotb #289 uses a similar dense layering of colored lines over a face structure with exposed teeth, but its warm tan ground and upright figure silhouette produce a markedly different mood from the dark, skull-forward composition here.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"horizontal color bands\",\n    \"looping line clusters\",\n    \"dark ground\",\n    \"exposed teeth\",\n    \"layered interior marks\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"exposure\",\n    \"interior pressure\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the two horizontal bands intersect the skull's eye sockets, and what happens to the lines beneath them at that point?\",\n  \"ambiguities\": [\n    \"The horizontal bands read as flat color overlays but their relationship to the skull outline—whether beneath or above other mark layers—is not fully resolved from the image alone.\",\n    \"The nifty-faces #19 comparison image shows a very different formal approach (dense multicolor scribble on dark ground, frontal flat face); no strong specific connection to #290 was found, so it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ/image.png",
+        "imageSHA256": "0306e87bba6fc0bbbb2411f7ec95b04ada4349d53eb76c69760f2580850afe79"
+      },
+      {
+        "artworkId": "QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz/image.png",
+        "imageSHA256": "03cf8038a5a48924f67a1321aec3152fe59152a07f34f9d394b9492e8c2ad38d"
+      },
+      {
+        "artworkId": "QmRYB3y4njAr1YzhaZLUXrjs4kXANgCxGf2wLxhUQ9NGWi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRYB3y4njAr1YzhaZLUXrjs4kXANgCxGf2wLxhUQ9NGWi/image.png",
+        "imageSHA256": "d7f7c588432b1d9ca197c1132f13ecbc5fdcc97c43f944faf06a0977c728750f"
+      },
+      {
+        "artworkId": "QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG/image.png",
+        "imageSHA256": "884f4c0cd453e8a9bcb2adbd1294c70a5bef8eea8d5497f3dab11b8cddb6e053"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:00:34.653753-05:00",
+    "usage": {
+      "inputTokens": 7258,
+      "outputTokens": 989,
+      "totalTokens": 8247,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7531
+    },
+    "requestId": "cf1d2858-086e-45f1-a6ac-b3a7c2d9d159",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A skull-like head fills the frame against a near-black background; thick black outlines define the jaw, cranium, and hollow eye sockets, with white tooth forms visible at the open mouth.\",\n    \"Two broad horizontal bands—one yellow-green, one yellow—cut across the mid-face, overlapping the skull structure and extending beyond both edges of the image.\",\n    \"Dense looping yellow lines cover the upper cranium, while red, blue, teal, and orange marks layer inside the skull interior, with a small spiral form near the right ear and drip-like orange strokes below the nose cavity.\"\n  ],\n  \"reading\": \"The skull form sits in near-darkness, its interior filled by layered color rather than any light from outside. Two flat horizontal bands slice through the face, indifferent to the anatomy beneath them. The result reads as exposure rather than illumination—something interior made visible and unsettled. Looping lines at the crown add density; the open jaw and hollow sockets hold that tension without resolving it.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #289 and nnxyz nnotb #291 share the skull-and-jaw structure and a horizontal beam crossing the face. The near-black ground here is notably starker than the warm brown field in #291 or the tan ground in #289.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG\",\n      \"reason\": \"nnxyz nnotb #291 shares the skull outline, exposed teeth row, a horizontal beam crossing the face, and a small spiral near the ear, though its warm brown ground contrasts with the near-black here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz\",\n      \"reason\": \"nnxyz nnotb #289 layers dense colored lines over a face structure with exposed teeth, but its warm tan ground and upright figure silhouette differ markedly from the dark, skull-forward composition here.\"\n    }\n  ],\n  \"tags\": [\n    \"skull form\",\n    \"horizontal color bands\",\n    \"looping line clusters\",\n    \"dark ground\",\n    \"exposed teeth\",\n    \"layered interior marks\"\n  ],\n  \"interpretiveTags\": [\n    \"tension\",\n    \"exposure\",\n    \"interior pressure\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the two horizontal bands cross the eye socket area, and what happens to the lines and outlines beneath them at that point?\",\n  \"ambiguities\": [\n    \"The horizontal bands appear to sit above some mark layers and below others; their exact stacking order relative to the skull outline is not fully resolved from the image alone.\",\n    \"nnxyz nifty faces #19 shows a dense multicolor scribble on a dark ground but no specific formal element matches #290 closely enough to warrant a connection; it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: skull outline, two horizontal bands crossing mid-face, looping yellow lines at cranium, spiral near right ear, and orange drip marks below nose cavity are all visible.\",\n    \"Comparison with QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG confirmed: skull outline, teeth row, horizontal beam, and small spiral near ear are present in #291; warm brown ground contrast is accurate.\",\n    \"Comparison with QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz confirmed: tan ground, upright figure with colored line layering and exposed teeth visible in #289; no invented claims found in draft; reading word count checked within 45–80 limit.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV9rDJBeaaRQcdU6ZD1JeZ7GXV3Ch1Mq1tYMi9ic1L1TJ/image.png",
+        "imageSHA256": "0306e87bba6fc0bbbb2411f7ec95b04ada4349d53eb76c69760f2580850afe79"
+      },
+      {
+        "artworkId": "QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz/image.png",
+        "imageSHA256": "03cf8038a5a48924f67a1321aec3152fe59152a07f34f9d394b9492e8c2ad38d"
+      },
+      {
+        "artworkId": "QmRYB3y4njAr1YzhaZLUXrjs4kXANgCxGf2wLxhUQ9NGWi",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRYB3y4njAr1YzhaZLUXrjs4kXANgCxGf2wLxhUQ9NGWi/image.png",
+        "imageSHA256": "d7f7c588432b1d9ca197c1132f13ecbc5fdcc97c43f944faf06a0977c728750f"
+      },
+      {
+        "artworkId": "QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG/image.png",
+        "imageSHA256": "884f4c0cd453e8a9bcb2adbd1294c70a5bef8eea8d5497f3dab11b8cddb6e053"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A skull-like head fills the frame against a near-black background; thick black outlines define the jaw, cranium, and hollow eye sockets, with white tooth forms visible at the open mouth.\", \"Two broad horizontal bands—one yellow-green, one yellow—cut across the mid-face like beams, overlapping the skull structure and extending beyond both edges of the image.\", \"Dense looping yellow lines cover the upper cranium, while red, blue, teal, and orange marks layer inside the skull interior, with a small spiral form near the right ear and drip-like orange strokes below the nose cavity.\"], \"reading\": \"The skull form sits in near-darkness, its interior lit by layered color rather than light from outside. Two flat horizontal bands slice through the face, indifferent to the anatomy beneath them. The effect reads as exposure rather than illumination—something interior made visible and uncomfortable. Looping lines at the crown suggest pressure or noise; the open jaw and hollow sockets hold that tension without resolving it.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #289 and nnxyz nnotb #291 share the skull-and-jaw structure and horizontal beam motif, suggesting these elements recur across this run of the collection. The dark background here is notably starker than the warm brown field in #291.\", \"connections\": [{\"targetArtworkId\": \"QmRSiNYnYNqR7dJiFdvVtLgPjgRg2CfFipwLmDAXXCC9bG\", \"reason\": \"nnxyz nnotb #291 shares the skull outline, exposed teeth, horizontal beam crossing the face, and a small spiral near the ear—making it the closest formal echo in the owned subset, though its warm brown ground contrasts with the near-black here.\"}, {\"targetArtworkId\": \"QmWcGB5WP5MJU6raX47tYEbWbs7DN3e9QzfWsgk3oDJgoz\", \"reason\": \"nnxyz nnotb #289 uses a similar dense layering of colored lines over a face structure with exposed teeth, but its warm tan ground and upright figure silhouette produce a markedly different mood from the dark, skull-forward composition here.\"}], \"tags\": [\"skull form\", \"horizontal color bands\", \"looping line clusters\", \"dark ground\", \"exposed teeth\", \"layered interior marks\"], \"interpretiveTags\": [\"tension\", \"exposure\", \"interior pressure\"], \"lookingQuestion\": \"Where exactly do the two horizontal bands intersect the skull's eye sockets, and what happens to the lines beneath them at that point?\", \"ambiguities\": [\"The horizontal bands read as flat color overlays but their relationship to the skull outline—whether beneath or above other mark layers—is not fully resolved from the image alone.\", \"The nifty-faces #19 comparison image shows a very different formal approach (dense multicolor scribble on dark ground, frontal flat face); no strong specific connection to #290 was found, so it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

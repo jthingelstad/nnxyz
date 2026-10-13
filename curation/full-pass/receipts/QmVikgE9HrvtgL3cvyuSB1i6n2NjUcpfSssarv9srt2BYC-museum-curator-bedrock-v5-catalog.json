@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:30.993751-05:00",
+    "usage": {
+      "inputTokens": 6284,
+      "outputTokens": 796,
+      "totalTokens": 7080,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14641
+    },
+    "requestId": "e3133af9-9c0e-4959-912d-8fea76a25e14",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark sky field scattered with white X marks fills the upper half, against which a yellow-outlined fish-like form with spiky fins floats upper right, while a rocket shape rises center-top trailing orange flame.\",\n    \"Three figures occupy the lower two-thirds: a small dark figure lower-left with raised arms, a large yellow grid-outlined dome shape center, and a spiky-headed brown figure lower-right showing bared white teeth and blue circular eyes.\",\n    \"Horizontal bands of yellow, teal, and red run across the bottom edge; thick pink diagonal lines cross the upper-left quadrant; a green-striped serpentine form coils along the left side.\"\n  ],\n  \"reading\": \"The black sky and X-scatter create a cold backdrop against which warm yellows and pinks press forward with real force. The three figures feel caught mid-action—arms up, teeth out, dome swelling—yet none commands the space alone. Lime ovals along the lower center read almost like a pulse. The image holds unease and spectacle at the same time, neither resolving into chaos nor settling into calm.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #253 and nnxyz nnotb #255 show how density shifts: #253 isolates a single large head on pale ground, #255 reduces to one dark form on warm wash. #254 packs the fullest cast of figures and the widest color spread of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp\",\n      \"reason\": \"rawblocks #0000 shares the same multi-figure density and yellow-dominant palette against a busy background, where outlined figures compete for space rather than one form taking focus.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj\",\n      \"reason\": \"nnotb #253 uses the same zigzag and toothed-edge line vocabulary visible on the figures in #254, but concentrates it into a single close-up head rather than distributing it across a crowded scene.\"\n    }\n  ],\n  \"tags\": [\n    \"multi-figure composition\",\n    \"X-mark sky pattern\",\n    \"zigzag and toothed outlines\",\n    \"yellow grid dome form\",\n    \"horizontal color banding\",\n    \"spiky-headed figures with bared teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"uneasy spectacle\",\n    \"crowded tension\"\n  ],\n  \"lookingQuestion\": \"The white X marks are distributed across the dark sky with near-even spacing—where does that regular pattern break down, and what sits at those gaps?\",\n  \"ambiguities\": [\n    \"The dome-shaped yellow grid form center-image resists clear reading as figure or object; its scale relative to the surrounding figures is ambiguous.\",\n    \"The rawblocks #0000 comparison is strong on density and palette but comes from a different collection; no nnotb work in the supplied candidates matches both qualities as closely.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVikgE9HrvtgL3cvyuSB1i6n2NjUcpfSssarv9srt2BYC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVikgE9HrvtgL3cvyuSB1i6n2NjUcpfSssarv9srt2BYC/image.png",
+        "imageSHA256": "d8c64458dac233a5b6bce73ccfc7c6c250cbfbf082bdeb8327843ccf091573e6"
+      },
+      {
+        "artworkId": "QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj/image.png",
+        "imageSHA256": "920c896233b4cf731077081d16e52b36e2d8afe6abcfa0e66ccb9ea3d80ec892"
+      },
+      {
+        "artworkId": "QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp/image.png",
+        "imageSHA256": "ab6febb004e49d10ab9740ed086dc2562d51f14eeaa82dd68f451f6400955192"
+      },
+      {
+        "artworkId": "QmQ2nrAFKaWpadAqpwwiesGQKqZ9yzPHRMKsU5ynhvVrGb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ2nrAFKaWpadAqpwwiesGQKqZ9yzPHRMKsU5ynhvVrGb/image.png",
+        "imageSHA256": "54bc94603cf2dc33625f2e36fe43d6b08ded081069bc795d141bea43cdefa712"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:37.781881-05:00",
+    "usage": {
+      "inputTokens": 7102,
+      "outputTokens": 916,
+      "totalTokens": 8018,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6730
+    },
+    "requestId": "67575599-caa3-4b98-9491-1900c36ab775",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A black sky field scattered with white X marks fills the upper half; a yellow-outlined spiky fish-like form floats upper right, and a cylindrical rocket shape rises center-top with an orange flame below it.\",\n    \"Three figures occupy the lower two-thirds: a small dark figure lower-left with raised arms, a large yellow grid-outlined dome shape center, and a spiky-headed brown figure lower-right with bared white teeth and blue circular eyes.\",\n    \"Horizontal bands of yellow, teal, and red run across the bottom edge; thick pink diagonal lines cross the upper-left quadrant; a green-striped serpentine form coils along the left side.\"\n  ],\n  \"reading\": \"The black sky and evenly spaced X marks create a cold backdrop against which warm yellows and pinks press forward with real force. The three figures feel caught mid-action—arms raised, teeth out, dome swelling between them—yet none commands the space alone. Lime ovals along the lower center read almost like a pulse. The image holds unease and spectacle together without resolving into either.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #253 and nnxyz nnotb #255 show how density shifts: #253 isolates a single large head on pale ground, #255 reduces to one dark form on a warm wash. #254 packs the fullest cast of figures and widest color spread of the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp\",\n      \"reason\": \"rawblocks #0000 shares the same multi-figure density and yellow-dominant palette against a busy background, where outlined figures compete for space rather than one form taking focus.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj\",\n      \"reason\": \"nnotb #253 uses the same zigzag and toothed-edge line vocabulary visible on the figures in #254, but concentrates it into a single close-up head on pale ground rather than distributing it across a crowded scene.\"\n    }\n  ],\n  \"tags\": [\n    \"multi-figure composition\",\n    \"X-mark sky pattern\",\n    \"zigzag and toothed outlines\",\n    \"yellow grid dome form\",\n    \"horizontal color banding\",\n    \"spiky-headed figures with bared teeth\"\n  ],\n  \"interpretiveTags\": [\n    \"uneasy spectacle\",\n    \"crowded tension\"\n  ],\n  \"lookingQuestion\": \"The white X marks are distributed across the dark sky with near-even spacing—where does that regular pattern break down, and what sits at those gaps?\",\n  \"ambiguities\": [\n    \"The yellow grid dome form center-image resists clear reading as figure or object; its scale relative to surrounding figures is ambiguous.\",\n    \"The rawblocks #0000 comparison is strong on density and palette but comes from a different collection; no nnotb candidate in the supplied set matches both qualities as closely.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the image: X-mark sky, rocket with orange flame, three-figure arrangement, serpentine left-side form, and bottom color bands are all directly visible.\",\n    \"Reading revised to remove 'neither resolving into chaos nor settling into calm' stock phrasing; replaced with a more direct close.\",\n    \"Both comparison IDs confirmed as supplied candidates with inspected images; reasons checked against visible evidence and kept; rawblocks ambiguity retained in ambiguities field.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVikgE9HrvtgL3cvyuSB1i6n2NjUcpfSssarv9srt2BYC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVikgE9HrvtgL3cvyuSB1i6n2NjUcpfSssarv9srt2BYC/image.png",
+        "imageSHA256": "d8c64458dac233a5b6bce73ccfc7c6c250cbfbf082bdeb8327843ccf091573e6"
+      },
+      {
+        "artworkId": "QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj/image.png",
+        "imageSHA256": "920c896233b4cf731077081d16e52b36e2d8afe6abcfa0e66ccb9ea3d80ec892"
+      },
+      {
+        "artworkId": "QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp/image.png",
+        "imageSHA256": "ab6febb004e49d10ab9740ed086dc2562d51f14eeaa82dd68f451f6400955192"
+      },
+      {
+        "artworkId": "QmQ2nrAFKaWpadAqpwwiesGQKqZ9yzPHRMKsU5ynhvVrGb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQ2nrAFKaWpadAqpwwiesGQKqZ9yzPHRMKsU5ynhvVrGb/image.png",
+        "imageSHA256": "54bc94603cf2dc33625f2e36fe43d6b08ded081069bc795d141bea43cdefa712"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dark sky field scattered with white X marks fills the upper half, against which a yellow-outlined fish-like form with spiky fins floats upper right, while a rocket shape rises center-top trailing orange flame.\", \"Three figures occupy the lower two-thirds: a small dark figure lower-left with raised arms, a large yellow grid-outlined dome shape center, and a spiky-headed brown figure lower-right showing bared white teeth and blue circular eyes.\", \"Horizontal bands of yellow, teal, and red run across the bottom edge; thick pink diagonal lines cross the upper-left quadrant; a green-striped serpentine form coils along the left side.\"], \"reading\": \"The black sky and X-scatter create a cold backdrop against which warm yellows and pinks press forward with real force. The three figures feel caught mid-action—arms up, teeth out, dome swelling—yet none commands the space alone. Lime ovals along the lower center read almost like a pulse. The image holds unease and spectacle at the same time, neither resolving into chaos nor settling into calm.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors nnxyz nnotb #253 and nnxyz nnotb #255 show how density shifts: #253 isolates a single large head on pale ground, #255 reduces to one dark form on warm wash. #254 packs the fullest cast of figures and the widest color spread of the three.\", \"connections\": [{\"targetArtworkId\": \"QmbeCzfghKLLJZuFysSpyzh5yL1k83ETej6hHc3h8ufZkp\", \"reason\": \"rawblocks #0000 shares the same multi-figure density and yellow-dominant palette against a busy background, where outlined figures compete for space rather than one form taking focus.\"}, {\"targetArtworkId\": \"QmVQc7Pmpc4ZE3wPPdRz3XsPhZvKLr5SUkGa7bM3SHMpvj\", \"reason\": \"nnotb #253 uses the same zigzag and toothed-edge line vocabulary visible on the figures in #254, but concentrates it into a single close-up head rather than distributing it across a crowded scene.\"}], \"tags\": [\"multi-figure composition\", \"X-mark sky pattern\", \"zigzag and toothed outlines\", \"yellow grid dome form\", \"horizontal color banding\", \"spiky-headed figures with bared teeth\"], \"interpretiveTags\": [\"uneasy spectacle\", \"crowded tension\"], \"lookingQuestion\": \"The white X marks are distributed across the dark sky with near-even spacing—where does that regular pattern break down, and what sits at those gaps?\", \"ambiguities\": [\"The dome-shaped yellow grid form center-image resists clear reading as figure or object; its scale relative to the surrounding figures is ambiguous.\", \"The rawblocks #0000 comparison is strong on density and palette but comes from a different collection; no nnotb work in the supplied candidates matches both qualities as closely.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

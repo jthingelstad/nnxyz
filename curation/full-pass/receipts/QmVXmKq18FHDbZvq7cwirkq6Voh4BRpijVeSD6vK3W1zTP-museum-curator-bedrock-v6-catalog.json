@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:23.005215-05:00",
+    "usage": {
+      "inputTokens": 5867,
+      "outputTokens": 682,
+      "totalTokens": 6549,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 19138
+    },
+    "requestId": "0481759a-fc2d-4245-a5f0-09158501d4f6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large open mouth with blocky white teeth sits right of center, framed by dark red lips and a black outline against warm orange and purple fills.\",\n    \"Dark sunglasses span the top of the composition, tilted at an angle, with thick black frames cutting across radiating yellow-orange fan shapes in the background.\",\n    \"Loose yellow outlines trace a head and neck shape over layered patches of purple, pink, blue, and olive, with small bright accents of cyan and green scattered inside.\"\n  ],\n  \"reading\": \"The composition reads as a close-up shout — the wide-open mouth and its rigid white teeth dominate the right side, while the sunglasses seal off the upper face. Warm orange rays fan outward behind the head, pressing the figure forward. The loose yellow outlines feel unfinished against the saturated color blocks beneath them, giving the image a sense of something still forming mid-yell.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #5\\\" and \\\"nnxyz rawblocks #7.\\\" Where #5 packs dense layered detail into a dark ground, #6 strips back to fewer elements on a hot orange field, making the mouth the single focal anchor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA\",\n      \"reason\": \"Both feature prominent teeth and sunglasses, but #5 buries them in dense overlapping lines on a dark ground, while #6 isolates them against open warm color.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ\",\n      \"reason\": \"\\\"pizza pizza day\\\" shares the blocky red glasses motif and exposed teeth, but places its figure off-center under radiating yellow lines rather than filling the frame.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"sunglasses\",\n    \"warm orange field\",\n    \"loose outline over color blocks\",\n    \"close-up face\"\n  ],\n  \"lookingQuestion\": \"How do the radiating fan shapes in the background interact with the yellow outlines on the face — do they seem to belong to the same space, or does one layer sit in front of the other?\",\n  \"ambiguities\": [\n    \"The yellow outlines may describe a jawline and neck or may be independent marks layered over the color fills; the boundary is unclear.\",\n    \"Small cyan and green patches inside the face area could be features or stray color — their role is hard to pin down at this scale.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP/image.png",
+        "imageSHA256": "9e2b753a7ecf7a331382a530032e9b621bcdf47f18fe1e2595dbf4954661118d"
+      },
+      {
+        "artworkId": "QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA/image.png",
+        "imageSHA256": "27994cde95f0a8f0a08e9479f8b9452fb0d25a533e99c857aec67b74a43aaa36"
+      },
+      {
+        "artworkId": "QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ/image.png",
+        "imageSHA256": "bb097acc0e4aab16ce2ed584bb3e83df2c94785f7e38e90e57e4c6864724c08d"
+      },
+      {
+        "artworkId": "QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o/image.png",
+        "imageSHA256": "3b91ffcd894da9628b3310d34c6843d0f1b92bd9dac28d72acfab3b069513155"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:34.078463-05:00",
+    "usage": {
+      "inputTokens": 6583,
+      "outputTokens": 811,
+      "totalTokens": 7394,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11007
+    },
+    "requestId": "6bf78e7d-cdab-454e-b65d-7156705a03f0",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A wide-open mouth with blocky white teeth sits right of center, framed by dark red lips and a black outline against warm orange and purple fills.\",\n    \"Dark sunglasses span the upper portion of the composition, tilted at an angle, with thick black frames cutting across radiating yellow-orange fan shapes in the background.\",\n    \"Loose yellow outlines trace a head and neck shape over layered patches of purple, pink, blue, and olive, with small bright accents of cyan and green scattered inside.\"\n  ],\n  \"reading\": \"The composition reads as a close-up shout — the wide-open mouth and its rigid white teeth dominate the right side, while the sunglasses seal off the upper face. Warm orange rays fan outward behind the head, pressing the figure forward. The loose yellow outlines feel unfinished against the saturated color blocks beneath them, giving the image a sense of something still forming mid-yell.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #5\\\" and \\\"nnxyz rawblocks #7.\\\" Where #5 packs dense layered detail into a dark ground, #6 strips back to fewer elements on a hot orange field, making the mouth the single focal anchor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA\",\n      \"reason\": \"Both feature prominent teeth and sunglasses, but #5 buries them in dense overlapping lines on a dark ground, while #6 isolates them against open warm color.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ\",\n      \"reason\": \"\\\"pizza pizza day\\\" shares blocky red glasses and exposed teeth, but places its figure off-center under radiating yellow lines rather than filling the frame.\"\n    }\n  ],\n  \"tags\": [\n    \"open mouth\",\n    \"sunglasses\",\n    \"warm orange field\",\n    \"loose outline over color blocks\",\n    \"close-up face\"\n  ],\n  \"lookingQuestion\": \"How do the radiating fan shapes in the background interact with the yellow outlines on the face — do they seem to belong to the same space, or does one layer sit in front of the other?\",\n  \"ambiguities\": [\n    \"The yellow outlines may describe a jawline and neck or may be independent marks layered over the color fills; the boundary is unclear.\",\n    \"Small cyan and green patches inside the face area could be features or stray color — their role is hard to pin down at this scale.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: sunglasses are dark with thick black frames at the top; teeth are blocky white rectangles in a dark-red-lipped mouth right of center — all match the image.\",\n    \"Confirmed: #5 comparison image shows dense overlapping lines on a dark green ground with teeth and eye forms, contrasting with #6's open warm field — comparison is accurate.\",\n    \"Confirmed: \\\"pizza pizza day\\\" shows red blocky glasses and visible teeth on an off-center figure with yellow radiating lines — comparison holds.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP/image.png",
+        "imageSHA256": "9e2b753a7ecf7a331382a530032e9b621bcdf47f18fe1e2595dbf4954661118d"
+      },
+      {
+        "artworkId": "QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA/image.png",
+        "imageSHA256": "27994cde95f0a8f0a08e9479f8b9452fb0d25a533e99c857aec67b74a43aaa36"
+      },
+      {
+        "artworkId": "QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ/image.png",
+        "imageSHA256": "bb097acc0e4aab16ce2ed584bb3e83df2c94785f7e38e90e57e4c6864724c08d"
+      },
+      {
+        "artworkId": "QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o/image.png",
+        "imageSHA256": "3b91ffcd894da9628b3310d34c6843d0f1b92bd9dac28d72acfab3b069513155"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large open mouth with blocky white teeth sits right of center, framed by dark red lips and a black outline against warm orange and purple fills.\", \"Dark sunglasses span the top of the composition, tilted at an angle, with thick black frames cutting across radiating yellow-orange fan shapes in the background.\", \"Loose yellow outlines trace a head and neck shape over layered patches of purple, pink, blue, and olive, with small bright accents of cyan and green scattered inside.\"], \"reading\": \"The composition reads as a close-up shout — the wide-open mouth and its rigid white teeth dominate the right side, while the sunglasses seal off the upper face. Warm orange rays fan outward behind the head, pressing the figure forward. The loose yellow outlines feel unfinished against the saturated color blocks beneath them, giving the image a sense of something still forming mid-yell.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #5\\\" and \\\"nnxyz rawblocks #7.\\\" Where #5 packs dense layered detail into a dark ground, #6 strips back to fewer elements on a hot orange field, making the mouth the single focal anchor.\", \"connections\": [{\"targetArtworkId\": \"QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA\", \"reason\": \"Both feature prominent teeth and sunglasses, but #5 buries them in dense overlapping lines on a dark ground, while #6 isolates them against open warm color.\"}, {\"targetArtworkId\": \"QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ\", \"reason\": \"\\\"pizza pizza day\\\" shares the blocky red glasses motif and exposed teeth, but places its figure off-center under radiating yellow lines rather than filling the frame.\"}], \"tags\": [\"open mouth\", \"sunglasses\", \"warm orange field\", \"loose outline over color blocks\", \"close-up face\"], \"lookingQuestion\": \"How do the radiating fan shapes in the background interact with the yellow outlines on the face — do they seem to belong to the same space, or does one layer sit in front of the other?\", \"ambiguities\": [\"The yellow outlines may describe a jawline and neck or may be independent marks layered over the color fills; the boundary is unclear.\", \"Small cyan and green patches inside the face area could be features or stray color — their role is hard to pin down at this scale.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:16:13.980418-05:00",
+    "usage": {
+      "inputTokens": 6403,
+      "outputTokens": 795,
+      "totalTokens": 7198,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10237
+    },
+    "requestId": "c0987bfe-8c26-402d-95f9-3f52a295364d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A mouth shape sits right of center, showing two rows of blocky white teeth inside a dark red and black outline, with the lips parted enough to expose the full grid of teeth but no large dark cavity visible behind them.\",\n    \"Dark sunglasses span the upper portion of the composition, tilted at an angle, with thick black frames cutting across radiating yellow-orange fan shapes in the background.\",\n    \"Loose yellow outlines trace a head and neck shape over layered patches of purple, pink, blue, and olive, with small bright accents of cyan and green scattered inside.\"\n  ],\n  \"reading\": \"The composition reads as a close-up shout — the bared teeth and their rigid white grid dominate the right side, while the sunglasses seal off the upper face. Warm orange rays fan outward behind the head, pressing the figure forward. The loose yellow outlines feel unfinished against the saturated color blocks beneath them, giving the image a sense of something still forming mid-expression.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between #5 and #7. Where #5 packs dense layered detail into a dark ground, #6 strips back to fewer elements on a hot orange field, making the teeth the single focal anchor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA\",\n      \"reason\": \"Both feature prominent teeth and sunglasses, but #5 buries them in dense overlapping lines on a dark ground, while #6 isolates them against open warm color.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ\",\n      \"reason\": \"\\\"pizza pizza day\\\" shares blocky red glasses and exposed teeth, but places its figure off-center under radiating yellow lines rather than filling the frame.\"\n    }\n  ],\n  \"tags\": [\"bared teeth\", \"sunglasses\", \"warm orange field\", \"loose outline over color blocks\", \"close-up face\"],\n  \"lookingQuestion\": \"How do the radiating fan shapes in the background interact with the yellow outlines on the face — do they seem to belong to the same space, or does one layer sit in front of the other?\",\n  \"ambiguities\": [\n    \"The yellow outlines may describe a jawline and neck or may be independent marks layered over the color fills; the boundary is unclear.\",\n    \"Small cyan and green patches inside the face area could be features or stray color — their role is hard to pin down at this scale.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced 'wide-open mouth' with 'bared teeth' and 'lips parted enough to expose the full grid of teeth' — the mouth shows teeth clearly but no large dark opening behind them, so 'wide-open' overstated the visible gap.\",\n    \"Updated reading to use 'bared teeth' instead of 'wide-open mouth,' preserving the expressive shout reading as interpretation.\",\n    \"Replaced 'open mouth' tag with 'bared teeth' to match the visible evidence more precisely.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP/image.png",
+        "imageSHA256": "9e2b753a7ecf7a331382a530032e9b621bcdf47f18fe1e2595dbf4954661118d"
+      },
+      {
+        "artworkId": "QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA/image.png",
+        "imageSHA256": "27994cde95f0a8f0a08e9479f8b9452fb0d25a533e99c857aec67b74a43aaa36"
+      },
+      {
+        "artworkId": "QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ/image.png",
+        "imageSHA256": "bb097acc0e4aab16ce2ed584bb3e83df2c94785f7e38e90e57e4c6864724c08d"
+      },
+      {
+        "artworkId": "QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o/image.png",
+        "imageSHA256": "3b91ffcd894da9628b3310d34c6843d0f1b92bd9dac28d72acfab3b069513155"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not claim global visual maxima or complexity rankings from these candidate images;\nreplace unscoped superlatives with specific visible contrasts between inspected works.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A wide-open mouth with blocky white teeth sits right of center, framed by dark red lips and a black outline against warm orange and purple fills.\", \"Dark sunglasses span the upper portion of the composition, tilted at an angle, with thick black frames cutting across radiating yellow-orange fan shapes in the background.\", \"Loose yellow outlines trace a head and neck shape over layered patches of purple, pink, blue, and olive, with small bright accents of cyan and green scattered inside.\"], \"reading\": \"The composition reads as a close-up shout — the wide-open mouth and its rigid white teeth dominate the right side, while the sunglasses seal off the upper face. Warm orange rays fan outward behind the head, pressing the figure forward. The loose yellow outlines feel unfinished against the saturated color blocks beneath them, giving the image a sense of something still forming mid-yell.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #5\\\" and \\\"nnxyz rawblocks #7.\\\" Where #5 packs dense layered detail into a dark ground, #6 strips back to fewer elements on a hot orange field, making the mouth the single focal anchor.\", \"connections\": [{\"targetArtworkId\": \"QmRrwcGdwhtEY8fQzRfi3d8tFpzrGpwaere6UQgZnNj5cA\", \"reason\": \"Both feature prominent teeth and sunglasses, but #5 buries them in dense overlapping lines on a dark ground, while #6 isolates them against open warm color.\"}, {\"targetArtworkId\": \"QmYfov5XHc74taEnbzjNi29FFTAMUv5f9yAQBCWWYG5tCQ\", \"reason\": \"\\\"pizza pizza day\\\" shares blocky red glasses and exposed teeth, but places its figure off-center under radiating yellow lines rather than filling the frame.\"}], \"tags\": [\"open mouth\", \"sunglasses\", \"warm orange field\", \"loose outline over color blocks\", \"close-up face\"], \"lookingQuestion\": \"How do the radiating fan shapes in the background interact with the yellow outlines on the face — do they seem to belong to the same space, or does one layer sit in front of the other?\", \"ambiguities\": [\"The yellow outlines may describe a jawline and neck or may be independent marks layered over the color fills; the boundary is unclear.\", \"Small cyan and green patches inside the face area could be features or stray color — their role is hard to pin down at this scale.\"]}\nFLAGS:\n[{\"artworkId\": \"QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP\", \"field\": \"reading\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

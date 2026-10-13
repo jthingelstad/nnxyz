@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:47.736124-05:00",
+    "usage": {
+      "inputTokens": 6133,
+      "outputTokens": 707,
+      "totalTokens": 6840,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12887
+    },
+    "requestId": "01cd1030-541a-44a0-b07d-cf5c9fdba4b0",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark silhouetted torso-and-skirt form sweeps from center to lower left, layered in deep brown, amber, and yellow-green arcs that widen toward the bottom edge.\",\n    \"On the right, a mass of tangled orange-red lines forms a ragged vertical shape; pink looping lines mark the upper torso area, and a thin dark arm extends upper left.\",\n    \"Scattered dots in white, pink, cyan, and yellow-green cover the olive-green background and fall across the skirt, varying in size and density.\"\n  ],\n  \"reading\": \"A sweeping dark form dominates the lower half, its layered amber and brown arcs suggesting weight and motion. The right side erupts in dense, frayed orange-red lines that read as raw energy against the cooler olive field. Pink loops at the torso and a scattering of bright dots across the whole surface pull the eye between stillness and agitation, making the image feel suspended between celebration and unease.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #47 and nnxyz nnotb #49. Where #47 builds form from dense multicolor scribble lines on a dark ground and #49 uses flat black silhouette on teal, #48 layers translucent color arcs with scattered dots—a distinct approach among the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk\",\n      \"reason\": \"Both images share an olive-yellow-green ground with scattered circular dot patterns and use dense, looping pink-red lines to texture a central dark form, creating a similar push-pull between flat color and agitated mark-making.\"\n    }\n  ],\n  \"tags\": [\n    \"scattered dot field\",\n    \"layered arc forms\",\n    \"dark silhouette\",\n    \"frayed line mass\",\n    \"olive-green ground\",\n    \"looping pink lines\"\n  ],\n  \"interpretiveTags\": [\n    \"suspended motion\",\n    \"celebration and unease\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the scattered dots stop following the background and begin overlapping the dark skirt form—and does that boundary shift your sense of which layer sits in front?\",\n  \"ambiguities\": [\n    \"The ragged orange-red vertical shape on the right could be read as hair, fabric, or an abstract mark cluster; no external evidence resolves this.\",\n    \"The candidate comparison QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a (#47) shares a title-neighbor relationship but its dark-ground scribble structure differs enough from #48 that no strong formal connection is offered.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRhk2fy4ZKjzqokPxTqUGEJzWxD8cV6eQS6ZS6aBx6jEv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRhk2fy4ZKjzqokPxTqUGEJzWxD8cV6eQS6ZS6aBx6jEv/image.png",
+        "imageSHA256": "9fe2e3a38f9fa3c97b85894246c4d5a234dab1b14bf43de9a9717e9c90ae91fb"
+      },
+      {
+        "artworkId": "QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a/image.png",
+        "imageSHA256": "40530a2a28e6cb948685ca956a5efc46d97df0975d3f0dc5735754505756f594"
+      },
+      {
+        "artworkId": "QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk/image.png",
+        "imageSHA256": "ede0a62fe791701cd934d701c92bcfb9711020ec4a9532fcb026f7086c91ae1a"
+      },
+      {
+        "artworkId": "QmZvaCoT8uMiU9fKeGvYwGEWsTptXxgYepAG4TiYiaTapL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZvaCoT8uMiU9fKeGvYwGEWsTptXxgYepAG4TiYiaTapL/image.png",
+        "imageSHA256": "551ccaebd200164ae8a5c424f8f306e7d04f3a8868c9c87167abc0103a7d902f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:53.998464-05:00",
+    "usage": {
+      "inputTokens": 6871,
+      "outputTokens": 862,
+      "totalTokens": 7733,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6172
+    },
+    "requestId": "1d3b843a-857d-4e20-a106-3b3c307d2db9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark silhouetted torso-and-skirt form sweeps from center to lower left, layered in deep brown, amber, and yellow-green arcs that widen toward the bottom edge.\",\n    \"On the right, a mass of tangled orange-red lines forms a ragged vertical shape; pink looping lines mark the upper torso area, and a thin dark arm extends upper left.\",\n    \"Scattered dots in white, pink, cyan, and yellow-green cover the olive-green background and fall across the skirt, varying in size and density.\"\n  ],\n  \"reading\": \"A sweeping dark form dominates the lower half, its layered amber and brown arcs suggesting weight and outward movement. The right side erupts in dense, frayed orange-red lines against the cooler olive field. Pink loops at the torso and a scattering of bright dots across the whole surface pull the eye between stillness and agitation, leaving the image suspended between two moods.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #47 and nnxyz nnotb #49. Where #47 builds form from dense multicolor scribble lines on a dark ground and #49 uses flat black silhouette on teal, #48 layers translucent color arcs with scattered dots—a distinct approach among the three.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk\",\n      \"reason\": \"Both images share an olive-yellow-green ground with scattered circular dot or bokeh patterns and use dense, looping pink-red lines to texture a central dark form against that field.\"\n    }\n  ],\n  \"tags\": [\n    \"scattered dot field\",\n    \"layered arc forms\",\n    \"dark silhouette\",\n    \"frayed line mass\",\n    \"olive-green ground\",\n    \"looping pink lines\"\n  ],\n  \"interpretiveTags\": [\n    \"suspended motion\",\n    \"contrasting stillness and agitation\"\n  ],\n  \"lookingQuestion\": \"Where exactly do the scattered dots stop following the background and begin overlapping the dark skirt form—and does that boundary shift your sense of which layer sits in front?\",\n  \"ambiguities\": [\n    \"The ragged orange-red vertical shape on the right could be read as hair, fabric, or an abstract mark cluster; no external evidence resolves this.\",\n    \"The candidate QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a (#47) shares a title-neighbor relationship but its dark-ground multicolor scribble structure differs enough from #48 that no strong formal connection is offered.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: rawblocks #18 (QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk) visibly shares olive-yellow-green dot/bokeh ground and pink-red looping line texture on a dark central form—comparison retained as supported.\",\n    \"Removed 'celebration' from reading prose as an unsupported subject identification; replaced with neutral 'two moods' phrasing.\",\n    \"Word counts verified: reading 63 words, contextAngle 52 words, both within limits; all candidate IDs match supplied artwork IDs.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRhk2fy4ZKjzqokPxTqUGEJzWxD8cV6eQS6ZS6aBx6jEv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRhk2fy4ZKjzqokPxTqUGEJzWxD8cV6eQS6ZS6aBx6jEv/image.png",
+        "imageSHA256": "9fe2e3a38f9fa3c97b85894246c4d5a234dab1b14bf43de9a9717e9c90ae91fb"
+      },
+      {
+        "artworkId": "QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a/image.png",
+        "imageSHA256": "40530a2a28e6cb948685ca956a5efc46d97df0975d3f0dc5735754505756f594"
+      },
+      {
+        "artworkId": "QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk/image.png",
+        "imageSHA256": "ede0a62fe791701cd934d701c92bcfb9711020ec4a9532fcb026f7086c91ae1a"
+      },
+      {
+        "artworkId": "QmZvaCoT8uMiU9fKeGvYwGEWsTptXxgYepAG4TiYiaTapL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZvaCoT8uMiU9fKeGvYwGEWsTptXxgYepAG4TiYiaTapL/image.png",
+        "imageSHA256": "551ccaebd200164ae8a5c424f8f306e7d04f3a8868c9c87167abc0103a7d902f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dark silhouetted torso-and-skirt form sweeps from center to lower left, layered in deep brown, amber, and yellow-green arcs that widen toward the bottom edge.\", \"On the right, a mass of tangled orange-red lines forms a ragged vertical shape; pink looping lines mark the upper torso area, and a thin dark arm extends upper left.\", \"Scattered dots in white, pink, cyan, and yellow-green cover the olive-green background and fall across the skirt, varying in size and density.\"], \"reading\": \"A sweeping dark form dominates the lower half, its layered amber and brown arcs suggesting weight and motion. The right side erupts in dense, frayed orange-red lines that read as raw energy against the cooler olive field. Pink loops at the torso and a scattering of bright dots across the whole surface pull the eye between stillness and agitation, making the image feel suspended between celebration and unease.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #47 and nnxyz nnotb #49. Where #47 builds form from dense multicolor scribble lines on a dark ground and #49 uses flat black silhouette on teal, #48 layers translucent color arcs with scattered dots—a distinct approach among the three.\", \"connections\": [{\"targetArtworkId\": \"QmXcYdgy2wUa9kkm5zjtJ1axs6aLgJhnn8aqj2apoRw5Yk\", \"reason\": \"Both images share an olive-yellow-green ground with scattered circular dot patterns and use dense, looping pink-red lines to texture a central dark form, creating a similar push-pull between flat color and agitated mark-making.\"}], \"tags\": [\"scattered dot field\", \"layered arc forms\", \"dark silhouette\", \"frayed line mass\", \"olive-green ground\", \"looping pink lines\"], \"interpretiveTags\": [\"suspended motion\", \"celebration and unease\"], \"lookingQuestion\": \"Where exactly do the scattered dots stop following the background and begin overlapping the dark skirt form—and does that boundary shift your sense of which layer sits in front?\", \"ambiguities\": [\"The ragged orange-red vertical shape on the right could be read as hair, fabric, or an abstract mark cluster; no external evidence resolves this.\", \"The candidate comparison QmcKVMYZJPywF7skJ4MLLTmHssEe8uJWZ3Z7Ms7CknhP7a (#47) shares a title-neighbor relationship but its dark-ground scribble structure differs enough from #48 that no strong formal connection is offered.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

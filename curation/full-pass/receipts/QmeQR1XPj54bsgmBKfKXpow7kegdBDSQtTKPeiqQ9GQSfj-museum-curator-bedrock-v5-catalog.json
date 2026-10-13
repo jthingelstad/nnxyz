@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:12.698285-05:00",
+    "usage": {
+      "inputTokens": 6112,
+      "outputTokens": 698,
+      "totalTokens": 6810,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11739
+    },
+    "requestId": "720f9a46-487f-4b8b-8954-4ddf8cca4c6b",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A bold yellow field fills most of the background, crossed by thick horizontal white bars that divide the space into rough bands.\",\n    \"Two figures stand left of center: the left one has long dark hair and a red circular head with a white cross mark; the right figure is mostly black silhouette with a matching red circle bearing a similar cross.\",\n    \"Purple rounded rectangles are scattered across the mid-ground, and a dark red broken-heart shape floats near the top center, outlined in magenta with a jagged split down the middle.\"\n  ],\n  \"reading\": \"Yellow dominates the field, but the white bars cut across it with enough force to flatten the space. The two figures share nearly identical red circles for heads, marked with the same cross, which reads as doubling rather than distinction. The broken shape above them sits between the two, neither belonging to one nor the other. The scattered purple forms below feel like debris or punctuation—present but unresolved.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #137 shifts to a single softly painted figure in a yellow field with no line work, making #136's dense layering and hard outlines a strong contrast. Both works share yellow as a dominant ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA\",\n      \"reason\": \"Both works use saturated yellow as the dominant ground, but #137 replaces #136's hard outlines and scattered marks with soft blended shapes and a single receding figure, making the contrast in surface approach visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya\",\n      \"reason\": \"nnxyz nnotb #135 shares the dense layering of lines over flat color fields and uses similar circular forms as focal anchors, though its background is black where #136's is yellow.\"\n    }\n  ],\n  \"tags\": [\n    \"two figures\",\n    \"horizontal banding\",\n    \"repeated circular head forms\",\n    \"broken heart shape\",\n    \"scattered purple rectangles\",\n    \"yellow ground\"\n  ],\n  \"lookingQuestion\": \"The two red circles carry nearly the same cross mark—what does the slight difference in their size and placement do to how you read the relationship between the two figures?\",\n  \"ambiguities\": [\n    \"The broken shape at top center could be read as a heart or as two separate boot or shoe forms; the magenta outline and dark red fill support both readings.\",\n    \"The purple rounded rectangles appear throughout the composition without clear attachment to either figure, and their function—decorative, symbolic, or structural—is not resolved by the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj/image.png",
+        "imageSHA256": "c1af397d412424fb83bb5937458a1af76fdf9c51056294b37a4b8e38e5f8973a"
+      },
+      {
+        "artworkId": "QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya/image.png",
+        "imageSHA256": "f83374faee1d16e7280fe3788a1cf11b481fe6703ebca51fc7ff94da66c6ec99"
+      },
+      {
+        "artworkId": "QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se/image.png",
+        "imageSHA256": "041b50f10e8a2234b6a4e0d756c48168242a34eea2a2e2bfd14f958f9dbd6b10"
+      },
+      {
+        "artworkId": "QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA/image.png",
+        "imageSHA256": "180b62b11144efd72983f44cb98af94ac2b0e4e31f3959534580ec71f6dfc752"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:19.164436-05:00",
+    "usage": {
+      "inputTokens": 6842,
+      "outputTokens": 805,
+      "totalTokens": 7647,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6403
+    },
+    "requestId": "f5461d5f-a36d-46d1-b566-690657ba974d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A saturated yellow field fills most of the background, crossed by thick horizontal white bars that divide the space into rough bands.\",\n    \"Two figures stand left of center: the left has long dark hair and a red circular head with a white cross mark; the right is a black silhouette with a matching red circle bearing a similar cross.\",\n    \"Purple rounded rectangles are scattered across the mid-ground, and a dark red shape near the top center—outlined in magenta with a jagged split—reads as either a broken heart or two boot forms.\"\n  ],\n  \"reading\": \"Yellow fills the field, but the white bars cut across it hard enough to flatten the space into layers. The two figures share nearly identical red circles for heads, each marked with a cross, which reads as doubling rather than distinction. The split shape above sits between them, belonging to neither. The scattered purple forms feel like debris or punctuation—present but unresolved.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #137 shifts to a single softly painted figure in a yellow field with no line work, making #136's dense layering and hard outlines a strong contrast. Both works use yellow as a dominant ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA\",\n      \"reason\": \"Both works use saturated yellow as the dominant ground, but #137 replaces #136's hard outlines and scattered marks with soft blended shapes and a single receding figure, making the contrast in surface approach visible.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya\",\n      \"reason\": \"nnxyz nnotb #135 shares dense layering of lines over flat color fields and uses circular forms as focal anchors, though its background is black where #136's is yellow.\"\n    }\n  ],\n  \"tags\": [\n    \"two figures\",\n    \"horizontal banding\",\n    \"repeated circular head forms\",\n    \"split shape top center\",\n    \"scattered purple rectangles\",\n    \"yellow ground\"\n  ],\n  \"lookingQuestion\": \"The two red circles carry nearly the same cross mark—what does the slight difference in their size and placement do to how you read the relationship between the two figures?\",\n  \"ambiguities\": [\n    \"The split shape at top center could be read as a heart or as two boot or shoe forms; the magenta outline and dark red fill support both readings.\",\n    \"The purple rounded rectangles appear throughout without clear attachment to either figure; their role is not resolved by the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: yellow ground, white horizontal bars, two red circular heads with cross marks, purple rounded rectangles, and magenta-outlined split shape at top center all verified against the primary image.\",\n    \"Broken-heart ambiguity retained; the shape also resembles boot forms—both readings noted without forcing one identification.\",\n    \"Both comparison IDs inspected; connections are grounded in visible formal contrast (yellow ground vs. black ground; hard outlines vs. soft blending) rather than vague similarity.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeQR1XPj54bsgmBKfKXpow7kegdBDSQtTKPeiqQ9GQSfj/image.png",
+        "imageSHA256": "c1af397d412424fb83bb5937458a1af76fdf9c51056294b37a4b8e38e5f8973a"
+      },
+      {
+        "artworkId": "QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya/image.png",
+        "imageSHA256": "f83374faee1d16e7280fe3788a1cf11b481fe6703ebca51fc7ff94da66c6ec99"
+      },
+      {
+        "artworkId": "QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrksPQyT9f4827AZM9nCe15AHkpyEXjdkTw1MZBa15Se/image.png",
+        "imageSHA256": "041b50f10e8a2234b6a4e0d756c48168242a34eea2a2e2bfd14f958f9dbd6b10"
+      },
+      {
+        "artworkId": "QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA/image.png",
+        "imageSHA256": "180b62b11144efd72983f44cb98af94ac2b0e4e31f3959534580ec71f6dfc752"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A bold yellow field fills most of the background, crossed by thick horizontal white bars that divide the space into rough bands.\", \"Two figures stand left of center: the left one has long dark hair and a red circular head with a white cross mark; the right figure is mostly black silhouette with a matching red circle bearing a similar cross.\", \"Purple rounded rectangles are scattered across the mid-ground, and a dark red broken-heart shape floats near the top center, outlined in magenta with a jagged split down the middle.\"], \"reading\": \"Yellow dominates the field, but the white bars cut across it with enough force to flatten the space. The two figures share nearly identical red circles for heads, marked with the same cross, which reads as doubling rather than distinction. The broken shape above them sits between the two, neither belonging to one nor the other. The scattered purple forms below feel like debris or punctuation—present but unresolved.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbor nnxyz nnotb #137 shifts to a single softly painted figure in a yellow field with no line work, making #136's dense layering and hard outlines a strong contrast. Both works share yellow as a dominant ground.\", \"connections\": [{\"targetArtworkId\": \"QmR4mGtvNJLFbCRNm3Ajze5NgfD9hyk8NQr4DvFhfWkqkA\", \"reason\": \"Both works use saturated yellow as the dominant ground, but #137 replaces #136's hard outlines and scattered marks with soft blended shapes and a single receding figure, making the contrast in surface approach visible.\"}, {\"targetArtworkId\": \"QmUYwQDLUQyNwE345wqiFWPEAsYgJsAbdiEyFCDk8tbVya\", \"reason\": \"nnxyz nnotb #135 shares the dense layering of lines over flat color fields and uses similar circular forms as focal anchors, though its background is black where #136's is yellow.\"}], \"tags\": [\"two figures\", \"horizontal banding\", \"repeated circular head forms\", \"broken heart shape\", \"scattered purple rectangles\", \"yellow ground\"], \"lookingQuestion\": \"The two red circles carry nearly the same cross mark—what does the slight difference in their size and placement do to how you read the relationship between the two figures?\", \"ambiguities\": [\"The broken shape at top center could be read as a heart or as two separate boot or shoe forms; the magenta outline and dark red fill support both readings.\", \"The purple rounded rectangles appear throughout the composition without clear attachment to either figure, and their function—decorative, symbolic, or structural—is not resolved by the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:09:36.152350-05:00",
+    "usage": {
+      "inputTokens": 6016,
+      "outputTokens": 703,
+      "totalTokens": 6719,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 18029
+    },
+    "requestId": "2d9ed210-776c-498d-9127-4c691e17474c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A single black figure built from thick, looping tube-like lines fills the center, its limbs ending in rounded bulbs at the bottom and left.\",\n    \"The figure's round head in the upper right carries spiky protrusions, a red X for one eye, a pink dash for the other, and a small pink mouth.\",\n    \"The background is saturated orange covered with a dense maze of rounded, worm-like shapes in mint green, teal, and yellow, visible through gaps in the figure.\"\n  ],\n  \"reading\": \"A heavy black form coils and doubles back on itself like a tangled pipe, reading as both body and knot. The red-X face sits at the end of this winding path, lending the whole shape a dazed or stunned quality. Behind it, the bright orange field and its restless maze of cool-toned squiggles push forward, refusing to stay in the background. The figure feels caught—anchored by its own weight yet surrounded by constant movement.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #34\\\" and \\\"nnxyz rawblocks #36.\\\" Where #34 uses a similar maze background with multiple spiked figures on a dark green field, #35 isolates a single figure against hot orange, shifting the mood from crowded to solitary.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXkgNJAjpSwzSPLLvDVVAAHZ3TixuHFQMb2BW2D5MtpCU\",\n      \"reason\": \"Both share the worm-maze background and spiked black figures, but #34 crowds three figures onto a table-like form while #35 gives one figure the full frame.\"\n    },\n    {\n      \"targetArtworkId\": \"QmcdCNv8U2rDv9RW76SvEJh4PbSwmP3QTohyP58o3jHMyr\",\n      \"reason\": \"Both place a single black creature against a flat bright field, but nnotb #133 uses solid mass and zigzag lines while #35 builds its figure from looping tubes.\"\n    }\n  ],\n  \"tags\": [\n    \"single figure\",\n    \"maze background\",\n    \"thick black outlines\",\n    \"orange field\",\n    \"looping lines\",\n    \"face with X mark\"\n  ],\n  \"lookingQuestion\": \"How does the maze pattern in the background interact with the curves of the figure—do they echo each other, or does one feel like it belongs to a different kind of movement?\",\n  \"ambiguities\": [\n    \"Whether the bulb-ended limbs represent feet, hands, or abstract terminations is unclear from the image alone.\",\n    \"The relationship between the background maze and the figure's loops may be coincidental or structural; no evidence confirms either reading.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcpYUExuvjdAnTYr3i1GkQcVdpLAbGy5bwnNABr5XPCAg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcpYUExuvjdAnTYr3i1GkQcVdpLAbGy5bwnNABr5XPCAg/image.png",
+        "imageSHA256": "8a827139caa208b1cd0558b886009fece87ac07bf85dd2205a1aa5935b1be924"
+      },
+      {
+        "artworkId": "QmXkgNJAjpSwzSPLLvDVVAAHZ3TixuHFQMb2BW2D5MtpCU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXkgNJAjpSwzSPLLvDVVAAHZ3TixuHFQMb2BW2D5MtpCU/image.png",
+        "imageSHA256": "850ea26098673550bae8ea41fb13ff42447742b7b67dca75b24a842c950bba66"
+      },
+      {
+        "artworkId": "QmcdCNv8U2rDv9RW76SvEJh4PbSwmP3QTohyP58o3jHMyr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcdCNv8U2rDv9RW76SvEJh4PbSwmP3QTohyP58o3jHMyr/image.png",
+        "imageSHA256": "f6a6285519f3a13f4f536f058c98aa7413c9836ce2d3585139389f3101d88adc"
+      },
+      {
+        "artworkId": "QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt/image.png",
+        "imageSHA256": "a1600a0b207eb11cbe2a2f408614eaaa8c0bf4baddda2a6480afe3a7c63c651c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:09:46.282150-05:00",
+    "usage": {
+      "inputTokens": 6751,
+      "outputTokens": 819,
+      "totalTokens": 7570,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10080
+    },
+    "requestId": "943068c0-4487-4a24-b26b-836d3755cc87",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A single black figure built from thick, looping tube-like lines fills the center, its limbs ending in rounded bulbs at the bottom and left.\",\n    \"The figure's round head in the upper right carries spiky protrusions, a red X for one eye, a pink dash for the other, and a small pink mouth.\",\n    \"The background is saturated orange covered with a dense maze of rounded, worm-like shapes in mint green, teal, and yellow, visible through gaps in the figure.\"\n  ],\n  \"reading\": \"A heavy black form coils and doubles back on itself like a tangled pipe, reading as both body and knot. The red-X face sits at the end of this winding path, lending the whole shape a dazed or stunned quality. Behind it, the bright orange field and its restless maze of cool-toned squiggles push forward, refusing to stay in the background. The figure feels caught—anchored by its own weight yet surrounded by constant movement.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #34\\\" and \\\"nnxyz rawblocks #36.\\\" Where #34 uses a similar maze background with multiple spiked figures on a dark green field, #35 isolates a single figure against hot orange, shifting from crowded to solitary.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmXkgNJAjpSwzSPLLvDVVAAHZ3TixuHFQMb2BW2D5MtpCU\",\n      \"reason\": \"Both share the worm-maze background and spiked black figures, but #34 crowds three figures onto a table-like form while #35 gives one figure the full frame.\"\n    },\n    {\n      \"targetArtworkId\": \"QmcdCNv8U2rDv9RW76SvEJh4PbSwmP3QTohyP58o3jHMyr\",\n      \"reason\": \"Both place a single black creature against a flat bright field, but nnotb #133 uses solid mass and zigzag lines while #35 builds its figure from looping tubes.\"\n    }\n  ],\n  \"tags\": [\n    \"single figure\",\n    \"maze background\",\n    \"thick black outlines\",\n    \"orange field\",\n    \"looping lines\",\n    \"face with X mark\"\n  ],\n  \"lookingQuestion\": \"How does the maze pattern in the background interact with the curves of the figure—do they echo each other, or does one feel like it belongs to a different kind of movement?\",\n  \"ambiguities\": [\n    \"Whether the bulb-ended limbs represent feet, hands, or abstract terminations is unclear from the image alone.\",\n    \"The relationship between the background maze and the figure's loops may be coincidental or structural; no evidence confirms either reading.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: the face has a red X, a pink horizontal dash, and a small pink curved mouth—draft description accurate.\",\n    \"Confirmed: #34 comparison image shows dark green background, yellow-and-teal maze, three spiked figures on a horizontal bar; draft contrast with #35's single figure on orange is correct.\",\n    \"Reading is 76 words, context is 46 words—both within limits; no unsupported intent or identity claims found.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcpYUExuvjdAnTYr3i1GkQcVdpLAbGy5bwnNABr5XPCAg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcpYUExuvjdAnTYr3i1GkQcVdpLAbGy5bwnNABr5XPCAg/image.png",
+        "imageSHA256": "8a827139caa208b1cd0558b886009fece87ac07bf85dd2205a1aa5935b1be924"
+      },
+      {
+        "artworkId": "QmXkgNJAjpSwzSPLLvDVVAAHZ3TixuHFQMb2BW2D5MtpCU",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXkgNJAjpSwzSPLLvDVVAAHZ3TixuHFQMb2BW2D5MtpCU/image.png",
+        "imageSHA256": "850ea26098673550bae8ea41fb13ff42447742b7b67dca75b24a842c950bba66"
+      },
+      {
+        "artworkId": "QmcdCNv8U2rDv9RW76SvEJh4PbSwmP3QTohyP58o3jHMyr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcdCNv8U2rDv9RW76SvEJh4PbSwmP3QTohyP58o3jHMyr/image.png",
+        "imageSHA256": "f6a6285519f3a13f4f536f058c98aa7413c9836ce2d3585139389f3101d88adc"
+      },
+      {
+        "artworkId": "QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt/image.png",
+        "imageSHA256": "a1600a0b207eb11cbe2a2f408614eaaa8c0bf4baddda2a6480afe3a7c63c651c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A single black figure built from thick, looping tube-like lines fills the center, its limbs ending in rounded bulbs at the bottom and left.\", \"The figure's round head in the upper right carries spiky protrusions, a red X for one eye, a pink dash for the other, and a small pink mouth.\", \"The background is saturated orange covered with a dense maze of rounded, worm-like shapes in mint green, teal, and yellow, visible through gaps in the figure.\"], \"reading\": \"A heavy black form coils and doubles back on itself like a tangled pipe, reading as both body and knot. The red-X face sits at the end of this winding path, lending the whole shape a dazed or stunned quality. Behind it, the bright orange field and its restless maze of cool-toned squiggles push forward, refusing to stay in the background. The figure feels caught—anchored by its own weight yet surrounded by constant movement.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #34\\\" and \\\"nnxyz rawblocks #36.\\\" Where #34 uses a similar maze background with multiple spiked figures on a dark green field, #35 isolates a single figure against hot orange, shifting the mood from crowded to solitary.\", \"connections\": [{\"targetArtworkId\": \"QmXkgNJAjpSwzSPLLvDVVAAHZ3TixuHFQMb2BW2D5MtpCU\", \"reason\": \"Both share the worm-maze background and spiked black figures, but #34 crowds three figures onto a table-like form while #35 gives one figure the full frame.\"}, {\"targetArtworkId\": \"QmcdCNv8U2rDv9RW76SvEJh4PbSwmP3QTohyP58o3jHMyr\", \"reason\": \"Both place a single black creature against a flat bright field, but nnotb #133 uses solid mass and zigzag lines while #35 builds its figure from looping tubes.\"}], \"tags\": [\"single figure\", \"maze background\", \"thick black outlines\", \"orange field\", \"looping lines\", \"face with X mark\"], \"lookingQuestion\": \"How does the maze pattern in the background interact with the curves of the figure—do they echo each other, or does one feel like it belongs to a different kind of movement?\", \"ambiguities\": [\"Whether the bulb-ended limbs represent feet, hands, or abstract terminations is unclear from the image alone.\", \"The relationship between the background maze and the figure's loops may be coincidental or structural; no evidence confirms either reading.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

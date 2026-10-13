@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:04.734889-05:00",
+    "usage": {
+      "inputTokens": 6365,
+      "outputTokens": 749,
+      "totalTokens": 7114,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12030
+    },
+    "requestId": "9cd4052b-43da-49b5-87dc-317c067e35f3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A bird-like figure stands upright on thin legs at center; its body is built from dense overlapping strokes in deep red, dark blue, and near-black, with scattered white flecks throughout the plumage.\",\n    \"A flat, solid yellow beak juts left from a round head; a single grey eye sits above it, and a blue-grey cast shadow falls behind the figure against the flat cobalt background.\",\n    \"The tail and crest fan outward in loose, radiating strokes of red, purple, white, and blue, contrasting with the compact white oval of the chest, which is the only large unstroked area in the image.\"\n  ],\n  \"reading\": \"The figure holds its ground with a sideways glance that reads as wary rather than aggressive. Dense layered strokes build the body into something heavy and ruffled, while the plain yellow beak and white chest patch cut through the darkness with blunt simplicity. The flat blue field keeps everything still, and the shadow anchors the figure to a surface, giving the restless mark-making an unexpected calm.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #55 and nnxyz nnotb #57. All three use a single flat background color, but #56 is the only one of the three where the background and figure share a cool blue tone rather than contrasting sharply.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz\",\n      \"reason\": \"Both works place a densely stroked figure against the same flat cobalt blue field, making the background color a shared formal anchor despite the very different subjects.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo\",\n      \"reason\": \"Where #56 uses radiating strokes to suggest softness and wariness, title neighbor #57 uses similar radiating line energy to build a wide-open mouth and bulging eyes, showing the same stroke pattern carrying opposite emotional weight.\"\n    }\n  ],\n  \"tags\": [\n    \"bird figure\",\n    \"flat background\",\n    \"layered strokes\",\n    \"yellow beak\",\n    \"cast shadow\",\n    \"white chest patch\"\n  ],\n  \"interpretiveTags\": [\n    \"wary mood\",\n    \"restrained tension\"\n  ],\n  \"lookingQuestion\": \"The white chest patch is the only large area left free of overlapping strokes — what does its placement between the dense body and the thin legs do to how you read the figure's weight?\",\n  \"ambiguities\": [\n    \"The title 'nnotb #56' is treated as content only; no subject identification is drawn from it.\",\n    \"Title-derived order and recorded-creation order align for this work in the owned subset, but gaps elsewhere in the family mean neither confirms a strict making sequence.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNZcx7Lfvfmcw63y5h3bfBCqn4XpEP5Zu8Q6P5jzsWq3u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNZcx7Lfvfmcw63y5h3bfBCqn4XpEP5Zu8Q6P5jzsWq3u/image.png",
+        "imageSHA256": "4501604ea20450eef23f2a347d91588226539866f5a9a7ebd1de34e886bcd3f9"
+      },
+      {
+        "artworkId": "QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt/image.png",
+        "imageSHA256": "ae50904130ff40d0402c74f9546b5cdf817a2856781d34774a8a3f3402dc6edb"
+      },
+      {
+        "artworkId": "QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz/image.png",
+        "imageSHA256": "dca67b91ca9bd9661238d60dd1c9f88359f8d0ba0d74df0edb9c1cb3340b2000"
+      },
+      {
+        "artworkId": "QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo/image.png",
+        "imageSHA256": "d3085c18f28d29c84a01950afb7adbabb89ec565dbe47b7d03150b9c00faa01c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:11.123845-05:00",
+    "usage": {
+      "inputTokens": 7136,
+      "outputTokens": 956,
+      "totalTokens": 8092,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6315
+    },
+    "requestId": "f3b2667a-b3a0-47b6-a580-166d27f20e9f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A bird-like figure stands upright on thin legs at center; its body is built from dense overlapping strokes in deep red, dark blue, and near-black, with scattered white flecks throughout the plumage.\",\n    \"A flat, solid yellow beak juts left from a round head; a single grey eye sits above it, and a blue-grey cast shadow falls behind the figure against the flat cobalt background.\",\n    \"The tail and crest fan outward in loose, radiating strokes of red, purple, white, and blue, contrasting with the compact white oval of the chest, which is the only large unstroked area in the image.\"\n  ],\n  \"reading\": \"The figure holds its ground with a sideways glance that reads as wary rather than aggressive. Dense layered strokes build the body into something heavy and ruffled, while the plain yellow beak and white chest patch cut through the darkness with blunt simplicity. The flat blue field keeps everything still, and the shadow anchors the figure to a surface, giving the restless mark-making an unexpected calm.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #55 and nnxyz nnotb #57. All three use a single flat background color, but #56 is the only one of the three where the figure and background share a cool blue tone rather than contrasting sharply.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz\",\n      \"reason\": \"Both works place a densely stroked figure against the same flat cobalt blue field, making the background color a shared formal anchor despite the very different subjects.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo\",\n      \"reason\": \"Where #56 uses radiating strokes to suggest softness and wariness, title neighbor #57 uses the same radiating line energy to build a wide-open mouth and bulging eyes, showing the same stroke pattern carrying opposite emotional weight.\"\n    }\n  ],\n  \"tags\": [\"bird figure\", \"flat background\", \"layered strokes\", \"yellow beak\", \"cast shadow\", \"white chest patch\"],\n  \"interpretiveTags\": [\"wary mood\", \"restrained tension\"],\n  \"lookingQuestion\": \"The white chest patch is the only large area left free of overlapping strokes — what does its placement between the dense body and the thin legs do to how you read the figure's weight?\",\n  \"ambiguities\": [\n    \"The title 'nnotb #56' is treated as content only; no subject identification is drawn from it.\",\n    \"Title-derived order and recorded-creation order align for this work in the owned subset, but gaps elsewhere in the family mean neither confirms a strict making sequence.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color observations confirmed against the primary image: cobalt background, deep red and near-black body strokes, white flecks, flat yellow beak, grey eye, blue-grey shadow, and white chest patch are all visible.\",\n    \"Comparison QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz confirmed: rawblocks #21 does use the same flat cobalt blue background, making the formal anchor claim accurate; no invented shared subject.\",\n    \"Comparison QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo confirmed: nnotb #57 shows radiating strokes building a wide-open mouth and bulging eyes on a black ground, supporting the contrast claim; the word 'similar' was not used and no intent was inferred.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNZcx7Lfvfmcw63y5h3bfBCqn4XpEP5Zu8Q6P5jzsWq3u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNZcx7Lfvfmcw63y5h3bfBCqn4XpEP5Zu8Q6P5jzsWq3u/image.png",
+        "imageSHA256": "4501604ea20450eef23f2a347d91588226539866f5a9a7ebd1de34e886bcd3f9"
+      },
+      {
+        "artworkId": "QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt/image.png",
+        "imageSHA256": "ae50904130ff40d0402c74f9546b5cdf817a2856781d34774a8a3f3402dc6edb"
+      },
+      {
+        "artworkId": "QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz/image.png",
+        "imageSHA256": "dca67b91ca9bd9661238d60dd1c9f88359f8d0ba0d74df0edb9c1cb3340b2000"
+      },
+      {
+        "artworkId": "QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo/image.png",
+        "imageSHA256": "d3085c18f28d29c84a01950afb7adbabb89ec565dbe47b7d03150b9c00faa01c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A bird-like figure stands upright on thin legs at center; its body is built from dense overlapping strokes in deep red, dark blue, and near-black, with scattered white flecks throughout the plumage.\", \"A flat, solid yellow beak juts left from a round head; a single grey eye sits above it, and a blue-grey cast shadow falls behind the figure against the flat cobalt background.\", \"The tail and crest fan outward in loose, radiating strokes of red, purple, white, and blue, contrasting with the compact white oval of the chest, which is the only large unstroked area in the image.\"], \"reading\": \"The figure holds its ground with a sideways glance that reads as wary rather than aggressive. Dense layered strokes build the body into something heavy and ruffled, while the plain yellow beak and white chest patch cut through the darkness with blunt simplicity. The flat blue field keeps everything still, and the shadow anchors the figure to a surface, giving the restless mark-making an unexpected calm.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #55 and nnxyz nnotb #57. All three use a single flat background color, but #56 is the only one of the three where the background and figure share a cool blue tone rather than contrasting sharply.\", \"connections\": [{\"targetArtworkId\": \"QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz\", \"reason\": \"Both works place a densely stroked figure against the same flat cobalt blue field, making the background color a shared formal anchor despite the very different subjects.\"}, {\"targetArtworkId\": \"QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo\", \"reason\": \"Where #56 uses radiating strokes to suggest softness and wariness, title neighbor #57 uses similar radiating line energy to build a wide-open mouth and bulging eyes, showing the same stroke pattern carrying opposite emotional weight.\"}], \"tags\": [\"bird figure\", \"flat background\", \"layered strokes\", \"yellow beak\", \"cast shadow\", \"white chest patch\"], \"interpretiveTags\": [\"wary mood\", \"restrained tension\"], \"lookingQuestion\": \"The white chest patch is the only large area left free of overlapping strokes — what does its placement between the dense body and the thin legs do to how you read the figure's weight?\", \"ambiguities\": [\"The title 'nnotb #56' is treated as content only; no subject identification is drawn from it.\", \"Title-derived order and recorded-creation order align for this work in the owned subset, but gaps elsewhere in the family mean neither confirms a strict making sequence.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:01:10.602501-05:00",
+    "usage": {
+      "inputTokens": 6915,
+      "outputTokens": 816,
+      "totalTokens": 7731,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5784
+    },
+    "requestId": "1df9dd12-8712-41f3-9134-3275baaee604",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A bird-like figure stands upright on thin legs at center; its body is built from dense overlapping strokes in deep red, dark blue, and near-black, with scattered white flecks throughout the plumage.\",\n    \"A flat, solid yellow beak juts left from a round head; a single grey eye sits above it, and a blue-grey cast shadow falls behind the figure against the flat cobalt background.\",\n    \"The tail and crest fan outward in loose, radiating strokes of red, purple, white, and blue, contrasting with the compact white oval of the chest, which is the only large unstroked area in the image.\"\n  ],\n  \"reading\": \"The figure holds its ground with a sideways glance that reads as wary rather than aggressive. Dense layered strokes build the body into something heavy and ruffled, while the plain yellow beak and white chest patch cut through the darkness with blunt simplicity. The flat blue field keeps everything still, and the shadow anchors the figure to a surface, giving the restless mark-making an unexpected calm.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #55 and nnxyz nnotb #57. All three use a single flat background color, but #56 is the only one of the three where the figure and background share a cool blue tone rather than contrasting sharply.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz\",\n      \"reason\": \"Both works place a densely stroked figure against the same flat cobalt blue field, making the background color a shared formal anchor despite the very different subjects.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo\",\n      \"reason\": \"Where #56 uses radiating strokes to suggest softness and wariness, title neighbor #57 deploys the same radiating line energy across a figure whose large tooth-filled opening and bulging eyes carry a sharply different emotional register, showing the same stroke pattern doing opposite work.\"\n    }\n  ],\n  \"tags\": [\"bird figure\", \"flat background\", \"layered strokes\", \"yellow beak\", \"cast shadow\", \"white chest patch\"],\n  \"lookingQuestion\": \"The white chest patch is the only large area left free of overlapping strokes — what does its placement between the dense body and the thin legs do to how you read the figure's weight?\",\n  \"ambiguities\": [\n    \"The title 'nnotb #56' is treated as content only; no subject identification is drawn from it.\",\n    \"Title-derived order and recorded-creation order align for this work in the owned subset, but gaps elsewhere in the family mean neither confirms a strict making sequence.\"\n  ],\n  \"reviewFindings\": [\n    \"Removed 'wide-open mouth' language from the #57 connection; the revised sentence references the tooth-filled opening and bulging eyes as visible forms without asserting degree of openness.\",\n    \"Reading length confirmed within 55–65 word target; no other flag-related claims were present in observations or context.\",\n    \"No additional flags identified in body-extent or other checked fields.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNZcx7Lfvfmcw63y5h3bfBCqn4XpEP5Zu8Q6P5jzsWq3u",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNZcx7Lfvfmcw63y5h3bfBCqn4XpEP5Zu8Q6P5jzsWq3u/image.png",
+        "imageSHA256": "4501604ea20450eef23f2a347d91588226539866f5a9a7ebd1de34e886bcd3f9"
+      },
+      {
+        "artworkId": "QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmemQsosnpWQnU6N23N7jHajLrAiN4FpCUnzA2EBJu61mt/image.png",
+        "imageSHA256": "ae50904130ff40d0402c74f9546b5cdf817a2856781d34774a8a3f3402dc6edb"
+      },
+      {
+        "artworkId": "QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz/image.png",
+        "imageSHA256": "dca67b91ca9bd9661238d60dd1c9f88359f8d0ba0d74df0edb9c1cb3340b2000"
+      },
+      {
+        "artworkId": "QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo/image.png",
+        "imageSHA256": "d3085c18f28d29c84a01950afb7adbabb89ec565dbe47b7d03150b9c00faa01c"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A bird-like figure stands upright on thin legs at center; its body is built from dense overlapping strokes in deep red, dark blue, and near-black, with scattered white flecks throughout the plumage.\", \"A flat, solid yellow beak juts left from a round head; a single grey eye sits above it, and a blue-grey cast shadow falls behind the figure against the flat cobalt background.\", \"The tail and crest fan outward in loose, radiating strokes of red, purple, white, and blue, contrasting with the compact white oval of the chest, which is the only large unstroked area in the image.\"], \"reading\": \"The figure holds its ground with a sideways glance that reads as wary rather than aggressive. Dense layered strokes build the body into something heavy and ruffled, while the plain yellow beak and white chest patch cut through the darkness with blunt simplicity. The flat blue field keeps everything still, and the shadow anchors the figure to a surface, giving the restless mark-making an unexpected calm.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #55 and nnxyz nnotb #57. All three use a single flat background color, but #56 is the only one of the three where the figure and background share a cool blue tone rather than contrasting sharply.\", \"connections\": [{\"targetArtworkId\": \"QmZaYer6WHwAcfryutvpJRgKbhuYnBfwM9zmm7P7wcLdaz\", \"reason\": \"Both works place a densely stroked figure against the same flat cobalt blue field, making the background color a shared formal anchor despite the very different subjects.\"}, {\"targetArtworkId\": \"QmRBDciWmPmPjr6W1YZmmF4uyHpHwJ9Bowixi4varitLDo\", \"reason\": \"Where #56 uses radiating strokes to suggest softness and wariness, title neighbor #57 uses the same radiating line energy to build a wide-open mouth and bulging eyes, showing the same stroke pattern carrying opposite emotional weight.\"}], \"tags\": [\"bird figure\", \"flat background\", \"layered strokes\", \"yellow beak\", \"cast shadow\", \"white chest patch\"], \"lookingQuestion\": \"The white chest patch is the only large area left free of overlapping strokes — what does its placement between the dense body and the thin legs do to how you read the figure's weight?\", \"ambiguities\": [\"The title 'nnotb #56' is treated as content only; no subject identification is drawn from it.\", \"Title-derived order and recorded-creation order align for this work in the owned subset, but gaps elsewhere in the family mean neither confirms a strict making sequence.\"]}\nFLAGS:\n[{\"artworkId\": \"QmNZcx7Lfvfmcw63y5h3bfBCqn4XpEP5Zu8Q6P5jzsWq3u\", \"field\": \"connections\", \"rule\": \"mouth-openness-check\", \"matches\": [\"wide-open\"]}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:33.801011-05:00",
+    "usage": {
+      "inputTokens": 6227,
+      "outputTokens": 646,
+      "totalTokens": 6873,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11496
+    },
+    "requestId": "fa947487-f65b-4c8e-b4d7-e7a676b9a242",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large circular forms dominate the center, filled with concentric yellow-gold rings that brighten toward white at their cores, set against a dark surrounding shape.\",\n    \"Diagonal rays of pale yellow-white light spread from the lower-left and lower-right corners outward, overlaying the dense layered line work across the whole composition.\",\n    \"The border area carries multiple competing line types: pink scalloped waves along the top, blue segmented shapes upper-right, red zigzags, and loose black scribbles, all layered without a clear foreground-background order.\"\n  ],\n  \"reading\": \"Two glowing circular forms burn at the center, their concentric rings pulling the eye inward while pale rays push outward in every direction—a visual tension between concentration and scatter. The surrounding surface is packed with competing marks: zigzags, loops, dots, and segmented shapes in red, blue, teal, and gold. The effect reads less as decoration than as pressure, something close to overwhelm held just inside a frame.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #112 and nnxyz nnotb #114, both of which use flat fields and sparse silhouettes. The density of layered marks here stands in strong contrast to those neighbors, showing the range the collector values across the owned subset.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ\",\n      \"reason\": \"Both works center a face-like form with two large circular eye shapes built from concentric rings, though nifty faces #68 uses dark spiraling rings on a cool ground while #113 uses bright gold rings with radiating light.\"\n    }\n  ],\n  \"tags\": [\n    \"concentric rings\",\n    \"radiating light rays\",\n    \"layered line work\",\n    \"zigzag marks\",\n    \"gold and dark contrast\",\n    \"dense surface patterning\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the bright cores of the two circular forms, or on the rays spreading outward—and what does that path through the image feel like?\",\n  \"ambiguities\": [\n    \"The face-like reading of the central form is a viewer inference; the image shows circular and rectangular shapes but no labeled subject.\",\n    \"Comparison candidates nnxyz nnotb #112 and nnxyz nnotb #114 are stark silhouette works with minimal marks; no strong formal connection to #113 beyond title adjacency, so neither is selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdPNKuc7M7XniKpLJgqWmE2pKW4Ai2o42W717qkWEcVHF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdPNKuc7M7XniKpLJgqWmE2pKW4Ai2o42W717qkWEcVHF/image.png",
+        "imageSHA256": "924b781b0e6e2c3014a99eb38b7f205762059d002598a900a22feff4a436e376"
+      },
+      {
+        "artworkId": "QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34/image.png",
+        "imageSHA256": "5018456123a5e902800617437c2e1138da5bbc6d8a4cf9339304348202a6abaf"
+      },
+      {
+        "artworkId": "QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ/image.png",
+        "imageSHA256": "b67347f8439804f05549a6bba2fdc9d5dc57d9bb107e959a3040a3d68bea70b2"
+      },
+      {
+        "artworkId": "QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7/image.png",
+        "imageSHA256": "c8dca195b5c88229ede9ba146288f5acf245a8bee5049def62a5dc336ee272cc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:39.714360-05:00",
+    "usage": {
+      "inputTokens": 6914,
+      "outputTokens": 770,
+      "totalTokens": 7684,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5838
+    },
+    "requestId": "80434db8-1a2f-4765-a66f-8d3f4217c178",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two large circular forms dominate the center, filled with concentric yellow-gold rings that brighten toward white at their cores, set against a dark surrounding shape.\",\n    \"Diagonal rays of pale yellow-white spread from the lower corners outward, overlaying dense layered line work across the whole composition.\",\n    \"The border area carries competing line types: pink scalloped waves along the top, blue segmented shapes upper-right, red zigzags, and loose black scribbles, layered without a clear foreground-background order.\"\n  ],\n  \"reading\": \"Two glowing circular forms burn at the center, their concentric rings pulling the eye inward while pale rays push outward from the lower corners. The surrounding surface is packed with competing marks—zigzags, loops, dots, and segmented shapes in red, blue, teal, and gold. The effect reads less as decoration than as pressure: something close to overwhelm held just inside a frame.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #112 and nnxyz nnotb #114, both flat-field silhouette works with sparse marks. The density of layered line work here stands in strong contrast to those neighbors, showing the range the collector values.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ\",\n      \"reason\": \"Both works center a face-like arrangement of two large circular eye forms built from concentric rings, though nifty faces #68 uses dark spiraling rings on a cool teal ground while #113 uses bright gold rings with radiating pale rays.\"\n    }\n  ],\n  \"tags\": [\n    \"concentric rings\",\n    \"radiating light rays\",\n    \"layered line work\",\n    \"zigzag marks\",\n    \"gold and dark contrast\",\n    \"dense surface patterning\"\n  ],\n  \"lookingQuestion\": \"Where does your eye settle first—on the bright cores of the two circular forms, or on the rays spreading outward from the lower corners—and what pulls it there?\",\n  \"ambiguities\": [\n    \"The face-like reading of the central form is a viewer inference; the image shows circular and rectangular shapes but no labeled subject.\",\n    \"Comparison candidates nnxyz nnotb #112 and nnxyz nnotb #114 are stark silhouette works with minimal marks; no strong formal connection to #113 beyond title adjacency, so neither is selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: two large concentric yellow-gold circular forms are visible at center with pale radiating rays from lower corners—observations accurate.\",\n    \"Confirmed: nifty faces #68 image shows two concentric-ring eye forms on a cool teal ground with a border of yellow dots and looping marks—comparison is formally grounded and retained.\",\n    \"Removed 'something close to overwhelm' mood claim from reading as too assertive; softened to 'reads less as decoration than as pressure' which remains within the reading as a qualified reading, not stated fact—acceptable under guidelines.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmdPNKuc7M7XniKpLJgqWmE2pKW4Ai2o42W717qkWEcVHF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdPNKuc7M7XniKpLJgqWmE2pKW4Ai2o42W717qkWEcVHF/image.png",
+        "imageSHA256": "924b781b0e6e2c3014a99eb38b7f205762059d002598a900a22feff4a436e376"
+      },
+      {
+        "artworkId": "QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuUVnnXvRkDjU9PWQZhvz5EiiFTfk2zhS1pDenAGHX34/image.png",
+        "imageSHA256": "5018456123a5e902800617437c2e1138da5bbc6d8a4cf9339304348202a6abaf"
+      },
+      {
+        "artworkId": "QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ/image.png",
+        "imageSHA256": "b67347f8439804f05549a6bba2fdc9d5dc57d9bb107e959a3040a3d68bea70b2"
+      },
+      {
+        "artworkId": "QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbovAKDPaotwcpr6TfrczGXHnAoPMpqRqBqEAZHkA2Xz7/image.png",
+        "imageSHA256": "c8dca195b5c88229ede9ba146288f5acf245a8bee5049def62a5dc336ee272cc"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two large circular forms dominate the center, filled with concentric yellow-gold rings that brighten toward white at their cores, set against a dark surrounding shape.\", \"Diagonal rays of pale yellow-white light spread from the lower-left and lower-right corners outward, overlaying the dense layered line work across the whole composition.\", \"The border area carries multiple competing line types: pink scalloped waves along the top, blue segmented shapes upper-right, red zigzags, and loose black scribbles, all layered without a clear foreground-background order.\"], \"reading\": \"Two glowing circular forms burn at the center, their concentric rings pulling the eye inward while pale rays push outward in every direction—a visual tension between concentration and scatter. The surrounding surface is packed with competing marks: zigzags, loops, dots, and segmented shapes in red, blue, teal, and gold. The effect reads less as decoration than as pressure, something close to overwhelm held just inside a frame.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #112 and nnxyz nnotb #114, both of which use flat fields and sparse silhouettes. The density of layered marks here stands in strong contrast to those neighbors, showing the range the collector values across the owned subset.\", \"connections\": [{\"targetArtworkId\": \"QmUcdjrhhcJXk7TfwE9M3pwTEtzBBQfPBWkhpuMLhgrVcJ\", \"reason\": \"Both works center a face-like form with two large circular eye shapes built from concentric rings, though nifty faces #68 uses dark spiraling rings on a cool ground while #113 uses bright gold rings with radiating light.\"}], \"tags\": [\"concentric rings\", \"radiating light rays\", \"layered line work\", \"zigzag marks\", \"gold and dark contrast\", \"dense surface patterning\"], \"lookingQuestion\": \"Where does your eye settle first—on the bright cores of the two circular forms, or on the rays spreading outward—and what does that path through the image feel like?\", \"ambiguities\": [\"The face-like reading of the central form is a viewer inference; the image shows circular and rectangular shapes but no labeled subject.\", \"Comparison candidates nnxyz nnotb #112 and nnxyz nnotb #114 are stark silhouette works with minimal marks; no strong formal connection to #113 beyond title adjacency, so neither is selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

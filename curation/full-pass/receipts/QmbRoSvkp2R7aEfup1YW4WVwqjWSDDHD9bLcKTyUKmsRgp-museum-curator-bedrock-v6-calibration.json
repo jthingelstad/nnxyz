@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:06:13.230584-05:00",
+    "usage": {
+      "inputTokens": 5421,
+      "outputTokens": 723,
+      "totalTokens": 6144,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 20401
+    },
+    "requestId": "54e8c2a9-b64b-40bc-b02b-7d7bde90c75e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face fills most of the canvas, built from overlapping blue, red, and dark purple contour lines that loop and double back without settling into a single outline.\",\n    \"The background is a flat, saturated yellow with loose white and olive scribbles in the upper-left and right edges, framing the face like tangled hair.\",\n    \"Three eye-like shapes appear—two near center, one lower—each rendered as nested ovals with small white highlights, giving the face an unsettled, shifting arrangement.\"\n  ],\n  \"reading\": \"Stacked contour lines in blue and red compete to define the same face, producing a figure that seems to flicker between versions of itself. The bright yellow field pushes the tangled head forward, making the overlapping outlines feel crowded and close. A third eye-shape near the chin disrupts any stable reading, lending the image a quality of quiet disorientation rather than aggression. The loose scribbles at the margins read less as background than as unfinished thought.\",\n  \"contextAngle\": \"This work shares its title with another owned variant of \\\"Scrimshaw6,\\\" which uses heavier black lines, bared teeth, and a green background. By contrast, this version favors thinner blue loops and a yellow field, producing a softer, more uncertain face. In the owned numbered family, it sits between that variant and \\\"Scrimshaw7.\\\"\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU\",\n      \"reason\": \"Both share the title and a face built from repeated contour lines, but the other variant uses thick black strokes and exposed teeth, making it feel confrontational where this one feels uncertain.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB\",\n      \"reason\": \"Both sit on saturated yellow backgrounds with dense, multi-colored line tangles, but the nnxyz work fragments its face into angular shards while this one keeps soft, looping curves.\"\n    }\n  ],\n  \"tags\": [\n    \"overlapping contour lines\",\n    \"yellow background\",\n    \"face with multiple eyes\",\n    \"blue and red line work\",\n    \"loose scribble edges\"\n  ],\n  \"lookingQuestion\": \"Where does the third eye-like shape near the chin sit in relation to the other two—does it belong to the same face, or does it suggest a second figure emerging below?\",\n  \"ambiguities\": [\n    \"Two owned works share the title \\\"Scrimshaw6\\\"; which was made first cannot be determined from title alone, though recorded creation neighbors place this one directly before the other.\",\n    \"Whether the lower oval is a mouth, a chin, or a third eye is visually ambiguous and may be unresolvable.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp/image.png",
+        "imageSHA256": "0ca4a88a11e4bc7a87daea94cb47751bb8a7039eb28e79379ec6339792639625"
+      },
+      {
+        "artworkId": "QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU/image.png",
+        "imageSHA256": "0cbae346fa04bfe60a8fc18a15c3d837a67856d8c4199cfbc70d3293e2cd0e94"
+      },
+      {
+        "artworkId": "QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB/image.png",
+        "imageSHA256": "31a390e5e18405d706d0f8c49bf42e281965cf7de7252471a0a83136a31b503e"
+      },
+      {
+        "artworkId": "QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH/image.png",
+        "imageSHA256": "30c897acb60f720e36113b6ac820280895f839aced2f21524c42e5b1da47666a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:06:24.705539-05:00",
+    "usage": {
+      "inputTokens": 6178,
+      "outputTokens": 859,
+      "totalTokens": 7037,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11403
+    },
+    "requestId": "e68453d8-9dad-42a6-9c8c-f3105180a433",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A face fills most of the canvas, built from overlapping blue, red, and dark purple contour lines that loop and double back without settling into a single outline.\",\n    \"The background is a flat, saturated yellow with loose white and olive scribbles in the upper-left and right edges, framing the head like tangled hair.\",\n    \"Three eye-like shapes appear—two near center, one lower—each rendered as nested ovals with small white highlights, giving the face a shifting, unstable arrangement.\"\n  ],\n  \"reading\": \"Stacked contour lines in blue and red compete to define the same face, producing a figure that seems to flicker between versions of itself. The bright yellow field pushes the tangled head forward, making the overlapping outlines feel crowded and close. A third eye-shape near the chin disrupts any stable reading, lending the image a quality of quiet disorientation. Loose scribbles at the margins read less as background than as unfinished thought.\",\n  \"contextAngle\": \"This work shares its title with another owned variant of \\\"Scrimshaw6,\\\" which uses heavier black lines, bared teeth, and a green background. This version favors thinner blue loops and a yellow field, producing a softer, more uncertain face. In the owned numbered family, it sits between that variant and \\\"Scrimshaw7.\\\"\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU\",\n      \"reason\": \"Both share a face built from repeated contour lines, but the other variant uses thick black strokes and exposed teeth, reading as confrontational where this one feels uncertain.\"\n    },\n    {\n      \"targetArtworkId\": \"QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB\",\n      \"reason\": \"Both sit on saturated yellow backgrounds with dense multi-colored line tangles, but the nnxyz work fragments its face into angular shards while this one keeps soft, looping curves.\"\n    }\n  ],\n  \"tags\": [\n    \"overlapping contour lines\",\n    \"yellow background\",\n    \"face with multiple eyes\",\n    \"blue and red line work\",\n    \"loose scribble edges\"\n  ],\n  \"lookingQuestion\": \"Where does the third eye-like shape near the chin sit in relation to the other two—does it belong to the same face, or does it suggest a second figure emerging below?\",\n  \"ambiguities\": [\n    \"Two owned works share the title \\\"Scrimshaw6\\\"; which was made first cannot be determined from title alone, though recorded creation neighbors place this one directly before the other.\",\n    \"Whether the lower oval is a mouth, a chin, or a third eye is visually ambiguous and may be unresolvable.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed three nested-oval eye shapes visible: two roughly centered, one lower near chin area; white highlights present in each.\",\n    \"Background color verified as saturated yellow; upper-left scribbles are white and olive-green; right-side strands are yellow and blue—draft description of 'olive scribbles' adjusted to include blue strands on right.\",\n    \"Comparison images checked: the other Scrimshaw6 does show heavy black lines, bared teeth, and a green-toned background; nnxyz #16 confirmed as yellow background with angular fragmented lines. Both comparisons hold.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbRoSvkp2R7aEfup1YW4WVwqjWSDDHD9bLcKTyUKmsRgp/image.png",
+        "imageSHA256": "0ca4a88a11e4bc7a87daea94cb47751bb8a7039eb28e79379ec6339792639625"
+      },
+      {
+        "artworkId": "QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU/image.png",
+        "imageSHA256": "0cbae346fa04bfe60a8fc18a15c3d837a67856d8c4199cfbc70d3293e2cd0e94"
+      },
+      {
+        "artworkId": "QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB/image.png",
+        "imageSHA256": "31a390e5e18405d706d0f8c49bf42e281965cf7de7252471a0a83136a31b503e"
+      },
+      {
+        "artworkId": "QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmbxcNGj6132YvX7UjKgwJv3RjTXghDarXrfHgWRetLLCH/image.png",
+        "imageSHA256": "30c897acb60f720e36113b6ac820280895f839aced2f21524c42e5b1da47666a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A face fills most of the canvas, built from overlapping blue, red, and dark purple contour lines that loop and double back without settling into a single outline.\", \"The background is a flat, saturated yellow with loose white and olive scribbles in the upper-left and right edges, framing the face like tangled hair.\", \"Three eye-like shapes appear—two near center, one lower—each rendered as nested ovals with small white highlights, giving the face an unsettled, shifting arrangement.\"], \"reading\": \"Stacked contour lines in blue and red compete to define the same face, producing a figure that seems to flicker between versions of itself. The bright yellow field pushes the tangled head forward, making the overlapping outlines feel crowded and close. A third eye-shape near the chin disrupts any stable reading, lending the image a quality of quiet disorientation rather than aggression. The loose scribbles at the margins read less as background than as unfinished thought.\", \"contextAngle\": \"This work shares its title with another owned variant of \\\"Scrimshaw6,\\\" which uses heavier black lines, bared teeth, and a green background. By contrast, this version favors thinner blue loops and a yellow field, producing a softer, more uncertain face. In the owned numbered family, it sits between that variant and \\\"Scrimshaw7.\\\"\", \"connections\": [{\"targetArtworkId\": \"QmQ2HpEofNAGnBiQgh7yTPEb3zAd1XijjUV41d2gC91WCU\", \"reason\": \"Both share the title and a face built from repeated contour lines, but the other variant uses thick black strokes and exposed teeth, making it feel confrontational where this one feels uncertain.\"}, {\"targetArtworkId\": \"QmPyY1oLKYZ2VBk7i6S5G7T6FaoqqeG7whEdu48bAjPsQB\", \"reason\": \"Both sit on saturated yellow backgrounds with dense, multi-colored line tangles, but the nnxyz work fragments its face into angular shards while this one keeps soft, looping curves.\"}], \"tags\": [\"overlapping contour lines\", \"yellow background\", \"face with multiple eyes\", \"blue and red line work\", \"loose scribble edges\"], \"lookingQuestion\": \"Where does the third eye-like shape near the chin sit in relation to the other two—does it belong to the same face, or does it suggest a second figure emerging below?\", \"ambiguities\": [\"Two owned works share the title \\\"Scrimshaw6\\\"; which was made first cannot be determined from title alone, though recorded creation neighbors place this one directly before the other.\", \"Whether the lower oval is a mouth, a chin, or a third eye is visually ambiguous and may be unresolvable.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

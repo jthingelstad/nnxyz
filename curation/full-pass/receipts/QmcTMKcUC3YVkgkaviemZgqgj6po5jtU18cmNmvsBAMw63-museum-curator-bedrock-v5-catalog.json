@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:43.127447-05:00",
+    "usage": {
+      "inputTokens": 6414,
+      "outputTokens": 752,
+      "totalTokens": 7166,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12354
+    },
+    "requestId": "916e29da-0c41-40f8-9d0d-b1cbd622d378",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two white-outlined figures with red circular eyes and jagged-tooth mouths occupy the center; each wears a small spiked crown rendered in pink and yellow zigzag lines.\",\n    \"The background is divided into a blue-grey hatched upper zone and a bold yellow-and-black horizontal-stripe lower zone, creating a hard horizon line across the lower third.\",\n    \"Limbs extend outward as thin white tubes ending in splayed multi-fingered hands; a yellow outline traces the edges of both figures, separating them from the background.\"\n  ],\n  \"reading\": \"Two figures face each other across a shared space, their mirrored crowns and matching red eyes suggesting a pairing rather than a confrontation. The jagged teeth and splayed hands read as agitation, but the figures lean together rather than apart. The striped floor anchors them in something almost theatrical, while the scratchy blue wall behind them hums with restless line work.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #260 and nnxyz nnotb #262. Where #260 fills the frame with a single large face and a dense, warm palette, #261 pulls back to show full figures in a staged setting with a cooler, more graphic ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNrQxAA3torKL4ytYofLF7vdAeBqRQ95ANTBo4BmdVqE7\",\n      \"reason\": \"nnxyz nnotb #262 shares the jagged-tooth mouth motif and a similarly divided background—warm disc against a cooler field—offering a direct formal echo to the crown-and-teeth vocabulary visible here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF\",\n      \"reason\": \"nnxyz nifty faces #7 uses the same square-eyed, wide-toothed face construction and layered zigzag line work, making it a useful contrast in scale: one face filling the frame versus two figures sharing it.\"\n    }\n  ],\n  \"tags\": [\n    \"paired figures\",\n    \"spiked crowns\",\n    \"jagged teeth\",\n    \"striped ground\",\n    \"white tube limbs\",\n    \"zigzag line work\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontation or mirroring\",\n    \"theatrical staging\",\n    \"agitated energy\"\n  ],\n  \"lookingQuestion\": \"What does the direction each figure's feet and hands point toward tell you about the relationship between the two?\",\n  \"ambiguities\": [\n    \"The pink-and-magenta fill of the right figure versus the darker outline of the left may indicate two distinct figures or a single figure reflected; the image does not resolve this clearly.\",\n    \"The nifty-faces comparison is from a different owned collection family, so any formal link reflects the collector's cross-collection perspective rather than a confirmed series relationship.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcTMKcUC3YVkgkaviemZgqgj6po5jtU18cmNmvsBAMw63",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcTMKcUC3YVkgkaviemZgqgj6po5jtU18cmNmvsBAMw63/image.png",
+        "imageSHA256": "9c6e8906f6b60def99aea9a73309aa32648b07c0128a97045787509a8f90d4ad"
+      },
+      {
+        "artworkId": "QmNk6owLfv7y6kWW6eN7zixtCNMb1eWxtyozP7sUJ4rkBT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNk6owLfv7y6kWW6eN7zixtCNMb1eWxtyozP7sUJ4rkBT/image.png",
+        "imageSHA256": "6c5d96400b708aa47d2adc4dfab30fbf2888d89fc71e6ef8f3c49bf85eba3176"
+      },
+      {
+        "artworkId": "QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF/image.png",
+        "imageSHA256": "eb42ba3160ea0588f5dfd58fc2025eca09264fbe4fd6bd61e045ebd070cfa366"
+      },
+      {
+        "artworkId": "QmNrQxAA3torKL4ytYofLF7vdAeBqRQ95ANTBo4BmdVqE7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrQxAA3torKL4ytYofLF7vdAeBqRQ95ANTBo4BmdVqE7/image.png",
+        "imageSHA256": "85a1d363abc37a42750256c0ae285cf842669cbeb3e1b2f5a44f17f74c2cd6f5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:59:50.266849-05:00",
+    "usage": {
+      "inputTokens": 7186,
+      "outputTokens": 841,
+      "totalTokens": 8027,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6803
+    },
+    "requestId": "55eb177d-c5f4-4d95-9166-1091fb60db84",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two white-outlined figures with red circular eyes and jagged-tooth mouths occupy the center; the left figure is darker and the right is filled with pink-magenta, each topped by a small spiked crown in pink and yellow zigzag lines.\",\n    \"The background splits into a blue-grey hatched upper zone and a bold yellow-and-black horizontal-stripe lower zone, meeting in a hard horizon line across the lower third.\",\n    \"Limbs extend as thin white tubes ending in splayed multi-fingered hands; a yellow outline traces both figures, separating them from the background.\"\n  ],\n  \"reading\": \"Two figures face each other, their matching crowns and red eyes suggesting a pairing. The jagged teeth and splayed hands read as agitation, yet the figures lean toward each other rather than away. The striped floor anchors them in something almost theatrical, while the scratchy blue field behind them carries its own restless line work.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #260 and nnxyz nnotb #262. Where #260 fills the frame with a single large face and a warm, dense palette, #261 pulls back to show two full figures against a more graphic, cooler ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmNrQxAA3torKL4ytYofLF7vdAeBqRQ95ANTBo4BmdVqE7\",\n      \"reason\": \"nnxyz nnotb #262 shares the jagged-tooth mouth motif and a divided background—warm disc against a cooler field—offering a direct formal echo to the crown-and-teeth vocabulary visible in #261.\"\n    },\n    {\n      \"targetArtworkId\": \"QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF\",\n      \"reason\": \"nnxyz nifty faces #7 uses a wide-toothed face construction and layered zigzag line work comparable to the crown and mouth forms here, making it a useful scale contrast: one face filling the frame versus two figures sharing it.\"\n    }\n  ],\n  \"tags\": [\"paired figures\", \"spiked crowns\", \"jagged teeth\", \"striped ground\", \"white tube limbs\", \"zigzag line work\"],\n  \"interpretiveTags\": [\"mirroring or confrontation\", \"theatrical staging\", \"agitated energy\"],\n  \"lookingQuestion\": \"What does the direction each figure's feet and hands point toward tell you about the relationship between the two?\",\n  \"ambiguities\": [\n    \"The pink-magenta fill of the right figure versus the darker outline of the left may indicate two distinct figures or a single figure reflected; the image does not resolve this clearly.\",\n    \"The nifty-faces comparison is from a different owned collection family; the formal link reflects the collector's cross-collection perspective, not a confirmed series relationship.\"\n  ],\n  \"reviewFindings\": [\n    \"Color distinction confirmed: left figure is darker/white-outlined, right figure has visible pink-magenta fill; draft observation updated to reflect this.\",\n    \"nnxyz nnotb #262 jagged-tooth and divided-background comparison verified against inspected image; connection retained.\",\n    \"nnxyz nifty faces #7 zigzag line work and wide-toothed face construction confirmed in inspected image; ambiguity note about cross-collection status retained.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcTMKcUC3YVkgkaviemZgqgj6po5jtU18cmNmvsBAMw63",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcTMKcUC3YVkgkaviemZgqgj6po5jtU18cmNmvsBAMw63/image.png",
+        "imageSHA256": "9c6e8906f6b60def99aea9a73309aa32648b07c0128a97045787509a8f90d4ad"
+      },
+      {
+        "artworkId": "QmNk6owLfv7y6kWW6eN7zixtCNMb1eWxtyozP7sUJ4rkBT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNk6owLfv7y6kWW6eN7zixtCNMb1eWxtyozP7sUJ4rkBT/image.png",
+        "imageSHA256": "6c5d96400b708aa47d2adc4dfab30fbf2888d89fc71e6ef8f3c49bf85eba3176"
+      },
+      {
+        "artworkId": "QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF/image.png",
+        "imageSHA256": "eb42ba3160ea0588f5dfd58fc2025eca09264fbe4fd6bd61e045ebd070cfa366"
+      },
+      {
+        "artworkId": "QmNrQxAA3torKL4ytYofLF7vdAeBqRQ95ANTBo4BmdVqE7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNrQxAA3torKL4ytYofLF7vdAeBqRQ95ANTBo4BmdVqE7/image.png",
+        "imageSHA256": "85a1d363abc37a42750256c0ae285cf842669cbeb3e1b2f5a44f17f74c2cd6f5"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two white-outlined figures with red circular eyes and jagged-tooth mouths occupy the center; each wears a small spiked crown rendered in pink and yellow zigzag lines.\", \"The background is divided into a blue-grey hatched upper zone and a bold yellow-and-black horizontal-stripe lower zone, creating a hard horizon line across the lower third.\", \"Limbs extend outward as thin white tubes ending in splayed multi-fingered hands; a yellow outline traces the edges of both figures, separating them from the background.\"], \"reading\": \"Two figures face each other across a shared space, their mirrored crowns and matching red eyes suggesting a pairing rather than a confrontation. The jagged teeth and splayed hands read as agitation, but the figures lean together rather than apart. The striped floor anchors them in something almost theatrical, while the scratchy blue wall behind them hums with restless line work.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #260 and nnxyz nnotb #262. Where #260 fills the frame with a single large face and a dense, warm palette, #261 pulls back to show full figures in a staged setting with a cooler, more graphic ground.\", \"connections\": [{\"targetArtworkId\": \"QmNrQxAA3torKL4ytYofLF7vdAeBqRQ95ANTBo4BmdVqE7\", \"reason\": \"nnxyz nnotb #262 shares the jagged-tooth mouth motif and a similarly divided background—warm disc against a cooler field—offering a direct formal echo to the crown-and-teeth vocabulary visible here.\"}, {\"targetArtworkId\": \"QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF\", \"reason\": \"nnxyz nifty faces #7 uses the same square-eyed, wide-toothed face construction and layered zigzag line work, making it a useful contrast in scale: one face filling the frame versus two figures sharing it.\"}], \"tags\": [\"paired figures\", \"spiked crowns\", \"jagged teeth\", \"striped ground\", \"white tube limbs\", \"zigzag line work\"], \"interpretiveTags\": [\"confrontation or mirroring\", \"theatrical staging\", \"agitated energy\"], \"lookingQuestion\": \"What does the direction each figure's feet and hands point toward tell you about the relationship between the two?\", \"ambiguities\": [\"The pink-and-magenta fill of the right figure versus the darker outline of the left may indicate two distinct figures or a single figure reflected; the image does not resolve this clearly.\", \"The nifty-faces comparison is from a different owned collection family, so any formal link reflects the collector's cross-collection perspective rather than a confirmed series relationship.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

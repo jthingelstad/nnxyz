@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:25.162271-05:00",
+    "usage": {
+      "inputTokens": 6943,
+      "outputTokens": 754,
+      "totalTokens": 7697,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11997
+    },
+    "requestId": "09bc032a-9b8e-4078-a0f5-761f9bc69d0f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A row of rounded white rectangular forms lines the lower third, separated by a thick red horizontal band above them, suggesting a wide open mouth with teeth.\",\n    \"At the top, two bands of repeating zigzag lines in magenta sit against a black-and-white striped field, with a thin cyan wave running above them.\",\n    \"In the center, overlapping rectangles and triangles in red, black, and blue converge around a pale vertical form, with loose yellow parallel strokes stacked to the right.\"\n  ],\n  \"reading\": \"The image builds a face from layered geometry rather than smooth contour: zigzag bands stand in for a brow, stacked rectangles crowd the eye zone, and a row of white rounded blocks reads as an exposed lower jaw. The density in the middle feels pressured, almost clamorous, while the yellow parallel strokes at the right edge introduce an odd calm. The striped top and tooth-row bottom frame the whole thing like a stage.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbor nnxyz nifty faces #52 shares the tooth-row motif and a red-dominant mid-zone, making the two a useful pair. nnxyz nifty faces #54 shifts to a teal ground and spiral eyes, showing how quickly the series changes register.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4\",\n      \"reason\": \"Both works place a row of white rounded tooth-shapes across the lower section and use a red-dominant mid-zone, making the shared structural motif visible across the two title neighbors.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVzqyephSEVw3a9xs9LARsQyYQC89Pf1zsEyJbzwfq7mT\",\n      \"reason\": \"nnxyz nifty faces #54 replaces the dense layered rectangles of #53 with a clear teal ground and spiral eye forms, offering a direct contrast in spatial density within the owned title-neighbor pair.\"\n    }\n  ],\n  \"tags\": [\n    \"tooth-row forms\",\n    \"zigzag brow bands\",\n    \"overlapping rectangles\",\n    \"striped background field\",\n    \"parallel yellow strokes\",\n    \"red horizontal band\"\n  ],\n  \"interpretiveTags\": [\n    \"pressured density\",\n    \"clamorous mood\",\n    \"staged framing\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the red horizontal band sit relative to the white rectangular forms below it, and how does that placement affect how you read the lower section of the image?\",\n  \"ambiguities\": [\n    \"The central pale vertical form could be read as a nose bridge or as an unrelated geometric shape; no supplied evidence resolves this.\",\n    \"nnxyz nnotb #4 shares overall line density but no specific structural motif with #53, so it was excluded as a weak candidate.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob/image.png",
+        "imageSHA256": "f1f46eeca5ac0ee0b8ce6737a140dda4208be8339091d192086bf3918df85f7f"
+      },
+      {
+        "artworkId": "QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4/image.png",
+        "imageSHA256": "19e13d3f2279082f723ab4c6ca2de47cf590d40f33943003b176eb7443abbc42"
+      },
+      {
+        "artworkId": "QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio/image.png",
+        "imageSHA256": "6d701636a2c6a48d13ab1090035a4ca11e5dfe76c228c86aeb82b0854d3f3f85"
+      },
+      {
+        "artworkId": "QmVzqyephSEVw3a9xs9LARsQyYQC89Pf1zsEyJbzwfq7mT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVzqyephSEVw3a9xs9LARsQyYQC89Pf1zsEyJbzwfq7mT/image.png",
+        "imageSHA256": "cd16432363fa95b5a0668a644199502c35e9b58a2a72e88b7b0c87b575c98e34"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:32.343906-05:00",
+    "usage": {
+      "inputTokens": 7717,
+      "outputTokens": 903,
+      "totalTokens": 8620,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7098
+    },
+    "requestId": "f304f125-7df3-430f-8aff-cca42b301503",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A row of rounded white rectangular forms lines the lower third, separated from the busier mid-zone by a thick red horizontal band directly above them.\",\n    \"At the top, two clusters of repeating magenta zigzag lines sit against a black-and-white striped field, with a thin cyan wave running along the very top edge.\",\n    \"In the center, overlapping rectangles and triangles in red, black, and blue converge around a pale vertical form, while loose yellow parallel strokes stack to the right.\"\n  ],\n  \"reading\": \"The image builds a face from layered geometry rather than smooth contour: zigzag bands stand in for a brow, stacked rectangles crowd the eye zone, and a row of white rounded blocks reads as an exposed lower jaw. The density in the middle feels pressured and close, while the yellow parallel strokes at the right edge introduce an odd quiet. The striped top and tooth-row bottom frame the whole composition like a stage.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbor nnxyz nifty faces #52 shares the tooth-row motif and a red-dominant mid-zone. Title neighbor nnxyz nifty faces #54 shifts to a teal ground and spiral eye forms, showing how quickly the series changes spatial density.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4\",\n      \"reason\": \"Both works place a row of white rounded tooth-shapes across the lower section and use a red-dominant mid-zone, making the shared structural motif visible across these two title neighbors.\"\n    },\n    {\n      \"targetArtworkId\": \"QmVzqyephSEVw3a9xs9LARsQyYQC89Pf1zsEyJbzwfq7mT\",\n      \"reason\": \"nnxyz nifty faces #54 replaces the dense layered rectangles with a clear teal ground and spiral eye forms, offering a direct contrast in spatial density within the owned title-neighbor pair.\"\n    }\n  ],\n  \"tags\": [\n    \"tooth-row forms\",\n    \"zigzag brow bands\",\n    \"overlapping rectangles\",\n    \"striped background field\",\n    \"parallel yellow strokes\",\n    \"red horizontal band\"\n  ],\n  \"interpretiveTags\": [\n    \"pressured density\",\n    \"staged framing\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the red horizontal band sit relative to the white rectangular forms below it, and how does that placement affect how you read the lower section of the image?\",\n  \"ambiguities\": [\n    \"The central pale vertical form could be read as a nose bridge or as an unrelated geometric shape; no supplied evidence resolves this.\",\n    \"nnxyz nnotb #4 shares overall line density but no specific structural motif with #53 and was excluded as a weak candidate.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and placement checks confirmed: magenta zigzags against black-and-white stripes at top, cyan wave above them, red band above tooth-row, and yellow parallel strokes at right all verified against the primary image.\",\n    \"Removed 'clamorous' from interpretive tags as it crossed into unsupported intent language; replaced with 'pressured density' and 'staged framing' which stay closer to visible form.\",\n    \"Both comparison IDs inspected: tooth-row and red mid-zone confirmed in QmVNnS9b; teal ground and spiral eyes confirmed in QmVzqyep; nnotb #4 correctly excluded as structurally weak.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob/image.png",
+        "imageSHA256": "f1f46eeca5ac0ee0b8ce6737a140dda4208be8339091d192086bf3918df85f7f"
+      },
+      {
+        "artworkId": "QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4/image.png",
+        "imageSHA256": "19e13d3f2279082f723ab4c6ca2de47cf590d40f33943003b176eb7443abbc42"
+      },
+      {
+        "artworkId": "QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio/image.png",
+        "imageSHA256": "6d701636a2c6a48d13ab1090035a4ca11e5dfe76c228c86aeb82b0854d3f3f85"
+      },
+      {
+        "artworkId": "QmVzqyephSEVw3a9xs9LARsQyYQC89Pf1zsEyJbzwfq7mT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVzqyephSEVw3a9xs9LARsQyYQC89Pf1zsEyJbzwfq7mT/image.png",
+        "imageSHA256": "cd16432363fa95b5a0668a644199502c35e9b58a2a72e88b7b0c87b575c98e34"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A row of rounded white rectangular forms lines the lower third, separated by a thick red horizontal band above them, suggesting a wide open mouth with teeth.\", \"At the top, two bands of repeating zigzag lines in magenta sit against a black-and-white striped field, with a thin cyan wave running above them.\", \"In the center, overlapping rectangles and triangles in red, black, and blue converge around a pale vertical form, with loose yellow parallel strokes stacked to the right.\"], \"reading\": \"The image builds a face from layered geometry rather than smooth contour: zigzag bands stand in for a brow, stacked rectangles crowd the eye zone, and a row of white rounded blocks reads as an exposed lower jaw. The density in the middle feels pressured, almost clamorous, while the yellow parallel strokes at the right edge introduce an odd calm. The striped top and tooth-row bottom frame the whole thing like a stage.\", \"contextAngle\": \"Within the owned nifty-faces subset, the title neighbor nnxyz nifty faces #52 shares the tooth-row motif and a red-dominant mid-zone, making the two a useful pair. nnxyz nifty faces #54 shifts to a teal ground and spiral eyes, showing how quickly the series changes register.\", \"connections\": [{\"targetArtworkId\": \"QmVNnS9byVyiEazkVep54GVCRzQXgBWTJ5VKa8HPKiX7f4\", \"reason\": \"Both works place a row of white rounded tooth-shapes across the lower section and use a red-dominant mid-zone, making the shared structural motif visible across the two title neighbors.\"}, {\"targetArtworkId\": \"QmVzqyephSEVw3a9xs9LARsQyYQC89Pf1zsEyJbzwfq7mT\", \"reason\": \"nnxyz nifty faces #54 replaces the dense layered rectangles of #53 with a clear teal ground and spiral eye forms, offering a direct contrast in spatial density within the owned title-neighbor pair.\"}], \"tags\": [\"tooth-row forms\", \"zigzag brow bands\", \"overlapping rectangles\", \"striped background field\", \"parallel yellow strokes\", \"red horizontal band\"], \"interpretiveTags\": [\"pressured density\", \"clamorous mood\", \"staged framing\"], \"lookingQuestion\": \"Where exactly does the red horizontal band sit relative to the white rectangular forms below it, and how does that placement affect how you read the lower section of the image?\", \"ambiguities\": [\"The central pale vertical form could be read as a nose bridge or as an unrelated geometric shape; no supplied evidence resolves this.\", \"nnxyz nnotb #4 shares overall line density but no specific structural motif with #53, so it was excluded as a weak candidate.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

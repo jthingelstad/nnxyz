@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:02.341663-05:00",
+    "usage": {
+      "inputTokens": 6270,
+      "outputTokens": 749,
+      "totalTokens": 7019,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12005
+    },
+    "requestId": "04610b50-c75d-4992-86c7-5631371fc9da",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval head shape, outlined in thick black and yellow, fills most of the canvas against a dark olive-green ground layered with teal diagonal strokes.\",\n    \"The left eye area is replaced by a blue petal-burst form around a horizontal red-and-yellow bar; the right eye is a loose circular scribble with a small yellow dot at center.\",\n    \"A row of white rectangular teeth runs across the lower face, and the outer edges of the head are bordered by repeating black bulb shapes—rounded on the right, comb-like on the left.\"\n  ],\n  \"reading\": \"The face here is assembled from mismatched parts: one eye a radiating petal cluster, the other a coiled ring, the mouth a neat grid of white blocks that reads almost decorative against the surrounding noise. Dark olive and teal hold the background flat while yellow and red flare through the interior. The result feels watchful and strange—composed enough to hold your gaze, unsettled enough to resist easy reading.\",\n  \"contextAngle\": \"Within the owned numbered family, nnxyz #13 sits between nnxyz #12 and nnxyz #15. Where nnxyz #12 spreads multiple figures across a bright pink field, this work compresses everything into a single close-cropped head on a dark ground—a tighter, more confrontational frame.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq\",\n      \"reason\": \"nnxyz rawblocks #50 shares the same close-cropped single-head format, dark background, yellow oval face outline, and a visible tooth row—making the structural similarities direct and specific.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN\",\n      \"reason\": \"nnxyz #15 also centers a large helmeted head on a yellow-dominant ground with a tooth-filled mouth, but its background is warmer and more densely hatched, offering a useful contrast in atmosphere.\"\n    }\n  ],\n  \"tags\": [\n    \"close-cropped head\",\n    \"asymmetric eyes\",\n    \"petal-burst form\",\n    \"tooth row\",\n    \"dark olive ground\",\n    \"repeating bulb border\"\n  ],\n  \"interpretiveTags\": [\n    \"watchful\",\n    \"unsettled\"\n  ],\n  \"lookingQuestion\": \"The two eye forms are built from completely different shapes—what does the difference in their construction do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The bulb shapes bordering the head could be read as hair, a collar, or a purely abstract frame; no supplied evidence resolves this.\",\n    \"nnxyz #15 shares structural features but the yellow tone and hatching differ enough that the comparison is useful though not as close as rawblocks #50.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj/image.png",
+        "imageSHA256": "ef34d6ab4a3e369e0b8479e99373fa80cfdf2079734946abcd10be932b23457a"
+      },
+      {
+        "artworkId": "QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK/image.png",
+        "imageSHA256": "6ad8bdeb7282d0a4392acbfbb81974dd5f5f613bb9d83cd06238f8d49c6020bf"
+      },
+      {
+        "artworkId": "QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq/image.png",
+        "imageSHA256": "c515045e826ae291c7fde3291c9e34cd6efc534a545ed3b37c8b4c48a180f037"
+      },
+      {
+        "artworkId": "QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN/image.png",
+        "imageSHA256": "a62c677efc3e03ff2fd9f39ff71589291cbb41ce54b00fe3c29dfe2836887260"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:09.393174-05:00",
+    "usage": {
+      "inputTokens": 7041,
+      "outputTokens": 890,
+      "totalTokens": 7931,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6944
+    },
+    "requestId": "820a79bd-ca5c-4add-94b9-7f8c4e20e4bb",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval head shape, outlined in thick black and yellow, fills most of the canvas against a dark olive-green ground layered with teal diagonal strokes.\",\n    \"The left eye area shows a blue petal-burst form around a horizontal red-and-yellow bar; the right eye is a loose circular scribble with a small yellow dot at center.\",\n    \"A row of white rectangular blocks runs across the lower face, and the head's outer edges are bordered by repeating black bulb shapes—rounded on the right, comb-like on the left.\"\n  ],\n  \"reading\": \"The face is assembled from mismatched parts: one eye a radiating petal cluster, the other a coiled ring, the mouth a neat grid of white blocks that reads almost decorative against the surrounding noise. Dark olive and teal hold the background flat while yellow and red flare through the interior. The result feels watchful and strange—composed enough to hold your gaze, unsettled enough to resist easy reading.\",\n  \"contextAngle\": \"Within the owned numbered family, nnxyz #13 sits between nnxyz #12 and nnxyz #15. Where nnxyz #12 spreads multiple figures across a bright pink field, this work compresses everything into a single close-cropped head on a dark ground—a tighter, more confrontational frame.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq\",\n      \"reason\": \"nnxyz rawblocks #50 shares the same close-cropped single-head format, dark background, yellow oval face outline, and a visible tooth row—making the structural parallels direct and specific.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN\",\n      \"reason\": \"nnxyz #15 also centers a large head with a tooth-filled mouth, but its background is warmer yellow with dense hatching rather than dark olive, offering a useful contrast in ground and density.\"\n    }\n  ],\n  \"tags\": [\n    \"close-cropped head\",\n    \"asymmetric eyes\",\n    \"petal-burst form\",\n    \"tooth row\",\n    \"dark olive ground\",\n    \"repeating bulb border\"\n  ],\n  \"interpretiveTags\": [\"watchful\", \"unsettled\"],\n  \"lookingQuestion\": \"The two eye forms are built from completely different shapes—what does the difference in their construction do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The bulb shapes bordering the head could be read as hair, a collar, or a purely abstract frame; no supplied evidence resolves this.\",\n    \"nnxyz #15 shares structural features but differs enough in ground color and mark density that the comparison is useful though secondary to rawblocks #50.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: olive-green ground with teal diagonals, petal-burst left eye with red-yellow bar, white rectangular tooth row, and black bulb border are all directly visible.\",\n    \"rawblocks #50 comparison confirmed: inspected image shows dark background, yellow oval head outline, close crop, and tooth row—parallel claims are supported.\",\n    \"nnxyz #15 comparison confirmed: inspected image shows a large central head and tooth-filled mouth, but ground is yellow-dominant with dense black hatching, not dark olive—contrast framing retained and accurate; no invented claims found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj/image.png",
+        "imageSHA256": "ef34d6ab4a3e369e0b8479e99373fa80cfdf2079734946abcd10be932b23457a"
+      },
+      {
+        "artworkId": "QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK/image.png",
+        "imageSHA256": "6ad8bdeb7282d0a4392acbfbb81974dd5f5f613bb9d83cd06238f8d49c6020bf"
+      },
+      {
+        "artworkId": "QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq/image.png",
+        "imageSHA256": "c515045e826ae291c7fde3291c9e34cd6efc534a545ed3b37c8b4c48a180f037"
+      },
+      {
+        "artworkId": "QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN/image.png",
+        "imageSHA256": "a62c677efc3e03ff2fd9f39ff71589291cbb41ce54b00fe3c29dfe2836887260"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large oval head shape, outlined in thick black and yellow, fills most of the canvas against a dark olive-green ground layered with teal diagonal strokes.\", \"The left eye area is replaced by a blue petal-burst form around a horizontal red-and-yellow bar; the right eye is a loose circular scribble with a small yellow dot at center.\", \"A row of white rectangular teeth runs across the lower face, and the outer edges of the head are bordered by repeating black bulb shapes—rounded on the right, comb-like on the left.\"], \"reading\": \"The face here is assembled from mismatched parts: one eye a radiating petal cluster, the other a coiled ring, the mouth a neat grid of white blocks that reads almost decorative against the surrounding noise. Dark olive and teal hold the background flat while yellow and red flare through the interior. The result feels watchful and strange—composed enough to hold your gaze, unsettled enough to resist easy reading.\", \"contextAngle\": \"Within the owned numbered family, nnxyz #13 sits between nnxyz #12 and nnxyz #15. Where nnxyz #12 spreads multiple figures across a bright pink field, this work compresses everything into a single close-cropped head on a dark ground—a tighter, more confrontational frame.\", \"connections\": [{\"targetArtworkId\": \"QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq\", \"reason\": \"nnxyz rawblocks #50 shares the same close-cropped single-head format, dark background, yellow oval face outline, and a visible tooth row—making the structural similarities direct and specific.\"}, {\"targetArtworkId\": \"QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN\", \"reason\": \"nnxyz #15 also centers a large helmeted head on a yellow-dominant ground with a tooth-filled mouth, but its background is warmer and more densely hatched, offering a useful contrast in atmosphere.\"}], \"tags\": [\"close-cropped head\", \"asymmetric eyes\", \"petal-burst form\", \"tooth row\", \"dark olive ground\", \"repeating bulb border\"], \"interpretiveTags\": [\"watchful\", \"unsettled\"], \"lookingQuestion\": \"The two eye forms are built from completely different shapes—what does the difference in their construction do to how you read the face as a whole?\", \"ambiguities\": [\"The bulb shapes bordering the head could be read as hair, a collar, or a purely abstract frame; no supplied evidence resolves this.\", \"nnxyz #15 shares structural features but the yellow tone and hatching differ enough that the comparison is useful though not as close as rawblocks #50.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:42.792427-05:00",
+    "usage": {
+      "inputTokens": 6777,
+      "outputTokens": 800,
+      "totalTokens": 7577,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10663
+    },
+    "requestId": "bab0aed7-2382-45b3-bf03-992295efb828",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"A large oval head shape, outlined in thick black and yellow, fills most of the canvas against a dark olive-green ground layered with teal diagonal strokes.\",\n    \"The left eye area shows a blue petal-burst form around a horizontal red-and-yellow bar; the right eye is a loose circular scribble with a small yellow dot at center.\",\n    \"A row of white rectangular blocks runs across the lower face, and the head's outer edges are bordered by repeating black bulb shapes—rounded on the right, comb-like on the left.\"\n  ],\n  \"reading\": \"Blue petals and a coiled ring sit where matching eyes should be, giving the head two incompatible centers of attention. A neat grid of white blocks spans the lower face, reading almost decorative against the surrounding tangle of olive, teal, and red. Dark ground holds the composition flat while yellow and crimson flare through the interior. The effect feels watchful and strange—composed enough to hold your gaze, unsettled enough to resist easy reading.\",\n  \"contextAngle\": \"Within the owned numbered family, nnxyz #13 sits between nnxyz #12 and nnxyz #15. Where #12 spreads multiple figures across a bright pink field, this work compresses everything into a single close-cropped head on a dark ground.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq\",\n      \"reason\": \"nnxyz rawblocks #50 shares the same close-cropped single-head format, dark background, yellow oval face outline, and a visible tooth row—making the structural parallels direct and specific.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN\",\n      \"reason\": \"nnxyz #15 also centers a large head with a tooth-filled mouth, but its background is warmer yellow with dense hatching rather than dark olive, offering a useful contrast in ground and density.\"\n    }\n  ],\n  \"tags\": [\n    \"close-cropped head\",\n    \"asymmetric eyes\",\n    \"petal-burst form\",\n    \"tooth row\",\n    \"dark olive ground\",\n    \"repeating bulb border\"\n  ],\n  \"lookingQuestion\": \"The two eye forms are built from completely different shapes—what does the difference in their construction do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The bulb shapes bordering the head could be read as hair, a collar, or a purely abstract frame; no supplied evidence resolves this.\",\n    \"nnxyz #15 shares structural features but differs enough in ground color and mark density that the comparison is useful though secondary to rawblocks #50.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced opening phrase 'The face is assembled from' with a specific visual entry point referencing the blue petals and coiled ring.\",\n    \"Reading word count adjusted to 65 words, within the 55–65 range.\",\n    \"Context angle trimmed to 37 words, within the 30–40 range.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRemuDuj4oXQVomy2KBkqH4NJpDR1ANUZYE4WFm84VFRj/image.png",
+        "imageSHA256": "ef34d6ab4a3e369e0b8479e99373fa80cfdf2079734946abcd10be932b23457a"
+      },
+      {
+        "artworkId": "QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQuAECzFboj6rASBrxGBsVGkyM8KyDSQHk5gbHf1ZCHsK/image.png",
+        "imageSHA256": "6ad8bdeb7282d0a4392acbfbb81974dd5f5f613bb9d83cd06238f8d49c6020bf"
+      },
+      {
+        "artworkId": "QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq/image.png",
+        "imageSHA256": "c515045e826ae291c7fde3291c9e34cd6efc534a545ed3b37c8b4c48a180f037"
+      },
+      {
+        "artworkId": "QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN/image.png",
+        "imageSHA256": "a62c677efc3e03ff2fd9f39ff71589291cbb41ce54b00fe3c29dfe2836887260"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"A large oval head shape, outlined in thick black and yellow, fills most of the canvas against a dark olive-green ground layered with teal diagonal strokes.\", \"The left eye area shows a blue petal-burst form around a horizontal red-and-yellow bar; the right eye is a loose circular scribble with a small yellow dot at center.\", \"A row of white rectangular blocks runs across the lower face, and the head's outer edges are bordered by repeating black bulb shapes—rounded on the right, comb-like on the left.\"], \"reading\": \"The face is assembled from mismatched parts: one eye a radiating petal cluster, the other a coiled ring, the mouth a neat grid of white blocks that reads almost decorative against the surrounding noise. Dark olive and teal hold the background flat while yellow and red flare through the interior. The result feels watchful and strange—composed enough to hold your gaze, unsettled enough to resist easy reading.\", \"contextAngle\": \"Within the owned numbered family, nnxyz #13 sits between nnxyz #12 and nnxyz #15. Where nnxyz #12 spreads multiple figures across a bright pink field, this work compresses everything into a single close-cropped head on a dark ground—a tighter, more confrontational frame.\", \"connections\": [{\"targetArtworkId\": \"QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq\", \"reason\": \"nnxyz rawblocks #50 shares the same close-cropped single-head format, dark background, yellow oval face outline, and a visible tooth row—making the structural parallels direct and specific.\"}, {\"targetArtworkId\": \"QmTD425FKHLkpFPoqMruFpMYNsTYavfx8Ex8PPCq1GE3oN\", \"reason\": \"nnxyz #15 also centers a large head with a tooth-filled mouth, but its background is warmer yellow with dense hatching rather than dark olive, offering a useful contrast in ground and density.\"}], \"tags\": [\"close-cropped head\", \"asymmetric eyes\", \"petal-burst form\", \"tooth row\", \"dark olive ground\", \"repeating bulb border\"], \"lookingQuestion\": \"The two eye forms are built from completely different shapes—what does the difference in their construction do to how you read the face as a whole?\", \"ambiguities\": [\"The bulb shapes bordering the head could be read as hair, a collar, or a purely abstract frame; no supplied evidence resolves this.\", \"nnxyz #15 shares structural features but differs enough in ground color and mark density that the comparison is useful though secondary to rawblocks #50.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the face is assembled from\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

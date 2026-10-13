@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:09.931965-05:00",
+    "usage": {
+      "inputTokens": 6325,
+      "outputTokens": 801,
+      "totalTokens": 7126,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12986
+    },
+    "requestId": "83479045-6414-45ee-8e42-c6e7810771b5",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large roughly oval form fills most of the olive-green field, built from stacked rectangular zones of yellow, blue, red and black with loose scribbled lines radiating outward at the edges.\",\n    \"Two framed eye-like squares sit side by side near the upper center: the left holds dense red spiral coils, the right a smaller grey spiral; both are outlined in yellow and black with zigzag marks along their lower edges.\",\n    \"A wide horizontal band near the bottom shows alternating black-and-white striped blocks, flanked above by a yellow rectangle containing jagged triangular marks that read as teeth.\"\n  ],\n  \"reading\": \"The face-like form is assembled from hard rectangular panels rather than curved anatomy, giving it the feel of a constructed object rather than a living one. The mismatched spirals in the two eye zones—one burning red, one cool grey—pull the reading in two directions at once. Loose scribbled lines escape the outer edge in dark red and yellow, as though the contained structure is under pressure from within.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #170 and nnxyz nnotb #172. All three share a face-like structure on a flat ground, but #171 replaces #170's deep red field and loose spatial layout with a tighter paneled construction on olive green.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT\",\n      \"reason\": \"Both works use framed square eye zones with spiral interiors and a banded tooth row at the base, but #170 spreads these elements across a saturated red ground with more open spacing, while #171 compresses them into a single paneled mass on olive.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV\",\n      \"reason\": \"Title neighbor #172 also centers a face-like form on a dark green ground with scribbled line work, but its form is rendered with blended volume and fewer hard rectangular divisions, making the contrast in construction approach visible across the two works.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular panel construction\",\n    \"spiral eye zones\",\n    \"zigzag tooth band\",\n    \"olive green ground\",\n    \"radiating scribble lines\",\n    \"asymmetric paired frames\"\n  ],\n  \"interpretiveTags\": [\n    \"contained pressure\",\n    \"mechanical unease\",\n    \"mismatched intensity\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the dense red spiral in the left eye zone and the smaller grey spiral in the right one do to how you move between the two sides of the form?\",\n  \"ambiguities\": [\n    \"The lettering visible in the lower-left area of the image is treated as content within the artwork; its meaning is not interpreted here.\",\n    \"nnxyz nifty faces #53 was inspected but shares no strong formal parallel with #171 beyond loose line work; it is omitted from connections to avoid a weak match.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaUPic4gUTEHJwHVfPMEMFjbdsDKw9HrX9kxJB4xE7ZKM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaUPic4gUTEHJwHVfPMEMFjbdsDKw9HrX9kxJB4xE7ZKM/image.png",
+        "imageSHA256": "778f225b62c61d2dd7139a77553be405daa2e90ea877a960badf3aaca2b0d44a"
+      },
+      {
+        "artworkId": "QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT/image.png",
+        "imageSHA256": "29a58eb9933f348720d68665a037f5b04d6aed0b0800b971ef0e9e56d915c81a"
+      },
+      {
+        "artworkId": "QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob/image.png",
+        "imageSHA256": "f1f46eeca5ac0ee0b8ce6737a140dda4208be8339091d192086bf3918df85f7f"
+      },
+      {
+        "artworkId": "QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV/image.png",
+        "imageSHA256": "bb9e72a385ede768d203f76d2fa1ca4032a532db474a3794abeaa23e79675eaa"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:57:16.658161-05:00",
+    "usage": {
+      "inputTokens": 7146,
+      "outputTokens": 1014,
+      "totalTokens": 8160,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6644
+    },
+    "requestId": "ed9dbea1-5e2e-45ff-b1c4-2b0810d83f2f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large roughly oval form fills most of the olive-green field, built from stacked rectangular zones of yellow, blue, red and black with loose scribbled lines radiating outward at the edges.\",\n    \"Two framed square zones sit side by side near the upper center: the left holds dense red spiral coils, the right a smaller grey spiral; both are outlined in yellow and black with zigzag marks along their lower edges.\",\n    \"A wide horizontal band near the bottom shows alternating black-and-white striped blocks, flanked above by a yellow rectangle containing jagged triangular marks.\"\n  ],\n  \"reading\": \"The face-like form is assembled from hard rectangular panels rather than curved anatomy, giving it the feel of a constructed object. The mismatched spirals in the two eye zones—one dense red, one cool grey—pull attention in two directions at once. Loose scribbled lines escape the outer edge in dark red and yellow, as though the contained structure is under pressure from within.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #170 and nnxyz nnotb #172. All three share a face-like structure on a flat ground, but #171 replaces #170's deep red field and open spacing with a tighter paneled construction on olive green.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT\",\n      \"reason\": \"Both works use framed square eye zones with spiral interiors and a banded tooth row at the base, but #170 spreads these across a saturated red ground with more open spacing, while #171 compresses them into a single paneled mass on olive.\"\n    },\n    {\n      \"targetArtworkId\": \"QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV\",\n      \"reason\": \"Title neighbor #172 also centers a face-like form on a dark green ground with scribbled line work, but its form uses blended volume and fewer hard rectangular divisions, making the contrast in construction approach visible across the two works.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular panel construction\",\n    \"spiral eye zones\",\n    \"zigzag tooth band\",\n    \"olive green ground\",\n    \"radiating scribble lines\",\n    \"asymmetric paired frames\"\n  ],\n  \"interpretiveTags\": [\n    \"contained pressure\",\n    \"mechanical unease\",\n    \"mismatched intensity\"\n  ],\n  \"lookingQuestion\": \"What does the difference between the dense red spiral in the left eye zone and the smaller grey spiral in the right one do to how you move between the two sides of the form?\",\n  \"ambiguities\": [\n    \"The lettering visible in the lower-left area of the image is treated as content within the artwork; its meaning is not interpreted here.\",\n    \"nnxyz nifty faces #53 was inspected but shares no strong formal parallel with #171 beyond loose line work; it is omitted from connections to avoid a weak match.\"\n  ],\n  \"reviewFindings\": [\n    \"Observations confirmed against image: oval form on olive green, dual framed spiral zones with yellow-black outlines and zigzag lower edges, and black-and-white striped tooth band are all visually verified.\",\n    \"Comparison with QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT confirmed: #170 shows framed spiral eye zones and a tooth row on a red ground with looser spacing—contrast with #171's paneled olive construction is accurate.\",\n    \"Comparison with QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV confirmed: #172 shows a face-like form on dark green with scribbled lines but rendered with blended volume rather than hard rectangular panels—contrast is visually supported.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaUPic4gUTEHJwHVfPMEMFjbdsDKw9HrX9kxJB4xE7ZKM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaUPic4gUTEHJwHVfPMEMFjbdsDKw9HrX9kxJB4xE7ZKM/image.png",
+        "imageSHA256": "778f225b62c61d2dd7139a77553be405daa2e90ea877a960badf3aaca2b0d44a"
+      },
+      {
+        "artworkId": "QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT/image.png",
+        "imageSHA256": "29a58eb9933f348720d68665a037f5b04d6aed0b0800b971ef0e9e56d915c81a"
+      },
+      {
+        "artworkId": "QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQf6d9ceGmXNLw8hk3b1YWcA6DTqg1aXvHCv7Hi82Gtob/image.png",
+        "imageSHA256": "f1f46eeca5ac0ee0b8ce6737a140dda4208be8339091d192086bf3918df85f7f"
+      },
+      {
+        "artworkId": "QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV/image.png",
+        "imageSHA256": "bb9e72a385ede768d203f76d2fa1ca4032a532db474a3794abeaa23e79675eaa"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large roughly oval form fills most of the olive-green field, built from stacked rectangular zones of yellow, blue, red and black with loose scribbled lines radiating outward at the edges.\", \"Two framed eye-like squares sit side by side near the upper center: the left holds dense red spiral coils, the right a smaller grey spiral; both are outlined in yellow and black with zigzag marks along their lower edges.\", \"A wide horizontal band near the bottom shows alternating black-and-white striped blocks, flanked above by a yellow rectangle containing jagged triangular marks that read as teeth.\"], \"reading\": \"The face-like form is assembled from hard rectangular panels rather than curved anatomy, giving it the feel of a constructed object rather than a living one. The mismatched spirals in the two eye zones—one burning red, one cool grey—pull the reading in two directions at once. Loose scribbled lines escape the outer edge in dark red and yellow, as though the contained structure is under pressure from within.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #170 and nnxyz nnotb #172. All three share a face-like structure on a flat ground, but #171 replaces #170's deep red field and loose spatial layout with a tighter paneled construction on olive green.\", \"connections\": [{\"targetArtworkId\": \"QmPj9HjN2KaHhzCY429oBURBJiYaD54o8fnhEtWF6RnuWT\", \"reason\": \"Both works use framed square eye zones with spiral interiors and a banded tooth row at the base, but #170 spreads these elements across a saturated red ground with more open spacing, while #171 compresses them into a single paneled mass on olive.\"}, {\"targetArtworkId\": \"QmXq5zKrwTTr3PD9Bpq1tZcGqU4MyfLMTKjyS5Fg7beaDV\", \"reason\": \"Title neighbor #172 also centers a face-like form on a dark green ground with scribbled line work, but its form is rendered with blended volume and fewer hard rectangular divisions, making the contrast in construction approach visible across the two works.\"}], \"tags\": [\"rectangular panel construction\", \"spiral eye zones\", \"zigzag tooth band\", \"olive green ground\", \"radiating scribble lines\", \"asymmetric paired frames\"], \"interpretiveTags\": [\"contained pressure\", \"mechanical unease\", \"mismatched intensity\"], \"lookingQuestion\": \"What does the difference between the dense red spiral in the left eye zone and the smaller grey spiral in the right one do to how you move between the two sides of the form?\", \"ambiguities\": [\"The lettering visible in the lower-left area of the image is treated as content within the artwork; its meaning is not interpreted here.\", \"nnxyz nifty faces #53 was inspected but shares no strong formal parallel with #171 beyond loose line work; it is omitted from connections to avoid a weak match.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

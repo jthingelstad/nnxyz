@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:25.329081-05:00",
+    "usage": {
+      "inputTokens": 6090,
+      "outputTokens": 828,
+      "totalTokens": 6918,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14801
+    },
+    "requestId": "5a74a784-3576-4e7a-aa95-d8156cd4f376",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form occupies the center, built from overlapping loops of black, white, yellow, and red lines on a dark olive-brown ground, with two circular coil clusters suggesting eye sockets.\",\n    \"A horizontal band of dense white zigzag marks runs across the lower third, flanked by teal and orange-red accents, sitting below the central mass like a row of teeth or a fence.\",\n    \"The border zone is teal-blue with a mauve-brown outer edge; the left margin carries a vertical column of soft pink-beige rounded shapes outlined in black, evenly spaced from top to bottom.\"\n  ],\n  \"reading\": \"Layers of looping line in yellow, white, red, and black pile onto a dark center until the surface feels pressurized. The two coiled eye-socket forms pull the gaze inward while the zigzag band below holds a different, more mechanical rhythm. Warm olive and cool teal sit in low-grade tension throughout. The left column of soft rounded shapes offers a quieter, almost tender counterpoint to the noise at the center.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #67 and nnxyz nnotb #69, which also use bordered compositions with face-like central masses. The teal field and mauve outer edge appear across all three, while the line density here reads as notably higher than in #67.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme\",\n      \"reason\": \"Both works use a bordered square format with a face-like central form, but #67 keeps its eye shapes bold and isolated against black while #68 buries equivalent forms under denser overlapping loops.\"\n    },\n    {\n      \"targetArtworkId\": \"QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3\",\n      \"reason\": \"#69 shares the teal-and-warm-ground border structure and uses red X marks as focal accents, offering a direct contrast to the coiled spiral eye forms that serve the same anchoring role in #68.\"\n    }\n  ],\n  \"tags\": [\n    \"coiled line loops\",\n    \"bordered composition\",\n    \"teal ground\",\n    \"vertical repeated shapes\",\n    \"zigzag horizontal band\",\n    \"layered overlapping marks\"\n  ],\n  \"interpretiveTags\": [\n    \"pressurized interior\",\n    \"tender-versus-chaotic contrast\"\n  ],\n  \"lookingQuestion\": \"What does the evenly spaced column of soft rounded shapes along the left edge do to your reading of the dense, tangled center—does it slow your eye or redirect it?\",\n  \"ambiguities\": [\n    \"The central mass reads as a face-like form but the line density makes individual features ambiguous; the reading is based on visible coil placement, not confirmed subject identification.\",\n    \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg (nifty faces #0000) was inspected but its color palette and compositional structure differ enough that no specific formal connection stronger than general line-density could be supported; it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN/image.png",
+        "imageSHA256": "421b6eeffb13f512a7f48c63425378dda46ebdb7df5bb6a617c9bb5908672c3d"
+      },
+      {
+        "artworkId": "QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme/image.png",
+        "imageSHA256": "0d893ea5d6810dee4e1b139fa5d17e6021393bd905c859859208056d2d6b8171"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3/image.png",
+        "imageSHA256": "8003ee07cd34193841d0615cfac97a097f870cf902ab6d1fb23e7030a200c83f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:54:32.221689-05:00",
+    "usage": {
+      "inputTokens": 6940,
+      "outputTokens": 946,
+      "totalTokens": 7886,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6806
+    },
+    "requestId": "426d580b-e06c-4dd6-abcb-c5990bf366d4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large rounded form occupies the center, built from overlapping loops of black, white, yellow, and red lines on a dark olive-brown ground, with two circular coil clusters near the upper-center suggesting eye-socket positions.\",\n    \"A horizontal band of dense white zigzag marks runs across the lower third, flanked by teal and orange-red accents, sitting below the central mass.\",\n    \"The border zone is teal-blue with a mauve-brown outer edge; the left margin carries a vertical column of soft pink-beige rounded shapes outlined in black, evenly spaced from top to bottom.\"\n  ],\n  \"reading\": \"Layers of looping line in yellow, white, red, and black pile onto a dark center until the surface feels pressurized. Two coiled forms near the upper center pull the gaze inward while the zigzag band below holds a more mechanical rhythm. Warm olive and cool teal sit in low-grade tension throughout. The left column of soft rounded shapes offers a quieter counterpoint to the noise at the center.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #67 and nnxyz nnotb #69, which also use bordered compositions with face-like central masses. The teal field and mauve outer edge appear across all three, while line density here reads as notably higher than in #67.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme\",\n      \"reason\": \"Both use a bordered square format with a face-like central form, but #67 keeps its eye shapes bold and isolated against black while #68 buries equivalent forms under denser overlapping loops.\"\n    },\n    {\n      \"targetArtworkId\": \"QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3\",\n      \"reason\": \"#69 shares the teal-and-warm-ground border structure and uses red X marks as focal accents, contrasting with the coiled spiral forms that serve the same anchoring role in #68.\"\n    }\n  ],\n  \"tags\": [\n    \"coiled line loops\",\n    \"bordered composition\",\n    \"teal ground\",\n    \"vertical repeated shapes\",\n    \"zigzag horizontal band\",\n    \"layered overlapping marks\"\n  ],\n  \"interpretiveTags\": [\n    \"pressurized interior\",\n    \"tender-versus-chaotic contrast\"\n  ],\n  \"lookingQuestion\": \"What does the evenly spaced column of soft rounded shapes along the left edge do to your reading of the dense, tangled center—does it slow your eye or redirect it?\",\n  \"ambiguities\": [\n    \"The central mass reads as face-like based on coil placement, but line density makes individual features ambiguous; no confirmed subject identification is made.\",\n    \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg was inspected; its palette and structure differ enough that no specific formal connection stronger than general line-density could be supported, so it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"Coil clusters confirmed visually in upper-center region; description adjusted from 'eye sockets' to 'eye-socket positions' to avoid asserting confirmed subject identity.\",\n    \"Zigzag band placement and teal/orange-red flanking confirmed against image; 'like a row of teeth or a fence' simile removed as interpretive overreach not warranted by the mark alone.\",\n    \"All three comparison images inspected; #67 and #69 connections confirmed on specific visible grounds; nifty faces #0000 correctly omitted; word counts and ID usage verified within limits.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcnBhjgvaChSi4aEyEJKhBfDrUPct9h9dENYDge8e4QiN/image.png",
+        "imageSHA256": "421b6eeffb13f512a7f48c63425378dda46ebdb7df5bb6a617c9bb5908672c3d"
+      },
+      {
+        "artworkId": "QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme/image.png",
+        "imageSHA256": "0d893ea5d6810dee4e1b139fa5d17e6021393bd905c859859208056d2d6b8171"
+      },
+      {
+        "artworkId": "QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg/image.png",
+        "imageSHA256": "502e34efd70b2dd68b06e523989e15af70922846baca90ccd35bd22c1603de27"
+      },
+      {
+        "artworkId": "QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3/image.png",
+        "imageSHA256": "8003ee07cd34193841d0615cfac97a097f870cf902ab6d1fb23e7030a200c83f"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large rounded form occupies the center, built from overlapping loops of black, white, yellow, and red lines on a dark olive-brown ground, with two circular coil clusters suggesting eye sockets.\", \"A horizontal band of dense white zigzag marks runs across the lower third, flanked by teal and orange-red accents, sitting below the central mass like a row of teeth or a fence.\", \"The border zone is teal-blue with a mauve-brown outer edge; the left margin carries a vertical column of soft pink-beige rounded shapes outlined in black, evenly spaced from top to bottom.\"], \"reading\": \"Layers of looping line in yellow, white, red, and black pile onto a dark center until the surface feels pressurized. The two coiled eye-socket forms pull the gaze inward while the zigzag band below holds a different, more mechanical rhythm. Warm olive and cool teal sit in low-grade tension throughout. The left column of soft rounded shapes offers a quieter, almost tender counterpoint to the noise at the center.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #67 and nnxyz nnotb #69, which also use bordered compositions with face-like central masses. The teal field and mauve outer edge appear across all three, while the line density here reads as notably higher than in #67.\", \"connections\": [{\"targetArtworkId\": \"QmQVVEmXTCkkCGw7U7UCVsd7aitnUK2ZsXQV99SdBmKeme\", \"reason\": \"Both works use a bordered square format with a face-like central form, but #67 keeps its eye shapes bold and isolated against black while #68 buries equivalent forms under denser overlapping loops.\"}, {\"targetArtworkId\": \"QmR8BSTQVmHJRfJWskwnmwZ1xbsBopNE31pCJbPN9rgcp3\", \"reason\": \"#69 shares the teal-and-warm-ground border structure and uses red X marks as focal accents, offering a direct contrast to the coiled spiral eye forms that serve the same anchoring role in #68.\"}], \"tags\": [\"coiled line loops\", \"bordered composition\", \"teal ground\", \"vertical repeated shapes\", \"zigzag horizontal band\", \"layered overlapping marks\"], \"interpretiveTags\": [\"pressurized interior\", \"tender-versus-chaotic contrast\"], \"lookingQuestion\": \"What does the evenly spaced column of soft rounded shapes along the left edge do to your reading of the dense, tangled center—does it slow your eye or redirect it?\", \"ambiguities\": [\"The central mass reads as a face-like form but the line density makes individual features ambiguous; the reading is based on visible coil placement, not confirmed subject identification.\", \"QmZHvWHS7s4xta9E97McmkGZGPnY4HvXjmRvRWKoBKfBPg (nifty faces #0000) was inspected but its color palette and compositional structure differ enough that no specific formal connection stronger than general line-density could be supported; it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

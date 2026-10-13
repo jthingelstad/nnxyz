@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:51.426621-05:00",
+    "usage": {
+      "inputTokens": 6207,
+      "outputTokens": 779,
+      "totalTokens": 6986,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12416
+    },
+    "requestId": "4a2a83f3-d26e-4fba-ab98-97c683062d62",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pale yellow hand with spread fingers covers most of the face, its palm facing outward against a deep black void that fills the upper half of the composition.\",\n    \"A wide grin showing two rows of white teeth sits at the lower center, partially visible beneath the hand, with dark gaps between the teeth rendered in loose overlapping lines.\",\n    \"The surrounding field is built from broad strokes of deep red, burnt orange, and dark brown, with thin orange scribble lines tracing an irregular halo around the central dark shape.\"\n  ],\n  \"reading\": \"A hand pressed outward blocks where eyes would be, leaving only teeth visible below it — a grin without a gaze. The warm red-orange surround presses inward, making the black void behind the hand feel like an absence rather than a background. The combination reads as something between concealment and display: the smile insists on being seen while the rest withdraws.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #73 and #75. Where #73 fills its black ground with yellow dot patterns and spiked eye marks, #74 replaces surface detail with a single large hand gesture, shifting from busy ornamentation to blunt obstruction.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib\",\n      \"reason\": \"Both #73 and #74 place a wide tooth-filled grin at the lower center against a dark void, but #73 surrounds it with yellow dots and spiked marks while #74 replaces all that surface activity with a single hand blocking the upper face.\"\n    },\n    {\n      \"targetArtworkId\": \"QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb\",\n      \"reason\": \"nnxyz #18 shares the same burnt-orange and deep-red field with loose black scribble lines layered over solid color masses, a surface quality the collector links to the scrimshaw connection through line-over-ground patterning.\"\n    }\n  ],\n  \"tags\": [\n    \"hand covering face\",\n    \"exposed teeth\",\n    \"deep black void\",\n    \"orange-red surround\",\n    \"scribble line halo\",\n    \"partial face obstruction\"\n  ],\n  \"interpretiveTags\": [\n    \"concealment and display\",\n    \"unease\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the hand end and the dark void begin — and what does that boundary do to how you read the grin below it?\",\n  \"ambiguities\": [\n    \"It is unclear whether the dark shape behind the hand is a hood, hair, or pure negative space; the image does not resolve this.\",\n    \"Comparison QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4 (#75) shows a teal-ground linear face with no shared color field or gesture, so no meaningful formal connection was found and it was omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH/image.png",
+        "imageSHA256": "bb61acbe5f679b4856b0e3f8575add40902e77f3a8a86ef97a8bb3aafb793ce2"
+      },
+      {
+        "artworkId": "Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib/image.png",
+        "imageSHA256": "16322745b72186c499d967540e0eaa0274f496da4150183bb5f6a98f0218106b"
+      },
+      {
+        "artworkId": "QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb/image.png",
+        "imageSHA256": "19be552d74ed548d256a01f4c2e1aba8ec129476630166dbfaf427bf4a459be1"
+      },
+      {
+        "artworkId": "QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4/image.png",
+        "imageSHA256": "301ba5add6cada5ef518bead7e8ad2490a703ce67940b12bcf4eccf1eb140b1c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:50:58.398851-05:00",
+    "usage": {
+      "inputTokens": 7008,
+      "outputTokens": 877,
+      "totalTokens": 7885,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6811
+    },
+    "requestId": "a34f9e31-0204-4b03-ad0e-4ec367230929",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pale yellow hand with spread fingers covers most of the upper face, palm facing outward, set against a deep black void that occupies the upper half of the composition.\",\n    \"A wide grin showing two rows of white teeth sits at the lower center, partially beneath the hand, with dark gaps between teeth rendered in loose overlapping lines.\",\n    \"The surrounding field is built from broad strokes of deep red, burnt orange, and dark brown, with thin orange scribble lines tracing an irregular halo around the central dark shape.\"\n  ],\n  \"reading\": \"A hand pressed outward blocks where eyes would be, leaving only teeth visible below — a grin without a gaze. The warm red-orange surround presses inward, making the black void behind the hand feel like an absence rather than a background. The combination reads as something between concealment and display: the smile insists on being seen while the rest withdraws.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #73 and #75. Where #73 fills its black ground with yellow dot patterns and spiked eye marks, #74 replaces surface detail with a single large hand gesture, shifting from busy ornamentation to blunt obstruction.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib\",\n      \"reason\": \"Both #73 and #74 place a wide tooth-filled grin at the lower center against a dark void, but #73 surrounds it with yellow dots and spiked marks while #74 replaces all that surface activity with a single hand blocking the upper face.\"\n    }\n  ],\n  \"tags\": [\n    \"hand covering face\",\n    \"exposed teeth\",\n    \"deep black void\",\n    \"orange-red surround\",\n    \"scribble line halo\",\n    \"partial face obstruction\"\n  ],\n  \"interpretiveTags\": [\n    \"concealment and display\",\n    \"unease\"\n  ],\n  \"lookingQuestion\": \"Where exactly does the hand end and the dark void begin — and what does that boundary do to how you read the grin below it?\",\n  \"ambiguities\": [\n    \"It is unclear whether the dark shape behind the hand is a hood, hair, or pure negative space; the image does not resolve this.\",\n    \"Comparison QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4 (#75) shows a teal-ground linear face with no shared color field or gesture, so no meaningful formal connection was found and it was omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb (#18) inspected: its dominant field is orange and red with black scribble lines, which does overlap visually with #74's surround, but the collector's scrimshaw-link rationale is interpretive framing rather than a concrete formal contrast; removed to avoid a weak connection justified only by shared palette and collector perspective rather than a specific visible form relationship.\",\n    \"All three observations confirmed against the primary image: hand placement, tooth grin, and orange-red scribble surround are all directly visible.\",\n    \"Word counts checked: reading is within 55–80 words, contextAngle is within 30–55 words, each observation is under 35 words, and the single remaining comparison reason is under 35 words.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaHMoy2LJMsjdcNsQGApPuUMHWXC3CCV46Q8iUYbvVRCH/image.png",
+        "imageSHA256": "bb61acbe5f679b4856b0e3f8575add40902e77f3a8a86ef97a8bb3aafb793ce2"
+      },
+      {
+        "artworkId": "Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib/image.png",
+        "imageSHA256": "16322745b72186c499d967540e0eaa0274f496da4150183bb5f6a98f0218106b"
+      },
+      {
+        "artworkId": "QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb/image.png",
+        "imageSHA256": "19be552d74ed548d256a01f4c2e1aba8ec129476630166dbfaf427bf4a459be1"
+      },
+      {
+        "artworkId": "QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4/image.png",
+        "imageSHA256": "301ba5add6cada5ef518bead7e8ad2490a703ce67940b12bcf4eccf1eb140b1c"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A pale yellow hand with spread fingers covers most of the face, its palm facing outward against a deep black void that fills the upper half of the composition.\", \"A wide grin showing two rows of white teeth sits at the lower center, partially visible beneath the hand, with dark gaps between the teeth rendered in loose overlapping lines.\", \"The surrounding field is built from broad strokes of deep red, burnt orange, and dark brown, with thin orange scribble lines tracing an irregular halo around the central dark shape.\"], \"reading\": \"A hand pressed outward blocks where eyes would be, leaving only teeth visible below it — a grin without a gaze. The warm red-orange surround presses inward, making the black void behind the hand feel like an absence rather than a background. The combination reads as something between concealment and display: the smile insists on being seen while the rest withdraws.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #73 and #75. Where #73 fills its black ground with yellow dot patterns and spiked eye marks, #74 replaces surface detail with a single large hand gesture, shifting from busy ornamentation to blunt obstruction.\", \"connections\": [{\"targetArtworkId\": \"Qmcan7yN6okakio6JRbepcakzGWBFMXJgefykXoJBUdsib\", \"reason\": \"Both #73 and #74 place a wide tooth-filled grin at the lower center against a dark void, but #73 surrounds it with yellow dots and spiked marks while #74 replaces all that surface activity with a single hand blocking the upper face.\"}, {\"targetArtworkId\": \"QmRVkrsMjJaDa8Bg6gXZMbAhMxU1PozApBn9VtqYkcZ4Tb\", \"reason\": \"nnxyz #18 shares the same burnt-orange and deep-red field with loose black scribble lines layered over solid color masses, a surface quality the collector links to the scrimshaw connection through line-over-ground patterning.\"}], \"tags\": [\"hand covering face\", \"exposed teeth\", \"deep black void\", \"orange-red surround\", \"scribble line halo\", \"partial face obstruction\"], \"interpretiveTags\": [\"concealment and display\", \"unease\"], \"lookingQuestion\": \"Where exactly does the hand end and the dark void begin — and what does that boundary do to how you read the grin below it?\", \"ambiguities\": [\"It is unclear whether the dark shape behind the hand is a hood, hair, or pure negative space; the image does not resolve this.\", \"Comparison QmaH3GpgzNGxuaRBGPGAr2gn6NdYbMyh6KZri5hynQLDc4 (#75) shows a teal-ground linear face with no shared color field or gesture, so no meaningful formal connection was found and it was omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

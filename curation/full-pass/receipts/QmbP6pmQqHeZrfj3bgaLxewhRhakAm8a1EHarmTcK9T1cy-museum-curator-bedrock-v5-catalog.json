@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:31.423724-05:00",
+    "usage": {
+      "inputTokens": 6112,
+      "outputTokens": 799,
+      "totalTokens": 6911,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14268
+    },
+    "requestId": "8be6f8b9-bb77-4bbe-9849-ebed0a2d2e83",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark red and black figure stands upright, its head ringed with white spiky marks and two spiral eyes; white outline strokes trace the body's interior over a pale background of soft blue and pink shapes.\",\n    \"The figure's right arm extends to grip a cluster of black lines that rise to a round red disc in the upper right, marked with a yellow geometric shape and surrounded by jagged yellow strokes.\",\n    \"Along the top edge, a horizontal black line carries small angular forms; in the lower corners, blocky rectangular outlines suggest structures, and a small signature cluster sits at bottom left.\"\n  ],\n  \"reading\": \"A standing figure holds something aloft on a tangle of lines—the disc it grips glows red and yellow against a pale ground, while the body beneath reads as both solid and hollow, its white interior lines pulling against the dark fill. The spiky crown and spiral eyes give the face an unsettled charge. Soft color washes behind the figure keep the mood open rather than threatening.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #145 and nnxyz nnotb #147. Where #145 fills its space with dense layered color and #147 floods the field with a single deep red, #146 holds more open ground around its central figure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmc5ro1RuHwWCkiyb9AgGTiRuapV5HHnBzsw6M2qyUokPk\",\n      \"reason\": \"Both works place a dark figure against a warm red field and use yellow outline strokes to define facial features, but #147 compresses the composition tightly while #146 leaves the surrounding ground open.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt\",\n      \"reason\": \"rawblocks #36 shares the device of a single standing figure with a round, simply marked head, but its flat teal ground and clean silhouette contrast sharply with #146's layered line work and open wash background.\"\n    }\n  ],\n  \"tags\": [\n    \"standing figure\",\n    \"spiral eyes\",\n    \"extended arm\",\n    \"round disc held aloft\",\n    \"white interior outline\",\n    \"rectangular corner structures\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled\",\n    \"charged\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the figure's dark fill and the white lines drawn inside it do to your sense of the figure's weight or solidity?\",\n  \"ambiguities\": [\n    \"The round red disc held by the figure carries a yellow geometric mark that may be lettering or a symbol; its meaning as content cannot be determined from the image alone.\",\n    \"The comparison with QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX (nnotb #145) was inspected but its dense all-over composition offers no strong formal echo with #146's open-ground figure, so it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbP6pmQqHeZrfj3bgaLxewhRhakAm8a1EHarmTcK9T1cy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbP6pmQqHeZrfj3bgaLxewhRhakAm8a1EHarmTcK9T1cy/image.png",
+        "imageSHA256": "2680339251b1bf4c36a3368289cb51e93a0fccc9f10a1f0f070f405ddd0f7ada"
+      },
+      {
+        "artworkId": "QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX/image.png",
+        "imageSHA256": "08c1632fc9856a3e464f03164b086040b311a8e03a212bed7f1821883f534d8b"
+      },
+      {
+        "artworkId": "QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt/image.png",
+        "imageSHA256": "a1600a0b207eb11cbe2a2f408614eaaa8c0bf4baddda2a6480afe3a7c63c651c"
+      },
+      {
+        "artworkId": "Qmc5ro1RuHwWCkiyb9AgGTiRuapV5HHnBzsw6M2qyUokPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmc5ro1RuHwWCkiyb9AgGTiRuapV5HHnBzsw6M2qyUokPk/image.png",
+        "imageSHA256": "c4656f38c8101cf2d1b0d834666cbc0ae036fb8ba309c6209661cc963131cb03"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:38.222226-05:00",
+    "usage": {
+      "inputTokens": 6933,
+      "outputTokens": 917,
+      "totalTokens": 7850,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6744
+    },
+    "requestId": "3a171b9b-50d7-4b62-8efc-0d989a742cc5",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A dark red and black upright figure has a head ringed with white spiky marks and two spiral eyes; white outline strokes trace the body's interior against soft blue and pink wash shapes behind it.\",\n    \"The figure's right arm extends to grip a cluster of black lines rising to a round red disc upper right, marked with a yellow geometric shape and surrounded by jagged yellow strokes.\",\n    \"A horizontal black line runs along the top edge carrying small angular forms; blocky rectangular outlines occupy the lower corners, and a small signature cluster sits at bottom left.\"\n  ],\n  \"reading\": \"A standing figure grips a tangle of lines that leads to a glowing red and yellow disc—the body reads as both solid and hollow, its white interior lines pulling against the dark fill. The spiky crown and spiral eyes give the face an unsettled charge. Soft color washes behind the figure keep the surrounding ground open rather than closed.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #145 and nnxyz nnotb #147. Where #145 fills its space with dense layered color and #147 floods the field with a single deep red, #146 holds more open ground around its central figure.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"Qmc5ro1RuHwWCkiyb9AgGTiRuapV5HHnBzsw6M2qyUokPk\",\n      \"reason\": \"Both works use a dark figure with yellow outline strokes defining facial features, but #147 compresses the composition against a solid red field while #146 leaves the surrounding wash ground open.\"\n    },\n    {\n      \"targetArtworkId\": \"QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt\",\n      \"reason\": \"rawblocks #36 also places a single standing figure with a round, simply marked head at center, but its flat teal ground and clean silhouette contrast sharply with #146's layered line work and open wash background.\"\n    }\n  ],\n  \"tags\": [\n    \"standing figure\",\n    \"spiral eyes\",\n    \"extended arm\",\n    \"round disc held aloft\",\n    \"white interior outline\",\n    \"rectangular corner structures\"\n  ],\n  \"interpretiveTags\": [\n    \"unsettled\",\n    \"charged\"\n  ],\n  \"lookingQuestion\": \"What does the relationship between the figure's dark fill and the white lines drawn inside it do to your sense of the figure's weight or solidity?\",\n  \"ambiguities\": [\n    \"The round red disc carries a yellow geometric mark that may be lettering or a symbol; its meaning as content cannot be determined from the image alone.\",\n    \"nnotb #145 was inspected but its dense all-over composition offers no strong formal echo with #146's open-ground figure, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"Color and form checks confirmed: soft blue and pink washes, white spiky crown, spiral eyes, extended arm gripping black lines to red disc with yellow mark, and blocky corner structures all verified against the primary image.\",\n    \"Comparison with Qmc5ro1RuHwWCkiyb9AgGTiRuapV5HHnBzsw6M2qyUokPk (#147) confirmed: dark figure and yellow outline strokes present in both; contrast of open vs. compressed ground is visually supported.\",\n    \"Draft claim that #147 shares a 'warm red field' with #146 was corrected—#146's background is predominantly pale with soft blue and pink washes, not a red field; the red is concentrated in the figure and disc only.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbP6pmQqHeZrfj3bgaLxewhRhakAm8a1EHarmTcK9T1cy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbP6pmQqHeZrfj3bgaLxewhRhakAm8a1EHarmTcK9T1cy/image.png",
+        "imageSHA256": "2680339251b1bf4c36a3368289cb51e93a0fccc9f10a1f0f070f405ddd0f7ada"
+      },
+      {
+        "artworkId": "QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX/image.png",
+        "imageSHA256": "08c1632fc9856a3e464f03164b086040b311a8e03a212bed7f1821883f534d8b"
+      },
+      {
+        "artworkId": "QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt/image.png",
+        "imageSHA256": "a1600a0b207eb11cbe2a2f408614eaaa8c0bf4baddda2a6480afe3a7c63c651c"
+      },
+      {
+        "artworkId": "Qmc5ro1RuHwWCkiyb9AgGTiRuapV5HHnBzsw6M2qyUokPk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmc5ro1RuHwWCkiyb9AgGTiRuapV5HHnBzsw6M2qyUokPk/image.png",
+        "imageSHA256": "c4656f38c8101cf2d1b0d834666cbc0ae036fb8ba309c6209661cc963131cb03"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A dark red and black figure stands upright, its head ringed with white spiky marks and two spiral eyes; white outline strokes trace the body's interior over a pale background of soft blue and pink shapes.\", \"The figure's right arm extends to grip a cluster of black lines that rise to a round red disc in the upper right, marked with a yellow geometric shape and surrounded by jagged yellow strokes.\", \"Along the top edge, a horizontal black line carries small angular forms; in the lower corners, blocky rectangular outlines suggest structures, and a small signature cluster sits at bottom left.\"], \"reading\": \"A standing figure holds something aloft on a tangle of lines—the disc it grips glows red and yellow against a pale ground, while the body beneath reads as both solid and hollow, its white interior lines pulling against the dark fill. The spiky crown and spiral eyes give the face an unsettled charge. Soft color washes behind the figure keep the mood open rather than threatening.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #145 and nnxyz nnotb #147. Where #145 fills its space with dense layered color and #147 floods the field with a single deep red, #146 holds more open ground around its central figure.\", \"connections\": [{\"targetArtworkId\": \"Qmc5ro1RuHwWCkiyb9AgGTiRuapV5HHnBzsw6M2qyUokPk\", \"reason\": \"Both works place a dark figure against a warm red field and use yellow outline strokes to define facial features, but #147 compresses the composition tightly while #146 leaves the surrounding ground open.\"}, {\"targetArtworkId\": \"QmTb6BMeVdFRQxLWLa5Q6CaQZUBCTZ1E6wwCjvGhULiUUt\", \"reason\": \"rawblocks #36 shares the device of a single standing figure with a round, simply marked head, but its flat teal ground and clean silhouette contrast sharply with #146's layered line work and open wash background.\"}], \"tags\": [\"standing figure\", \"spiral eyes\", \"extended arm\", \"round disc held aloft\", \"white interior outline\", \"rectangular corner structures\"], \"interpretiveTags\": [\"unsettled\", \"charged\"], \"lookingQuestion\": \"What does the relationship between the figure's dark fill and the white lines drawn inside it do to your sense of the figure's weight or solidity?\", \"ambiguities\": [\"The round red disc held by the figure carries a yellow geometric mark that may be lettering or a symbol; its meaning as content cannot be determined from the image alone.\", \"The comparison with QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX (nnotb #145) was inspected but its dense all-over composition offers no strong formal echo with #146's open-ground figure, so it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

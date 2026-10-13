@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v4",
+    "timeCentral": "2026-10-13T09:46:29.740672-05:00",
+    "usage": {
+      "inputTokens": 6966,
+      "outputTokens": 764,
+      "totalTokens": 7730,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13843
+    },
+    "requestId": "997281f7-fb81-409f-ab51-0bf34451327e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two eye zones are built from stacked rectangles and ovals in yellow, red, and blue, with dense cross-hatching filling their interiors rather than leaving them open.\",\n    \"A large downward-pointing triangle in yellow and green-yellow anchors the lower half, enclosing green zigzag marks that read as teeth against a pale interior.\",\n    \"White, purple, and red lines scatter across the grey background in short overlapping strokes, forming a restless outer field that presses against the face's hard rectangular edges.\"\n  ],\n  \"reading\": \"Hard-edged rectangles lock the eye zones in place while the surrounding field breaks into loose, scattered strokes—two different kinds of line energy held in the same image. The lower triangle pulls the composition downward, and the green zigzag inside it carries a charged, almost confrontational feeling. That tension between rigid framing and loose overflow is where the image seems most alive.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #5 and nnxyz nifty faces #7 in both title-derived and recorded-creation order. Where #5 builds its face from thousands of looping curved lines with no hard geometry, #6 commits to stacked rectangles—a marked structural shift visible across the two images.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF\",\n      \"reason\": \"nnxyz nifty faces #7 shares the rectangular eye-socket structure and a saturated single-color background field, but replaces #6's grey ground with solid red and opens the eye forms into large concentric ovals rather than cross-hatched boxes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT\",\n      \"reason\": \"nnxyz nifty faces #5 uses the same full-bleed multi-color line approach but relies entirely on curved, looping strokes with no rectangular scaffolding, making it a direct contrast to #6's geometry-first construction.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular eye frames\",\n    \"downward triangle mouth\",\n    \"cross-hatched interior fill\",\n    \"scattered background line field\",\n    \"yellow and red dominant lines\",\n    \"zigzag tooth marks\"\n  ],\n  \"lookingQuestion\": \"The rectangular frames around the eyes are drawn with multiple overlapping lines in different colors—do those layers feel like they reinforce the shape or pull it apart?\",\n  \"ambiguities\": [\n    \"The rawblocks #14 comparison image shows a rendered, smooth-shaded style with a flat ground color that shares no visible structural logic with #6's line-only construction; no meaningful formal connection was found, so it was omitted.\",\n    \"The lettering visible in the lower-right corner is treated as a signature mark per metadata, not as instructional content, but its exact reading is not confirmed.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR/image.png",
+        "imageSHA256": "9231b0bc375701689ab74b5540fd74b3fb1e2c3d64361ffafc64d2386ac39ada"
+      },
+      {
+        "artworkId": "QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT/image.png",
+        "imageSHA256": "e70b63e08d6bf27d837ac7cab7fada338752c0c4ed0ddce188dc7e8457ee2360"
+      },
+      {
+        "artworkId": "QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY/image.png",
+        "imageSHA256": "f76de33fd65fbd9399a1edd27b6d12441f4103ce82029b84dfc5bc563f93240f"
+      },
+      {
+        "artworkId": "QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF/image.png",
+        "imageSHA256": "eb42ba3160ea0588f5dfd58fc2025eca09264fbe4fd6bd61e045ebd070cfa366"
+      }
+    ],
+    "systemPromptSHA256": "8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now.",
+    "systemPromptPath": "curation/full-pass/prompts/8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v4",
+    "timeCentral": "2026-10-13T09:46:37.467733-05:00",
+    "usage": {
+      "inputTokens": 7750,
+      "outputTokens": 896,
+      "totalTokens": 8646,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7495
+    },
+    "requestId": "187aa434-b584-4da7-b729-643fd6ca9a64",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two eye zones are built from stacked rectangles and ovals in yellow, red, and blue, with dense cross-hatching filling their interiors rather than leaving them open.\",\n    \"A large downward-pointing triangle in yellow and green-yellow anchors the lower half, enclosing green zigzag marks against a pale interior.\",\n    \"White, purple, and red lines scatter across the grey background in short overlapping strokes, forming a restless outer field that presses against the face's hard rectangular edges.\"\n  ],\n  \"reading\": \"Hard-edged rectangles lock the eye zones in place while the surrounding field breaks into loose, scattered strokes—two different kinds of line energy held in the same image. The lower triangle pulls the composition downward, and the green zigzag inside it carries a charged, almost confrontational feeling. That tension between rigid framing and loose overflow is where the image seems most alive.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #5 and nnxyz nifty faces #7 in both title-derived and recorded-creation order. Where #5 builds its face from thousands of looping curved lines with no hard geometry, #6 commits to stacked rectangles—a marked structural contrast visible across the two images.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF\",\n      \"reason\": \"nnxyz nifty faces #7 shares the rectangular eye-socket structure, but replaces #6's grey ground with solid red and opens the eye forms into large concentric ovals rather than cross-hatched filled boxes.\"\n    },\n    {\n      \"targetArtworkId\": \"QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT\",\n      \"reason\": \"nnxyz nifty faces #5 uses a multi-color line approach across the full image but relies entirely on curved, looping strokes with no rectangular scaffolding, making it a direct structural contrast to #6.\"\n    }\n  ],\n  \"tags\": [\n    \"rectangular eye frames\",\n    \"downward triangle mouth zone\",\n    \"cross-hatched interior fill\",\n    \"scattered background line field\",\n    \"yellow and red dominant lines\",\n    \"zigzag marks inside triangle\"\n  ],\n  \"lookingQuestion\": \"The rectangular frames around the eye zones are drawn with multiple overlapping lines in different colors—do those layers feel like they reinforce the shape or pull it apart?\",\n  \"ambiguities\": [\n    \"nnxyz rawblocks #14 shows a smooth-shaded rendered style with a flat ground color and no visible structural logic shared with #6's line-only construction; no meaningful formal connection was found and it was omitted.\",\n    \"The lettering in the lower-right corner is treated as a signature mark per metadata; its exact reading is not confirmed.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: stacked rectangles with cross-hatching in eye zones, downward yellow-green triangle with green zigzag interior, and scattered short strokes on grey ground are all directly visible.\",\n    \"Both comparison connections verified against inspected images: #7 does show rectangular eye sockets on a solid red ground with concentric oval forms; #5 does show looping curved lines with no rectangular geometry.\",\n    \"One word trimmed from the reading ('direct' before 'contrast' removed from contextAngle draft phrasing) to stay within limit; no color, form, or subject claims were invented or required removal.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeSKmjXiAywokKBip3wsAqGHERK3V7paXvPiVsZy9t1LR/image.png",
+        "imageSHA256": "9231b0bc375701689ab74b5540fd74b3fb1e2c3d64361ffafc64d2386ac39ada"
+      },
+      {
+        "artworkId": "QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT/image.png",
+        "imageSHA256": "e70b63e08d6bf27d837ac7cab7fada338752c0c4ed0ddce188dc7e8457ee2360"
+      },
+      {
+        "artworkId": "QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREtiMCfASghPkJpbomQLhQbrQyr4UcCW6R1MwzgBCEbY/image.png",
+        "imageSHA256": "f76de33fd65fbd9399a1edd27b6d12441f4103ce82029b84dfc5bc563f93240f"
+      },
+      {
+        "artworkId": "QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF/image.png",
+        "imageSHA256": "eb42ba3160ea0588f5dfd58fc2025eca09264fbe4fd6bd61e045ebd070cfa366"
+      }
+    ],
+    "systemPromptSHA256": "8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two eye zones are built from stacked rectangles and ovals in yellow, red, and blue, with dense cross-hatching filling their interiors rather than leaving them open.\", \"A large downward-pointing triangle in yellow and green-yellow anchors the lower half, enclosing green zigzag marks that read as teeth against a pale interior.\", \"White, purple, and red lines scatter across the grey background in short overlapping strokes, forming a restless outer field that presses against the face's hard rectangular edges.\"], \"reading\": \"Hard-edged rectangles lock the eye zones in place while the surrounding field breaks into loose, scattered strokes—two different kinds of line energy held in the same image. The lower triangle pulls the composition downward, and the green zigzag inside it carries a charged, almost confrontational feeling. That tension between rigid framing and loose overflow is where the image seems most alive.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #5 and nnxyz nifty faces #7 in both title-derived and recorded-creation order. Where #5 builds its face from thousands of looping curved lines with no hard geometry, #6 commits to stacked rectangles—a marked structural shift visible across the two images.\", \"connections\": [{\"targetArtworkId\": \"QmaTqyN39UnyBckgZcX6BN2kg4EaAdPnm8gcwuehmwnydF\", \"reason\": \"nnxyz nifty faces #7 shares the rectangular eye-socket structure and a saturated single-color background field, but replaces #6's grey ground with solid red and opens the eye forms into large concentric ovals rather than cross-hatched boxes.\"}, {\"targetArtworkId\": \"QmeXw54PuX7Yi8j5DmLpVXeED5rwsLCnmgEH58BoRXjWMT\", \"reason\": \"nnxyz nifty faces #5 uses the same full-bleed multi-color line approach but relies entirely on curved, looping strokes with no rectangular scaffolding, making it a direct contrast to #6's geometry-first construction.\"}], \"tags\": [\"rectangular eye frames\", \"downward triangle mouth\", \"cross-hatched interior fill\", \"scattered background line field\", \"yellow and red dominant lines\", \"zigzag tooth marks\"], \"lookingQuestion\": \"The rectangular frames around the eyes are drawn with multiple overlapping lines in different colors—do those layers feel like they reinforce the shape or pull it apart?\", \"ambiguities\": [\"The rawblocks #14 comparison image shows a rendered, smooth-shaded style with a flat ground color that shares no visible structural logic with #6's line-only construction; no meaningful formal connection was found, so it was omitted.\", \"The lettering visible in the lower-right corner is treated as a signature mark per metadata, not as instructional content, but its exact reading is not confirmed.\"]}",
+    "systemPromptPath": "curation/full-pass/prompts/8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350.txt"
+  }
+]

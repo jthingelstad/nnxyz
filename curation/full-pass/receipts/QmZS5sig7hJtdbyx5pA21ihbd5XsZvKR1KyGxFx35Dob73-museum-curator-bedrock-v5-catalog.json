@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:42.603046-05:00",
+    "usage": {
+      "inputTokens": 6200,
+      "outputTokens": 813,
+      "totalTokens": 7013,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13911
+    },
+    "requestId": "6094e64a-663d-42ea-9878-dcfe22ca953d",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Four yellow-skinned figures with spiky crowns occupy the composition: a tall central figure in a white shirt lettered 'NFTY INK', a smaller figure lower left, a fox-eared figure upper left, and a disembodied spiked head upper right.\",\n    \"A dense web of light-blue scribble lines fills the background, overlapping green ghost-like shapes and a muted teal ground, while black outlines anchor each figure against the loose mark-making.\",\n    \"The central figure wears dark rectangular sunglasses and black trousers; its arms extend wide, yellow against the white shirt, giving it a wider stance than the flanking figures.\"\n  ],\n  \"reading\": \"Four spiked yellow figures crowd the space, each with its own posture—one wide-armed and sunglassed at center, one small and low, one fox-eared and tilted, one reduced to a floating head. The lettered shirt reads as a sign within the image rather than a title. Blue scribble lines weave through all of them, suggesting noise or shared atmosphere rather than separation. The mood reads as loud and slightly absurd.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #116 and nnxyz nnotb #118. Where #116 fills its frame with two close, large faces on a saturated yellow ground, #117 pulls back to show full figures in a cooler, more open field.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmY2tJZFwshovguNeyfuA5W6LXoMWD6ZKoFCcAwXXGenxw\",\n      \"reason\": \"Both works share yellow as the dominant skin tone and use red cross-hatch marks on facial features, but #116 fills the frame with two large close-up faces while #117 distributes four smaller full figures across a cooler blue ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWecLBjgqqKHFNumeJuUyhMYQbwxKPsapnxHPJGEHf24x\",\n      \"reason\": \"rawblocks #61 and #117 both use a teal-blue background with loose overlapping scribble lines, and both place yellow forms against that field, though #61 works at close range with a single large form while #117 spreads multiple smaller figures across the space.\"\n    }\n  ],\n  \"tags\": [\n    \"multiple figures\",\n    \"spiky crown forms\",\n    \"yellow figure outlines\",\n    \"blue scribble background\",\n    \"embedded lettering\",\n    \"black outline drawing\"\n  ],\n  \"interpretiveTags\": [\n    \"crowd energy\",\n    \"absurdist tone\"\n  ],\n  \"lookingQuestion\": \"The blue scribble lines pass through and behind all four figures equally—does that shared layer make the figures feel connected to each other, or does it read more like a field they are each separately caught in?\",\n  \"ambiguities\": [\n    \"The fox-eared upper-left figure holds what appears to be a small blade or scissors shape; the object is not clearly resolved in the line work.\",\n    \"The nnotb title-order and recorded-creation order align for this owned subset, but gaps may exist in the full artist catalogue outside the collection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZS5sig7hJtdbyx5pA21ihbd5XsZvKR1KyGxFx35Dob73",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZS5sig7hJtdbyx5pA21ihbd5XsZvKR1KyGxFx35Dob73/image.png",
+        "imageSHA256": "6fed99c847bebe6d478227564621a9c77b2afdf5208e44a6a4c60218c5eb06c5"
+      },
+      {
+        "artworkId": "QmY2tJZFwshovguNeyfuA5W6LXoMWD6ZKoFCcAwXXGenxw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY2tJZFwshovguNeyfuA5W6LXoMWD6ZKoFCcAwXXGenxw/image.png",
+        "imageSHA256": "d933d1d101ff161c3659b608327a92b7a67dadf25aad820e513293976ebcfffc"
+      },
+      {
+        "artworkId": "QmWecLBjgqqKHFNumeJuUyhMYQbwxKPsapnxHPJGEHf24x",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWecLBjgqqKHFNumeJuUyhMYQbwxKPsapnxHPJGEHf24x/image.png",
+        "imageSHA256": "1a59d3374b1a7dc882a051837917c24e772a692bd88ba5268a2ecf76b564f922"
+      },
+      {
+        "artworkId": "QmSS6bhMSBAHWa4kc7gs7H8sx8n9Z2LfZtMtWrRZydRTTF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSS6bhMSBAHWa4kc7gs7H8sx8n9Z2LfZtMtWrRZydRTTF/image.png",
+        "imageSHA256": "5706474da8e9d30e370be16c523f89ad4be78334771657ada0ca63794b86daa2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:55:49.123310-05:00",
+    "usage": {
+      "inputTokens": 7035,
+      "outputTokens": 948,
+      "totalTokens": 7983,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6437
+    },
+    "requestId": "ce3d04a3-be61-44a6-b6e9-19ba975304ec",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Four yellow-outlined figures with spiky crowns occupy the composition: a tall central figure in a white shirt lettered 'NFTY INK', a smaller figure lower left, a fox-eared figure upper left, and a disembodied spiked head upper right.\",\n    \"A dense web of light-blue scribble lines fills the background, overlapping green ghost-like shapes and a muted teal ground, while black outlines anchor each figure against the loose mark-making.\",\n    \"The central figure wears dark rectangular sunglasses and black trousers; its arms extend wide, yellow against the white shirt, giving it a broader stance than the flanking figures.\"\n  ],\n  \"reading\": \"Four spiked yellow figures crowd the space, each with its own posture—one wide-armed and sunglassed at center, one small and low, one fox-eared and tilted, one reduced to a floating head. The lettered shirt reads as a sign within the image. Blue scribble lines weave through all of them, suggesting noise or shared atmosphere rather than separation. The mood reads as loud and slightly absurd.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #116 and nnxyz nnotb #118. Where #116 fills its frame with two large close-up faces on a saturated yellow ground, #117 pulls back to show full figures across a cooler, more open field.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmY2tJZFwshovguNeyfuA5W6LXoMWD6ZKoFCcAwXXGenxw\",\n      \"reason\": \"Both works use yellow as the dominant figure tone and place red cross-hatch marks on facial features, but #116 fills the frame with two large close-up faces on a warm ground while #117 distributes four smaller full figures across a cooler blue field.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWecLBjgqqKHFNumeJuUyhMYQbwxKPsapnxHPJGEHf24x\",\n      \"reason\": \"rawblocks #61 shares a teal-blue background with loose overlapping scribble lines and yellow forms set against that field, though it works at close range with a single large form rather than spreading multiple figures across the space.\"\n    }\n  ],\n  \"tags\": [\n    \"multiple figures\",\n    \"spiky crown forms\",\n    \"yellow figure outlines\",\n    \"blue scribble background\",\n    \"embedded lettering\",\n    \"black outline drawing\"\n  ],\n  \"interpretiveTags\": [\n    \"crowd energy\",\n    \"absurdist tone\"\n  ],\n  \"lookingQuestion\": \"The blue scribble lines pass through and behind all four figures equally—does that shared layer make the figures feel connected to each other, or does it read more like a field they are each separately caught in?\",\n  \"ambiguities\": [\n    \"The fox-eared upper-left figure holds what appears to be a small blade or scissors shape; the object is not clearly resolved in the line work.\",\n    \"Title-order and recorded-creation order align for this owned nnotb subset, but gaps may exist in the full artist catalogue outside the collection.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed: four yellow-outlined spiked figures visible as described; 'NFTY INK' lettering on central figure's shirt verified in image.\",\n    \"Confirmed: #116 shows two large close-up faces on a saturated yellow ground; contrast with #117's cooler, more open multi-figure field is accurate.\",\n    \"Confirmed: rawblocks #61 shows a teal-blue background with loose scribble lines and yellow forms—comparison is visually grounded; 'yellow-skinned' softened to 'yellow-outlined' to avoid unsupported identity inference.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZS5sig7hJtdbyx5pA21ihbd5XsZvKR1KyGxFx35Dob73",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZS5sig7hJtdbyx5pA21ihbd5XsZvKR1KyGxFx35Dob73/image.png",
+        "imageSHA256": "6fed99c847bebe6d478227564621a9c77b2afdf5208e44a6a4c60218c5eb06c5"
+      },
+      {
+        "artworkId": "QmY2tJZFwshovguNeyfuA5W6LXoMWD6ZKoFCcAwXXGenxw",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmY2tJZFwshovguNeyfuA5W6LXoMWD6ZKoFCcAwXXGenxw/image.png",
+        "imageSHA256": "d933d1d101ff161c3659b608327a92b7a67dadf25aad820e513293976ebcfffc"
+      },
+      {
+        "artworkId": "QmWecLBjgqqKHFNumeJuUyhMYQbwxKPsapnxHPJGEHf24x",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWecLBjgqqKHFNumeJuUyhMYQbwxKPsapnxHPJGEHf24x/image.png",
+        "imageSHA256": "1a59d3374b1a7dc882a051837917c24e772a692bd88ba5268a2ecf76b564f922"
+      },
+      {
+        "artworkId": "QmSS6bhMSBAHWa4kc7gs7H8sx8n9Z2LfZtMtWrRZydRTTF",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmSS6bhMSBAHWa4kc7gs7H8sx8n9Z2LfZtMtWrRZydRTTF/image.png",
+        "imageSHA256": "5706474da8e9d30e370be16c523f89ad4be78334771657ada0ca63794b86daa2"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Four yellow-skinned figures with spiky crowns occupy the composition: a tall central figure in a white shirt lettered 'NFTY INK', a smaller figure lower left, a fox-eared figure upper left, and a disembodied spiked head upper right.\", \"A dense web of light-blue scribble lines fills the background, overlapping green ghost-like shapes and a muted teal ground, while black outlines anchor each figure against the loose mark-making.\", \"The central figure wears dark rectangular sunglasses and black trousers; its arms extend wide, yellow against the white shirt, giving it a wider stance than the flanking figures.\"], \"reading\": \"Four spiked yellow figures crowd the space, each with its own posture—one wide-armed and sunglassed at center, one small and low, one fox-eared and tilted, one reduced to a floating head. The lettered shirt reads as a sign within the image rather than a title. Blue scribble lines weave through all of them, suggesting noise or shared atmosphere rather than separation. The mood reads as loud and slightly absurd.\", \"contextAngle\": \"Within the owned nnotb subset, the immediate title neighbors are nnxyz nnotb #116 and nnxyz nnotb #118. Where #116 fills its frame with two close, large faces on a saturated yellow ground, #117 pulls back to show full figures in a cooler, more open field.\", \"connections\": [{\"targetArtworkId\": \"QmY2tJZFwshovguNeyfuA5W6LXoMWD6ZKoFCcAwXXGenxw\", \"reason\": \"Both works share yellow as the dominant skin tone and use red cross-hatch marks on facial features, but #116 fills the frame with two large close-up faces while #117 distributes four smaller full figures across a cooler blue ground.\"}, {\"targetArtworkId\": \"QmWecLBjgqqKHFNumeJuUyhMYQbwxKPsapnxHPJGEHf24x\", \"reason\": \"rawblocks #61 and #117 both use a teal-blue background with loose overlapping scribble lines, and both place yellow forms against that field, though #61 works at close range with a single large form while #117 spreads multiple smaller figures across the space.\"}], \"tags\": [\"multiple figures\", \"spiky crown forms\", \"yellow figure outlines\", \"blue scribble background\", \"embedded lettering\", \"black outline drawing\"], \"interpretiveTags\": [\"crowd energy\", \"absurdist tone\"], \"lookingQuestion\": \"The blue scribble lines pass through and behind all four figures equally—does that shared layer make the figures feel connected to each other, or does it read more like a field they are each separately caught in?\", \"ambiguities\": [\"The fox-eared upper-left figure holds what appears to be a small blade or scissors shape; the object is not clearly resolved in the line work.\", \"The nnotb title-order and recorded-creation order align for this owned subset, but gaps may exist in the full artist catalogue outside the collection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

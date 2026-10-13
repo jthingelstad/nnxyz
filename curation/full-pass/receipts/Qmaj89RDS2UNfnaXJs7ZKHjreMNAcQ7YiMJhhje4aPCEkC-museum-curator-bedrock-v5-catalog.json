@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:45.839610-05:00",
+    "usage": {
+      "inputTokens": 7216,
+      "outputTokens": 776,
+      "totalTokens": 7992,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12894
+    },
+    "requestId": "575bc52c-008e-4cdd-bfd3-bf0173b5e329",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad yellow rectangle frames the composition on three sides, enclosing a dense grid of smaller rectangles stacked vertically to suggest a face structure.\",\n    \"Three tightly wound spiral forms appear across the upper and middle zones — one in the upper-left panel, one large central spiral, and one in the upper-right panel — each layered in yellow, red, blue, and black rings.\",\n    \"A horizontal band near the lower third contains a zigzag black line running across a pink and white field, flanked above and below by thick yellow borders, reading as a wide open mouth.\"\n  ],\n  \"reading\": \"Yellow scaffolding holds the whole face together like a frame within a frame, while the three spirals pull the eye inward at different depths. The zigzag mouth band sits flat and wide, more mechanical than expressive. A small red loop at the left edge sits apart from the main structure, quieter than the surrounding noise. The image feels confrontational without being angry — more like a stare than a shout.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #34 and #36. Where #34 fills a rounded form with loose, overlapping lines on white, #35 locks its face inside a hard yellow grid on a dark ground, trading organic sprawl for rigid compartments.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc\",\n      \"reason\": \"Both #35 and #36 use concentric ring eyes set inside rectangular panels, but #36 places them against a dark brown ground with far less surrounding line noise, making the spiral forms read in isolation rather than as part of a packed grid.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio\",\n      \"reason\": \"nnotb #4 shares the same device of a wavy-line border and a concentric-ring form embedded in a dense rectangular field, offering a cross-collection comparison of how the same spiral-and-grid vocabulary appears outside the nifty-faces owned subset.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral forms\",\n    \"rectangular grid structure\",\n    \"zigzag line\",\n    \"yellow border frame\",\n    \"layered line density\",\n    \"dark background\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood\",\n    \"mechanical face reading\"\n  ],\n  \"lookingQuestion\": \"The three spiral forms are different sizes and sit in different panels — what does the variation in their scale and surrounding color do to how your eye moves between them?\",\n  \"ambiguities\": [\n    \"The small red loop at the left edge is visually distinct from the main face structure; whether it functions as a separate eye, a signature mark, or incidental line work cannot be determined from the image alone.\",\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps and variants exist across the full series, so adjacency does not confirm sequential making.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC/image.png",
+        "imageSHA256": "3239fc2ce97d90e895ca0301fd3c0cf7cf384a18aa3063867fd61a669ee29a32"
+      },
+      {
+        "artworkId": "QmToJemxECRgU82b3uhfEfC4VjEnnwkrpnaq25PvVAV9io",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmToJemxECRgU82b3uhfEfC4VjEnnwkrpnaq25PvVAV9io/image.png",
+        "imageSHA256": "295e89029794603bba615017bbf43250e4972c63f41fd09f926ee5c36cef07b5"
+      },
+      {
+        "artworkId": "QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio/image.png",
+        "imageSHA256": "6d701636a2c6a48d13ab1090035a4ca11e5dfe76c228c86aeb82b0854d3f3f85"
+      },
+      {
+        "artworkId": "QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc/image.png",
+        "imageSHA256": "28622ac12a01c1aec4f9c52e254e7528dfe75ac5f7ab9a0bb3f4479bc61fd37a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:52.750725-05:00",
+    "usage": {
+      "inputTokens": 8014,
+      "outputTokens": 915,
+      "totalTokens": 8929,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6647
+    },
+    "requestId": "02aa2431-2d63-4270-8b87-2696297289b5",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad yellow rectangle frames the composition on three sides, enclosing a dense grid of smaller rectangles stacked vertically to suggest a face structure.\",\n    \"Three tightly wound spiral forms appear across the upper and middle zones — one in the upper-left panel, one large central spiral, and one in the upper-right panel — each layered in yellow, red, blue, and black rings.\",\n    \"A horizontal band near the lower third contains a zigzag black line running across a pink and white field, flanked above and below by thick yellow borders, reading as a wide open mouth.\"\n  ],\n  \"reading\": \"Yellow scaffolding holds the face structure together like a frame within a frame, while three spirals pull the eye inward at different depths. The zigzag mouth band sits flat and wide, more mechanical than expressive. A small red loop at the left edge sits apart from the main structure, quieter than the surrounding density. The image reads as confrontational — more like a fixed stare than an outburst.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #34 and #36. Where #34 fills a rounded form with loose overlapping lines on white, #35 locks its face inside a hard yellow grid on a dark ground, trading organic sprawl for rigid compartments.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc\",\n      \"reason\": \"Both #35 and #36 use concentric ring eyes set inside rectangular panels, but #36 places them against a dark brown ground with far less surrounding line density, so the spiral forms read in isolation rather than as part of a packed grid.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio\",\n      \"reason\": \"nnotb #4 shares a concentric-ring form embedded in a dense rectangular field with a wavy border, offering a cross-collection comparison of how a spiral-and-grid structure appears outside the owned nifty-faces subset.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral forms\",\n    \"rectangular grid structure\",\n    \"zigzag line\",\n    \"yellow border frame\",\n    \"layered line density\",\n    \"dark background\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational mood reading\",\n    \"mechanical face reading\"\n  ],\n  \"lookingQuestion\": \"The three spiral forms differ in size and sit in separate panels — what does the variation in their scale and surrounding color do to how your eye moves between them?\",\n  \"ambiguities\": [\n    \"The small red loop at the left edge is visually distinct from the main face structure; whether it functions as a separate eye element, a mark, or incidental line work cannot be determined from the image alone.\",\n    \"Title-derived order and recorded-creation order align here, but the metadata notes gaps and variants exist across the full series, so adjacency does not confirm sequential making.\"\n  ],\n  \"reviewFindings\": [\n    \"All three spiral forms confirmed visible in the primary image at upper-left, center, and upper-right; colors (yellow, red, blue, black rings) verified against image.\",\n    \"nnotb #4 image inspected and confirms a concentric-ring form and dense rectangular field with wavy border; comparison is supported by visible evidence, not proximity alone.\",\n    \"Reading trimmed to remove 'without being angry' (unsupported intent inference) and replaced with 'more like a fixed stare than an outburst,' which stays closer to visible form; word count confirmed within 55–80 range.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC/image.png",
+        "imageSHA256": "3239fc2ce97d90e895ca0301fd3c0cf7cf384a18aa3063867fd61a669ee29a32"
+      },
+      {
+        "artworkId": "QmToJemxECRgU82b3uhfEfC4VjEnnwkrpnaq25PvVAV9io",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmToJemxECRgU82b3uhfEfC4VjEnnwkrpnaq25PvVAV9io/image.png",
+        "imageSHA256": "295e89029794603bba615017bbf43250e4972c63f41fd09f926ee5c36cef07b5"
+      },
+      {
+        "artworkId": "QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio/image.png",
+        "imageSHA256": "6d701636a2c6a48d13ab1090035a4ca11e5dfe76c228c86aeb82b0854d3f3f85"
+      },
+      {
+        "artworkId": "QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc/image.png",
+        "imageSHA256": "28622ac12a01c1aec4f9c52e254e7528dfe75ac5f7ab9a0bb3f4479bc61fd37a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad yellow rectangle frames the composition on three sides, enclosing a dense grid of smaller rectangles stacked vertically to suggest a face structure.\", \"Three tightly wound spiral forms appear across the upper and middle zones — one in the upper-left panel, one large central spiral, and one in the upper-right panel — each layered in yellow, red, blue, and black rings.\", \"A horizontal band near the lower third contains a zigzag black line running across a pink and white field, flanked above and below by thick yellow borders, reading as a wide open mouth.\"], \"reading\": \"Yellow scaffolding holds the whole face together like a frame within a frame, while the three spirals pull the eye inward at different depths. The zigzag mouth band sits flat and wide, more mechanical than expressive. A small red loop at the left edge sits apart from the main structure, quieter than the surrounding noise. The image feels confrontational without being angry — more like a stare than a shout.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #34 and #36. Where #34 fills a rounded form with loose, overlapping lines on white, #35 locks its face inside a hard yellow grid on a dark ground, trading organic sprawl for rigid compartments.\", \"connections\": [{\"targetArtworkId\": \"QmWUbBeFHXkGjqWUuguErtbr5WqFCfXCFPzjUqzbSvzYCc\", \"reason\": \"Both #35 and #36 use concentric ring eyes set inside rectangular panels, but #36 places them against a dark brown ground with far less surrounding line noise, making the spiral forms read in isolation rather than as part of a packed grid.\"}, {\"targetArtworkId\": \"QmUvjrejt9RnSnc3aCNRjqsJ8XPFW2tA8XnhHSsXXguQio\", \"reason\": \"nnotb #4 shares the same device of a wavy-line border and a concentric-ring form embedded in a dense rectangular field, offering a cross-collection comparison of how the same spiral-and-grid vocabulary appears outside the nifty-faces owned subset.\"}], \"tags\": [\"spiral forms\", \"rectangular grid structure\", \"zigzag line\", \"yellow border frame\", \"layered line density\", \"dark background\"], \"interpretiveTags\": [\"confrontational mood\", \"mechanical face reading\"], \"lookingQuestion\": \"The three spiral forms are different sizes and sit in different panels — what does the variation in their scale and surrounding color do to how your eye moves between them?\", \"ambiguities\": [\"The small red loop at the left edge is visually distinct from the main face structure; whether it functions as a separate eye, a signature mark, or incidental line work cannot be determined from the image alone.\", \"Title-derived order and recorded-creation order align here, but the metadata notes gaps and variants exist across the full series, so adjacency does not confirm sequential making.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

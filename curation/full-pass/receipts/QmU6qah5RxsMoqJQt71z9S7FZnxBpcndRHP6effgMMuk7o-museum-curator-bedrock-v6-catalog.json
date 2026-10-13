@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:25.957636-05:00",
+    "usage": {
+      "inputTokens": 6314,
+      "outputTokens": 744,
+      "totalTokens": 7058,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 21202
+    },
+    "requestId": "f42012cd-4e0f-4355-8f32-05aaac56ffa6",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"An oversized rounded head sits on a tiny dark silhouette body with stick-like legs and one outstretched arm, all against a flat burnt-orange background with low brown hills.\",\n    \"Dense yellow and lavender scribbled hatching fills the head's interior, while a black bolted rectangular frame with spiral-ended corners overlays the upper face like a mask or visor.\",\n    \"A wide red-lipped mouth with individually drawn white teeth opens at the lower right of the head; small blue-crowned spheres sit where eyes might be, and a mass of red-orange looping shapes erupts from the top.\"\n  ],\n  \"reading\": \"The figure's enormous head dwarfs its spindly body, creating a top-heavy imbalance that reads as comic vulnerability. Frantic crosshatching in yellow and lavender fills the skull like trapped static, while the bolted frame clamps down over it—containment pressed against overflow. The bared teeth and tiny blue orbs give the face a startled, almost mechanical alertness. Against the empty orange landscape, the figure stands exposed, caught between eruption and restraint.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #6\\\" and \\\"nnxyz rawblocks #8.\\\" Where #6 fills the frame with a close-up head, #7 pulls back to show a full body in open space, and #8 shifts to muted tones and a quieter stance—a notable swing in scale and mood across three neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP\",\n      \"reason\": \"Both share a bared-teeth mouth motif and orange-dominant palette, but #6 crops tight to the face while #7 shrinks the figure against open ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\",\n      \"reason\": \"Both use dense overlapping line work and spiral eye forms on an orange field, though nnotb #168 packs the entire canvas while #7 isolates its figure in empty space.\"\n    }\n  ],\n  \"tags\": [\n    \"bared teeth\",\n    \"crosshatched fill\",\n    \"oversized head\",\n    \"bolted frame element\",\n    \"flat orange ground\",\n    \"full-body figure\"\n  ],\n  \"lookingQuestion\": \"How does the bolted rectangular frame sitting on the head interact with the loose scribbled lines underneath it—does it appear to hold them in or float above them?\",\n  \"ambiguities\": [\n    \"The blue-crowned spheres on the face could be read as eyes, bolts, or separate attached objects; their function is unclear.\",\n    \"The red-orange mass at the top may be hair, flame, or an abstract eruption—the image does not resolve this.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o/image.png",
+        "imageSHA256": "3b91ffcd894da9628b3310d34c6843d0f1b92bd9dac28d72acfab3b069513155"
+      },
+      {
+        "artworkId": "QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP/image.png",
+        "imageSHA256": "9e2b753a7ecf7a331382a530032e9b621bcdf47f18fe1e2595dbf4954661118d"
+      },
+      {
+        "artworkId": "QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe/image.png",
+        "imageSHA256": "369481c24c3b39716ae9163bbe9f1083383b12c1cddaccc7ef16aca10c35f4f6"
+      },
+      {
+        "artworkId": "QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy/image.png",
+        "imageSHA256": "366f9fee10b634fa20c04fe2fd7571c1125049e75353d6cc3aee9a9dc8e748ee"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-bedrock-v6",
+    "timeCentral": "2026-10-13T10:07:36.868514-05:00",
+    "usage": {
+      "inputTokens": 7090,
+      "outputTokens": 880,
+      "totalTokens": 7970,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 10844
+    },
+    "requestId": "16de668c-03c2-4e52-bd7d-0bf3c53e078e",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"An oversized rounded head sits on a tiny dark silhouette body with stick-like legs and one outstretched arm, all against a flat burnt-orange background with low brown hills.\",\n    \"Dense yellow and lavender scribbled hatching fills the head's interior, while a black bolted rectangular frame with spiral-ended corners overlays the upper face like a visor.\",\n    \"A wide red-lipped mouth with individually drawn white teeth opens at the lower right of the head; small blue-crowned spheres mark the face, and a mass of red-orange looping shapes erupts from the top.\"\n  ],\n  \"reading\": \"The figure's enormous head dwarfs its spindly body, producing a top-heavy imbalance that reads as comic vulnerability. Frantic crosshatching in yellow and lavender fills the skull like trapped static, while the bolted frame clamps down over it—containment pressed against overflow. The bared teeth and small blue orbs give the face a startled, almost mechanical alertness. Against the empty orange landscape, the figure stands exposed, caught between eruption and restraint.\",\n  \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #6\\\" and \\\"nnxyz rawblocks #8.\\\" Where #6 fills the frame with a close-up head, #7 pulls back to show a full body in open space, and #8 shifts to muted tones and a quieter stance—a notable swing in scale and mood across three neighbors.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP\",\n      \"reason\": \"Both share a bared-teeth mouth and orange-dominant palette, but #6 crops tight to the face while #7 shrinks the figure against open ground.\"\n    },\n    {\n      \"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\",\n      \"reason\": \"Both use dense overlapping line work and spiral forms on an orange field, though nnotb #168 packs the full canvas while #7 isolates its figure in empty space.\"\n    }\n  ],\n  \"tags\": [\n    \"bared teeth\",\n    \"crosshatched fill\",\n    \"oversized head\",\n    \"bolted frame element\",\n    \"flat orange ground\",\n    \"full-body figure\"\n  ],\n  \"lookingQuestion\": \"How does the bolted rectangular frame sitting on the head interact with the loose scribbled lines underneath it—does it appear to hold them in or float above them?\",\n  \"ambiguities\": [\n    \"The blue-crowned spheres on the face could be read as eyes, bolts, or separate attached objects; their function is unclear.\",\n    \"The red-orange mass at the top may be hair, flame, or an abstract eruption—the image does not resolve this.\"\n  ],\n  \"reviewFindings\": [\n    \"Confirmed burnt-orange background, low brown hills at lower right, and dark silhouette body with stick limbs and outstretched arm all visible in the image.\",\n    \"Verified spiral-ended black rectangular frame, yellow and lavender hatching, red-lipped teeth, and blue-crowned spheres against the primary image; nnotb #168 comparison confirmed for spiral eye forms and dense line work on matching orange ground.\",\n    \"Reading trimmed 'mask or visor' to just 'visor' in observation to avoid unsupported identity claim; no other material corrections needed.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmU6qah5RxsMoqJQt71z9S7FZnxBpcndRHP6effgMMuk7o/image.png",
+        "imageSHA256": "3b91ffcd894da9628b3310d34c6843d0f1b92bd9dac28d72acfab3b069513155"
+      },
+      {
+        "artworkId": "QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP/image.png",
+        "imageSHA256": "9e2b753a7ecf7a331382a530032e9b621bcdf47f18fe1e2595dbf4954661118d"
+      },
+      {
+        "artworkId": "QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe/image.png",
+        "imageSHA256": "369481c24c3b39716ae9163bbe9f1083383b12c1cddaccc7ef16aca10c35f4f6"
+      },
+      {
+        "artworkId": "QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmddHCwyK5XB7tBEwfosHRs8EMpDHRUqtZ49C6ySLsJtGy/image.png",
+        "imageSHA256": "366f9fee10b634fa20c04fe2fd7571c1125049e75353d6cc3aee9a9dc8e748ee"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"An oversized rounded head sits on a tiny dark silhouette body with stick-like legs and one outstretched arm, all against a flat burnt-orange background with low brown hills.\", \"Dense yellow and lavender scribbled hatching fills the head's interior, while a black bolted rectangular frame with spiral-ended corners overlays the upper face like a mask or visor.\", \"A wide red-lipped mouth with individually drawn white teeth opens at the lower right of the head; small blue-crowned spheres sit where eyes might be, and a mass of red-orange looping shapes erupts from the top.\"], \"reading\": \"The figure's enormous head dwarfs its spindly body, creating a top-heavy imbalance that reads as comic vulnerability. Frantic crosshatching in yellow and lavender fills the skull like trapped static, while the bolted frame clamps down over it—containment pressed against overflow. The bared teeth and tiny blue orbs give the face a startled, almost mechanical alertness. Against the empty orange landscape, the figure stands exposed, caught between eruption and restraint.\", \"contextAngle\": \"In the owned rawblocks subset, this work sits between \\\"nnxyz rawblocks #6\\\" and \\\"nnxyz rawblocks #8.\\\" Where #6 fills the frame with a close-up head, #7 pulls back to show a full body in open space, and #8 shifts to muted tones and a quieter stance—a notable swing in scale and mood across three neighbors.\", \"connections\": [{\"targetArtworkId\": \"QmVXmKq18FHDbZvq7cwirkq6Voh4BRpijVeSD6vK3W1zTP\", \"reason\": \"Both share a bared-teeth mouth motif and orange-dominant palette, but #6 crops tight to the face while #7 shrinks the figure against open ground.\"}, {\"targetArtworkId\": \"QmcETCaFZsCmaQLrqjXF5ERUdWn7BPoR6bh7FrCKiynZUe\", \"reason\": \"Both use dense overlapping line work and spiral eye forms on an orange field, though nnotb #168 packs the entire canvas while #7 isolates its figure in empty space.\"}], \"tags\": [\"bared teeth\", \"crosshatched fill\", \"oversized head\", \"bolted frame element\", \"flat orange ground\", \"full-body figure\"], \"lookingQuestion\": \"How does the bolted rectangular frame sitting on the head interact with the loose scribbled lines underneath it—does it appear to hold them in or float above them?\", \"ambiguities\": [\"The blue-crowned spheres on the face could be read as eyes, bolts, or separate attached objects; their function is unclear.\", \"The red-orange mass at the top may be hair, flame, or an abstract eruption—the image does not resolve this.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

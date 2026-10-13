@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:26.605010-05:00",
+    "usage": {
+      "inputTokens": 6157,
+      "outputTokens": 783,
+      "totalTokens": 6940,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12351
+    },
+    "requestId": "4b7c0938-9bf4-4356-8dc8-0f85cbb2b1a9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark ovoid head fills the upper two-thirds of a flat teal field; the left eye socket is rendered much larger than the right, with a white highlight and blue iris visible inside a black-outlined oval.\",\n    \"Loose lines in yellow, red, white, and blue run across the face surface without following the dark contour shapes, creating a second layer of marks that sits visually above the dark underlayer.\",\n    \"The nose and mouth area is built from overlapping grey-purple flat shapes, with a small white highlight on the lower lip and a cluster of yellow zigzag lines descending from the nose bridge toward the chin.\"\n  ],\n  \"reading\": \"The face sits heavy and still against the teal ground, its asymmetric eyes pulling the gaze left. Dark mass and bright scattered lines work against each other — the surface feels both closed and restless. The mismatched eye sizes give the face an off-balance quality that reads as unease rather than calm. Colour sits in layers that never fully merge.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work shares the same flat teal ground as the owned neighbor 'nnxyz nnotb #30', connecting two different title families through background color. Title neighbors 'nnxyz nifty faces #128' and 'nnxyz nifty faces #130' use pink and olive grounds, making the teal a local contrast.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs\",\n      \"reason\": \"Both works share the same flat teal background color, and both layer loose yellow and white lines over a darker figure mass — a direct visual echo across two different title families in the owned collection.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN\",\n      \"reason\": \"The title neighbor 'nnxyz nifty faces #130' uses a similar multi-eye arrangement and overlapping scribble lines on a face mass, but its olive ground and hat form produce a warmer, busier surface compared to the spare teal field here.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye sockets\",\n    \"flat teal background\",\n    \"dark ovoid head form\",\n    \"layered loose line marks\",\n    \"yellow and red surface lines\",\n    \"grey-purple flat facial planes\"\n  ],\n  \"interpretiveTags\": [\n    \"unease\",\n    \"restless stillness\"\n  ],\n  \"lookingQuestion\": \"How does the size difference between the two eye sockets change where your eye settles on the face?\",\n  \"ambiguities\": [\n    \"The grey-purple shapes across the nose and cheek area may be flat color fills or semi-transparent overlays; the image resolution does not resolve this clearly.\",\n    \"Comparison candidate 'nnxyz nifty faces #128' shares title-family proximity but its pink ground and extreme close-crop differ enough that no strong formal connection was found; it was not selected.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ/image.png",
+        "imageSHA256": "7f86d4d7dd1c801d16829bdb991d2fcdf7fd718ab8b3233bf1d4a19cbf8b1713"
+      },
+      {
+        "artworkId": "QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2/image.png",
+        "imageSHA256": "ffafb15487ef3da0c2cdc4aa7984a731ddcff78c438be2510833173b6e690288"
+      },
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN/image.png",
+        "imageSHA256": "2689cdcd26fc8bd4633189b8cc68558e73c4318cdc8a428d260090c2859c3946"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:52:33.816643-05:00",
+    "usage": {
+      "inputTokens": 6962,
+      "outputTokens": 988,
+      "totalTokens": 7950,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7125
+    },
+    "requestId": "fd177fb8-67f8-4e52-a2dd-218ca70d8d17",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large dark ovoid head fills the upper two-thirds of a flat teal field; the left eye socket is rendered much larger than the right, with a white highlight and blue iris visible inside a black-outlined oval.\",\n    \"Loose lines in yellow, red, white, and blue run across the face surface without following the dark contour shapes, creating a second layer of marks that sits visually above the dark underlayer.\",\n    \"The nose and mouth area is built from overlapping grey-purple flat shapes, with a small white highlight on the lower lip and a cluster of yellow zigzag lines descending from the nose bridge toward the chin.\"\n  ],\n  \"reading\": \"The face sits heavy and still against the teal ground, its asymmetric eyes pulling the gaze left. Dark mass and bright scattered lines work against each other — the surface feels both closed and restless. The mismatched eye sizes give the face an off-balance quality that reads as unease rather than calm. Colour sits in layers that never fully merge.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, title neighbors 'nnxyz nifty faces #128' and 'nnxyz nifty faces #130' use pink and olive grounds respectively, making the teal field here a local contrast. The owned 'nnxyz nnotb #30' shares this same teal ground across a different title family.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs\",\n      \"reason\": \"Both works use the same flat teal background and layer loose yellow and white lines over a darker figure mass — a direct visual parallel across two different title families in the owned collection.\"\n    },\n    {\n      \"targetArtworkId\": \"QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN\",\n      \"reason\": \"Title neighbor 'nnxyz nifty faces #130' also layers scribble lines over a dark face mass with multiple eye-like forms, but its olive ground and hat shape produce a warmer, more crowded surface than the spare teal field here.\"\n    }\n  ],\n  \"tags\": [\n    \"asymmetric eye sockets\",\n    \"flat teal background\",\n    \"dark ovoid head form\",\n    \"layered loose line marks\",\n    \"yellow and red surface lines\",\n    \"grey-purple flat facial planes\"\n  ],\n  \"interpretiveTags\": [\"unease\", \"restless stillness\"],\n  \"lookingQuestion\": \"How does the size difference between the two eye sockets change where your eye settles on the face?\",\n  \"ambiguities\": [\n    \"The grey-purple shapes across the nose and cheek area may be flat color fills or semi-transparent overlays; image resolution does not resolve this clearly.\",\n    \"Comparison candidate 'nnxyz nifty faces #128' shares title-family proximity but its pink ground and extreme close-crop differ enough that no strong formal connection was found; it was not selected.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: asymmetric eye sockets, layered loose colored lines, and grey-purple shapes with yellow zigzags in the lower face are all directly visible.\",\n    \"Context angle corrected: the draft claimed teal connects two families as its main point; revised to lead with the contrast among owned nifty-faces neighbors, then note the cross-family teal link — both claims are supported by inspected images.\",\n    \"Both comparison connections confirmed against inspected images: QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs shows matching teal ground and yellow/white line layering; QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN shows olive ground and hat form as stated contrasts.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUc46DzwR9BxWyNdQrGBzHsFnDJSzedV3FqgGgWT3aMSQ/image.png",
+        "imageSHA256": "7f86d4d7dd1c801d16829bdb991d2fcdf7fd718ab8b3233bf1d4a19cbf8b1713"
+      },
+      {
+        "artworkId": "QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQfvsuF2sGpLThcLB2dJH5nDCHwVJ6yvNCbSUK5C9i5y2/image.png",
+        "imageSHA256": "ffafb15487ef3da0c2cdc4aa7984a731ddcff78c438be2510833173b6e690288"
+      },
+      {
+        "artworkId": "QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs/image.png",
+        "imageSHA256": "25558015b33b57604891bcb4de61699466d7908ff3291245d54e9bd6d3b87444"
+      },
+      {
+        "artworkId": "QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN/image.png",
+        "imageSHA256": "2689cdcd26fc8bd4633189b8cc68558e73c4318cdc8a428d260090c2859c3946"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large dark ovoid head fills the upper two-thirds of a flat teal field; the left eye socket is rendered much larger than the right, with a white highlight and blue iris visible inside a black-outlined oval.\", \"Loose lines in yellow, red, white, and blue run across the face surface without following the dark contour shapes, creating a second layer of marks that sits visually above the dark underlayer.\", \"The nose and mouth area is built from overlapping grey-purple flat shapes, with a small white highlight on the lower lip and a cluster of yellow zigzag lines descending from the nose bridge toward the chin.\"], \"reading\": \"The face sits heavy and still against the teal ground, its asymmetric eyes pulling the gaze left. Dark mass and bright scattered lines work against each other — the surface feels both closed and restless. The mismatched eye sizes give the face an off-balance quality that reads as unease rather than calm. Colour sits in layers that never fully merge.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work shares the same flat teal ground as the owned neighbor 'nnxyz nnotb #30', connecting two different title families through background color. Title neighbors 'nnxyz nifty faces #128' and 'nnxyz nifty faces #130' use pink and olive grounds, making the teal a local contrast.\", \"connections\": [{\"targetArtworkId\": \"QmdjECF8swUM28nRfgMJg3zJC82eh5L1bcDMJbVMKKXnzs\", \"reason\": \"Both works share the same flat teal background color, and both layer loose yellow and white lines over a darker figure mass — a direct visual echo across two different title families in the owned collection.\"}, {\"targetArtworkId\": \"QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN\", \"reason\": \"The title neighbor 'nnxyz nifty faces #130' uses a similar multi-eye arrangement and overlapping scribble lines on a face mass, but its olive ground and hat form produce a warmer, busier surface compared to the spare teal field here.\"}], \"tags\": [\"asymmetric eye sockets\", \"flat teal background\", \"dark ovoid head form\", \"layered loose line marks\", \"yellow and red surface lines\", \"grey-purple flat facial planes\"], \"interpretiveTags\": [\"unease\", \"restless stillness\"], \"lookingQuestion\": \"How does the size difference between the two eye sockets change where your eye settles on the face?\", \"ambiguities\": [\"The grey-purple shapes across the nose and cheek area may be flat color fills or semi-transparent overlays; the image resolution does not resolve this clearly.\", \"Comparison candidate 'nnxyz nifty faces #128' shares title-family proximity but its pink ground and extreme close-crop differ enough that no strong formal connection was found; it was not selected.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

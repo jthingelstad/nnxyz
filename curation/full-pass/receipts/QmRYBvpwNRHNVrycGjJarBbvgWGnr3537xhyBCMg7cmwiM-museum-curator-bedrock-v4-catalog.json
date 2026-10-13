@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v4",
+    "timeCentral": "2026-10-13T09:47:20.864658-05:00",
+    "usage": {
+      "inputTokens": 6967,
+      "outputTokens": 733,
+      "totalTokens": 7700,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12203
+    },
+    "requestId": "2880da73-8fbb-46dc-9889-06cc1cb1e178",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly spherical mass of overlapping straight and curved lines fills the center of a dark brown field; the lines form loose rectangular grid-like zones that curve around the volume's surface.\",\n    \"Colors run across the full visible spectrum—cyan, magenta, lime green, orange, yellow, white, and black—layered so densely that no single hue dominates for long, with white lines creating bright flare points near the upper-left and center.\",\n    \"A small orange artist mark and the numeral '21' sit in the lower-left corner, isolated on the plain background, well clear of the main mass.\"\n  ],\n  \"reading\": \"The image presents a dense, roughly rounded form built entirely from crossing lines rather than filled planes, giving it the feel of a structure seen through itself. The grid-like zones that wrap its surface suggest enclosure or containment, yet the lines escape at the edges, loosening the boundary. Bright flare points read as pressure from within. Whether this reads as tense or exuberant depends on which color the eye follows.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors 'nnxyz nifty faces #22' and 'nnxyz nifty faces #24.' Those two works use a recognizable head silhouette with legible facial features; this one replaces that silhouette with a lattice-wrapped volume, making it a notable structural outlier in the owned run.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYUFmgadL68xfWX91fZBPRBecbANTzrnHSRncNU2ou7Q9\",\n      \"reason\": \"Both works place a single large form against a plain dark background and use cyan as a dominant outlining color, but 'nnxyz nifty faces #24' resolves into a flat-fronted head with spiral eye marks, while this work stays fully latticed and volumetric—making the contrast in how line builds form the useful comparison.\"\n    }\n  ],\n  \"tags\": [\n    \"lattice structure\",\n    \"overlapping straight lines\",\n    \"curved surface implied by line direction\",\n    \"full-spectrum color layering\",\n    \"white flare points\",\n    \"isolated corner mark\"\n  ],\n  \"interpretiveTags\": [\n    \"contained energy\",\n    \"ambiguous enclosure\"\n  ],\n  \"lookingQuestion\": \"Where on the surface do the lines shift from running parallel to crossing at sharp angles, and what does that change do to the sense of depth at those spots?\",\n  \"ambiguities\": [\n    \"The numeral '21' in the corner mark does not match the title number 23; whether this is a signing convention, a variant, or an error in the mark itself cannot be determined from the image alone.\",\n    \"The candidate comparison 'nnxyz rawblocks #46' shares a purple background with 'nnxyz nifty faces #22' but has no meaningful formal connection to this primary work's lattice structure; it was excluded on that basis.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM/image.png",
+        "imageSHA256": "fcd8ca63293af945fe056a8c1f022ecb706a6221ab31f5d0bd90ddc8113874ba"
+      },
+      {
+        "artworkId": "QmQqKizEG8Em3Y4qXXPpehWNYpyDdnvD9snbL1wju7WA6e",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQqKizEG8Em3Y4qXXPpehWNYpyDdnvD9snbL1wju7WA6e/image.png",
+        "imageSHA256": "eb681ff8ad428ccade38398222d53dd5240dce7ee0e5aa06296949ecd7f02cbe"
+      },
+      {
+        "artworkId": "QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2/image.png",
+        "imageSHA256": "43f3c0a12db8570717e4f2a7629a64373342c3c99a2c65fdeb2ed645ddec2a97"
+      },
+      {
+        "artworkId": "QmYUFmgadL68xfWX91fZBPRBecbANTzrnHSRncNU2ou7Q9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYUFmgadL68xfWX91fZBPRBecbANTzrnHSRncNU2ou7Q9/image.png",
+        "imageSHA256": "14aca8787558328af1640ba5ba5fbc48447d2be69462d8d610883044e57a3baa"
+      }
+    ],
+    "systemPromptSHA256": "8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now.",
+    "systemPromptPath": "curation/full-pass/prompts/8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v4",
+    "timeCentral": "2026-10-13T09:47:28.986835-05:00",
+    "usage": {
+      "inputTokens": 7719,
+      "outputTokens": 911,
+      "totalTokens": 8630,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 8030
+    },
+    "requestId": "640ec8bf-3d98-4465-a1f5-7815c004030a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly spherical mass of overlapping straight and curved lines fills the center of a dark brown field; the lines form loose rectangular grid-like zones that curve around the volume's surface.\",\n    \"Colors span cyan, magenta, lime green, orange, yellow, white, and black, layered so densely that no single hue dominates for long; white lines create bright flare points near the upper-left and center of the mass.\",\n    \"A small orange artist mark and the numeral '21' sit in the lower-left corner, isolated on the plain background, well clear of the main mass.\"\n  ],\n  \"reading\": \"The image presents a dense, roughly rounded form built entirely from crossing lines rather than filled planes, giving it the quality of a structure seen through itself. Grid-like zones wrap the surface and suggest enclosure, yet lines escape at the edges, loosening the boundary. Bright flare points read as pressure from within. Whether this feels tense or exuberant depends on which color the eye chooses to follow.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors 'nnxyz nifty faces #22' and 'nnxyz nifty faces #24.' Both neighbors use a recognizable head silhouette with legible facial features; this work replaces that silhouette with a lattice-wrapped volume, making it a notable structural outlier in the owned run.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYUFmgadL68xfWX91fZBPRBecbANTzrnHSRncNU2ou7Q9\",\n      \"reason\": \"'nnxyz nifty faces #24' places a single large form against a plain dark background and uses cyan as a dominant outlining color, but resolves into a flat-fronted head with spiral eye marks, while this work stays fully latticed and volumetric—making the contrast in how line builds form the pointed comparison.\"\n    }\n  ],\n  \"tags\": [\n    \"lattice structure\",\n    \"overlapping straight lines\",\n    \"curved surface implied by line direction\",\n    \"full-spectrum color layering\",\n    \"white flare points\",\n    \"isolated corner mark\"\n  ],\n  \"interpretiveTags\": [\n    \"ambiguous enclosure\",\n    \"contained pressure\"\n  ],\n  \"lookingQuestion\": \"Where on the surface do the lines shift from running parallel to crossing at sharp angles, and what does that change do to the sense of depth at those spots?\",\n  \"ambiguities\": [\n    \"The numeral '21' in the corner mark does not match the title number 23; whether this is a signing convention, a variant, or an unrelated mark cannot be determined from the image alone.\",\n    \"Candidate 'nnxyz rawblocks #46' shares no meaningful formal connection to this work's lattice structure and was excluded; its purple background links it to 'nnxyz nifty faces #22' rather than to the primary work.\"\n  ],\n  \"reviewFindings\": [\n    \"All colors, flare-point placements, and the corner mark confirmed against the primary image; no invented details found.\",\n    \"Comparison with QmYUFmgadL68xfWX91fZBPRBecbANTzrnHSRncNU2ou7Q9 verified: dark background and cyan outlining are visible in both images, and the contrast between lattice volume and flat head-with-spiral-eyes is concrete and supported.\",\n    \"QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2 exclusion confirmed: its purple field and figurative head structure share no useful formal property with the primary work's brown-field lattice form.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmRYBvpwNRHNVrycGjJarBbvgWGnr3537xhyBCMg7cmwiM/image.png",
+        "imageSHA256": "fcd8ca63293af945fe056a8c1f022ecb706a6221ab31f5d0bd90ddc8113874ba"
+      },
+      {
+        "artworkId": "QmQqKizEG8Em3Y4qXXPpehWNYpyDdnvD9snbL1wju7WA6e",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQqKizEG8Em3Y4qXXPpehWNYpyDdnvD9snbL1wju7WA6e/image.png",
+        "imageSHA256": "eb681ff8ad428ccade38398222d53dd5240dce7ee0e5aa06296949ecd7f02cbe"
+      },
+      {
+        "artworkId": "QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNPoucCFgjtQ6Q2wcCxHPVTfSHMzh7UujtiexwVYEWCn2/image.png",
+        "imageSHA256": "43f3c0a12db8570717e4f2a7629a64373342c3c99a2c65fdeb2ed645ddec2a97"
+      },
+      {
+        "artworkId": "QmYUFmgadL68xfWX91fZBPRBecbANTzrnHSRncNU2ou7Q9",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYUFmgadL68xfWX91fZBPRBecbANTzrnHSRncNU2ou7Q9/image.png",
+        "imageSHA256": "14aca8787558328af1640ba5ba5fbc48447d2be69462d8d610883044e57a3baa"
+      }
+    ],
+    "systemPromptSHA256": "8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A roughly spherical mass of overlapping straight and curved lines fills the center of a dark brown field; the lines form loose rectangular grid-like zones that curve around the volume's surface.\", \"Colors run across the full visible spectrum—cyan, magenta, lime green, orange, yellow, white, and black—layered so densely that no single hue dominates for long, with white lines creating bright flare points near the upper-left and center.\", \"A small orange artist mark and the numeral '21' sit in the lower-left corner, isolated on the plain background, well clear of the main mass.\"], \"reading\": \"The image presents a dense, roughly rounded form built entirely from crossing lines rather than filled planes, giving it the feel of a structure seen through itself. The grid-like zones that wrap its surface suggest enclosure or containment, yet the lines escape at the edges, loosening the boundary. Bright flare points read as pressure from within. Whether this reads as tense or exuberant depends on which color the eye follows.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors 'nnxyz nifty faces #22' and 'nnxyz nifty faces #24.' Those two works use a recognizable head silhouette with legible facial features; this one replaces that silhouette with a lattice-wrapped volume, making it a notable structural outlier in the owned run.\", \"connections\": [{\"targetArtworkId\": \"QmYUFmgadL68xfWX91fZBPRBecbANTzrnHSRncNU2ou7Q9\", \"reason\": \"Both works place a single large form against a plain dark background and use cyan as a dominant outlining color, but 'nnxyz nifty faces #24' resolves into a flat-fronted head with spiral eye marks, while this work stays fully latticed and volumetric—making the contrast in how line builds form the useful comparison.\"}], \"tags\": [\"lattice structure\", \"overlapping straight lines\", \"curved surface implied by line direction\", \"full-spectrum color layering\", \"white flare points\", \"isolated corner mark\"], \"interpretiveTags\": [\"contained energy\", \"ambiguous enclosure\"], \"lookingQuestion\": \"Where on the surface do the lines shift from running parallel to crossing at sharp angles, and what does that change do to the sense of depth at those spots?\", \"ambiguities\": [\"The numeral '21' in the corner mark does not match the title number 23; whether this is a signing convention, a variant, or an error in the mark itself cannot be determined from the image alone.\", \"The candidate comparison 'nnxyz rawblocks #46' shares a purple background with 'nnxyz nifty faces #22' but has no meaningful formal connection to this primary work's lattice structure; it was excluded on that basis.\"]}",
+    "systemPromptPath": "curation/full-pass/prompts/8959bac8a4a26a69c4fc1d99709c573bd47d90dcf3e15a4b1579ded9bd717350.txt"
+  }
+]

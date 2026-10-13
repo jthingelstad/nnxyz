@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:32.112644-05:00",
+    "usage": {
+      "inputTokens": 6041,
+      "outputTokens": 783,
+      "totalTokens": 6824,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12542
+    },
+    "requestId": "15ea567b-75b5-4ae8-b116-8674bf6e8256",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large black-filled blocky head dominates the right-center, with rectangular eye openings and a wide toothed mouth rendered in flat black and white against a soft gray shadow shape.\",\n    \"In the lower left, two smaller black figures cluster together; one raises an arm holding a red-outlined card or sign with the numeral '300' written in red.\",\n    \"A thin vertical line rises from the upper-left corner to the top edge, and the artist's mark appears twice—once in the upper left and once in the lower right—framing the otherwise white ground.\"\n  ],\n  \"reading\": \"The large head presses toward the right edge, its flat black fill broken only by white gaps at the eyes and teeth. A gray shadow anchors it without depth. Below and to the left, two smaller figures crowd in, one thrusting a red-lettered card upward—a gesture that reads as announcement or offering. The scale gap between the figures and the head gives the scene an uneasy, lopsided weight.\",\n  \"contextAngle\": \"Within the owned subset, this work sits between 'nnxyz nifty summer dance ink' and 'nnxyz 500 inks' in recorded-creation order—both milestone-adjacent titles. The blocky toothed head reappears across the collection, but here the near-monochrome palette and the red numeral mark it as distinct.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\",\n      \"reason\": \"Both works center a large rectangular head with gridded eye openings and a wide toothed mouth; the primary work strips the form to near-monochrome while nifty faces #67 layers it in dense multicolor hatching.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr\",\n      \"reason\": \"nnotb #148 shares the same black-and-white palette and a similarly bulky upper form with white interior lines, offering a direct tonal contrast to the red-accented primary work.\"\n    }\n  ],\n  \"tags\": [\n    \"blocky head form\",\n    \"toothed mouth\",\n    \"flat black fill\",\n    \"gray shadow shape\",\n    \"small figures with raised arm\",\n    \"red numeral lettering\"\n  ],\n  \"lookingQuestion\": \"What does the size difference between the large head and the two smaller figures below it do to how you read the red card being held up?\",\n  \"ambiguities\": [\n    \"The object held by the smaller figure reads as a card or sign with '300' in red, but its exact form is not fully resolved at this scale.\",\n    \"nnotb #54 (QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6) was inspected but its vivid red ground and full-color palette offer no useful formal connection to this near-monochrome work; omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNch72v9eG5H4d8YEDVDrYTTqRwYGrAWKjDQ8ufiEMKkn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNch72v9eG5H4d8YEDVDrYTTqRwYGrAWKjDQ8ufiEMKkn/image.png",
+        "imageSHA256": "dedb919c76e0f922b1f393e952cc41fcf4bf676d28df5fb8616ad5a0cebceb0f"
+      },
+      {
+        "artworkId": "QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr/image.png",
+        "imageSHA256": "db57ab3bc804a1aa09683f9c9fcac604d7d5e6bf6bf41f1e1091a61bac842f77"
+      },
+      {
+        "artworkId": "QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6/image.png",
+        "imageSHA256": "42ad234a3a5a387dd8fac2acc7785aac0f1244eff33de5ac6ca0ed09b9315f6a"
+      },
+      {
+        "artworkId": "QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS/image.png",
+        "imageSHA256": "64c4f51006df02d6fa50d6ee1c8aaa0bb1f8a2f4175e9fcf89c0cd85e115fe49"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:39.400578-05:00",
+    "usage": {
+      "inputTokens": 6856,
+      "outputTokens": 979,
+      "totalTokens": 7835,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7233
+    },
+    "requestId": "ddffc175-b2c6-41b7-b03b-6a0eac6f6b89",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large black-filled blocky head dominates the right-center, with rectangular eye openings and a wide toothed mouth rendered in flat black and white against a soft gray shadow shape.\",\n    \"In the lower left, two smaller black figures cluster together; one raises an arm holding a red-outlined card or sign with the numeral '300' written in red.\",\n    \"A thin vertical line rises from the upper-left corner to the top edge, and the artist's mark appears twice—once in the upper left and once in the lower right—framing the otherwise white ground.\"\n  ],\n  \"reading\": \"The large head presses toward the right edge, its flat black fill broken only by white gaps at the eyes and teeth. A gray shadow anchors it without adding depth. Below and to the left, two smaller figures crowd in, one thrusting a red-lettered card upward—a gesture that reads as announcement or offering. The scale gap between the figures and the head gives the scene an uneasy, lopsided weight.\",\n  \"contextAngle\": \"Within the owned subset, this work sits between 'nnxyz nifty summer dance ink' and 'nnxyz 500 inks' in recorded-creation order. The blocky toothed head recurs across the collection, but the near-monochrome palette and isolated red numeral set this work apart.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\",\n      \"reason\": \"Both works center a large rectangular head with gridded eye openings and a wide toothed mouth; the primary work strips the form to near-monochrome while nifty faces #67 layers the same structure in dense multicolor hatching.\"\n    },\n    {\n      \"targetArtworkId\": \"QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr\",\n      \"reason\": \"nnotb #148 shares the black-and-white palette and a bulky upper form with white interior lines, making it a close tonal parallel to the primary work's near-monochrome treatment.\"\n    }\n  ],\n  \"tags\": [\n    \"blocky head form\",\n    \"toothed mouth\",\n    \"flat black fill\",\n    \"gray shadow shape\",\n    \"small figures with raised arm\",\n    \"red numeral lettering\"\n  ],\n  \"lookingQuestion\": \"What does the size difference between the large head and the two smaller figures below it do to how you read the red card being held up?\",\n  \"ambiguities\": [\n    \"The object held by the smaller figure reads as a card or sign with '300' in red, but its exact form is not fully resolved at this scale.\",\n    \"nnotb #54 (QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6) was inspected but its vivid red ground and full-color palette offer no useful formal connection to this near-monochrome work; omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: gray shadow, red '300' numeral, double artist mark, and thin vertical line are all visible.\",\n    \"Connection to QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS confirmed: rectangular head, gridded eyes, and toothed mouth are visible in both images; color contrast claim is accurate.\",\n    \"Connection to QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr confirmed: black-and-white palette and bulky form with white interior lines are visible in nnotb #148; no unsupported intent or invented biography found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmNch72v9eG5H4d8YEDVDrYTTqRwYGrAWKjDQ8ufiEMKkn",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNch72v9eG5H4d8YEDVDrYTTqRwYGrAWKjDQ8ufiEMKkn/image.png",
+        "imageSHA256": "dedb919c76e0f922b1f393e952cc41fcf4bf676d28df5fb8616ad5a0cebceb0f"
+      },
+      {
+        "artworkId": "QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr/image.png",
+        "imageSHA256": "db57ab3bc804a1aa09683f9c9fcac604d7d5e6bf6bf41f1e1091a61bac842f77"
+      },
+      {
+        "artworkId": "QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6/image.png",
+        "imageSHA256": "42ad234a3a5a387dd8fac2acc7785aac0f1244eff33de5ac6ca0ed09b9315f6a"
+      },
+      {
+        "artworkId": "QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS/image.png",
+        "imageSHA256": "64c4f51006df02d6fa50d6ee1c8aaa0bb1f8a2f4175e9fcf89c0cd85e115fe49"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large black-filled blocky head dominates the right-center, with rectangular eye openings and a wide toothed mouth rendered in flat black and white against a soft gray shadow shape.\", \"In the lower left, two smaller black figures cluster together; one raises an arm holding a red-outlined card or sign with the numeral '300' written in red.\", \"A thin vertical line rises from the upper-left corner to the top edge, and the artist's mark appears twice—once in the upper left and once in the lower right—framing the otherwise white ground.\"], \"reading\": \"The large head presses toward the right edge, its flat black fill broken only by white gaps at the eyes and teeth. A gray shadow anchors it without depth. Below and to the left, two smaller figures crowd in, one thrusting a red-lettered card upward—a gesture that reads as announcement or offering. The scale gap between the figures and the head gives the scene an uneasy, lopsided weight.\", \"contextAngle\": \"Within the owned subset, this work sits between 'nnxyz nifty summer dance ink' and 'nnxyz 500 inks' in recorded-creation order—both milestone-adjacent titles. The blocky toothed head reappears across the collection, but here the near-monochrome palette and the red numeral mark it as distinct.\", \"connections\": [{\"targetArtworkId\": \"QmajZXe73B8iHi64HiMj8Cz9LsWYminNc5yiMo1Ph5QpSS\", \"reason\": \"Both works center a large rectangular head with gridded eye openings and a wide toothed mouth; the primary work strips the form to near-monochrome while nifty faces #67 layers it in dense multicolor hatching.\"}, {\"targetArtworkId\": \"QmQEEs5FsBeQF2JScGzkjDvbKqaTfWWxMt2Wepw7WYVERr\", \"reason\": \"nnotb #148 shares the same black-and-white palette and a similarly bulky upper form with white interior lines, offering a direct tonal contrast to the red-accented primary work.\"}], \"tags\": [\"blocky head form\", \"toothed mouth\", \"flat black fill\", \"gray shadow shape\", \"small figures with raised arm\", \"red numeral lettering\"], \"lookingQuestion\": \"What does the size difference between the large head and the two smaller figures below it do to how you read the red card being held up?\", \"ambiguities\": [\"The object held by the smaller figure reads as a card or sign with '300' in red, but its exact form is not fully resolved at this scale.\", \"nnotb #54 (QmNQgYKdsqDWzzjtNryRiU8o4QLEcBRjpNrLjkFSu3K1z6) was inspected but its vivid red ground and full-color palette offer no useful formal connection to this near-monochrome work; omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

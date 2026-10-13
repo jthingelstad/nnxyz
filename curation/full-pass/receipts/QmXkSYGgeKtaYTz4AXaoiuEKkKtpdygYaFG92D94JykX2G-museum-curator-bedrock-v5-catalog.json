@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:15.794429-05:00",
+    "usage": {
+      "inputTokens": 6018,
+      "outputTokens": 800,
+      "totalTokens": 6818,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13756
+    },
+    "requestId": "40546f8c-1cbf-4a37-a118-97aa025e578a",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly circular head form fills most of the canvas against a dark grey ground, with spiky black marks radiating outward along the top and sides like a fringe.\",\n    \"The left eye area contains a tight inward spiral of blue and yellow lines nested inside a square-cornered outline, while the right side shows overlapping triangular red and white lines on a pink field.\",\n    \"The lower third is dominated by a wide-open mouth showing a row of grey-white rectangular teeth, outlined and cross-hatched in black, with red and yellow scribbled lines running beneath the jaw.\"\n  ],\n  \"reading\": \"The face pushes to the edges of the frame, its two eye zones built from opposite geometries — a coiling spiral on the left, a jagged triangular tangle on the right. That asymmetry reads as unease rather than balance. The bared teeth below are rendered with enough solidity to feel like a fixed grimace rather than a passing expression. Loose marks at the crown and sides keep the whole form from settling.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #208 and #210 share the same dark ground and bared-teeth mouth. #209 is the most saturated of the three, with pink and yellow pushing against the dark field more forcefully than in either neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q\",\n      \"reason\": \"Both works place a circular head on a near-identical dark teal-grey ground with a yellow diagonal mark cutting across the upper left, but #208 keeps its palette darker and murkier where #209 breaks into bright pink and open white.\"\n    },\n    {\n      \"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\",\n      \"reason\": \"Both #209 and #210 feature a prominent spiral eye and a row of white teeth on the same dark ground, but #210 places the spiral on the right and uses tighter concentric rings, reversing the lateral emphasis.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral eye\",\n    \"bared teeth\",\n    \"asymmetric eye zones\",\n    \"radiating spike marks\",\n    \"dark ground\",\n    \"triangular line cluster\"\n  ],\n  \"interpretiveTags\": [\n    \"unease\",\n    \"confrontational\",\n    \"fixed grimace\"\n  ],\n  \"lookingQuestion\": \"How does the difference in geometry between the left eye's inward spiral and the right eye's outward triangular lines affect the way you move across the face?\",\n  \"ambiguities\": [\n    \"The square outline around the left spiral eye could be a structural element of the face or a separate overlaid shape; the image does not resolve this.\",\n    \"QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN (nifty faces #130) shares a face subject but its olive ground, restrained palette and hat form offer no strong formal echo with #209, so it was omitted from connections.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXkSYGgeKtaYTz4AXaoiuEKkKtpdygYaFG92D94JykX2G",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXkSYGgeKtaYTz4AXaoiuEKkKtpdygYaFG92D94JykX2G/image.png",
+        "imageSHA256": "f4ab9f027197f11fcb54b7872e6856ed67a60d347551e05c807615c90cba8d12"
+      },
+      {
+        "artworkId": "QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q/image.png",
+        "imageSHA256": "f5b357f777cdc7a9434ed7db0586bfb9ec7bb761ee1d5dd5ebbf2541c7150c95"
+      },
+      {
+        "artworkId": "QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN/image.png",
+        "imageSHA256": "2689cdcd26fc8bd4633189b8cc68558e73c4318cdc8a428d260090c2859c3946"
+      },
+      {
+        "artworkId": "QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t/image.png",
+        "imageSHA256": "8ab4959fa95189edf040b46be1e07fe4ed6681ab12c1acf49f05e9dea96bdd33"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:22.430084-05:00",
+    "usage": {
+      "inputTokens": 6838,
+      "outputTokens": 938,
+      "totalTokens": 7776,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6556
+    },
+    "requestId": "72fd92d7-5025-4709-887a-dc0a7fe2dbeb",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly circular head form fills most of the canvas against a dark grey ground, with spiky black marks radiating outward along the top and sides.\",\n    \"The left eye area contains a tight inward spiral of blue and yellow lines nested inside a square-cornered outline; the right side shows overlapping triangular red and white lines on a pink field.\",\n    \"The lower third is dominated by a wide-open mouth showing a row of grey-white rectangular teeth, outlined and cross-hatched in black, with red and yellow scribbled lines running beneath the jaw.\"\n  ],\n  \"reading\": \"The face pushes to the edges of the frame, its two eye zones built from opposite geometries — a coiling spiral on the left, a jagged triangular tangle on the right. That asymmetry reads as unease rather than balance. The bared teeth below carry enough solidity to feel like a fixed state rather than a passing expression. Loose marks at the crown and sides keep the whole form from settling.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors #208 and #210 share the same dark ground and bared-teeth mouth. #209 is the most saturated of the three, with pink and yellow pushing against the dark field more forcefully than in either neighbor.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q\",\n      \"reason\": \"Both works place a circular head on a near-identical dark teal-grey ground with a yellow diagonal mark in the upper left, but #208 keeps its palette darker and murkier where #209 breaks into bright pink and open white.\"\n    },\n    {\n      \"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\",\n      \"reason\": \"Both #209 and #210 feature a prominent spiral eye and a row of white teeth on the same dark ground, but #210 places the spiral on the right and uses tighter concentric rings, reversing the lateral emphasis.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral eye\",\n    \"bared teeth\",\n    \"asymmetric eye zones\",\n    \"radiating spike marks\",\n    \"dark ground\",\n    \"triangular line cluster\"\n  ],\n  \"interpretiveTags\": [\n    \"unease\",\n    \"confrontational\",\n    \"fixed grimace\"\n  ],\n  \"lookingQuestion\": \"How does the difference in geometry between the left eye's inward spiral and the right eye's triangular lines affect the way you move across the face?\",\n  \"ambiguities\": [\n    \"The square outline around the left spiral eye could be a structural element of the face or a separate overlaid shape; the image does not resolve this.\",\n    \"QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN (nifty faces #130) shares a face subject but its olive ground, restrained palette and hat form offer no strong formal echo with #209, so it was omitted from connections.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: spiral with square outline on left, triangular red-white tangle on pink field on right, grey-white teeth row in lower third — all visible.\",\n    \"Yellow diagonal in #208 confirmed upper-left; dark teal-grey ground match confirmed; #208 palette is darker overall — comparison reason is accurate.\",\n    \"Removed 'outward' from the draft description of the right eye's triangular lines, as the image shows overlapping static triangles rather than a radiating outward pattern; 'outward' implied a directionality not clearly supported.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmXkSYGgeKtaYTz4AXaoiuEKkKtpdygYaFG92D94JykX2G",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmXkSYGgeKtaYTz4AXaoiuEKkKtpdygYaFG92D94JykX2G/image.png",
+        "imageSHA256": "f4ab9f027197f11fcb54b7872e6856ed67a60d347551e05c807615c90cba8d12"
+      },
+      {
+        "artworkId": "QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q/image.png",
+        "imageSHA256": "f5b357f777cdc7a9434ed7db0586bfb9ec7bb761ee1d5dd5ebbf2541c7150c95"
+      },
+      {
+        "artworkId": "QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN/image.png",
+        "imageSHA256": "2689cdcd26fc8bd4633189b8cc68558e73c4318cdc8a428d260090c2859c3946"
+      },
+      {
+        "artworkId": "QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t/image.png",
+        "imageSHA256": "8ab4959fa95189edf040b46be1e07fe4ed6681ab12c1acf49f05e9dea96bdd33"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A roughly circular head form fills most of the canvas against a dark grey ground, with spiky black marks radiating outward along the top and sides like a fringe.\", \"The left eye area contains a tight inward spiral of blue and yellow lines nested inside a square-cornered outline, while the right side shows overlapping triangular red and white lines on a pink field.\", \"The lower third is dominated by a wide-open mouth showing a row of grey-white rectangular teeth, outlined and cross-hatched in black, with red and yellow scribbled lines running beneath the jaw.\"], \"reading\": \"The face pushes to the edges of the frame, its two eye zones built from opposite geometries — a coiling spiral on the left, a jagged triangular tangle on the right. That asymmetry reads as unease rather than balance. The bared teeth below are rendered with enough solidity to feel like a fixed grimace rather than a passing expression. Loose marks at the crown and sides keep the whole form from settling.\", \"contextAngle\": \"Within the owned nnotb subset, title neighbors #208 and #210 share the same dark ground and bared-teeth mouth. #209 is the most saturated of the three, with pink and yellow pushing against the dark field more forcefully than in either neighbor.\", \"connections\": [{\"targetArtworkId\": \"QmREkKvLZ7Zz3CMCtdV2drZmUJwLYK4sV1ZQ91gye5oD5q\", \"reason\": \"Both works place a circular head on a near-identical dark teal-grey ground with a yellow diagonal mark cutting across the upper left, but #208 keeps its palette darker and murkier where #209 breaks into bright pink and open white.\"}, {\"targetArtworkId\": \"QmceHGiyBqKFRrRnbdWWeb8RxbKM9dBNqq8puUkeT2wi7t\", \"reason\": \"Both #209 and #210 feature a prominent spiral eye and a row of white teeth on the same dark ground, but #210 places the spiral on the right and uses tighter concentric rings, reversing the lateral emphasis.\"}], \"tags\": [\"spiral eye\", \"bared teeth\", \"asymmetric eye zones\", \"radiating spike marks\", \"dark ground\", \"triangular line cluster\"], \"interpretiveTags\": [\"unease\", \"confrontational\", \"fixed grimace\"], \"lookingQuestion\": \"How does the difference in geometry between the left eye's inward spiral and the right eye's outward triangular lines affect the way you move across the face?\", \"ambiguities\": [\"The square outline around the left spiral eye could be a structural element of the face or a separate overlaid shape; the image does not resolve this.\", \"QmUQm1yZ6PerT8HAm8kyGa99YQpxGNHgMVqLMYkmqThibN (nifty faces #130) shares a face subject but its olive ground, restrained palette and hat form offer no strong formal echo with #209, so it was omitted from connections.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:46.378314-05:00",
+    "usage": {
+      "inputTokens": 6121,
+      "outputTokens": 735,
+      "totalTokens": 6856,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12357
+    },
+    "requestId": "4682caec-3647-4898-b306-c8ff79572d96",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly frontal figure dominates the center, its upper section built from dense overlapping spirals and rectangular hatched zones in black line over amber and olive.\",\n    \"Two asymmetric eye-like forms sit at different heights: the left is a tight coiled spiral, the right a crosshatched rectangle, both enclosed in a larger squared outline ringed with spiky radiating marks.\",\n    \"Thin blue lines scatter across the lower right and bottom edge, contrasting with the warm amber-orange ground that shifts to deeper burnt orange in the corners.\"\n  ],\n  \"reading\": \"The figure holds the frame with a stacked, blocky presence—coiled lines pulling inward on one side while hatched grids push outward on the other. That asymmetry between the two eye zones gives the face an off-balance, watchful quality. Blue accents at the margins feel like static at the edge of something loud. The amber ground presses close, leaving little air around the form.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #44 and nnxyz nnotb #46. Where #44 spreads its lines across a soft, diffuse ground and #46 places a full figure on dark teal, #45 compresses a similar frontal form into a dense, warm-field composition.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy\",\n      \"reason\": \"Both works use a saturated amber-orange ground with black line work layered over it, and both organize dense mark-making around a frontal face-like form at roughly the same scale.\"\n    },\n    {\n      \"targetArtworkId\": \"QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv\",\n      \"reason\": \"Both #45 and #46 build a figure from stacked rectangular and spiral zones with spiky radiating marks at the head, but #46 extends limbs outward against a dark ground while #45 stays compressed in warm amber.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal figure\",\n    \"spiral line\",\n    \"hatched rectangle\",\n    \"amber ground\",\n    \"asymmetric eye zones\",\n    \"blue accent marks\"\n  ],\n  \"lookingQuestion\": \"What does the difference in line behavior between the tight coiled spiral on the left and the open crosshatched grid on the right do to how you read the two sides of the face?\",\n  \"ambiguities\": [\n    \"The lower section of the figure is heavily overworked with crossing lines; whether it resolves as arms, a torso, or an abstract base cannot be confirmed from the image alone.\",\n    \"The collector's scrimshaw connection is a stated perspective on visual qualities across the collection, not a claim about this specific work's making process or materials.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZ5TdQymamoSUNBv652w3ULPkpTXCA9RWjoFj5e3ZNGeg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZ5TdQymamoSUNBv652w3ULPkpTXCA9RWjoFj5e3ZNGeg/image.png",
+        "imageSHA256": "fddc8980cd40e3431fd197a5abc2744832bb9dae176398a308285554a323e0c9"
+      },
+      {
+        "artworkId": "QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7/image.png",
+        "imageSHA256": "76a270058058b364793dec7d644f35871484b9a91718331ed10c1a5f53634e8c"
+      },
+      {
+        "artworkId": "QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy/image.png",
+        "imageSHA256": "4ca20c7ade799c7191840571757d0af5e11b54e62f585eae8a4eaf3d319ed49b"
+      },
+      {
+        "artworkId": "QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv/image.png",
+        "imageSHA256": "ac1ab5a2464cf7c3d7b9e534904498eaf7f2ab45857899ca46cc1dc72fa41c0a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:53.258278-05:00",
+    "usage": {
+      "inputTokens": 6888,
+      "outputTokens": 957,
+      "totalTokens": 7845,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6759
+    },
+    "requestId": "78fc63a3-baba-41bd-a839-465c830b10db",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A roughly frontal figure dominates the center, its upper section built from dense overlapping spirals and rectangular hatched zones in black line over amber and olive.\",\n    \"Two asymmetric eye-like forms sit at different heights: the left is a tight coiled spiral, the right a crosshatched rectangle, both enclosed in a larger squared outline ringed with spiky radiating marks.\",\n    \"Thin blue lines scatter across the lower right and bottom edge, contrasting with the warm amber-orange ground that shifts to deeper burnt orange in the corners.\"\n  ],\n  \"reading\": \"The figure holds the frame with a stacked, blocky presence—coiled lines pulling inward on one side while hatched grids push outward on the other. That asymmetry between the two eye zones gives the face an off-balance, watchful quality. Blue accents at the margins feel like static at the edge of something loud. The amber ground presses close, leaving little air around the form.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #44 and nnxyz nnotb #46. Where #44 spreads lines across a soft diffuse ground and #46 places a full figure on dark teal, #45 compresses a frontal form into a dense warm-field composition.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy\",\n      \"reason\": \"Both works share a saturated amber-orange ground with black line work layered over it, and both organize dense mark-making around a frontal face-like form at roughly the same scale.\"\n    },\n    {\n      \"targetArtworkId\": \"QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv\",\n      \"reason\": \"Both #45 and #46 build a figure from stacked rectangular and spiral zones with spiky radiating marks at the head, but #46 extends limbs outward against dark teal while #45 stays compressed in warm amber.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal figure\",\n    \"spiral line\",\n    \"hatched rectangle\",\n    \"amber ground\",\n    \"asymmetric eye zones\",\n    \"blue accent marks\"\n  ],\n  \"lookingQuestion\": \"What does the difference in line behavior between the tight coiled spiral on the left and the open crosshatched grid on the right do to how you read the two sides of the face?\",\n  \"ambiguities\": [\n    \"The lower section of the figure is heavily overworked with crossing lines; whether it resolves as arms, a torso, or an abstract base cannot be confirmed from the image alone.\",\n    \"The collector's scrimshaw connection is a stated perspective on visual qualities across the collection, not a claim about this specific work's making process or materials.\"\n  ],\n  \"reviewFindings\": [\n    \"All three color and form observations confirmed against the primary image: amber-orange ground, coiled spiral left eye zone, crosshatched rectangle right eye zone, spiky radiating marks, and scattered blue lines at lower right are all visible.\",\n    \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy comparison confirmed: inspected image shows saturated amber-orange ground and frontal face-like form with dense black line work at matching scale; connection is specific and supported.\",\n    \"QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv comparison confirmed: inspected image shows stacked figure with spiral and rectangular zones and spiky head marks on dark teal ground; contrast with #45's warm compressed field is specific and visible.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZ5TdQymamoSUNBv652w3ULPkpTXCA9RWjoFj5e3ZNGeg",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZ5TdQymamoSUNBv652w3ULPkpTXCA9RWjoFj5e3ZNGeg/image.png",
+        "imageSHA256": "fddc8980cd40e3431fd197a5abc2744832bb9dae176398a308285554a323e0c9"
+      },
+      {
+        "artworkId": "QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcCBL6FEfUD7U1NqJ4Te89HaziyCGP3drBTg543EgJHc7/image.png",
+        "imageSHA256": "76a270058058b364793dec7d644f35871484b9a91718331ed10c1a5f53634e8c"
+      },
+      {
+        "artworkId": "QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy/image.png",
+        "imageSHA256": "4ca20c7ade799c7191840571757d0af5e11b54e62f585eae8a4eaf3d319ed49b"
+      },
+      {
+        "artworkId": "QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv/image.png",
+        "imageSHA256": "ac1ab5a2464cf7c3d7b9e534904498eaf7f2ab45857899ca46cc1dc72fa41c0a"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A roughly frontal figure dominates the center, its upper section built from dense overlapping spirals and rectangular hatched zones in black line over amber and olive.\", \"Two asymmetric eye-like forms sit at different heights: the left is a tight coiled spiral, the right a crosshatched rectangle, both enclosed in a larger squared outline ringed with spiky radiating marks.\", \"Thin blue lines scatter across the lower right and bottom edge, contrasting with the warm amber-orange ground that shifts to deeper burnt orange in the corners.\"], \"reading\": \"The figure holds the frame with a stacked, blocky presence—coiled lines pulling inward on one side while hatched grids push outward on the other. That asymmetry between the two eye zones gives the face an off-balance, watchful quality. Blue accents at the margins feel like static at the edge of something loud. The amber ground presses close, leaving little air around the form.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #44 and nnxyz nnotb #46. Where #44 spreads its lines across a soft, diffuse ground and #46 places a full figure on dark teal, #45 compresses a similar frontal form into a dense, warm-field composition.\", \"connections\": [{\"targetArtworkId\": \"QmUKEm7psjYgNLgSRszXRUJ9YAu9rxeAFzH3UwVqyQ7AYy\", \"reason\": \"Both works use a saturated amber-orange ground with black line work layered over it, and both organize dense mark-making around a frontal face-like form at roughly the same scale.\"}, {\"targetArtworkId\": \"QmV1VY2cZBGACk7bNSxeMomCPGzNUqeBX9kShKwBuYThmv\", \"reason\": \"Both #45 and #46 build a figure from stacked rectangular and spiral zones with spiky radiating marks at the head, but #46 extends limbs outward against a dark ground while #45 stays compressed in warm amber.\"}], \"tags\": [\"frontal figure\", \"spiral line\", \"hatched rectangle\", \"amber ground\", \"asymmetric eye zones\", \"blue accent marks\"], \"lookingQuestion\": \"What does the difference in line behavior between the tight coiled spiral on the left and the open crosshatched grid on the right do to how you read the two sides of the face?\", \"ambiguities\": [\"The lower section of the figure is heavily overworked with crossing lines; whether it resolves as arms, a torso, or an abstract base cannot be confirmed from the image alone.\", \"The collector's scrimshaw connection is a stated perspective on visual qualities across the collection, not a claim about this specific work's making process or materials.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

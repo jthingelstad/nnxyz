@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:34.351567-05:00",
+    "usage": {
+      "inputTokens": 6336,
+      "outputTokens": 740,
+      "totalTokens": 7076,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 11638
+    },
+    "requestId": "ba70a594-edce-4ee7-98a6-bbb8d6602c85",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A tall dark figure dominates the center, its face replaced by a flat black rectangle bearing a red X, a yellow looping form, and a row of white pointed teeth inside a yellow-outlined jaw.\",\n    \"Three small daisy-like flowers with yellow centers and white petals sit low in the corners, rendered in a clean outline style that contrasts with the dense black hatching surrounding them.\",\n    \"A broad blue shape occupies the left mid-ground, overlaid with loose teal scribble lines; a short white horizontal stroke extends from the right side of the face like a cigarette or rod.\"\n  ],\n  \"reading\": \"The figure stands tall but its face is a flat mask: a red X crosses where eyes might be, a yellow looped form clusters beside it, and white teeth line a rigid jaw. Small, neatly drawn flowers at the bottom edges hold their ground against the surrounding black hatching. The contrast between those calm flower outlines and the dense, agitated marks above reads as unease held in check rather than released.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the toothed-jaw motif reappears in both title neighbors, nnxyz nnotb #224 and nnxyz nnotb #226, though #225 replaces the close-up face format of those works with a full standing figure set against a warm brown field.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVpGQpaXmCVUcLzgwbLcuZmjVdsbeV6cy2edrnMGneF8V\",\n      \"reason\": \"nnxyz nnotb #224 shares the white-toothed jaw and red X mark, but fills the canvas with dense layered color rather than the dark vertical figure and open brown ground seen here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWcj2RELfBZh1JFwhM44rnWsZoFWbxg5peqmvRwSzqng3\",\n      \"reason\": \"nnxyz nnotb #226 repeats the white tooth row and yellow looping eye form inside a circular outline, offering a close formal echo while shifting the composition from a standing figure to a contained disc shape.\"\n    }\n  ],\n  \"tags\": [\n    \"standing figure\",\n    \"mask-face\",\n    \"toothed jaw\",\n    \"daisy flowers\",\n    \"black hatching\",\n    \"red X mark\"\n  ],\n  \"interpretiveTags\": [\n    \"unease\",\n    \"contrast between calm and agitation\"\n  ],\n  \"lookingQuestion\": \"What does the visual gap between the precisely drawn flowers at the bottom and the dense hatched marks above them do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The white horizontal stroke extending from the face could be a rod, a cigarette, or an unrelated mark; no supplied evidence resolves this.\",\n    \"The small magenta stroke near the lower center is isolated and its relationship to the surrounding forms is unclear from the image alone.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZtzDmwLmDbnUDDcsEUPP4qu2dYeGWxGPuZ11e1iBmxap",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZtzDmwLmDbnUDDcsEUPP4qu2dYeGWxGPuZ11e1iBmxap/image.png",
+        "imageSHA256": "7d19c58d0ecbbcbe21cc0b991cbbe6a2b272c7926f2bfc9041393bdb1202aad5"
+      },
+      {
+        "artworkId": "QmVpGQpaXmCVUcLzgwbLcuZmjVdsbeV6cy2edrnMGneF8V",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVpGQpaXmCVUcLzgwbLcuZmjVdsbeV6cy2edrnMGneF8V/image.png",
+        "imageSHA256": "01d8e31bcb49dac36954136cf710ba44da1cb9094f926ec18f44a25db85d2178"
+      },
+      {
+        "artworkId": "QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB/image.png",
+        "imageSHA256": "5a91f6a0bc3273bf9c259b46798d8f3037cabb5b210373e5e9327aefa9b64724"
+      },
+      {
+        "artworkId": "QmWcj2RELfBZh1JFwhM44rnWsZoFWbxg5peqmvRwSzqng3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWcj2RELfBZh1JFwhM44rnWsZoFWbxg5peqmvRwSzqng3/image.png",
+        "imageSHA256": "7b05a70a294fde8e5810851e011913e02c6877d846a58f315c025eed2586e286"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:58:40.191675-05:00",
+    "usage": {
+      "inputTokens": 7098,
+      "outputTokens": 825,
+      "totalTokens": 7923,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 5766
+    },
+    "requestId": "56f3836d-09f2-4771-b540-163fedbbb9d8",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A tall dark figure dominates the center, its face replaced by a flat black rectangle bearing a red X, a yellow looping form, and a row of white pointed teeth inside a yellow-outlined jaw.\",\n    \"Three small daisy-like flowers with yellow centers and white petals sit low in the corners, rendered in a clean outline style that contrasts with the dense black hatching surrounding them.\",\n    \"A broad blue shape occupies the left mid-ground, overlaid with loose teal scribble lines; a short white horizontal stroke extends from the right side of the face rectangle.\"\n  ],\n  \"reading\": \"The figure stands tall but its face is a flat black rectangle: a red X crosses the upper zone, a yellow looped form clusters beside it, and white teeth line a rigid jaw below. Small, neatly drawn flowers at the bottom edges hold their ground against surrounding black hatching. The gap between those calm outlines and the dense, agitated marks above reads as unease held in check rather than released.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the toothed-jaw motif reappears in both title neighbors, nnxyz nnotb #224 and nnxyz nnotb #226, though #225 replaces the close-up face format of those works with a full standing figure set against a warm brown field.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmVpGQpaXmCVUcLzgwbLcuZmjVdsbeV6cy2edrnMGneF8V\",\n      \"reason\": \"nnxyz nnotb #224 shares the white-toothed jaw and red X mark but fills the canvas with dense layered color rather than the dark vertical figure and open brown ground seen here.\"\n    },\n    {\n      \"targetArtworkId\": \"QmWcj2RELfBZh1JFwhM44rnWsZoFWbxg5peqmvRwSzqng3\",\n      \"reason\": \"nnxyz nnotb #226 repeats the white tooth row and yellow looping eye form, offering a close formal echo while shifting the composition from a standing figure to a contained circular outline.\"\n    }\n  ],\n  \"tags\": [\"standing figure\", \"mask-face\", \"toothed jaw\", \"daisy flowers\", \"black hatching\", \"red X mark\"],\n  \"interpretiveTags\": [\"unease\", \"contrast between calm and agitation\"],\n  \"lookingQuestion\": \"What does the visual gap between the precisely drawn flowers at the bottom and the dense hatched marks above them do to how you move through the image?\",\n  \"ambiguities\": [\n    \"The white horizontal stroke extending from the face rectangle could be a rod, a cigarette, or an unrelated mark; no supplied evidence resolves this.\",\n    \"The small magenta stroke near the lower center is isolated and its relationship to surrounding forms is unclear from the image alone.\"\n  ],\n  \"reviewFindings\": [\n    \"Observation 3 revised: 'like a cigarette or rod' removed as unsupported subject identification; replaced with neutral description of the mark.\",\n    \"All three comparison images inspected; toothed jaw, red X, and yellow looping form confirmed visible in #224 and #226, supporting both connections.\",\n    \"Daisy flowers confirmed in lower-left and lower-right corners of #225; blue shape and teal scribble lines confirmed on left mid-ground.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZtzDmwLmDbnUDDcsEUPP4qu2dYeGWxGPuZ11e1iBmxap",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZtzDmwLmDbnUDDcsEUPP4qu2dYeGWxGPuZ11e1iBmxap/image.png",
+        "imageSHA256": "7d19c58d0ecbbcbe21cc0b991cbbe6a2b272c7926f2bfc9041393bdb1202aad5"
+      },
+      {
+        "artworkId": "QmVpGQpaXmCVUcLzgwbLcuZmjVdsbeV6cy2edrnMGneF8V",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmVpGQpaXmCVUcLzgwbLcuZmjVdsbeV6cy2edrnMGneF8V/image.png",
+        "imageSHA256": "01d8e31bcb49dac36954136cf710ba44da1cb9094f926ec18f44a25db85d2178"
+      },
+      {
+        "artworkId": "QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmcBtkPsbNxbFFgr3e9XUXMoMDRuBCCMTmXzaDqa1N2FmB/image.png",
+        "imageSHA256": "5a91f6a0bc3273bf9c259b46798d8f3037cabb5b210373e5e9327aefa9b64724"
+      },
+      {
+        "artworkId": "QmWcj2RELfBZh1JFwhM44rnWsZoFWbxg5peqmvRwSzqng3",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWcj2RELfBZh1JFwhM44rnWsZoFWbxg5peqmvRwSzqng3/image.png",
+        "imageSHA256": "7b05a70a294fde8e5810851e011913e02c6877d846a58f315c025eed2586e286"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A tall dark figure dominates the center, its face replaced by a flat black rectangle bearing a red X, a yellow looping form, and a row of white pointed teeth inside a yellow-outlined jaw.\", \"Three small daisy-like flowers with yellow centers and white petals sit low in the corners, rendered in a clean outline style that contrasts with the dense black hatching surrounding them.\", \"A broad blue shape occupies the left mid-ground, overlaid with loose teal scribble lines; a short white horizontal stroke extends from the right side of the face like a cigarette or rod.\"], \"reading\": \"The figure stands tall but its face is a flat mask: a red X crosses where eyes might be, a yellow looped form clusters beside it, and white teeth line a rigid jaw. Small, neatly drawn flowers at the bottom edges hold their ground against the surrounding black hatching. The contrast between those calm flower outlines and the dense, agitated marks above reads as unease held in check rather than released.\", \"contextAngle\": \"Within the owned nnotb subset, the toothed-jaw motif reappears in both title neighbors, nnxyz nnotb #224 and nnxyz nnotb #226, though #225 replaces the close-up face format of those works with a full standing figure set against a warm brown field.\", \"connections\": [{\"targetArtworkId\": \"QmVpGQpaXmCVUcLzgwbLcuZmjVdsbeV6cy2edrnMGneF8V\", \"reason\": \"nnxyz nnotb #224 shares the white-toothed jaw and red X mark, but fills the canvas with dense layered color rather than the dark vertical figure and open brown ground seen here.\"}, {\"targetArtworkId\": \"QmWcj2RELfBZh1JFwhM44rnWsZoFWbxg5peqmvRwSzqng3\", \"reason\": \"nnxyz nnotb #226 repeats the white tooth row and yellow looping eye form inside a circular outline, offering a close formal echo while shifting the composition from a standing figure to a contained disc shape.\"}], \"tags\": [\"standing figure\", \"mask-face\", \"toothed jaw\", \"daisy flowers\", \"black hatching\", \"red X mark\"], \"interpretiveTags\": [\"unease\", \"contrast between calm and agitation\"], \"lookingQuestion\": \"What does the visual gap between the precisely drawn flowers at the bottom and the dense hatched marks above them do to how you move through the image?\", \"ambiguities\": [\"The white horizontal stroke extending from the face could be a rod, a cigarette, or an unrelated mark; no supplied evidence resolves this.\", \"The small magenta stroke near the lower center is isolated and its relationship to the surrounding forms is unclear from the image alone.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

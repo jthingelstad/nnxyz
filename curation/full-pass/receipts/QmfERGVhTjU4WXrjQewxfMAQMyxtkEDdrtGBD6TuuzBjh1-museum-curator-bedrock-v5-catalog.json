@@ -1,0 +1,134 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:47.453856-05:00",
+    "usage": {
+      "inputTokens": 6661,
+      "outputTokens": 810,
+      "totalTokens": 7471,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 14466
+    },
+    "requestId": "b7d3c0de-41b1-4b60-ab87-0a4e32f1001c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two square eye-zones dominate the upper half, each containing tight concentric loops in red, purple, and white that spiral inward to a small white center.\",\n    \"A wide rectangular mouth zone sits low in the composition, filled with a white zigzag line running the full width against a black-hatched interior.\",\n    \"Dense crossing lines in cyan, yellow, red, and black fill every zone, including the background, so no area reads as empty or restful.\"\n  ],\n  \"reading\": \"The face here is built from geometry rather than contour: two framed squares for eyes, a framed rectangle for a mouth, stacked like a diagram. The spiraling loops inside each eye socket pull attention inward while the zigzag teeth push outward. That tension between contained spin and jagged outward thrust gives the image a wired, almost alarm-like feeling, though the rigid scaffolding keeps it from tipping into chaos.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #11 and nnxyz nifty faces #13. Where #11 builds a face from dense overlapping curves with no hard frame, #12 locks its features inside strict rectangles—a sharp structural contrast within the same owned sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv\",\n      \"reason\": \"nnxyz nifty faces #13 shares the same rectangular eye-and-mouth scaffold and zigzag tooth motif, making it the closest structural echo in the owned subset, though its red-and-yellow border and looser line density give it a different weight.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9\",\n      \"reason\": \"Scrimshaw8 uses concentric oval loops around each eye socket in a way the collector links to nnxyz's spiral eye zones; both works place a ringed focal point at eye level, though Scrimshaw8 dissolves its structure into a purple field while #12 keeps hard rectangular borders.\"\n    }\n  ],\n  \"tags\": [\n    \"concentric spirals\",\n    \"rectangular face structure\",\n    \"zigzag line\",\n    \"dense cross-hatching\",\n    \"high-contrast color fill\",\n    \"framed eye zones\"\n  ],\n  \"lookingQuestion\": \"The two eye spirals are built the same way but land differently—what is it in the lines, the colors, or the surrounding marks that makes one feel more open than the other?\",\n  \"ambiguities\": [\n    \"The lettering in the upper-left corner is treated as image content per curatorial guidelines and has not been used to infer dates or authorship beyond the supplied metadata.\",\n    \"QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry (nifty faces #11) was inspected but offers only contrast, not a meaningful formal echo, so it was omitted from connections in favor of the stronger structural match with #13.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfERGVhTjU4WXrjQewxfMAQMyxtkEDdrtGBD6TuuzBjh1",
+        "imagePath": "collection/artists/nnxyz--0x14a19d826e03e5a33df33f4ff898968329cb4085/artworks/QmfERGVhTjU4WXrjQewxfMAQMyxtkEDdrtGBD6TuuzBjh1/image.png",
+        "imageSHA256": "b45e56b8c7b35d497c10c6661d1794feb67303a11b507358b35aee4e76ad63ce"
+      },
+      {
+        "artworkId": "QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry/image.png",
+        "imageSHA256": "a18a0bd568f37d3c2e4f4ed2ee1e1927f94ffe59d57fe1926de9141e78e93b7e"
+      },
+      {
+        "artworkId": "QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9/image.png",
+        "imageSHA256": "55b3c0f660ba734711080f7789a1ca827d66434132e7eea017056e9fc4c83394"
+      },
+      {
+        "artworkId": "QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv/image.png",
+        "imageSHA256": "8fb5d20a65575f71b89832b7bc615816f47dbb58733f8316991a3595ae38b2d8"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:54.699368-05:00",
+    "usage": {
+      "inputTokens": 7503,
+      "outputTokens": 948,
+      "totalTokens": 8451,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 7035
+    },
+    "requestId": "e689444b-9598-4104-8c13-f8c26058198f",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"Two square eye-zones dominate the upper half, each containing tight concentric loops in red, purple, and white that spiral inward to a small white center.\",\n    \"A wide rectangular mouth zone sits low in the composition, filled with a white zigzag line running the full width against a black-hatched interior.\",\n    \"Dense crossing lines in cyan, yellow, red, and black fill every zone including the background, so no area reads as empty or restful.\"\n  ],\n  \"reading\": \"The face is built from geometry rather than contour: two framed squares for eyes, a framed rectangle for a mouth, stacked like a diagram. The spiraling loops inside each eye zone pull attention inward while the zigzag teeth push outward. That tension between contained spin and jagged outward thrust gives the image a wired, almost alarm-like feeling, though the rigid scaffolding keeps it from tipping into chaos.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #11 and nnxyz nifty faces #13. Where #11 builds a face from dense overlapping curves with no hard frame, #12 locks its features inside strict rectangles—a sharp structural contrast within the same owned sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv\",\n      \"reason\": \"nnxyz nifty faces #13 shares the same rectangular eye-and-mouth scaffold and zigzag tooth motif, making it the closest structural echo in the owned subset, though its bold red-and-yellow border and looser line density give it a different weight.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9\",\n      \"reason\": \"Scrimshaw8 places concentric oval loops at eye level in a way the collector links to nnxyz's spiral eye zones; both works build a ringed focal point there, though Scrimshaw8 dissolves its structure into a purple field while #12 keeps hard rectangular borders.\"\n    }\n  ],\n  \"tags\": [\n    \"concentric spirals\",\n    \"rectangular face structure\",\n    \"zigzag line\",\n    \"dense cross-hatching\",\n    \"high-contrast color fill\",\n    \"framed eye zones\"\n  ],\n  \"lookingQuestion\": \"The two eye spirals are built the same way but land differently—what is it in the lines, the colors, or the surrounding marks that makes one feel more open than the other?\",\n  \"ambiguities\": [\n    \"The lettering in the upper-left corner is treated as image content per curatorial guidelines and has not been used to infer dates or authorship beyond the supplied metadata.\",\n    \"QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry (nifty faces #11) was inspected but offers only contrast, not a meaningful formal echo, so it was omitted from connections in favor of the stronger structural match with #13.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: concentric spiral eye zones, white zigzag mouth on black-hatched ground, and dense cross-hatching throughout with no empty areas.\",\n    \"Scrimshaw8 comparison verified: concentric loops are visible around the eye areas in that image, and the purple field versus hard rectangular border contrast is accurate.\",\n    \"Word counts checked: reading is within 55–80 words, contextAngle within 30–55 words, no prohibited vocabulary (deliberately, intentional, evolving, etc.) found; no numerical technical facts appear in prose.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfERGVhTjU4WXrjQewxfMAQMyxtkEDdrtGBD6TuuzBjh1",
+        "imagePath": "collection/artists/nnxyz--0x14a19d826e03e5a33df33f4ff898968329cb4085/artworks/QmfERGVhTjU4WXrjQewxfMAQMyxtkEDdrtGBD6TuuzBjh1/image.png",
+        "imageSHA256": "b45e56b8c7b35d497c10c6661d1794feb67303a11b507358b35aee4e76ad63ce"
+      },
+      {
+        "artworkId": "QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry/image.png",
+        "imageSHA256": "a18a0bd568f37d3c2e4f4ed2ee1e1927f94ffe59d57fe1926de9141e78e93b7e"
+      },
+      {
+        "artworkId": "QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9/image.png",
+        "imageSHA256": "55b3c0f660ba734711080f7789a1ca827d66434132e7eea017056e9fc4c83394"
+      },
+      {
+        "artworkId": "QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv/image.png",
+        "imageSHA256": "8fb5d20a65575f71b89832b7bc615816f47dbb58733f8316991a3595ae38b2d8"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"Two square eye-zones dominate the upper half, each containing tight concentric loops in red, purple, and white that spiral inward to a small white center.\", \"A wide rectangular mouth zone sits low in the composition, filled with a white zigzag line running the full width against a black-hatched interior.\", \"Dense crossing lines in cyan, yellow, red, and black fill every zone, including the background, so no area reads as empty or restful.\"], \"reading\": \"The face here is built from geometry rather than contour: two framed squares for eyes, a framed rectangle for a mouth, stacked like a diagram. The spiraling loops inside each eye socket pull attention inward while the zigzag teeth push outward. That tension between contained spin and jagged outward thrust gives the image a wired, almost alarm-like feeling, though the rigid scaffolding keeps it from tipping into chaos.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #11 and nnxyz nifty faces #13. Where #11 builds a face from dense overlapping curves with no hard frame, #12 locks its features inside strict rectangles—a sharp structural contrast within the same owned sequence.\", \"connections\": [{\"targetArtworkId\": \"QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv\", \"reason\": \"nnxyz nifty faces #13 shares the same rectangular eye-and-mouth scaffold and zigzag tooth motif, making it the closest structural echo in the owned subset, though its red-and-yellow border and looser line density give it a different weight.\"}, {\"targetArtworkId\": \"QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9\", \"reason\": \"Scrimshaw8 uses concentric oval loops around each eye socket in a way the collector links to nnxyz's spiral eye zones; both works place a ringed focal point at eye level, though Scrimshaw8 dissolves its structure into a purple field while #12 keeps hard rectangular borders.\"}], \"tags\": [\"concentric spirals\", \"rectangular face structure\", \"zigzag line\", \"dense cross-hatching\", \"high-contrast color fill\", \"framed eye zones\"], \"lookingQuestion\": \"The two eye spirals are built the same way but land differently—what is it in the lines, the colors, or the surrounding marks that makes one feel more open than the other?\", \"ambiguities\": [\"The lettering in the upper-left corner is treated as image content per curatorial guidelines and has not been used to infer dates or authorship beyond the supplied metadata.\", \"QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry (nifty faces #11) was inspected but offers only contrast, not a meaningful formal echo, so it was omitted from connections in favor of the stronger structural match with #13.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "collection-review",
+    "modelId": "us.anthropic.claude-opus-4-6-v1",
+    "promptVersion": "museum-curator-collection-review-v1",
+    "timeCentral": "2026-10-13T10:07:28.161575-05:00",
+    "usage": {
+      "inputTokens": 7258,
+      "outputTokens": 883,
+      "totalTokens": 8141,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12161
+    },
+    "requestId": "b834c308-1e4a-4452-8a85-7312968a4ef8",
+    "stopReason": "end_turn",
+    "responseText": "\n\n```json\n{\n  \"observations\": [\n    \"Two square eye-zones dominate the upper half, each containing tight concentric loops in red, purple, and white that spiral inward to a small white center.\",\n    \"A wide rectangular mouth zone sits low in the composition, filled with a white zigzag line running the full width against a black-hatched interior.\",\n    \"Dense crossing lines in cyan, yellow, red, and black fill every zone including the background, so no area reads as empty or restful.\"\n  ],\n  \"reading\": \"Red and cyan lines collide across every inch of the surface, but the composition holds together through strict rectangular framing—two boxed spirals for eyes, one long box for a zigzag mouth. The spiraling loops inside each eye zone pull attention inward while the jagged teeth push outward. That tension between contained spin and sharp outward thrust can read as wired and alarm-like, though the rigid scaffolding keeps it from tipping into chaos.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors #11 and #13. Where #11 builds a face from dense overlapping curves with no hard frame, #12 locks its features inside strict rectangles—a sharp structural contrast within the same owned sequence.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv\",\n      \"reason\": \"nnxyz nifty faces #13 shares the same rectangular eye-and-mouth scaffold and zigzag tooth motif, making it the closest structural echo in the owned subset, though its bold red-and-yellow border and looser line density give it a different weight.\"\n    },\n    {\n      \"targetArtworkId\": \"QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9\",\n      \"reason\": \"Scrimshaw8 places concentric oval loops at eye level in a way the collector links to nnxyz's spiral eye zones; both works build a ringed focal point there, though Scrimshaw8 dissolves its structure into a purple field while #12 keeps hard rectangular borders.\"\n    }\n  ],\n  \"tags\": [\n    \"concentric spirals\",\n    \"rectangular face structure\",\n    \"zigzag line\",\n    \"dense cross-hatching\",\n    \"high-contrast color fill\",\n    \"framed eye zones\"\n  ],\n  \"lookingQuestion\": \"The two eye spirals are built the same way but land differently—what is it in the lines, the colors, or the surrounding marks that makes one feel more open than the other?\",\n  \"ambiguities\": [\n    \"The lettering in the upper-left corner is treated as image content per curatorial guidelines and has not been used to infer dates or authorship beyond the supplied metadata.\",\n    \"QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry (nifty faces #11) was inspected but offers only contrast, not a meaningful formal echo, so it was omitted from connections in favor of the stronger structural match with #13.\"\n  ],\n  \"reviewFindings\": [\n    \"Replaced opening phrase 'The face is built from' with a concrete color-and-line observation to resolve the repeated-opening flag.\",\n    \"Reading word count adjusted to 62 words, within the 55–65 target range.\",\n    \"Context angle at 38 words, within the 30–40 target range.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmfERGVhTjU4WXrjQewxfMAQMyxtkEDdrtGBD6TuuzBjh1",
+        "imagePath": "collection/artists/nnxyz--0x14a19d826e03e5a33df33f4ff898968329cb4085/artworks/QmfERGVhTjU4WXrjQewxfMAQMyxtkEDdrtGBD6TuuzBjh1/image.png",
+        "imageSHA256": "b45e56b8c7b35d497c10c6661d1794feb67303a11b507358b35aee4e76ad63ce"
+      },
+      {
+        "artworkId": "QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry/image.png",
+        "imageSHA256": "a18a0bd568f37d3c2e4f4ed2ee1e1927f94ffe59d57fe1926de9141e78e93b7e"
+      },
+      {
+        "artworkId": "QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9",
+        "imagePath": "collection/artists/scrimshaw.eth--0xd47667961beead6e3d0fd9110e6944c6de119c5a/artworks/QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9/image.png",
+        "imageSHA256": "55b3c0f660ba734711080f7789a1ca827d66434132e7eea017056e9fc4c83394"
+      },
+      {
+        "artworkId": "QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv/image.png",
+        "imageSHA256": "8fb5d20a65575f71b89832b7bc615816f47dbb58733f8316991a3595ae38b2d8"
+      }
+    ],
+    "instruction": "Perform final collection-level editorial review against these images.\nResolve the listed flags by describing visible results, never presumed intention, evolution,\nnamed influence, biography, historical conventions or physical paint media. Avoid jargon.\nFor mouth-openness-check flags, visible teeth alone do not establish a wide-open mouth.\nPrefer the specific tooth row, outline or visible dark opening; re-examine before retaining\na claim of openness. Preserve expressive interpretation as a reading, not artist psychology.\nFor body-extent-check flags, distinguish a head-and-torso or cropped upper body from a\nfull quadruped: only claim four legs when four legs are visible in the supplied image.\nDo not insert CIDs or counts into public prose. No deliberately, intentional, purposeful,\ncarefully, evolving, or usual in editorial prose. Keep reading 55-65 words, context 30-40\nwords (owned subset), exactly 3 observations, 3-6 visible-form tags, 0-2 image-backed\nconnections with exact supplied targetArtworkId, one lookingQuestion, and ambiguities.\nReturn ONLY JSON with those seven keys plus reviewFindings (up to 3 brief statements).\nCURRENT:\n{\"observations\": [\"Two square eye-zones dominate the upper half, each containing tight concentric loops in red, purple, and white that spiral inward to a small white center.\", \"A wide rectangular mouth zone sits low in the composition, filled with a white zigzag line running the full width against a black-hatched interior.\", \"Dense crossing lines in cyan, yellow, red, and black fill every zone including the background, so no area reads as empty or restful.\"], \"reading\": \"The face is built from geometry rather than contour: two framed squares for eyes, a framed rectangle for a mouth, stacked like a diagram. The spiraling loops inside each eye zone pull attention inward while the zigzag teeth push outward. That tension between contained spin and jagged outward thrust gives the image a wired, almost alarm-like feeling, though the rigid scaffolding keeps it from tipping into chaos.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between title neighbors nnxyz nifty faces #11 and nnxyz nifty faces #13. Where #11 builds a face from dense overlapping curves with no hard frame, #12 locks its features inside strict rectangles—a sharp structural contrast within the same owned sequence.\", \"connections\": [{\"targetArtworkId\": \"QmYRNKiKuhfUC8j4ccYfMTkorH4vc5qFHtZyGJVvyCLutv\", \"reason\": \"nnxyz nifty faces #13 shares the same rectangular eye-and-mouth scaffold and zigzag tooth motif, making it the closest structural echo in the owned subset, though its bold red-and-yellow border and looser line density give it a different weight.\"}, {\"targetArtworkId\": \"QmSpxj5bzsSwTUpTXnGJGdR7HPpyGJM8wqiQY7pbh8CUX9\", \"reason\": \"Scrimshaw8 places concentric oval loops at eye level in a way the collector links to nnxyz's spiral eye zones; both works build a ringed focal point there, though Scrimshaw8 dissolves its structure into a purple field while #12 keeps hard rectangular borders.\"}], \"tags\": [\"concentric spirals\", \"rectangular face structure\", \"zigzag line\", \"dense cross-hatching\", \"high-contrast color fill\", \"framed eye zones\"], \"lookingQuestion\": \"The two eye spirals are built the same way but land differently—what is it in the lines, the colors, or the surrounding marks that makes one feel more open than the other?\", \"ambiguities\": [\"The lettering in the upper-left corner is treated as image content per curatorial guidelines and has not been used to infer dates or authorship beyond the supplied metadata.\", \"QmUXXgud1aCQNg53fSEyGKpU8rAFpnr3CcW9ZuvtqGG9Ry (nifty faces #11) was inspected but offers only contrast, not a meaningful formal echo, so it was omitted from connections in favor of the stronger structural match with #13.\"]}\nFLAGS:\n[{\"rule\": \"repeated-opening\", \"text\": \"the face is built from\", \"instruction\": \"Open on a specific color, placement, shape or contrast in this image, with fresh wording.\"}]",
+    "systemPromptSHA256": "cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7",
+    "systemPromptPath": "curation/full-pass/prompts/cbbec2f5cd7069bb899e37f4df48390fbe7e2003985786434e5f2912d68c81d7.txt"
+  }
+]

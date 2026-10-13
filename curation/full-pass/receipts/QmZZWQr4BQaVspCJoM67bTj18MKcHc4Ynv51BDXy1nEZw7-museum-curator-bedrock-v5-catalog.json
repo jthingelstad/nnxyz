@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:21.589788-05:00",
+    "usage": {
+      "inputTokens": 6260,
+      "outputTokens": 753,
+      "totalTokens": 7013,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12302
+    },
+    "requestId": "578f3d8c-47d6-47f9-ab2c-fcfdffe53275",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pink field holds two large spiral forms side by side near the top center: the left one ringed in yellow and black, the right in dark red with crossing lines over it.\",\n    \"A vertical column of rounded black-outlined squares with orange-brown fills runs down the right edge, evenly spaced from top to bottom.\",\n    \"In the lower center, a coral-red open-jawed form with radiating lines sits above a zigzag band, flanked by black-and-yellow diagonal stripes.\"\n  ],\n  \"reading\": \"Two competing spiral forms anchor the upper half, one warm yellow, one deep red, each pulling the eye inward before the image pushes outward again through zigzag bands and loose overhead lines. The right-edge column of squares holds the composition like a spine, steady against the noise. Below, the open-jawed shape reads as raw appetite or alarm. Pink keeps the whole field from tipping into dread.\",\n  \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #143 and nnxyz nnotb #145. Both neighbors also use spiral eye-like forms on face-shaped structures, but #144 replaces their dark grounds with a bright pink field, shifting the mood sharply.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX\",\n      \"reason\": \"nnxyz nnotb #145 shares the paired-spiral structure in squared sockets and a zigzag tooth band, but its teal ground makes the contrast with #144's pink field a direct before-and-after in mood.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe\",\n      \"reason\": \"nnxyz rawblocks #40 uses the same hot pink ground and yellow-outlined circular forms on a face-like structure, making it the clearest cross-collection echo of #144's color and spiral logic.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral forms\",\n    \"zigzag bands\",\n    \"pink ground\",\n    \"repeating square column\",\n    \"open-jaw shape\",\n    \"crossing lines\"\n  ],\n  \"interpretiveTags\": [\n    \"tension between order and noise\",\n    \"appetite or alarm\"\n  ],\n  \"lookingQuestion\": \"The two spiral forms are built from different colors and line weights — what does the difference in their construction do to how you move between them?\",\n  \"ambiguities\": [\n    \"The coral-red open-jawed form in the lower center could be read as an animal head or a purely abstract shape; no supplied evidence resolves this.\",\n    \"nnxyz nnotb #143 was inspected but offers a weaker formal connection than #145 and rawblocks #40, so it was not selected despite being the immediate title and recorded-creation predecessor.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZZWQr4BQaVspCJoM67bTj18MKcHc4Ynv51BDXy1nEZw7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZZWQr4BQaVspCJoM67bTj18MKcHc4Ynv51BDXy1nEZw7/image.png",
+        "imageSHA256": "443353921e412fd093cc05625cbd1c83f726f5c4f0d9afb51f3dd446b0ee80d7"
+      },
+      {
+        "artworkId": "QmUd8NBNYJKhSL4D5dYF8KKDCWLmC2ZsRPXBpdTaDn7WFH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUd8NBNYJKhSL4D5dYF8KKDCWLmC2ZsRPXBpdTaDn7WFH/image.png",
+        "imageSHA256": "4dffc4cb347f570462678e837da01da3a15aa76284cdf15e7169359c3f20dee1"
+      },
+      {
+        "artworkId": "QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe/image.png",
+        "imageSHA256": "4432232fae9ee81bd00fa0e245871284775ab1e78693658130f4560f53083d2f"
+      },
+      {
+        "artworkId": "QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX/image.png",
+        "imageSHA256": "08c1632fc9856a3e464f03164b086040b311a8e03a212bed7f1821883f534d8b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:56:27.663921-05:00",
+    "usage": {
+      "inputTokens": 7035,
+      "outputTokens": 886,
+      "totalTokens": 7921,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6007
+    },
+    "requestId": "522c1149-2702-484a-9889-d739170888a4",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A pink field holds two large spiral forms side by side near the top center: the left ringed in yellow and black, the right in dark red with crossing lines over it.\",\n    \"A vertical column of rounded black-outlined squares with orange-brown fills runs down the right edge, evenly spaced from top to bottom.\",\n    \"In the lower center, a coral-red open-jawed form with radiating lines sits above a zigzag band, flanked by black-and-yellow diagonal stripes.\"\n  ],\n  \"reading\": \"Two spiral forms anchor the upper half — one warm yellow, one deep red — each pulling the eye inward before zigzag bands and loose overhead lines push it back out. The right-edge column of squares holds the composition steady against that noise. Below, the open-jawed shape reads as raw appetite or alarm. The pink field keeps the whole from tipping into dread.\",\n  \"contextAngle\": \"Within the owned nnotb subset, title neighbors are nnxyz nnotb #143 and nnxyz nnotb #145. Both neighbors use spiral forms on face-like structures, but #144 replaces their dark or teal grounds with a bright pink field, shifting the mood sharply.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX\",\n      \"reason\": \"nnxyz nnotb #145 shares paired spirals in squared sockets and a zigzag tooth band, but its teal ground makes the contrast with #144's pink field a direct shift in mood.\"\n    },\n    {\n      \"targetArtworkId\": \"QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe\",\n      \"reason\": \"nnxyz rawblocks #40 uses the same hot pink ground and yellow-outlined circular forms on a face-like structure, making it the clearest cross-collection echo of #144's color and spiral logic.\"\n    }\n  ],\n  \"tags\": [\"spiral forms\", \"zigzag bands\", \"pink ground\", \"repeating square column\", \"open-jaw shape\", \"crossing lines\"],\n  \"interpretiveTags\": [\"tension between order and noise\", \"appetite or alarm\"],\n  \"lookingQuestion\": \"The two spiral forms are built from different colors and line weights — what does that difference do to how you move between them?\",\n  \"ambiguities\": [\n    \"The coral-red open-jawed form in the lower center could be read as an animal head or a purely abstract shape; no supplied evidence resolves this.\",\n    \"nnxyz nnotb #143 was inspected but offers a weaker formal connection than the two selected works and was not included.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: dual spirals, right-edge square column, and lower coral jaw with zigzag band are all clearly visible.\",\n    \"Comparison with QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX confirmed: paired spirals in squared sockets and zigzag band present; teal ground contrast with pink is accurate.\",\n    \"Comparison with QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe confirmed: hot pink ground and yellow-outlined circular forms on a face-like structure are visible; cross-collection claim is supported.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmZZWQr4BQaVspCJoM67bTj18MKcHc4Ynv51BDXy1nEZw7",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZZWQr4BQaVspCJoM67bTj18MKcHc4Ynv51BDXy1nEZw7/image.png",
+        "imageSHA256": "443353921e412fd093cc05625cbd1c83f726f5c4f0d9afb51f3dd446b0ee80d7"
+      },
+      {
+        "artworkId": "QmUd8NBNYJKhSL4D5dYF8KKDCWLmC2ZsRPXBpdTaDn7WFH",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmUd8NBNYJKhSL4D5dYF8KKDCWLmC2ZsRPXBpdTaDn7WFH/image.png",
+        "imageSHA256": "4dffc4cb347f570462678e837da01da3a15aa76284cdf15e7169359c3f20dee1"
+      },
+      {
+        "artworkId": "QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe/image.png",
+        "imageSHA256": "4432232fae9ee81bd00fa0e245871284775ab1e78693658130f4560f53083d2f"
+      },
+      {
+        "artworkId": "QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX/image.png",
+        "imageSHA256": "08c1632fc9856a3e464f03164b086040b311a8e03a212bed7f1821883f534d8b"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A pink field holds two large spiral forms side by side near the top center: the left one ringed in yellow and black, the right in dark red with crossing lines over it.\", \"A vertical column of rounded black-outlined squares with orange-brown fills runs down the right edge, evenly spaced from top to bottom.\", \"In the lower center, a coral-red open-jawed form with radiating lines sits above a zigzag band, flanked by black-and-yellow diagonal stripes.\"], \"reading\": \"Two competing spiral forms anchor the upper half, one warm yellow, one deep red, each pulling the eye inward before the image pushes outward again through zigzag bands and loose overhead lines. The right-edge column of squares holds the composition like a spine, steady against the noise. Below, the open-jawed shape reads as raw appetite or alarm. Pink keeps the whole field from tipping into dread.\", \"contextAngle\": \"Within the owned nnotb subset, the title neighbors are nnxyz nnotb #143 and nnxyz nnotb #145. Both neighbors also use spiral eye-like forms on face-shaped structures, but #144 replaces their dark grounds with a bright pink field, shifting the mood sharply.\", \"connections\": [{\"targetArtworkId\": \"QmWwcK8WjSJZRvzpuAWDnwmu8BwVSBGf8iBUmPipR7z2fX\", \"reason\": \"nnxyz nnotb #145 shares the paired-spiral structure in squared sockets and a zigzag tooth band, but its teal ground makes the contrast with #144's pink field a direct before-and-after in mood.\"}, {\"targetArtworkId\": \"QmYN7oaS82qnxyQV9aoFRFAxPCqY3sMPgbvh3S431bveYe\", \"reason\": \"nnxyz rawblocks #40 uses the same hot pink ground and yellow-outlined circular forms on a face-like structure, making it the clearest cross-collection echo of #144's color and spiral logic.\"}], \"tags\": [\"spiral forms\", \"zigzag bands\", \"pink ground\", \"repeating square column\", \"open-jaw shape\", \"crossing lines\"], \"interpretiveTags\": [\"tension between order and noise\", \"appetite or alarm\"], \"lookingQuestion\": \"The two spiral forms are built from different colors and line weights — what does the difference in their construction do to how you move between them?\", \"ambiguities\": [\"The coral-red open-jawed form in the lower center could be read as an animal head or a purely abstract shape; no supplied evidence resolves this.\", \"nnxyz nnotb #143 was inspected but offers a weaker formal connection than #145 and rawblocks #40, so it was not selected despite being the immediate title and recorded-creation predecessor.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

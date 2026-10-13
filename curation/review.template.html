@@ -1,0 +1,91 @@
+<div id="curator-standard-nnxyz">
+  <style>
+    #curator-standard-nnxyz { color:var(--foreground); }
+    #curator-standard-nnxyz .curator-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:24px; margin-top:16px; align-items:start; }
+    #curator-standard-nnxyz figure { margin:0; }
+    #curator-standard-nnxyz img { display:block; width:100%; height:auto; }
+    #curator-standard-nnxyz h3 { margin-top:20px; }
+    #curator-standard-nnxyz p, #curator-standard-nnxyz dd { overflow-wrap:anywhere; }
+    #curator-standard-nnxyz details { margin-top:16px; }
+    @media(max-width:580px) { #curator-standard-nnxyz .curator-layout { grid-template-columns:minmax(0,1fr); gap:12px; } }
+  </style>
+  <label class="form-label" for="curator-standard-work">Curator study · 30 reviewed artworks</label>
+  <select class="form-select" id="curator-standard-work" aria-label="Choose an artwork"></select>
+  <div class="curator-layout">
+    <figure>
+      <img id="curator-standard-image" alt="">
+      <figcaption id="curator-standard-caption" class="text-small"></figcaption>
+    </figure>
+    <div aria-live="polite">
+      <h3 id="curator-standard-title"></h3>
+      <p id="curator-standard-facts" class="text-small"></p>
+      <h3>Curator’s reading</h3>
+      <p id="curator-standard-reading"></p>
+      <h3>In the owned collection</h3>
+      <p id="curator-standard-context"></p>
+      <div id="curator-standard-connections"></div>
+      <p id="curator-standard-question"></p>
+      <details>
+        <summary>Technical record</summary>
+        <dl id="curator-standard-technical"></dl>
+      </details>
+      <p class="text-small">AI curator · reviewed under the collector’s accepted standard · moods are possible readings</p>
+    </div>
+  </div>
+  <script id="curator-standard-data" type="application/json">__CURATOR_DATA__</script>
+  <script>
+    (() => {
+      const root = document.getElementById('curator-standard-nnxyz');
+      const data = JSON.parse(root.querySelector('#curator-standard-data').textContent);
+      const picker = root.querySelector('#curator-standard-work');
+      const node = name => root.querySelector('#curator-standard-' + name);
+      const displayTitle = item => item.duplicateTitle ? item.title + ' · ' + item.artworkId.slice(-8) : item.title;
+      for (const item of data) {
+        const option = document.createElement('option');
+        option.value = item.artworkId;
+        option.textContent = displayTitle(item);
+        picker.append(option);
+      }
+      const remember = item => window.openai?.setWidgetState({
+        modelContent:{artworkId:item.artworkId,title:item.title,view:'approved-standard-review'},privateContent:null
+      }).catch(() => {});
+      const render = id => {
+        const item = data.find(x => x.artworkId === id) || data.find(x => x.defaultSelection) || data[0];
+        picker.value = item.artworkId;
+        node('image').src = item.image;
+        node('image').alt = item.observations.join(' ');
+        node('caption').textContent = displayTitle(item) + ' · archived image preview';
+        node('title').textContent = item.title;
+        node('facts').textContent = item.compactTechnical;
+        node('reading').textContent = item.reading;
+        node('context').textContent = item.context;
+        node('question').textContent = item.question;
+        node('connections').replaceChildren();
+        for (const connection of item.connections) {
+          const target = data.find(x => x.artworkId === connection.targetArtworkId);
+          const heading = document.createElement('h3');
+          const explanation = document.createElement('p');
+          const button = document.createElement('button');
+          heading.textContent = 'Compare ' + displayTitle(target);
+          explanation.textContent = connection.reason;
+          button.className = 'btn';
+          button.type = 'button';
+          button.textContent = 'View comparison';
+          button.addEventListener('click', () => { render(target.artworkId); remember(target); });
+          node('connections').append(heading, explanation, button);
+        }
+        node('technical').replaceChildren();
+        for (const fact of item.technical) {
+          const dt = document.createElement('dt');
+          const dd = document.createElement('dd');
+          dt.textContent = fact.label;
+          dd.textContent = typeof fact.value === 'object' ? fact.value.width + ' × ' + fact.value.height : String(fact.value);
+          node('technical').append(dt, dd);
+        }
+      };
+      render(window.openai?.widgetState?.modelContent?.artworkId);
+      picker.addEventListener('change', () => { render(picker.value); remember(data.find(x => x.artworkId === picker.value)); });
+      window.addEventListener('openai:set_globals', event => render(event.detail?.globals?.widgetState?.modelContent?.artworkId));
+    })();
+  </script>
+</div>

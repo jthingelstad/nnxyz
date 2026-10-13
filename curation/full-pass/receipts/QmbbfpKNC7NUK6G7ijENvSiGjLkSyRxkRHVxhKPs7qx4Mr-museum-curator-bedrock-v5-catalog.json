@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:22.771793-05:00",
+    "usage": {
+      "inputTokens": 6133,
+      "outputTokens": 785,
+      "totalTokens": 6918,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 13056
+    },
+    "requestId": "777c0d51-ffef-4ff9-afc1-d34184fe2628",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad, roughly square face-like form fills the canvas against a flat yellow-green ground, with two large rectangular eye shapes outlined in purple and black dominating the upper half.\",\n    \"A wide mouth area in the lower center shows densely packed vertical white marks suggesting teeth, framed by dark fills and pink-purple outlines, with orange and red sweeping strokes layered beneath.\",\n    \"Loose blue, red, yellow, and white lines extend beyond the central form to all four edges, including a horizontal red band crossing mid-image and a white diagonal bar in the upper right.\"\n  ],\n  \"reading\": \"The yellow-green ground pushes the dark central form forward with blunt force. Two rectangular eye shapes, each filled with spiraling yellow and white lines, read as simultaneously hollow and agitated. The packed vertical marks in the mouth carry a rawness that sits somewhere between a shout and a grin. Scattered lines at the edges feel like pressure that the central form cannot fully contain.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #36 sits between title neighbors nnxyz #35 and nnxyz #37. Where #35 spreads figures across a lavender field and #37 builds on a cool blue ground with circular layering, #36 anchors its energy in a single acid-green field with a compressed frontal form.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq\",\n      \"reason\": \"Both works center a large face-like form with rectangular eye shapes and a tooth-filled mouth, though rawblocks #50 builds on black while #36 uses a flat yellow-green ground, sharpening the contrast between the two approaches.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo\",\n      \"reason\": \"nnxyz #37 shares the frontal face structure and a row of teeth at the bottom, but replaces the acid-green field and compressed dark mass with an open blue ground and concentric circular lines, showing how the same basic arrangement shifts in weight and mood.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face form\",\n    \"rectangular eye shapes\",\n    \"tooth row\",\n    \"yellow-green ground\",\n    \"layered line work\",\n    \"horizontal color bands\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"compressed energy\",\n    \"raw\"\n  ],\n  \"lookingQuestion\": \"What happens to your reading of the mouth when you follow the vertical white marks inside it against the dark fill surrounding them?\",\n  \"ambiguities\": [\n    \"The collector's stated connection between scrimshaw and nnxyz rests on visual pattern qualities; no specific formal element in this image has been confirmed as the basis for that link.\",\n    \"nnxyz #35 was inspected but its figure-based, multi-element composition offers no strong formal parallel to #36 beyond shared line density, so it was not selected as a connection.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbbfpKNC7NUK6G7ijENvSiGjLkSyRxkRHVxhKPs7qx4Mr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbbfpKNC7NUK6G7ijENvSiGjLkSyRxkRHVxhKPs7qx4Mr/image.png",
+        "imageSHA256": "b3781966948900a034cd26f4df4da226d85e3c552320f32b4de13ccbd587bcf6"
+      },
+      {
+        "artworkId": "QmQrDKKDYkmfrAhAbcLJLdi4VaZ2xMio1ghWSqF9CCj1S5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQrDKKDYkmfrAhAbcLJLdi4VaZ2xMio1ghWSqF9CCj1S5/image.png",
+        "imageSHA256": "7e033b3f5b4446ba9767893d514ed9e7e1c2194d8af65fb1f1315a4cc0afa1e5"
+      },
+      {
+        "artworkId": "QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq/image.png",
+        "imageSHA256": "c515045e826ae291c7fde3291c9e34cd6efc534a545ed3b37c8b4c48a180f037"
+      },
+      {
+        "artworkId": "QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo/image.png",
+        "imageSHA256": "e09fb4b8df40064bea6cd3c005622e52c1f60d6cbe4a43154646ffc69e3f6e01"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T10:01:29.444352-05:00",
+    "usage": {
+      "inputTokens": 6938,
+      "outputTokens": 1002,
+      "totalTokens": 7940,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6554
+    },
+    "requestId": "973a46f1-1270-436d-981d-4067e3a68cb3",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A broad, roughly square face-like form fills the canvas against a flat yellow-green ground, with two large rectangular eye shapes outlined in purple and black dominating the upper half.\",\n    \"A wide mouth area in the lower center shows densely packed vertical white marks suggesting teeth, framed by dark fills and pink-purple outlines, with orange and red sweeping strokes layered beneath.\",\n    \"Loose blue, red, yellow, and white lines extend beyond the central form to all four edges, including a horizontal red band crossing mid-image and a white diagonal bar in the upper right.\"\n  ],\n  \"reading\": \"The yellow-green ground pushes the dark central form forward with blunt force. Two rectangular eye shapes, each filled with spiraling yellow and white lines, read as simultaneously hollow and agitated. The packed vertical marks in the mouth carry a rawness that sits somewhere between a shout and a grin. Scattered lines at the edges feel like pressure the central form cannot fully contain.\",\n  \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #36 sits between title neighbors nnxyz #35 and nnxyz #37. Where #35 spreads figures across a lavender field and #37 builds on a cool blue ground with circular layering, #36 anchors itself in a single acid-green field with a compressed frontal form.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq\",\n      \"reason\": \"Both works center a large face-like form with rectangular eye shapes and a tooth-filled mouth; rawblocks #50 builds on black while #36 uses a flat yellow-green ground, sharpening the contrast between the two approaches.\"\n    },\n    {\n      \"targetArtworkId\": \"QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo\",\n      \"reason\": \"nnxyz #37 shares the frontal face structure and a row of teeth, but replaces the acid-green field and compressed dark mass with an open blue ground and concentric circular lines, shifting the same arrangement in weight and feel.\"\n    }\n  ],\n  \"tags\": [\n    \"frontal face form\",\n    \"rectangular eye shapes\",\n    \"tooth row\",\n    \"yellow-green ground\",\n    \"layered line work\",\n    \"horizontal color bands\"\n  ],\n  \"interpretiveTags\": [\n    \"confrontational\",\n    \"compressed energy\",\n    \"raw\"\n  ],\n  \"lookingQuestion\": \"What happens to your reading of the mouth when you follow the vertical white marks inside it against the dark fill surrounding them?\",\n  \"ambiguities\": [\n    \"The collector's stated connection between scrimshaw and nnxyz rests on visual pattern qualities; no specific formal element in this image has been confirmed as the basis for that link.\",\n    \"nnxyz #35 was inspected but its multi-figure, lavender-field composition offers no strong formal parallel to #36 beyond shared line density, so it was not selected as a connection.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: yellow-green ground, purple-and-black rectangular eye outlines, packed vertical white tooth marks, horizontal red band, and white diagonal bar in upper right are all visible.\",\n    \"Comparison with QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq confirmed: black ground, rectangular eye zone, and tooth row are visible in rawblocks #50, supporting the stated contrast with #36's yellow-green ground.\",\n    \"Comparison with QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo confirmed: blue ground, frontal face structure, tooth row at bottom, and concentric circular lines are visible in #37, supporting the stated formal contrast; no invented claims found in draft.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmbbfpKNC7NUK6G7ijENvSiGjLkSyRxkRHVxhKPs7qx4Mr",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbbfpKNC7NUK6G7ijENvSiGjLkSyRxkRHVxhKPs7qx4Mr/image.png",
+        "imageSHA256": "b3781966948900a034cd26f4df4da226d85e3c552320f32b4de13ccbd587bcf6"
+      },
+      {
+        "artworkId": "QmQrDKKDYkmfrAhAbcLJLdi4VaZ2xMio1ghWSqF9CCj1S5",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQrDKKDYkmfrAhAbcLJLdi4VaZ2xMio1ghWSqF9CCj1S5/image.png",
+        "imageSHA256": "7e033b3f5b4446ba9767893d514ed9e7e1c2194d8af65fb1f1315a4cc0afa1e5"
+      },
+      {
+        "artworkId": "QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq/image.png",
+        "imageSHA256": "c515045e826ae291c7fde3291c9e34cd6efc534a545ed3b37c8b4c48a180f037"
+      },
+      {
+        "artworkId": "QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo/image.png",
+        "imageSHA256": "e09fb4b8df40064bea6cd3c005622e52c1f60d6cbe4a43154646ffc69e3f6e01"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A broad, roughly square face-like form fills the canvas against a flat yellow-green ground, with two large rectangular eye shapes outlined in purple and black dominating the upper half.\", \"A wide mouth area in the lower center shows densely packed vertical white marks suggesting teeth, framed by dark fills and pink-purple outlines, with orange and red sweeping strokes layered beneath.\", \"Loose blue, red, yellow, and white lines extend beyond the central form to all four edges, including a horizontal red band crossing mid-image and a white diagonal bar in the upper right.\"], \"reading\": \"The yellow-green ground pushes the dark central form forward with blunt force. Two rectangular eye shapes, each filled with spiraling yellow and white lines, read as simultaneously hollow and agitated. The packed vertical marks in the mouth carry a rawness that sits somewhere between a shout and a grin. Scattered lines at the edges feel like pressure that the central form cannot fully contain.\", \"contextAngle\": \"Within the owned nnxyz-other subset, nnxyz #36 sits between title neighbors nnxyz #35 and nnxyz #37. Where #35 spreads figures across a lavender field and #37 builds on a cool blue ground with circular layering, #36 anchors its energy in a single acid-green field with a compressed frontal form.\", \"connections\": [{\"targetArtworkId\": \"QmQgRY2DXHAe6rmtiF3CmgiFvLvE7toqhotJfLygPXeBFq\", \"reason\": \"Both works center a large face-like form with rectangular eye shapes and a tooth-filled mouth, though rawblocks #50 builds on black while #36 uses a flat yellow-green ground, sharpening the contrast between the two approaches.\"}, {\"targetArtworkId\": \"QmZN43k6HENvnVvQCNtQawvdwQbFEJ3RbPgqYMPELQg1Zo\", \"reason\": \"nnxyz #37 shares the frontal face structure and a row of teeth at the bottom, but replaces the acid-green field and compressed dark mass with an open blue ground and concentric circular lines, showing how the same basic arrangement shifts in weight and mood.\"}], \"tags\": [\"frontal face form\", \"rectangular eye shapes\", \"tooth row\", \"yellow-green ground\", \"layered line work\", \"horizontal color bands\"], \"interpretiveTags\": [\"confrontational\", \"compressed energy\", \"raw\"], \"lookingQuestion\": \"What happens to your reading of the mouth when you follow the vertical white marks inside it against the dark fill surrounding them?\", \"ambiguities\": [\"The collector's stated connection between scrimshaw and nnxyz rests on visual pattern qualities; no specific formal element in this image has been confirmed as the basis for that link.\", \"nnxyz #35 was inspected but its figure-based, multi-element composition offers no strong formal parallel to #36 beyond shared line density, so it was not selected as a connection.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

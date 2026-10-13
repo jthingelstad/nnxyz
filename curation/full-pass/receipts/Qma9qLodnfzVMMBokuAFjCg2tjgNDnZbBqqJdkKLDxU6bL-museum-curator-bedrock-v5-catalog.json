@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:46.126993-05:00",
+    "usage": {
+      "inputTokens": 6412,
+      "outputTokens": 759,
+      "totalTokens": 7171,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12937
+    },
+    "requestId": "2c0960b8-609b-4a17-bd7b-79e0794e470c",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A yellow-green snail with a spiral grey shell occupies the lower left, outlined in black against a teal and purple background.\",\n    \"Upper left holds a white-outlined rectangle containing three yellow smiley faces in a top row and a grid of plain yellow circles below, all on purple; blue teardrop shapes dot the frame corners.\",\n    \"Upper right shows a dark green circular mass ringed by evenly spaced lime-green dots and overlaid with looping pink and yellow circles; a branching red line structure rises from below it.\"\n  ],\n  \"reading\": \"Three distinct zones share a teal field without merging: a grid of faces that shifts from expressive to blank as the eye moves down, a slow spiral creature at the bottom, and a dotted ring enclosing layered loops. The contrast between the snail's unhurried coil and the tight repetition of the face-grid gives the image an odd, quiet tension. The red branching lines below the ring feel unresolved, neither rooted nor floating.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #41 and nnxyz nnotb #43. Where #41 fills its field with dense overlapping lines on black, #42 opens into distinct zones of teal space—a marked shift in breathing room across the two works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTYqDCypwuWrRCdAmbgtgFAmVTDtpQ1EEwHoVGhNLynDo\",\n      \"reason\": \"nnxyz nnotb #41 uses nested rectangles and layered line clusters as #42 does, but on a black ground with no open space, making the teal breathing room in #42 stand out by direct contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC\",\n      \"reason\": \"nnxyz nifty faces #35 also arranges circular face-like forms inside white-outlined rectangles, offering a cross-collection comparison for the face-grid zone in the upper left of #42.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral form\",\n    \"grid of circles\",\n    \"dotted border\",\n    \"looping overlaid lines\",\n    \"branching line structure\",\n    \"teal ground\"\n  ],\n  \"interpretiveTags\": [\n    \"quiet tension\",\n    \"zoned composition\"\n  ],\n  \"lookingQuestion\": \"What does the shift from the three smiley faces in the top row to the plain circles below them change about how you read the grid?\",\n  \"ambiguities\": [\n    \"The red branching structure at lower right is visually ambiguous—its relationship to the dotted ring above it is unclear from the image alone.\",\n    \"Title order and recorded creation order align for this work, but the metadata notes gaps exist elsewhere in the nnotb family, so sequence continuity cannot be assumed across the full owned subset.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qma9qLodnfzVMMBokuAFjCg2tjgNDnZbBqqJdkKLDxU6bL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma9qLodnfzVMMBokuAFjCg2tjgNDnZbBqqJdkKLDxU6bL/image.png",
+        "imageSHA256": "795f94c1972c07c8f6ac6c83e0b60fc999dcf6ad2dc6ac9e82283ba4c12d4f25"
+      },
+      {
+        "artworkId": "QmTYqDCypwuWrRCdAmbgtgFAmVTDtpQ1EEwHoVGhNLynDo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTYqDCypwuWrRCdAmbgtgFAmVTDtpQ1EEwHoVGhNLynDo/image.png",
+        "imageSHA256": "c06f2e567f905d5223249fb0c870529d8ae2ecd0c52c8c1b949b8d2d0f2de79f"
+      },
+      {
+        "artworkId": "Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC/image.png",
+        "imageSHA256": "3239fc2ce97d90e895ca0301fd3c0cf7cf384a18aa3063867fd61a669ee29a32"
+      },
+      {
+        "artworkId": "QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y/image.png",
+        "imageSHA256": "9755b4d5a4f856abf44dff23440c9f47b66a918c5778e0c9cae5c37b0dde98c8"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:53:53.058107-05:00",
+    "usage": {
+      "inputTokens": 7193,
+      "outputTokens": 907,
+      "totalTokens": 8100,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6852
+    },
+    "requestId": "a786cd92-7398-4ba1-a5c1-9105933cc2b9",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A yellow-green snail with a spiral grey shell occupies the lower left, outlined in black against a teal and purple background.\",\n    \"Upper left holds a white-outlined rectangle containing three yellow smiley faces in a top row and a grid of plain yellow circles below, all on purple; blue teardrop shapes dot the frame corners.\",\n    \"Upper right shows a dark green circular mass ringed by evenly spaced lime-green dots and overlaid with looping pink and yellow circles; a branching red line structure rises from below it.\"\n  ],\n  \"reading\": \"Three distinct zones share a teal field without merging: a grid of faces that shifts from expressive to blank moving downward, a slow spiral creature at lower left, and a dotted ring enclosing layered loops at upper right. The contrast between the snail's coil and the tight repetition of the face-grid gives the image an odd, quiet tension. The red branching lines below the ring sit unresolved, neither anchored nor floating.\",\n  \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #41 and nnxyz nnotb #43. Where #41 fills its field with dense overlapping lines on black, #42 opens into distinct teal zones—a marked shift in breathing room across the two works.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmTYqDCypwuWrRCdAmbgtgFAmVTDtpQ1EEwHoVGhNLynDo\",\n      \"reason\": \"nnxyz nnotb #41 uses nested rectangles and dense layered line clusters as #42 does, but on a black ground with no open space, making the teal breathing room in #42 stand out by direct contrast.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC\",\n      \"reason\": \"nnxyz nifty faces #35 arranges circular face-like forms inside white-outlined rectangles with layered loops, offering a cross-collection comparison for the face-grid zone in the upper left of #42.\"\n    }\n  ],\n  \"tags\": [\n    \"spiral form\",\n    \"grid of circles\",\n    \"dotted border\",\n    \"looping overlaid lines\",\n    \"branching line structure\",\n    \"teal ground\"\n  ],\n  \"interpretiveTags\": [\n    \"quiet tension\",\n    \"zoned composition\"\n  ],\n  \"lookingQuestion\": \"What does the shift from the three smiley faces in the top row to the plain circles below them change about how you read the grid?\",\n  \"ambiguities\": [\n    \"The red branching structure at lower right is visually ambiguous—its relationship to the dotted ring above it is unclear from the image alone.\",\n    \"Title order and recorded creation order align for this work, but the metadata notes gaps exist elsewhere in the nnotb family, so sequence continuity cannot be assumed across the full owned subset.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: snail placement, smiley-face grid with blue teardrops, and dotted green ring with red branching lines are all visible as described.\",\n    \"Reading revised to remove 'unresolved' phrasing that implied intent; replaced with a neutral description of the visual result; word count confirmed within 55–65 word target.\",\n    \"Both comparison IDs inspected against their images: #41 black-ground dense line structure confirmed; nifty faces #35 white-outlined rectangles with circular looping forms confirmed; no invented color or form claims introduced.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "Qma9qLodnfzVMMBokuAFjCg2tjgNDnZbBqqJdkKLDxU6bL",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qma9qLodnfzVMMBokuAFjCg2tjgNDnZbBqqJdkKLDxU6bL/image.png",
+        "imageSHA256": "795f94c1972c07c8f6ac6c83e0b60fc999dcf6ad2dc6ac9e82283ba4c12d4f25"
+      },
+      {
+        "artworkId": "QmTYqDCypwuWrRCdAmbgtgFAmVTDtpQ1EEwHoVGhNLynDo",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmTYqDCypwuWrRCdAmbgtgFAmVTDtpQ1EEwHoVGhNLynDo/image.png",
+        "imageSHA256": "c06f2e567f905d5223249fb0c870529d8ae2ecd0c52c8c1b949b8d2d0f2de79f"
+      },
+      {
+        "artworkId": "Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC/image.png",
+        "imageSHA256": "3239fc2ce97d90e895ca0301fd3c0cf7cf384a18aa3063867fd61a669ee29a32"
+      },
+      {
+        "artworkId": "QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmbeAieUW5pR6VRxoh1MUD7uifrLnpzwPPQ92N8kMSgz2Y/image.png",
+        "imageSHA256": "9755b4d5a4f856abf44dff23440c9f47b66a918c5778e0c9cae5c37b0dde98c8"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A yellow-green snail with a spiral grey shell occupies the lower left, outlined in black against a teal and purple background.\", \"Upper left holds a white-outlined rectangle containing three yellow smiley faces in a top row and a grid of plain yellow circles below, all on purple; blue teardrop shapes dot the frame corners.\", \"Upper right shows a dark green circular mass ringed by evenly spaced lime-green dots and overlaid with looping pink and yellow circles; a branching red line structure rises from below it.\"], \"reading\": \"Three distinct zones share a teal field without merging: a grid of faces that shifts from expressive to blank as the eye moves down, a slow spiral creature at the bottom, and a dotted ring enclosing layered loops. The contrast between the snail's unhurried coil and the tight repetition of the face-grid gives the image an odd, quiet tension. The red branching lines below the ring feel unresolved, neither rooted nor floating.\", \"contextAngle\": \"Within the owned nnotb subset, this work sits between title neighbors nnxyz nnotb #41 and nnxyz nnotb #43. Where #41 fills its field with dense overlapping lines on black, #42 opens into distinct zones of teal space—a marked shift in breathing room across the two works.\", \"connections\": [{\"targetArtworkId\": \"QmTYqDCypwuWrRCdAmbgtgFAmVTDtpQ1EEwHoVGhNLynDo\", \"reason\": \"nnxyz nnotb #41 uses nested rectangles and layered line clusters as #42 does, but on a black ground with no open space, making the teal breathing room in #42 stand out by direct contrast.\"}, {\"targetArtworkId\": \"Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC\", \"reason\": \"nnxyz nifty faces #35 also arranges circular face-like forms inside white-outlined rectangles, offering a cross-collection comparison for the face-grid zone in the upper left of #42.\"}], \"tags\": [\"spiral form\", \"grid of circles\", \"dotted border\", \"looping overlaid lines\", \"branching line structure\", \"teal ground\"], \"interpretiveTags\": [\"quiet tension\", \"zoned composition\"], \"lookingQuestion\": \"What does the shift from the three smiley faces in the top row to the plain circles below them change about how you read the grid?\", \"ambiguities\": [\"The red branching structure at lower right is visually ambiguous—its relationship to the dotted ring above it is unclear from the image alone.\", \"Title order and recorded creation order align for this work, but the metadata notes gaps exist elsewhere in the nnotb family, so sequence continuity cannot be assumed across the full owned subset.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]

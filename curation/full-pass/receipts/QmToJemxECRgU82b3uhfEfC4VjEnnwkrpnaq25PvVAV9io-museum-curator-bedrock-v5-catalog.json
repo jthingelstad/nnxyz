@@ -1,0 +1,90 @@
+[
+  {
+    "stage": "draft",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:45.518415-05:00",
+    "usage": {
+      "inputTokens": 7034,
+      "outputTokens": 784,
+      "totalTokens": 7818,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 12605
+    },
+    "requestId": "02bb3546-0e0b-4fea-9296-21bc310134dd",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval head shape fills most of the white canvas, outlined in thick black, with two asymmetrically placed eye forms: one upper-left drawn with tight dark spirals, one lower-right rendered as a yellow-rimmed oval.\",\n    \"A wide open mouth sits left of center, its lips outlined in deep red and black, with jagged gray-white zigzag lines suggesting teeth inside a black interior.\",\n    \"Crossing lines in cyan, magenta, yellow, lime green, white, and brown layer densely across the face and spill beyond the head outline, with no single color dominating the overall surface.\"\n  ],\n  \"reading\": \"The head tilts slightly, giving the two eye forms different heights and weights. The open mouth pulls attention left while the yellow-rimmed eye anchors the right, splitting the face into competing focal zones. Dense crossing lines cover the surface without settling into calm — the result reads as high tension rather than stillness. The white background keeps the form from dissolving into its own noise.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #33 and nnxyz nifty faces #35 in both title order and recorded creation order. Where #33 uses a deep red field to contain its spiral eyes, #34 works against bare white, letting the line density carry the full visual load.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYuyFx1MGeSrzNYA4wxU9LngKzVQauwZHZbVekhoKavgp\",\n      \"reason\": \"nnxyz nifty faces #33 shares the open-mouth form and layered crossing lines, but its dark red background absorbs color differently than the white ground here, making the contrast between containment and exposure the useful comparison.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC\",\n      \"reason\": \"nnxyz nifty faces #35 also uses a zigzag tooth line inside a wide rectangular mouth, but its face is built from stacked rectangular zones rather than a single oval, showing two different structural approaches to the same repeated mouth motif.\"\n    }\n  ],\n  \"tags\": [\n    \"oval head form\",\n    \"open mouth with zigzag teeth\",\n    \"asymmetric eye placement\",\n    \"dense crossing line surface\",\n    \"white ground\",\n    \"multi-color line overlay\"\n  ],\n  \"interpretiveTags\": [\n    \"high tension\",\n    \"competing focal zones\"\n  ],\n  \"lookingQuestion\": \"The two eye forms sit at different heights and are drawn with different shapes — what does the gap between them do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The lower-right form reads as an eye based on its oval outline and dark center, but its placement and scale are unusual enough that this identification remains a reading, not a certainty.\",\n    \"nnxyz rawblocks #57 was inspected but shows a full figure on a framed ground with no shared structural element strong enough to support a useful formal comparison; it is omitted.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmToJemxECRgU82b3uhfEfC4VjEnnwkrpnaq25PvVAV9io",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmToJemxECRgU82b3uhfEfC4VjEnnwkrpnaq25PvVAV9io/image.png",
+        "imageSHA256": "295e89029794603bba615017bbf43250e4972c63f41fd09f926ee5c36cef07b5"
+      },
+      {
+        "artworkId": "QmYuyFx1MGeSrzNYA4wxU9LngKzVQauwZHZbVekhoKavgp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYuyFx1MGeSrzNYA4wxU9LngKzVQauwZHZbVekhoKavgp/image.png",
+        "imageSHA256": "5a0f10594b05c4e50ee794faf08915a9c305bba8b100bf94dc3fec96f2dca109"
+      },
+      {
+        "artworkId": "QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk/image.png",
+        "imageSHA256": "2c4d6e30021e364daf33d8236a880a0ed40c9ed2aeb6b0110feb490249b104ec"
+      },
+      {
+        "artworkId": "Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC/image.png",
+        "imageSHA256": "3239fc2ce97d90e895ca0301fd3c0cf7cf384a18aa3063867fd61a669ee29a32"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "Inspect the primary image and all comparison images. Write the structured editorial record now. Return ONLY JSON, no narration or markdown.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  },
+  {
+    "stage": "image-review",
+    "modelId": "us.anthropic.claude-sonnet-4-6",
+    "promptVersion": "museum-curator-bedrock-v5",
+    "timeCentral": "2026-10-13T09:49:52.135154-05:00",
+    "usage": {
+      "inputTokens": 7840,
+      "outputTokens": 997,
+      "totalTokens": 8837,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "metrics": {
+      "latencyMs": 6451
+    },
+    "requestId": "4f87756f-ae2e-42d4-bae2-7a8f5c555cbf",
+    "stopReason": "end_turn",
+    "responseText": "```json\n{\n  \"observations\": [\n    \"A large oval head shape fills most of the white canvas, outlined in thick black, with two asymmetrically placed eye forms: one upper-left drawn with tight dark spirals, one lower-right rendered as a yellow-rimmed oval.\",\n    \"A wide open mouth sits left of center, its lips outlined in deep red and black, with jagged gray-white zigzag lines suggesting teeth inside a black interior.\",\n    \"Crossing lines in cyan, magenta, yellow, lime green, white, and brown layer densely across the face and spill beyond the head outline, with no single color dominating the surface.\"\n  ],\n  \"reading\": \"The head tilts slightly, giving the two eye forms different heights and weights. The open mouth pulls attention left while the yellow-rimmed eye anchors the right, splitting the face into competing focal zones. Dense crossing lines cover the surface without settling into calm — the result reads as high tension rather than stillness. The white background keeps the form from dissolving into its own noise.\",\n  \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #33 and nnxyz nifty faces #35 in both title order and recorded creation order. Where #33 uses a deep red field to contain its spiral eyes, #34 works against bare white, letting line density carry the full visual load.\",\n  \"connections\": [\n    {\n      \"targetArtworkId\": \"QmYuyFx1MGeSrzNYA4wxU9LngKzVQauwZHZbVekhoKavgp\",\n      \"reason\": \"nnxyz nifty faces #33 shares the open-mouth form and layered crossing lines, but its dark red background absorbs color differently than the white ground here, making the contrast between containment and exposure the useful comparison.\"\n    },\n    {\n      \"targetArtworkId\": \"Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC\",\n      \"reason\": \"nnxyz nifty faces #35 also uses a zigzag tooth line inside a wide rectangular mouth, but its face is built from stacked rectangular zones rather than a single oval, showing two different structural approaches to the same repeated mouth motif.\"\n    }\n  ],\n  \"tags\": [\n    \"oval head form\",\n    \"open mouth with zigzag teeth\",\n    \"asymmetric eye placement\",\n    \"dense crossing line surface\",\n    \"white ground\",\n    \"multi-color line overlay\"\n  ],\n  \"interpretiveTags\": [\n    \"high tension\",\n    \"competing focal zones\"\n  ],\n  \"lookingQuestion\": \"The two eye forms sit at different heights and are drawn with different shapes — what does the gap between them do to how you read the face as a whole?\",\n  \"ambiguities\": [\n    \"The lower-right form reads as an eye based on its oval outline and dark center, but its placement and scale are unusual enough that this identification remains a reading, not a certainty.\",\n    \"nnxyz rawblocks #57 was inspected but shows a full figure on a framed ground with no shared structural element strong enough to support a useful formal comparison; it is omitted.\"\n  ],\n  \"reviewFindings\": [\n    \"All three observations confirmed against the primary image: oval outline, asymmetric eye forms, red-and-black mouth with zigzag interior, and dense multi-color crossing lines on white ground are all directly visible.\",\n    \"Comparison with QmYuyFx1MGeSrzNYA4wxU9LngKzVQauwZHZbVekhoKavgp confirmed: #33 has a deep red background, spiral eye forms, and an open mouth — contrast with white ground of #34 is accurate and meaningful.\",\n    \"Comparison with Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC confirmed: #35 shows a zigzag tooth line in a wide rectangular mouth and a stacked rectangular face structure, supporting the structural contrast claim; no material corrections required.\"\n  ]\n}\n```",
+    "images": [
+      {
+        "artworkId": "QmToJemxECRgU82b3uhfEfC4VjEnnwkrpnaq25PvVAV9io",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmToJemxECRgU82b3uhfEfC4VjEnnwkrpnaq25PvVAV9io/image.png",
+        "imageSHA256": "295e89029794603bba615017bbf43250e4972c63f41fd09f926ee5c36cef07b5"
+      },
+      {
+        "artworkId": "QmYuyFx1MGeSrzNYA4wxU9LngKzVQauwZHZbVekhoKavgp",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmYuyFx1MGeSrzNYA4wxU9LngKzVQauwZHZbVekhoKavgp/image.png",
+        "imageSHA256": "5a0f10594b05c4e50ee794faf08915a9c305bba8b100bf94dc3fec96f2dca109"
+      },
+      {
+        "artworkId": "QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/QmR2eFVjRRXPjj7pNfafNLJJcgarxunYXNoN3eN917HTkk/image.png",
+        "imageSHA256": "2c4d6e30021e364daf33d8236a880a0ed40c9ed2aeb6b0110feb490249b104ec"
+      },
+      {
+        "artworkId": "Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC",
+        "imagePath": "collection/artists/nnxyz--0x9410bc26732ed9480833cb3a4a0f377908e261e2/artworks/Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC/image.png",
+        "imageSHA256": "3239fc2ce97d90e895ca0301fd3c0cf7cf384a18aa3063867fd61a669ee29a32"
+      }
+    ],
+    "systemPromptSHA256": "0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd",
+    "instruction": "You are reviewing a draft, in a separate pass against the images above.\nCheck every color, form, placement and comparison in the draft against the actual images.\nRemove invented subject identities, unsupported intent, irrelevant shared colors, and generic\nstock metaphors. Refine to museum-label voice. Check word limits and exact candidate IDs.\nReturn the same JSON schema with the final corrected record. Add reviewFindings (list of\nbrief strings explaining material corrections or confirming concrete evidence checks).\nDRAFT:\n{\"observations\": [\"A large oval head shape fills most of the white canvas, outlined in thick black, with two asymmetrically placed eye forms: one upper-left drawn with tight dark spirals, one lower-right rendered as a yellow-rimmed oval.\", \"A wide open mouth sits left of center, its lips outlined in deep red and black, with jagged gray-white zigzag lines suggesting teeth inside a black interior.\", \"Crossing lines in cyan, magenta, yellow, lime green, white, and brown layer densely across the face and spill beyond the head outline, with no single color dominating the overall surface.\"], \"reading\": \"The head tilts slightly, giving the two eye forms different heights and weights. The open mouth pulls attention left while the yellow-rimmed eye anchors the right, splitting the face into competing focal zones. Dense crossing lines cover the surface without settling into calm — the result reads as high tension rather than stillness. The white background keeps the form from dissolving into its own noise.\", \"contextAngle\": \"Within the owned nifty-faces subset, this work sits between nnxyz nifty faces #33 and nnxyz nifty faces #35 in both title order and recorded creation order. Where #33 uses a deep red field to contain its spiral eyes, #34 works against bare white, letting the line density carry the full visual load.\", \"connections\": [{\"targetArtworkId\": \"QmYuyFx1MGeSrzNYA4wxU9LngKzVQauwZHZbVekhoKavgp\", \"reason\": \"nnxyz nifty faces #33 shares the open-mouth form and layered crossing lines, but its dark red background absorbs color differently than the white ground here, making the contrast between containment and exposure the useful comparison.\"}, {\"targetArtworkId\": \"Qmaj89RDS2UNfnaXJs7ZKHjreMNAcQ7YiMJhhje4aPCEkC\", \"reason\": \"nnxyz nifty faces #35 also uses a zigzag tooth line inside a wide rectangular mouth, but its face is built from stacked rectangular zones rather than a single oval, showing two different structural approaches to the same repeated mouth motif.\"}], \"tags\": [\"oval head form\", \"open mouth with zigzag teeth\", \"asymmetric eye placement\", \"dense crossing line surface\", \"white ground\", \"multi-color line overlay\"], \"interpretiveTags\": [\"high tension\", \"competing focal zones\"], \"lookingQuestion\": \"The two eye forms sit at different heights and are drawn with different shapes — what does the gap between them do to how you read the face as a whole?\", \"ambiguities\": [\"The lower-right form reads as an eye based on its oval outline and dark center, but its placement and scale are unusual enough that this identification remains a reading, not a certainty.\", \"nnxyz rawblocks #57 was inspected but shows a full figure on a framed ground with no shared structural element strong enough to support a useful formal comparison; it is omitted.\"]}\nReturn ONLY JSON. Put brief checks in reviewFindings; no narration or markdown outside the JSON.",
+    "systemPromptPath": "curation/full-pass/prompts/0e92ecc884aaa21d49d9e2688d8f3d36498e98b4db04c94436a46d6d56f394cd.txt"
+  }
+]
