@@ -43,6 +43,7 @@ jobs:
         with:
           languages: javascript-typescript,python
           build-mode: none
+          config-file: ./.github/codeql-config.yml
       - uses: github/codeql-action/analyze@24c54180a607b1449ed407dd24f251e4e9147c8d # v4
   build:
     name: Archive, build and browser validation
