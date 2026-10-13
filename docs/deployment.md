@@ -35,7 +35,7 @@ Hydration requires authorized AWS credentials because source snapshots are priva
 Every push to main, internal pull request and manual workflow run uses `.github/workflows/ci.yml`:
 
 1. ESLint, Prettier, Astro/TypeScript, Node tests, Ruff lint/format, dependency audit, CloudFormation schema and infrastructure policy validation.
-2. CodeQL scans maintained JavaScript/TypeScript and Python. Immutable curator review reports, preview references and archived renderer source are excluded because they are retained evidence and are not served by the website; application source and maintained tools remain scanned.
+2. CodeQL scans maintained JavaScript/TypeScript and Python. Immutable curator review reports, preview references and archived renderer source are excluded because they are retained evidence and are not served by the website; application source and maintained tools remain scanned. High or critical open findings on the workflow ref block publication.
 3. Read the pinned S3 snapshot, restore and validate all imported source files, validate 574 curatorial records, generate native SVGs, build pages, validate every local output link and SVG, and run Chromium interaction/fidelity/responsive tests.
 4. Main only: pass the exact verified build as a short-lived GitHub artifact to the deployment job. Check that the workflow revision remains current main, publish media/scripts before HTML, publish the revision marker, invalidate CloudFront and compare delivered HTML/revision bytes with the build.
 
