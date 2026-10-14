@@ -21,7 +21,7 @@ npm run assets
 npm run dev
 ```
 
-Open http://127.0.0.1:4321/. The collection opens directly on the artwork. A quiet Dark/Light header switch changes the gallery surround between white and black and remembers the visitor’s choice. Every detail page offers native SVG, continuous stroke playback, speed/seek controls, enlargement, AI reading, owned collection position, related works and downloadable metadata/provenance. The About page contains an edited draft of the collector introduction; five curated walks are linked there.
+Open http://127.0.0.1:4321/. The entrance pairs a space reserved for the collector’s welcome with a native drawing replay, followed by four collection entrances. Visitors choose galleries within Faces, On the Block, Rawblocks, or Other & related; there is no global artwork grid. The 28 AI-curated galleries contain 8–30 works, presented in chapters with large individual images, pairs, optional readings and a closing question. A quiet Dark/Light header switch changes the gallery surround between white and black and remembers the visitor’s choice. Every detail page offers native SVG, continuous stroke playback, speed/seek controls, enlargement, AI reading, owned collection position, related works and downloadable metadata/provenance. The collector’s new welcome is deferred. Existing artwork URLs remain stable; previous/next and return links follow each drawing’s exhibition home. The earlier five short-walk routes remain accessible at their existing URLs, but are not collection entrances.
 
 ```sh
 npm run check
@@ -29,7 +29,7 @@ npm test
 npm run build
 ```
 
-The build creates 588 static pages in `dist/`, including all 574 artworks. Artwork paths use immutable drawing CIDs. No model invocation or cloud service is needed.
+The build creates 617 static pages in `dist/`, including all 574 artworks. Artwork paths use immutable drawing CIDs. No model invocation or cloud service is needed.
 
 For browser checks, with a local server running:
 

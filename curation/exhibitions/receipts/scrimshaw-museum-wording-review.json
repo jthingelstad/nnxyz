@@ -1,0 +1,35 @@
+{
+  "stage": "museum-wording-review",
+  "key": "scrimshaw",
+  "modelId": "us.anthropic.claude-sonnet-4-6",
+  "promptVersion": "owned-exhibitions-v1",
+  "timeCentral": "2026-10-14T07:37:16.741764-05:00",
+  "systemPromptSHA256": "ed58c53d819b0f5743b4ab5573af97a3fad604b405ada9c8d25778df6b2e0d92",
+  "instructionSHA256": "eb33f68a4977b34b1a42eb24ef0244e56b1dd052c986bd06108d0c0b7dc15fd3",
+  "promptPath": "curation/exhibitions/prompts/scrimshaw-museum-wording-review.json",
+  "images": [],
+  "usage": {
+    "inputTokens": 2254,
+    "outputTokens": 438,
+    "totalTokens": 2692,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "requestId": "381440ad-21bd-412d-a592-484b92cb29ba",
+  "stopReason": "end_turn",
+  "responseText": "{\"galleries\":[{\"id\":\"scrimshaw--face-as-field\",\"title\":\"Scrimshaw: The Face as Field\",\"question\":\"As marks accumulate across these works, at what point does a face become a pattern of strokes?\",\"introduction\":\"Twenty-six works move from faces held together by a single dominant contour, through surfaces crowded with competing marks and asymmetric features, into doubled figures, grids, and crowds, and close with standing bodies and two large letters. At each stage, the same visible question recurs: how many marks can occupy a face before the face itself becomes secondary to the marks?\",\"closing\":\"The two large letters at the end are built from the same layered strokes as the faces at the start. Whether they continue the portrait or replace it remains a question the works leave open.\",\"chapters\":[{\"title\":\"One Contour Does the Work\",\"introduction\":\"Three works open with faces where a single dominant line—blue, purple, or warm orange—carries the structure, while softer marks occupy the space around or behind it.\"},{\"title\":\"No Single Line Governs\",\"introduction\":\"Seven works layer overlapping strokes across the face until color, asymmetry, and repetition share the surface equally, with no one mark settling the whole.\"},{\"title\":\"Accumulation at Its Densest\",\"introduction\":\"Seven works push mark-making furthest, opening with one deliberate reduction before re-escalating. Spiral eyes, bared teeth, and radiating lines make the face a site of layered addition rather than a stable image.\"},{\"title\":\"One Face Becomes Several\",\"introduction\":\"Six works place more than one face in the same image—through split halves, paired profiles, three crowded heads, and a full grid—testing whether repetition clarifies or dissolves the subject.\"},{\"title\":\"Figures and Letters Replace the Face\",\"introduction\":\"Three final works move away from the isolated portrait: figures stand in groups, and two large letters occupy the space where a single face appeared throughout.\"}]}]}",
+  "metrics": {
+    "latencyMs": 10089
+  },
+  "outputConfig": {
+    "textFormat": {
+      "type": "json_schema",
+      "structure": {
+        "jsonSchema": {
+          "name": "exhibition_record",
+          "schema": "{\"type\": \"object\", \"properties\": {\"galleries\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"id\": {\"type\": \"string\"}, \"title\": {\"type\": \"string\"}, \"question\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}, \"closing\": {\"type\": \"string\"}, \"chapters\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"title\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}}, \"required\": [\"title\", \"introduction\"], \"additionalProperties\": false}}}, \"required\": [\"id\", \"title\", \"question\", \"introduction\", \"closing\", \"chapters\"], \"additionalProperties\": false}}}, \"required\": [\"galleries\"], \"additionalProperties\": false}"
+        }
+      }
+    }
+  }
+}

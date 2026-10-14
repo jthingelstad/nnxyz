@@ -1,0 +1,35 @@
+{
+  "stage": "collection-plan-structured",
+  "key": "scrimshaw",
+  "modelId": "us.anthropic.claude-sonnet-4-6",
+  "promptVersion": "owned-exhibitions-v1",
+  "timeCentral": "2026-10-14T07:15:56.202412-05:00",
+  "systemPromptSHA256": "ed58c53d819b0f5743b4ab5573af97a3fad604b405ada9c8d25778df6b2e0d92",
+  "instructionSHA256": "590877839498dc5100d4d270158832629713014d007e6163193f804482edcf7c",
+  "promptPath": "curation/exhibitions/prompts/scrimshaw-collection-plan-structured.json",
+  "images": [],
+  "usage": {
+    "inputTokens": 6187,
+    "outputTokens": 294,
+    "totalTokens": 6481,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "requestId": "73de2c5d-0434-487f-9d62-919e56f04b6e",
+  "stopReason": "end_turn",
+  "responseText": "{\"collectionId\":\"scrimshaw\",\"introduction\":\"These twenty-six works share a recurring subject—the face—yet treat it as a problem rather than a given. Lines crowd, cancel, and multiply features; grids press faces together; letters replace heads; groups of figures complicate the single portrait. Moving through the exhibition, a visitor can ask how much a face can absorb before it stops being a face, and what remains when the answer is unclear.\",\"galleries\":[{\"id\":\"face-as-field\",\"title\":\"The Face as Field: Mark, Crowd, and Sign\",\"question\":\"How much pressure can a face absorb before it becomes something else entirely?\",\"thesis\":\"The exhibition opens with single heads built from competing marks, moves through asymmetry and doubling, widens into crowds and grids, and closes with two works—a five-letter greeting and a group of five figures—that replace or multiply the face, asking whether the subject was ever singular to begin with.\",\"slots\":[\"W008\",\"W017\",\"W026\",\"W004\",\"W016\",\"W001\",\"W003\",\"W006\",\"W007\",\"W010\",\"W011\",\"W005\",\"W014\",\"W018\",\"W012\",\"W019\",\"W009\",\"W021\",\"W020\",\"W002\",\"W015\",\"W024\",\"W023\",\"W022\",\"W013\",\"W025\"]}]}",
+  "metrics": {
+    "latencyMs": 6347
+  },
+  "outputConfig": {
+    "textFormat": {
+      "type": "json_schema",
+      "structure": {
+        "jsonSchema": {
+          "name": "exhibition_record",
+          "schema": "{\"type\": \"object\", \"properties\": {\"collectionId\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}, \"galleries\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"id\": {\"type\": \"string\"}, \"title\": {\"type\": \"string\"}, \"question\": {\"type\": \"string\"}, \"thesis\": {\"type\": \"string\"}, \"slots\": {\"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"id\", \"title\", \"question\", \"thesis\", \"slots\"], \"additionalProperties\": false}}}, \"required\": [\"collectionId\", \"introduction\", \"galleries\"], \"additionalProperties\": false}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "stage": "museum-wording-review",
+  "key": "nnotb",
+  "modelId": "us.anthropic.claude-sonnet-4-6",
+  "promptVersion": "owned-exhibitions-v1",
+  "timeCentral": "2026-10-14T07:49:28.414826-05:00",
+  "systemPromptSHA256": "ed58c53d819b0f5743b4ab5573af97a3fad604b405ada9c8d25778df6b2e0d92",
+  "instructionSHA256": "a0bfd635856589bb27e9ee25e09bd9427684d3943c1fc8882563df543b265601",
+  "promptPath": "curation/exhibitions/prompts/nnotb-museum-wording-review.json",
+  "images": [],
+  "usage": {
+    "inputTokens": 19422,
+    "outputTokens": 353,
+    "totalTokens": 19775,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "requestId": "ff36a0fb-ff31-4462-82d6-71f40b1e4017",
+  "stopReason": "end_turn",
+  "responseText": "{\"galleries\":[{\"id\":\"nnotb--open-fields\",\"title\":\"Figure and Surrounding Field\",\"question\":\"What changes in a figure when the space around it shifts from active to empty?\",\"introduction\":\"Eight works place figures — human, animal, skeletal, snail — inside fields that dissolve, dwarf, or press against them. Some figures lose their edges to overlapping washes; others hold a hard silhouette against a single open color. Moving through the gallery, notice how the surrounding ground shifts from active to empty, from glowing to dark.\",\"closing\":\"Each work leaves a different amount of room around its figure. Whether that room reads as exposure, weight, or release depends on what the figure's own edges are doing.\",\"chapters\":[{\"title\":\"Field Before Figure\",\"introduction\":\"The gallery opens with a work offering almost no figure — only organic forms and a lit center — before introducing a figure whose edges actively dissolve into its ground.\"},{\"title\":\"Silhouette Against Open Color\",\"introduction\":\"Three works strip the figure to a flat black shape set against a single saturated ground, testing how much a solid form can hold when surrounded by unbroken color.\"},{\"title\":\"Figure Reaching Into Space\",\"introduction\":\"Two works show figures that actively extend into the picture plane — one gripping an object across open ground, one whose dense marks fill a framed interior while light drifts outside it.\"},{\"title\":\"Figure in Darkness\",\"introduction\":\"The final work removes the open field almost entirely, placing a figure against near-total black so that its own surface becomes the only available light.\"}]}]}",
+  "metrics": {
+    "latencyMs": 9641
+  },
+  "outputConfig": {
+    "textFormat": {
+      "type": "json_schema",
+      "structure": {
+        "jsonSchema": {
+          "name": "exhibition_record",
+          "schema": "{\"type\": \"object\", \"properties\": {\"galleries\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"id\": {\"type\": \"string\"}, \"title\": {\"type\": \"string\"}, \"question\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}, \"closing\": {\"type\": \"string\"}, \"chapters\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"title\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}}, \"required\": [\"title\", \"introduction\"], \"additionalProperties\": false}}}, \"required\": [\"id\", \"title\", \"question\", \"introduction\", \"closing\", \"chapters\"], \"additionalProperties\": false}}}, \"required\": [\"galleries\"], \"additionalProperties\": false}"
+        }
+      }
+    }
+  }
+}

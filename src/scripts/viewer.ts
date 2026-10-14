@@ -12,7 +12,8 @@ const pauseIcon =
 
 export function initViewer() {
   const viewer = document.querySelector<HTMLElement>('[data-viewer]');
-  if (!viewer) return;
+  if (!viewer || viewer.dataset.viewerReady) return;
+  viewer.dataset.viewerReady = 'true';
   const play = viewer.querySelector<HTMLButtonElement>('[data-play]')!;
   const seek = viewer.querySelector<HTMLInputElement>('[data-seek]')!;
   const speed = viewer.querySelector<HTMLSelectElement>('[data-speed]')!;
@@ -26,6 +27,9 @@ export function initViewer() {
   let frame = 0;
   let last = 0;
   let action = 0;
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  let automatic = viewer.dataset.autoplay === 'true' && !motion.matches;
+  let repeat: ReturnType<typeof setTimeout> | undefined;
 
   function setPlaying(value: boolean) {
     playing = value;
@@ -120,6 +124,7 @@ export function initViewer() {
     viewer!.dataset.progress = String(time / timeline.duration);
   }
   function stop() {
+    clearTimeout(repeat);
     cancelAnimationFrame(frame);
     setPlaying(false);
   }
@@ -131,6 +136,7 @@ export function initViewer() {
     if (time >= timeline.duration) {
       stop();
       status.textContent = '';
+      if (automatic) repeat = setTimeout(() => startAutomatic(), 5000);
     } else frame = requestAnimationFrame(tick);
   }
   function reportError(error: unknown) {
@@ -141,6 +147,8 @@ export function initViewer() {
     console.error(error);
   }
   play.addEventListener('click', async () => {
+    automatic = false;
+    clearTimeout(repeat);
     const currentAction = ++action;
     if (playing) {
       stop();
@@ -162,6 +170,7 @@ export function initViewer() {
     }
   });
   seek.addEventListener('input', async () => {
+    automatic = false;
     const currentAction = ++action;
     const fraction = Number(seek.value) / 1000;
     stop();
@@ -175,6 +184,7 @@ export function initViewer() {
     }
   });
   viewer.querySelector('[data-reset]')!.addEventListener('click', async () => {
+    automatic = false;
     const currentAction = ++action;
     stop();
     try {
@@ -187,11 +197,63 @@ export function initViewer() {
     }
   });
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) stop();
+    if (document.hidden) {
+      automatic = false;
+      action++;
+      stop();
+    }
   });
-  window.addEventListener('pagehide', stop);
+  window.addEventListener('pagehide', () => {
+    automatic = false;
+    action++;
+    stop();
+  });
+  async function startAutomatic() {
+    const currentAction = ++action;
+    if (!automatic || document.hidden || motion.matches) return;
+    setPlaying(true);
+    try {
+      await ensureLoaded();
+      if (currentAction !== action || !automatic) return;
+      time = 0;
+      render();
+      last = performance.now();
+      frame = requestAnimationFrame(tick);
+    } catch (error) {
+      automatic = false;
+      reportError(error);
+    }
+  }
+  if (automatic) {
+    let started = false;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          started = true;
+          startAutomatic();
+        } else if (!entry.isIntersecting && started) {
+          automatic = false;
+          action++;
+          stop();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 },
+    );
+    observer.observe(viewer);
+    window.addEventListener('pagehide', () => observer.disconnect(), {
+      once: true,
+    });
+  }
+  motion.addEventListener('change', () => {
+    if (motion.matches) {
+      automatic = false;
+      action++;
+      stop();
+    }
+  });
   const dialog =
-    document.querySelector<HTMLDialogElement>('[data-enlargement]')!;
+    document.querySelector<HTMLDialogElement>('[data-enlargement]');
   async function enlarge() {
     if (document.fullscreenElement) {
       await document.exitFullscreen();
@@ -205,18 +267,21 @@ export function initViewer() {
         /* Browser may only support dialog enlargement. */
       }
     }
-    dialog.showModal();
+    dialog?.showModal();
   }
-  document.querySelector('[data-enlarge]')!.addEventListener('click', enlarge);
-  viewer.querySelector('.art-stage')!.addEventListener('click', () => {
-    if (matchMedia('(min-width: 761px)').matches) enlarge();
-  });
-  dialog
-    .querySelector('[data-close-enlargement]')!
-    .addEventListener('click', () => dialog.close());
-  const details = document.querySelector<HTMLDetailsElement>('#provenance')!;
+  document.querySelector('[data-enlarge]')?.addEventListener('click', enlarge);
+  if (dialog)
+    viewer.querySelector('.art-stage')!.addEventListener('click', () => {
+      if (matchMedia('(min-width: 761px)').matches) enlarge();
+    });
+  if (dialog)
+    dialog
+      .querySelector('[data-close-enlargement]')!
+      .addEventListener('click', () => dialog.close());
+  const details = document.querySelector<HTMLDetailsElement>('#provenance');
   const detailsButton =
-    document.querySelector<HTMLButtonElement>('[data-details]')!;
+    document.querySelector<HTMLButtonElement>('[data-details]');
+  if (!details || !detailsButton) return;
   detailsButton.setAttribute('aria-controls', 'provenance');
   detailsButton.setAttribute('aria-expanded', 'false');
   detailsButton.addEventListener('click', () => {

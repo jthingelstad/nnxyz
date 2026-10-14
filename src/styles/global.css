@@ -871,3 +871,544 @@ dd {
     height: 15px;
   }
 }
+
+/* October 14 exhibition system: open space, bounded chapters and quiet labels. */
+.museum-page {
+  width: min(1180px, 85vw);
+  margin: 40px auto 80px;
+}
+.museum-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.museum-entrance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8%;
+  margin-block: 18px 64px;
+}
+.welcome-space h1 {
+  font:
+    400 clamp(42px, 5.4vw, 78px)/1.06 Georgia,
+    'Times New Roman',
+    serif;
+  letter-spacing: -2px;
+  color: var(--body-text);
+}
+.welcome-pending {
+  color: var(--muted);
+  margin-top: 30px;
+  font-size: 17px;
+}
+.entrance-drawing {
+  width: 100%;
+  max-width: 490px;
+  justify-self: end;
+}
+.entrance-drawing .work-viewer {
+  width: 100%;
+}
+.entrance-drawing .art-stage {
+  cursor: default;
+}
+.entrance-drawing .player {
+  gap: 12px;
+  padding: 14px 0 4px;
+  font-size: 13px;
+}
+.entrance-drawing .play-button {
+  gap: 6px;
+}
+.entrance-drawing .play-button svg {
+  width: 22px;
+  height: 22px;
+}
+.playback-note {
+  font-size: 12px;
+  color: var(--subtle);
+  margin: 0 6px 12px;
+}
+.opening-caption {
+  margin-top: 8px;
+  color: var(--body-text);
+  font-size: 14px;
+}
+.collection-entrances {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 42px;
+  scroll-margin-top: 24px;
+}
+.collection-entrance img,
+.exhibition-entrance img,
+.exhibition-art img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 1;
+  background: #fff;
+}
+.collection-entrance h2 {
+  margin: 15px 0 8px;
+  font-size: 22px;
+  line-height: 1.3;
+}
+.collection-entrance span,
+.enter-gallery {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--body-text);
+}
+.museum-footer {
+  margin-top: 72px;
+  font-size: 13px;
+  color: var(--subtle);
+}
+.entrance-page .museum-footer {
+  text-align: center;
+}
+.collection-wing h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+.wing-introduction {
+  max-width: 710px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--body-text);
+  margin-top: 16px;
+}
+.wing-group {
+  scroll-margin-top: 25px;
+}
+.wing-group + .wing-group {
+  margin-top: 90px;
+}
+.wing-group > h2 {
+  margin-top: 40px;
+  font-size: 30px;
+}
+.exhibition-entrance {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: start;
+  gap: 24px;
+}
+.exhibition-entrance h3 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+.exhibition-entrance .gallery-question {
+  color: var(--body-text);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+.exhibition-meta {
+  font-size: 13px;
+  color: var(--subtle);
+  line-height: 1.6;
+}
+.exhibition-entrance .exhibition-meta {
+  margin-top: 10px;
+}
+.featured-gallery {
+  grid-template-columns: minmax(260px, 420px) 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 40px;
+}
+.featured-gallery h3 {
+  font-size: 36px;
+  letter-spacing: -0.6px;
+}
+.featured-gallery .gallery-question {
+  max-width: 540px;
+  font-size: 22px;
+  margin-top: 16px;
+}
+.featured-gallery .exhibition-meta {
+  margin-top: 22px;
+}
+.enter-gallery {
+  margin-top: 24px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  font-size: 16px;
+}
+.gallery-choices {
+  margin-top: 64px;
+}
+.gallery-choices > h2 {
+  font-size: 25px;
+  margin-bottom: 28px;
+}
+.exhibition-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px 60px;
+}
+.exhibition-opening h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+.exhibition-question {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-top: 14px;
+}
+.exhibition-introduction {
+  max-width: 720px;
+  color: var(--body-text);
+  line-height: 1.65;
+  margin-top: 18px;
+}
+.exhibition-opening .exhibition-meta {
+  margin-top: 18px;
+}
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 24px;
+  margin-block: 32px 44px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.chapter-nav a {
+  max-width: 210px;
+  padding: 8px 0;
+}
+.chapter-nav a[aria-current] {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+.exhibition-chapter,
+.exhibition-closing,
+.exhibition-work {
+  scroll-margin-top: 24px;
+}
+.exhibition-chapter[hidden],
+.exhibition-closing[hidden] {
+  display: none;
+}
+.chapter-opening {
+  margin-bottom: 36px;
+}
+.chapter-opening h2 {
+  font-size: 28px;
+  line-height: 1.3;
+  margin-top: 8px;
+}
+.chapter-opening > p:last-child {
+  max-width: 720px;
+  color: var(--body-text);
+  margin-top: 12px;
+  line-height: 1.65;
+}
+.exhibition-work {
+  margin: 0;
+  min-width: 0;
+}
+.exhibition-solo {
+  max-width: 560px;
+  margin-inline: auto;
+}
+.exhibition-work figcaption {
+  margin-top: 16px;
+  text-align: center;
+}
+.exhibition-work h3 {
+  font-size: 18px;
+  line-height: 1.4;
+}
+.exhibition-artist {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.watch-work {
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+.exhibition-note {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: left;
+}
+.exhibition-note summary {
+  cursor: pointer;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 5px 0;
+}
+.exhibition-note p {
+  line-height: 1.65;
+  margin-top: 14px;
+  color: var(--body-text);
+}
+.exhibition-pair {
+  max-width: 1020px;
+  margin: 56px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 64px;
+}
+.pair-connection {
+  grid-column: 1 / -1;
+  max-width: 720px;
+  margin: 24px auto 0;
+}
+.chapter-connection {
+  max-width: 560px;
+  margin: 20px auto 0;
+}
+.unpaired-work {
+  display: block;
+  max-width: 560px;
+}
+.chapter-pagination {
+  margin-top: 56px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 15px;
+}
+.chapter-pagination a,
+.exhibition-closing a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+}
+.exhibition-closing {
+  max-width: 760px;
+  padding-block: 50px 30px;
+}
+.exhibition-closing h2 {
+  font-size: 30px;
+}
+.exhibition-closing > p {
+  color: var(--body-text);
+  font-size: 22px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+.exhibition-closing nav {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: start;
+  font-size: 15px;
+}
+.gallery-position {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 16px;
+}
+.gallery-position a {
+  text-decoration: underline;
+}
+@media (max-width: 1000px) {
+  .collection-entrances {
+    gap: 24px;
+  }
+  .collection-entrance h2 {
+    font-size: 19px;
+  }
+  .collection-entrance span {
+    font-size: 13px;
+  }
+  .featured-gallery {
+    grid-template-columns: 40% 1fr;
+    gap: 36px;
+  }
+  .featured-gallery h3 {
+    font-size: 30px;
+  }
+  .exhibition-choices {
+    gap: 36px;
+  }
+  .exhibition-entrance:not(.featured-gallery) {
+    grid-template-columns: 85px 1fr;
+    gap: 18px;
+  }
+}
+@media (max-width: 760px) {
+  .museum-page {
+    width: 86vw;
+    margin-top: 26px;
+  }
+  .museum-entrance {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-block: 6px 40px;
+  }
+  .welcome-space h1 {
+    font-size: 44px;
+    letter-spacing: -1px;
+  }
+  .welcome-space h1 br {
+    display: none;
+  }
+  .welcome-pending {
+    font-size: 15px;
+    margin-top: 18px;
+  }
+  .entrance-drawing {
+    justify-self: start;
+    max-width: 490px;
+  }
+  .collection-entrances {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 24px;
+  }
+  .collection-entrance h2 {
+    font-size: 18px;
+  }
+  .collection-entrance span {
+    display: flex;
+    align-items: start;
+    font-size: 12px;
+  }
+  .collection-entrance span svg {
+    width: 15px;
+    margin-top: 2px;
+  }
+  .museum-footer {
+    margin-top: 48px;
+  }
+  .collection-wing h1 {
+    font-size: 38px;
+  }
+  .wing-introduction {
+    font-size: 16px;
+  }
+  .featured-gallery {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .featured-gallery img {
+    max-width: 420px;
+  }
+  .featured-gallery h3 {
+    font-size: 28px;
+  }
+  .featured-gallery .gallery-question {
+    font-size: 19px;
+  }
+  .exhibition-choices {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .exhibition-entrance:not(.featured-gallery) {
+    grid-template-columns: 100px 1fr;
+  }
+  .gallery-choices {
+    margin-top: 48px;
+  }
+  .exhibition-opening h1 {
+    font-size: 32px;
+  }
+  .exhibition-question {
+    font-size: 19px;
+  }
+  .chapter-nav {
+    justify-content: start;
+    overflow-x: auto;
+    padding: 4px 3px 12px;
+    margin-block: 24px 28px;
+  }
+  .chapter-nav a {
+    max-width: 200px;
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+  .chapter-opening h2 {
+    font-size: 25px;
+  }
+  .exhibition-pair {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-top: 36px;
+  }
+  .pair-connection {
+    margin-top: 0;
+  }
+  .chapter-pagination {
+    margin-top: 36px;
+    font-size: 14px;
+  }
+  .exhibition-closing > p {
+    font-size: 20px;
+  }
+  .back-link {
+    max-width: 86vw;
+    align-items: start;
+  }
+  .back-link svg {
+    margin-top: 1px;
+  }
+  .player .reset-button {
+    display: block;
+  }
+  .player .play-button svg {
+    fill: none;
+    stroke-width: 1.4;
+  }
+}
+.exhibition-page {
+  margin-top: 24px;
+}
+.exhibition-page .museum-back {
+  margin-bottom: 16px;
+}
+.gallery-introduction {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.gallery-introduction summary {
+  cursor: pointer;
+  width: fit-content;
+  padding-block: 4px;
+}
+.gallery-introduction .exhibition-introduction {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.chapter-nav {
+  margin-block: 20px 28px;
+}
+.chapter-opening {
+  margin-bottom: 24px;
+}
+.work-viewer:fullscreen .art-stage {
+  width: min(calc(100vw - 40px), calc(100dvh - 150px));
+  height: min(calc(100vw - 40px), calc(100dvh - 150px));
+}
+.site-header {
+  width: min(1180px, 85vw);
+  margin-inline: auto;
+}
+@media (max-width: 760px) {
+  .site-header {
+    width: 86vw;
+    margin-inline: auto;
+  }
+}

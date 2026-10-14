@@ -2,11 +2,15 @@
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import Kudos from '../../components/Kudos.astro';
+import DrawingViewer from '../../components/DrawingViewer.astro';
+import {
+  galleryHome,
+  exhibitionStops,
+  exhibitionPath,
+} from '../../lib/exhibitions';
 import {
   artworks,
   artworkPath,
-  collectionPath,
-  collectionTitle,
   displayTitle,
   labels,
   byId,
@@ -21,13 +25,12 @@ export function getStaticPaths() {
 const { work } = Astro.props;
 const label = labels.get(work.inkId)!;
 const title = displayTitle(work);
-const neighbors = label.collectionContext.numberedOwnedNeighbors;
-const previous = neighbors?.previous;
-const next = neighbors?.next;
-const backLabel =
-  work.collectionId === 'nifty-faces'
-    ? 'Faces'
-    : collectionTitle(work.collectionId);
+const home = galleryHome.get(work.inkId)!;
+const sequence = exhibitionStops(home);
+const position = sequence.findIndex((stop) => stop.artworkId === work.inkId);
+const previous = sequence[position - 1];
+const next = sequence[position + 1];
+const numbered = label.collectionContext.numberedOwnedNeighbors;
 const reading = label.curatorialReading.text;
 ---
 
@@ -36,68 +39,11 @@ const reading = label.curatorialReading.text;
   image={`/png/${work.inkId}.png`}
   description={reading}
 >
-  <a class="back-link" href={collectionPath(work.collectionId)}>
-    <Icon name="left" size={20} /> Back to {backLabel}
+  <a class="back-link" href={`${exhibitionPath(home.id)}#work-${work.inkId}`}>
+    <Icon name="left" size={20} /> Back to {home.title}
   </a>
   <div class="work-page">
-    <div
-      class="work-viewer"
-      data-viewer
-      data-src={`/art/${work.inkId}.svg`}
-      data-id={work.inkId}
-    >
-      <div
-        class="art-stage"
-        style={`aspect-ratio:${work.width}/${work.height}`}
-      >
-        <img
-          class="finished-art"
-          src={`/art/${work.inkId}.svg`}
-          alt={`${title} by ${work.artistName}`}
-          width={work.width}
-          height={work.height}
-          fetchpriority="high"
-        />
-        <div class="drawing-art" aria-hidden="true"></div>
-      </div>
-      <div class="player" aria-label="Drawing playback">
-        <button
-          class="play-button"
-          data-play
-          aria-pressed="false"
-          data-tinylytics-event="drawing.play"
-          data-tinylytics-event-value={work.inkId}
-        >
-          <span data-play-icon>
-            <Icon name="play" size={30} />
-          </span>
-          <span data-play-label>Watch drawing</span>
-        </button>
-        <input
-          class="scrubber"
-          data-seek
-          type="range"
-          min="0"
-          max="1000"
-          step="1"
-          value="1000"
-          aria-label="Drawing progress"
-          aria-valuetext="Complete drawing"
-        />
-        <select data-speed aria-label="Playback speed">
-          <option value="0.5">½×</option>
-          <option value="1" selected>
-            1×
-          </option>
-          <option value="2">2×</option>
-          <option value="4">4×</option>
-        </select>
-        <button class="reset-button" data-reset aria-label="Reset drawing">
-          <Icon name="reset" size={24} />
-        </button>
-      </div>
-      <p data-player-status class="player-status" role="status"></p>
-    </div>
+    <DrawingViewer work={work} />
     <div class="work-content">
       <div class="work-caption">
         <div>
@@ -133,28 +79,37 @@ const reading = label.curatorialReading.text;
         <p>{reading}</p>
       </section>
       <p class="collection-position">
-        {previous && next
-          ? `Between ${displayTitle(byId.get(previous.inkId)!)} and ${displayTitle(byId.get(next.inkId)!)} in the owned title sequence.`
+        {numbered?.previous && numbered?.next
+          ? `Between ${displayTitle(byId.get(numbered.previous.inkId)!)} and ${displayTitle(byId.get(numbered.next.inkId)!)} in the owned title sequence.`
           : label.collectionContext.text}
+      </p>
+      <p class="gallery-position">
+        Work {position + 1} of {sequence.length} in{' '}
+        <a href={exhibitionPath(home.id)}>{home.title}</a>.
       </p>
       <nav class="work-navigation" aria-label="Artwork navigation">
         {previous ? (
-          <a href={artworkPath(previous.inkId)}>
+          <a href={artworkPath(previous.artworkId)}>
             <Icon name="left" size={20} /> Previous
             <span class="mobile-neighbor">
               {' '}
-              ({displayTitle(byId.get(previous.inkId)!).replace(/^Nifty /, '')})
+              (
+              {displayTitle(byId.get(previous.artworkId)!).replace(
+                /^Nifty /,
+                '',
+              )}
+              )
             </span>
           </a>
         ) : (
           <span></span>
         )}
         {next && (
-          <a href={artworkPath(next.inkId)}>
+          <a href={artworkPath(next.artworkId)}>
             Next
             <span class="mobile-neighbor">
               {' '}
-              ({displayTitle(byId.get(next.inkId)!).replace(/^Nifty /, '')})
+              ({displayTitle(byId.get(next.artworkId)!).replace(/^Nifty /, '')})
             </span>
             <Icon name="right" size={20} />
           </a>
@@ -251,8 +206,4 @@ const reading = label.curatorialReading.text;
       <img src={`/art/${work.inkId}.svg`} alt={title} />
     </div>
   </dialog>
-  <script>
-    import { initViewer } from '../../scripts/viewer';
-    initViewer();
-  </script>
 </Layout>

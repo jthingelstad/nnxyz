@@ -1,0 +1,35 @@
+{
+  "stage": "museum-wording-review",
+  "key": "nnotb-wording-batch-1",
+  "modelId": "us.anthropic.claude-sonnet-4-6",
+  "promptVersion": "owned-exhibitions-v1",
+  "timeCentral": "2026-10-14T07:52:19.481958-05:00",
+  "systemPromptSHA256": "ed58c53d819b0f5743b4ab5573af97a3fad604b405ada9c8d25778df6b2e0d92",
+  "instructionSHA256": "3d30c525c66eb4db7753d8150710d8167ca7682cf855de884d7e66f3c9ded272",
+  "promptPath": "curation/exhibitions/prompts/nnotb-wording-batch-1-museum-wording-review.json",
+  "images": [],
+  "usage": {
+    "inputTokens": 4323,
+    "outputTokens": 1080,
+    "totalTokens": 5403,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "requestId": "5c5e3407-4e7f-42ee-9384-9ddb34fb9afd",
+  "stopReason": "end_turn",
+  "responseText": "{\"galleries\":[{\"id\":\"nnotb--open-fields\",\"title\":\"Figure and Ground\",\"question\":\"What does the space surrounding a figure do to its edges and its weight?\",\"introduction\":\"Eight works place figures — human, animal, skeletal, snail — inside fields that dissolve, dwarf, or press against them. Some figures lose their edges to overlapping washes; others hold a hard silhouette against a single open color. Moving through the gallery, notice how the surrounding ground shifts from active to empty, from glowing to dark.\",\"closing\":\"Each work leaves a different amount of room around its figure. Whether that room reads as exposure, compression, or openness depends on what the figure's own edges are doing.\",\"chapters\":[{\"title\":\"Where the Figure Begins\",\"introduction\":\"The exhibition opens with a work offering almost no figure — only a field of organic forms and a lit center — before introducing a figure whose edges actively dissolve into its ground.\"},{\"title\":\"Silhouette Against Open Color\",\"introduction\":\"Three works strip the figure to a flat black shape set against a single saturated ground, showing how much a solid form can hold when surrounded by unbroken color.\"},{\"title\":\"Figures That Reach Outward\",\"introduction\":\"Two works show figures extending into the picture plane — one gripping an object across open ground, one whose dense marks fill a framed interior while light drifts outside it.\"},{\"title\":\"Figure Against Darkness\",\"introduction\":\"The final work removes the open field almost entirely, placing a figure against near-total black so that its own surface becomes the only available light.\"}]},{\"id\":\"nnotb--black-silhouettes\",\"title\":\"Scrimshaw: Shape, Mark, Field\",\"question\":\"How many marks does a sealed dark shape require before it reads as a presence?\",\"introduction\":\"Fifteen works share a common structure: a dark silhouette, a flat field of color, and a small number of marks. This exhibition follows that structure from its most stripped-down form to its most layered, asking at each stop what the marks add and what the unbroken areas of the shape withhold.\",\"closing\":\"Each work returns to the same arrangement: a sealed form, a few marks, a flat field. What that combination produces — and whether it is sufficient — the shapes leave open.\",\"chapters\":[{\"title\":\"The Shape Alone\",\"introduction\":\"Three works open with the most reduced version of the structure: one dark shape, one flat field, and almost nothing else added to either.\"},{\"title\":\"Fields Filled with Lines\",\"introduction\":\"Four works surround the silhouette with radiating lines that extend across the field in every direction, describing the space around the figure rather than the figure itself.\"},{\"title\":\"The Eye Mark\",\"introduction\":\"Four works place the eye at the center of attention, each using a different form — loop, spiral, concentric ring — producing a different quality of looking back at the viewer.\"},{\"title\":\"When the Shape Opens\",\"introduction\":\"The final four works complicate the silhouette structure: color enters the form, surfaces accumulate marks, and the boundary between figure and field begins to break down.\"}]},{\"id\":\"nnotb--gesture-and-stance\",\"title\":\"Bodies in Motion, Drawings at Rest\",\"question\":\"Which lines in a still drawing make a body read as moving rather than stopped?\",\"introduction\":\"Twenty-seven drawings, each built around a body caught mid-action: leaning, lunging, bowing, spreading wide, or folding inward. None of these figures are at rest, yet none are photographs of motion. The gallery asks you to track how line, weight, and surrounding space can make a fixed mark read as a body still in the middle of something.\",\"closing\":\"Each drawing fixes a body at one instant. Whether that instant reads as arrival, departure, or suspension depends on which line you follow first — and the drawings offer no single answer.\",\"chapters\":[{\"title\":\"Bodies That Expand Outward\",\"introduction\":\"Five figures whose limbs, marks, or silhouettes push toward the edges of the frame, testing how far a body can extend before its outline loses coherence.\"},{\"title\":\"Figures That Hold Their Ground\",\"introduction\":\"Six figures that stand squarely or crouch forward, occupying their space with a directness that sits between ceremony and confrontation, facing the viewer without retreating.\"},{\"title\":\"Bodies in Transit\",\"introduction\":\"Six figures caught at angles that read as momentum — pitching forward, tilting sideways, or suspended between a step and a stumble, held at an unstable point.\"},{\"title\":\"Figures That Turn Inward\",\"introduction\":\"Six figures whose postures close rather than open: bowed heads, arms that block rather than reach, and bodies compressed within their surrounding pictorial space.\"},{\"title\":\"The Body Showing Its Frame\",\"introduction\":\"Four figures in which the skeleton, outline, or interior construction becomes the subject — bodies that are simultaneously solid and see-through at the same time.\"}]}]}",
+  "metrics": {
+    "latencyMs": 16881
+  },
+  "outputConfig": {
+    "textFormat": {
+      "type": "json_schema",
+      "structure": {
+        "jsonSchema": {
+          "name": "exhibition_record",
+          "schema": "{\"type\": \"object\", \"properties\": {\"galleries\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"id\": {\"type\": \"string\"}, \"title\": {\"type\": \"string\"}, \"question\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}, \"closing\": {\"type\": \"string\"}, \"chapters\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"title\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}}, \"required\": [\"title\", \"introduction\"], \"additionalProperties\": false}}}, \"required\": [\"id\", \"title\", \"question\", \"introduction\", \"closing\", \"chapters\"], \"additionalProperties\": false}}}, \"required\": [\"galleries\"], \"additionalProperties\": false}"
+        }
+      }
+    }
+  }
+}

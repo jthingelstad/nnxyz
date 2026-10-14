@@ -26,9 +26,28 @@ page.on('request', (request) => {
   if (request.url().includes('tinylytics.app')) requests.push(request.url());
 });
 const face = 'QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5';
+const exhibitionMap = JSON.parse(
+  await fs.readFile('curation/exhibitions/map.json', 'utf8'),
+);
+const firstGallery = exhibitionMap.collections[0].galleries[0];
+const galleryURL = `/galleries/${firstGallery.id}/`;
 async function go(url) {
   await page.goto(base + url);
   await page.locator('main').waitFor();
+  if (page.url().includes('/galleries/'))
+    await page.waitForFunction(() =>
+      Boolean(
+        document.querySelector('[data-exhibition]')?.dataset.currentChapter,
+      ),
+    );
+}
+async function waitChapter(value) {
+  await page.waitForFunction(
+    (value) =>
+      document.querySelector('[data-exhibition]').dataset.currentChapter ===
+      value,
+    value,
+  );
 }
 async function waitArt() {
   await page.locator('.finished-art').evaluate((img) => img.decode());
@@ -62,13 +81,55 @@ async function seek(fraction) {
 }
 try {
   await go('/');
-  assert.equal(await page.locator('.art-card').count(), 574);
+  assert.equal(await page.locator('h1').textContent(), 'A collection of nnxyz');
+  assert.equal(await page.locator('.collection-entrance').count(), 4);
+  assert.equal(
+    await page.getByRole('link', { name: /^All works$/i }).count(),
+    0,
+  );
+  assert.equal(await page.locator('.art-card').count(), 0);
+  await waitArt();
+  await page.waitForFunction(
+    () => Number(document.querySelector('[data-viewer]').dataset.progress) > 0,
+  );
+  await page.locator('[data-speed]').selectOption('4');
+  await page.waitForFunction(
+    () => document.querySelector('[data-viewer]').dataset.progress === '1',
+    null,
+    { timeout: 40000 },
+  );
+  await page.waitForTimeout(1500);
+  assert.equal(
+    await page.locator('[data-viewer]').getAttribute('data-progress'),
+    '1',
+    'Opening replay must hold its finished image',
+  );
+  await page.waitForFunction(
+    () => Number(document.querySelector('[data-viewer]').dataset.progress) < 1,
+  );
   await page
-    .locator('.art-card img')
-    .first()
-    .evaluate((img) => img.decode());
-  await page.screenshot({ path: path.join(output, 'collection-desktop.png') });
-  results.push({ check: 'Collection', count: 574, viewport: [1672, 941] });
+    .getByRole('button', { name: 'Pause drawing', exact: true })
+    .click();
+  const openingProgress = await page
+    .locator('[data-viewer]')
+    .getAttribute('data-progress');
+  await page.waitForTimeout(150);
+  assert.equal(
+    await page.locator('[data-viewer]').getAttribute('data-progress'),
+    openingProgress,
+  );
+  await page.locator('[data-seek]').press('End');
+  await page.locator('[data-speed]').selectOption('1');
+  await page.locator('[data-seek]').blur();
+  await page.screenshot({
+    path: path.join(output, 'entrance-desktop.png'),
+    fullPage: true,
+  });
+  results.push({
+    check:
+      'Four collection entrances, no global grid, real automatic replay and manual pause',
+    passed: true,
+  });
   assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
   await page
     .getByRole('button', { name: 'Use dark background', exact: true })
@@ -78,30 +139,205 @@ try {
     'rgb(0, 0, 0)',
   );
   await page.screenshot({
-    path: path.join(output, 'collection-dark-desktop.png'),
+    path: path.join(output, 'entrance-dark-desktop.png'),
+    fullPage: true,
   });
   await page
     .getByRole('button', { name: 'Use light background', exact: true })
     .click();
-  results.push({
-    check: 'Theme switch supports keyboard and black/white backgrounds',
-    passed: true,
-  });
   for (const [id, count] of [
-    ['nifty-faces', 134],
-    ['nnotb', 303],
-    ['rawblocks', 66],
-    ['nnxyz-other', 45],
-    ['scrimshaw', 26],
+    ['nifty-faces', 7],
+    ['nnotb', 15],
+    ['rawblocks', 3],
+    ['nnxyz-other', 2],
+    ['scrimshaw', 1],
+    ['other-related', 3],
   ]) {
     await go(`/collections/${id}/`);
-    assert.equal(await page.locator('.art-card').count(), count);
-    assert.equal(
-      await page.locator('.collection-nav a[aria-current]').count(),
-      1,
-    );
+    assert.equal(await page.locator('.exhibition-entrance').count(), count);
+    assert.equal(await page.locator('.art-card').count(), 0);
   }
-  results.push({ check: 'All five collection filters', passed: true });
+  await go('/collections/nifty-faces/');
+  await page.screenshot({
+    path: path.join(output, 'faces-wing-desktop.png'),
+    fullPage: true,
+  });
+  results.push({
+    check: 'Four wings and separate related artists lead to all 28 galleries',
+    passed: true,
+  });
+  await page.locator('.featured-gallery').click();
+  await waitChapter('1');
+  assert.ok(page.url().endsWith(galleryURL));
+  assert.equal(await page.locator('.exhibition-work').count(), 17);
+  assert.equal(
+    await page
+      .locator('.exhibition-chapter:not([hidden]) .exhibition-work')
+      .count(),
+    3,
+  );
+  assert.equal(await page.locator('.chapter-nav a').count(), 5);
+  await page
+    .locator('.exhibition-solo img')
+    .first()
+    .evaluate((img) => img.decode());
+  await page.screenshot({
+    path: path.join(output, 'first-gallery-desktop.png'),
+    fullPage: true,
+  });
+  await page.locator('.chapter-nav a').nth(1).press('Enter');
+  await waitChapter('2');
+  assert.equal(
+    await page
+      .locator('[data-exhibition]')
+      .getAttribute('data-current-chapter'),
+    '2',
+  );
+  await page.locator('#chapter-2 .exhibition-note summary').first().click();
+  assert.equal(
+    await page
+      .locator('#chapter-2 .exhibition-note')
+      .first()
+      .getAttribute('open'),
+    '',
+  );
+  const chosen = firstGallery.chapters[1].stops[0].artworkId;
+  await page.locator('#chapter-2 .exhibition-art').first().click();
+  assert.ok(page.url().endsWith(`/artworks/${chosen}/`));
+  assert.equal(
+    await page.locator('link[rel=canonical]').getAttribute('href'),
+    `https://nnxyz.thingelstad.xyz/artworks/${chosen}/`,
+  );
+  assert.equal(
+    await page.locator('.back-link').getAttribute('href'),
+    `${galleryURL}#work-${chosen}`,
+  );
+  await page.locator('.back-link').click();
+  await waitChapter('2');
+  assert.equal(
+    await page.evaluate(
+      () => document.activeElement.closest('.exhibition-work')?.id,
+    ),
+    `work-${chosen}`,
+  );
+  assert.equal(
+    await page
+      .locator('[data-exhibition]')
+      .getAttribute('data-current-chapter'),
+    '2',
+  );
+  await page.reload();
+  await waitChapter('2');
+  assert.equal(
+    await page
+      .locator('[data-exhibition]')
+      .getAttribute('data-current-chapter'),
+    '2',
+  );
+  await page.locator('.chapter-nav a').last().click();
+  await waitChapter('5');
+  await page.locator('#chapter-5 .chapter-pagination a').last().click();
+  await waitChapter('closing');
+  assert.equal(
+    await page
+      .locator('[data-exhibition]')
+      .getAttribute('data-current-chapter'),
+    'closing',
+  );
+  await page
+    .getByRole('link', { name: 'Return to the first chapter', exact: true })
+    .click();
+  await waitChapter('1');
+  assert.equal(
+    await page
+      .locator('[data-exhibition]')
+      .getAttribute('data-current-chapter'),
+    '1',
+  );
+  results.push({
+    check:
+      'Keyboard chapter navigation, optional interpretation, canonical artwork, precise return, reload and closing',
+    passed: true,
+  });
+  // Every gallery preserves membership, chapter bounds and the saved sequence.
+  for (const collection of exhibitionMap.collections)
+    for (const gallery of collection.galleries) {
+      await go(`/galleries/${gallery.id}/`);
+      const stops = gallery.chapters.flatMap((chapter) => chapter.stops);
+      assert.equal(
+        await page.locator('.exhibition-work').count(),
+        stops.length,
+      );
+      assert.ok(stops.length <= 30);
+      assert.deepEqual(
+        await page
+          .locator('.exhibition-work')
+          .evaluateAll((works) => works.map((work) => work.id)),
+        stops.map((stop) => `work-${stop.artworkId}`),
+      );
+      assert.equal(
+        await page.locator('.exhibition-chapter:not([hidden])').count(),
+        1,
+      );
+    }
+  const noJS = await browser.newContext({ javaScriptEnabled: false });
+  const staticPage = await noJS.newPage();
+  await staticPage.goto(base + galleryURL);
+  assert.equal(
+    await staticPage.locator('.exhibition-work:visible').count(),
+    17,
+  );
+  await noJS.close();
+  results.push({
+    check:
+      'All galleries retain exact curated order and work without JavaScript',
+    passed: true,
+  });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  for (const [width, height] of [
+    [390, 844],
+    [443, 887],
+    [768, 1024],
+    [1440, 900],
+    [844, 390],
+  ]) {
+    await page.setViewportSize({ width, height });
+    for (const route of [
+      '/',
+      '/collections/nifty-faces/',
+      '/collections/nnotb/',
+      '/collections/rawblocks/',
+      '/collections/other-related/',
+      galleryURL,
+    ]) {
+      await go(route);
+      assert.equal(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth > innerWidth,
+        ),
+        false,
+        `${route} overflows at ${width}`,
+      );
+    }
+    if (width === 390) {
+      await page.screenshot({
+        path: path.join(output, 'first-gallery-mobile.png'),
+        fullPage: true,
+      });
+      await go('/');
+      await waitArt();
+      await page.screenshot({
+        path: path.join(output, 'entrance-mobile.png'),
+        fullPage: true,
+      });
+    }
+    results.push({
+      check: 'Responsive white museum surfaces',
+      viewport: [width, height],
+      passed: true,
+    });
+  }
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.setViewportSize({ width: 1254, height: 1254 });
   await go(`/artworks/${face}/`);
   await waitArt();
@@ -248,15 +484,18 @@ try {
   await page.screenshot({ path: path.join(output, 'collection-mobile.png') });
   await page.getByRole('link', { name: 'About', exact: true }).click();
   await page
-    .getByRole('link', { name: 'Explore five curated walks →', exact: true })
+    .getByRole('link', {
+      name: 'Explore the collection galleries →',
+      exact: true,
+    })
     .click();
-  assert.equal(await page.locator('.walk-summary').count(), 5);
-  await page.locator('.walk-summary a').first().click();
-  assert.equal(await page.locator('.walk-stops section').count(), 4);
-  await page.locator('.walk-stops a').first().click();
+  assert.equal(await page.locator('.collection-entrance').count(), 4);
+  await page.locator('.collection-entrance').first().click();
+  await page.locator('.featured-gallery').click();
+  await page.locator('#chapter-1 .exhibition-art').first().click();
   assert.ok(page.url().includes('/artworks/'));
   results.push({
-    check: 'Mobile gallery, enlargement, About and curatorial walk navigation',
+    check: 'Mobile enlargement, About and collection-to-gallery navigation',
     passed: true,
   });
 
@@ -267,7 +506,22 @@ try {
     ),
     'auto',
   );
-  results.push({ check: 'Reduced-motion navigation', passed: true });
+  await go('/');
+  await waitArt();
+  assert.equal(
+    await page.locator('[data-viewer]').getAttribute('data-active'),
+    null,
+  );
+  assert.equal(
+    await page
+      .getByRole('button', { name: 'Watch drawing', exact: true })
+      .count(),
+    1,
+  );
+  results.push({
+    check: 'Reduced motion starts with the native still and optional playback',
+    passed: true,
+  });
 
   // Compare real canvas brush geometry with derived SVG across distinct rendering cases.
   const dense = [...catalog].sort((a, b) => b.points - a.points)[0];
@@ -458,7 +712,15 @@ try {
     [844, 390],
   ]) {
     await page.setViewportSize({ width, height });
-    for (const route of ['/', `/artworks/${face}/`, '/about/', '/walks/']) {
+    for (const route of [
+      '/',
+      '/collections/nifty-faces/',
+      '/collections/nnotb/',
+      '/collections/other-related/',
+      galleryURL,
+      `/artworks/${face}/`,
+      '/about/',
+    ]) {
       await go(route);
       assert.equal(
         await page.locator('html').getAttribute('data-theme'),

@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import ExhibitionWork from '../../components/ExhibitionWork.astro';
+import {
+  exhibitions,
+  exhibitionPath,
+  exhibitionStops,
+  exhibitionCollection,
+  wingPath,
+  chapterIntroduction,
+} from '../../lib/exhibitions';
+export function getStaticPaths() {
+  return exhibitions.map((gallery) => ({
+    params: { gallery: gallery.id },
+    props: { gallery },
+  }));
+}
+const { gallery } = Astro.props;
+const collection = exhibitionCollection(gallery.collectionId);
+const next =
+  collection.galleries[
+    collection.galleries.findIndex((g) => g.id === gallery.id) + 1
+  ];
+---
+
+<Layout title={`${gallery.title} — nnxyz`} description={gallery.question}>
+  <article class="museum-page exhibition-page" data-exhibition>
+    <a class="museum-back" href={wingPath(collection.id)}>
+      <Icon name="left" size={18} />
+      Back to {collection.title}
+    </a>
+    <header class="exhibition-opening">
+      <h1>{gallery.title}</h1>
+      <p class="exhibition-question">{gallery.question}</p>
+      <details class="gallery-introduction">
+        <summary>About this gallery</summary>
+        <p class="exhibition-introduction">{gallery.introduction}</p>
+      </details>
+      <p class="exhibition-meta">
+        {exhibitionStops(gallery).length} works · {gallery.chapters.length}{' '}
+        chapters · AI curator · Owned subset
+      </p>
+    </header>
+    <nav class="chapter-nav" aria-label="Gallery chapters">
+      {gallery.chapters.map((chapter, i) => (
+        <a href={`#chapter-${i + 1}`} data-chapter-link={i + 1}>
+          <span>{i + 1}.</span> {chapter.title}
+        </a>
+      ))}
+    </nav>
+    {gallery.chapters.map((chapter, i) => {
+      const [first, ...rest] = chapter.stops;
+      const pairs = Array.from(
+        { length: Math.ceil(rest.length / 2) },
+        (_, index) => rest.slice(index * 2, index * 2 + 2),
+      );
+      return (
+        <section
+          class="exhibition-chapter"
+          id={`chapter-${i + 1}`}
+          data-chapter={i + 1}
+          aria-labelledby={`chapter-title-${i + 1}`}
+        >
+          <header class="chapter-opening">
+            <p class="exhibition-meta">
+              Chapter {i + 1} of {gallery.chapters.length} ·{' '}
+              {chapter.stops.length}{' '}
+              {chapter.stops.length === 1 ? 'work' : 'works'}
+            </p>
+            <h2 id={`chapter-title-${i + 1}`} tabindex="-1">
+              {chapter.title}
+            </h2>
+            <p>{chapterIntroduction(gallery, i)}</p>
+          </header>
+          <div class="exhibition-solo">
+            <ExhibitionWork stop={first} eager={i === 0} />
+          </div>
+          {first.transitionFromPrevious && (
+            <details class="chapter-connection exhibition-note">
+              <summary>Connection from the previous chapter</summary>
+              <p>{first.transitionFromPrevious}</p>
+            </details>
+          )}
+          {pairs.map((pair) => (
+            <div
+              class:list={[
+                'exhibition-pair',
+                { 'unpaired-work': pair.length === 1 },
+              ]}
+            >
+              {pair.map((stop) => (
+                <ExhibitionWork stop={stop} />
+              ))}
+              <details class="pair-connection exhibition-note">
+                <summary>
+                  {pair.length === 2
+                    ? 'Look between these works'
+                    : 'Connection from the previous work'}
+                </summary>
+                {pair.map(
+                  (stop) =>
+                    stop.transitionFromPrevious && (
+                      <p>{stop.transitionFromPrevious}</p>
+                    ),
+                )}
+              </details>
+            </div>
+          ))}
+          <nav
+            class="chapter-pagination"
+            aria-label={`Continue from chapter ${i + 1}`}
+          >
+            {i > 0 ? (
+              <a href={`#chapter-${i}`}>
+                <Icon name="left" size={18} />
+                Previous chapter
+              </a>
+            ) : (
+              <span />
+            )}
+            {i < gallery.chapters.length - 1 ? (
+              <a href={`#chapter-${i + 2}`}>
+                Next chapter
+                <Icon name="right" size={18} />
+              </a>
+            ) : (
+              <a href="#closing">
+                Leave with a question
+                <Icon name="right" size={18} />
+              </a>
+            )}
+          </nav>
+        </section>
+      );
+    })}
+    <section class="exhibition-closing" id="closing" data-closing>
+      <h2 tabindex="-1">One more look</h2>
+      <p>{gallery.closing}</p>
+      <nav aria-label="After this gallery">
+        <a href="#chapter-1">Return to the first chapter</a>
+        <a href={wingPath(collection.id)}>
+          Choose another gallery in {collection.title}
+          <Icon name="right" size={18} />
+        </a>
+        {next && (
+          <a href={exhibitionPath(next.id)}>
+            Continue to {next.title}
+            <Icon name="right" size={18} />
+          </a>
+        )}
+      </nav>
+    </section>
+  </article>
+  <script>
+    import { initExhibition } from '../../scripts/exhibition';
+    initExhibition();
+  </script>
+</Layout>

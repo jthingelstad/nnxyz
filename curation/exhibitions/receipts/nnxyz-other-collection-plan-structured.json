@@ -1,0 +1,35 @@
+{
+  "stage": "collection-plan-structured",
+  "key": "nnxyz-other",
+  "modelId": "us.anthropic.claude-sonnet-4-6",
+  "promptVersion": "owned-exhibitions-v1",
+  "timeCentral": "2026-10-14T07:15:57.337165-05:00",
+  "systemPromptSHA256": "ed58c53d819b0f5743b4ab5573af97a3fad604b405ada9c8d25778df6b2e0d92",
+  "instructionSHA256": "f59cb370f4e0d873e0ef4f6b66d3873d554f0196ac7b5e1cbd04df58cb40bc03",
+  "promptPath": "curation/exhibitions/prompts/nnxyz-other-collection-plan-structured.json",
+  "images": [],
+  "usage": {
+    "inputTokens": 11155,
+    "outputTokens": 440,
+    "totalTokens": 11595,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "requestId": "2b3e69dd-428f-4ebc-9379-c957aea64216",
+  "stopReason": "end_turn",
+  "responseText": "{\"collectionId\":\"nnxyz-other\",\"introduction\":\"These forty-five works span heads, bodies, grouped figures, lettered surfaces, and open scenes. Two galleries divide them by the question each asks of the viewer: the first follows how a face becomes a charged, unstable field of marks; the second asks what happens when figures move, multiply, carry objects, or step outside the close-up frame entirely.\",\"galleries\":[{\"id\":\"the-face-as-field\",\"title\":\"The Face as Field\",\"question\":\"How many different kinds of pressure can a single face hold before it stops being a face?\",\"thesis\":\"The gallery opens with faces whose outlines still hold, then moves through works where interior marks overwhelm structure, mismatched eyes and split surfaces multiply, and radiating or banded grounds press inward, closing on two images where the face dissolves almost entirely into accumulated line.\",\"slots\":[\"W010\",\"W007\",\"W003\",\"W017\",\"W005\",\"W026\",\"W037\",\"W034\",\"W014\",\"W013\",\"W029\",\"W011\",\"W023\",\"W021\",\"W001\",\"W012\",\"W042\",\"W045\",\"W019\",\"W043\",\"W006\",\"W015\",\"W028\",\"W024\"]},{\"id\":\"figures-in-motion-and-company\",\"title\":\"Figures in Motion and Company\",\"question\":\"What changes when a figure moves, carries something, joins others, or steps into a wider world?\",\"thesis\":\"Beginning with lone figures whose bodies and gestures dominate, the gallery moves through pairs and crowds, then works where lettering, objects, and setting share the surface equally with the figure, closing on two images where the human form nearly dissolves into landscape or light.\",\"slots\":[\"W016\",\"W030\",\"W033\",\"W040\",\"W041\",\"W004\",\"W027\",\"W039\",\"W022\",\"W032\",\"W020\",\"W002\",\"W044\",\"W018\",\"W009\",\"W008\",\"W025\",\"W036\",\"W031\",\"W038\",\"W035\"]}]}",
+  "metrics": {
+    "latencyMs": 8568
+  },
+  "outputConfig": {
+    "textFormat": {
+      "type": "json_schema",
+      "structure": {
+        "jsonSchema": {
+          "name": "exhibition_record",
+          "schema": "{\"type\": \"object\", \"properties\": {\"collectionId\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}, \"galleries\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"id\": {\"type\": \"string\"}, \"title\": {\"type\": \"string\"}, \"question\": {\"type\": \"string\"}, \"thesis\": {\"type\": \"string\"}, \"slots\": {\"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"id\", \"title\", \"question\", \"thesis\", \"slots\"], \"additionalProperties\": false}}}, \"required\": [\"collectionId\", \"introduction\", \"galleries\"], \"additionalProperties\": false}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "stage": "museum-wording-review",
+  "key": "nnotb-wording-batch-2",
+  "modelId": "us.anthropic.claude-sonnet-4-6",
+  "promptVersion": "owned-exhibitions-v1",
+  "timeCentral": "2026-10-14T07:52:35.047051-05:00",
+  "systemPromptSHA256": "ed58c53d819b0f5743b4ab5573af97a3fad604b405ada9c8d25778df6b2e0d92",
+  "instructionSHA256": "8013e88decdf4215e59e9476efe9abc8da753be9d1567aa0b0c64d7857c92e2f",
+  "promptPath": "curation/exhibitions/prompts/nnotb-wording-batch-2-museum-wording-review.json",
+  "images": [],
+  "usage": {
+    "inputTokens": 4549,
+    "outputTokens": 1098,
+    "totalTokens": 5647,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "requestId": "916bbd5b-98db-4c8c-a4fe-dcaeb9ee631b",
+  "stopReason": "end_turn",
+  "responseText": "{\"galleries\":[{\"id\":\"nnotb--figures-in-company\",\"title\":\"Figures in Company\",\"question\":\"What visible feature — gap, overlap, shared mark, or mirrored posture — tips separate figures into a group?\",\"introduction\":\"Twenty-three works line this gallery, each placing two or more figures in the same space. The question is not whether they belong together but how the visible evidence — gap, overlap, shared mark, mirrored posture — tips a collection of bodies toward something that reads as a group. Follow the progression and decide for yourself where that threshold falls.\",\"closing\":\"Proximity, shared marks, and overlapping outlines each make a different claim about what joins figures together. The threshold between separate and together remains a question the works leave open.\",\"chapters\":[{\"title\":\"Two in a Field\",\"introduction\":\"Six works open with pairs separated by open ground. The interval between figures carries as much visual weight as the figures themselves.\"},{\"title\":\"Marks Held in Common\",\"introduction\":\"Five works explore figures that share repeated visual marks — crossed eyes, spiked crowns, coiled lines — as if the marks themselves are what connects them.\"},{\"title\":\"Three and the Space Between Them\",\"introduction\":\"Five works introduce a third figure, testing whether the addition produces a group or a more complicated arrangement of pairs.\"},{\"title\":\"Bodies Pressed Together\",\"introduction\":\"Three works move from proximity to overlap, where figures share outlines or surfaces and individual boundaries become difficult to trace.\"},{\"title\":\"The Group as a Single Thing\",\"introduction\":\"Seven works close the exhibition with figures so close, so numerous, or so uniformly marked that the group itself becomes the subject rather than any individual within it.\"}]},{\"id\":\"nnotb--crowded-crossings\",\"title\":\"Finding Faces in a Crowd\",\"question\":\"Which visible features — outline, color, scale, or gap — let one face hold its place in a crowded drawing?\",\"introduction\":\"These twenty drawings share a single problem: too many marks, too many forms, too many possible faces. Some works announce their figures immediately; others place them beneath crossing lines and competing shapes. Moving through the gallery, notice what draws your eye to one face over another — outline, color, scale, or simply the gap between two marks.\",\"closing\":\"Whether a face holds its place depends on what the drawing withholds as much as what it shows. Each work draws that line differently.\",\"chapters\":[{\"title\":\"One Face, Clearly There\",\"introduction\":\"These works open with figures that remain readable — faces that give the eye a place to land before the surrounding marks begin to accumulate.\"},{\"title\":\"Faces Multiplying\",\"introduction\":\"Recognizable figures begin to repeat — mouths, eyes, and heads recur across the surface until no single face commands the space alone.\"},{\"title\":\"The Crowd Turns Loud\",\"introduction\":\"Color and mark-making intensify. Mouths open, lines multiply, and the drawings become harder to read as any single coherent scene.\"},{\"title\":\"Figures Crossing, Lines Taking Over\",\"introduction\":\"These works push toward maximum density. Figures overlap until one form's edge becomes another's body, and the final work tests whether a face was ever fully there.\"}]},{\"id\":\"nnotb--creatures-and-objects\",\"title\":\"What Makes a Shape a Character?\",\"question\":\"Which specific marks — an eye shape, a posture, a mouth line — are enough to make a shape read as a character?\",\"introduction\":\"Twenty-six works line this gallery, ranging from figures whose species reads at a glance to forms where a face is barely implied. Each stop asks you to notice the specific marks — an eye shape, a posture, a mouth line — that trigger recognition. The journey moves from clear silhouettes toward ambiguity and back, testing where character begins and ends.\",\"closing\":\"A spiral, a bared tooth, a crossed eye, a shadow — any one of these can be enough to tip a shape into a character. The threshold keeps shifting from work to work.\",\"chapters\":[{\"title\":\"Silhouette and Signal\",\"introduction\":\"Four figures whose outlines read immediately as animal or creature, each using a different minimum set of marks to confirm that reading.\"},{\"title\":\"Bodies and Posture\",\"introduction\":\"Figures whose stance — arched, hunched, braced, or crouching — carries as much descriptive weight as any mark on the face.\"},{\"title\":\"The Face as Mask\",\"introduction\":\"Works where the face is drawn as a set of applied marks — spirals, grids, crosses — laid onto a form rather than built into it.\"},{\"title\":\"Softness and Its Limits\",\"introduction\":\"Figures that approach rounded, toy-like familiarity while other visible marks — scribbled surfaces, sealed grins, goggle lenses — pull against that reading.\"},{\"title\":\"Density and the Edge of Recognition\",\"introduction\":\"Works where layered marks, competing color fields, or compressed scale push the figure toward the limit of readability, held together by the minimum necessary marks.\"}]}]}",
+  "metrics": {
+    "latencyMs": 15510
+  },
+  "outputConfig": {
+    "textFormat": {
+      "type": "json_schema",
+      "structure": {
+        "jsonSchema": {
+          "name": "exhibition_record",
+          "schema": "{\"type\": \"object\", \"properties\": {\"galleries\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"id\": {\"type\": \"string\"}, \"title\": {\"type\": \"string\"}, \"question\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}, \"closing\": {\"type\": \"string\"}, \"chapters\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"title\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}}, \"required\": [\"title\", \"introduction\"], \"additionalProperties\": false}}}, \"required\": [\"id\", \"title\", \"question\", \"introduction\", \"closing\", \"chapters\"], \"additionalProperties\": false}}}, \"required\": [\"galleries\"], \"additionalProperties\": false}"
+        }
+      }
+    }
+  }
+}

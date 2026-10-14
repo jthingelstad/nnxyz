@@ -1,0 +1,43 @@
+---
+import Icon from './Icon.astro';
+import { thumbnailPath, displayTitle } from '../lib/catalog';
+import {
+  representative,
+  exhibitionPath,
+  exhibitionStops,
+  type Exhibition,
+} from '../lib/exhibitions';
+interface Props {
+  gallery: Exhibition;
+  featured?: boolean;
+}
+const { gallery, featured = false } = Astro.props;
+const work = representative(gallery);
+---
+
+<a
+  class:list={['exhibition-entrance', { 'featured-gallery': featured }]}
+  href={exhibitionPath(gallery.id)}
+>
+  <img
+    src={thumbnailPath(work)}
+    alt={displayTitle(work)}
+    width={work.width}
+    height={work.height}
+    loading={featured ? 'eager' : 'lazy'}
+  />
+  <div>
+    <h3>{gallery.title}</h3>
+    <p class="gallery-question">{gallery.question}</p>
+    <p class="exhibition-meta">
+      {exhibitionStops(gallery).length} works · {gallery.chapters.length}{' '}
+      chapters
+    </p>
+    {featured && (
+      <span class="enter-gallery">
+        Enter gallery
+        <Icon name="right" size={20} />
+      </span>
+    )}
+  </div>
+</a>

@@ -1,0 +1,40 @@
+---
+import { byId, displayTitle, artworkPath, thumbnailPath } from '../lib/catalog';
+import type { ExhibitionStop } from '../lib/exhibitions';
+interface Props {
+  stop: ExhibitionStop;
+  eager?: boolean;
+}
+const { stop, eager = false } = Astro.props;
+const work = byId.get(stop.artworkId)!;
+---
+
+<figure class="exhibition-work" id={`work-${work.inkId}`} tabindex="-1">
+  <a
+    class="exhibition-art"
+    href={artworkPath(work.inkId)}
+    aria-label={`View and watch ${displayTitle(work)} by ${work.artistName}`}
+  >
+    <img
+      src={thumbnailPath(work)}
+      alt={`${displayTitle(work)} by ${work.artistName}`}
+      width={work.width}
+      height={work.height}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+    />
+  </a>
+  <figcaption>
+    <h3>
+      <a href={artworkPath(work.inkId)}>{displayTitle(work)}</a>
+    </h3>
+    <p class="exhibition-artist">{work.artistName}</p>
+    <a class="watch-work" href={artworkPath(work.inkId)}>
+      View &amp; watch drawing
+    </a>
+    <details class="exhibition-note">
+      <summary>AI curator note</summary>
+      <p>{stop.whyHere}</p>
+    </details>
+  </figcaption>
+</figure>

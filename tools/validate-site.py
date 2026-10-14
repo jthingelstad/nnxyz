@@ -33,7 +33,13 @@ class Page(HTMLParser):
 def main():
     gallery = json.loads((ROOT / "data/gallery.json").read_text())
     pages = sorted(DIST.rglob("*.html"))
-    assert len(pages) == len(gallery) + 14, "Missing generated routes"
+    exhibitions = json.loads((ROOT / "curation/exhibitions/map.json").read_text())
+    rooms = [g for c in exhibitions["collections"] for g in c["galleries"]]
+    # 3 utility pages, 6 collection entrances, and the 6 preserved short-walk routes.
+    assert len(pages) == len(gallery) + len(rooms) + 15, "Missing generated routes"
+    for room in rooms:
+        assert (DIST / "galleries" / room["id"] / "index.html").is_file()
+    assert (DIST / "collections/other-related/index.html").is_file()
     for path in pages:
         page = Page()
         page.feed(path.read_text())
