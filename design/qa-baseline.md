@@ -58,3 +58,53 @@ The maximum canvas geometry mean channel difference is below 0.003; archived PNG
 The implementation was faithfully verified against the accepted art-first design, with the source/content differences above documented. No material layout or interaction mismatch remains for this local baseline. Production SVG compression/hosting is pending: derived vectors total about 1.5 GiB, with a largest file around 19 MiB. Dense grid thumbnails use archived PNGs above 12,000 points; every full artwork view, enlargement, download and replay uses native SVG. This is the main performance tradeoff to revisit before publication.
 
 Production Tinylytics is implemented behind `PUBLIC_TINYLYTICS_ENABLED=true` plus a production hostname guard; live analytics/kudos behavior was not exercised. Optional conversational curator and PixiJS presentation effects are future work. Existing source artwork and curation records are intact; no model inference occurred during this implementation.
+
+## October 14 museum exhibition verification
+
+Local review used the IAB first: entrance playback/pause and theme, Faces wing,
+keyboard chapter selection, phone-sized gallery, canonical artwork access and
+return to its recorded place. The repository Playwright suite additionally
+verified the compiled static site. No fallback from an unavailable Browser was
+needed; the repository suite is the required automated regression lane.
+
+The suite covers all 28 saved gallery memberships and sequences, maximum 30
+works, one visible chapter, keyboard navigation, optional notes, exact returns
+and reloads, closing, and JavaScript-disabled reading. Both themes were checked
+at phone, tablet, desktop and landscape sizes. White layouts include 390×844,
+443×887, 768×1024, 1440×900 and 844×390. Automatic replay completion, the five-second
+finished hold, repetition and explicit pause are exercised at 4× reconstructed
+speed. Six sparse/dense SVG fidelity comparisons retain the earlier measured
+range, and completed replay restores the same native still. Preview analytics
+made zero Tinylytics requests. The intentionally aborted replay request retains
+the finished artwork and explains the failure.
+
+Reference and implementation screenshots were inspected with `view_image`.
+Native reference viewports: entrance 1436×1096, collection 1536×1024, exhibition
+1004×1568. Screenshot files are outside the repository under
+`/tmp/nnxyz-gallery-qa/`; `entrance-chat-review.png` and `gallery-chat-review.png`
+show the current entrance and first complete chapter for remote review.
+
+Fidelity ledger:
+
+| Point | Reference and rendered result | Resolution |
+| --- | --- | --- |
+| Layout | White two-column entrance and four open collection entrances | Matched; header and main share the same maximum width |
+| Typography | Serif entrance title; neutral sans-serif navigation and exhibition prose | Explicit design tokens applied; mobile heading word boundary corrected |
+| Palette | Pure white/black surrounds and charcoal/gray text | Matched; source paint remains unchanged with white under alpha |
+| Artwork | Whole canvases, solo followed by adjacent pair | Matched with original art; generated example images and titles replaced by exact source records |
+| Copy | Collection names, questions and five chapter names from approved map | Copy checked; generated wrong names/numbering corrected; welcome intentionally deferred |
+| Density | Introductory text must not displace the art | Long gallery opening moved behind an optional disclosure; chapter question stays visible |
+| Controls | Real native playback and quiet chapter links | Playback, seek, speed, reset and keyboard navigation verified |
+| Responsive | Spacious desktop pairs and stacked phone works | No horizontal page overflow in the measured sizes; chapter strip scrolls independently |
+
+The implementation was faithfully checked against the approved direction and
+recorded design references, including the intentional source/content corrections
+above. No material visual or interaction mismatch remains in this local review.
+The pending collector welcome and publication remain explicit next steps.
+
+Checks: Astro type checks, JS/Python tests, ESLint, Prettier, Ruff, static build,
+static-link/SVG validation, saved exhibition coverage and existing curation/source
+validators pass. The build contains 617 pages and 574 native SVGs. All 11,599
+imported files still match the permanent archive. The default Python environment
+skips the Pillow-only alpha test; all nine exhibition tests pass in the existing
+curation virtual environment, including that test.

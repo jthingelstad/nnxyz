@@ -1,0 +1,35 @@
+{
+  "stage": "museum-wording-review",
+  "key": "nnxyz-other",
+  "modelId": "us.anthropic.claude-sonnet-4-6",
+  "promptVersion": "owned-exhibitions-v1",
+  "timeCentral": "2026-10-14T07:37:16.484323-05:00",
+  "systemPromptSHA256": "ed58c53d819b0f5743b4ab5573af97a3fad604b405ada9c8d25778df6b2e0d92",
+  "instructionSHA256": "5619f5f2d45abd48d5f3a9fe29205cebb39fde6cd1065131df1ba8886e5c0d54",
+  "promptPath": "curation/exhibitions/prompts/nnxyz-other-museum-wording-review.json",
+  "images": [],
+  "usage": {
+    "inputTokens": 3437,
+    "outputTokens": 752,
+    "totalTokens": 4189,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "requestId": "03932dbe-1010-41f6-9c79-00820a3b6ee8",
+  "stopReason": "end_turn",
+  "responseText": "{\"galleries\":[{\"id\":\"nnxyz-other--the-face-as-field\",\"title\":\"The Face as Field\",\"question\":\"What keeps a face recognizable when color, line, and mark all compete across the same surface?\",\"introduction\":\"Twenty-four works line these walls, each built around a head. Some hold their outlines firmly; others let interior marks accumulate until the face becomes a dense, competing surface. Moving through the gallery, watch what happens to outline, feature, and ground as each work adds more — and what remains readable at the end.\",\"closing\":\"No single threshold appears. Each work draws the boundary between face and surface differently, and that boundary never settles in the same place twice.\",\"chapters\":[{\"title\":\"Outline Intact\",\"introduction\":\"Four heads where a readable outline and distinct features remain visible, even as layered marks begin to crowd the surface. Each face is present and identifiable, though already dense.\"},{\"title\":\"Split and Mismatched\",\"introduction\":\"Works where the face divides — left against right, one eye unlike the other — so that internal contrast becomes the primary subject rather than a secondary detail.\"},{\"title\":\"Active Backgrounds\",\"introduction\":\"Works where the background is not neutral: radiating slashes, dense hatching, or saturated flat color press against the face from outside as well as within.\"},{\"title\":\"Added Elements\",\"introduction\":\"Heads that carry hats, hands, lettering, or companion forms, where the face shares the picture plane with other elements that create a second or third focal point.\"},{\"title\":\"Multiplication and Dispersal\",\"introduction\":\"Works where the face multiplies into several forms or where accumulated line makes any single readable head difficult to locate. The boundary of the face becomes genuinely uncertain.\"}]},{\"id\":\"nnxyz-other--figures-in-motion-and-company\",\"title\":\"Body, Mark, World\",\"question\":\"At what point does what surrounds a figure take up more of the image than the figure itself?\",\"introduction\":\"These twenty-one works begin with a single striding body and end in open landscape. Along the way, figures absorb text, multiply into crowds, press against each other, and gradually give ground to marks, light, and water. Each chapter tests a different ratio between the human form and everything placed around it.\",\"closing\":\"The first figure strides alone; the last image holds no figure at all. Where exactly did the surrounding world become the larger subject?\",\"chapters\":[{\"title\":\"One Figure, Open Space\",\"introduction\":\"Three figures stand or stride in clear space. Each body is the primary subject, yet each is already wrapped, labeled, or accompanied by loose marks trailing nearby.\"},{\"title\":\"Body as Label\",\"introduction\":\"Four works where the figure wears or carries its own identifying text or object. The label and the body occupy the same surface on equal terms.\"},{\"title\":\"More Than One Figure\",\"introduction\":\"Works where two or more figures share the surface. Differences in size, proximity, and gesture produce relationships that range from announcement to collision.\"},{\"title\":\"Figure Under Competing Marks\",\"introduction\":\"Works where the face or body is built from layered marks, text, and color until the image is densely packed. The figure remains locatable but no longer dominates.\"},{\"title\":\"World Without Figure\",\"introduction\":\"Three works where the human form either merges with its surroundings or disappears entirely. The marks that described faces and bodies now describe water, creature, and open landscape.\"}]}]}",
+  "metrics": {
+    "latencyMs": 10967
+  },
+  "outputConfig": {
+    "textFormat": {
+      "type": "json_schema",
+      "structure": {
+        "jsonSchema": {
+          "name": "exhibition_record",
+          "schema": "{\"type\": \"object\", \"properties\": {\"galleries\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"id\": {\"type\": \"string\"}, \"title\": {\"type\": \"string\"}, \"question\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}, \"closing\": {\"type\": \"string\"}, \"chapters\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"title\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}}, \"required\": [\"title\", \"introduction\"], \"additionalProperties\": false}}}, \"required\": [\"id\", \"title\", \"question\", \"introduction\", \"closing\", \"chapters\"], \"additionalProperties\": false}}}, \"required\": [\"galleries\"], \"additionalProperties\": false}"
+        }
+      }
+    }
+  }
+}

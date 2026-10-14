@@ -1,0 +1,72 @@
+---
+import Icon from './Icon.astro';
+import { displayTitle, type Artwork } from '../lib/catalog';
+interface Props {
+  work: Artwork;
+  autoplay?: boolean;
+}
+const { work, autoplay = false } = Astro.props;
+const title = displayTitle(work);
+---
+
+<div
+  class="work-viewer"
+  data-viewer
+  data-src={`/art/${work.inkId}.svg`}
+  data-id={work.inkId}
+  data-autoplay={autoplay ? 'true' : undefined}
+>
+  <div class="art-stage" style={`aspect-ratio:${work.width}/${work.height}`}>
+    <img
+      class="finished-art"
+      src={`/art/${work.inkId}.svg`}
+      alt={`${title} by ${work.artistName}`}
+      width={work.width}
+      height={work.height}
+      fetchpriority="high"
+    />
+    <div class="drawing-art" aria-hidden="true"></div>
+  </div>
+  <div class="player" aria-label="Drawing playback">
+    <button
+      class="play-button"
+      data-play
+      aria-pressed="false"
+      data-tinylytics-event="drawing.play"
+      data-tinylytics-event-value={work.inkId}
+    >
+      <span data-play-icon>
+        <Icon name="play" size={30} />
+      </span>
+      <span data-play-label>Watch drawing</span>
+    </button>
+    <input
+      class="scrubber"
+      data-seek
+      type="range"
+      min="0"
+      max="1000"
+      step="1"
+      value="1000"
+      aria-label="Drawing progress"
+      aria-valuetext="Complete drawing"
+    />
+    <select data-speed aria-label="Reconstructed playback speed">
+      <option value="0.5">½×</option>
+      <option value="1" selected>
+        1×
+      </option>
+      <option value="2">2×</option>
+      <option value="4">4×</option>
+    </select>
+    <button class="reset-button" data-reset aria-label="Reset drawing">
+      <Icon name="reset" size={24} />
+    </button>
+  </div>
+  <p class="playback-note">Playback timing is reconstructed.</p>
+  <p data-player-status class="player-status" role="status"></p>
+</div>
+<script>
+  import { initViewer } from '../scripts/viewer';
+  initViewer();
+</script>

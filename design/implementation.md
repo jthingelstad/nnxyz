@@ -17,3 +17,38 @@ Implementation/QA evidence is recorded in `qa-baseline.md`. Source artwork and c
 Full artwork pages use SVG for every drawing. Dense works above 12,000 points use the archived PNG as browsing thumbnails; native vectors total about 1.5 GiB. This preserves accurate full artwork while preventing enormous gallery grid downloads. SVG HTTP compression is required when choosing production hosting.
 
 October 13 theme extension: collector requested a visitor-switchable dark mode. Shared header offers Dark/Light with moon/sun icons; default white, optional pure black with light neutral text. Save the explicit preference locally and apply it before first paint. Browser storage failure must not block switching. Theme changes do not recolor artwork, reset replay or alter downloads. White drawing canvases remain beneath translucent/unpainted strokes; fullscreen/dialog surrounds follow the selected theme.
+
+## October 14 exhibition entrance and chapter system
+
+The collector authorized the museum direction and the 28-gallery map, then
+asked to proceed with the collector welcome deferred. The local implementation
+now supersedes the grid entrance. Reference concepts and the implementation spec
+are in `concepts/2026-10-14-exhibitions/`; these new concept images are working
+references under that authorization, not separately recorded human approvals.
+
+The entrance reserves the left-hand welcome space and continuously replays
+Nifty Faces #72 on the right. Replay holds the finished still for five seconds,
+then repeats; an explicit pause, seek or reset cancels the automatic sequence.
+Offscreen or hidden pages stop playback. Reduced motion starts on the native
+still. Timing remains explicitly reconstructed.
+
+Four collection entrances lead to 28 bounded exhibitions. Collection wings
+feature a starting gallery, then open editorial lists. On the Block's remaining
+choices are grouped under figures/company, places/marks, and heads/features.
+Other nnxyz and Scrimshaw retain separate sections under Other & related.
+
+Exhibitions show one chapter at a time with a solo opening work and adjacent
+pairs. The saved sequence is preserved; connections and artwork readings are
+optional disclosures, and each exhibition ends with its saved closing question.
+Without JavaScript the complete sequence remains readable. Hash links support
+chapters and exact artwork returns. Canonical CID pages keep their existing
+native still, replay, enlargement, downloads and kudos. Previous/next links now
+follow the artwork's home exhibition, separately from archived title order.
+
+The collector welcome is represented only by a temporary neutral notice.
+Generated concept artwork, incorrect example titles and split chapter numbering
+are never used as source content. The complete gallery introduction is available
+behind a disclosure so artwork reaches the first viewport sooner. Two stale
+single-work chapter phrases have separately recorded presentation corrections
+in `curation/exhibitions/presentation.json`; the saved map, receipts and labels
+remain intact. No new curatorial model calls or publication occurred.

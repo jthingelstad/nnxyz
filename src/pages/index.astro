@@ -1,8 +1,61 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Gallery from '../components/Gallery.astro';
+import DrawingViewer from '../components/DrawingViewer.astro';
+import Icon from '../components/Icon.astro';
+import {
+  byId,
+  artworkPath,
+  displayTitle,
+  thumbnailPath,
+  collectionPath,
+} from '../lib/catalog';
+import { entrances, representative } from '../lib/exhibitions';
+const opening = byId.get('QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5')!;
 ---
 
-<Layout collection>
-  <Gallery />
+<Layout image={`/png/${opening.inkId}.png`}>
+  <div class="museum-page entrance-page">
+    <section class="museum-entrance" aria-label="Welcome to the collection">
+      <div class="welcome-space">
+        <h1>
+          A collection
+          <br /> of nnxyz
+        </h1>
+        <p class="welcome-pending">A welcome from the collector will follow.</p>
+      </div>
+      <div class="entrance-drawing">
+        <DrawingViewer work={opening} autoplay />
+        <p class="opening-caption">
+          <a href={artworkPath(opening.inkId)}>{displayTitle(opening)}</a> ·{' '}
+          {opening.artistName}
+        </p>
+      </div>
+    </section>
+    <nav
+      class="collection-entrances"
+      id="collections"
+      aria-label="Explore collections"
+    >
+      {entrances.map((entrance) => {
+        const work = representative(entrance.gallery);
+        return (
+          <a class="collection-entrance" href={collectionPath(entrance.id)}>
+            <img
+              src={thumbnailPath(work)}
+              alt={`${displayTitle(work)} by ${work.artistName}`}
+              width={work.width}
+              height={work.height}
+              loading="lazy"
+            />
+            <h2>{entrance.title}</h2>
+            <span>
+              Explore {entrance.title}
+              <Icon name="right" size={18} />
+            </span>
+          </a>
+        );
+      })}
+    </nav>
+    <footer class="museum-footer">Collection galleries curated with AI.</footer>
+  </div>
 </Layout>

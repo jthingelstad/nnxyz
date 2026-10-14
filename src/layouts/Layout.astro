@@ -5,13 +5,11 @@ interface Props {
   title?: string;
   image?: string;
   description?: string;
-  collection?: boolean;
 }
 const {
   title = 'nnxyz — a collection',
   image,
   description = 'An owned collection of nnxyz artwork, with scrimshaw. Explore the drawings, watch each brush stroke, and follow connections curated with AI.',
-  collection = false,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const analytics =
@@ -46,14 +44,14 @@ const analytics =
   </head>
   <body data-analytics-enabled={String(analytics)}>
     <a href="#main" class="skip-link">
-      Skip to artwork
+      Skip to content
     </a>
     <header class="site-header">
       <a class="wordmark" href="/" aria-label="nnxyz collection home">
         nnxyz
       </a>
       <nav aria-label="Main navigation">
-        {!collection && <a href="/">Collection</a>}
+        <a href="/#collections">Collections</a>
         <a href="/about/" class="about-link">
           About
         </a>

@@ -1,0 +1,35 @@
+{
+  "stage": "plan-repair",
+  "key": "rawblocks",
+  "modelId": "us.anthropic.claude-sonnet-4-6",
+  "promptVersion": "owned-exhibitions-v1",
+  "timeCentral": "2026-10-14T07:14:55.310651-05:00",
+  "systemPromptSHA256": "ed58c53d819b0f5743b4ab5573af97a3fad604b405ada9c8d25778df6b2e0d92",
+  "instructionSHA256": "21240736ee2674a846d9903656bff7827a0178827b9add21c436369e5e170d95",
+  "promptPath": "curation/exhibitions/prompts/rawblocks-plan-repair.json",
+  "images": [],
+  "usage": {
+    "inputTokens": 17007,
+    "outputTokens": 624,
+    "totalTokens": 17631,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  },
+  "requestId": "62fca825-be50-44fa-85ee-3f975f460410",
+  "stopReason": "end_turn",
+  "responseText": "{\"collectionId\":\"rawblocks\",\"introduction\":\"These sixty-six works move between close-up heads, full bodies, grouped figures, and open scenes. Some faces press against the frame; others dissolve into their grounds. Bodies gesture, crouch, or stand stiff against saturated fields. A handful of works step back from the figure entirely. Three galleries organize this range by the questions each group of images raises, rather than by subject category alone.\",\"galleries\":[{\"id\":\"pressure-and-containment\",\"title\":\"Pressure and Containment\",\"question\":\"What happens when a face or figure seems to be held in—or bursting out of—its own boundaries?\",\"thesis\":\"Opens with heads whose outlines barely hold their interior marks, moves through figures boxed by bands, grids, and frames, then closes on works where the boundary itself becomes the subject—a ring, a bolted visor, a skull chain—asking whether containment is armor or trap.\",\"slots\":[\"W001\",\"W002\",\"W004\",\"W006\",\"W010\",\"W012\",\"W016\",\"W017\",\"W029\",\"W030\",\"W034\",\"W041\",\"W044\",\"W047\",\"W048\",\"W051\",\"W054\",\"W055\",\"W058\",\"W061\"]},{\"id\":\"body-in-the-field\",\"title\":\"Body in the Field\",\"question\":\"How does a figure change when we can see its whole body, its setting, or other figures beside it?\",\"thesis\":\"Begins with solitary full-body figures whose stances carry mood, advances through stacked, grouped, and silhouetted forms, then arrives at scenes where setting, shadow, speech-bubble, or open landscape shifts attention from the face to what surrounds it.\",\"slots\":[\"W013\",\"W014\",\"W018\",\"W020\",\"W025\",\"W027\",\"W031\",\"W032\",\"W035\",\"W038\",\"W039\",\"W042\",\"W043\",\"W053\",\"W057\",\"W059\",\"W060\",\"W062\",\"W064\",\"W066\"]},{\"id\":\"face-as-frequency\",\"title\":\"Face as Frequency\",\"question\":\"When a face is built from competing marks, colors, and symbols, what—if anything—does it still communicate?\",\"thesis\":\"Starts with faces split by color temperature or divided halves, moves through heads whose eyes, teeth, and radiating lines each speak a different register, and ends with works where the face nearly dissolves into its ground—leaving expression as a residue rather than a statement.\",\"slots\":[\"W003\",\"W005\",\"W007\",\"W008\",\"W009\",\"W011\",\"W015\",\"W019\",\"W021\",\"W022\",\"W023\",\"W024\",\"W026\",\"W028\",\"W033\",\"W036\",\"W037\",\"W040\",\"W045\",\"W046\",\"W049\",\"W050\",\"W052\",\"W056\",\"W063\",\"W065\"]}]}",
+  "metrics": {
+    "latencyMs": 3945
+  },
+  "outputConfig": {
+    "textFormat": {
+      "type": "json_schema",
+      "structure": {
+        "jsonSchema": {
+          "name": "exhibition_record",
+          "schema": "{\"type\": \"object\", \"properties\": {\"collectionId\": {\"type\": \"string\"}, \"introduction\": {\"type\": \"string\"}, \"galleries\": {\"type\": \"array\", \"items\": {\"type\": \"object\", \"properties\": {\"id\": {\"type\": \"string\"}, \"title\": {\"type\": \"string\"}, \"question\": {\"type\": \"string\"}, \"thesis\": {\"type\": \"string\"}, \"slots\": {\"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"id\", \"title\", \"question\", \"thesis\", \"slots\"], \"additionalProperties\": false}}}, \"required\": [\"collectionId\", \"introduction\", \"galleries\"], \"additionalProperties\": false}"
+        }
+      }
+    }
+  }
+}

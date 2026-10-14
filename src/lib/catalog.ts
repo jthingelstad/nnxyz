@@ -26,15 +26,3 @@ export function displayTitle(work: Artwork): string {
 }
 export const collectionTitle = (id: string) =>
   collections.find((c) => c.id === id)?.name ?? 'Collection';
-const featured = [
-  'QmV8UybASXWtrDbQEKHFJa8oMSLehb8PqkLKrHjQtxPycJ',
-  'QmTbgoi65G6JjTGZAsUN8wFMHEodCZmmU2N4Ceeaa5iG3V',
-  'Qmf3XADpBhuqtGJoqk34VhNYwPjoqCTJm7yDA3tzghcnQv',
-  'QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5',
-  'QmTdPjPwTgTZWs6u25HvDsmoaAkTycNx8pY8fX3ChsqMbf',
-  'QmUWXuwbMXfcbTapYcQbAYrnTaFAPQY4zZ3Vinwoo6qKGy',
-];
-export const galleryOrder = [
-  ...featured.map((id) => byId.get(id)!),
-  ...artworks.filter((w) => !featured.includes(w.inkId)),
-];

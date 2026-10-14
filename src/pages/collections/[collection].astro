@@ -1,17 +1,70 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Gallery from '../../components/Gallery.astro';
-import { collections } from '../../lib/catalog';
+import Icon from '../../components/Icon.astro';
+import ExhibitionEntrance from '../../components/ExhibitionEntrance.astro';
+import {
+  exhibitionCollections,
+  exhibitionCollection,
+} from '../../lib/exhibitions';
 export function getStaticPaths() {
-  return collections.map((c) => ({
-    params: { collection: c.id },
-    props: { name: c.name },
-  }));
+  return [
+    ...exhibitionCollections.map((c) => ({ params: { collection: c.id } })),
+    { params: { collection: 'other-related' } },
+  ];
 }
-const { collection } = Astro.params;
-const { name } = Astro.props;
+const { collection: id } = Astro.params;
+const related = id === 'other-related';
+const groups = related
+  ? [exhibitionCollection('nnxyz-other'), exhibitionCollection('scrimshaw')]
+  : [exhibitionCollection(id!)];
+const title = related ? 'Other & related' : groups[0].title;
 ---
 
-<Layout title={`${name} — nnxyz`} collection>
-  <Gallery selected={collection} />
+<Layout title={`${title} — nnxyz`}>
+  <article class="museum-page collection-wing">
+    <a class="museum-back" href="/#collections">
+      <Icon name="left" size={18} />
+      Back to collections
+    </a>
+    <h1>{title}</h1>
+    {related && (
+      <p class="wing-introduction">
+        Other nnxyz drawings and a related collection by Scrimshaw. Each artist
+        has their own galleries here.
+      </p>
+    )}
+    {groups.map((group) => {
+      const [first, ...others] = group.galleries;
+      const sections =
+        group.id === 'nnotb'
+          ? [
+              { title: 'Figures and company', galleries: others.slice(0, 5) },
+              { title: 'Places and marks', galleries: others.slice(5, 9) },
+              { title: 'Heads and features', galleries: others.slice(9) },
+            ]
+          : [{ title: 'Other ways of looking', galleries: others }];
+      return (
+        <section class="wing-group" id={group.id} aria-label={group.title}>
+          {related && <h2>{group.title}</h2>}
+          <p class="wing-introduction">{group.introduction}</p>
+          <ExhibitionEntrance gallery={first} featured />
+          {sections
+            .filter((section) => section.galleries.length)
+            .map((section) => (
+              <section class="gallery-choices">
+                <h2>{section.title}</h2>
+                <div class="exhibition-choices">
+                  {section.galleries.map((gallery) => (
+                    <ExhibitionEntrance gallery={gallery} />
+                  ))}
+                </div>
+              </section>
+            ))}
+        </section>
+      );
+    })}
+    <footer class="museum-footer">
+      Galleries from the owned subset · Curated with AI.
+    </footer>
+  </article>
 </Layout>
