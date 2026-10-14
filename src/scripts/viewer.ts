@@ -278,23 +278,4 @@ export function initViewer() {
     dialog
       .querySelector('[data-close-enlargement]')!
       .addEventListener('click', () => dialog.close());
-  const details = document.querySelector<HTMLDetailsElement>('#provenance');
-  const detailsButton =
-    document.querySelector<HTMLButtonElement>('[data-details]');
-  if (!details || !detailsButton) return;
-  detailsButton.setAttribute('aria-controls', 'provenance');
-  detailsButton.setAttribute('aria-expanded', 'false');
-  detailsButton.addEventListener('click', () => {
-    details.open = !details.open;
-    if (details.open)
-      details.scrollIntoView({
-        block: 'nearest',
-        behavior: matchMedia('(prefers-reduced-motion: reduce)').matches
-          ? 'auto'
-          : 'smooth',
-      });
-  });
-  details.addEventListener('toggle', () =>
-    detailsButton.setAttribute('aria-expanded', String(details.open)),
-  );
 }

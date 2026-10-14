@@ -1,5 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { artworks } from '../lib/catalog';
+import { readProvenance, addressUrl, networkFor } from '../lib/provenance';
+const walletNetworks = new Map<string, Set<number>>();
+for (const work of artworks) {
+  for (const token of readProvenance(work.provenancePath)) {
+    const chains = walletNetworks.get(token.owner) ?? new Set<number>();
+    chains.add(token.chainId);
+    walletNetworks.set(token.owner, chains);
+  }
+}
 ---
 
 <Layout title="About the collection — nnxyz">
@@ -35,6 +45,41 @@ import Layout from '../layouts/Layout.astro';
       and downloads. Its earlier gallery records fifty numbered pieces, an
       origin titled #0000 and a proof-of-stake work titled #pos. The recovered
       records do not include brush paths or establish current token ownership.
+    </p>
+    <h2 id="collector-wallets">Tokens and the collector’s wallets</h2>
+    <p>
+      These are digital artworks associated with non-fungible tokens (NFTs). A
+      token is identified by its blockchain, contract address and token ID; one
+      Nifty Ink drawing can have several collected editions. The drawing CID
+      identifies its archived brush data, separately from those tokens.
+    </p>
+    <p>
+      Each artwork’s “Token provenance” link leads to its blockchain details.
+      Nifty Ink pages include the collector wallets recorded by the archive,
+      snapshot blocks and saved mint or transfer transactions. Abstract links to
+      Polygon token records from the earlier gallery.
+    </p>
+    <ul class="collector-wallets">
+      {[...walletNetworks].map(([wallet, chains]) => (
+        <li>
+          <span class="identifier">{wallet}</span>
+          <span class="wallet-networks">
+            {[...chains]
+              .sort((a, b) => a - b)
+              .map((chainId) => (
+                <a href={addressUrl(chainId, wallet)}>
+                  {networkFor(chainId).name} ↗
+                </a>
+              ))}
+          </span>
+        </li>
+      ))}
+    </ul>
+    <p class="small-note">
+      These addresses are the collector wallets in the saved Nifty Ink ownership
+      snapshots. They do not establish current ownership or the wallet holding
+      an Abstract token. Blockchain explorers provide public records; browsing
+      them does not require connecting a wallet.
     </p>
     <h2>Collection history</h2>
     <p>

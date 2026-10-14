@@ -39,12 +39,10 @@ export async function checkAbstract(browser, base, output) {
       .click();
     assert.ok(page.url().endsWith('/collections/abstract/'));
     assert.equal(await page.locator('.exhibition-entrance').count(), 3);
-    await page.getByText('Collection history', { exact: true }).click();
     assert.match(
       await page.locator('.collection-history').innerText(),
       /scrimshaw.eth/,
     );
-    await page.getByText('Collection history', { exact: true }).click();
     await page.screenshot({
       path: `${output}/abstract-wing-desktop.png`,
       fullPage: true,
@@ -107,7 +105,8 @@ export async function checkAbstract(browser, base, output) {
         .getByRole('button', { name: 'Enlarge', exact: true })
         .evaluate((element) => element === document.activeElement),
     );
-    await page.getByText('Details & provenance', { exact: true }).click();
+    assert.ok(await page.locator('#provenance').isVisible());
+    assert.equal(await page.locator('details, summary').count(), 0);
     assert.match(
       await page.locator('#provenance').innerText(),
       /Polygon · chain 137/,
@@ -201,10 +200,8 @@ export async function checkAbstract(browser, base, output) {
     await staticPage.goto(base + '/galleries/abstract--crossing-lines/');
     assert.equal(await staticPage.locator('[data-chapter]:visible').count(), 5);
     await staticPage.goto(base + artworkURL);
-    await staticPage.getByText('Details & provenance', { exact: true }).click();
-    assert.ok(
-      (await staticPage.locator('#provenance').getAttribute('open')) !== null,
-    );
+    assert.ok(await staticPage.locator('#provenance').isVisible());
+    assert.equal(await staticPage.locator('details, summary').count(), 0);
     assert.ok(
       await staticPage
         .getByRole('link', { name: 'Download original JPEG' })

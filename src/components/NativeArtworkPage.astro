@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Icon from './Icon.astro';
 import Kudos from './Kudos.astro';
 import DrawingViewer from './DrawingViewer.astro';
+import ProvenanceNote from './ProvenanceNote.astro';
+import TokenProvenance from './TokenProvenance.astro';
+import { readProvenance, addressUrl } from '../lib/provenance';
 import {
   galleryHome,
   exhibitionStops,
@@ -29,6 +32,10 @@ const previous = sequence[position - 1];
 const next = sequence[position + 1];
 const numbered = label.collectionContext.numberedOwnedNeighbors;
 const reading = label.curatorialReading.text;
+const tokens = readProvenance(work.provenancePath);
+const networks = [...new Set(tokens.map((token) => token.network.name))].join(
+  ' & ',
+);
 ---
 
 <Layout
@@ -49,6 +56,7 @@ const reading = label.curatorialReading.text;
             {work.artistName} · {work.strokes.toLocaleString('en-US')} recorded
             strokes
           </p>
+          <ProvenanceNote platform="Nifty Ink" networks={networks} />
         </div>
         <div class="work-actions">
           <Kudos path={artworkPath(work.inkId)} title={title} />
@@ -116,12 +124,13 @@ const reading = label.curatorialReading.text;
             Related works
           </a>
         )}
-        <button class="details-trigger" data-details>
-          Details &amp; provenance
-        </button>
       </nav>
-      <details class="provenance" id="provenance">
-        <summary>Details &amp; provenance</summary>
+      <section
+        class="provenance"
+        id="provenance"
+        aria-label="Artwork details and provenance"
+      >
+        <TokenProvenance tokens={tokens} />
         <p>
           Playback follows recorded paths and order. Timing is reconstructed;
           the archive does not record the artist’s speed or pauses.
@@ -142,7 +151,9 @@ const reading = label.curatorialReading.text;
           <dt>Drawing CID</dt>
           <dd class="identifier">{work.inkId}</dd>
           <dt>Creator address</dt>
-          <dd class="identifier">{work.artist}</dd>
+          <dd class="identifier">
+            <a href={addressUrl(100, work.artist)}>{work.artist}</a>
+          </dd>
         </dl>
         <p class="record-links">
           <a href={`/records/${work.inkId}.metadata.json`} download>
@@ -159,7 +170,7 @@ const reading = label.curatorialReading.text;
           </a>
         </p>
         <p>{label.interpretationNotice}</p>
-      </details>
+      </section>
       {label.connections.length > 0 && (
         <section
           id="related"

@@ -429,10 +429,7 @@ body:has(.gallery-grid) .wordmark {
   color: var(--muted);
   font-size: 14px;
 }
-.provenance > summary {
-  display: none;
-}
-.provenance[open] {
+.provenance {
   margin-top: 36px;
 }
 .provenance p {
@@ -450,6 +447,63 @@ dd {
 }
 .identifier {
   overflow-wrap: anywhere;
+}
+.token-note {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 6px;
+}
+.token-note a,
+.token-provenance a,
+.provenance dl a,
+.provenance-heading + p a,
+.collector-wallets a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.token-provenance h2,
+.provenance-heading {
+  font-size: 16px;
+  color: var(--body-text);
+  margin-bottom: 12px;
+}
+.token-record {
+  margin-block: 24px;
+}
+.token-record h3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.transfer-history p {
+  margin-top: 16px;
+}
+.transfer-history ol {
+  list-style: none;
+  padding: 0;
+}
+.transfer-history li {
+  margin-block: 18px;
+}
+.transfer-addresses,
+.transaction-hash {
+  display: block;
+  margin-top: 4px;
+}
+.transaction-hash {
+  font-size: 12px;
+}
+.collector-wallets {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+.collector-wallets li {
+  margin-block: 20px;
+}
+.wallet-networks {
+  display: flex;
+  gap: 20px;
+  margin-top: 4px;
 }
 .record-links {
   display: flex;
@@ -783,22 +837,6 @@ dd {
   .related-anchor::after {
     content: '›';
     font-size: 23px;
-  }
-  .details-trigger {
-    display: none;
-  }
-  .provenance > summary {
-    display: block;
-    font-size: 15px;
-    padding-block: 20px;
-    cursor: pointer;
-  }
-  .provenance > summary::after {
-    content: '⌄';
-    float: right;
-  }
-  .provenance[open] {
-    margin-top: 0;
   }
   dl {
     grid-template-columns: 1fr;
@@ -1150,12 +1188,6 @@ dd {
   color: var(--muted);
   text-align: left;
 }
-.exhibition-note summary {
-  cursor: pointer;
-  width: fit-content;
-  margin-inline: auto;
-  padding: 5px 0;
-}
 .exhibition-note p {
   line-height: 1.65;
   margin-top: 14px;
@@ -1250,11 +1282,6 @@ dd {
 .raster-provenance {
   margin-top: 24px;
 }
-.raster-provenance > summary {
-  display: list-item;
-  cursor: pointer;
-  width: fit-content;
-}
 @media (max-width: 760px) {
   .raster-viewer {
     width: 86vw;
@@ -1266,10 +1293,6 @@ dd {
   font-size: 15px;
   color: var(--body-text);
   line-height: 1.65;
-}
-.collection-history summary {
-  cursor: pointer;
-  width: fit-content;
 }
 .collection-history p {
   margin-top: 12px;
@@ -1436,11 +1459,6 @@ dd {
   margin-top: 14px;
   color: var(--muted);
   font-size: 14px;
-}
-.gallery-introduction summary {
-  cursor: pointer;
-  width: fit-content;
-  padding-block: 4px;
 }
 .gallery-introduction .exhibition-introduction {
   font-size: 16px;

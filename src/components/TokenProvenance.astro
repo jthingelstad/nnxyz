@@ -1,0 +1,118 @@
+---
+import {
+  addressUrl,
+  blockUrl,
+  networkFor,
+  recordedDate,
+  shortIdentifier,
+  type readProvenance,
+} from '../lib/provenance';
+interface Props {
+  tokens: ReturnType<typeof readProvenance>;
+}
+const { tokens } = Astro.props;
+---
+
+<section class="token-provenance" aria-label="Blockchain provenance">
+  <h2>Tokens &amp; provenance</h2>
+  <p>
+    This drawing is associated with{' '}
+    {tokens.length === 1
+      ? 'one collected Nifty Ink token'
+      : `${tokens.length} collected Nifty Ink tokens`}
+    . Wallet ownership below is recorded at the linked archive snapshot block.
+    The explorer links show blockchain records beyond that snapshot.
+  </p>
+  {tokens.map((token) => (
+    <section
+      class="token-record"
+      aria-label={`${token.network.name} token ${token.tokenId}`}
+    >
+      <h3>
+        <a href={token.url}>
+          {token.network.name} · Token {token.tokenId} ↗
+        </a>
+      </h3>
+      <dl>
+        <dt>Network</dt>
+        <dd>
+          {token.network.name} · chain {token.chainId}
+        </dd>
+        {token.edition && (
+          <>
+            <dt>Recorded edition</dt>
+            <dd>{token.edition}</dd>
+          </>
+        )}
+        <dt>Token contract</dt>
+        <dd class="identifier">
+          <a href={addressUrl(token.chainId, token.contract)}>
+            {token.contract}
+          </a>
+        </dd>
+        <dt>Collector wallet at snapshot</dt>
+        <dd class="identifier">
+          <a href={addressUrl(token.chainId, token.owner)}>{token.owner}</a>
+        </dd>
+        <dt>Snapshot block</dt>
+        <dd>
+          <a href={blockUrl(token.chainId, token.snapshotBlock.number)}>
+            {token.snapshotBlock.number.toLocaleString('en-US')} ↗
+          </a>
+        </dd>
+      </dl>
+      {token.transfers.length > 0 ? (
+        <div class="transfer-history">
+          <p>
+            Recorded transfers for this token number, in time order. Each
+            transaction links to its recorded network; transfers may predate a
+            network upgrade. Dates are UTC.
+          </p>
+          <ol>
+            {token.transfers.map((transfer) => (
+              <li>
+                <a href={transfer.url}>
+                  <time datetime={recordedDate(transfer.createdAt)}>
+                    {recordedDate(transfer.createdAt)}
+                  </time>{' '}
+                  · {networkFor(transfer.chainId).name} ·{' '}
+                  {transfer.from.id ===
+                  '0x0000000000000000000000000000000000000000'
+                    ? 'Mint'
+                    : 'Transfer'}{' '}
+                  ↗
+                </a>
+                <span class="transfer-addresses">
+                  <a
+                    href={addressUrl(transfer.chainId, transfer.from.id)}
+                    title={transfer.from.id}
+                  >
+                    {shortIdentifier(transfer.from.id)}
+                  </a>{' '}
+                  →{' '}
+                  <a
+                    href={addressUrl(transfer.chainId, transfer.to.id)}
+                    title={transfer.to.id}
+                  >
+                    {shortIdentifier(transfer.to.id)}
+                  </a>
+                </span>
+                <span class="identifier transaction-hash">
+                  {transfer.transactionHash}
+                </span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      ) : (
+        <p>
+          No transfer history was saved for this token. Follow the token link to
+          explore its blockchain history.
+        </p>
+      )}
+    </section>
+  ))}
+  <p>
+    <a href="/about/#collector-wallets">About the collector’s wallets →</a>
+  </p>
+</section>

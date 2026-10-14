@@ -9,12 +9,11 @@ const record = history.collections.find(
 ---
 
 {record && (
-  <details class="collection-history">
-    <summary>Collection history</summary>
+  <div class="collection-history">
     <p>{record.text}</p>
     <p class="small-note">
       Collector’s earlier account ·{' '}
       <a href={record.sourceUrl}>Read the earlier gallery</a>
     </p>
-  </details>
+  </div>
 )}
