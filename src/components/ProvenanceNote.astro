@@ -1,0 +1,14 @@
+---
+interface Props {
+  platform: string;
+  networks: string;
+}
+const { platform, networks } = Astro.props;
+---
+
+<p class="token-note">
+  {platform} · {networks} ·{' '}
+  <a href="#provenance" data-provenance-link>
+    Token provenance
+  </a>
+</p>

@@ -33,10 +33,9 @@ const next =
     <header class="exhibition-opening">
       <h1>{gallery.title}</h1>
       <p class="exhibition-question">{gallery.question}</p>
-      <details class="gallery-introduction">
-        <summary>About this gallery</summary>
+      <div class="gallery-introduction">
         <p class="exhibition-introduction">{gallery.introduction}</p>
-      </details>
+      </div>
       <p class="exhibition-meta">
         {exhibitionStops(gallery).length} works · {gallery.chapters.length}{' '}
         chapters · AI curator ·{' '}
@@ -80,10 +79,9 @@ const next =
             <ExhibitionWork stop={first} eager={i === 0} />
           </div>
           {first.transitionFromPrevious && (
-            <details class="chapter-connection exhibition-note">
-              <summary>Connection from the previous chapter</summary>
+            <div class="chapter-connection exhibition-note">
               <p>{first.transitionFromPrevious}</p>
-            </details>
+            </div>
           )}
           {pairs.map((pair) => (
             <div
@@ -95,19 +93,14 @@ const next =
               {pair.map((stop) => (
                 <ExhibitionWork stop={stop} />
               ))}
-              <details class="pair-connection exhibition-note">
-                <summary>
-                  {pair.length === 2
-                    ? 'Look between these works'
-                    : 'Connection from the previous work'}
-                </summary>
+              <div class="pair-connection exhibition-note">
                 {pair.map(
                   (stop) =>
                     stop.transitionFromPrevious && (
                       <p>{stop.transitionFromPrevious}</p>
                     ),
                 )}
-              </details>
+              </div>
             </div>
           ))}
           <nav

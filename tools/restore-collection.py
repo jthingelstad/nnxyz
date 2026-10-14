@@ -16,8 +16,10 @@ def digest(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
-def restore(bundle, root, config_path="infra/dataset.json"):
+def restore(bundle, root, config_path="infra/dataset.json", destination_root="collection"):
     root = root.resolve()
+    if destination_root not in {"collection", "public"}:
+        raise ValueError("Unsupported restore destination")
     config = json.loads((root / config_path).read_text())
     if digest(bundle) != config["sha256"]:
         raise ValueError("Dataset bundle checksum mismatch")
@@ -47,7 +49,7 @@ def restore(bundle, root, config_path="infra/dataset.json"):
         # Validate every destination before writing; never overwrite changed artwork.
         for entry in entries:
             dest = root / entry["projectPath"]
-            if not dest.resolve().is_relative_to(root / "collection") or dest.is_symlink():
+            if not dest.resolve().is_relative_to(root / destination_root) or dest.is_symlink():
                 raise ValueError("Unsafe source destination")
             if dest.exists() and digest(dest) != entry["sha256"]:
                 raise ValueError("Existing source differs: " + entry["projectPath"])
@@ -64,5 +66,8 @@ if __name__ == "__main__":
     parser.add_argument("bundle", type=Path)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--config", default="infra/dataset.json")
+    parser.add_argument(
+        "--destination-root", choices=["collection", "public"], default="collection"
+    )
     args = parser.parse_args()
-    restore(args.bundle, args.root, args.config)
+    restore(args.bundle, args.root, args.config, args.destination_root)

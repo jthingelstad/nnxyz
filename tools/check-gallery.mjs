@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import { checkAbstract } from './check-abstract.mjs';
+import { checkProvenance } from './check-provenance.mjs';
 
 const base = process.env.GALLERY_TEST_URL || 'http://127.0.0.1:4321';
 const output = '/tmp/nnxyz-gallery-qa';
@@ -81,6 +82,7 @@ async function seek(fraction) {
   );
 }
 try {
+  results.push(await checkProvenance(browser, base, output));
   results.push(await checkAbstract(browser, base, output));
   await go('/');
   assert.equal(await page.locator('h1').textContent(), 'A collection of nnxyz');
@@ -196,13 +198,9 @@ try {
       .getAttribute('data-current-chapter'),
     '2',
   );
-  await page.locator('#chapter-2 .exhibition-note summary').first().click();
-  assert.equal(
-    await page
-      .locator('#chapter-2 .exhibition-note')
-      .first()
-      .getAttribute('open'),
-    '',
+  assert.equal(await page.locator('details, summary').count(), 0);
+  assert.ok(
+    await page.locator('#chapter-2 .exhibition-note p').first().isVisible(),
   );
   const chosen = firstGallery.chapters[1].stops[0].artworkId;
   await page.locator('#chapter-2 .exhibition-art').first().click();
@@ -259,7 +257,7 @@ try {
   );
   results.push({
     check:
-      'Keyboard chapter navigation, optional interpretation, canonical artwork, precise return, reload and closing',
+      'Keyboard chapter navigation, visible interpretation, canonical artwork, precise return, reload and closing',
     passed: true,
   });
   // Every gallery preserves membership, chapter bounds and the saved sequence.
@@ -406,10 +404,8 @@ try {
     '0',
   );
   await page.locator('[data-seek]').press('End');
-  await page
-    .getByRole('button', { name: 'Details & provenance', exact: true })
-    .click();
-  assert.equal(await page.locator('#provenance').getAttribute('open'), '');
+  assert.ok(await page.locator('#provenance').isVisible());
+  assert.equal(await page.locator('details, summary').count(), 0);
   assert.ok(
     (await page.locator('#provenance').innerText()).includes(
       'Timing is reconstructed',

@@ -52,3 +52,21 @@ behind a disclosure so artwork reaches the first viewport sooner. Two stale
 single-work chapter phrases have separately recorded presentation corrections
 in `curation/exhibitions/presentation.json`; the saved map, receipts and labels
 remain intact. No new curatorial model calls or publication occurred.
+
+## October 14 visible text and blockchain provenance
+
+The collector requested visible text instead of disclosure triangles. This
+supersedes the optional-note and collapsed-introduction choices above. Gallery
+introductions, artwork readings, comparisons, collection history and artwork
+details now appear as ordinary text, without their former expand labels.
+Chapter navigation still presents one chapter at a time when JavaScript is
+available; without it, the complete exhibition remains readable.
+
+Each artwork caption includes a quiet token provenance anchor. Nifty Ink pages
+read exact token identities, snapshot wallets/blocks and transaction hashes
+from the immutable archive at build time. Tokens remain distinct by chain,
+contract and token ID, and transactions link to their recorded network,
+including Gnosis transfers before the archived Ethereum upgrade. About links
+both archived collector wallets. Abstract links its recovered Polygon identity
+without inferring a wallet or current ownership. No live wallet connection or
+blockchain lookup is needed to browse the gallery.
