@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Icon from './Icon.astro';
 import Kudos from './Kudos.astro';
 import ProvenanceNote from './ProvenanceNote.astro';
-import { addressUrl, tokenUrl } from '../lib/provenance';
+import { tokenUrl } from '../lib/provenance';
 import {
   abstractImage,
   abstractOriginal,
@@ -61,7 +61,11 @@ const next = abstractById.get(sequence[position + 1]?.artworkId);
         <div>
           <h1>{title}</h1>
           <p class="byline">nnxyz · Abstract</p>
-          <ProvenanceNote platform="Digital artwork" networks="Polygon" />
+          <ProvenanceNote
+            tokens={[
+              { url: tokenUrl(work.chainId, work.contract, work.tokenId) },
+            ]}
+          />
         </div>
         <div class="work-actions">
           <Kudos path={artworkPath(work.id)} title={title} />
@@ -114,14 +118,6 @@ const next = abstractById.get(sequence[position + 1]?.artworkId);
         id="provenance"
         aria-label="Artwork details and provenance"
       >
-        <h2 class="provenance-heading">Token &amp; provenance</h2>
-        <p>
-          This work’s Polygon token identity is preserved in the collector’s
-          earlier gallery.
-          <a href={tokenUrl(work.chainId, work.contract, work.tokenId)}>
-            View token &amp; transactions on PolygonScan ↗
-          </a>
-        </p>
         <p>
           This image is reproduced from the published JPEG preserved in the
           collector’s earlier gallery. No brush paths have been recovered for
@@ -137,22 +133,6 @@ const next = abstractById.get(sequence[position + 1]?.artworkId);
             March 30–April 4, 2022, according to the collector’s earlier
             account.
           </dd>
-          <dt>Network</dt>
-          <dd>Polygon · chain {work.chainId}</dd>
-          <dt>Contract</dt>
-          <dd class="identifier">
-            <a href={addressUrl(work.chainId, work.contract)}>
-              {work.contract}
-            </a>
-          </dd>
-          <dt>Token ID</dt>
-          <dd class="identifier">
-            <a href={tokenUrl(work.chainId, work.contract, work.tokenId)}>
-              {work.tokenId}
-            </a>
-          </dd>
-          <dt>Original JPEG SHA-256</dt>
-          <dd class="identifier">{work.imageSHA256}</dd>
           {work.giftRecipientAsRecorded && (
             <>
               <dt>Gift recipient in the earlier account</dt>
@@ -172,7 +152,6 @@ const next = abstractById.get(sequence[position + 1]?.artworkId);
           <a href={abstractOriginal(work)} download={`${title}.jpg`}>
             Original JPEG
           </a>
-          <a href={work.tokenUrl}>Token listing</a>
           <a href={work.sourcePageUrl}>Collector’s earlier gallery</a>
         </p>
         <p>

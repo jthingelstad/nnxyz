@@ -1,14 +1,14 @@
 ---
 interface Props {
-  platform: string;
-  networks: string;
+  tokens: { url: string }[];
 }
-const { platform, networks } = Astro.props;
+const { tokens } = Astro.props;
 ---
 
 <p class="token-note">
-  {platform} · {networks} ·{' '}
-  <a href="#provenance" data-provenance-link>
-    Token provenance
-  </a>
+  {tokens.slice(0, 1).map((token) => (
+    <a href={token.url} data-nft-link>
+      View NFT ↗
+    </a>
+  ))}
 </p>
