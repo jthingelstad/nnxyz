@@ -103,6 +103,35 @@ assert.equal(
 );
 assert.equal(JSON.parse(abstractFiles).length, abstractDataset.restoredFiles);
 assert.equal(abstractDataset.restoredFiles, 57);
+const derived = await read('derived-dataset');
+assert.equal(derived.bucket, dataset.bucket);
+assert.match(derived.sha256, /^[a-f0-9]{64}$/);
+assert.equal(derived.key, `datasets/derived/${derived.sha256}/assets.tar.gz`);
+const derivativeFiles = await fs.readFile(derived.manifestPath);
+assert.equal(
+  createHash('sha256').update(derivativeFiles).digest('hex'),
+  derived.manifestSHA256,
+);
+const entries = JSON.parse(derivativeFiles);
+assert.equal(entries.length, derived.restoredFiles);
+assert.equal(
+  new Set(entries.map((entry) => entry.projectPath)).size,
+  entries.length,
+);
+for (const entry of entries) {
+  assert.match(
+    entry.projectPath,
+    /^public\/(art\/[^/]+\.svg|abstract\/images\/[^/]+\.webp|asset-manifest\.json|abstract\/asset-manifest\.json)$/,
+  );
+  assert.match(entry.sha256, /^[a-f0-9]{64}$/);
+}
+for (const [name, hash] of Object.entries(derived.inputHashes))
+  assert.equal(
+    createHash('sha256')
+      .update(await fs.readFile(name))
+      .digest('hex'),
+    hash,
+  );
 const recovered = JSON.parse(await fs.readFile('data/abstract.json', 'utf8'));
 assert.deepEqual(
   JSON.parse(abstractFiles).map((entry) => [entry.projectPath, entry.sha256]),

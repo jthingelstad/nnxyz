@@ -13,12 +13,12 @@ spec.loader.exec_module(module)
 
 
 class RestoreTests(unittest.TestCase):
-    def fixture(self, folder, member=None):
+    def fixture(self, folder, member=None, destination="collection"):
         root = Path(folder)
         (root / "infra").mkdir()
         source = b"original source bytes"
         sha = hashlib.sha256(source).hexdigest()
-        entries = [{"projectPath": f"collection/{name}", "sha256": sha} for name in ["a", "b"]]
+        entries = [{"projectPath": f"{destination}/{name}", "sha256": sha} for name in ["a", "b"]]
         manifest = root / "infra/dataset-files.json"
         manifest.write_text(json.dumps(entries))
         bundle = root / "bundle.tar.gz"
@@ -68,6 +68,20 @@ class RestoreTests(unittest.TestCase):
                 stream.write(b"corruption")
             with self.assertRaisesRegex(ValueError, "Dataset bundle checksum mismatch"):
                 module.restore(bundle, root)
+            self.assertFalse((root / "collection").exists())
+
+    def test_derived_bundle_restores_only_under_public(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root, bundle = self.fixture(folder, destination="public")
+            module.restore(bundle, root, destination_root="public")
+            self.assertEqual((root / "public/a").read_bytes(), b"original source bytes")
+            self.assertFalse((root / "collection").exists())
+
+    def test_derived_bundle_cannot_write_archival_source(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root, bundle = self.fixture(folder)
+            with self.assertRaisesRegex(ValueError, "Unsafe source destination"):
+                module.restore(bundle, root, destination_root="public")
             self.assertFalse((root / "collection").exists())
 
 

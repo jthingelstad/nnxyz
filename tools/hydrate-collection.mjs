@@ -5,9 +5,14 @@ import { pipeline } from 'node:stream/promises';
 import { execFileSync } from 'node:child_process';
 await fs.mkdir('.build', { recursive: true });
 const client = new S3Client({ region: 'us-east-1' });
-for (const [config, bundle] of [
-  ['infra/dataset.json', '.build/collection.tar.gz'],
-  ['infra/abstract-dataset.json', '.build/abstract-collection.tar.gz'],
+for (const [config, bundle, destination] of [
+  ['infra/dataset.json', '.build/collection.tar.gz', 'collection'],
+  [
+    'infra/abstract-dataset.json',
+    '.build/abstract-collection.tar.gz',
+    'collection',
+  ],
+  ['infra/derived-dataset.json', '.build/derived-assets.tar.gz', 'public'],
 ]) {
   const dataset = JSON.parse(await fs.readFile(config, 'utf8'));
   const { Body } = await client.send(
@@ -20,8 +25,17 @@ for (const [config, bundle] of [
   }
   execFileSync(
     'python3',
-    ['tools/restore-collection.py', bundle, '--config', config],
+    [
+      'tools/restore-collection.py',
+      bundle,
+      '--config',
+      config,
+      '--destination-root',
+      destination,
+    ],
     { stdio: 'inherit' },
   );
 }
-console.log('Source collection ready; original archive unchanged.');
+console.log(
+  'Source collection and pinned derivatives ready; original archive unchanged.',
+);

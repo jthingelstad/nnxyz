@@ -14,7 +14,7 @@ exporter = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(exporter)
 
 
-def build():
+def build(require_prebuilt=False):
     for name in ["art", "png", "records"]:
         (PUBLIC / name).mkdir(parents=True, exist_ok=True)
     old_path = PUBLIC / "asset-manifest.json"
@@ -32,7 +32,12 @@ def build():
             output.exists()
             and prev.get("sourceSHA256") == source_hash
             and old.get("exporterSHA256") == version
+            and prev.get("svgSHA256") == hashlib.sha256(output.read_bytes()).hexdigest()
         ):
+            if require_prebuilt:
+                raise ValueError(
+                    f"Missing or changed prebuilt SVG: {cid}; regenerate the derived snapshot"
+                )
             output.write_text(exporter.svg(json.loads(raw), item["name"]))
         for key, dest in [
             ("imagePath", PUBLIC / "png" / f"{cid}.png"),
@@ -66,4 +71,8 @@ def build():
 
 
 if __name__ == "__main__":
-    build()
+    import argparse
+
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--require-prebuilt", action="store_true")
+    build(parser.parse_args().require_prebuilt)

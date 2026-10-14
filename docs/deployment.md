@@ -18,6 +18,20 @@ Both buckets block public S3 access, use server-side encryption and versioning, 
 
 Each bundle stores identical files once; restoration makes independent regular-file copies, checks every hash and refuses to overwrite a changed local file. This snapshot backs up the imported nnxyz/scrimshaw website inputs; it does not replace or upload the entire permanent Nifty Ink archive.
 
+Generated artwork is persisted separately in a third checksum-pinned bundle:
+`infra/derived-dataset.json` / `infra/derived-dataset-files.json`. Its immutable
+S3 key is `datasets/derived/<sha256>/assets.tar.gz`, covered by the existing
+read-only build role. It contains the 574 native SVGs, 156 Abstract WebPs and
+their two manifests. Archived PNG/JPEG originals and metadata remain in the
+source snapshots and are copied directly during preparation.
+
+`npm run hydrate` restores all three bundles. `npm run build` verifies the
+derived bundle's input fingerprints and every output hash before preparing
+the site. It never reconstructs SVG geometry or encodes WebPs. Missing,
+corrupt or incompatible derivatives fail the build. The source, SVG, image
+fidelity and browser checks still run; no IAM or deployment scope is widened.
+The immutable originals are never altered or replaced by the derived bundle.
+
 ## Fresh checkout
 
 ```sh
@@ -83,6 +97,18 @@ Tinylytics is enabled in production builds and activates only on the canonical g
 To roll back website code, revert the relevant Git commit on main. The same validation/deployment pipeline will publish it; the live `revision.json` identifies the running commit. S3 versioning is an additional recovery mechanism, not the normal release workflow.
 
 If the owned collection changes, import independent copies from the permanent archive, verify them, then run `python3 tools/pack-collection.py /tmp/nnxyz-source-blobs.tar.gz` to generate a new snapshot and manifests. Upload the new immutable key using AWS MCP's presigned upload tool and verify its checksum before committing the new dataset pointer. Never overwrite an existing snapshot key. A routine website change needs no dataset upload or model invocation.
+
+## Deliberately updating generated artwork
+
+After a source or renderer change, explicitly run `npm run assets` and validate
+the resulting SVGs and image fidelity. Then run
+`python3 tools/pack-derived-assets.py .build/derived-assets.tar.gz` to write a
+new content-addressed bundle and its tracked pointer/manifests. Upload with the
+AWS MCP presigned upload tool, SHA-256 checksum and `If-None-Match: *`; verify
+S3's checksum and content length before committing. Never overwrite an older
+key. Restore the bundle into a fresh directory and verify its bytes before
+shipping the pointer. Routine layout, text and provenance changes reuse the
+existing generated artwork.
 
 ## Updating recovered Abstract inputs
 
