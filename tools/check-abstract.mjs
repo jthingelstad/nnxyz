@@ -109,10 +109,6 @@ export async function checkAbstract(browser, base, output) {
     assert.equal(await page.locator('details, summary').count(), 0);
     assert.match(
       await page.locator('#provenance').innerText(),
-      /Polygon · chain 137/,
-    );
-    assert.match(
-      await page.locator('#provenance').innerText(),
       /does not establish current/,
     );
     await page.getByRole('button', { name: /^Give kudos/ }).click();

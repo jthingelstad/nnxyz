@@ -70,3 +70,15 @@ including Gnosis transfers before the archived Ethereum upgrade. About links
 both archived collector wallets. Abstract links its recovered Polygon identity
 without inferring a wallet or current ownership. No live wallet connection or
 blockchain lookup is needed to browse the gallery.
+
+
+## October 14 restrained NFT links
+
+The collector revised the blockchain presentation to one quiet “View NFT”
+link beneath each artwork title. This supersedes the expanded on-page token,
+wallet and transaction sections above. Nifty Ink uses one collected token
+identity from the archived record, preserving the archive's stable order when
+there are several editions. Abstract uses its recovered Polygon identity.
+Full records remain downloadable; the website does not claim a fresh ownership
+lookup. No transaction timelines, wallet lists, contract blocks or token IDs
+are printed on the artwork pages.
