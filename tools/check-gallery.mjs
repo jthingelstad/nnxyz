@@ -2,6 +2,7 @@ import { chromium } from 'playwright';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
+import { checkAbstract } from './check-abstract.mjs';
 
 const base = process.env.GALLERY_TEST_URL || 'http://127.0.0.1:4321';
 const output = '/tmp/nnxyz-gallery-qa';
@@ -80,9 +81,10 @@ async function seek(fraction) {
   );
 }
 try {
+  results.push(await checkAbstract(browser, base, output));
   await go('/');
   assert.equal(await page.locator('h1').textContent(), 'A collection of nnxyz');
-  assert.equal(await page.locator('.collection-entrance').count(), 4);
+  assert.equal(await page.locator('.collection-entrance').count(), 5);
   assert.equal(
     await page.getByRole('link', { name: /^All works$/i }).count(),
     0,
@@ -127,7 +129,7 @@ try {
   });
   results.push({
     check:
-      'Four collection entrances, no global grid, real automatic replay and manual pause',
+      'Five collection entrances, no global grid, real automatic replay and manual pause',
     passed: true,
   });
   assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
@@ -152,6 +154,7 @@ try {
     ['nnxyz-other', 2],
     ['scrimshaw', 1],
     ['other-related', 3],
+    ['abstract', 3],
   ]) {
     await go(`/collections/${id}/`);
     assert.equal(await page.locator('.exhibition-entrance').count(), count);
@@ -163,7 +166,7 @@ try {
     fullPage: true,
   });
   results.push({
-    check: 'Four wings and separate related artists lead to all 28 galleries',
+    check: 'Five wings and separate related artists lead to all 31 galleries',
     passed: true,
   });
   await page.locator('.featured-gallery').click();
@@ -489,7 +492,7 @@ try {
       exact: true,
     })
     .click();
-  assert.equal(await page.locator('.collection-entrance').count(), 4);
+  assert.equal(await page.locator('.collection-entrance').count(), 5);
   await page.locator('.collection-entrance').first().click();
   await page.locator('.featured-gallery').click();
   await page.locator('#chapter-1 .exhibition-art').first().click();

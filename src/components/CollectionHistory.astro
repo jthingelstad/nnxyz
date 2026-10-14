@@ -1,0 +1,20 @@
+---
+import history from '../../curation/collection-history.json';
+interface Props {
+  collectionId: string;
+}
+const record = history.collections.find(
+  (item) => item.collectionId === Astro.props.collectionId,
+);
+---
+
+{record && (
+  <details class="collection-history">
+    <summary>Collection history</summary>
+    <p>{record.text}</p>
+    <p class="small-note">
+      Collector’s earlier account ·{' '}
+      <a href={record.sourceUrl}>Read the earlier gallery</a>
+    </p>
+  </details>
+)}

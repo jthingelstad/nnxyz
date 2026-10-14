@@ -9,6 +9,8 @@ const mime = {
   '.css': 'text/css',
   '.svg': 'image/svg+xml',
   '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.webp': 'image/webp',
   '.json': 'application/json',
 };
 const server = createServer(async (req, res) => {

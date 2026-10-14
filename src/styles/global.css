@@ -255,7 +255,8 @@ body:has(.gallery-grid) .wordmark {
   color: var(--muted);
   font-size: 15px;
 }
-.work-viewer {
+.work-viewer,
+.raster-viewer {
   width: min(61vw, 900px);
   margin-inline: auto;
 }
@@ -940,7 +941,7 @@ dd {
 }
 .collection-entrances {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 42px;
   scroll-margin-top: 24px;
 }
@@ -1221,6 +1222,59 @@ dd {
   margin-top: 16px;
 }
 .gallery-position a {
+  text-decoration: underline;
+}
+.raster-stage {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: #fff;
+  cursor: zoom-in;
+}
+.raster-stage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.raster-stage:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 5px;
+}
+.work-actions [data-raster-enlarge] {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.raster-provenance {
+  margin-top: 24px;
+}
+.raster-provenance > summary {
+  display: list-item;
+  cursor: pointer;
+  width: fit-content;
+}
+@media (max-width: 760px) {
+  .raster-viewer {
+    width: 86vw;
+  }
+}
+.collection-history {
+  margin-top: 18px;
+  max-width: 710px;
+  font-size: 15px;
+  color: var(--body-text);
+  line-height: 1.65;
+}
+.collection-history summary {
+  cursor: pointer;
+  width: fit-content;
+}
+.collection-history p {
+  margin-top: 12px;
+}
+.collection-history a {
   text-decoration: underline;
 }
 @media (max-width: 1000px) {

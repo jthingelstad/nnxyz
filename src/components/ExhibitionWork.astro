@@ -1,19 +1,21 @@
 ---
-import { byId, displayTitle, artworkPath, thumbnailPath } from '../lib/catalog';
-import type { ExhibitionStop } from '../lib/exhibitions';
+import { displayTitle, artworkPath, thumbnailPath } from '../lib/catalog';
+import { exhibitionArtwork, type ExhibitionStop } from '../lib/exhibitions';
 interface Props {
   stop: ExhibitionStop;
   eager?: boolean;
 }
 const { stop, eager = false } = Astro.props;
-const work = byId.get(stop.artworkId)!;
+const work = exhibitionArtwork(stop.artworkId);
+const id = stop.artworkId;
+const drawing = 'inkId' in work;
 ---
 
-<figure class="exhibition-work" id={`work-${work.inkId}`} tabindex="-1">
+<figure class="exhibition-work" id={`work-${id}`} tabindex="-1">
   <a
     class="exhibition-art"
-    href={artworkPath(work.inkId)}
-    aria-label={`View and watch ${displayTitle(work)} by ${work.artistName}`}
+    href={artworkPath(id)}
+    aria-label={`${drawing ? 'View and watch' : 'View'} ${displayTitle(work)} by ${work.artistName}`}
   >
     <img
       src={thumbnailPath(work)}
@@ -26,11 +28,11 @@ const work = byId.get(stop.artworkId)!;
   </a>
   <figcaption>
     <h3>
-      <a href={artworkPath(work.inkId)}>{displayTitle(work)}</a>
+      <a href={artworkPath(id)}>{displayTitle(work)}</a>
     </h3>
     <p class="exhibition-artist">{work.artistName}</p>
-    <a class="watch-work" href={artworkPath(work.inkId)}>
-      View &amp; watch drawing
+    <a class="watch-work" href={artworkPath(id)}>
+      {drawing ? 'View & watch drawing' : 'View artwork'}
     </a>
     <details class="exhibition-note">
       <summary>AI curator note</summary>
