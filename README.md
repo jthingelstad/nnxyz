@@ -8,9 +8,9 @@ Tinylytics configuration and per-artwork kudos guidance are saved in [design/tin
 
 Source artwork lives in a private, versioned S3 snapshot; `collection/` is excluded from Git. The pipeline restores exact independent copies and verifies them before building. See [storage, CI and deployment](docs/deployment.md) for paths, validation, DNS and rollback.
 
-The project contains **548 nnxyz artworks and 26 scrimshaw artworks**, representing **633 owned editions**. No other artists' artwork files are included.
+The gallery contains **600 nnxyz artworks and 26 scrimshaw artworks**: 574 Nifty Ink drawings representing 633 verified owned editions at the saved snapshots, plus 52 Abstract works recovered from the collector’s earlier public gallery. Abstract uses Polygon contract/token identities and original published JPEGs; its earlier ownership account is kept separate from chain-verified snapshot evidence. No other artists’ artwork files are included.
 
-Offline curation is complete: all **574 artworks** have verified technical dossiers, AI-reviewed museum readings and collection context. The catalog also includes inspected-image connections and five curatorial routes. See [curation/README.md](curation/README.md) for the saved records, review evidence and verification commands. The gallery uses these saved records offline. A conversational curator and PixiJS flourishes can follow later.
+Offline Nifty Ink curation is complete: all **574 drawings** have verified technical dossiers, AI-reviewed museum readings and collection context. The catalog also includes inspected-image connections and five curatorial routes. See [curation/README.md](curation/README.md) for the saved records, review evidence and verification commands. The gallery uses these saved records offline. A conversational curator and PixiJS flourishes can follow later.
 
 ## Run the gallery
 
@@ -21,7 +21,7 @@ npm run assets
 npm run dev
 ```
 
-Open http://127.0.0.1:4321/. The entrance pairs a space reserved for the collector’s welcome with a native drawing replay, followed by four collection entrances. Visitors choose galleries within Faces, On the Block, Rawblocks, or Other & related; there is no global artwork grid. The 28 AI-curated galleries contain 8–30 works, presented in chapters with large individual images, pairs, optional readings and a closing question. A quiet Dark/Light header switch changes the gallery surround between white and black and remembers the visitor’s choice. Every detail page offers native SVG, continuous stroke playback, speed/seek controls, enlargement, AI reading, owned collection position, related works and downloadable metadata/provenance. The collector’s new welcome is deferred. Existing artwork URLs remain stable; previous/next and return links follow each drawing’s exhibition home. The earlier five short-walk routes remain accessible at their existing URLs, but are not collection entrances.
+Open http://127.0.0.1:4321/. The entrance pairs a space reserved for the collector’s welcome with a native drawing replay, followed by five collection entrances. Visitors choose galleries within Faces, New Nifty on the Block (NNOTB), Rawblocks, Abstract, or Other & related; there is no global artwork grid. The 31 AI-curated galleries contain 8–30 works, presented in chapters with large individual images, pairs, optional readings and a closing question. A quiet Dark/Light header switch changes the gallery surround between white and black and remembers the visitor’s choice. Nifty Ink detail pages offer native SVG, continuous stroke playback, speed/seek controls, enlargement, AI reading, owned collection position, related works and downloadable metadata/provenance. Abstract pages offer responsive raster images, enlargement, AI readings, source records and byte-exact original JPEG downloads; they expose no replay or SVG controls. The collector’s new welcome is deferred. Existing artwork URLs remain stable; previous/next and return links follow each drawing’s exhibition home. The earlier five short-walk routes remain accessible at their existing URLs, but are not collection entrances.
 
 ```sh
 npm run check
@@ -29,7 +29,7 @@ npm test
 npm run build
 ```
 
-The build creates 617 static pages in `dist/`, including all 574 artworks. Artwork paths use immutable drawing CIDs. No model invocation or cloud service is needed.
+The build creates 673 static pages in `dist/`, including 626 artworks. Nifty Ink artwork paths use immutable drawing CIDs; Abstract paths use Polygon contract/token identities. No model invocation or cloud service is needed.
 
 For browser checks, with a local server running:
 
@@ -38,9 +38,9 @@ npx playwright install chromium
 npm run test:browser
 ```
 
-Alternatively set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to an existing Chromium executable. Tests cover playback, downloads, five collection filters, navigation, mobile/tablet/desktop/landscape layouts, reduced motion, SVG fidelity and the replay error path. Temporary screenshots/results go to `/tmp/nnxyz-gallery-qa`.
+Alternatively set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to an existing Chromium executable. Tests cover playback, downloads, five collection entrances, chapter navigation, mobile/tablet/desktop/landscape layouts, reduced motion, SVG fidelity and the replay error path. Temporary screenshots/results go to `/tmp/nnxyz-gallery-qa`.
 
-The full-precision SVG collection is about 1.5 GiB uncompressed; the largest drawing is about 19 MiB. Dense browsing thumbnails use the original PNG, while every full artwork view and replay uses SVG. Production hosting must provide compressed SVG delivery. The permanent archive and imported artwork bytes remain unchanged.
+The full-precision SVG collection is about 1.5 GiB uncompressed; the largest drawing is about 19 MiB. Dense browsing thumbnails use the original PNG, while every full Nifty Ink artwork view and replay uses SVG. Abstract uses responsive raster images and original JPEG downloads. Production hosting must provide compressed SVG delivery. The permanent archive and imported artwork bytes remain unchanged.
 
 Copy `.env.example` to `.env` and enable `PUBLIC_TINYLYTICS_ENABLED=true` only for production. The hostname guard additionally limits the embed to `nnxyz.thingelstad.xyz`. Preview kudos explain that giving kudos becomes available on the published gallery.
 
@@ -48,16 +48,17 @@ Design decisions and review evidence: [implementation](design/implementation.md)
 
 ## Collections
 
-The three primary nnxyz series are inferred from the archived artwork titles:
+Three Nifty Ink title families and the separate recovered Abstract collection retain their identities:
 
-| Collection        | Distinct artworks |
-| ----------------- | ----------------: |
-| Nifty Faces       |               134 |
-| NNOTB             |               303 |
-| Rawblocks         |                66 |
-| Other nnxyz works |                45 |
-| Scrimshaw         |                26 |
-| Total             |               574 |
+| Collection                     | Distinct artworks |
+| ------------------------------ | ----------------: |
+| Nifty Faces                    |               134 |
+| New Nifty on the Block (NNOTB) |               303 |
+| Rawblocks                      |                66 |
+| Other nnxyz works              |                45 |
+| Scrimshaw                      |                26 |
+| Abstract                       |                52 |
+| Total                          |               626 |
 
 Faces includes the Christmas special. Other nnxyz works retain the numbered `nnxyz` series, commemorative pieces and other titles. All artwork from both archived nnxyz creator addresses is included. Multiple owned editions and artworks appearing in both wallets keep their ownership records and share one gallery entry.
 
@@ -87,7 +88,7 @@ python3 tools/verify-collection.py --compare-archive
 
 The first command works without the archive. The second also compares each copied file with its original and confirms the files do not share archive inodes. Verification checks catalog membership, all owned editions, provenance paths, retained IPFS objects, preview sources and SVG references.
 
-Python 3.11 or newer is sufficient; no packages or network access are required.
+Python 3.11 or newer is sufficient for offline source verification; no packages or network access are required. `npm run validate:collection` also verifies all recovered Abstract originals, token identities and inspected editorial records.
 
 ## Source import and SVG export
 
@@ -105,3 +106,11 @@ python3 tools/export-svg.py "collection/artists/<artist>/artworks/<CID>/strokes.
 ```
 
 The stroke data preserves geometry, colors, brush radii and drawing order, with full coordinate precision. It can support self-hosted playback and SVG rendering without depending on nifty.ink.
+
+## Recovered Abstract collection
+
+`data/abstract.json` pins 52 original JPEGs and five earlier-gallery HTML source snapshots by SHA-256. Originals are independent files under ignored `collection/recovered-abstract/`; the permanent Nifty Ink archive is unchanged. `infra/abstract-dataset.json` and `infra/abstract-dataset-files.json` pin a separate immutable private S3 bundle, restored by `npm run hydrate`. The existing Nifty Ink snapshot remains unchanged. Public-source recovery is also available through `npm run hydrate:abstract`; it refuses changed or overwritten sources.
+
+`curation/abstract/` contains 52 directly inspected AI readings, three exhibitions of 18/17/17 works, image-review fingerprints and recovery evidence. This session used direct assistant image inspection, without a separate review-model call or individual human approval. Existing Nifty Ink editorial records and timestamps remain unchanged. `curation/collection-history.json` attributes historical context and the NNOTB expansion to the earlier collector gallery; its four additional NNOTB CIDs remain a reconciliation queue, not imported works.
+
+`npm run assets` derives 640/1200/2000-pixel WebPs outside `collection/`, preserves the original JPEG bytes for downloads and records output hashes. No stroke data, making-time measurements or native SVG are inferred for Abstract.

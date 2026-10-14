@@ -32,11 +32,14 @@ class Page(HTMLParser):
 
 def main():
     gallery = json.loads((ROOT / "data/gallery.json").read_text())
+    abstract = json.loads((ROOT / "data/abstract.json").read_text())["artworks"]
     pages = sorted(DIST.rglob("*.html"))
     exhibitions = json.loads((ROOT / "curation/exhibitions/map.json").read_text())
     rooms = [g for c in exhibitions["collections"] for g in c["galleries"]]
-    # 3 utility pages, 6 collection entrances, and the 6 preserved short-walk routes.
-    assert len(pages) == len(gallery) + len(rooms) + 15, "Missing generated routes"
+    recovered_exhibitions = json.loads((ROOT / "curation/abstract/exhibitions.json").read_text())
+    rooms += [g for c in recovered_exhibitions["collections"] for g in c["galleries"]]
+    # 3 utility pages, 7 collection entrances, and the 6 preserved short-walk routes.
+    assert len(pages) == len(gallery) + len(abstract) + len(rooms) + 16, "Missing generated routes"
     for room in rooms:
         assert (DIST / "galleries" / room["id"] / "index.html").is_file()
     assert (DIST / "collections/other-related/index.html").is_file()
@@ -75,7 +78,31 @@ def main():
         ]:
             assert (DIST / name / (cid + suffix)).is_file(), cid
         assert (DIST / "artworks" / cid / "index.html").is_file(), cid
-    print(json.dumps({"pages": len(pages), "nativeSVGs": len(gallery), "brokenLinks": 0}, indent=2))
+    recovered_manifest = json.loads((DIST / "abstract/asset-manifest.json").read_text())
+    recovered_by_id = {entry["id"]: entry for entry in recovered_manifest["artworks"]}
+    assert len(recovered_by_id) == len(abstract)
+    for work in abstract:
+        page = DIST / "artworks" / work["id"] / "index.html"
+        assert page.is_file()
+        assert "data-viewer" not in page.read_text(), "Replay exposed for a raster work"
+        entry = recovered_by_id[work["id"]]
+        original = DIST / entry["originalPath"].lstrip("/")
+        assert hashlib.sha256(original.read_bytes()).hexdigest() == work["imageSHA256"]
+        for image in entry["images"]:
+            target = DIST / image["path"].lstrip("/")
+            assert hashlib.sha256(target.read_bytes()).hexdigest() == image["sha256"]
+        assert (DIST / "abstract/records" / (work["id"] + ".json")).is_file()
+    print(
+        json.dumps(
+            {
+                "pages": len(pages),
+                "nativeSVGs": len(gallery),
+                "recoveredJPEGs": len(abstract),
+                "brokenLinks": 0,
+            },
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":

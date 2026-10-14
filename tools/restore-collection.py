@@ -16,9 +16,9 @@ def digest(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
-def restore(bundle, root):
+def restore(bundle, root, config_path="infra/dataset.json"):
     root = root.resolve()
-    config = json.loads((root / "infra/dataset.json").read_text())
+    config = json.loads((root / config_path).read_text())
     if digest(bundle) != config["sha256"]:
         raise ValueError("Dataset bundle checksum mismatch")
     manifest = root / config["manifestPath"]
@@ -63,5 +63,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("bundle", type=Path)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument("--config", default="infra/dataset.json")
     args = parser.parse_args()
-    restore(args.bundle, args.root)
+    restore(args.bundle, args.root, args.config)

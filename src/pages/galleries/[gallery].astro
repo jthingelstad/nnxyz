@@ -39,7 +39,10 @@ const next =
       </details>
       <p class="exhibition-meta">
         {exhibitionStops(gallery).length} works · {gallery.chapters.length}{' '}
-        chapters · AI curator · Owned subset
+        chapters · AI curator ·{' '}
+        {collection.id === 'abstract'
+          ? 'Collector’s earlier collection'
+          : 'Owned subset'}
       </p>
     </header>
     <nav class="chapter-nav" aria-label="Gallery chapters">

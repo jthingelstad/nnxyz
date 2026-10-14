@@ -14,7 +14,9 @@ The public repository is https://github.com/jthingelstad/nnxyz. Application sour
 | Selected metadata/provenance downloads           | `s3://nnxyz-storage-web-999153317627/records/<drawing-CID>.*.json`                     |
 | HTML and hashed browser bundles                  | Same web bucket, normal route paths and `_astro/`                                      |
 
-Both buckets block public S3 access, use server-side encryption and versioning, and are retained if their stacks are removed. CloudFront alone reads the web origin. The archival bucket has no CDN connection. `infra/dataset.json` pins the source bundle by SHA-256, and `infra/dataset-files.json` maps every original path to its exact bytes. The bundle stores identical files once; restoration makes independent regular-file copies, checks every hash and refuses to overwrite a changed local file. This snapshot backs up the imported nnxyz/scrimshaw website inputs; it does not replace or upload the entire permanent Nifty Ink archive.
+Both buckets block public S3 access, use server-side encryption and versioning, and are retained if their stacks are removed. CloudFront alone reads the web origin. The archival bucket has no CDN connection. `infra/dataset.json` pins the source bundle by SHA-256, and `infra/dataset-files.json` maps every original path to its exact bytes. A separate `infra/abstract-dataset.json` / `infra/abstract-dataset-files.json` pair pins the recovered Abstract JPEGs and saved earlier-gallery HTML sources in the same private bucket under `datasets/abstract/<sha256>/collection.tar.gz`. Hydration restores both bundles without requiring the public source pages to remain unchanged. The Nifty Ink bundle is unchanged.
+
+Each bundle stores identical files once; restoration makes independent regular-file copies, checks every hash and refuses to overwrite a changed local file. This snapshot backs up the imported nnxyz/scrimshaw website inputs; it does not replace or upload the entire permanent Nifty Ink archive.
 
 ## Fresh checkout
 
@@ -36,12 +38,12 @@ Every push to main, internal pull request and manual workflow run uses `.github/
 
 1. ESLint, Prettier, Astro/TypeScript, Node tests, Ruff lint/format, dependency audit, CloudFormation schema and infrastructure policy validation.
 2. CodeQL scans maintained JavaScript/TypeScript and Python. Immutable curator review reports, preview references and archived renderer source are excluded because they are retained evidence and are not served by the website; application source and maintained tools remain scanned. High or critical open findings on the workflow ref block publication.
-3. Read the pinned S3 snapshot, restore and validate all imported source files, validate 574 curatorial records, generate native SVGs, build pages, validate every local output link and SVG, and run Chromium interaction/fidelity/responsive tests.
+3. Read the pinned S3 snapshot, restore and validate all imported source files, validate 574 Nifty Ink curatorial records and 52 recovered Abstract originals/readings, generate native SVGs and responsive WebPs, build 673 pages, validate every local output link and SVG, and run Chromium interaction/fidelity/responsive tests.
 4. Main only: pass the exact verified build as a short-lived GitHub artifact to the deployment job. Check that the workflow revision remains current main, publish media/scripts before HTML, publish the revision marker, invalidate CloudFront and compare delivered HTML/revision bytes with the build.
 
 Fork pull requests run the credential-free Quality and CodeQL jobs. The private dataset/browser job is intentionally skipped for forks; an internal review branch can run full validation before merging. Infrastructure changes are deployed separately through reviewed CloudFormation changes, not by the routine publication role.
 
-SVG, HTML, JSON, CSS and JavaScript are losslessly gzip-compressed before upload, preserving decoded bytes and MIME types. This also compresses the drawings larger than CloudFront's automatic compression limit. PNGs remain original bytes. Only hashed browser bundles receive permanent immutable cache headers; other media can be regenerated without retaining a stale year-long cache. Unchanged objects are skipped by source hash and HTTP metadata. Old assets and S3 versions remain available for rollback; publication never bulk-deletes artwork.
+SVG, HTML, JSON, CSS and JavaScript are losslessly gzip-compressed before upload, preserving decoded bytes and MIME types. This also compresses the drawings larger than CloudFront's automatic compression limit. PNGs and original JPEG downloads remain original bytes; derived WebPs use their declared `image/webp` MIME type. Only hashed browser bundles receive permanent immutable cache headers; other media can be regenerated without retaining a stale year-long cache. Unchanged objects are skipped by source hash and HTTP metadata. Old assets and S3 versions remain available for rollback; publication never bulk-deletes artwork.
 
 Local verification:
 
@@ -81,3 +83,7 @@ Tinylytics is enabled in production builds and activates only on the canonical g
 To roll back website code, revert the relevant Git commit on main. The same validation/deployment pipeline will publish it; the live `revision.json` identifies the running commit. S3 versioning is an additional recovery mechanism, not the normal release workflow.
 
 If the owned collection changes, import independent copies from the permanent archive, verify them, then run `python3 tools/pack-collection.py /tmp/nnxyz-source-blobs.tar.gz` to generate a new snapshot and manifests. Upload the new immutable key using AWS MCP's presigned upload tool and verify its checksum before committing the new dataset pointer. Never overwrite an existing snapshot key. A routine website change needs no dataset upload or model invocation.
+
+## Updating recovered Abstract inputs
+
+`python3 tools/pack-abstract.py .build/abstract-collection.tar.gz` packages only the hash-pinned recovered originals and earlier-gallery sources. Upload its new immutable key with the AWS MCP presigned upload tool using a full SHA-256 checksum and an `If-None-Match: *` precondition; verify S3’s content length and checksum before accepting the new pointer. It requires no infrastructure or publication-role change. `python3 tools/restore-collection.py .build/abstract-collection.tar.gz --config infra/abstract-dataset.json` verifies restoration locally. Routine builds read these saved sources offline.

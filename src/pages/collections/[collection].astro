@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import ExhibitionEntrance from '../../components/ExhibitionEntrance.astro';
+import CollectionHistory from '../../components/CollectionHistory.astro';
 import {
   exhibitionCollections,
   exhibitionCollection,
@@ -47,6 +48,7 @@ const title = related ? 'Other & related' : groups[0].title;
         <section class="wing-group" id={group.id} aria-label={group.title}>
           {related && <h2>{group.title}</h2>}
           <p class="wing-introduction">{group.introduction}</p>
+          <CollectionHistory collectionId={group.id} />
           <ExhibitionEntrance gallery={first} featured />
           {sections
             .filter((section) => section.galleries.length)
@@ -64,7 +66,10 @@ const title = related ? 'Other & related' : groups[0].title;
       );
     })}
     <footer class="museum-footer">
-      Galleries from the owned subset · Curated with AI.
+      {id === 'abstract'
+        ? 'Galleries from the collector’s earlier collection'
+        : 'Galleries from the owned subset'}{' '}
+      · Curated with AI.
     </footer>
   </article>
 </Layout>

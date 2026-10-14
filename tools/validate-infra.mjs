@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 const read = async (name) =>
   JSON.parse(await fs.readFile(`infra/${name}.json`, 'utf8'));
 const storage = await read('storage'),
@@ -87,6 +88,26 @@ assert.match(
   new RegExp(`^datasets/${dataset.sha256}/collection\\.tar\\.gz$`),
 );
 assert.equal(dataset.restoredFiles, 11592);
+const abstractDataset = await read('abstract-dataset');
+assert.equal(abstractDataset.bucket, dataset.bucket);
+assert.match(
+  abstractDataset.key,
+  new RegExp(
+    `^datasets/abstract/${abstractDataset.sha256}/collection\\.tar\\.gz$`,
+  ),
+);
+const abstractFiles = await fs.readFile(abstractDataset.manifestPath);
+assert.equal(
+  createHash('sha256').update(abstractFiles).digest('hex'),
+  abstractDataset.manifestSHA256,
+);
+assert.equal(JSON.parse(abstractFiles).length, abstractDataset.restoredFiles);
+assert.equal(abstractDataset.restoredFiles, 57);
+const recovered = JSON.parse(await fs.readFile('data/abstract.json', 'utf8'));
+assert.deepEqual(
+  JSON.parse(abstractFiles).map((entry) => [entry.projectPath, entry.sha256]),
+  recovered.files.map((entry) => [entry.path, entry.sha256]),
+);
 console.log(
   'Private retained/versioned storage, HTTPS/OAC, bounded OIDC roles and immutable source snapshot validated.',
 );

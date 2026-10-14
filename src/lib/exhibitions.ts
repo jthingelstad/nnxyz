@@ -1,5 +1,7 @@
 import map from '../../curation/exhibitions/map.json';
 import presentation from '../../curation/exhibitions/presentation.json';
+import abstractMap from '../../curation/abstract/exhibitions.json';
+import { abstractById } from './abstract';
 import { byId, collectionPath } from './catalog';
 
 export interface ExhibitionStop {
@@ -28,7 +30,21 @@ export interface ExhibitionCollection {
   introduction: string;
   galleries: Exhibition[];
 }
-export const exhibitionCollections = map.collections as ExhibitionCollection[];
+export const exhibitionCollections = [
+  ...map.collections,
+  ...abstractMap.collections,
+].map((collection) =>
+  collection.id === 'nnotb'
+    ? {
+        ...collection,
+        title: 'New Nifty on the Block',
+        introduction: collection.introduction.replace(
+          /^On the Block/,
+          'New Nifty on the Block (NNOTB)',
+        ),
+      }
+    : collection,
+) as ExhibitionCollection[];
 export const exhibitions = exhibitionCollections.flatMap((c) => c.galleries);
 export const exhibitionPath = (id: string) => `/galleries/${id}/`;
 export const exhibitionStops = (gallery: Exhibition) =>
@@ -44,8 +60,13 @@ export const wingPath = (id: string) =>
   ['nnxyz-other', 'scrimshaw'].includes(id)
     ? `${collectionPath('other-related')}#${id}`
     : collectionPath(id);
+export const exhibitionArtwork = (id: string) => {
+  const work = byId.get(id) ?? abstractById.get(id);
+  if (!work) throw new Error(`Unknown exhibition artwork: ${id}`);
+  return work;
+};
 export const representative = (gallery: Exhibition) =>
-  byId.get(exhibitionStops(gallery)[0].artworkId)!;
+  exhibitionArtwork(exhibitionStops(gallery)[0].artworkId);
 export function chapterIntroduction(gallery: Exhibition, index: number) {
   const override = presentation.chapterCorrections.find(
     (change) =>
@@ -61,13 +82,18 @@ export const entrances = [
   },
   {
     id: 'nnotb',
-    title: 'On the Block',
+    title: 'New Nifty on the Block',
     gallery: exhibitionCollection('nnotb').galleries[0],
   },
   {
     id: 'rawblocks',
     title: 'Rawblocks',
     gallery: exhibitionCollection('rawblocks').galleries[0],
+  },
+  {
+    id: 'abstract',
+    title: 'Abstract',
+    gallery: exhibitionCollection('abstract').galleries[0],
   },
   {
     id: 'other-related',

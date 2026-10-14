@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "assets": "python3 tools/build-web-assets.py",
+    "assets": "python3 tools/build-web-assets.py && node tools/build-abstract-assets.mjs",
     "dev": "astro dev --host 127.0.0.1",
     "build": "npm run assets && astro build",
     "preview": "astro preview --host 127.0.0.1",
@@ -13,11 +13,12 @@
     "lint": "eslint src tools tests *.mjs --max-warnings 0",
     "format": "prettier --write src tools tests infra .github *.mjs *.json .prettierrc.json README.md AGENTS.md docs",
     "format:check": "prettier --check src tools tests infra .github *.mjs *.json .prettierrc.json README.md AGENTS.md docs",
-    "validate:collection": "python3 tools/verify-collection.py",
+    "validate:collection": "python3 tools/verify-collection.py && python3 tools/verify-abstract.py",
     "validate:curation": "python3 tools/verify-curation-catalog.py",
-    "validate:site": "python3 tools/validate-site.py",
+    "validate:site": "python3 tools/validate-site.py && node tools/verify-abstract-image-fidelity.mjs",
     "test:ci-browser": "node tools/test-built-site.mjs",
     "hydrate": "node tools/hydrate-collection.mjs",
+    "hydrate:abstract": "python3 tools/restore-abstract.py",
     "deploy": "node tools/deploy.mjs",
     "revision": "node tools/write-revision.mjs",
     "validate:infra": "node tools/validate-infra.mjs"
@@ -25,6 +26,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.10",
     "astro": "^7.3.8",
+    "sharp": "0.35.5",
     "typescript": "^6.0.3"
   },
   "devDependencies": {

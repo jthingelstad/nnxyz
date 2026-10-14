@@ -1,209 +1,25 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Icon from '../../components/Icon.astro';
-import Kudos from '../../components/Kudos.astro';
-import DrawingViewer from '../../components/DrawingViewer.astro';
-import {
-  galleryHome,
-  exhibitionStops,
-  exhibitionPath,
-} from '../../lib/exhibitions';
-import {
-  artworks,
-  artworkPath,
-  displayTitle,
-  labels,
-  byId,
-  thumbnailPath,
-} from '../../lib/catalog';
+import NativeArtworkPage from '../../components/NativeArtworkPage.astro';
+import AbstractArtworkPage from '../../components/AbstractArtworkPage.astro';
+import { artworks } from '../../lib/catalog';
+import { abstractArtworks } from '../../lib/abstract';
 export function getStaticPaths() {
-  return artworks.map((work) => ({
-    params: { id: work.inkId },
-    props: { work },
-  }));
+  return [
+    ...artworks.map((work) => ({
+      params: { id: work.inkId },
+      props: { kind: 'drawing' as const, work },
+    })),
+    ...abstractArtworks.map((work) => ({
+      params: { id: work.id },
+      props: { kind: 'raster' as const, work },
+    })),
+  ];
 }
-const { work } = Astro.props;
-const label = labels.get(work.inkId)!;
-const title = displayTitle(work);
-const home = galleryHome.get(work.inkId)!;
-const sequence = exhibitionStops(home);
-const position = sequence.findIndex((stop) => stop.artworkId === work.inkId);
-const previous = sequence[position - 1];
-const next = sequence[position + 1];
-const numbered = label.collectionContext.numberedOwnedNeighbors;
-const reading = label.curatorialReading.text;
+const props = Astro.props;
 ---
 
-<Layout
-  title={`${title} — nnxyz`}
-  image={`/png/${work.inkId}.png`}
-  description={reading}
->
-  <a class="back-link" href={`${exhibitionPath(home.id)}#work-${work.inkId}`}>
-    <Icon name="left" size={20} /> Back to {home.title}
-  </a>
-  <div class="work-page">
-    <DrawingViewer work={work} />
-    <div class="work-content">
-      <div class="work-caption">
-        <div>
-          <h1>{title}</h1>
-          <p class="byline">
-            {work.artistName} · {work.strokes.toLocaleString('en-US')} recorded
-            strokes
-          </p>
-        </div>
-        <div class="work-actions">
-          <Kudos path={artworkPath(work.inkId)} title={title} />
-          <a
-            class="download-link"
-            href={`/art/${work.inkId}.svg`}
-            download={`${title}.svg`}
-            data-tinylytics-event="file.download"
-            data-tinylytics-event-value={work.inkId}
-          >
-            Download SVG
-          </a>
-          <button
-            data-enlarge
-            data-tinylytics-event="artwork.enlarge"
-            data-tinylytics-event-value={work.inkId}
-          >
-            <Icon name="enlarge" size={22} />
-            <span>Enlarge</span>
-          </button>
-        </div>
-      </div>
-      <section class="curator-reading" aria-label="AI curator interpretation">
-        <h2>AI curator</h2>
-        <p>{reading}</p>
-      </section>
-      <p class="collection-position">
-        {numbered?.previous && numbered?.next
-          ? `Between ${displayTitle(byId.get(numbered.previous.inkId)!)} and ${displayTitle(byId.get(numbered.next.inkId)!)} in the owned title sequence.`
-          : label.collectionContext.text}
-      </p>
-      <p class="gallery-position">
-        Work {position + 1} of {sequence.length} in{' '}
-        <a href={exhibitionPath(home.id)}>{home.title}</a>.
-      </p>
-      <nav class="work-navigation" aria-label="Artwork navigation">
-        {previous ? (
-          <a href={artworkPath(previous.artworkId)}>
-            <Icon name="left" size={20} /> Previous
-            <span class="mobile-neighbor">
-              {' '}
-              (
-              {displayTitle(byId.get(previous.artworkId)!).replace(
-                /^Nifty /,
-                '',
-              )}
-              )
-            </span>
-          </a>
-        ) : (
-          <span></span>
-        )}
-        {next && (
-          <a href={artworkPath(next.artworkId)}>
-            Next
-            <span class="mobile-neighbor">
-              {' '}
-              ({displayTitle(byId.get(next.artworkId)!).replace(/^Nifty /, '')})
-            </span>
-            <Icon name="right" size={20} />
-          </a>
-        )}
-        {label.connections.length > 0 && (
-          <a class="related-anchor" href="#related">
-            Related works
-          </a>
-        )}
-        <button class="details-trigger" data-details>
-          Details &amp; provenance
-        </button>
-      </nav>
-      <details class="provenance" id="provenance">
-        <summary>Details &amp; provenance</summary>
-        <p>
-          Playback follows recorded paths and order. Timing is reconstructed;
-          the archive does not record the artist’s speed or pauses.
-        </p>
-        <dl>
-          {label.technical.map((fact) => (
-            <>
-              <dt>{fact.label}</dt>
-              <dd>
-                {typeof fact.value === 'object'
-                  ? `${fact.value.width} × ${fact.value.height}`
-                  : fact.value}
-              </dd>
-            </>
-          ))}
-        </dl>
-        <dl>
-          <dt>Drawing CID</dt>
-          <dd class="identifier">{work.inkId}</dd>
-          <dt>Creator address</dt>
-          <dd class="identifier">{work.artist}</dd>
-        </dl>
-        <p class="record-links">
-          <a href={`/records/${work.inkId}.metadata.json`} download>
-            Archived metadata
-          </a>
-          <a href={`/records/${work.inkId}.provenance.json`} download>
-            Ownership &amp; provenance
-          </a>
-          <a href={`/png/${work.inkId}.png`} download>
-            Original PNG
-          </a>
-          <a href={`/art/${work.inkId}.svg`} download={`${title}.svg`}>
-            Native SVG
-          </a>
-        </p>
-        <p>{label.interpretationNotice}</p>
-      </details>
-      {label.connections.length > 0 && (
-        <section
-          id="related"
-          class="related-works"
-          aria-label="Related artworks"
-        >
-          <h2>Related works</h2>
-          {label.connections.map((connection) => {
-            const related = byId.get(connection.targetArtworkId)!;
-            return (
-              <a
-                class="related-work"
-                href={artworkPath(related.inkId)}
-                data-tinylytics-event="curation.follow"
-                data-tinylytics-event-value={related.inkId}
-              >
-                <img
-                  src={thumbnailPath(related)}
-                  alt={displayTitle(related)}
-                  width="140"
-                  height="140"
-                  loading="lazy"
-                />
-                <div>
-                  <h3>{displayTitle(related)}</h3>
-                  <p>{connection.reason}</p>
-                  <span>Follow this connection →</span>
-                </div>
-              </a>
-            );
-          })}
-        </section>
-      )}
-    </div>
-  </div>
-  <dialog class="enlargement" data-enlargement aria-label={`Enlarged ${title}`}>
-    <button data-close-enlargement aria-label="Close enlarged artwork">
-      <Icon name="close" />
-    </button>
-    <div class="enlargement-art">
-      <img src={`/art/${work.inkId}.svg`} alt={title} />
-    </div>
-  </dialog>
-</Layout>
+{props.kind === 'drawing' ? (
+  <NativeArtworkPage work={props.work} />
+) : (
+  <AbstractArtworkPage work={props.work} />
+)}

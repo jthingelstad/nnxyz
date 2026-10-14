@@ -1,0 +1,194 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from './Icon.astro';
+import Kudos from './Kudos.astro';
+import {
+  abstractImage,
+  abstractOriginal,
+  abstractReadings,
+  abstractById,
+  type AbstractArtwork,
+} from '../lib/abstract';
+import { artworkPath, displayTitle } from '../lib/catalog';
+import {
+  galleryHome,
+  exhibitionPath,
+  exhibitionStops,
+} from '../lib/exhibitions';
+interface Props {
+  work: AbstractArtwork;
+}
+const { work } = Astro.props;
+const title = displayTitle(work);
+const record = abstractReadings.get(work.id)!;
+const home = galleryHome.get(work.id)!;
+const sequence = exhibitionStops(home);
+const position = sequence.findIndex((stop) => stop.artworkId === work.id);
+const previous = abstractById.get(sequence[position - 1]?.artworkId);
+const next = abstractById.get(sequence[position + 1]?.artworkId);
+---
+
+<Layout
+  title={`${title} — nnxyz`}
+  image={abstractImage(work)}
+  description={record.reading}
+>
+  <a class="back-link" href={`${exhibitionPath(home.id)}#work-${work.id}`}>
+    <Icon name="left" size={20} /> Back to {home.title}
+  </a>
+  <div class="work-page">
+    <div class="raster-viewer">
+      <button
+        class="raster-stage"
+        data-raster-enlarge
+        aria-label={`Enlarge ${title}`}
+      >
+        <img
+          src={abstractImage(work)}
+          srcset={`${abstractImage(work, 640)} 640w, ${abstractImage(work)} 1200w, ${abstractImage(work, 2000)} 2000w`}
+          sizes="(max-width: 760px) 86vw, (max-width: 1200px) 55vw, 760px"
+          alt={`${title} by nnxyz`}
+          width={work.width}
+          height={work.height}
+          fetchpriority="high"
+        />
+      </button>
+    </div>
+    <div class="work-content">
+      <div class="work-caption">
+        <div>
+          <h1>{title}</h1>
+          <p class="byline">nnxyz · Abstract</p>
+        </div>
+        <div class="work-actions">
+          <Kudos path={artworkPath(work.id)} title={title} />
+          <a
+            class="download-link"
+            href={abstractOriginal(work)}
+            download={`${title}.jpg`}
+            data-tinylytics-event="file.download"
+            data-tinylytics-event-value={work.id}
+          >
+            Download original JPEG
+          </a>
+          <button
+            data-raster-enlarge
+            data-tinylytics-event="artwork.enlarge"
+            data-tinylytics-event-value={work.id}
+          >
+            <Icon name="enlarge" size={22} />
+            <span>Enlarge</span>
+          </button>
+        </div>
+      </div>
+      <section class="curator-reading" aria-label="AI curator interpretation">
+        <h2>AI curator</h2>
+        <p>{record.reading}</p>
+      </section>
+      <p class="gallery-position">
+        Work {position + 1} of {sequence.length} in{' '}
+        <a href={exhibitionPath(home.id)}>{home.title}</a>.
+      </p>
+      <nav class="work-navigation" aria-label="Artwork navigation">
+        {previous ? (
+          <a href={artworkPath(previous.id)}>
+            <Icon name="left" size={20} />
+            Previous{' '}
+            <span class="mobile-neighbor">({displayTitle(previous)})</span>
+          </a>
+        ) : (
+          <span />
+        )}
+        {next && (
+          <a href={artworkPath(next.id)}>
+            Next <span class="mobile-neighbor">({displayTitle(next)})</span>
+            <Icon name="right" size={20} />
+          </a>
+        )}
+      </nav>
+      <details class="provenance raster-provenance" id="provenance">
+        <summary>Details &amp; provenance</summary>
+        <p>
+          This image is reproduced from the published JPEG preserved in the
+          collector’s earlier gallery. No brush paths have been recovered for
+          this work.
+        </p>
+        <dl>
+          <dt>Original image</dt>
+          <dd>
+            {work.width} × {work.height} pixels · JPEG
+          </dd>
+          <dt>Collection dates</dt>
+          <dd>
+            March 30–April 4, 2022, according to the collector’s earlier
+            account.
+          </dd>
+          <dt>Network</dt>
+          <dd>Polygon · chain {work.chainId}</dd>
+          <dt>Contract</dt>
+          <dd class="identifier">{work.contract}</dd>
+          <dt>Token ID</dt>
+          <dd class="identifier">{work.tokenId}</dd>
+          <dt>Original JPEG SHA-256</dt>
+          <dd class="identifier">{work.imageSHA256}</dd>
+          {work.giftRecipientAsRecorded && (
+            <>
+              <dt>Gift recipient in the earlier account</dt>
+              <dd>{work.giftRecipientAsRecorded}</dd>
+            </>
+          )}
+        </dl>
+        <p>
+          Titles and token links come from that saved account. The recovery
+          preserves its collection history; it does not establish current
+          on-chain ownership. Title order is distinct from creation order.
+        </p>
+        <p class="record-links">
+          <a href={`/abstract/records/${work.id}.json`} download>
+            Source &amp; provenance record
+          </a>
+          <a href={abstractOriginal(work)} download={`${title}.jpg`}>
+            Original JPEG
+          </a>
+          <a href={work.tokenUrl}>Token listing</a>
+          <a href={work.sourcePageUrl}>Collector’s earlier gallery</a>
+        </p>
+        <p>
+          The AI reading is a visual interpretation, not a claim about the
+          artist’s intentions or making process.
+        </p>
+      </details>
+    </div>
+  </div>
+  <dialog
+    class="enlargement"
+    data-raster-dialog
+    aria-label={`Enlarged ${title}`}
+  >
+    <button data-raster-close aria-label="Close enlarged artwork">
+      <Icon name="close" />
+    </button>
+    <div class="enlargement-art">
+      <img
+        src={abstractImage(work, 2000)}
+        alt={`${title} by nnxyz`}
+        width={work.width}
+        height={work.height}
+        loading="lazy"
+      />
+    </div>
+  </dialog>
+  <script>
+    const dialog = document.querySelector<HTMLDialogElement>(
+      '[data-raster-dialog]',
+    );
+    document
+      .querySelectorAll<HTMLButtonElement>('[data-raster-enlarge]')
+      .forEach((button) =>
+        button.addEventListener('click', () => dialog?.showModal()),
+      );
+    dialog
+      ?.querySelector('[data-raster-close]')
+      ?.addEventListener('click', () => dialog.close());
+  </script>
+</Layout>

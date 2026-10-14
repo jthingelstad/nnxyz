@@ -43,3 +43,15 @@ test('Artwork and scripts publish before HTML, and unsafe paths are refused', ()
     assert.throws(() => prepareObject(key, Buffer.from('x')));
   assert.throws(() => prepareObject('private.env', Buffer.from('x')));
 });
+test('Abstract JPEG and WebP delivery preserves bytes and declares image types', () => {
+  const bytes = Buffer.from([255, 216, 255, 224]);
+  for (const [extension, type] of [
+    ['jpg', 'image/jpeg'],
+    ['webp', 'image/webp'],
+  ]) {
+    const result = prepareObject(`abstract/image.${extension}`, bytes);
+    assert.equal(result.ContentType, type);
+    assert.equal(result.ContentEncoding, undefined);
+    assert.deepEqual(result.Body, bytes);
+  }
+});
