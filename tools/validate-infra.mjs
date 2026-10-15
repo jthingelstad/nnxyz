@@ -121,7 +121,7 @@ assert.equal(
 for (const entry of entries) {
   assert.match(
     entry.projectPath,
-    /^public\/(art\/[^/]+\.svg|abstract\/images\/[^/]+\.webp|asset-manifest\.json|abstract\/asset-manifest\.json)$/,
+    /^public\/(art\/[^/]+\.svg|(abstract\/images|raster)\/[^/]+\.webp|(abstract\/|raster\/)?asset-manifest\.json)$/,
   );
   assert.match(entry.sha256, /^[a-f0-9]{64}$/);
 }

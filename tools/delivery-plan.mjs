@@ -21,6 +21,22 @@ export function publicationOrder(files) {
       a.localeCompare(b),
   );
 }
+// Archived originals never change at a given key. Derived WebPs keep their key
+// when a recipe changes, so browsers revalidate them daily; deploys invalidate
+// the CDN.
+function cacheControl(key, extension) {
+  if (
+    key.startsWith('_astro/') ||
+    key.startsWith('png/') ||
+    key.startsWith('abstract/originals/')
+  )
+    return 'public,max-age=31536000,immutable';
+  if (['.html', '.txt', '.xml'].includes(extension) || key === 'revision.json')
+    return 'public,max-age=0,s-maxage=60,must-revalidate';
+  if (key.startsWith('raster/') || key.startsWith('abstract/images/'))
+    return 'public,max-age=86400,stale-while-revalidate=604800';
+  return 'public,max-age=3600';
+}
 export function prepareObject(key, bytes) {
   if (
     key.startsWith('/') ||
@@ -47,11 +63,7 @@ export function prepareObject(key, bytes) {
     Body: body,
     ContentType: type,
     ...(compressed ? { ContentEncoding: 'gzip' } : {}),
-    CacheControl: key.startsWith('_astro/')
-      ? 'public,max-age=31536000,immutable'
-      : ['.html', '.txt', '.xml'].includes(extension) || key === 'revision.json'
-        ? 'public,max-age=0,s-maxage=60,must-revalidate'
-        : 'public,max-age=3600',
+    CacheControl: cacheControl(key, extension),
     Metadata: { sha256: createHash('sha256').update(bytes).digest('hex') },
   };
 }

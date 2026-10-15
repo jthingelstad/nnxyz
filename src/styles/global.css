@@ -272,10 +272,24 @@ body:has(.gallery-grid) .wordmark {
   width: 100%;
   background: #fff;
 }
-.finished-art {
+.finished-art,
+.art-poster {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+/* The archived-PNG poster shows while the SVG downloads, then steps aside so
+   translucent strokes are never painted twice. */
+.art-poster {
+  position: absolute;
+  inset: 0;
+}
+.finished-art {
+  position: relative;
+}
+.work-viewer[data-svg-ready] .art-poster,
+.work-viewer[data-active] .art-poster {
+  visibility: hidden;
 }
 .drawing-art {
   position: absolute;

@@ -68,3 +68,17 @@ test('robots.txt and sitemaps publish compressed with page caching', () => {
     assert.match(result.CacheControl, /max-age=0/);
   }
 });
+test('Archived originals are immutable and derived WebPs revalidate daily', () => {
+  const bytes = Buffer.from([1, 2, 3]);
+  for (const key of ['png/work.png', 'abstract/originals/work.jpg'])
+    assert.match(prepareObject(key, bytes).CacheControl, /immutable/);
+  for (const key of ['raster/work-320.webp', 'abstract/images/work-640.webp'])
+    assert.equal(
+      prepareObject(key, bytes).CacheControl,
+      'public,max-age=86400,stale-while-revalidate=604800',
+    );
+  assert.equal(
+    prepareObject('art/work.svg', bytes).CacheControl,
+    'public,max-age=3600',
+  );
+});

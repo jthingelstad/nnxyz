@@ -19,10 +19,10 @@ try {
   if (error.code !== 'ENOENT') throw error;
 }
 const recipe = {
-  version: 2,
+  version: 3,
   widths: [640, 1200, 2000],
-  quality: 90,
-  nearLossless: true,
+  quality: 85,
+  effort: 6,
   sharp: sharp.versions.sharp,
 };
 const recipeSHA256 = hash(JSON.stringify(recipe));
@@ -65,7 +65,7 @@ for (const work of catalog.artworks) {
         );
       bytes = await sharp(original)
         .resize({ width, withoutEnlargement: true })
-        .webp({ quality: recipe.quality, nearLossless: recipe.nearLossless })
+        .webp({ quality: recipe.quality, effort: recipe.effort })
         .toBuffer();
       await fs.writeFile(target, bytes);
     }

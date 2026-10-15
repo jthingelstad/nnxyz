@@ -30,6 +30,9 @@ class Page(HTMLParser):
         for key in ["href", "src", "data-src"]:
             if data.get(key):
                 self.refs.append(data[key])
+        for candidate in (data.get("srcset") or "").split(","):
+            if candidate.strip():
+                self.refs.append(candidate.split()[0])
 
 
 def main():
