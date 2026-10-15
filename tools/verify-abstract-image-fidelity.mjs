@@ -2,7 +2,7 @@ import sharp from 'sharp';
 import fs from 'node:fs/promises';
 
 const data = JSON.parse(await fs.readFile('data/abstract.json', 'utf8'));
-const root = process.env.ABSTRACT_ASSET_ROOT || 'dist/abstract';
+const root = process.env.ABSTRACT_ASSET_ROOT || 'media/abstract';
 const scores = [];
 for (const work of data.artworks) {
   for (const width of [640, 1200, 2000]) {

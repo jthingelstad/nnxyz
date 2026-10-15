@@ -114,6 +114,34 @@
                   "Resource": {
                     "Fn::Sub": "arn:${AWS::Partition}:cloudfront::${AWS::AccountId}:distribution/${DistributionId}"
                   }
+                },
+                {
+                  "Sid": "PublishedMediaIsWriteOnce",
+                  "Effect": "Deny",
+                  "Action": ["s3:PutObject"],
+                  "Resource": [
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/art/*"
+                    },
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/png/*"
+                    },
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/raster/*"
+                    },
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/records/*"
+                    },
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/abstract/images/*"
+                    },
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/abstract/originals/*"
+                    },
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/abstract/records/*"
+                    }
+                  ]
                 }
               ]
             }

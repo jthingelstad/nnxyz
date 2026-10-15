@@ -16,8 +16,9 @@ export const collections = collectionData.filter(
 export const artworkPath = (cid: string) => `/artworks/${cid}/`;
 // WebPs rendered from each native SVG (tools/build-raster-assets.mjs); the
 // widths cover a 560 px gallery image at 3x and the 900 px artwork poster at
-// 2x. Browsing never
-// downloads SVG geometry; artwork pages draw it over the poster.
+// 2x. Browsing never downloads SVG geometry; artwork pages draw it over the
+// poster. Media URLs must be published: validate-site checks each against
+// data/media.json.
 const rasterWidths = [320, 640, 1200, 1600, 2000];
 export const rasterPath = (work: Artwork, width = 1600) =>
   `/raster/${work.inkId}-${width}.webp`;

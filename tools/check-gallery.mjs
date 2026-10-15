@@ -590,7 +590,14 @@ try {
   await page.setViewportSize({ width: 1254, height: 1254 });
   for (const cid of samples) {
     const work = catalog.find((x) => x.inkId === cid);
-    const drawing = JSON.parse(await fs.readFile(work.strokesPath, 'utf8'));
+    // The raw strokes live only in the private archive; site CI checks the
+    // SVG against the published PNG, and the archive workflow checks both.
+    const drawing = await fs
+      .readFile(work.strokesPath, 'utf8')
+      .then(JSON.parse, (error) => {
+        if (error.code === 'ENOENT') return null;
+        throw error;
+      });
     await go(`/artworks/${cid}/`);
     await waitArt();
     const fidelity = await page.evaluate(
@@ -607,10 +614,10 @@ try {
         const ctx = canvas.getContext('2d', { willReadFrequently: true });
         ctx.fillStyle = '#fff';
         ctx.fillRect(0, 0, size, size);
-        ctx.scale(size / drawing.width, size / drawing.height);
+        ctx.scale(size / (drawing?.width ?? 1), size / (drawing?.height ?? 1));
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
-        for (const line of drawing.lines) {
+        for (const line of drawing?.lines ?? []) {
           const points = line.points;
           if (points.length < 2) continue;
           ctx.strokeStyle = line.brushColor;
@@ -677,7 +684,7 @@ try {
           for (let c = 0; c < 3; c++)
             pngTotal += Math.abs(b[i + c] - png[i + c]);
         return {
-          meanChannelDifference: total / (size * size * 3),
+          meanChannelDifference: drawing ? total / (size * size * 3) : null,
           significantPixelFraction: significant / (size * size),
           archivedPNGMeanDifference: pngTotal / (size * size * 3),
         };
@@ -685,7 +692,7 @@ try {
       { drawing, cid },
     );
     assert.ok(
-      fidelity.meanChannelDifference < 5,
+      !drawing || fidelity.meanChannelDifference < 5,
       `${work.name}: vector geometry disagrees with canvas ${JSON.stringify(fidelity)}`,
     );
     assert.ok(

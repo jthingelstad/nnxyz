@@ -14,6 +14,19 @@ export const mime = {
   '.txt': 'text/plain; charset=utf-8',
   '.xml': 'application/xml; charset=utf-8',
 };
+// Published media: generated once, uploaded once by tools/media.mjs, and only
+// referenced by the site. Site deploys never write these keys.
+export const mediaPrefixes = [
+  'art/',
+  'png/',
+  'raster/',
+  'records/',
+  'abstract/images/',
+  'abstract/originals/',
+  'abstract/records/',
+];
+export const isMediaKey = (key) =>
+  mediaPrefixes.some((prefix) => key.startsWith(prefix));
 export function publicationOrder(files) {
   return [...files].sort(
     (a, b) =>
@@ -21,20 +34,12 @@ export function publicationOrder(files) {
       a.localeCompare(b),
   );
 }
-// Archived originals never change at a given key. Derived WebPs keep their key
-// when a recipe changes, so browsers revalidate them daily; deploys invalidate
-// the CDN.
+// Media keys are write-once, so they and Astro's hashed bundles never change.
+export const immutable = 'public,max-age=31536000,immutable';
 function cacheControl(key, extension) {
-  if (
-    key.startsWith('_astro/') ||
-    key.startsWith('png/') ||
-    key.startsWith('abstract/originals/')
-  )
-    return 'public,max-age=31536000,immutable';
+  if (key.startsWith('_astro/') || isMediaKey(key)) return immutable;
   if (['.html', '.txt', '.xml'].includes(extension) || key === 'revision.json')
     return 'public,max-age=0,s-maxage=60,must-revalidate';
-  if (key.startsWith('raster/') || key.startsWith('abstract/images/'))
-    return 'public,max-age=86400,stale-while-revalidate=604800';
   return 'public,max-age=3600';
 }
 export function prepareObject(key, bytes) {

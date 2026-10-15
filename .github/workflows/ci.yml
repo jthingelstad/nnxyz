@@ -55,15 +55,16 @@ jobs:
             cat /tmp/nnxyz-security-findings.txt
             exit 1
           fi
+  # Builds pages only. Media is published once and referenced by URL, so this
+  # job needs no AWS access and never downloads the archive. The name is kept
+  # because branch protection requires it.
   build:
     name: Archive, build and browser validation
-    needs: [quality, codeql]
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     permissions:
       contents: read
-      id-token: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
@@ -74,13 +75,6 @@ jobs:
         with:
           python-version: '3.12'
       - run: npm ci
-      - uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6.3.0
-        with:
-          role-to-assume: ${{ vars.AWS_BUILD_ROLE_ARN }}
-          aws-region: us-east-1
-      - run: npm run hydrate
-      - run: npm run validate:collection
-      - run: npm run validate:curation
       - run: npm run build
         env:
           PUBLIC_TINYLYTICS_ENABLED: 'true'
@@ -96,7 +90,6 @@ jobs:
         with:
           name: verified-site
           path: /tmp/nnxyz-site.tar.gz
-          compression-level: 0
           retention-days: 3
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()

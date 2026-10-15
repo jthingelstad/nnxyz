@@ -2,7 +2,11 @@ import { createServer } from 'node:http';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
+import { isMediaKey } from './delivery-plan.mjs';
 const root = path.resolve('dist');
+const deployment = JSON.parse(
+  await fs.readFile('infra/deployment.json', 'utf8'),
+);
 const mime = {
   '.html': 'text/html',
   '.js': 'text/javascript',
@@ -18,6 +22,17 @@ const server = createServer(async (req, res) => {
     const name = decodeURIComponent(
       new URL(req.url, 'http://localhost').pathname,
     );
+    // Media is never part of the build; the pages reference published URLs.
+    if (isMediaKey(name.slice(1))) {
+      const published = await fetch(new URL(name, deployment.deliveryUrl));
+      res
+        .writeHead(published.status, {
+          'content-type':
+            published.headers.get('content-type') || 'application/octet-stream',
+        })
+        .end(Buffer.from(await published.arrayBuffer()));
+      return;
+    }
     const target = path.resolve(
       root,
       '.' + name + (name.endsWith('/') ? 'index.html' : ''),

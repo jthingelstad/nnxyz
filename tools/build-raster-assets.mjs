@@ -9,8 +9,7 @@ import sharp from 'sharp';
 // displays.
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const gallery = JSON.parse(await fs.readFile('data/gallery.json', 'utf8'));
-const output = 'public/raster';
-const requirePrebuilt = process.argv.includes('--require-prebuilt');
+const output = 'media/raster';
 await fs.mkdir(output, { recursive: true });
 let previous;
 try {
@@ -21,39 +20,13 @@ try {
   if (error.code !== 'ENOENT') throw error;
 }
 const svgManifest = JSON.parse(
-  await fs.readFile('public/asset-manifest.json', 'utf8'),
+  await fs.readFile('media/asset-manifest.json', 'utf8'),
 );
 const svgHashes = new Map(
   svgManifest.artworks.map((entry) => [entry.id, entry.svgSHA256]),
 );
 const widths = [320, 640, 1200, 1600, 2000]; // src/lib/catalog.ts uses the same list
 const target = (work, width) => `${output}/${work.inkId}-${width}.webp`;
-
-// Routine builds only confirm the pinned files; they never launch a browser.
-if (requirePrebuilt) {
-  for (const work of gallery) {
-    const old = previous?.artworks.find((entry) => entry.id === work.inkId);
-    if (old?.svgSHA256 !== svgHashes.get(work.inkId))
-      throw new Error(
-        `Raster images are stale for ${work.inkId}; regenerate the derived snapshot`,
-      );
-    for (const width of widths) {
-      const image = old.images.find((entry) => entry.width === width);
-      let bytes;
-      try {
-        bytes = await fs.readFile(target(work, width));
-      } catch (error) {
-        if (error.code !== 'ENOENT') throw error;
-      }
-      if (!bytes || hash(bytes) !== image?.sha256)
-        throw new Error(
-          `Missing or changed prebuilt WebP: ${target(work, width)}; regenerate the derived snapshot`,
-        );
-    }
-  }
-  console.log(`Verified WebPs for ${gallery.length} Nifty Ink drawings`);
-  process.exit(0);
-}
 
 const { chromium } = await import('playwright');
 const browser = await chromium.launch(
@@ -73,7 +46,7 @@ const recipeSHA256 = hash(JSON.stringify(recipe));
 const master = Math.max(...widths);
 
 async function render(page, work) {
-  const svg = await fs.readFile(`public/art/${work.inkId}.svg`, 'utf8');
+  const svg = await fs.readFile(`media/art/${work.inkId}.svg`, 'utf8');
   await page.setContent(
     `<style>html,body{margin:0;background:#fff}img{display:block;width:${master}px;height:${master}px}</style><img alt="">`,
   );
