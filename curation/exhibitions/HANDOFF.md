@@ -218,6 +218,33 @@ the record of what was asked.
    their seconds, Escape ends the tour, and the page reads the same without
    it. `tools/validate-site.py` checks every embedded audio key against
    `data/media.json`.
+7. **Screen saver.** Done October 15, 2026: `/screensaver/` shows one work at
+   a time on a twelve-second rotation, shuffled across all 626 works, with a
+   translucent panel of wing, room, title and caption; `#room=<roomId>` or
+   `#wing=<wingId>` limits it, and each room's closing links to its own.
+   Space pauses, arrows step, F or the button enters fullscreen, reduced
+   motion gets cuts instead of crossfades. Images are the 2000 px WebPs;
+   `tools/validate-site.py` checks every one against `data/media.json`.
+
+## Where the branch stands
+
+`curation-voice-pilot` carries, beyond what is live on main (the locked rooms,
+the gallery text, the map, the collector's statement): the screen saver, the
+published audio tour and its player, and a review pass over both. Every check
+passes (lint, format, type check, unit tests, ruff, build, site validation and
+the browser suite, which now plays a tour and runs the screen saver). Main
+deploys the live site on every push; merging is the collector's call.
+
+Open for the collector:
+
+- Listen to one room end to end for pacing. The breath between segments is
+  `GAP_MS` in `src/scripts/tour.ts` (700 ms) and silent works hold for the
+  room's `silentHoldSeconds`; both are one-line changes.
+- The map is the third draft; the collector wants it to read like a printed
+  museum map and may want more iteration.
+- The audio key in the local `.env` expires about seven days after October
+  15, 2026. A changed segment needs a re-render on the Mac before then or a
+  new key after.
 
 ## Working materials
 
