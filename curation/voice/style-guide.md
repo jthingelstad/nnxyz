@@ -110,8 +110,8 @@ in 38%.
 
 ## Labels the collector likes
 
-The collector should choose three or four of these as the reference voice; the
-rest get removed from this guide.
+The collector liked all five (October 15, 2026). Together they are the
+reference voice.
 
 1. **New Nifty on the Block #1 fork.** "Heads and raised, limb-like forms
    compete for space in a dense weave of colored marks. Teeth recur at different
