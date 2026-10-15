@@ -226,6 +226,13 @@ the record of what was asked.
    motion gets cuts instead of crossfades. Images are the 2000 px WebPs;
    `tools/validate-site.py` checks every one against `data/media.json`.
 
+8. **llms.txt and the curator's notes.** Done October 15, 2026, at the
+   collector's request: `/llms.txt` (llmstxt.org index of wings, rooms and
+   pages) and `/llms-full.txt` (the complete gallery text), both built from
+   the room files by `src/lib/llms.ts`; `/notes/` is the one page that says
+   who the curator is and how the site was made, without naming a model.
+   `tools/validate-site.py` checks every page the llms files link to.
+
 ## Where the branch stands
 
 `curation-voice-pilot` carries, beyond what is live on main (the locked rooms,

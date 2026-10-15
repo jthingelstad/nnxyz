@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { rooms, roomWorks } from '../lib/exhibitions';
+const total = rooms.reduce(
+  (n, room) => n + roomWorks(room).length + room.relatedItems.length,
+  0,
+);
+---
+
+<Layout
+  title="Notes from the curator — nnxyz"
+  description="How the rooms, the gallery text, the audio tour and the map of this collection were made."
+>
+  <article class="text-page notes-page">
+    <h1>Notes from the curator</h1>
+    <p>
+      The rooms of this site are unsigned, like the wall text in a museum. This
+      page is the exception: a few notes on how the collection was hung and
+      written, and on what the text does and does not claim.
+    </p>
+
+    <h2>Who the curator is</h2>
+    <p>
+      The curator is an AI assistant working in conversation with the collector.
+      The assistant looked at every work, proposed the rooms, wrote the text and
+      the captions, and read its own drafts back in page order for repetition.
+      The collector set the brief, answered the questions the hanging raised,
+      approved the structure and the pilot room, chose the voice for the audio
+      tour, and wrote the statement on the front page. Those are the only words
+      of the collector's on the site. Everything else on the walls was written
+      by the assistant from the works and their archived records, and corrected
+      where a second look showed it wrong.
+    </p>
+
+    <h2>How the rooms were hung</h2>
+    <p>
+      Each collection is a wing. New Nifty on the Block, the largest at 303
+      works, is split into three dated parts because the drawing changes as the
+      year goes on. Inside each wing the works were laid out on dated contact
+      sheets and grouped by what they look like, not by their titles or numbers:
+      black silhouettes with wavy marks, heads built from boxes, masks buried in
+      scribble. Every work hangs in exactly one room, rooms hold twenty to
+      thirty works, and each room is hung in the order the works were drawn, so
+      a walk through a room is also a walk through a few weeks or months of
+      drawing. Two exceptions were the collector's decisions: the two Rawblocks
+      landscapes hang as a coda rather than being forced into a room, and one
+      greeting by Scrimshaw hangs as a related work at the end of Occasions and
+      Figures. Each wing ends on its collection piece where the series has one.
+    </p>
+
+    <h2>How the text was written</h2>
+    <p>
+      The voice is a museum label's: specific, restrained, and about what is on
+      the wall. A label says where the eyes are and what the beam does to the
+      scribble under it. It does not say what the artist meant, and it does not
+      tell you how to feel. A possible mood is offered as a reading, and left
+      there. Stock praise and repeated metaphors were cut in an editing pass
+      over all twenty-eight rooms; so were most of the numbers, which belong in
+      the details panel of each work.
+    </p>
+    <p>
+      Every number that remains comes from software reading the archive, not
+      from looking: stroke counts, dates, the order of works. Dates and times
+      are UTC, from the archived creation timestamps, because this is a gallery
+      for visitors in every time zone; the artwork pages add your local time
+      beside the UTC instant. Where two works share a title, or one is a fork of
+      another, the text follows the stable drawing identifiers rather than the
+      names.
+    </p>
+    <p>
+      The rooms were written one at a time, each after the assistant had looked
+      at every work in the room at full size and as one wall. One room, Black
+      Silhouettes, was written first as a pilot and shown to the collector
+      before the rest. The text was then read as a whole, in page order, and
+      edited for the tics that creep into {rooms.length} rooms written in a few
+      days.
+    </p>
+
+    <h2>The drawings themselves</h2>
+    <p>
+      The Nifty Ink drawings are reconstructed from their archived brush
+      strokes, so each one is shown as a native vector image and can be watched
+      being drawn, stroke by stroke, with the same order, widths, colors and
+      transparency the archive records. The archive does not record how fast the
+      artist drew, so playback timing is reconstructed and labelled as such. The
+      Abstract works survive only as published images from the collector's
+      earlier gallery; they are shown as stills, with their original files
+      available to download. The complete archived records remain downloadable
+      from every artwork page.
+    </p>
+
+    <h2>The audio tour, the screen saver and the map</h2>
+    <p>
+      The gallery text was written in segments tied to works so that it could
+      also be heard. Each room's segments were read by a synthetic voice chosen
+      by the collector from samples, with a short list of spoken forms for names
+      that are written one way and said another. The tour brings each work on
+      screen as its segment plays; silent works hold for a few seconds. The
+      screen saver shows one work at a time with the standalone caption every
+      work was given. The map draws the collection as a building on three
+      floors, with rooms sized by how many works they hold and a door from each
+      room into the next, which is how a visitor would walk it.
+    </p>
+
+    <h2>What this site is not</h2>
+    <p>
+      It is not a catalogue of either artist's complete work; it shows the{' '}
+      {total} works in one collection. It is not research into the artist: no
+      influences, intentions or quotations appear anywhere, because none were
+      sourced. And it is not a verdict on quality. Measurements such as stroke
+      count describe how a drawing was recorded, not how good it is or how long
+      it took.
+    </p>
+    <p>
+      If something on a wall is wrong, it can be corrected: every reading is
+      kept as a record with the image it was written from, and a correction
+      replaces the text without touching the archive.
+    </p>
+    <p>
+      <a href="/about/">About the collection →</a>
+    </p>
+    <p>
+      <a href="/">Return to the collection →</a>
+    </p>
+  </article>
+</Layout>

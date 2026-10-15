@@ -3,6 +3,7 @@
 
 from html.parser import HTMLParser
 import json
+import re
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
@@ -63,8 +64,8 @@ def main():
     retired += json.loads((ROOT / "curation/abstract/exhibitions.json").read_text())["collections"]
     redirects = {"collections/nnxyz-other/index.html", "collections/scrimshaw/index.html"}
     redirects |= {f"galleries/{g['id']}/index.html" for c in retired for g in c["galleries"]}
-    # 5 utility pages (home, about, map, screen saver, 404) and 5 collection entrances.
-    assert len(pages) == len(gallery) + len(abstract) + len(rooms) + len(redirects) + 10, (
+    # 6 utility pages (home, about, notes, map, screen saver, 404) and 5 entrances.
+    assert len(pages) == len(gallery) + len(abstract) + len(rooms) + len(redirects) + 11, (
         "Missing generated routes"
     )
     hung = [w["artworkId"] for room in rooms for c in room["chapters"] for w in c["works"]]
@@ -136,6 +137,15 @@ def main():
             if stop["src"]:
                 assert stop["src"].lstrip("/") in media, f"Unpublished tour audio: {stop['src']}"
     assert tours == len(rooms), "Every room has an audio tour"
+    # llms.txt and its full-text companion name only pages that exist.
+    for name in ["llms.txt", "llms-full.txt"]:
+        text = (DIST / name).read_text()
+        for link in set(re.findall(r"https://nnxyz\.thingelstad\.xyz(/[^\s)>#]*)", text)):
+            target = DIST / link.lstrip("/")
+            if link.endswith("/"):
+                target /= "index.html"
+            assert target.is_file(), f"{name} links to a missing page: {link}"
+    assert "## Rooms" in (DIST / "llms.txt").read_text()
     for work in gallery:
         cid = work["inkId"]
         assert (DIST / "artworks" / cid / "index.html").is_file(), cid
