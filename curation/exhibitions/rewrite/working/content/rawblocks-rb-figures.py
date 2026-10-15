@@ -79,7 +79,7 @@ CHAPTERS = [
                   reading="The body is one thick black line bent at the knees and elbows, with round feet. The head is a ball with spikes and a red X and dash for a face. The maze is pale blue strokes over orange. Recorded with 114 strokes."),
              dict(short='#36', treatment='label',
                   text="A girl in a black dress with a white face and a ponytail stands in a teal frame, her hands white, a small red flower at her feet. The face is a white circle with two black eyes and an O mouth. The dress has a row of white buttons. Fifty-four strokes. A grey shadow falls behind her. It is the quietest figure in the room, and the only one with a flower.",
-                  caption="A girl in a black dress with a white face and a ponytail stands in a teal frame.",
+                  caption="A white-faced girl in a black dress and ponytail stands in a teal frame beside a red flower.",
                   reading="The ponytail is drawn in black strokes tied with a red band. The hands are two white shapes at the ends of the sleeves. The shadow is a grey shape of fingers behind her. The frame is grey around teal."),
              dict(short='#37', treatment='line',
                   text="A black creature with yellow bands on its arms raises both hands in a teal frame, two white eyes with blue pupils, a grin, and a small black figure standing on its head.",

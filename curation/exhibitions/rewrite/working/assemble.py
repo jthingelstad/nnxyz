@@ -23,8 +23,9 @@ else:
 gal = [g for g in gals if g['key'] == C.GALLERY][0]
 PREFIXES = ('nnxyz nifty faces ', 'nnxyz nnotb ', 'nnxyz rawblocks ', 'nnxyz abstract ', 'nnxyz ')
 def short(t):
+    t = t.strip()
     for p in PREFIXES:
-        if t.startswith(p): return t[len(p):]
+        if t.startswith(p): return t[len(p):].strip()
     return t
 # Works are matched by artworkId when the content gives one (repeated titles), else by short title.
 BYID = {w['artworkId']: w for w in gal['works']}
@@ -64,6 +65,13 @@ for c in chapters:
         if w['treatment'] == 'none': s['holdSeconds'] = 4
         if w.get('compareWith'): s['kind'] = 'comparison'; s['secondArtworkId'] = w['compareWith']['artworkId']
         segs.append(s)
+related = []
+for r in getattr(C, 'RELATED', []):
+    src = [x for x in gal.get('relatedItems', []) if x['artworkId'] == r['artworkId']][0]
+    item = dict(artworkId=src['artworkId'], title=src['title'], short=r['short'], homeCollectionId=src['homeCollectionId'],
+                treatment='label', text=r['text'], caption=r['caption'], reading=r['reading'], facts=facts(src), note=src.get('note'))
+    related.append(item)
+    segs.append(dict(kind='related', artworkId=item['artworkId'], text=item['text']))
 closing = dict(kind='closing', artworkId=chapters[-1]['works'][-1]['artworkId'], text=C.CLOSING)
 if getattr(C, 'CLOSING_SECOND', None): closing['secondArtworkId'] = BY[C.CLOSING_SECOND]['artworkId'] if C.CLOSING_SECOND in BY else BYID[C.CLOSING_SECOND]
 segs.append(closing)
@@ -95,7 +103,7 @@ out = dict(
     dateBasis='UTC, from the archived creation timestamp' if any(w['facts']['recordedAt'] for c in chapters for w in c['works']) else 'No per-work dates; title order',
     method='Every work in the room was inspected directly from the published WebP at 640 px in room order and as one wall before writing. Numbers come from data/gallery.json or data/abstract.json. No model inference calls were made; the text was written by the assistant in the session.',
     scope=f'The owned subset: the {len(order)} works the locked structure places in this room, in room order.',
-    introduction=list(C.INTRO), chapters=chapters, closing=C.CLOSING,
+    introduction=list(C.INTRO), chapters=chapters, relatedItems=related, closing=C.CLOSING,
     tour=dict(segments=segs, spokenWords=spoken, silentHoldSeconds=holds, estimatedMinutesAt150wpm=round(spoken / 150 + holds / 60, 1), spokenFormsFile='curation/voice/pronunciation.json'),
     checks=dict(treatmentCounts=counts, captionMaxWords=20, captionProblems=problems, habitWordHits=habit_hits, lineOpeners=dict(starts.most_common(4)),
                 everyWorkHasCaptionAndReading=all(w['caption'] and w['reading'] for c in chapters for w in c['works'])),
