@@ -33,7 +33,13 @@ Each object carries the same hash in its `sha256` metadata and is served with
 `Cache-Control: public,max-age=31536000,immutable`. SVG and JSON are stored
 gzip-encoded. The deployment role is denied `s3:PutObject` on every media
 prefix (`PublishedMediaIsWriteOnce` in `infra/delivery.json`), so a routine
-deploy cannot replace artwork. `tools/validate-site.py` fails the build if
+deploy cannot replace artwork. The list in that template must match
+`mediaPrefixes` in `tools/delivery-plan.mjs` (`npm run validate:infra`
+checks this), and a new prefix only protects the bucket once the delivery
+stack is updated with a reviewed change set. The `audio/` prefix for the
+audio tour (October 15, 2026) was added to the template with the site
+change; apply the change set to the delivery stack to bring the deployed
+policy in line. `tools/validate-site.py` fails the build if
 any page references a media URL missing from `data/media.json`, or if media
 files appear in `dist/`.
 

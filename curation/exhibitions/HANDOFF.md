@@ -242,6 +242,10 @@ Open for the collector:
   room's `silentHoldSeconds`; both are one-line changes.
 - The map is the third draft; the collector wants it to read like a printed
   museum map and may want more iteration.
+- The delivery stack's write-once policy needs a reviewed change set so it
+  also covers the new `audio/` prefix; `infra/delivery.json` already lists
+  it. Until then a site deploy is not blocked from writing `audio/` keys,
+  though nothing in the deploy writes there.
 - The audio key in the local `.env` expires about seven days after October
   15, 2026. A changed segment needs a re-render on the Mac before then or a
   new key after.
