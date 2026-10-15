@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+import tokens from '../../data/tokens.json' with { type: 'json' };
 
 const explorers = new Map([
   [1, 'https://etherscan.io'],
@@ -15,19 +15,18 @@ export function tokenUrl(chainId: number, contract: string, tokenId: string) {
   return `${explorer}/token/${contract}?a=${tokenId}`;
 }
 
-interface OwnedToken {
+// Link to collected token identities, independently of drawing CIDs or titles.
+// data/tokens.json is extracted from the archive by tools/build-token-links.py.
+type OwnedToken = {
   chainId: number;
   contract: string;
   tokenId: string;
   owner: string;
-}
-
-// Link to collected token identities, independently of drawing CIDs or titles.
-export function readProvenance(provenancePath: string) {
-  const record: { ownedTokens: OwnedToken[] } = JSON.parse(
-    fs.readFileSync(provenancePath, 'utf8'),
-  );
-  return record.ownedTokens.map((token) => ({
+};
+export function ownedTokens(inkId: string) {
+  const owned = (tokens as Record<string, OwnedToken[]>)[inkId];
+  if (!owned) throw new Error(`No owned tokens recorded for ${inkId}`);
+  return owned.map((token) => ({
     ...token,
     url: tokenUrl(token.chainId, token.contract, token.tokenId),
   }));

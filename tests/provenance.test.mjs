@@ -1,12 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import os from 'node:os';
-import path from 'node:path';
-import { readProvenance, tokenUrl } from '../src/lib/provenance.ts';
+import { ownedTokens, tokenUrl } from '../src/lib/provenance.ts';
 
 const contract = '0xcf964c89f509a8c0ac36391c5460df94b91daba5';
-const wallet = '0xf872525e4dba6ca8418fe5319b5959de7b947a37';
 
 test('NFT links retain exact token identities including large Polygon IDs', () => {
   const id =
@@ -28,31 +25,16 @@ test('NFT links retain exact token identities including large Polygon IDs', () =
   assert.throws(() => tokenUrl(100, 'not-a-contract', '42'));
 });
 
-test('collected instances use archived token identities without loading transaction histories', () => {
-  const folder = fs.mkdtempSync(path.join(os.tmpdir(), 'nnxyz-nft-link-'));
-  try {
-    const filename = path.join(folder, 'artwork.json');
-    const tokens = [
-      { chainId: 100, contract, tokenId: '42', owner: wallet },
-      { chainId: 1, contract, tokenId: '42', owner: wallet },
-    ];
-    fs.writeFileSync(
-      filename,
-      JSON.stringify({
-        ownedTokens: tokens,
-        sourceRecords: [{ historyPath: 'unavailable-history.json' }],
-      }),
-    );
-    const links = readProvenance(filename);
-    assert.equal(links.length, 2);
-    assert.notEqual(
-      links[0].url,
-      links[1].url,
-      'Equal token numbers on different chains remain separate instances',
-    );
-    assert.equal(links[0].owner, wallet);
-    assert.equal(links[0].url, `https://gnosisscan.io/token/${contract}?a=42`);
-  } finally {
-    fs.rmSync(folder, { recursive: true });
-  }
+test('collected instances link every extracted token identity', () => {
+  const tokens = JSON.parse(fs.readFileSync('data/tokens.json', 'utf8'));
+  const [cid, owned] = Object.entries(tokens).find(([, t]) => t.length > 1);
+  const links = ownedTokens(cid);
+  assert.equal(links.length, owned.length);
+  assert.equal(
+    new Set(links.map((link) => link.url)).size,
+    links.length,
+    'Each owned edition keeps its own token link',
+  );
+  assert.equal(links[0].owner, owned[0].owner);
+  assert.throws(() => ownedTokens('QmNotInTheCollection'));
 });

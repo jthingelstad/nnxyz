@@ -1,0 +1,55 @@
+name: Verify archive
+# Restores the private source archive (about 1.8 GB) to check it, the curation
+# built from it, and the published SVGs against the raw strokes. Routine site
+# deploys never need the archive, so this runs by hand, on pull requests that
+# change curation or archive data, and before deploying such a change to main.
+on:
+  workflow_dispatch:
+  # ci.yml calls this before deploying a main push that changes these paths.
+  workflow_call:
+  pull_request:
+    paths:
+      - 'curation/**'
+      - 'data/gallery.json'
+      - 'data/abstract.json'
+      - 'data/tokens.json'
+      - 'infra/dataset*.json'
+      - 'infra/abstract-dataset*.json'
+      - 'tools/verify-collection.py'
+      - 'tools/verify-abstract.py'
+      - 'tools/verify-curation-catalog.py'
+      - 'tools/build-token-links.py'
+      - 'tools/hydrate-collection.mjs'
+permissions:
+  contents: read
+jobs:
+  archive:
+    name: Archive and curation verification
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6.3.0
+        with:
+          role-to-assume: ${{ vars.AWS_BUILD_ROLE_ARN }}
+          aws-region: us-east-1
+      - run: npm run hydrate
+      - run: npm run validate:collection
+      - run: npm run validate:curation
+      - name: Token links match the archive
+        run: python3 tools/build-token-links.py && git diff --exit-code data/tokens.json
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:ci-browser

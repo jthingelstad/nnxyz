@@ -5,8 +5,7 @@ import sharp from 'sharp';
 
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const catalog = JSON.parse(await fs.readFile('data/abstract.json', 'utf8'));
-const output = 'public/abstract';
-const requirePrebuilt = process.argv.includes('--require-prebuilt');
+const output = 'media/abstract';
 await fs.mkdir(`${output}/images`, { recursive: true });
 await fs.mkdir(`${output}/originals`, { recursive: true });
 await fs.mkdir(`${output}/records`, { recursive: true });
@@ -59,10 +58,6 @@ for (const work of catalog.artworks) {
       old?.sourceSHA256 !== work.imageSHA256 ||
       hash(bytes) !== oldImage?.sha256
     ) {
-      if (requirePrebuilt)
-        throw new Error(
-          `Missing or changed prebuilt WebP: ${filename}; regenerate the derived snapshot`,
-        );
       bytes = await sharp(original)
         .resize({ width, withoutEnlargement: true })
         .webp({ quality: recipe.quality, effort: recipe.effort })

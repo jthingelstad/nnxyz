@@ -4,7 +4,7 @@ import Icon from './Icon.astro';
 import Kudos from './Kudos.astro';
 import DrawingViewer from './DrawingViewer.astro';
 import ProvenanceNote from './ProvenanceNote.astro';
-import { readProvenance } from '../lib/provenance';
+import { ownedTokens } from '../lib/provenance';
 import {
   galleryHome,
   exhibitionStops,
@@ -31,7 +31,7 @@ const previous = sequence[position - 1];
 const next = sequence[position + 1];
 const numbered = label.collectionContext.numberedOwnedNeighbors;
 const reading = label.curatorialReading.text;
-const tokens = readProvenance(work.provenancePath);
+const tokens = ownedTokens(work.inkId);
 ---
 
 <Layout

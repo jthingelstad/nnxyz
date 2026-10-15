@@ -1,7 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { gunzipSync } from 'node:zlib';
-import { prepareObject, publicationOrder } from '../tools/delivery-plan.mjs';
+import {
+  isMediaKey,
+  prepareObject,
+  publicationOrder,
+} from '../tools/delivery-plan.mjs';
 test('Compression preserves a large SVG byte for byte and labels it correctly', () => {
   const original = Buffer.from(
     '<svg>' + '<path d="M 1 2 L 3 4"/>'.repeat(500000) + '</svg>',
@@ -68,17 +72,29 @@ test('robots.txt and sitemaps publish compressed with page caching', () => {
     assert.match(result.CacheControl, /max-age=0/);
   }
 });
-test('Archived originals are immutable and derived WebPs revalidate daily', () => {
+test('Write-once media is immutable and only media keys count as media', () => {
   const bytes = Buffer.from([1, 2, 3]);
-  for (const key of ['png/work.png', 'abstract/originals/work.jpg'])
+  for (const key of [
+    'art/work.svg',
+    'png/work.png',
+    'raster/work-320.webp',
+    'records/work.metadata.json',
+    'abstract/images/work-640.webp',
+    'abstract/originals/work.jpg',
+    'abstract/records/work.json',
+  ]) {
+    assert.ok(isMediaKey(key), key);
     assert.match(prepareObject(key, bytes).CacheControl, /immutable/);
-  for (const key of ['raster/work-320.webp', 'abstract/images/work-640.webp'])
-    assert.equal(
-      prepareObject(key, bytes).CacheControl,
-      'public,max-age=86400,stale-while-revalidate=604800',
-    );
+  }
+  for (const key of [
+    'index.html',
+    'artworks/work/index.html',
+    'abstract/index.html',
+    'favicon.svg',
+  ])
+    assert.ok(!isMediaKey(key), key);
   assert.equal(
-    prepareObject('art/work.svg', bytes).CacheControl,
+    prepareObject('favicon.svg', bytes).CacheControl,
     'public,max-age=3600',
   );
 });

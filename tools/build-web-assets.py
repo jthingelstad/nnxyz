@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Derive public media without modifying imported source artwork."""
+"""Derive published media into media/ without modifying imported source artwork."""
 
 import hashlib
 import importlib.util
@@ -8,16 +8,16 @@ from pathlib import Path
 import shutil
 
 ROOT = Path(__file__).resolve().parent.parent
-PUBLIC = ROOT / "public"
+MEDIA = ROOT / "media"
 spec = importlib.util.spec_from_file_location("archive_svg", ROOT / "tools/export-svg.py")
 exporter = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(exporter)
 
 
-def build(require_prebuilt=False):
+def build():
     for name in ["art", "png", "records"]:
-        (PUBLIC / name).mkdir(parents=True, exist_ok=True)
-    old_path = PUBLIC / "asset-manifest.json"
+        (MEDIA / name).mkdir(parents=True, exist_ok=True)
+    old_path = MEDIA / "asset-manifest.json"
     old = json.loads(old_path.read_text()) if old_path.exists() else {}
     previous = {x["id"]: x for x in old.get("artworks", [])}
     version = hashlib.sha256((ROOT / "tools/export-svg.py").read_bytes()).hexdigest()
@@ -26,7 +26,7 @@ def build(require_prebuilt=False):
         cid = item["inkId"]
         raw = (ROOT / item["strokesPath"]).read_bytes()
         source_hash = hashlib.sha256(raw).hexdigest()
-        output = PUBLIC / "art" / f"{cid}.svg"
+        output = MEDIA / "art" / f"{cid}.svg"
         prev = previous.get(cid, {})
         if not (
             output.exists()
@@ -34,15 +34,11 @@ def build(require_prebuilt=False):
             and old.get("exporterSHA256") == version
             and prev.get("svgSHA256") == hashlib.sha256(output.read_bytes()).hexdigest()
         ):
-            if require_prebuilt:
-                raise ValueError(
-                    f"Missing or changed prebuilt SVG: {cid}; regenerate the derived snapshot"
-                )
             output.write_text(exporter.svg(json.loads(raw), item["name"]))
         for key, dest in [
-            ("imagePath", PUBLIC / "png" / f"{cid}.png"),
-            ("metadataPath", PUBLIC / "records" / f"{cid}.metadata.json"),
-            ("provenancePath", PUBLIC / "records" / f"{cid}.provenance.json"),
+            ("imagePath", MEDIA / "png" / f"{cid}.png"),
+            ("metadataPath", MEDIA / "records" / f"{cid}.metadata.json"),
+            ("provenancePath", MEDIA / "records" / f"{cid}.provenance.json"),
         ]:
             source = ROOT / item[key]
             if (
@@ -71,8 +67,4 @@ def build(require_prebuilt=False):
 
 
 if __name__ == "__main__":
-    import argparse
-
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--require-prebuilt", action="store_true")
-    build(parser.parse_args().require_prebuilt)
+    build()

@@ -12,7 +12,6 @@ for (const [config, bundle, destination] of [
     '.build/abstract-collection.tar.gz',
     'collection',
   ],
-  ['infra/derived-dataset.json', '.build/derived-assets.tar.gz', 'public'],
 ]) {
   const dataset = JSON.parse(await fs.readFile(config, 'utf8'));
   const { Body } = await client.send(
@@ -36,6 +35,4 @@ for (const [config, bundle, destination] of [
     { stdio: 'inherit' },
   );
 }
-console.log(
-  'Source collection and pinned derivatives ready; original archive unchanged.',
-);
+console.log('Source collection ready; original archive unchanged.');

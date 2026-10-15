@@ -1,15 +1,24 @@
 #!/usr/bin/env python3
-"""Validate generated routes, links, metadata, and every native vector asset."""
+"""Validate generated routes, links and metadata, and that every media URL is published."""
 
-import hashlib
 from html.parser import HTMLParser
 import json
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
-import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
+# Same prefixes as tools/delivery-plan.mjs. Media is published once and only
+# referenced; it must never be part of the built site.
+MEDIA_PREFIXES = (
+    "art/",
+    "png/",
+    "raster/",
+    "records/",
+    "abstract/images/",
+    "abstract/originals/",
+    "abstract/records/",
+)
 
 
 class Page(HTMLParser):
@@ -39,6 +48,10 @@ def main():
     gallery = json.loads((ROOT / "data/gallery.json").read_text())
     abstract = json.loads((ROOT / "data/abstract.json").read_text())["artworks"]
     pages = sorted(DIST.rglob("*.html"))
+    media = json.loads((ROOT / "data/media.json").read_text())["objects"]
+    built = [str(path.relative_to(DIST)) for path in DIST.rglob("*") if path.is_file()]
+    assert not [key for key in built if key.startswith(MEDIA_PREFIXES)], "Media in the build"
+    referenced = set()
     exhibitions = json.loads((ROOT / "curation/exhibitions/map.json").read_text())
     rooms = [g for c in exhibitions["collections"] for g in c["galleries"]]
     recovered_exhibitions = json.loads((ROOT / "curation/abstract/exhibitions.json").read_text())
@@ -72,6 +85,11 @@ def main():
             url = urlsplit(ref)
             if url.scheme or url.netloc or not url.path:
                 continue
+            key = unquote(url.path).lstrip("/")
+            if url.path.startswith("/") and key.startswith(MEDIA_PREFIXES):
+                assert key in media, f"Unpublished media in {path}: {ref}"
+                referenced.add(key)
+                continue
             target = (
                 DIST / unquote(url.path).lstrip("/")
                 if url.path.startswith("/")
@@ -81,44 +99,21 @@ def main():
             if url.path.endswith("/"):
                 target /= "index.html"
             assert target.is_file(), f"Broken local link in {path}: {ref}"
-    manifest = json.loads((DIST / "asset-manifest.json").read_text())
-    byid = {x["id"]: x for x in manifest["artworks"]}
-    assert len(byid) == len(gallery)
     for work in gallery:
         cid = work["inkId"]
-        svg = DIST / "art" / f"{cid}.svg"
-        tree = ET.parse(svg)
-        namespace = "{http://www.w3.org/2000/svg}"
-        assert len(tree.findall(".//" + namespace + "path")) == work["strokes"], cid
-        assert not tree.findall(".//" + namespace + "image"), "Raster content in SVG"
-        assert hashlib.sha256(svg.read_bytes()).hexdigest() == byid[cid]["svgSHA256"], cid
-        for name, suffix in [
-            ("png", ".png"),
-            ("records", ".metadata.json"),
-            ("records", ".provenance.json"),
-        ]:
-            assert (DIST / name / (cid + suffix)).is_file(), cid
         assert (DIST / "artworks" / cid / "index.html").is_file(), cid
-    recovered_manifest = json.loads((DIST / "abstract/asset-manifest.json").read_text())
-    recovered_by_id = {entry["id"]: entry for entry in recovered_manifest["artworks"]}
-    assert len(recovered_by_id) == len(abstract)
+        for key in [f"art/{cid}.svg", f"png/{cid}.png", f"raster/{cid}-640.webp"]:
+            assert key in referenced, f"Artwork media not used: {key}"
     for work in abstract:
         page = DIST / "artworks" / work["id"] / "index.html"
         assert page.is_file()
         assert "data-viewer" not in page.read_text(), "Replay exposed for a raster work"
-        entry = recovered_by_id[work["id"]]
-        original = DIST / entry["originalPath"].lstrip("/")
-        assert hashlib.sha256(original.read_bytes()).hexdigest() == work["imageSHA256"]
-        for image in entry["images"]:
-            target = DIST / image["path"].lstrip("/")
-            assert hashlib.sha256(target.read_bytes()).hexdigest() == image["sha256"]
-        assert (DIST / "abstract/records" / (work["id"] + ".json")).is_file()
+        assert media[f"abstract/originals/{work['id']}.jpg"] == work["imageSHA256"]
     print(
         json.dumps(
             {
                 "pages": len(pages),
-                "nativeSVGs": len(gallery),
-                "recoveredJPEGs": len(abstract),
+                "mediaReferenced": len(referenced),
                 "brokenLinks": 0,
             },
             indent=2,

@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 
 export async function checkProvenance(browser, base, output) {
   const catalog = JSON.parse(await fs.readFile('data/gallery.json', 'utf8'));
+  const tokens = JSON.parse(await fs.readFile('data/tokens.json', 'utf8'));
   const abstract = JSON.parse(await fs.readFile('data/abstract.json', 'utf8'))
     .artworks[0];
   const samples = [
@@ -64,9 +65,7 @@ export async function checkProvenance(browser, base, output) {
           theme,
         );
         for (const work of samples) {
-          const token = JSON.parse(
-            await fs.readFile(work.provenancePath, 'utf8'),
-          ).ownedTokens[0];
+          const token = tokens[work.inkId][0];
           const explorer =
             token.chainId === 1
               ? 'https://etherscan.io'

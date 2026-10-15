@@ -16,10 +16,10 @@ Offline Nifty Ink curation is complete: all **574 drawings** have verified techn
 
 ```sh
 npm ci
-AWS_PROFILE=cloud-engineer npm run hydrate
-npm run assets
 npm run dev
 ```
+
+Artwork images and downloads are published once and served from CloudFront; the dev server proxies them, so no archive download is needed to work on the site. Hydrating the private archive (`AWS_PROFILE=cloud-engineer npm run hydrate`) is only needed to validate sources and curation or to generate new media. See [publishing media](docs/deployment.md#published-media-is-write-once).
 
 Open http://127.0.0.1:4321/. The entrance pairs a space reserved for the collector’s welcome with a native drawing replay, followed by five collection entrances. Visitors choose galleries within Faces, New Nifty on the Block (NNOTB), Rawblocks, Abstract, or Other & related; there is no global artwork grid. The 31 AI-curated galleries contain 8–30 works, presented in chapters with large individual images, pairs, optional readings and a closing question. A quiet Dark/Light header switch changes the gallery surround between white and black and remembers the visitor’s choice. Nifty Ink detail pages offer native SVG, continuous stroke playback, speed/seek controls, enlargement, AI reading, owned collection position, related works and downloadable metadata/provenance. Abstract pages offer responsive raster images, enlargement, AI readings, source records and byte-exact original JPEG downloads; they expose no replay or SVG controls. The collector’s new welcome is deferred. Existing artwork URLs remain stable; previous/next and return links follow each drawing’s exhibition home. The earlier short-walk pages were retired on October 14, 2026; their route records remain in the curation catalog. Other nnxyz and Scrimshaw are sections of Other & related, and their former standalone URLs redirect there.
 
@@ -113,4 +113,4 @@ The stroke data preserves geometry, colors, brush radii and drawing order, with 
 
 `curation/abstract/` contains 52 directly inspected AI readings, three exhibitions of 18/17/17 works, image-review fingerprints and recovery evidence. This session used direct assistant image inspection, without a separate review-model call or individual human approval. Existing Nifty Ink editorial records and timestamps remain unchanged. `curation/collection-history.json` attributes historical context and the NNOTB expansion to the earlier collector gallery; its four additional NNOTB CIDs remain a reconciliation queue, not imported works.
 
-`npm run assets` derives 640/1200/2000-pixel WebPs outside `collection/`, preserves the original JPEG bytes for downloads and records output hashes. No stroke data, making-time measurements or native SVG are inferred for Abstract.
+`npm run media:generate` derived 640/1200/2000-pixel WebPs outside `collection/` and kept the original JPEG bytes for downloads; both are published once and recorded in `data/media.json`. No stroke data, making-time measurements or native SVG are inferred for Abstract.

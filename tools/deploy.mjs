@@ -13,7 +13,12 @@ import { STSClient, GetCallerIdentityCommand } from '@aws-sdk/client-sts';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-import { publicationOrder, prepareObject } from './delivery-plan.mjs';
+import {
+  isMediaKey,
+  mediaPrefixes,
+  publicationOrder,
+  prepareObject,
+} from './delivery-plan.mjs';
 const config = JSON.parse(await fs.readFile('infra/deployment.json', 'utf8'));
 if (
   process.env.GITHUB_REPOSITORY !== 'jthingelstad/nnxyz' ||
@@ -59,7 +64,8 @@ for await (const page of paginateListObjectsV2(
   { client: s3 },
   { Bucket: config.siteBucket },
 ))
-  for (const item of page.Contents || []) existing.add(item.Key);
+  for (const item of page.Contents || [])
+    if (!isMediaKey(item.Key)) existing.add(item.Key);
 async function files(folder) {
   let result = [];
   for (const entry of await fs.readdir(folder, { withFileTypes: true })) {
@@ -72,6 +78,10 @@ async function files(folder) {
   return result;
 }
 const ordered = publicationOrder(await files('dist'));
+// Media is published once by tools/media.mjs; deploys only publish pages.
+const media = ordered.filter(isMediaKey);
+if (media.length)
+  throw new Error(`Media in the site build: ${media.slice(0, 5).join(', ')}`);
 let uploaded = 0,
   unchanged = 0;
 async function upload(key) {
@@ -109,12 +119,32 @@ for (const group of [
   );
 }
 await upload('revision.json');
+// Refresh pages, never media: wildcards for folders that hold only pages,
+// exact paths where a folder also holds media (abstract/).
+const mediaFolders = new Set(
+  mediaPrefixes.map((prefix) => prefix.split('/')[0]),
+);
+const paths = [
+  ...new Set(
+    ordered
+      .filter((key) => !key.startsWith('_astro/'))
+      .flatMap((key) => {
+        const [folder] = key.split('/');
+        if (folder === key)
+          return key === 'index.html' ? ['/', `/${key}`] : [`/${key}`];
+        if (!mediaFolders.has(folder)) return [`/${folder}/*`];
+        return key.endsWith('/index.html')
+          ? [`/${key.slice(0, -'index.html'.length)}`, `/${key}`]
+          : [`/${key}`];
+      }),
+  ),
+];
 const invalidation = await cdn.send(
   new CreateInvalidationCommand({
     DistributionId: config.distributionId,
     InvalidationBatch: {
       CallerReference: `${process.env.GITHUB_RUN_ID}-${process.env.GITHUB_RUN_ATTEMPT}`,
-      Paths: { Quantity: 1, Items: ['/*'] },
+      Paths: { Quantity: paths.length, Items: paths },
     },
   }),
 );
