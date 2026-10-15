@@ -53,7 +53,7 @@ for c in C.CHAPTERS:
                     text=w.get('text'), caption=w['caption'], reading=w['reading'], facts=facts(src))
         assert (item['text'] is None) == (w['treatment'] == 'none'), w['short']
         if w.get('compare'):
-            item['compareWith'] = dict(artworkId=BY[w['compare']]['artworkId'] if w['compare'] in BY else BYID[w['compare']], short=w.get('compareShort', w['compare']))
+            item['compareWith'] = dict(artworkId=(BY[w['compare']] if w['compare'] in BY else BYID[w['compare']])['artworkId'], short=w.get('compareShort', w['compare']))
         works.append(item)
     chapters.append(dict(key=c['key'], title=c['title'], opening=c['opening'], works=works))
 
@@ -73,7 +73,7 @@ for r in getattr(C, 'RELATED', []):
     related.append(item)
     segs.append(dict(kind='related', artworkId=item['artworkId'], text=item['text']))
 closing = dict(kind='closing', artworkId=chapters[-1]['works'][-1]['artworkId'], text=C.CLOSING)
-if getattr(C, 'CLOSING_SECOND', None): closing['secondArtworkId'] = BY[C.CLOSING_SECOND]['artworkId'] if C.CLOSING_SECOND in BY else BYID[C.CLOSING_SECOND]
+if getattr(C, 'CLOSING_SECOND', None): closing['secondArtworkId'] = (BY[C.CLOSING_SECOND] if C.CLOSING_SECOND in BY else BYID[C.CLOSING_SECOND])['artworkId']
 segs.append(closing)
 
 def words(t): return len(re.findall(r"[A-Za-z0-9#']+", t))
@@ -97,13 +97,13 @@ out = dict(
     id=f'{C.WING}--{C.PART}--{C.GALLERY}' if C.PART else f'{C.WING}--{C.GALLERY}',
     collectionId=S['collectionId'], partKey=C.PART or None, galleryKey=C.GALLERY,
     structureFile=f'curation/exhibitions/structure/{C.WING}.json', title=gal['title'],
-    status='draft-for-collector-review',
+    status=getattr(C, 'STATUS', 'draft-for-collector-review'),
     writtenAt=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
     voice='Unsigned gallery voice; curation/voice/style-guide.md',
     dateBasis='UTC, from the archived creation timestamp' if any(w['facts']['recordedAt'] for c in chapters for w in c['works']) else 'No per-work dates; title order',
     method='Every work in the room was inspected directly from the published WebP at 640 px in room order and as one wall before writing. Numbers come from data/gallery.json or data/abstract.json. No model inference calls were made; the text was written by the assistant in the session.',
     scope=f'The owned subset: the {len(order)} works the locked structure places in this room, in room order.',
-    introduction=list(C.INTRO), chapters=chapters, relatedItems=related, closing=C.CLOSING,
+    introduction=list(C.INTRO), chapters=chapters, relatedItems=related, closing=C.CLOSING, collectorDecisions=getattr(C, 'DECISIONS', []),
     tour=dict(segments=segs, spokenWords=spoken, silentHoldSeconds=holds, estimatedMinutesAt150wpm=round(spoken / 150 + holds / 60, 1), spokenFormsFile='curation/voice/pronunciation.json'),
     checks=dict(treatmentCounts=counts, captionMaxWords=20, captionProblems=problems, habitWordHits=habit_hits, lineOpeners=dict(starts.most_common(4)),
                 everyWorkHasCaptionAndReading=all(w['caption'] and w['reading'] for c in chapters for w in c['works'])),

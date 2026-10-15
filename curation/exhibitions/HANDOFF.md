@@ -144,6 +144,21 @@ the record of what was asked.
 4. **Write every gallery,** wing by wing, plus the wing and part
    introductions. Then do one editing pass in page order to remove repeats.
    Rewrites go in `curation/exhibitions/rewrite/`.
+   - Done October 15, 2026, for all 28 rooms (27 plus the coda) and the wing
+     and part introductions in `rewrite/wings.json`. Each room is a content
+     module in `rewrite/working/content/` assembled by
+     `rewrite/working/assemble.py`, which checks room order, caption length,
+     habit words, tour length and page directions; `recaption.py` swaps
+     captions from a checked list; `review-page.py` renders one or more
+     rewrite files as a review page with the images. Tours run 7 to 9
+     minutes a room (Scribbled Heads and the two Masks rooms are longest).
+     The editing pass so far is light: the "It is the first" construction
+     still appears about 35 times across the site and "like a" about 75
+     times in 34,000 spoken words; a page-order read for repeats is still
+     owed before the text goes live. Review pages (private artifacts):
+     NNOTB part 1 <https://claude.ai/artifact/FP22mn2GY6BnZQoAfrpZg3>, parts 2 and 3
+     <https://claude.ai/artifact/5rRpXDKJsgKZ5Yngi2PcUr>, Faces <https://claude.ai/artifact/EjrMVjrrTuAKqJxry78UF8>,
+     the rest <https://claude.ai/artifact/GuzCegaGfP6wNS7eJSBvoQ>.
 5. **Wire the new structure into the Astro site** on the branch, including the
    map page.
    - Keep existing artwork URLs stable.
