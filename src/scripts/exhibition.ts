@@ -18,9 +18,17 @@ export function initExhibition() {
       section.hidden = atClosing || section !== chapter;
     closing.hidden = !atClosing;
     for (const link of links) {
-      if (!atClosing && link.dataset.chapterLink === chapter.dataset.chapter)
+      if (!atClosing && link.dataset.chapterLink === chapter.dataset.chapter) {
         link.setAttribute('aria-current', 'step');
-      else link.removeAttribute('aria-current');
+        // Keep the active chapter in view within the phone's horizontal nav,
+        // without moving the page away from the selected artwork or heading.
+        const nav = link.parentElement!;
+        const item = link.getBoundingClientRect();
+        const bounds = nav.getBoundingClientRect();
+        if (item.left < bounds.left) nav.scrollLeft -= bounds.left - item.left;
+        else if (item.right > bounds.right)
+          nav.scrollLeft += item.right - bounds.right;
+      } else link.removeAttribute('aria-current');
     }
     exhibition!.dataset.currentChapter = atClosing
       ? 'closing'

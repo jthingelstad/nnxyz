@@ -31,6 +31,7 @@
 }
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 body {
   margin: 0;
@@ -128,9 +129,15 @@ p {
 }
 .site-header nav {
   display: flex;
+  align-items: center;
   gap: 36px;
   font-size: 15px;
   color: var(--body-text);
+}
+.site-header nav > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 body:has(.gallery-grid) .site-header {
   margin-inline: 4vw;
@@ -297,7 +304,8 @@ body:has(.gallery-grid) .wordmark {
   align-items: center;
   gap: 14px;
   white-space: nowrap;
-  min-height: 34px;
+  min-height: 44px;
+  min-inline-size: 154px;
 }
 .play-button [data-play-icon] {
   width: 30px;
@@ -310,7 +318,7 @@ body:has(.gallery-grid) .wordmark {
   cursor: pointer;
   appearance: none;
   background: transparent;
-  height: 32px;
+  height: 44px;
 }
 .scrubber::-webkit-slider-runnable-track {
   height: 4px;
@@ -342,13 +350,20 @@ body:has(.gallery-grid) .wordmark {
   appearance: none;
   border: 0;
   background: transparent;
-  padding: 8px 0;
-  min-width: 30px;
+  padding: 8px 18px 8px 4px;
+  min-width: 44px;
+  min-height: 44px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%23666' stroke-width='1.2'%3E%3Cpath d='m2 2 4 4 4-4'/%3E%3C/svg%3E")
+    right 3px center / 10px 7px no-repeat;
   text-align: center;
   cursor: pointer;
 }
 .reset-button {
-  padding: 4px;
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px;
 }
 .player-status {
   color: var(--muted);
@@ -387,14 +402,18 @@ body:has(.gallery-grid) .wordmark {
   font-size: 14px;
   color: var(--muted);
 }
+.work-actions > button {
+  min-height: 44px;
+}
 .work-actions [data-enlarge] {
-  display: none;
+  display: inline-flex;
 }
 .work-actions button[data-enlarge] {
   align-items: center;
   gap: 10px;
 }
 .curator-reading {
+  max-width: 70ch;
   margin-top: 26px;
 }
 .curator-reading h2 {
@@ -540,6 +559,23 @@ dd {
 .notice[hidden] {
   display: none;
 }
+body:has(.enlargement[open]) {
+  overflow: hidden;
+}
+.fullscreen-exit {
+  display: none;
+}
+.work-viewer:fullscreen .fullscreen-exit {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  background: var(--background);
+  z-index: 1;
+}
 .enlargement {
   padding: 40px;
   border: 0;
@@ -571,7 +607,9 @@ dd {
   position: absolute;
   top: 15px;
   right: 20px;
-  padding: 8px;
+  padding: 11px;
+  min-width: 44px;
+  min-height: 44px;
 }
 .work-viewer:fullscreen {
   background: var(--background);
@@ -715,7 +753,8 @@ dd {
   }
   .play-button {
     gap: 10px;
-    min-height: 24px;
+    min-height: 44px;
+    min-inline-size: 112px;
   }
   .play-button [data-play-icon] {
     width: 17px;
@@ -728,7 +767,7 @@ dd {
   }
   .player select {
     font-size: 14px;
-    min-width: 25px;
+    min-width: 44px;
   }
   .reset-button {
     display: none;
@@ -780,8 +819,8 @@ dd {
     margin-bottom: 4px;
   }
   .curator-reading p {
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 15px;
+    line-height: 1.65;
   }
   .collection-position {
     font-size: 12px;
@@ -820,7 +859,7 @@ dd {
     height: 90px;
   }
   .related-work p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .collection-footer {
     margin: 70px 5vw 50px;
@@ -850,7 +889,7 @@ dd {
   align-items: center;
   gap: 7px;
   color: inherit;
-  min-height: 24px;
+  min-height: 44px;
 }
 .theme-toggle[hidden] {
   display: none;
@@ -954,6 +993,22 @@ dd {
   object-fit: contain;
   aspect-ratio: 1;
   background: #fff;
+}
+.collection-entrance,
+.exhibition-entrance,
+.related-work {
+  min-width: 0;
+}
+.collection-entrance:hover,
+.exhibition-entrance:hover,
+.related-work:hover {
+  text-decoration: none;
+}
+.collection-entrance:hover h2,
+.exhibition-entrance:hover h3,
+.related-work:hover h3 {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 .collection-entrance h2 {
   margin: 15px 0 8px;
@@ -1351,7 +1406,7 @@ dd {
     gap: 30px;
   }
   .exhibition-entrance:not(.featured-gallery) {
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: clamp(72px, 25vw, 100px) minmax(0, 1fr);
   }
   .gallery-choices {
     margin-top: 48px;
@@ -1399,7 +1454,7 @@ dd {
     margin-top: 1px;
   }
   .player .reset-button {
-    display: block;
+    display: grid;
   }
   .player .play-button svg {
     fill: none;
@@ -1439,5 +1494,17 @@ dd {
   .site-header {
     width: 86vw;
     margin-inline: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .entrance-drawing .player {
+    gap: 6px;
+  }
+  .entrance-drawing .play-button {
+    min-inline-size: 116px;
+  }
+  .exhibition-note {
+    font-size: 15px;
   }
 }

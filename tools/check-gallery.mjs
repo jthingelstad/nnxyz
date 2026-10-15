@@ -324,6 +324,7 @@ try {
   });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   for (const [width, height] of [
+    [320, 740],
     [390, 844],
     [443, 887],
     [768, 1024],
@@ -349,6 +350,17 @@ try {
       );
     }
     if (width === 390) {
+      await go(`${galleryURL}#chapter-5`);
+      await waitChapter('5');
+      const activeChapterVisible = await page
+        .locator('.chapter-nav a[aria-current]')
+        .evaluate((link) => {
+          const item = link.getBoundingClientRect();
+          const nav = link.parentElement.getBoundingClientRect();
+          return item.left >= nav.left - 1 && item.right <= nav.right + 1;
+        });
+      assert.ok(activeChapterVisible, 'The active phone chapter stays in view');
+      await go(galleryURL);
       await page.screenshot({
         path: path.join(output, 'first-gallery-mobile.png'),
         fullPage: true,
@@ -371,6 +383,14 @@ try {
   await go(`/artworks/${face}/`);
   await waitArt();
   await page.screenshot({ path: path.join(output, 'artwork-desktop.png') });
+  await page
+    .getByRole('button', { name: 'Enlarge', exact: true })
+    .press('Enter');
+  await page.waitForFunction(() => Boolean(document.fullscreenElement));
+  await page
+    .getByRole('button', { name: 'Exit fullscreen', exact: true })
+    .click();
+  await page.waitForFunction(() => !document.fullscreenElement);
   const before = await page.locator('.art-stage').screenshot();
   await page
     .getByRole('button', { name: 'Watch drawing', exact: true })
@@ -459,6 +479,7 @@ try {
   });
 
   for (const [width, height] of [
+    [320, 740],
     [390, 844],
     [443, 887],
     [768, 1024],
@@ -736,6 +757,7 @@ try {
     'Dark-mode replay must restore the same artwork',
   );
   for (const [width, height] of [
+    [320, 740],
     [390, 844],
     [768, 1024],
     [1440, 900],

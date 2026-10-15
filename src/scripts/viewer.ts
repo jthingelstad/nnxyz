@@ -270,6 +270,11 @@ export function initViewer() {
     dialog?.showModal();
   }
   document.querySelector('[data-enlarge]')?.addEventListener('click', enlarge);
+  viewer
+    .querySelector('[data-exit-fullscreen]')
+    ?.addEventListener('click', () => {
+      if (document.fullscreenElement) void document.exitFullscreen();
+    });
   if (dialog)
     viewer.querySelector('.art-stage')!.addEventListener('click', () => {
       if (matchMedia('(min-width: 761px)').matches) enlarge();

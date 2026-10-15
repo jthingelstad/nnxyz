@@ -16,6 +16,13 @@ const title = displayTitle(work);
   data-id={work.inkId}
   data-autoplay={autoplay ? 'true' : undefined}
 >
+  <button
+    class="fullscreen-exit"
+    data-exit-fullscreen
+    aria-label="Exit fullscreen"
+  >
+    <Icon name="close" />
+  </button>
   <div class="art-stage" style={`aspect-ratio:${work.width}/${work.height}`}>
     <img
       class="finished-art"
