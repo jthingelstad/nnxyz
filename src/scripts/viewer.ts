@@ -1,9 +1,5 @@
-import {
-  createTimeline,
-  strokeFraction,
-  advance,
-  type Timeline,
-} from '../lib/timeline';
+import { advance, type Timeline } from '../lib/timeline';
+import { loadDrawing, paintFrame, type Drawing } from './replay';
 
 const playIcon =
   '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M6 3 21 12 6 21Z"/></svg>';
@@ -19,7 +15,7 @@ export function initViewer() {
   const speed = viewer.querySelector<HTMLSelectElement>('[data-speed]')!;
   const status = viewer.querySelector<HTMLElement>('[data-player-status]')!;
   const layer = viewer.querySelector<HTMLElement>('.drawing-art')!;
-  let paths: SVGPathElement[] = [];
+  let drawing: Drawing | undefined;
   let timeline: Timeline;
   let time = 0;
   let playing = false;
@@ -51,28 +47,11 @@ export function initViewer() {
     if (!loaded) {
       loaded = (async () => {
         status.textContent = 'Preparing the drawing…';
-        const response = await fetch(viewer!.dataset.src!);
-        if (!response.ok) throw new Error('SVG could not load');
-        const doc = new DOMParser().parseFromString(
-          await response.text(),
-          'image/svg+xml',
-        );
-        if (
-          doc.querySelector('parsererror') ||
-          doc.documentElement.localName !== 'svg'
-        )
-          throw new Error('Invalid SVG');
-        const svg = document.importNode(doc.documentElement, true);
-        svg.removeAttribute('width');
-        svg.removeAttribute('height');
-        layer.replaceChildren(svg);
-        paths = Array.from(
-          layer.querySelectorAll<SVGPathElement>('path[data-stroke]'),
-        );
-        timeline = createTimeline(paths.map((path) => path.getTotalLength()));
+        drawing = await loadDrawing(viewer!.dataset.src!, layer);
+        timeline = drawing.timeline;
         time = timeline.duration;
         viewer!.dataset.duration = String(timeline.duration);
-        viewer!.dataset.strokeCount = String(paths.length);
+        viewer!.dataset.strokeCount = String(drawing.paths.length);
         status.textContent = '';
       })().catch((error) => {
         loaded = undefined;
@@ -83,42 +62,9 @@ export function initViewer() {
     await loaded;
   }
   function render() {
-    const complete = time >= timeline.duration;
-    if (complete) {
-      viewer!.removeAttribute('data-active');
-      for (const path of paths) {
-        path.style.removeProperty('visibility');
-        path.removeAttribute('stroke-dasharray');
-        path.removeAttribute('stroke-dashoffset');
-      }
-    } else {
-      viewer!.setAttribute('data-active', 'true');
-      for (const [index, path] of paths.entries()) {
-        const span = timeline.spans[index];
-        const fraction = strokeFraction(span, time);
-        if (fraction <= 0) {
-          if (path.style.visibility !== 'hidden')
-            path.style.visibility = 'hidden';
-        } else {
-          if (path.style.visibility) path.style.removeProperty('visibility');
-          if (fraction >= 1 || span.length === 0) {
-            if (path.hasAttribute('stroke-dasharray')) {
-              path.removeAttribute('stroke-dasharray');
-              path.removeAttribute('stroke-dashoffset');
-            }
-          } else {
-            path.setAttribute(
-              'stroke-dasharray',
-              `${span.length} ${span.length + 1}`,
-            );
-            path.setAttribute(
-              'stroke-dashoffset',
-              String(span.length * (1 - fraction)),
-            );
-          }
-        }
-      }
-    }
+    const complete = paintFrame(drawing!, time);
+    if (complete) viewer!.removeAttribute('data-active');
+    else viewer!.setAttribute('data-active', 'true');
     const progress = Math.round((time / timeline.duration) * 1000);
     seek.value = String(progress);
     seek.setAttribute(

@@ -1786,17 +1786,52 @@ body:has(.enlargement[open]) {
   position: absolute;
   inset: 0;
 }
-.saver-image {
+.saver-layer {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
   opacity: 0;
   transition: opacity var(--saver-fade) ease;
 }
-.saver-image.is-front {
+.saver-layer.is-front {
   opacity: 1;
+}
+.saver-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.saver-layer > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.saver-layer > svg {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+@media (max-aspect-ratio: 1/1) {
+  .saver-layer > svg {
+    width: 100%;
+    height: auto;
+  }
+}
+.saver-timing {
+  font-size: 12px;
+  color: var(--subtle);
+}
+.saver[data-mode='still'] .saver-timing {
+  visibility: hidden;
+}
+/* The caption arrives when the drawing is complete. */
+.saver-caption {
+  transition: opacity 600ms;
+}
+.saver[data-complete='false'] .saver-caption {
+  opacity: 0;
 }
 .saver-overlay {
   position: absolute;

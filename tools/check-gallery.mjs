@@ -427,11 +427,23 @@ try {
   ).artworks.length;
   assert.equal(saverCount, catalog.length + abstractCount);
   assert.ok((await page.locator('[data-caption]').textContent()).length > 10);
+  // The front layer holds either a drawing being painted from its strokes
+  // or, for a work without strokes, a decoded still.
   assert.ok(
-    await page
-      .locator('.saver-image.is-front')
-      .evaluate((img) => img.naturalWidth > 0),
-    'The screen saver shows a decoded image',
+    await page.locator('.saver-layer.is-front').evaluate((layer) => {
+      const svg = layer.querySelector('svg');
+      const img = layer.querySelector('img');
+      return Boolean(
+        (svg && svg.querySelectorAll('path[data-stroke]').length) ||
+        (img && img.naturalWidth > 0),
+      );
+    }),
+    'The screen saver shows a drawing or a decoded still',
+  );
+  assert.ok(
+    ['drawing', 'still'].includes(
+      await page.locator('[data-saver]').getAttribute('data-mode'),
+    ),
   );
   const firstShown = await page
     .locator('[data-saver]')

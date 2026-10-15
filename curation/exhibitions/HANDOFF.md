@@ -218,13 +218,19 @@ the record of what was asked.
    their seconds, Escape ends the tour, and the page reads the same without
    it. `tools/validate-site.py` checks every embedded audio key against
    `data/media.json`.
-7. **Screen saver.** Done October 15, 2026: `/screensaver/` shows one work at
-   a time on a twelve-second rotation, shuffled across all 626 works, with a
-   translucent panel of wing, room, title and caption; `#room=<roomId>` or
-   `#wing=<wingId>` limits it, and each room's closing links to its own.
-   Space pauses, arrows step, F or the button enters fullscreen, reduced
-   motion gets cuts instead of crossfades. Images are the 2000 px WebPs;
-   `tools/validate-site.py` checks every one against `data/media.json`.
+7. **Screen saver.** Done October 15, 2026, and reworked the same evening at
+   the collector's request: `/screensaver/` draws each Nifty Ink work stroke
+   by stroke from its archived brush paths at 0.7× the artwork page's
+   reconstructed pace, holds the finished drawing for ten seconds, then
+   moves on; the caption appears when the drawing is complete. Abstract
+   works, which have no strokes, hold as stills for twelve seconds, and so
+   does every work under reduced motion. The replay loader and frame painter
+   are shared with the artwork viewer (`src/scripts/replay.ts`). Shuffled
+   across all 626 works; `#room=<roomId>` or `#wing=<wingId>` limits it, and
+   each room's closing links to its own. Space pauses, arrows step, F or the
+   button enters fullscreen, a hidden tab pauses the clock. A drawing that
+   fails to load falls back to its still. Stills use the 2000 px WebPs;
+   `tools/validate-site.py` checks them against `data/media.json`.
 
 8. **llms.txt and the curator's notes.** Done October 15, 2026, at the
    collector's request: `/llms.txt` (llmstxt.org index of wings, rooms and
