@@ -34,9 +34,7 @@ export async function checkAbstract(browser, base, output) {
   try {
     await page.goto(base + '/');
     assert.equal(await page.locator('.collection-entrance').count(), 5);
-    await page
-      .getByRole('link', { name: /Abstract.*Explore Abstract/ })
-      .click();
+    await page.getByRole('link', { name: /Abstract/ }).click();
     assert.ok(page.url().endsWith('/collections/abstract/'));
     assert.equal(await page.locator('.exhibition-entrance').count(), 3);
     assert.match(
@@ -106,7 +104,9 @@ export async function checkAbstract(browser, base, output) {
         .evaluate((element) => element === document.activeElement),
     );
     assert.ok(await page.locator('#provenance').isVisible());
-    assert.equal(await page.locator('details, summary').count(), 0);
+    assert.equal(await page.locator('#provenance dl').isVisible(), false);
+    await page.locator('#provenance summary').click();
+    assert.ok(await page.locator('#provenance dl').isVisible());
     assert.match(
       await page.locator('#provenance').innerText(),
       /does not establish current/,
@@ -197,7 +197,9 @@ export async function checkAbstract(browser, base, output) {
     assert.equal(await staticPage.locator('[data-chapter]:visible').count(), 5);
     await staticPage.goto(base + artworkURL);
     assert.ok(await staticPage.locator('#provenance').isVisible());
-    assert.equal(await staticPage.locator('details, summary').count(), 0);
+    assert.equal(await staticPage.locator('#provenance dl').isVisible(), false);
+    await staticPage.locator('#provenance summary').click();
+    assert.ok(await staticPage.locator('#provenance dl').isVisible());
     assert.ok(
       await staticPage
         .getByRole('link', { name: 'Download original JPEG' })

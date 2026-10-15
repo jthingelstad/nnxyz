@@ -1,8 +1,8 @@
 :root {
   color-scheme: light;
   --background: #fff;
-  --text: #171717;
-  --body-text: #444;
+  --text: #363636;
+  --body-text: #484848;
   --muted: #555;
   --subtle: #666;
   --focus: #555;
@@ -363,9 +363,13 @@ body:has(.gallery-grid) .wordmark {
 }
 .work-caption {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 25px;
+  gap: 16px 25px;
+}
+.work-caption > :first-child {
+  flex: 1 0 240px;
 }
 .work-caption h1 {
   font-size: 30px;
@@ -428,9 +432,32 @@ body:has(.gallery-grid) .wordmark {
 .provenance {
   color: var(--muted);
   font-size: 14px;
-}
-.provenance {
   margin-top: 36px;
+}
+.provenance summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  min-height: 44px;
+  cursor: pointer;
+  list-style: none;
+}
+.provenance summary::-webkit-details-marker {
+  display: none;
+}
+.provenance summary::after {
+  content: '+';
+  font-size: 18px;
+}
+.provenance[open] summary::after {
+  content: '−';
+}
+.artwork-details-content {
+  padding-top: 12px;
+}
+.artwork-details-content .collection-position {
+  margin-top: 0;
 }
 .provenance p {
   margin-bottom: 20px;
@@ -495,9 +522,6 @@ dd {
   font-size: 14px;
   color: var(--muted);
   margin-block: 7px;
-}
-.related-work span {
-  font-size: 14px;
 }
 .notice {
   position: fixed;
@@ -744,9 +768,6 @@ dd {
   .work-actions [data-enlarge] {
     display: inline-flex;
   }
-  .download-link {
-    display: none;
-  }
   .kudos::before {
     width: 22px;
     height: 22px;
@@ -779,16 +800,6 @@ dd {
   .mobile-neighbor {
     display: inline;
     font-size: 12px;
-  }
-  .work-navigation .related-anchor {
-    flex-basis: 100%;
-    justify-content: space-between;
-    font-size: 15px;
-    padding-top: 8px;
-  }
-  .related-anchor::after {
-    content: '›';
-    font-size: 23px;
   }
   dl {
     grid-template-columns: 1fr;
@@ -1127,12 +1138,6 @@ dd {
   font-size: 13px;
   color: var(--muted);
   margin-top: 4px;
-}
-.watch-work {
-  display: inline-block;
-  font-size: 14px;
-  margin-top: 10px;
-  text-decoration: underline;
 }
 .exhibition-note {
   margin-top: 14px;

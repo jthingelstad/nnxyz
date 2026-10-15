@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import DrawingViewer from '../components/DrawingViewer.astro';
-import Icon from '../components/Icon.astro';
 import {
   byId,
   artworkPath,
@@ -26,8 +25,7 @@ const opening = byId.get('QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5')!;
       <div class="entrance-drawing">
         <DrawingViewer work={opening} autoplay />
         <p class="opening-caption">
-          <a href={artworkPath(opening.inkId)}>{displayTitle(opening)}</a> ·{' '}
-          {opening.artistName}
+          <a href={artworkPath(opening.inkId)}>{displayTitle(opening)}</a>
         </p>
       </div>
     </section>
@@ -48,10 +46,6 @@ const opening = byId.get('QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5')!;
               loading="lazy"
             />
             <h2>{entrance.title}</h2>
-            <span>
-              Explore {entrance.title}
-              <Icon name="right" size={18} />
-            </span>
           </a>
         );
       })}

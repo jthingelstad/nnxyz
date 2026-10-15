@@ -48,23 +48,13 @@ const tokens = readProvenance(work.provenancePath);
       <div class="work-caption">
         <div>
           <h1>{title}</h1>
-          <p class="byline">
-            {work.artistName} · {work.strokes.toLocaleString('en-US')} recorded
-            strokes
-          </p>
+          {work.artistName !== 'nnxyz' && (
+            <p class="byline">{work.artistName}</p>
+          )}
           <ProvenanceNote tokens={tokens} />
         </div>
         <div class="work-actions">
           <Kudos path={artworkPath(work.inkId)} title={title} />
-          <a
-            class="download-link"
-            href={`/art/${work.inkId}.svg`}
-            download={`${title}.svg`}
-            data-tinylytics-event="file.download"
-            data-tinylytics-event-value={work.inkId}
-          >
-            Download SVG
-          </a>
           <button
             data-enlarge
             data-tinylytics-event="artwork.enlarge"
@@ -79,11 +69,6 @@ const tokens = readProvenance(work.provenancePath);
         <h2>AI curator</h2>
         <p>{reading}</p>
       </section>
-      <p class="collection-position">
-        {numbered?.previous && numbered?.next
-          ? `Between ${displayTitle(byId.get(numbered.previous.inkId)!)} and ${displayTitle(byId.get(numbered.next.inkId)!)} in the owned title sequence.`
-          : label.collectionContext.text}
-      </p>
       <p class="gallery-position">
         Work {position + 1} of {sequence.length} in{' '}
         <a href={exhibitionPath(home.id)}>{home.title}</a>.
@@ -115,49 +100,57 @@ const tokens = readProvenance(work.provenancePath);
             <Icon name="right" size={20} />
           </a>
         )}
-        {label.connections.length > 0 && (
-          <a class="related-anchor" href="#related">
-            Related works
-          </a>
-        )}
       </nav>
-      <section
+      <details
         class="provenance"
         id="provenance"
         aria-label="Artwork details and provenance"
       >
-        <p>
-          Playback follows recorded paths and order. Timing is reconstructed;
-          the archive does not record the artist’s speed or pauses.
-        </p>
-        <dl>
-          {label.technical.map((fact) => (
-            <>
-              <dt>{fact.label}</dt>
-              <dd>
-                {typeof fact.value === 'object'
-                  ? `${fact.value.width} × ${fact.value.height}`
-                  : fact.value}
-              </dd>
-            </>
-          ))}
-        </dl>
-        <p class="record-links">
-          <a href={`/records/${work.inkId}.metadata.json`} download>
-            Archived metadata
-          </a>
-          <a href={`/records/${work.inkId}.provenance.json`} download>
-            Ownership &amp; provenance
-          </a>
-          <a href={`/png/${work.inkId}.png`} download>
-            Original PNG
-          </a>
-          <a href={`/art/${work.inkId}.svg`} download={`${title}.svg`}>
-            Native SVG
-          </a>
-        </p>
-        <p>{label.interpretationNotice}</p>
-      </section>
+        <summary>Details &amp; downloads</summary>
+        <div class="artwork-details-content">
+          <p class="collection-position">
+            {numbered?.previous && numbered?.next
+              ? `Between ${displayTitle(byId.get(numbered.previous.inkId)!)} and ${displayTitle(byId.get(numbered.next.inkId)!)} in the owned title sequence.`
+              : label.collectionContext.text}
+          </p>
+          <p>
+            Playback follows recorded paths and order. Timing is reconstructed;
+            the archive does not record the artist’s speed or pauses.
+          </p>
+          <dl>
+            {label.technical.map((fact) => (
+              <>
+                <dt>{fact.label}</dt>
+                <dd>
+                  {typeof fact.value === 'object'
+                    ? `${fact.value.width} × ${fact.value.height}`
+                    : fact.value}
+                </dd>
+              </>
+            ))}
+          </dl>
+          <p class="record-links">
+            <a
+              href={`/art/${work.inkId}.svg`}
+              download={`${title}.svg`}
+              data-tinylytics-event="file.download"
+              data-tinylytics-event-value={work.inkId}
+            >
+              Download SVG
+            </a>
+            <a href={`/records/${work.inkId}.metadata.json`} download>
+              Archived metadata
+            </a>
+            <a href={`/records/${work.inkId}.provenance.json`} download>
+              Ownership &amp; provenance
+            </a>
+            <a href={`/png/${work.inkId}.png`} download>
+              Original PNG
+            </a>
+          </p>
+          <p>{label.interpretationNotice}</p>
+        </div>
+      </details>
       {label.connections.length > 0 && (
         <section
           id="related"
@@ -184,7 +177,6 @@ const tokens = readProvenance(work.provenancePath);
                 <div>
                   <h3>{displayTitle(related)}</h3>
                   <p>{connection.reason}</p>
-                  <span>Follow this connection →</span>
                 </div>
               </a>
             );
