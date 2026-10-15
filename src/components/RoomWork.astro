@@ -1,0 +1,75 @@
+---
+import { displayTitle, artworkPath, thumbnail } from '../lib/catalog';
+import { exhibitionArtwork, type RoomWork } from '../lib/exhibitions';
+interface Props {
+  work: RoomWork;
+  eager?: boolean;
+  /** A related item hung after the room, from another collection. */
+  related?: boolean;
+}
+const { work, eager = false, related = false } = Astro.props;
+const art = exhibitionArtwork(work.artworkId);
+const id = work.artworkId;
+const drawing = 'inkId' in art;
+const compare = work.compareWith
+  ? exhibitionArtwork(work.compareWith.artworkId)
+  : null;
+---
+
+<figure
+  class:list={[
+    'exhibition-work',
+    `treatment-${work.treatment}`,
+    { 'related-item': related },
+  ]}
+  id={`work-${id}`}
+  tabindex="-1"
+>
+  <a
+    class="exhibition-art"
+    href={artworkPath(id)}
+    aria-label={`${drawing ? 'View and watch' : 'View'} ${displayTitle(art)} by ${art.artistName}`}
+  >
+    <img
+      {...thumbnail(art)}
+      sizes={
+        work.treatment === 'label'
+          ? '(max-width: 600px) 90vw, 560px'
+          : '(max-width: 600px) 90vw, 480px'
+      }
+      alt={`${displayTitle(art)} by ${art.artistName}`}
+      width={art.width}
+      height={art.height}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+    />
+  </a>
+  <figcaption>
+    <h3>
+      <a href={artworkPath(id)}>{displayTitle(art)}</a>
+    </h3>
+    {art.artistName !== 'nnxyz' && (
+      <p class="exhibition-artist">{art.artistName}</p>
+    )}
+    {work.text ? (
+      <div class="exhibition-note">
+        <p>{work.text}</p>
+      </div>
+    ) : (
+      <p class="exhibition-caption">{work.caption}</p>
+    )}
+    {compare && work.compareWith && (
+      <a class="compare-link" href={`#work-${work.compareWith.artworkId}`}>
+        <img
+          {...thumbnail(compare)}
+          sizes="56px"
+          alt=""
+          width="56"
+          height="56"
+          loading="lazy"
+        />
+        <span>Compare with {work.compareWith.short}, in this room</span>
+      </a>
+    )}
+  </figcaption>
+</figure>

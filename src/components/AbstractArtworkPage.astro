@@ -7,25 +7,21 @@ import { tokenUrl } from '../lib/provenance';
 import {
   abstractImage,
   abstractOriginal,
-  abstractReadings,
   abstractById,
   type AbstractArtwork,
 } from '../lib/abstract';
 import { artworkPath, displayTitle } from '../lib/catalog';
-import {
-  galleryHome,
-  exhibitionPath,
-  exhibitionStops,
-} from '../lib/exhibitions';
+import { placement, exhibitionPath, roomWorks } from '../lib/exhibitions';
 interface Props {
   work: AbstractArtwork;
 }
 const { work } = Astro.props;
 const title = displayTitle(work);
-const record = abstractReadings.get(work.id)!;
-const home = galleryHome.get(work.id)!;
-const sequence = exhibitionStops(home);
-const position = sequence.findIndex((stop) => stop.artworkId === work.id);
+const place = placement(work.id);
+const home = place.room;
+const sequence = roomWorks(home);
+const position = place.index!;
+const reading = place.work.reading;
 const previous = abstractById.get(sequence[position - 1]?.artworkId);
 const next = abstractById.get(sequence[position + 1]?.artworkId);
 ---
@@ -33,7 +29,7 @@ const next = abstractById.get(sequence[position + 1]?.artworkId);
 <Layout
   title={`${title} — nnxyz`}
   image={abstractImage(work)}
-  description={record.reading}
+  description={reading}
 >
   <a class="back-link" href={`${exhibitionPath(home.id)}#work-${work.id}`}>
     <Icon name="left" size={20} /> Back to {home.title}
@@ -79,11 +75,11 @@ const next = abstractById.get(sequence[position + 1]?.artworkId);
         </div>
       </div>
       <section class="curator-reading" aria-label="Label">
-        <p>{record.reading}</p>
+        <p>{reading}</p>
       </section>
       <p class="gallery-position">
         Work {position + 1} of {sequence.length} in{' '}
-        <a href={exhibitionPath(home.id)}>{home.title}</a>.
+        <a href={exhibitionPath(home.id)}>{home.title}</a>, {home.wingTitle}.
       </p>
       <nav class="work-navigation" aria-label="Artwork navigation">
         {previous ? (
@@ -151,8 +147,8 @@ const next = abstractById.get(sequence[position + 1]?.artworkId);
             <a href={work.sourcePageUrl}>Collector’s earlier gallery</a>
           </p>
           <p>
-            The label is a visual reading, not a claim about the
-            artist’s intentions or making process.
+            The label is a visual reading, not a claim about the artist’s
+            intentions or making process.
           </p>
         </div>
       </details>

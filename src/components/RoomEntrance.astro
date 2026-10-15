@@ -1,0 +1,39 @@
+---
+import { thumbnail, displayTitle } from '../lib/catalog';
+import {
+  representative,
+  exhibitionPath,
+  roomWorks,
+  roomDates,
+  type Room,
+} from '../lib/exhibitions';
+interface Props {
+  room: Room;
+}
+const { room } = Astro.props;
+const work = representative(room);
+const count = roomWorks(room).length;
+const dates = roomDates(room);
+---
+
+<a
+  class:list={['exhibition-entrance', { 'coda-room': room.isCoda }]}
+  href={exhibitionPath(room.id)}
+>
+  <img
+    {...thumbnail(work)}
+    sizes="(max-width: 760px) 30vw, 150px"
+    alt={displayTitle(work)}
+    width={work.width}
+    height={work.height}
+    loading="lazy"
+  />
+  <div>
+    <h3>{room.title}</h3>
+    <p class="gallery-question">{room.theme}</p>
+    <p class="exhibition-meta">
+      {count} {count === 1 ? 'work' : 'works'}
+      {dates ? ` · ${dates}` : ' · shown in title order'}
+    </p>
+  </div>
+</a>

@@ -1,142 +1,188 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
-import ExhibitionWork from '../../components/ExhibitionWork.astro';
+import RoomWork from '../../components/RoomWork.astro';
 import {
-  exhibitions,
+  rooms,
   exhibitionPath,
-  exhibitionStops,
-  exhibitionCollection,
+  roomWorks,
+  roomDates,
+  partOf,
+  nextRoom,
   wingPath,
-  chapterIntroduction,
+  exhibitionArtwork,
+  type RoomWork as Work,
 } from '../../lib/exhibitions';
+import { artworkPath, displayTitle, thumbnail } from '../../lib/catalog';
 export function getStaticPaths() {
-  return exhibitions.map((gallery) => ({
-    params: { gallery: gallery.id },
-    props: { gallery },
+  return rooms.map((room) => ({
+    params: { gallery: room.id },
+    props: { room },
   }));
 }
-const { gallery } = Astro.props;
-const collection = exhibitionCollection(gallery.collectionId);
-const next =
-  collection.galleries[
-    collection.galleries.findIndex((g) => g.id === gallery.id) + 1
-  ];
+const { room } = Astro.props;
+const part = partOf(room);
+const works = roomWorks(room);
+const dates = roomDates(room);
+const next = nextRoom(room);
+// Labels hang alone at full width; one-liners and silent works hang in pairs.
+type Group = { kind: 'solo' | 'pair'; works: Work[] };
+function hang(list: Work[]): Group[] {
+  const groups: Group[] = [];
+  let pair: Work[] = [];
+  const flush = () => {
+    if (pair.length) groups.push({ kind: 'pair', works: pair });
+    pair = [];
+  };
+  for (const work of list) {
+    if (work.treatment === 'label') {
+      flush();
+      groups.push({ kind: 'solo', works: [work] });
+    } else {
+      pair.push(work);
+      if (pair.length === 2) flush();
+    }
+  }
+  flush();
+  return groups;
+}
+const closingSegment = room.tour.segments[room.tour.segments.length - 1];
+const closingIds = [closingSegment.secondArtworkId, closingSegment.artworkId]
+  .filter((id): id is string => Boolean(id))
+  .sort(
+    (a, b) =>
+      works.findIndex((w) => w.artworkId === a) -
+      works.findIndex((w) => w.artworkId === b),
+  );
+const description = room.introduction[0];
 ---
 
-<Layout title={`${gallery.title} — nnxyz`} description={gallery.question}>
+<Layout title={`${room.title} — nnxyz`} description={description}>
   <article class="museum-page exhibition-page" data-exhibition>
-    <a class="museum-back" href={wingPath(collection.id)}>
+    <a class="museum-back" href={wingPath(room.wingId)}>
       <Icon name="left" size={18} />
-      Back to {collection.title}
+      Back to {room.wingTitle}
     </a>
     <header class="exhibition-opening">
-      <h1>{gallery.title}</h1>
-      <p class="exhibition-question">{gallery.question}</p>
+      <p class="exhibition-meta room-context">
+        {room.wingTitle}
+        {part && ` · ${part.title}`}
+      </p>
+      <h1>{room.title}</h1>
       <div class="gallery-introduction">
-        <p class="exhibition-introduction">{gallery.introduction}</p>
+        {room.introduction.map((paragraph) => (
+          <p class="exhibition-introduction">{paragraph}</p>
+        ))}
       </div>
       <p class="exhibition-meta">
-        {exhibitionStops(gallery).length} works · {gallery.chapters.length}{' '}
-        chapters ·{' '}
-        {collection.id === 'abstract'
-          ? 'Collector’s earlier collection'
-          : 'Owned subset'}
+        {works.length} {works.length === 1 ? 'work' : 'works'}
+        {dates ? ` · ${dates}` : ' · shown in title order'} ·{' '}
+        {room.chapters.length}{' '}
+        {room.chapters.length === 1 ? 'chapter' : 'chapters'}
       </p>
     </header>
     <nav class="chapter-nav" aria-label="Gallery chapters">
-      {gallery.chapters.map((chapter, i) => (
+      {room.chapters.map((chapter, i) => (
         <a href={`#chapter-${i + 1}`} data-chapter-link={i + 1}>
           <span>{i + 1}.</span> {chapter.title}
         </a>
       ))}
     </nav>
-    {gallery.chapters.map((chapter, i) => {
-      const [first, ...rest] = chapter.stops;
-      const pairs = Array.from(
-        { length: Math.ceil(rest.length / 2) },
-        (_, index) => rest.slice(index * 2, index * 2 + 2),
-      );
-      return (
-        <section
-          class="exhibition-chapter"
-          id={`chapter-${i + 1}`}
-          data-chapter={i + 1}
-          aria-labelledby={`chapter-title-${i + 1}`}
-        >
-          <header class="chapter-opening">
-            <p class="exhibition-meta">
-              Chapter {i + 1} of {gallery.chapters.length} ·{' '}
-              {chapter.stops.length}{' '}
-              {chapter.stops.length === 1 ? 'work' : 'works'}
-            </p>
-            <h2 id={`chapter-title-${i + 1}`} tabindex="-1">
-              {chapter.title}
-            </h2>
-            <p>{chapterIntroduction(gallery, i)}</p>
-          </header>
-          <div class="exhibition-solo">
-            <ExhibitionWork stop={first} eager={i === 0} />
-          </div>
-          {first.transitionFromPrevious && (
-            <div class="chapter-connection exhibition-note">
-              <p>{first.transitionFromPrevious}</p>
+    {room.chapters.map((chapter, i) => (
+      <section
+        class="exhibition-chapter"
+        id={`chapter-${i + 1}`}
+        data-chapter={i + 1}
+        aria-labelledby={`chapter-title-${i + 1}`}
+      >
+        <header class="chapter-opening">
+          <p class="exhibition-meta">
+            Chapter {i + 1} of {room.chapters.length} · {chapter.works.length}{' '}
+            {chapter.works.length === 1 ? 'work' : 'works'}
+          </p>
+          <h2 id={`chapter-title-${i + 1}`} tabindex="-1">
+            {chapter.title}
+          </h2>
+          <p>{chapter.opening}</p>
+        </header>
+        {hang(chapter.works).map((group, g) =>
+          group.kind === 'solo' ? (
+            <div class="exhibition-solo">
+              <RoomWork work={group.works[0]} eager={i === 0 && g === 0} />
             </div>
-          )}
-          {pairs.map((pair) => (
+          ) : (
             <div
               class:list={[
                 'exhibition-pair',
-                { 'unpaired-work': pair.length === 1 },
+                { 'unpaired-work': group.works.length === 1 },
               ]}
             >
-              {pair.map((stop) => (
-                <ExhibitionWork stop={stop} />
+              {group.works.map((work) => (
+                <RoomWork work={work} eager={i === 0 && g === 0} />
               ))}
-              <div class="pair-connection exhibition-note">
-                {pair.map(
-                  (stop) =>
-                    stop.transitionFromPrevious && (
-                      <p>{stop.transitionFromPrevious}</p>
-                    ),
-                )}
-              </div>
             </div>
+          ),
+        )}
+        {i === room.chapters.length - 1 &&
+          room.relatedItems.map((item) => (
+            <section class="related-after-room" aria-label="Related work">
+              <p class="exhibition-meta">Related work, hung after the room</p>
+              <div class="exhibition-solo">
+                <RoomWork work={item} related />
+              </div>
+            </section>
           ))}
-          <nav
-            class="chapter-pagination"
-            aria-label={`Continue from chapter ${i + 1}`}
-          >
-            {i > 0 ? (
-              <a href={`#chapter-${i}`}>
-                <Icon name="left" size={18} />
-                Previous chapter
-              </a>
-            ) : (
-              <span />
-            )}
-            {i < gallery.chapters.length - 1 ? (
-              <a href={`#chapter-${i + 2}`}>
-                Next chapter
-                <Icon name="right" size={18} />
-              </a>
-            ) : (
-              <a href="#closing">
-                Leave with a question
-                <Icon name="right" size={18} />
-              </a>
-            )}
-          </nav>
-        </section>
-      );
-    })}
+        <nav
+          class="chapter-pagination"
+          aria-label={`Continue from chapter ${i + 1}`}
+        >
+          {i > 0 ? (
+            <a href={`#chapter-${i}`}>
+              <Icon name="left" size={18} />
+              Previous chapter
+            </a>
+          ) : (
+            <span />
+          )}
+          {i < room.chapters.length - 1 ? (
+            <a href={`#chapter-${i + 2}`}>
+              Next chapter
+              <Icon name="right" size={18} />
+            </a>
+          ) : (
+            <a href="#closing">
+              Closing
+              <Icon name="right" size={18} />
+            </a>
+          )}
+        </nav>
+      </section>
+    ))}
     <section class="exhibition-closing" id="closing" data-closing>
-      <h2 tabindex="-1">One more look</h2>
-      <p>{gallery.closing}</p>
+      <h2 tabindex="-1">Closing</h2>
+      <div class="closing-figures">
+        {closingIds.map((id) => {
+          const art = exhibitionArtwork(id);
+          return (
+            <a href={artworkPath(id)} class="closing-figure">
+              <img
+                {...thumbnail(art)}
+                sizes="(max-width: 600px) 42vw, 300px"
+                alt={displayTitle(art)}
+                width={art.width}
+                height={art.height}
+                loading="lazy"
+              />
+              <span>{displayTitle(art)}</span>
+            </a>
+          );
+        })}
+      </div>
+      <p>{room.closing}</p>
       <nav aria-label="After this gallery">
         <a href="#chapter-1">Return to the first chapter</a>
-        <a href={wingPath(collection.id)}>
-          Choose another gallery in {collection.title}
+        <a href={wingPath(room.wingId)}>
+          Choose another room in {room.wingTitle}
           <Icon name="right" size={18} />
         </a>
         {next && (

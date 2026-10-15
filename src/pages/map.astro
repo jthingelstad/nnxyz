@@ -1,0 +1,328 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { rooms, roomWorks, exhibitionArtwork } from '../lib/exhibitions';
+import { thumbnail, displayTitle } from '../lib/catalog';
+import {
+  WIDTH,
+  HEIGHT,
+  WING_COLORS,
+  LEGEND_W,
+  SLAB,
+  PLAN_W,
+  PLAN_H,
+  floors,
+  legend,
+  project,
+  wrap,
+  type Floor,
+  type Rect,
+} from '../lib/floor-plan';
+const total = rooms.reduce((n, room) => n + roomWorks(room).length, 0);
+const shade = (wingId: string, index: number) =>
+  `${WING_COLORS[wingId]}${['66', '47', '80'][index]}`;
+const corner = (floor: Floor, x: number, y: number) => {
+  const p = project(floor, x, y);
+  return `${p.x.toFixed(1)},${p.y.toFixed(1)}`;
+};
+const quad = (floor: Floor, r: Rect) =>
+  [
+    corner(floor, r.x, r.y),
+    corner(floor, r.x + r.w, r.y),
+    corner(floor, r.x + r.w, r.y + r.h),
+    corner(floor, r.x, r.y + r.h),
+  ].join(' ');
+// The two visible sides of each floor slab.
+const southFace = (floor: Floor) => {
+  const a = project(floor, 0, PLAN_H);
+  const b = project(floor, PLAN_W, PLAN_H);
+  return `${a.x},${a.y} ${b.x},${b.y} ${b.x},${b.y + SLAB} ${a.x},${a.y + SLAB}`;
+};
+const eastFace = (floor: Floor) => {
+  const a = project(floor, PLAN_W, 0);
+  const b = project(floor, PLAN_W, PLAN_H);
+  return `${a.x},${a.y} ${b.x},${b.y} ${b.x},${b.y + SLAB} ${a.x},${a.y + SLAB}`;
+};
+// Labels run along the plan's x axis, which the projection tilts by 30°.
+const along = (floor: Floor, x: number, y: number) => {
+  const p = project(floor, x, y);
+  return `rotate(30 ${p.x} ${p.y})`;
+};
+const stairTop = project(floors[2], floors[2].stairs.x, floors[2].stairs.y);
+const stairBottom = project(floors[0], floors[0].stairs.x, floors[0].stairs.y);
+---
+
+<Layout
+  title="Map — nnxyz"
+  description="A map of the collection as one building: three floors, six collections, twenty-eight rooms."
+>
+  <article class="museum-page map-page">
+    <h1>Map</h1>
+    <p class="wing-introduction">
+      The collection as one building on three floors. Enter on the ground floor,
+      where Abstract, Other nnxyz and Scrimshaw open off the hall. Faces and
+      Rawblocks are on the second floor, and New Nifty on the Block fills the
+      third in its three dated parts. Every work hangs in one room, in the order
+      it was drawn, and each room has a door into the next. Room sizes follow
+      the number of works. Choose a room to enter it.
+    </p>
+    <div class="floor-plan-frame">
+      <svg
+        class="floor-plan"
+        viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
+        role="img"
+        aria-label="Isometric map of the collection on three floors"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+      >
+        <g class="plan-legend-column">
+          <text x="20" y="40" font-size="13" class="plan-eyebrow">
+            Collections
+          </text>
+          {legend.map((item, i) => {
+            const art = exhibitionArtwork(item.representative);
+            const y = 56 + i * 76;
+            return (
+              <a href={item.href} class="plan-legend-row">
+                <image
+                  href={thumbnail(art).src}
+                  x="20"
+                  y={y}
+                  width="64"
+                  height="64"
+                  preserveAspectRatio="xMidYMid slice"
+                />
+                <rect
+                  x="84"
+                  y={y}
+                  width={LEGEND_W - 104}
+                  height="64"
+                  fill={WING_COLORS[item.id]}
+                />
+                <text
+                  x="96"
+                  y={y + 27}
+                  font-size="14"
+                  font-weight="500"
+                  class="plan-on-color"
+                >
+                  {wrap(item.title, LEGEND_W - 110, 7.6).map((line, j) => (
+                    <tspan x="96" dy={j === 0 ? 0 : 16}>
+                      {line}
+                    </tspan>
+                  ))}
+                </text>
+                <text x="96" y={y + 54} font-size="11" class="plan-on-color">
+                  Floor {item.floor} · {item.rooms}{' '}
+                  {item.rooms === 1 ? 'room' : 'rooms'} · {item.count} works
+                </text>
+                <title>
+                  {item.title}: {displayTitle(art)}
+                </title>
+              </a>
+            );
+          })}
+        </g>
+        <line
+          class="plan-stair-line"
+          x1={stairBottom.x}
+          y1={stairBottom.y}
+          x2={stairTop.x}
+          y2={stairTop.y - 10}
+        />
+        {[...floors].reverse().map((floor) => (
+          <g class="plan-floor">
+            <polygon class="plan-slab-face" points={southFace(floor)} />
+            <polygon
+              class="plan-slab-face plan-slab-east"
+              points={eastFace(floor)}
+            />
+            <polygon
+              class="plan-ground"
+              points={quad(floor, floor.footprint)}
+            />
+            <polygon
+              class="plan-corridor"
+              points={quad(floor, floor.corridor)}
+            />
+            {floor.rooms.map((room) => (
+              <a
+                href={room.href}
+                class="plan-room"
+                aria-label={`${room.title}, ${room.count} ${room.count === 1 ? 'work' : 'works'}, floor ${floor.number}`}
+              >
+                <polygon
+                  points={quad(floor, room)}
+                  fill={shade(room.wingId, room.shade)}
+                />
+                <text
+                  font-size="12"
+                  class="plan-label"
+                  transform={along(floor, room.x + 10, room.y + 14)}
+                >
+                  {wrap(room.title, room.w).map((line, j) => {
+                    const p = project(floor, room.x + 10, room.y + 14);
+                    return (
+                      <tspan x={p.x} y={p.y + j * 14}>
+                        {line}
+                      </tspan>
+                    );
+                  })}
+                </text>
+                <text
+                  font-size="11"
+                  class="plan-count"
+                  transform={along(floor, room.x + 10, room.y + room.h - 8)}
+                  x={project(floor, room.x + 10, room.y + room.h - 8).x}
+                  y={project(floor, room.x + 10, room.y + room.h - 8).y}
+                >
+                  {room.count}
+                </text>
+              </a>
+            ))}
+            {floor.plates.map((plate) => {
+              const p = project(floor, plate.x + 10, plate.y + 15);
+              const label = (
+                <>
+                  <polygon
+                    points={quad(floor, plate)}
+                    fill={WING_COLORS[plate.wingId]}
+                    class:list={{ 'plan-part-plate': plate.part }}
+                  />
+                  <text
+                    font-size="12"
+                    font-weight="500"
+                    class="plan-on-color"
+                    transform={along(floor, plate.x + 10, plate.y + 15)}
+                    x={p.x}
+                    y={p.y}
+                  >
+                    {plate.title}
+                  </text>
+                </>
+              );
+              return plate.href ? (
+                <a href={plate.href} class="plan-wing-label">
+                  {label}
+                </a>
+              ) : (
+                label
+              );
+            })}
+            {floor.walls.map((wall) => {
+              const a = project(floor, wall.x1, wall.y1);
+              const b = project(floor, wall.x2, wall.y2);
+              return (
+                <line
+                  class:list={['plan-wall', { 'plan-wall-thick': wall.thick }]}
+                  x1={a.x}
+                  y1={a.y}
+                  x2={b.x}
+                  y2={b.y}
+                />
+              );
+            })}
+            {floor.doors.map((door) => {
+              const a = project(floor, door.x1, door.y1);
+              const b = project(floor, door.x2, door.y2);
+              return (
+                <line class="plan-door" x1={a.x} y1={a.y} x2={b.x} y2={b.y} />
+              );
+            })}
+            {(() => {
+              const s = project(floor, floor.stairs.x, floor.stairs.y);
+              const c = project(floor, 24, floor.corridor.y + 22);
+              return (
+                <>
+                  <circle class="plan-stairs" cx={s.x} cy={s.y} r="9" />
+                  <text
+                    x={s.x + 14}
+                    y={s.y + 4}
+                    font-size="11"
+                    class="plan-count"
+                  >
+                    Stairs
+                  </text>
+                  <text
+                    font-size="11"
+                    class="plan-count"
+                    transform={along(floor, 24, floor.corridor.y + 22)}
+                    x={c.x}
+                    y={c.y}
+                  >
+                    {floor.number === 1 ? 'Entrance hall' : 'Corridor'}
+                  </text>
+                </>
+              );
+            })()}
+            {floor.entrance &&
+              (() => {
+                const e = project(floor, floor.entrance.x, floor.entrance.y);
+                return (
+                  <a href="/" class="plan-entrance">
+                    <path
+                      class="plan-arrow"
+                      d={`M ${e.x} ${e.y + 70} L ${e.x} ${e.y + 14} M ${e.x - 8} ${e.y + 26} L ${e.x} ${e.y + 14} L ${e.x + 8} ${e.y + 26}`}
+                    />
+                    <text
+                      x={e.x}
+                      y={e.y + 92}
+                      font-size="15"
+                      font-weight="500"
+                      text-anchor="middle"
+                      class="plan-entrance-label"
+                    >
+                      ENTRANCE
+                    </text>
+                  </a>
+                );
+              })()}
+            {(() => {
+              const n = project(floor, PLAN_W, 0);
+              return (
+                <>
+                  <text
+                    x={n.x + 36}
+                    y={n.y + 150}
+                    font-size="96"
+                    class="plan-floor-number"
+                  >
+                    {floor.number}
+                  </text>
+                  <text
+                    x={n.x + 40}
+                    y={n.y + 178}
+                    font-size="12"
+                    class="plan-count"
+                  >
+                    {wrap(floor.label, 180, 6.4).map((line, j) => (
+                      <tspan x={n.x + 40} dy={j === 0 ? 0 : 15}>
+                        {line}
+                      </tspan>
+                    ))}
+                  </text>
+                </>
+              );
+            })()}
+          </g>
+        ))}
+      </svg>
+    </div>
+    <ul class="plan-legend" aria-label="Wings">
+      {legend.map((item) => (
+        <li>
+          <span
+            class="plan-swatch"
+            style={`background: ${WING_COLORS[item.id]}`}
+          />
+          <a href={item.href}>{item.title}</a>
+          <span class="exhibition-meta">
+            floor {item.floor} · {item.rooms}{' '}
+            {item.rooms === 1 ? 'room' : 'rooms'} · {item.count} works
+          </span>
+        </li>
+      ))}
+    </ul>
+    <p class="museum-footer">
+      {total} works in {rooms.length} rooms.
+    </p>
+  </article>
+</Layout>

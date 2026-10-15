@@ -5,18 +5,14 @@ import Kudos from './Kudos.astro';
 import DrawingViewer from './DrawingViewer.astro';
 import ProvenanceNote from './ProvenanceNote.astro';
 import { ownedTokens } from '../lib/provenance';
-import {
-  galleryHome,
-  exhibitionStops,
-  exhibitionPath,
-} from '../lib/exhibitions';
+import { placement, roomWorks, exhibitionPath } from '../lib/exhibitions';
+import { formatUtcDateTime } from '../lib/dates';
 import {
   artworks,
   artworkPath,
   displayTitle,
   labels,
   byId,
-  thumbnail,
 } from '../lib/catalog';
 interface Props {
   work: (typeof artworks)[number];
@@ -24,13 +20,22 @@ interface Props {
 const { work } = Astro.props;
 const label = labels.get(work.inkId)!;
 const title = displayTitle(work);
-const home = galleryHome.get(work.inkId)!;
-const sequence = exhibitionStops(home);
-const position = sequence.findIndex((stop) => stop.artworkId === work.inkId);
-const previous = sequence[position - 1];
-const next = sequence[position + 1];
+const place = placement(work.inkId);
+const home = place.room;
+const sequence = roomWorks(home);
+const position = place.index;
+// A related item hangs after the room; its neighbors are the room's last work.
+const previous =
+  position === null ? sequence[sequence.length - 1] : sequence[position - 1];
+const next = position === null ? undefined : sequence[position + 1];
 const numbered = label.collectionContext.numberedOwnedNeighbors;
-const reading = label.curatorialReading.text;
+const reading = place.work.reading;
+const recordedAt = place.work.facts.recordedAt;
+// The archived label converts the creation time to US Central; the site shows
+// the archived instant in UTC and lets the browser add the viewer's local time.
+const technical = label.technical.filter(
+  (fact) => fact.id !== 'recorded-creation',
+);
 const tokens = ownedTokens(work.inkId);
 ---
 
@@ -69,8 +74,18 @@ const tokens = ownedTokens(work.inkId);
         <p>{reading}</p>
       </section>
       <p class="gallery-position">
-        Work {position + 1} of {sequence.length} in{' '}
-        <a href={exhibitionPath(home.id)}>{home.title}</a>.
+        {position === null ? (
+          <>
+            Shown with <a href={exhibitionPath(home.id)}>{home.title}</a> as a
+            related work from the Scrimshaw collection.
+          </>
+        ) : (
+          <>
+            Work {position + 1} of {sequence.length} in{' '}
+            <a href={exhibitionPath(home.id)}>{home.title}</a>, {home.wingTitle}
+            .
+          </>
+        )}
       </p>
       <nav class="work-navigation" aria-label="Artwork navigation">
         {previous ? (
@@ -107,17 +122,29 @@ const tokens = ownedTokens(work.inkId);
       >
         <summary>Details &amp; downloads</summary>
         <div class="artwork-details-content">
-          <p class="collection-position">
-            {numbered?.previous && numbered?.next
-              ? `Between ${displayTitle(byId.get(numbered.previous.inkId)!)} and ${displayTitle(byId.get(numbered.next.inkId)!)} in the owned title sequence.`
-              : label.collectionContext.text}
-          </p>
+          {numbered?.previous && numbered?.next && (
+            <p class="collection-position">
+              Between {displayTitle(byId.get(numbered.previous.inkId)!)} and{' '}
+              {displayTitle(byId.get(numbered.next.inkId)!)} in the owned title
+              sequence.
+            </p>
+          )}
           <p>
             Playback follows recorded paths and order. Timing is reconstructed;
             the archive does not record the artist’s speed or pauses.
           </p>
           <dl>
-            {label.technical.map((fact) => (
+            {recordedAt && (
+              <>
+                <dt>Recorded</dt>
+                <dd>
+                  <time datetime={recordedAt} data-utc>
+                    {formatUtcDateTime(recordedAt)}
+                  </time>
+                </dd>
+              </>
+            )}
+            {technical.map((fact) => (
               <>
                 <dt>{fact.label}</dt>
                 <dd>
@@ -147,44 +174,37 @@ const tokens = ownedTokens(work.inkId);
               Original PNG
             </a>
           </p>
-          <p>{label.interpretationNotice}</p>
+          <p>
+            The label is a visual reading, not a claim about the artist’s
+            intentions. Dates are UTC, from the archived creation timestamp.
+          </p>
         </div>
       </details>
-      {label.connections.length > 0 && (
-        <section
-          id="related"
-          class="related-works"
-          aria-label="Related artworks"
-        >
-          <h2>Related works</h2>
-          {label.connections.map((connection) => {
-            const related = byId.get(connection.targetArtworkId)!;
-            return (
-              <a
-                class="related-work"
-                href={artworkPath(related.inkId)}
-                data-tinylytics-event="curation.follow"
-                data-tinylytics-event-value={related.inkId}
-              >
-                <img
-                  {...thumbnail(related)}
-                  sizes="140px"
-                  alt={displayTitle(related)}
-                  width="140"
-                  height="140"
-                  loading="lazy"
-                />
-                <div>
-                  <h3>{displayTitle(related)}</h3>
-                  <p>{connection.reason}</p>
-                </div>
-              </a>
-            );
-          })}
-        </section>
-      )}
     </div>
   </div>
+  <script>
+    // Add the viewer's local time beside the UTC instant. Without JavaScript the
+    // UTC text stands alone.
+    for (const time of document.querySelectorAll<HTMLTimeElement>(
+      'time[data-utc]',
+    )) {
+      const instant = new Date(time.dateTime);
+      if (Number.isNaN(instant.getTime())) continue;
+      const local = new Intl.DateTimeFormat(undefined, {
+        dateStyle: 'medium',
+        timeStyle: 'short',
+      }).format(instant);
+      const zone =
+        new Intl.DateTimeFormat(undefined, { timeZoneName: 'short' })
+          .formatToParts(instant)
+          .find((part) => part.type === 'timeZoneName')?.value ?? '';
+      if (zone === 'UTC' || zone === 'GMT') continue;
+      const note = document.createElement('span');
+      note.className = 'local-time';
+      note.textContent = ` (${local} ${zone}, your time)`;
+      time.after(note);
+    }
+  </script>
   <dialog class="enlargement" data-enlargement aria-label={`Enlarged ${title}`}>
     <button data-close-enlargement aria-label="Close enlarged artwork">
       <Icon name="close" />

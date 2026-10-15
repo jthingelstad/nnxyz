@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import DrawingViewer from '../components/DrawingViewer.astro';
+import statement from '../../curation/collector-statement.json';
 import {
   byId,
   artworkPath,
@@ -8,8 +9,26 @@ import {
   thumbnail,
   collectionPath,
 } from '../lib/catalog';
-import { entrances, representative } from '../lib/exhibitions';
+import { entrances, entranceWork } from '../lib/exhibitions';
 const opening = byId.get('QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ')!;
+// The statement is the collector's own words, saved verbatim; its one Markdown
+// link is rendered and everything else is escaped.
+const escape = (text: string) =>
+  text
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;');
+const paragraphHtml = (text: string) =>
+  text
+    .split(/(\[[^\]]+\]\(https?:\/\/[^)\s]+\))/)
+    .map((piece) => {
+      const link = piece.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/);
+      return link
+        ? `<a href="${escape(link[2])}">${escape(link[1])}</a>`
+        : escape(piece);
+    })
+    .join('');
 ---
 
 <Layout image={`/png/${opening.inkId}.png`}>
@@ -20,7 +39,15 @@ const opening = byId.get('QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ')!;
           A collection
           <br /> of nnxyz
         </h1>
-        <p class="welcome-pending">A welcome from the collector will follow.</p>
+        <div class="collector-statement">
+          {statement.paragraphs.map((paragraph) => (
+            <p set:html={paragraphHtml(paragraph)} />
+          ))}
+          <p class="collector-signature">
+            {statement.signature}
+            <span>{statement.dateline}</span>
+          </p>
+        </div>
       </div>
       <div class="entrance-drawing">
         <DrawingViewer work={opening} autoplay />
@@ -35,7 +62,8 @@ const opening = byId.get('QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ')!;
       aria-label="Explore collections"
     >
       {entrances.map((entrance) => {
-        const work = representative(entrance.gallery);
+        const work = entranceWork(entrance);
+        const count = entrance.wings.reduce((n, w) => n + w.rooms.length, 0);
         return (
           <a class="collection-entrance" href={collectionPath(entrance.id)}>
             <img
@@ -47,9 +75,15 @@ const opening = byId.get('QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ')!;
               loading="lazy"
             />
             <h2>{entrance.title}</h2>
+            <span>
+              {count} {count === 1 ? 'room' : 'rooms'}
+            </span>
           </a>
         );
       })}
     </nav>
+    <p class="entrance-map-link">
+      <a href="/map/">See the map of the collection</a>
+    </p>
   </div>
 </Layout>

@@ -29,7 +29,7 @@ npm test
 npm run build
 ```
 
-The build creates 667 HTML pages in `dist/`, including 626 artworks and two redirects, plus `robots.txt` and a sitemap of the 664 public pages. Nifty Ink artwork paths use immutable drawing CIDs; Abstract paths use Polygon contract/token identities. No model invocation or cloud service is needed.
+The build creates 696 HTML pages in `dist/`: 626 artworks, 28 rooms, five collection entrances, the home, map, about and 404 pages and 33 redirects from retired addresses, plus `robots.txt` and a sitemap of the 663 public pages. Nifty Ink artwork paths use immutable drawing CIDs; Abstract paths use Polygon contract/token identities. No model invocation or cloud service is needed.
 
 For browser checks, with a local server running:
 

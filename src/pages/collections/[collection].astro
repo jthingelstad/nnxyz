@@ -1,78 +1,72 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
-import ExhibitionEntrance from '../../components/ExhibitionEntrance.astro';
-import CollectionHistory from '../../components/CollectionHistory.astro';
-import {
-  exhibitionCollections,
-  exhibitionCollection,
-} from '../../lib/exhibitions';
+import RoomEntrance from '../../components/RoomEntrance.astro';
+import { entrances, roomWorks } from '../../lib/exhibitions';
+import { displayTitle } from '../../lib/catalog';
 export function getStaticPaths() {
-  return [
-    // Other nnxyz and Scrimshaw are sections of Other & related; their own
-    // routes redirect there (astro.config.mjs).
-    ...exhibitionCollections
-      .filter((c) => !['nnxyz-other', 'scrimshaw'].includes(c.id))
-      .map((c) => ({ params: { collection: c.id } })),
-    { params: { collection: 'other-related' } },
-  ];
+  return entrances.map((entrance) => ({
+    params: { collection: entrance.id },
+    props: { entrance },
+  }));
 }
-const { collection: id } = Astro.params;
-const related = id === 'other-related';
-const groups = related
-  ? [exhibitionCollection('nnxyz-other'), exhibitionCollection('scrimshaw')]
-  : [exhibitionCollection(id!)];
-const title = related ? 'Other & related' : groups[0].title;
+const { entrance } = Astro.props;
+const combined = entrance.wings.length > 1;
 ---
 
-<Layout title={`${title} — nnxyz`}>
+<Layout title={`${entrance.title} — nnxyz`}>
   <article class="museum-page collection-wing">
     <a class="museum-back" href="/#collections">
       <Icon name="left" size={18} />
       Back to collections
     </a>
-    <h1>{title}</h1>
-    {related && (
+    <h1>{entrance.title}</h1>
+    {combined && (
       <p class="wing-introduction">
-        Other nnxyz drawings and a related collection by Scrimshaw. Each artist
-        has their own galleries here.
+        Other nnxyz drawings and a related collection by Scrimshaw, each with
+        its own rooms.
       </p>
     )}
-    {groups.map((group) => {
-      const [first, ...others] = group.galleries;
-      const sections =
-        group.id === 'nnotb'
-          ? [
-              { title: 'Figures and company', galleries: others.slice(0, 5) },
-              { title: 'Places and marks', galleries: others.slice(5, 9) },
-              { title: 'Heads and features', galleries: others.slice(9) },
-            ]
-          : [{ title: 'Other ways of looking', galleries: others }];
-      return (
-        <section class="wing-group" id={group.id} aria-label={group.title}>
-          {related && <h2>{group.title}</h2>}
-          <p class="wing-introduction">{group.introduction}</p>
-          <CollectionHistory collectionId={group.id} />
-          <ExhibitionEntrance gallery={first} featured />
-          {sections
-            .filter((section) => section.galleries.length)
-            .map((section) => (
-              <section class="gallery-choices">
-                <h2>{section.title}</h2>
-                <div class="exhibition-choices">
-                  {section.galleries.map((gallery) => (
-                    <ExhibitionEntrance gallery={gallery} />
-                  ))}
-                </div>
-              </section>
+    {entrance.wings.map((wing) => (
+      <section class="wing-group" id={wing.id} aria-label={wing.title}>
+        {combined && <h2>{wing.title}</h2>}
+        <div class="wing-text">
+          {wing.introduction.map((paragraph) => (
+            <p class="wing-introduction">{paragraph}</p>
+          ))}
+        </div>
+        {wing.parts.length ? (
+          wing.parts.map((part, i) => (
+            <section class="wing-part" id={part.key} aria-label={part.title}>
+              <p class="exhibition-meta">
+                Part {i + 1} of {wing.parts.length} · {part.dates}
+              </p>
+              <h2>{part.title}</h2>
+              <div class="wing-text">
+                {part.introduction.map((paragraph) => (
+                  <p class="wing-introduction">{paragraph}</p>
+                ))}
+              </div>
+              <div class="exhibition-choices">
+                {part.rooms.map((room) => (
+                  <RoomEntrance room={room} />
+                ))}
+              </div>
+            </section>
+          ))
+        ) : (
+          <div class="exhibition-choices">
+            {wing.rooms.map((room) => (
+              <RoomEntrance room={room} />
             ))}
-        </section>
-      );
-    })}
-    <footer class="museum-footer">
-      {id === 'abstract'
-        ? 'Galleries from the collector’s earlier collection'
-        : 'Galleries from the owned subset'}.
-    </footer>
+          </div>
+        )}
+        <p class="exhibition-meta wing-count">
+          {wing.rooms.reduce((n, room) => n + roomWorks(room).length, 0)} works
+          in {wing.rooms.length} {wing.rooms.length === 1 ? 'room' : 'rooms'}
+          {wing.endsOn && `, ending on ${displayTitle({ name: wing.endsOn })}`}.
+        </p>
+      </section>
+    ))}
   </article>
 </Layout>

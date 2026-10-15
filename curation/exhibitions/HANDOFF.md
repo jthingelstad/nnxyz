@@ -178,9 +178,37 @@ the record of what was asked.
      the rest <https://claude.ai/artifact/GuzCegaGfP6wNS7eJSBvoQ>.
 5. **Wire the new structure into the Astro site** on the branch, including the
    map page.
-   - Keep existing artwork URLs stable.
-   - Run `npm run check` and `npm test`.
-   - Preview only.
+   - Done October 15, 2026. `src/lib/exhibitions.ts` builds wings, parts and
+     rooms from `structure/` and `rewrite/`; the wing pages show the wing and
+     part introductions and the rooms with their themes and UTC date spans;
+     room pages show the introduction, chapters, labels, one-liners, silent
+     works with their captions, in-room comparisons, the related item on
+     Occasions and Figures, and the closing with its two works; artwork pages
+     show the room reading, "Work n of m in Room, Wing", a UTC "Recorded"
+     instant that the browser annotates with the viewer's local time, and no
+     Central-time fact. The old per-artwork "Related works" connections and
+     the collector's earlier-account panel on the wing pages are no longer
+     shown, so no page outside the front page carries the collector's words
+     or the earlier voice. The front page carries the collector's statement
+     verbatim. `/map/` is an isometric map of the collection as one building on
+     three floors, in the manner of a printed museum map: ground floor with
+     the entrance hall, Abstract, Other nnxyz and Scrimshaw; Faces and
+     Rawblocks on the second; the three NNOTB parts on the third. Rooms are
+     sized by work count and colored by wing, consecutive rooms share a
+     doorway, each wing or part opens off the corridor, stairs join the
+     floors, and a picture legend names the wings. The collector asked for
+     this after two flat drafts (October 15, 2026, with the Minneapolis
+     Institute of Art map as the example); expect more iteration.
+     The 31 October 14 gallery addresses
+     redirect to their wings. Artwork URLs are unchanged. `npm run check`,
+     `npm test`, `npm run build`, `tools/validate-site.py` and the browser
+     suite pass; the browser checks now read the rooms from `rewrite/`.
+   - Preview only; main deploys the live site. Merging is the collector's call.
+6. **Audio tour.** `curation/exhibitions/audio/HANDOFF.md` is the prompt for a
+   local session on the Mac: sample the OpenAI voices on three segments and
+   stop for the collector's choice, then generate every segment, record a
+   manifest and publish through the write-once media pipeline. The site's
+   tour player comes after that, in the cloud.
 
 ## Working materials
 

@@ -2,12 +2,15 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import deployment from './infra/deployment.json' with { type: 'json' };
 import { mediaPrefixes } from './tools/delivery-plan.mjs';
+import { retiredGalleryRedirects } from './tools/retired-galleries.mjs';
 
 const site = 'https://nnxyz.thingelstad.xyz';
-// Sections of Other & related that were briefly published as their own pages.
+// Sections of Other & related that were briefly published as their own pages,
+// and the galleries of the October 14 map, which the locked rooms replaced.
 const redirects = {
   '/collections/nnxyz-other/': '/collections/other-related/#nnxyz-other',
   '/collections/scrimshaw/': '/collections/other-related/#scrimshaw',
+  ...retiredGalleryRedirects(),
 };
 
 export default defineConfig({

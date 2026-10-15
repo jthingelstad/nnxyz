@@ -52,14 +52,24 @@ def main():
     built = [str(path.relative_to(DIST)) for path in DIST.rglob("*") if path.is_file()]
     assert not [key for key in built if key.startswith(MEDIA_PREFIXES)], "Media in the build"
     referenced = set()
-    exhibitions = json.loads((ROOT / "curation/exhibitions/map.json").read_text())
-    rooms = [g for c in exhibitions["collections"] for g in c["galleries"]]
-    recovered_exhibitions = json.loads((ROOT / "curation/abstract/exhibitions.json").read_text())
-    rooms += [g for c in recovered_exhibitions["collections"] for g in c["galleries"]]
-    # 3 utility pages, 5 collection entrances, and 2 redirects from the earlier
-    # standalone pages of Other & related's two sections.
+    # Rooms come from the locked structure's gallery text; the October 14 map's
+    # galleries are retired addresses that redirect to their wings.
+    rooms = [
+        json.loads(path.read_text())
+        for path in sorted((ROOT / "curation/exhibitions/rewrite").glob("*--*.json"))
+    ]
+    retired = json.loads((ROOT / "curation/exhibitions/map.json").read_text())["collections"]
+    retired += json.loads((ROOT / "curation/abstract/exhibitions.json").read_text())["collections"]
     redirects = {"collections/nnxyz-other/index.html", "collections/scrimshaw/index.html"}
-    assert len(pages) == len(gallery) + len(abstract) + len(rooms) + 10, "Missing generated routes"
+    redirects |= {f"galleries/{g['id']}/index.html" for c in retired for g in c["galleries"]}
+    # 4 utility pages (home, about, map, 404) and 5 collection entrances.
+    assert len(pages) == len(gallery) + len(abstract) + len(rooms) + len(redirects) + 9, (
+        "Missing generated routes"
+    )
+    hung = [w["artworkId"] for room in rooms for c in room["chapters"] for w in c["works"]]
+    assert len(hung) == len(set(hung)) == len(gallery) + len(abstract) - 1, "Every work hangs once"
+    related = [r["artworkId"] for room in rooms for r in room.get("relatedItems", [])]
+    assert len(related) == 1 and related[0] not in hung, "GM hangs only as a related item"
     assert not (DIST / "walks").exists(), "Retired walk pages were generated"
     sitemap = (DIST / "sitemap-0.xml").read_text()
     locs = {loc.split("</loc>")[0] for loc in sitemap.split("<loc>")[1:]}

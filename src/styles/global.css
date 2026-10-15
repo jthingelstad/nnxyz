@@ -903,10 +903,43 @@ body:has(.enlargement[open]) {
   letter-spacing: -2px;
   color: var(--body-text);
 }
-.welcome-pending {
+.collector-statement {
+  margin-top: 34px;
+  max-width: 540px;
+}
+.collector-statement p {
+  font:
+    400 17px/1.7 Georgia,
+    'Times New Roman',
+    serif;
+  color: var(--body-text);
+}
+.collector-statement p + p {
+  margin-top: 18px;
+}
+.collector-statement a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+.collector-signature {
+  margin-top: 24px !important;
+  font-size: 16px !important;
+}
+.collector-signature span {
+  display: block;
   color: var(--muted);
-  margin-top: 30px;
-  font-size: 17px;
+  font-size: 14px;
+  margin-top: 2px;
+}
+.entrance-map-link {
+  margin-top: 56px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+.entrance-map-link a {
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 .entrance-drawing {
   width: 100%;
@@ -1261,19 +1294,6 @@ body:has(.enlargement[open]) {
     width: 86vw;
   }
 }
-.collection-history {
-  margin-top: 18px;
-  max-width: 710px;
-  font-size: 15px;
-  color: var(--body-text);
-  line-height: 1.65;
-}
-.collection-history p {
-  margin-top: 12px;
-}
-.collection-history a {
-  text-decoration: underline;
-}
 @media (max-width: 1000px) {
   .collection-entrances {
     gap: 24px;
@@ -1468,5 +1488,280 @@ body:has(.enlargement[open]) {
   }
   .exhibition-note {
     font-size: 15px;
+  }
+}
+
+/* October 15 structure: wings, parts and rooms from the locked plan. */
+.wing-text .wing-introduction + .wing-introduction {
+  margin-top: 14px;
+}
+.wing-part {
+  margin-top: 64px;
+  scroll-margin-top: 25px;
+}
+.wing-part > h2 {
+  font-size: 30px;
+  line-height: 1.25;
+  margin-top: 6px;
+}
+.wing-part .wing-text {
+  margin-bottom: 8px;
+}
+.wing-group > .exhibition-choices {
+  margin-top: 44px;
+}
+.wing-part .exhibition-choices {
+  margin-top: 32px;
+}
+.exhibition-entrance {
+  grid-template-columns: 150px 1fr;
+}
+.exhibition-entrance .exhibition-meta {
+  margin-top: 8px;
+}
+.coda-room h3::after {
+  content: ' · coda';
+  color: var(--muted);
+  font-size: 14px;
+}
+.wing-count {
+  margin-top: 40px;
+}
+.room-context {
+  margin-bottom: 8px;
+}
+.gallery-introduction .exhibition-introduction {
+  color: var(--body-text);
+  font-size: 17px;
+  line-height: 1.65;
+}
+.gallery-introduction .exhibition-introduction + .exhibition-introduction {
+  margin-top: 14px;
+}
+.treatment-line figcaption,
+.treatment-none figcaption {
+  text-align: left;
+}
+.treatment-line .exhibition-note p {
+  font-size: 15px;
+}
+.exhibition-caption {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.exhibition-pair .exhibition-work + .exhibition-work {
+  margin-top: 0;
+}
+.exhibition-pair {
+  margin-top: 48px;
+  gap: 40px 64px;
+}
+.exhibition-solo + .exhibition-solo,
+.exhibition-pair + .exhibition-solo {
+  margin-top: 56px;
+}
+.compare-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.compare-link img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+.compare-link:hover span {
+  text-decoration: underline;
+}
+.related-after-room {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.related-after-room > .exhibition-meta {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.closing-figures {
+  display: flex;
+  gap: 32px;
+  margin-top: 26px;
+}
+.closing-figure {
+  flex: 1 1 0;
+  max-width: 300px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: var(--muted);
+}
+.closing-figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #fff;
+  margin-bottom: 8px;
+}
+.closing-figure:hover span {
+  text-decoration: underline;
+}
+.local-time {
+  color: var(--subtle);
+}
+/* Map: the collection as one building, an isometric SVG with stacked floors. */
+.map-page h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+.floor-plan-frame {
+  margin-top: 40px;
+  overflow-x: auto;
+}
+.floor-plan {
+  display: block;
+  width: 100%;
+  min-width: 960px;
+  height: auto;
+}
+.plan-ground {
+  fill: color-mix(in srgb, var(--text) 5%, var(--background));
+}
+.plan-corridor {
+  fill: color-mix(in srgb, #8fb3c9 28%, var(--background));
+}
+.plan-slab-face {
+  fill: #5a5d63;
+}
+.plan-slab-east {
+  fill: #3f4247;
+}
+.plan-wall {
+  stroke: var(--text);
+  stroke-width: 1.2;
+  pointer-events: none;
+}
+.plan-wall-thick {
+  stroke-width: 3;
+}
+.plan-door {
+  stroke: var(--background);
+  stroke-width: 6;
+  pointer-events: none;
+}
+.plan-room polygon {
+  transition: filter 120ms;
+}
+.plan-room:hover polygon,
+.plan-room:focus-visible polygon {
+  filter: brightness(0.9) saturate(1.3);
+}
+.plan-room:focus-visible,
+.plan-legend-row:focus-visible,
+.plan-wing-label:focus-visible {
+  outline: none;
+}
+.plan-room:focus-visible polygon,
+.plan-legend-row:focus-visible rect,
+.plan-wing-label:focus-visible polygon {
+  stroke: var(--text);
+  stroke-width: 3;
+}
+.plan-label {
+  fill: var(--text);
+}
+.plan-room:hover .plan-label,
+.plan-legend-row:hover text,
+.plan-wing-label:hover text {
+  text-decoration: underline;
+}
+.plan-on-color {
+  fill: #fff;
+}
+.plan-part-plate {
+  opacity: 0.75;
+}
+.plan-count,
+.plan-eyebrow {
+  fill: var(--muted);
+}
+.plan-eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.plan-floor-number {
+  fill: color-mix(in srgb, var(--text) 22%, transparent);
+  font-weight: 300;
+}
+.plan-stairs {
+  fill: var(--background);
+  stroke: var(--text);
+  stroke-width: 1.5;
+}
+.plan-stair-line {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 6;
+}
+.plan-arrow {
+  fill: none;
+  stroke: #e0772c;
+  stroke-width: 3;
+}
+.plan-entrance-label {
+  fill: #e0772c;
+  letter-spacing: 0.08em;
+}
+:root[data-theme='dark'] .plan-room polygon,
+:root[data-theme='dark'] .plan-legend-row rect,
+:root[data-theme='dark'] .plan-wing-label polygon {
+  opacity: 0.85;
+}
+.plan-legend {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  font-size: 15px;
+}
+.plan-legend li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.plan-legend a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.plan-swatch {
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--text);
+}
+@media (max-width: 760px) {
+  .collector-statement p {
+    font-size: 16px;
+  }
+  .exhibition-entrance {
+    grid-template-columns: 96px 1fr;
+    gap: 16px;
+  }
+  .closing-figures {
+    gap: 16px;
+  }
+  .floor-plan-frame {
+    margin-inline: -7vw;
+    padding-inline: 7vw;
   }
 }

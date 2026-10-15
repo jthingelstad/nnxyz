@@ -21,17 +21,38 @@ const errors = [],
   requests = [],
   results = [];
 page.on('pageerror', (error) => errors.push(String(error)));
+// Astro's redirect pages carry no icon link, so Chromium asks for
+// /favicon.ico there; that request is harmless and not a page error.
+const ignorable = (msg) => msg.location().url.endsWith('/favicon.ico');
 page.on('console', (msg) => {
-  if (msg.type() === 'error') errors.push(msg.text());
+  if (msg.type() === 'error' && !ignorable(msg)) errors.push(msg.text());
 });
 page.on('request', (request) => {
   if (request.url().includes('tinylytics.app')) requests.push(request.url());
 });
 const face = 'QmbM9pwfyX86HxXetyVZkBKJ7WTLE7BNeVVkc7TkUeSCA5';
-const exhibitionMap = JSON.parse(
-  await fs.readFile('curation/exhibitions/map.json', 'utf8'),
+// Rooms come from the locked structure's gallery text, in wing and room order.
+const wingsFile = JSON.parse(
+  await fs.readFile('curation/exhibitions/rewrite/wings.json', 'utf8'),
 );
-const firstGallery = exhibitionMap.collections[0].galleries[0];
+const roomOrder = wingsFile.wings.flatMap((wing) =>
+  wing.parts
+    ? wing.parts.flatMap((part) =>
+        part.roomOrder.map(
+          (key) => `${wing.collectionId}--${part.key}--${key}`,
+        ),
+      )
+    : wing.roomOrder.map((key) => `${wing.collectionId}--${key}`),
+);
+const rooms = await Promise.all(
+  roomOrder.map(async (id) =>
+    JSON.parse(
+      await fs.readFile(`curation/exhibitions/rewrite/${id}.json`, 'utf8'),
+    ),
+  ),
+);
+const roomWorks = (room) => room.chapters.flatMap((chapter) => chapter.works);
+const firstGallery = rooms[0];
 const galleryURL = `/galleries/${firstGallery.id}/`;
 async function go(url) {
   await page.goto(base + url);
@@ -156,11 +177,11 @@ try {
     .getByRole('button', { name: 'Use light background', exact: true })
     .click();
   for (const [id, count] of [
-    ['nifty-faces', 7],
-    ['nnotb', 15],
-    ['rawblocks', 3],
+    ['nifty-faces', 6],
+    ['nnotb', 13],
+    ['rawblocks', 4],
     ['other-related', 3],
-    ['abstract', 3],
+    ['abstract', 2],
   ]) {
     await go(`/collections/${id}/`);
     assert.equal(await page.locator('.exhibition-entrance').count(), count);
@@ -170,17 +191,13 @@ try {
     await go(`/collections/${id}/`);
     await page.waitForURL(`**/collections/other-related/#${id}`);
   }
-  const relatedGallery = exhibitionMap.collections
-    .flatMap((collection) => collection.galleries)
-    .find((gallery) =>
-      gallery.chapters.some((chapter) =>
-        chapter.stops.some(
-          (stop) =>
-            catalog.find((work) => work.inkId === stop.artworkId)
-              ?.artistName === 'scrimshaw.eth',
-        ),
-      ),
-    );
+  const relatedGallery = rooms.find((room) =>
+    roomWorks(room).some(
+      (work) =>
+        catalog.find((item) => item.inkId === work.artworkId)?.artistName ===
+        'scrimshaw.eth',
+    ),
+  );
   await go(`/galleries/${relatedGallery.id}/`);
   assert.ok(
     (await page
@@ -193,25 +210,30 @@ try {
     fullPage: true,
   });
   results.push({
-    check: 'Five wings and separate related artists lead to all 31 galleries',
+    check: 'Five wings and separate related artists lead to all 28 rooms',
     passed: true,
   });
-  await page.locator('.featured-gallery').click();
+  const firstCount = roomWorks(firstGallery).length;
+  const chapters = firstGallery.chapters.length;
+  await page.locator('.exhibition-entrance').first().click();
   await waitChapter('1');
   assert.ok(page.url().endsWith(galleryURL));
-  assert.equal(await page.locator('.exhibition-work').count(), 17);
+  assert.equal(await page.locator('.exhibition-work').count(), firstCount);
   assert.equal(
     await page.locator('.watch-work, .exhibition-artist').count(),
     0,
   );
-  assert.equal(await page.locator('.exhibition-work figcaption a').count(), 17);
+  assert.equal(
+    await page.locator('.exhibition-work figcaption h3 a').count(),
+    firstCount,
+  );
   assert.equal(
     await page
       .locator('.exhibition-chapter:not([hidden]) .exhibition-work')
       .count(),
-    3,
+    firstGallery.chapters[0].works.length,
   );
-  assert.equal(await page.locator('.chapter-nav a').count(), 5);
+  assert.equal(await page.locator('.chapter-nav a').count(), chapters);
   await page
     .locator('.exhibition-solo img')
     .first()
@@ -230,9 +252,12 @@ try {
   );
   assert.equal(await page.locator('details, summary').count(), 0);
   assert.ok(
-    await page.locator('#chapter-2 .exhibition-note p').first().isVisible(),
+    await page
+      .locator('#chapter-2 .exhibition-work figcaption p')
+      .first()
+      .isVisible(),
   );
-  const chosen = firstGallery.chapters[1].stops[0].artworkId;
+  const chosen = firstGallery.chapters[1].works[0].artworkId;
   await page.locator('#chapter-2 .exhibition-art').first().click();
   assert.ok(page.url().endsWith(`/artworks/${chosen}/`));
   assert.equal(
@@ -266,8 +291,11 @@ try {
     '2',
   );
   await page.locator('.chapter-nav a').last().click();
-  await waitChapter('5');
-  await page.locator('#chapter-5 .chapter-pagination a').last().click();
+  await waitChapter(String(chapters));
+  await page
+    .locator(`#chapter-${chapters} .chapter-pagination a`)
+    .last()
+    .click();
   await waitChapter('closing');
   assert.equal(
     await page
@@ -290,33 +318,37 @@ try {
       'Keyboard chapter navigation, visible interpretation, canonical artwork, precise return, reload and closing',
     passed: true,
   });
-  // Every gallery preserves membership, chapter bounds and the saved sequence.
-  for (const collection of exhibitionMap.collections)
-    for (const gallery of collection.galleries) {
-      await go(`/galleries/${gallery.id}/`);
-      const stops = gallery.chapters.flatMap((chapter) => chapter.stops);
-      assert.equal(
-        await page.locator('.exhibition-work').count(),
-        stops.length,
-      );
-      assert.ok(stops.length <= 30);
-      assert.deepEqual(
-        await page
-          .locator('.exhibition-work')
-          .evaluateAll((works) => works.map((work) => work.id)),
-        stops.map((stop) => `work-${stop.artworkId}`),
-      );
-      assert.equal(
-        await page.locator('.exhibition-chapter:not([hidden])').count(),
-        1,
-      );
-    }
+  // Every room preserves membership, chapter bounds and the locked order; a
+  // related item hangs after the room and is not counted in it.
+  for (const room of rooms) {
+    await go(`/galleries/${room.id}/`);
+    const works = roomWorks(room);
+    assert.equal(
+      await page.locator('.exhibition-work:not(.related-item)').count(),
+      works.length,
+    );
+    assert.equal(
+      await page.locator('.exhibition-work.related-item').count(),
+      room.relatedItems.length,
+    );
+    assert.ok(works.length <= 30);
+    assert.deepEqual(
+      await page
+        .locator('.exhibition-work:not(.related-item)')
+        .evaluateAll((items) => items.map((item) => item.id)),
+      works.map((work) => `work-${work.artworkId}`),
+    );
+    assert.equal(
+      await page.locator('.exhibition-chapter:not([hidden])').count(),
+      1,
+    );
+  }
   const noJS = await browser.newContext({ javaScriptEnabled: false });
   const staticPage = await noJS.newPage();
   await staticPage.goto(base + galleryURL);
   assert.equal(
     await staticPage.locator('.exhibition-work:visible').count(),
-    17,
+    firstCount,
   );
   await noJS.close();
   results.push({
@@ -340,6 +372,7 @@ try {
       '/collections/nnotb/',
       '/collections/rawblocks/',
       '/collections/other-related/',
+      '/map/',
       galleryURL,
     ]) {
       await go(route);
@@ -352,8 +385,8 @@ try {
       );
     }
     if (width === 390) {
-      await go(`${galleryURL}#chapter-5`);
-      await waitChapter('5');
+      await go(`${galleryURL}#chapter-${chapters}`);
+      await waitChapter(String(chapters));
       const activeChapterVisible = await page
         .locator('.chapter-nav a[aria-current]')
         .evaluate((link) => {
@@ -544,7 +577,7 @@ try {
     .click();
   assert.equal(await page.locator('.collection-entrance').count(), 5);
   await page.locator('.collection-entrance').first().click();
-  await page.locator('.featured-gallery').click();
+  await page.locator('.exhibition-entrance').first().click();
   await page.locator('#chapter-1 .exhibition-art').first().click();
   assert.ok(page.url().includes('/artworks/'));
   results.push({
@@ -858,7 +891,7 @@ try {
   const fallback = await blockedStorage.newPage();
   fallback.on('pageerror', (error) => errors.push(String(error)));
   fallback.on('console', (msg) => {
-    if (msg.type() === 'error') errors.push(msg.text());
+    if (msg.type() === 'error' && !ignorable(msg)) errors.push(msg.text());
   });
   fallback.on('request', (request) => {
     if (request.url().includes('tinylytics.app')) requests.push(request.url());

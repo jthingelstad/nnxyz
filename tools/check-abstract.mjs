@@ -4,10 +4,27 @@ import { createHash } from 'node:crypto';
 
 export async function checkAbstract(browser, base, output) {
   const data = JSON.parse(await fs.readFile('data/abstract.json', 'utf8'));
-  const map = JSON.parse(
-    await fs.readFile('curation/abstract/exhibitions.json', 'utf8'),
+  const wingsFile = JSON.parse(
+    await fs.readFile('curation/exhibitions/rewrite/wings.json', 'utf8'),
   );
+  const rooms = await Promise.all(
+    wingsFile.wings
+      .find((wing) => wing.collectionId === 'abstract')
+      .roomOrder.map(async (key) =>
+        JSON.parse(
+          await fs.readFile(
+            `curation/exhibitions/rewrite/abstract--${key}.json`,
+            'utf8',
+          ),
+        ),
+      ),
+  );
+  const roomWorks = (room) => room.chapters.flatMap((c) => c.works);
   const first = data.artworks.find((work) => work.number === '01');
+  const home = rooms.find((room) =>
+    roomWorks(room).some((work) => work.artworkId === first.id),
+  );
+  const homeURL = `/galleries/${home.id}/`;
   const artworkURL = `/artworks/${first.id}/`;
   const context = await browser.newContext({
     viewport: { width: 1440, height: 1000 },
@@ -36,21 +53,21 @@ export async function checkAbstract(browser, base, output) {
     assert.equal(await page.locator('.collection-entrance').count(), 5);
     await page.getByRole('link', { name: /Abstract/ }).click();
     assert.ok(page.url().endsWith('/collections/abstract/'));
-    assert.equal(await page.locator('.exhibition-entrance').count(), 3);
+    assert.equal(await page.locator('.exhibition-entrance').count(), 2);
     assert.match(
-      await page.locator('.collection-history').innerText(),
-      /scrimshaw.eth/,
+      await page.locator('.wing-introduction').first().innerText(),
+      /Fifty-two works/,
     );
     await page.screenshot({
       path: `${output}/abstract-wing-desktop.png`,
       fullPage: true,
     });
-    for (const gallery of map.collections[0].galleries) {
+    for (const gallery of rooms) {
       await page.goto(base + `/galleries/${gallery.id}/`);
       assert.equal(await page.locator('h1').innerText(), gallery.title);
       assert.equal(
         await page.locator('.exhibition-work').count(),
-        gallery.chapters.flatMap((chapter) => chapter.stops).length,
+        roomWorks(gallery).length,
       );
       for (let i = 0; i < gallery.chapters.length; i++) {
         await page.locator('.chapter-nav a').nth(i).click();
@@ -62,7 +79,7 @@ export async function checkAbstract(browser, base, output) {
         );
         assert.equal(
           await page.locator('[data-chapter]:visible .exhibition-work').count(),
-          gallery.chapters[i].stops.length,
+          gallery.chapters[i].works.length,
         );
         assert.equal(
           await page.getByText('View & watch drawing', { exact: true }).count(),
@@ -70,9 +87,7 @@ export async function checkAbstract(browser, base, output) {
         );
         await noOverflow();
       }
-      await page
-        .getByRole('link', { name: 'Leave with a question', exact: true })
-        .click();
+      await page.getByRole('link', { name: 'Closing', exact: true }).click();
       await page.waitForFunction(
         () =>
           document.querySelector('[data-exhibition]').dataset.currentChapter ===
@@ -135,11 +150,7 @@ export async function checkAbstract(browser, base, output) {
           (value) => localStorage.setItem('nnxyz-theme', value),
           theme,
         );
-        for (const url of [
-          '/collections/abstract/',
-          '/galleries/abstract--crossing-lines/',
-          artworkURL,
-        ]) {
+        for (const url of ['/collections/abstract/', homeURL, artworkURL]) {
           await page.goto(base + url);
           assert.equal(
             await page.locator('html').getAttribute('data-theme'),
@@ -172,19 +183,18 @@ export async function checkAbstract(browser, base, output) {
     }
     await page.goto(base + artworkURL);
     await page
-      .getByRole('link', { name: /^Back to Marks Crossing Fields/ })
+      .getByRole('link', { name: new RegExp(`^Back to ${home.title}`) })
       .click();
-    assert.ok(
-      page
-        .url()
-        .includes(`/galleries/abstract--crossing-lines/#work-${first.id}`),
-    );
+    assert.ok(page.url().includes(`${homeURL}#work-${first.id}`));
     await page.goto(base + '/collections/nnotb/');
     assert.equal(
       await page.locator('h1').innerText(),
       'New Nifty on the Block',
     );
-    assert.match(await page.locator('.wing-introduction').innerText(), /NNOTB/);
+    assert.match(
+      await page.locator('.wing-introduction').first().innerText(),
+      /Three hundred and three works/,
+    );
     assert.deepEqual(errors, []);
     assert.deepEqual(analytics, []);
   } finally {
@@ -193,8 +203,11 @@ export async function checkAbstract(browser, base, output) {
   const noJS = await browser.newContext({ javaScriptEnabled: false });
   try {
     const staticPage = await noJS.newPage();
-    await staticPage.goto(base + '/galleries/abstract--crossing-lines/');
-    assert.equal(await staticPage.locator('[data-chapter]:visible').count(), 5);
+    await staticPage.goto(base + homeURL);
+    assert.equal(
+      await staticPage.locator('[data-chapter]:visible').count(),
+      home.chapters.length,
+    );
     await staticPage.goto(base + artworkURL);
     assert.ok(await staticPage.locator('#provenance').isVisible());
     assert.equal(await staticPage.locator('#provenance dl').isVisible(), false);
@@ -210,7 +223,7 @@ export async function checkAbstract(browser, base, output) {
   }
   return {
     check:
-      'Abstract: three bounded exhibitions, keyboard enlargement, exact original download, provenance, canonical kudos, responsive light/dark layouts, reduced motion and no-JS reading; no live analytics',
+      'Abstract: two bounded rooms, keyboard enlargement, exact original download, provenance, canonical kudos, responsive light/dark layouts, reduced motion and no-JS reading; no live analytics',
     passed: true,
   };
 }
