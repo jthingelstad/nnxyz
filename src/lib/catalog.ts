@@ -1,7 +1,6 @@
 import gallery from '../../data/gallery.json';
 import collectionData from '../../data/collections.json';
 import labelData from '../../curation/catalog/labels.json';
-import routeData from '../../curation/catalog/routes.json';
 import { abstractImage, type AbstractArtwork } from './abstract';
 
 export const artworks = gallery;
@@ -14,7 +13,6 @@ export const labels = new Map(
 export const collections = collectionData.filter(
   (collection) => collection.included,
 );
-export const routes = routeData;
 export const artworkPath = (cid: string) => `/artworks/${cid}/`;
 // Dense SVGs contain megabytes of geometry. Keep browsing light; artwork pages always use native SVG.
 export const thumbnailPath = (work: DisplayArtwork) =>

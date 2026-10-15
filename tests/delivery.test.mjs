@@ -55,3 +55,16 @@ test('Abstract JPEG and WebP delivery preserves bytes and declares image types',
     assert.deepEqual(result.Body, bytes);
   }
 });
+test('robots.txt and sitemaps publish compressed with page caching', () => {
+  for (const [key, type] of [
+    ['robots.txt', 'text/plain; charset=utf-8'],
+    ['sitemap-index.xml', 'application/xml; charset=utf-8'],
+  ]) {
+    const bytes = Buffer.from('Sitemap: https://nnxyz.thingelstad.xyz/');
+    const result = prepareObject(key, bytes);
+    assert.equal(result.ContentType, type);
+    assert.equal(result.ContentEncoding, 'gzip');
+    assert.deepEqual(gunzipSync(result.Body), bytes);
+    assert.match(result.CacheControl, /max-age=0/);
+  }
+});

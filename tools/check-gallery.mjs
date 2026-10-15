@@ -159,14 +159,16 @@ try {
     ['nifty-faces', 7],
     ['nnotb', 15],
     ['rawblocks', 3],
-    ['nnxyz-other', 2],
-    ['scrimshaw', 1],
     ['other-related', 3],
     ['abstract', 3],
   ]) {
     await go(`/collections/${id}/`);
     assert.equal(await page.locator('.exhibition-entrance').count(), count);
     assert.equal(await page.locator('.art-card').count(), 0);
+  }
+  for (const id of ['nnxyz-other', 'scrimshaw']) {
+    await go(`/collections/${id}/`);
+    await page.waitForURL(`**/collections/other-related/#${id}`);
   }
   const relatedGallery = exhibitionMap.collections
     .flatMap((collection) => collection.galleries)
