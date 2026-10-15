@@ -5,16 +5,15 @@ rewrite that starts with the two pilots in `curation/exhibitions/rewrite/`.
 
 ## Who is speaking
 
-The galleries have one voice: the AI curator's. Each gallery page and artwork
-page says so once ("AI curator"), and one site-wide note explains what that
-means: the readings are the AI curator's, made by looking at the images and the
-archived records, not statements from the artist. Because that note exists,
-sentences do not hedge one by one. Write "the grin turns into a snarl", not
-"the grin may read as a snarl".
+The galleries have one voice, and it is unsigned, like the wall text in a
+museum. No page names the curator, and no text calls itself "the curator" or
+says "AI curator". The text is simply the gallery speaking. Write with a
+museum's confidence: "the grin turns into a snarl", not "the grin may read as
+a snarl".
 
-The collector's own words appear only as quotations, attributed, from
-`curation/collector-perspective.json`. Never paraphrase the collector into the
-curator's voice, and never put words in the artist's mouth.
+The collector's own words appear in one place only: the introduction on the
+front page. Gallery, wing and artwork text never quotes or paraphrases the
+collector, and never puts words in the artist's mouth.
 
 ## What the writing may claim
 
@@ -29,9 +28,9 @@ curator's voice, and never put words in the artist's mouth.
 ## Shape of an exhibition
 
 1. **Introduction** (two or three short paragraphs). This is the argument: what
-   this group of works shows that no single work does. Use the collector's
-   interest (patterns, and emotional range from joy to anger) as the starting
-   point when it fits. It usually does.
+   this group of works shows that no single work does. The collector's interest
+   (patterns, and emotional range from joy to anger) is a good starting point
+   when it fits, but it shapes what the text looks at. The text never cites it.
 2. **Chapters** (three to five). Each one opens with one or two sentences that
    move the argument forward. A chapter title names what you will see, not a
    theme.
