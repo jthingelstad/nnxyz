@@ -23,7 +23,9 @@ collector, and never puts words in the artist's mouth.
 - **Never:** what the artist meant, felt or was influenced by. No "the artist
   explores", no "nnxyz wanted". Nothing about the artist's life.
 - **Only from software:** numbers. Dates, stroke counts and sizes come from the
-  verified dossier, and are converted to US Central.
+  verified dossier. Dates are UTC, from the archived creation timestamp; text
+  prefers the month, or a span of days, over a single date unless the day is
+  the point.
 
 ## Shape of an exhibition
 

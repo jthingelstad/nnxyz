@@ -17,6 +17,7 @@ CACHE = sys.argv[2] if len(sys.argv) > 2 else '/tmp/nnxyz-thumbs'
 os.makedirs(CACHE, exist_ok=True)
 CDN = 'https://d1of1z466a2mhl.cloudfront.net'
 THUMB_PX, THUMB_Q = 210, 60
+LOCKED = os.environ.get('LOCKED', '1') == '1'  # 0 renders the open-question boxes from before the lock
 
 def esc(s): return html.escape(str(s), quote=True)
 
@@ -50,16 +51,16 @@ def date_range(works):
 
 # ---------- wings ----------
 WINGS = [
-    ('nifty-faces', 'Faces', 'approved'),
-    ('nnotb', 'New Nifty on the Block', 'approved'),
-    ('rawblocks', 'Rawblocks', 'open questions'),
-    ('abstract', 'Abstract', 'reviewed'),
-    ('nnxyz-other', 'Other nnxyz', 'reviewed'),
-    ('scrimshaw', 'Scrimshaw', 'open question'),
+    ('nifty-faces', 'Faces', 'locked'),
+    ('nnotb', 'New Nifty on the Block', 'locked'),
+    ('rawblocks', 'Rawblocks', 'locked'),
+    ('abstract', 'Abstract', 'locked'),
+    ('nnxyz-other', 'Other nnxyz', 'locked'),
+    ('scrimshaw', 'Scrimshaw', 'locked'),
 ]
 
 # Per-work marks: artwork short title -> (css class, note). Keyed by (wing, short title).
-MARKS = {
+MARKS = {} if LOCKED else {
     ('rawblocks', '#42'): ('move', 'Q2: to Scribbled Heads?'),
     ('rawblocks', '#43'): ('move', 'Q2: to Scribbled Heads?'),
     ('rawblocks', '#44'): ('move', 'Q2: to Scribbled Heads?'),
@@ -107,7 +108,7 @@ Q5 = q_box('q5', 'Your wing notes stopped at an empty item 7',
     '<p>The review notes for the wings ended with a numbered item 7 that had no text. If it was a decision or a work to move, it is not recorded anywhere.</p>',
     ['Nothing; drop it', 'It was something; written below'], free_label='Item 7')
 
-PLACE = {  # after this gallery key
+PLACE = {} if LOCKED else {  # after this gallery key
     ('rawblocks', 'rb-late'): [Q1, Q2],
     ('scrimshaw', 'sc-scrimshaw'): [Q3],
 }
@@ -117,11 +118,12 @@ seen = set()
 body = []; nav = []; total = 0; wing_rows = []
 gallery_count = 0
 
-def figure(wing_id, w, extra_cls='', extra_note=''):
+def figure(wing_id, w, extra_cls='', extra_note='', count=True):
     global total
     aid = w['artworkId']
-    assert aid not in seen, aid
-    seen.add(aid); total += 1
+    if count:
+        assert aid not in seen, aid
+        seen.add(aid); total += 1
     st = short(w['title'])
     cls, note = MARKS.get((wing_id, st), ('', ''))
     if w.get('collectionPiece'):
@@ -139,10 +141,17 @@ def gallery(wing_id, g, part_key=''):
     gallery_count += 1
     key = f'{wing_id}-{g["key"]}'
     n = len(g['works'])
-    flag = '' if 20 <= n <= 30 else ' <em class="warn">outside 20 to 30</em>'
+    coda = g.get('isCoda')
+    flag = '' if 20 <= n <= 30 or coda else ' <em class="warn">outside 20 to 30</em>'
     figs = ''.join(figure(wing_id, w) for w in g['works'])
-    out = (f'<section class="gallery" id="{key}"><header><h3>{esc(g["title"])}</h3><p class="theme">{esc(g["theme"])}</p>'
-           f'<p class="meta">{n} works · {esc(date_range(g["works"]))}{flag}</p></header><div class="wall">{figs}</div></section>')
+    rel = g.get('relatedItems', [])
+    related = ''
+    if rel:
+        rfigs = ''.join(figure(wing_id, w, 'border', 'related item; counted in Scrimshaw', count=False) for w in rel)
+        related = f'<div class="related"><p class="meta">Related item shown after the room</p><div class="wall">{rfigs}</div></div>'
+    note = f'<p class="meta">{esc(g["codaNote"])}</p>' if coda else ''
+    out = (f'<section class="gallery{" coda" if coda else ""}" id="{key}"><header><h3>{esc(g["title"])}</h3><p class="theme">{esc(g["theme"])}</p>'
+           f'<p class="meta">{n} works · {esc(date_range(g["works"]))}{flag}</p>{note}</header><div class="wall">{figs}</div>{related}</section>')
     for q in PLACE.get((wing_id, g['key']), []):
         out += q
     return out, f'<a href="#{key}">{esc(g["title"])} <span>{n}</span></a>'
@@ -160,7 +169,7 @@ for wing_id, wing_name, status in WINGS:
     extras = d.get('unplaced', []) + d.get('offWall', [])
     if extras:
         label = 'Unplaced' if d.get('unplaced') else 'Off the wall'
-        figs = ''.join(figure(wing_id, w, 'border', 'needs a home' if d.get('unplaced') else 'off the wall') for w in extras)
+        figs = ''.join(figure(wing_id, w, 'border', 'needs a home' if d.get('unplaced') else ('shown as a related item on Occasions and Figures' if LOCKED else 'off the wall')) for w in extras)
         wing_html.append(f'<section class="gallery extra" id="{wing_id}-extra"><header><h3>{esc(label)}</h3><p class="meta">{len(extras)} work{"s" if len(extras)>1 else ""} · not in any gallery</p></header><div class="wall">{figs}</div></section>')
         links.append(f'<a href="#{wing_id}-extra">{label} <span>{len(extras)}</span></a>')
         wing_n += len(extras)
@@ -212,6 +221,8 @@ nav.toc a:hover,nav.toc a:focus-visible{text-decoration:underline}
 .wing h2{font:500 clamp(30px,4vw,40px)/1.1 var(--serif);margin:0;text-wrap:balance}
 .part{display:grid;gap:6px;max-width:70ch;border-top:1px solid var(--rule);padding-top:16px;scroll-margin-top:16px}
 .part-title{font:500 24px/1.15 var(--serif);margin:0}
+.related{display:grid;gap:8px;border-top:1px solid var(--rule);padding-top:12px}
+section.coda header h3::before{content:"";}
 .decided{font-size:13px;color:var(--muted);max-width:70ch}.decided summary{cursor:pointer}.decided ul{margin:6px 0 0;padding-left:1.2em}
 section.gallery{display:grid;gap:16px;scroll-margin-top:16px}
 section.gallery header{display:grid;gap:4px;max-width:70ch}
@@ -253,15 +264,14 @@ rows = ''.join(f'<tr><td><a href="#{wid}">{esc(n)}</a></td><td>{c}</td><td>{g}</
                for (wid, _, _), (n, c, g, s) in zip(WINGS, wing_rows))
 
 intro = f'''<div class="intro">
-<p class="eyebrow">nnxyz gallery · structure review · all wings · October 15, 2026</p>
+<p class="eyebrow">nnxyz gallery · {'locked structure' if LOCKED else 'structure review'} · all wings · October 15, 2026</p>
 <h1>Every work, in its wing, part and room</h1>
-<p>All {total} owned works, hung as the structure files now stand: six wings, {gallery_count} rooms, every work in exactly one room except the three set aside below. Works are in the order they were drawn, or in title order for Abstract. Each room is named for what you can see in every work in it.</p>
-<p>Five questions are still open. Each sits on the page next to the works it concerns, with a short observation from looking at the walls and a suggested answer. Pick an answer there, then copy the summary at the end of the page back into the chat.</p>
+<p>All {total} owned works, hung as the structure files now stand: six wings, {gallery_count} rooms{' including one two-work coda' if LOCKED else ''}, every work in exactly one room{' except GM, which hangs as a related item' if LOCKED else ' except the three set aside below'}. Works are in the order they were drawn, or in title order for Abstract. Each room is named for what you can see in every work in it.</p>
+{'<p>The structure was locked on October 15, 2026, after the collector answered the five open questions on the earlier version of this page: the two Rawblocks landscapes close their wing as a coda; the Rawblocks line heads and masks moved so every room holds 21 or 22 works; GM is a related item on Occasions and Figures; and each wing now ends on its #0000 collection piece. This page shows the locked hanging.</p>' if LOCKED else '<p>Five questions are still open. Each sits on the page next to the works it concerns, with a short observation from looking at the walls and a suggested answer. Pick an answer there, then copy the summary at the end of the page back into the chat.</p>'}
 <table class="parts"><tr><th>Wing</th><th>Works</th><th>Rooms</th><th>Status</th></tr>{rows}</table>
-<ul class="rules"><li>{total} of {total} owned works shown once</li><li>Every room 20 to 30 works, except where flagged</li><li>Dates in US Central</li></ul>
-<p class="key"><b>Dashed outline</b>: a proposed move or an unplaced work, with the note under it. <b>Solid outline</b>: a #0000 collection piece, edition of one.</p>
-<p><b>Open questions:</b></p>
-<ol class="qlist"><li><a href="#q1">The two Rawblocks landscapes, #64 and #65</a></li><li><a href="#q2">Scribbled Heads at 16 works</a></li><li><a href="#q3">GM, off the Scrimshaw wall</a></li><li><a href="#q4">Where each #0000 hangs</a></li><li><a href="#q5">The empty item 7 in your wing notes</a></li></ol>
+<ul class="rules"><li>{total} of {total} owned works shown once</li><li>Every room 20 to 30 works{', except the coda' if LOCKED else ', except where flagged'}</li><li>Dates in UTC</li></ul>
+<p class="key"><b>Dashed outline</b>: {'a related item or a work shown outside its home wing' if LOCKED else 'a proposed move or an unplaced work'}, with the note under it. <b>Solid outline</b>: a #0000 collection piece, edition of one.</p>
+{'' if LOCKED else '<p><b>Open questions:</b></p><ol class="qlist"><li><a href="#q1">The two Rawblocks landscapes, #64 and #65</a></li><li><a href="#q2">Scribbled Heads at 16 works</a></li><li><a href="#q3">GM, off the Scrimshaw wall</a></li><li><a href="#q4">Where each #0000 hangs</a></li><li><a href="#q5">The empty item 7 in your wing notes</a></li></ol>'}
 </div>'''
 
 summary = '''<div class="summary" id="decisions">
@@ -305,6 +315,6 @@ page = ('<title>nnxyz Hanging Plan</title>\n<meta name="claude:viewport-fit-side
         '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">\n'
         + CSS + '\n<main>' + intro + '<nav class="toc" aria-label="Wings and rooms">' + ''.join(nav) + '</nav>'
-        + ''.join(body) + Q4 + Q5 + summary + '</main>' + SCRIPT)
+        + ''.join(body) + ('' if LOCKED else Q4 + Q5 + summary) + '</main>' + ('' if LOCKED else SCRIPT))
 open(OUT, 'w').write(page)
 print(f'{len(page)/1024/1024:.2f} MB, {total} works, {gallery_count} rooms')

@@ -35,7 +35,7 @@ the collector's explicit go.
 
 `curation/exhibitions/structure/` has one file per wing. Each gallery has a key,
 title, theme and an ordered list of works with `artworkId`, `title`,
-`recordedDate` (US Central) and a short `visualNote`.
+`recordedAt` (UTC instant), `recordedDate` (UTC date) and a short `visualNote`.
 
 | Wing | File | Galleries | Collector status |
 | --- | --- | --- | --- |
@@ -64,6 +64,15 @@ Facts settled along the way:
     (made last, edition of one) but must not quote the collector.
 
 ## Open questions for the collector
+
+All five were answered on October 15, 2026, on the hanging plan page, and the
+structure files are locked (`status: collector-approved`): the landscapes are a
+two-work coda (`rb-coda`); #42 to #46 joined Scribbled Heads and #19, #20, #24,
+#25 joined Patterned Masks (22, 21, 21 works); GM is a related item on
+Occasions and Figures; each wing ends on its #0000 by room order (Faces ends
+with Crossed-Out Eyes, NNOTB part 3 ends with Crowns and Last Masks, Abstract
+#0000 hangs last in its room); item 7 was nothing. The list below is kept as
+the record of what was asked.
 
 1. **Rawblocks #64 and #65.** These two painted landscapes are the last
    Rawblocks works, made March 15, 2023. The collector says they are out of
@@ -109,7 +118,7 @@ Facts settled along the way:
    - `structure/working/review-page-template.html` is the earlier page with
      its images removed. Reuse its look: IBM Plex Sans with Newsreader, and
      light and dark color tokens.
-2. **Lock the structure** with the collector's answers.
+2. **Lock the structure** with the collector's answers. Done October 15, 2026.
 3. **Pilot the gallery text on Black Silhouettes** (NNOTB part 1, 28 works). It
    should include:
    - the introduction, chapters, labels, one-liners and closing;
@@ -155,7 +164,13 @@ Look at the images before writing about them. Do not write from notes alone.
 
 ## House rules that carry over
 
-- Give dates and times in US Central.
+- Dates and times are UTC, from the archived creation timestamp (collector,
+  October 15, 2026: this is a global gallery). Structure files carry
+  `recordedAt` (exact UTC instant) and `recordedDate` (its UTC calendar date).
+  Written and spoken text uses UTC dates. The site may localize the exact time
+  for the viewer in the details panel; the static fallback is UTC and says so.
+  132 of the 574 dated works have a different calendar date in UTC than in
+  Central, so never reuse Central dates from older files.
 - `collection/` bytes are immutable. Published media is write-once.
 - Commits end with the co-author line the session supplies. No model names
   in commits, code or pull requests.
