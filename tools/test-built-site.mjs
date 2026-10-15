@@ -2,10 +2,17 @@ import { createServer } from 'node:http';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
-import { isMediaKey } from './delivery-plan.mjs';
 const root = path.resolve('dist');
 const deployment = JSON.parse(
   await fs.readFile('infra/deployment.json', 'utf8'),
+);
+// Only published keys are proxied, to URLs built here from the manifest.
+const { objects } = JSON.parse(await fs.readFile('data/media.json', 'utf8'));
+const published = new Map(
+  Object.keys(objects).map((key) => [
+    `/${key}`,
+    new URL(key, deployment.deliveryUrl).href,
+  ]),
 );
 const mime = {
   '.html': 'text/html',
@@ -23,14 +30,15 @@ const server = createServer(async (req, res) => {
       new URL(req.url, 'http://localhost').pathname,
     );
     // Media is never part of the build; the pages reference published URLs.
-    if (isMediaKey(name.slice(1))) {
-      const published = await fetch(new URL(name, deployment.deliveryUrl));
+    const mediaUrl = published.get(name);
+    if (mediaUrl) {
+      const media = await fetch(mediaUrl);
       res
-        .writeHead(published.status, {
+        .writeHead(media.status, {
           'content-type':
-            published.headers.get('content-type') || 'application/octet-stream',
+            media.headers.get('content-type') || 'application/octet-stream',
         })
-        .end(Buffer.from(await published.arrayBuffer()));
+        .end(Buffer.from(await media.arrayBuffer()));
       return;
     }
     const target = path.resolve(
