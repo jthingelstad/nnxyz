@@ -50,6 +50,32 @@ The artwork page gets its own short reading, written in the same session as the
 gallery text. It covers what the gallery text leaves out (a closer look at the
 one work) and does not repeat the gallery's sentence.
 
+## Written to be heard
+
+The same text will also be read aloud as an audio tour: the visitor enters a
+gallery, presses play, and each work comes onto the screen as the voice
+reaches it. Write every gallery so it works both read and heard.
+
+- **Text comes in segments, one per thing on screen.** The gallery text is an
+  ordered list of segments: the introduction, each chapter opening, each work's
+  label or line, and the closing. A segment says which work it is about, or
+  none. A comparison segment names the second work, so the screen can show the
+  two together.
+- **Works with no text still get a moment.** In the tour they hold on screen
+  for a few seconds of silence, so the run of works still registers.
+- **No page directions.** "Above", "below", "see #47" and "scroll" mean nothing
+  when heard. Positions inside the picture ("upper left", "behind the head")
+  are fine, because the picture is on screen.
+- **Sentences a voice can carry.** Avoid parentheses, slashes, lists after a
+  colon and long runs of numbers. If a sentence makes you stumble when you read
+  it aloud, rewrite it.
+- **Spoken forms.** Short titles, the artist's name and collection names need
+  spoken forms, kept in one pronunciation list for the whole site rather than
+  fixed in each sentence.
+- **Length.** At about 150 spoken words a minute, a label of three to five
+  sentences takes 20 to 30 seconds. Aim for a gallery tour of five to eight
+  minutes.
+
 ## Sentences
 
 - Lead with the thing seen. "Two rows of teeth" beats "The composition features
