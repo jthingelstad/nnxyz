@@ -9,7 +9,11 @@ import {
 } from '../../lib/exhibitions';
 export function getStaticPaths() {
   return [
-    ...exhibitionCollections.map((c) => ({ params: { collection: c.id } })),
+    // Other nnxyz and Scrimshaw are sections of Other & related; their own
+    // routes redirect there (astro.config.mjs).
+    ...exhibitionCollections
+      .filter((c) => !['nnxyz-other', 'scrimshaw'].includes(c.id))
+      .map((c) => ({ params: { collection: c.id } })),
     { params: { collection: 'other-related' } },
   ];
 }

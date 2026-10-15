@@ -19,12 +19,14 @@ class Page(HTMLParser):
         self.title = False
         self.canonical = False
         self.main = False
+        self.redirect = False
 
     def handle_starttag(self, tag, attrs):
         data = dict(attrs)
         self.title |= tag == "title"
         self.main |= tag == "main"
         self.canonical |= tag == "link" and data.get("rel") == "canonical"
+        self.redirect |= tag == "meta" and data.get("http-equiv") == "refresh"
         for key in ["href", "src", "data-src"]:
             if data.get(key):
                 self.refs.append(data[key])
@@ -38,15 +40,31 @@ def main():
     rooms = [g for c in exhibitions["collections"] for g in c["galleries"]]
     recovered_exhibitions = json.loads((ROOT / "curation/abstract/exhibitions.json").read_text())
     rooms += [g for c in recovered_exhibitions["collections"] for g in c["galleries"]]
-    # 3 utility pages, 7 collection entrances, and the 6 preserved short-walk routes.
-    assert len(pages) == len(gallery) + len(abstract) + len(rooms) + 16, "Missing generated routes"
+    # 3 utility pages, 5 collection entrances, and 2 redirects from the earlier
+    # standalone pages of Other & related's two sections.
+    redirects = {"collections/nnxyz-other/index.html", "collections/scrimshaw/index.html"}
+    assert len(pages) == len(gallery) + len(abstract) + len(rooms) + 10, "Missing generated routes"
+    assert not (DIST / "walks").exists(), "Retired walk pages were generated"
+    sitemap = (DIST / "sitemap-0.xml").read_text()
+    locs = {loc.split("</loc>")[0] for loc in sitemap.split("<loc>")[1:]}
+    site = "https://nnxyz.thingelstad.xyz/"
+    expected = {
+        site + str(path.relative_to(DIST)).removesuffix("index.html")
+        for path in pages
+        if path.name == "index.html" and str(path.relative_to(DIST)) not in redirects
+    }
+    assert locs == expected, "Sitemap differs from the generated pages"
+    assert f"Sitemap: {site}sitemap-index.xml" in (DIST / "robots.txt").read_text()
     for room in rooms:
         assert (DIST / "galleries" / room["id"] / "index.html").is_file()
     assert (DIST / "collections/other-related/index.html").is_file()
     for path in pages:
         page = Page()
         page.feed(path.read_text())
-        assert page.title and page.main and page.canonical, f"Empty or incomplete page: {path}"
+        if str(path.relative_to(DIST)) in redirects:
+            assert page.redirect and page.refs, f"Redirect page lost its target: {path}"
+        else:
+            assert page.title and page.main and page.canonical, f"Empty or incomplete page: {path}"
         for ref in page.refs:
             url = urlsplit(ref)
             if url.scheme or url.netloc or not url.path:

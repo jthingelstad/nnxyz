@@ -21,7 +21,7 @@ npm run assets
 npm run dev
 ```
 
-Open http://127.0.0.1:4321/. The entrance pairs a space reserved for the collector’s welcome with a native drawing replay, followed by five collection entrances. Visitors choose galleries within Faces, New Nifty on the Block (NNOTB), Rawblocks, Abstract, or Other & related; there is no global artwork grid. The 31 AI-curated galleries contain 8–30 works, presented in chapters with large individual images, pairs, optional readings and a closing question. A quiet Dark/Light header switch changes the gallery surround between white and black and remembers the visitor’s choice. Nifty Ink detail pages offer native SVG, continuous stroke playback, speed/seek controls, enlargement, AI reading, owned collection position, related works and downloadable metadata/provenance. Abstract pages offer responsive raster images, enlargement, AI readings, source records and byte-exact original JPEG downloads; they expose no replay or SVG controls. The collector’s new welcome is deferred. Existing artwork URLs remain stable; previous/next and return links follow each drawing’s exhibition home. The earlier five short-walk routes remain accessible at their existing URLs, but are not collection entrances.
+Open http://127.0.0.1:4321/. The entrance pairs a space reserved for the collector’s welcome with a native drawing replay, followed by five collection entrances. Visitors choose galleries within Faces, New Nifty on the Block (NNOTB), Rawblocks, Abstract, or Other & related; there is no global artwork grid. The 31 AI-curated galleries contain 8–30 works, presented in chapters with large individual images, pairs, optional readings and a closing question. A quiet Dark/Light header switch changes the gallery surround between white and black and remembers the visitor’s choice. Nifty Ink detail pages offer native SVG, continuous stroke playback, speed/seek controls, enlargement, AI reading, owned collection position, related works and downloadable metadata/provenance. Abstract pages offer responsive raster images, enlargement, AI readings, source records and byte-exact original JPEG downloads; they expose no replay or SVG controls. The collector’s new welcome is deferred. Existing artwork URLs remain stable; previous/next and return links follow each drawing’s exhibition home. The earlier short-walk pages were retired on October 14, 2026; their route records remain in the curation catalog. Other nnxyz and Scrimshaw are sections of Other & related, and their former standalone URLs redirect there.
 
 ```sh
 npm run check
@@ -29,7 +29,7 @@ npm test
 npm run build
 ```
 
-The build creates 673 static pages in `dist/`, including 626 artworks. Nifty Ink artwork paths use immutable drawing CIDs; Abstract paths use Polygon contract/token identities. No model invocation or cloud service is needed.
+The build creates 667 HTML pages in `dist/`, including 626 artworks and two redirects, plus `robots.txt` and a sitemap of the 664 public pages. Nifty Ink artwork paths use immutable drawing CIDs; Abstract paths use Polygon contract/token identities. No model invocation or cloud service is needed.
 
 For browser checks, with a local server running:
 
