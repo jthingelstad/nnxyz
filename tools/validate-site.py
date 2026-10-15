@@ -18,6 +18,7 @@ MEDIA_PREFIXES = (
     "abstract/images/",
     "abstract/originals/",
     "abstract/records/",
+    "audio/",
 )
 
 

@@ -39,7 +39,13 @@ const current = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
 // Every key the site references or offers for download.
 const gallery = JSON.parse(await fs.readFile('data/gallery.json', 'utf8'));
 const abstract = JSON.parse(await fs.readFile('data/abstract.json', 'utf8'));
+// Audio tour segments: tools/build-audio-tour.mjs renders them and records
+// each key in the manifest; a regenerated segment is a new key.
+const audio = JSON.parse(
+  await fs.readFile('curation/exhibitions/audio/manifest.json', 'utf8'),
+);
 const expected = [
+  ...audio.entries.map(({ key }) => key),
   ...gallery.flatMap(({ inkId }) => [
     `art/${inkId}.svg`,
     `png/${inkId}.png`,
