@@ -120,6 +120,14 @@
               "AbortIncompleteMultipartUpload": {
                 "DaysAfterInitiation": 7
               }
+            },
+            {
+              "Id": "ExpireOldVersions",
+              "Status": "Enabled",
+              "NoncurrentVersionExpiration": {
+                "NoncurrentDays": 30
+              },
+              "ExpiredObjectDeleteMarker": true
             }
           ]
         }

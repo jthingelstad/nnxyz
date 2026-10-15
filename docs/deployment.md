@@ -100,7 +100,7 @@ Tinylytics is enabled in production builds and activates only on the canonical g
 
 ## Rollback and updating artwork
 
-To roll back website code, revert the relevant Git commit on main. The same validation/deployment pipeline will publish it; the live `revision.json` identifies the running commit. S3 versioning is an additional recovery mechanism, not the normal release workflow.
+To roll back website code, revert the relevant Git commit on main. The same validation/deployment pipeline will publish it; the live `revision.json` identifies the running commit. S3 versioning is an additional recovery mechanism, not the normal release workflow: replaced or deleted web bucket objects stay recoverable for 30 days, then expire. The archive bucket keeps every version.
 
 If the owned collection changes, import independent copies from the permanent archive, verify them, then run `python3 tools/pack-collection.py /tmp/nnxyz-source-blobs.tar.gz` to generate a new snapshot and manifests. Upload the new immutable key using AWS MCP's presigned upload tool and verify its checksum before committing the new dataset pointer. Never overwrite an existing snapshot key. A routine website change needs no dataset upload or model invocation.
 

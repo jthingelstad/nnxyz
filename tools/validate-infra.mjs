@@ -34,6 +34,20 @@ for (const name of ['ArchiveBucket', 'SiteBucket']) {
     ),
   );
 }
+// Replaced site versions expire after 30 days; the archive keeps every version.
+const lifecycle = (name) =>
+  storage.Resources[name].Properties.LifecycleConfiguration.Rules;
+assert.ok(
+  lifecycle('SiteBucket').some(
+    (rule) =>
+      rule.Status === 'Enabled' &&
+      rule.NoncurrentVersionExpiration?.NoncurrentDays === 30,
+  ),
+);
+assert.ok(
+  !JSON.stringify(lifecycle('ArchiveBucket')).includes('Expiration'),
+  'The archive bucket never expires versions',
+);
 assert.ok(
   !JSON.stringify(site).includes('s3-website'),
   'Use signed HTTPS origins',
