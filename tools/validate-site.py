@@ -113,6 +113,8 @@ def main():
     # The screen saver fetches its works as JSON; every image it names is published.
     saver = json.loads((DIST / "screensaver/data.json").read_text())["works"]
     assert len(saver) == len(gallery) + len(abstract), "Screen saver covers every work"
+    # The widths and prefixes mirror src/lib/media-paths.ts and the >= 1200
+    # filter in src/scripts/screensaver.ts; change all three together.
     for item in saver:
         assert item["caption"], item["id"]
         widths = [1200, 1600, 2000] if item["kind"] == "ink" else [1200, 2000]

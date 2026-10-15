@@ -140,12 +140,11 @@ export function initScreensaver() {
       else root.requestFullscreen?.();
     });
   document.addEventListener('keydown', (event) => {
-    // A focused button or link handles Space and Enter itself.
-    if (
+    // A focused control handles Space and Enter itself; arrows and F still work.
+    const onControl =
       event.target instanceof HTMLElement &&
-      event.target.closest('button, a, input, select, textarea')
-    )
-      return;
+      event.target.closest('button, a, input, select, textarea');
+    if (onControl && (event.key === ' ' || event.key === 'Enter')) return;
     if (event.key === ' ') {
       event.preventDefault();
       setPlaying(!playing);

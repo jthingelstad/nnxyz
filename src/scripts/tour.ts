@@ -63,6 +63,9 @@ export function initTour() {
     playing = state === 'playing';
     toggle.setAttribute('aria-label', playing ? 'Pause tour' : 'Resume tour');
     document.body.classList.toggle('tour-active', state !== 'idle');
+    // Silent holds have no media playing, so tell the OS controls ourselves.
+    if ('mediaSession' in navigator)
+      navigator.mediaSession.playbackState = state === 'idle' ? 'none' : state;
   };
   const roomTitle =
     player.querySelector('.tour-room')?.textContent?.trim() ?? document.title;
@@ -72,14 +75,22 @@ export function initTour() {
       ? document.getElementById(`work-${stop.artworkId}`)
       : null;
     const title = figure?.querySelector('h3')?.textContent?.trim();
-    const image = figure?.querySelector('img')?.currentSrc;
+    const img = figure?.querySelector('img');
+    const artwork =
+      img?.currentSrc && img.naturalWidth
+        ? [
+            {
+              src: img.currentSrc,
+              sizes: `${img.naturalWidth}x${img.naturalHeight}`,
+              type: 'image/webp',
+            },
+          ]
+        : [];
     navigator.mediaSession.metadata = new MediaMetadata({
       title: title ?? roomTitle,
       artist: title ? roomTitle : 'nnxyz',
       album: 'nnxyz audio tour',
-      artwork: image
-        ? [{ src: image, sizes: '640x640', type: 'image/webp' }]
-        : [],
+      artwork,
     });
   };
   const reveal = (stop: TourStop) => {
@@ -193,6 +204,7 @@ export function initTour() {
     clearInterval(ticker);
     current = -1;
     setState('idle');
+    if ('mediaSession' in navigator) navigator.mediaSession.metadata = null;
     bar.hidden = true;
     start.hidden = false;
     document
@@ -246,6 +258,10 @@ export function initTour() {
     play(0);
     toggle.focus({ preventScroll: true });
   });
+  // Fetch the first segment as soon as the visitor shows interest.
+  const warm = () => preload(0);
+  start.addEventListener('pointerenter', warm, { once: true });
+  start.addEventListener('focus', warm, { once: true });
   player.hidden = false;
   start.hidden = false;
 }

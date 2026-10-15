@@ -210,13 +210,11 @@ async function main() {
   }
 
   const order = new Map(planned.map((p, i) => [`${p.roomId}:${p.index}`, i]));
-  // Keep entries for rooms outside a --room run untouched; drop entries for
-  // segments of planned rooms that no longer have text.
-  const plannedRooms = new Set(planned.map((p) => p.roomId));
+  // Keep every entry outside this run's plan, including a segment that has
+  // lost its text: its key is published write-once, and keeping the entry is
+  // what lets a later re-render of that index take a new version.
   const kept = manifest.entries.filter(
-    (entry) =>
-      !order.has(`${entry.roomId}:${entry.index}`) &&
-      !plannedRooms.has(entry.roomId),
+    (entry) => !order.has(`${entry.roomId}:${entry.index}`),
   );
   const made = [];
   // The manifest is rewritten after every render, so an interrupted run
