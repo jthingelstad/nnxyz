@@ -12,11 +12,11 @@ CHAPTERS = [
              dict(short='#64', treatment='label',
                   text="A sunset through trees. A yellow sun blazes at the top with rays of pink, blue and yellow, and under it a stand of red-trunked trees with green crowns stands on a field of gold and orange, ruled with dark lines like a floor. The whole picture is painted in soft discs with scribble over them, and the sun's rays reach every corner. With 831 recorded strokes it is one of the two most worked drawings in the series.",
                   caption="A yellow sun blazes through a stand of red-trunked trees with green crowns, over a field of gold.",
-                  reading="The rays are drawn as long soft strokes from the sun at the upper center, in yellow, pink and blue. The trees are a row of thin red trunks with green and yellow scribble for leaves. The field below is painted in gold with dark ruled lines and blue scribble. Recorded at 05:03 UTC."),
+                  reading="The rays are drawn as long soft strokes from the sun at the upper center, in yellow, pink and blue. The trees are a row of thin red trunks with green and yellow scribble for leaves. The field below is painted in gold with dark ruled lines and blue scribble."),
              dict(short='#65', treatment='label', compare='#64',
                   text="Light through a forest. Tall dark trees stand at the sides and a beam of pale light falls between them onto a clearing, where fallen trunks lie in the foreground painted in brown and red. Soft discs of white and lilac float in the light. Half an hour after the sunset, the light has moved from the sky to the ground, and the picture is dark except where it falls. With 1,061 recorded strokes it is the most worked drawing in the Rawblocks, and the last.",
                   caption="Pale light falls through tall dark trees onto a clearing where fallen trunks lie in the foreground.",
-                  reading="The beam is a broad diagonal of pale grey from the upper left to the center. The trees are drawn in black and green scribble with white highlights. The fallen trunks are painted in brown and red with white line, lying at angles across the bottom. Recorded at 05:39 UTC on March 15, 2023."),
+                  reading="The beam is a broad diagonal of pale grey from the upper left to the center. The trees are drawn in black and green scribble with white highlights. The fallen trunks are painted in brown and red with white line, lying at angles across the bottom."),
          ]),
 ]
 

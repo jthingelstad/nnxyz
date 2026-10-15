@@ -3,7 +3,7 @@ WING, PART, GALLERY = 'abstract', '', 'ab-bands'
 INTRO = [
     "Marks laid side by side until they build a surface. The twenty-five works in this room are bands, bars and washes: stripes of color stacked or crossed, blocks set in rows, grids drawn over soft fields. No faces, no figures. The Abstract series has no per-work dates, so the room follows the title numbers.",
     "Two kinds of mark do most of the work. One is a broad vertical stroke, dragged down the square and left to drip, so that a picture is a row of poles or a curtain of color. The other is a thin straight line, drawn across or diagonally over the strokes, so that the surface becomes a plaid, a ladder or a grid.",
-    "Watch the washes. Behind nearly every set of bars is a soft field of color, grey, pink, maroon or cream, and the bars sit on it like rain on a window.",
+    "Behind nearly every set of bars is a soft field of color, grey, pink, maroon or cream, and the bars sit on it like rain on a window.",
 ]
 
 CHAPTERS = [
@@ -123,5 +123,5 @@ CHAPTERS = [
          ]),
 ]
 
-CLOSING = "Look again at the plaid of thin lines near the start of the room, and then at the cream page at the end with its few blocks. The same hand ruled both. One fills the square with lines until it is cloth. The other draws a frame and leaves the page bare."
+CLOSING = "The plaid of thin lines near the start of the room and the cream page at the end, with its few blocks, were ruled by the same hand. One fills the square with lines until it is cloth. The other draws a frame and leaves the page bare."
 CLOSING_SECOND = '#03'

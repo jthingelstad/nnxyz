@@ -1,7 +1,7 @@
 WING, PART, GALLERY = 'abstract', '', 'ab-gesture'
 
 INTRO = [
-    "Marks thrown, dripped, scribbled and spun. The twenty-seven works in this room are the Abstract series at its loosest: splashes on a bare ground, crowds of short strokes, swirls that turn in a circle, lines that sweep across the square and leave. The room ends on the collection piece, number zero zero zero zero.",
+    "Marks thrown, dripped, scribbled and spun. The twenty-seven works in this room are the Abstract series at its loosest: splashes on a bare ground, crowds of short strokes, swirls that turn in a circle, lines that sweep across the square and leave. The room ends on the collection piece, #0000.",
     "Three kinds of gesture hang here. The splash, which hits the ground and spreads. The scribble, which covers it. And the swirl, which turns the whole square into one motion, like a ball of yarn or a storm seen from above.",
     "Look for the one face. Number thirty-eight is a skull drawn in loose loops over soft color, and it is the only face in the Abstract series. It hangs among the swirls because the loops are the same.",
 ]

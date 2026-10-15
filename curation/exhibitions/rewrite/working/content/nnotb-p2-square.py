@@ -3,7 +3,7 @@ WING, PART, GALLERY = 'nnotb', 'p2', 'square'
 INTRO = [
     "A head drawn as a box, with boxes inside it. That is the mask of this room: square eyes holding spirals, targets or crosses, a mouth drawn as a grille of upright bars, and every corner of the square filled with zigzag, beads and scribble. Twenty-four works, from June 8 to August 19, 2022.",
     "The parts are a kit. An eye can be a red X in a box, a spiral in a box, a flower, a planet with a ring. A mouth can be white blocks, a row of fangs, a bar of grey teeth. Beads run along the edges, zigzags run along the brows, and a few tubes stand up on top like hair or a crown. Each mask is a new arrangement of the same parts.",
-    "Watch the boxes. In June they are packed and crowded. In July the masks get a face shape, with a jaw and a crown. In August the boxes become machines and mazes, and the last mask in the room is a long yellow face behind a cage of lines.",
+    "In June the boxes are packed and crowded. In July the masks get a face shape, with a jaw and a crown. In August the boxes become machines and mazes, and the last mask in the room is a long yellow face behind a cage of lines.",
 ]
 
 CHAPTERS = [
@@ -13,7 +13,7 @@ CHAPTERS = [
              dict(short='#141', treatment='label',
                   text="The first mask of the summer: a red X in a yellow box on the left, a purple cross in a box on the right, a band of dark red beads across the brow, and a long white zigzag under them like a row of teeth. Below that, white boxes stand in a row like fence posts. Blue, pink, yellow and black fill every gap. It is drawn on June 8, 2022, four days after the first part of the collection ends, and the whole room is already in it.",
                   caption="A packed blue mask, a red X in a yellow box for one eye, a purple cross for the other.",
-                  reading="The X on the left is drawn in thick red strokes over a yellow ring, and the cross on the right is a purple plus sign over a dark box. Between them a row of yellow dashes runs down like a zipper. The white boxes at the bottom have red dots inside them. Recorded with 115 strokes."),
+                  reading="The X on the left is drawn in thick red strokes over a yellow ring, and the cross on the right is a purple plus sign over a dark box. Between them a row of yellow dashes runs down like a zipper. The white boxes at the bottom have red dots inside them."),
              dict(short='#144', treatment='line',
                   text="A pink mask with a red X in one eye, a ring in the other, a tongue hanging out at the bottom, and a column of brown beads down the right edge.",
                   caption="A pink mask with a red X eye and a ringed eye, a red tongue hanging out below.",
@@ -32,7 +32,7 @@ CHAPTERS = [
              dict(short='#151', treatment='label',
                   text="Two square eyes side by side, each a tight spiral, the left orange and the right black and white, in a boxy head with a mouth of zigzag teeth below. Thick white and black lines run around the lower half in right angles, like the wiring of a machine. The ground is red and olive behind the head. It is the clearest statement of the room's formula: the eyes are boxes, the spirals are in the boxes, and everything else is pattern.",
                   caption="Two square eyes side by side, each a tight spiral, in a boxy head with zigzag teeth.",
-                  reading="The spirals are drawn with a different hand: the left one loose and orange, the right one tight and black with many turns. The teeth are two rows of white and red zigzag in a box. Pink loops run along the edges of the face, and a green coil sits at the upper left. Ninety-five strokes."),
+                  reading="The spirals are drawn with a different hand: the left one loose and orange, the right one tight and black with many turns. The teeth are two rows of white and red zigzag in a box. Pink loops run along the edges of the face, and a green coil sits at the upper left."),
              dict(short='#154', treatment='line',
                   text="A yellow mask with a ringed planet for one eye, a red X for the other, a blue flower between them, and a mouth of white bars.",
                   caption="A yellow mask with a ringed purple planet for one eye and a red X for the other.",
@@ -48,7 +48,7 @@ CHAPTERS = [
              dict(short='#157', treatment='label',
                   text="A purple ground, and in it a head with a yellow crown, two eyes that are each a mouth of fangs, and below them a wide grille of white teeth in a pink box. The face is drawn in black and white line over orange, blue and green scribble, and purple zigzag runs down the right side. It is the mask with the most teeth in the room: two sets in the eyes and one across the jaw.",
                   caption="A crowned head on purple whose two eyes are each a mouth of fangs, white teeth below.",
-                  reading="The eyes are drawn as two curved mouths with white fangs inside, each with a small spiral at the center, so they look back. The crown is a yellow loop with three bumps. Two red rings sit at the sides like ears, and the mouth at the bottom is a box of white blocks outlined in black and pink. Recorded with 101 strokes."),
+                  reading="The eyes are drawn as two curved mouths with white fangs inside, each with a small spiral at the center, so they look back. The crown is a yellow loop with three bumps. Two red rings sit at the sides like ears, and the mouth at the bottom is a box of white blocks outlined in black and pink."),
              dict(short='#159', treatment='line',
                   text="A grey head with a crown of orange sun rays, two spiral eyes in yellow boxes, a row of boxes with X marks down the center and a mouth of white fangs at the bottom.",
                   caption="A grey head crowned with orange sun rays, spiral eyes in yellow boxes, X-marked boxes down the center.",
@@ -67,7 +67,7 @@ CHAPTERS = [
                   reading="The crown is a row of orange and white bars with black between them, and a yellow zigzag runs along the brow. The X eye is yellow in a black box, the other a ring with a yellow center. Pink and blue bars run down the left edge. The ground is red and orange with black over it."),
              dict(short='#168', treatment='none',
                   caption="An orange square mask with two spiral eyes in boxes, glasses drawn around them, and a mouth of white blocks.",
-                  reading="The glasses are two boxes joined by a bridge, drawn in black and white line over the eyes. The mouth is a box of white blocks outlined in red. Purple zigzag frames the face on both sides, and a yellow crown of short strokes runs along the top. Seventy-two strokes."),
+                  reading="The glasses are two boxes joined by a bridge, drawn in black and white line over the eyes. The mouth is a box of white blocks outlined in red. Purple zigzag frames the face on both sides, and a yellow crown of short strokes runs along the top."),
              dict(short='#170', treatment='line',
                   text="A red framed mask with two square eyes, one a spiral in orange and one a spiral in black, a row of white teeth at the lower left and bars of green and blue below.",
                   caption="A red framed mask with two square spiral eyes, one orange and one black, white teeth at the lower left.",
@@ -94,7 +94,7 @@ CHAPTERS = [
              dict(short='#215', treatment='label',
                   text="A maze of boxes in red, yellow and blue, with a purple spiral in a dark box at the right, a red curl at the center and a mouth of white blocks at the lower right. Black zigzag runs across the top, pink zigzag runs along the bottom, and a flower sits at the lower left corner. The face has almost disappeared into the pattern; what is left is a spiral where an eye would be and a row of teeth where a mouth would be.",
                   caption="A maze of red, yellow and blue boxes, a purple spiral at the right, white blocks for a mouth.",
-                  reading="The boxes are drawn in thick yellow and red line and nested three deep, with white scribble inside them. The red curl at the center is drawn like a hook. A column of grey tiles sits at the lower right like a keyboard. Recorded with 158 strokes."),
+                  reading="The boxes are drawn in thick yellow and red line and nested three deep, with white scribble inside them. The red curl at the center is drawn like a hook. A column of grey tiles sits at the lower right like a keyboard."),
              dict(short='#216', treatment='line',
                   text="A boxy head turned to the right, with a yellow loop of beads along its jaw, a square eye at the right, and a grille of teeth under a row of orange tiles.",
                   caption="A boxy head turned to the right, a yellow loop of beads along its jaw, a grille of teeth below.",
@@ -106,13 +106,13 @@ CHAPTERS = [
              dict(short='#220', treatment='line',
                   text="A mask with a crown of spikes and two spiral eyes in boxes, one yellow and one white, a row of ringed teeth below and bars of yellow and blue on both sides.",
                   caption="A mask crowned with spikes, two boxed spiral eyes, a row of ringed teeth, bars at both sides.",
-                  reading="The spikes are drawn as black and yellow strokes standing up from the brow. The teeth are a row of white rings with yellow around them in a red box. The bars at the sides are vertical capsules of yellow, blue and white, drawn in rows. Recorded with 309 strokes."),
+                  reading="The spikes are drawn as black and yellow strokes standing up from the brow. The teeth are a row of white rings with yellow around them in a red box. The bars at the sides are vertical capsules of yellow, blue and white, drawn in rows."),
              dict(short='#229', treatment='label', compare='#141',
                   text="A long yellow face with two pale eyes and a mouth of white and black bars, behind a cage of thin yellow and white lines that cross the whole square. Stripes of pink, red and green stand behind the face, and a crown of white and yellow zigzag sits on its brow. Where the first mask of June packed its boxes to the edges, this one stands back and lets the lines fall over it. It is the last work of the mask summer, drawn August 19, 2022.",
                   caption="A long yellow face with pale eyes and a mouth of white bars behind a cage of thin lines.",
-                  reading="The face is a tall oval drawn in yellow with brown shading, and the eyes are two pale rings with small pupils under drawn lashes. The lines across it are long, thin and nearly straight, in yellow, white and pink, crossing at shallow angles. A spiral sits at the upper right like a sun. Recorded with 263 strokes."),
+                  reading="The face is a tall oval drawn in yellow with brown shading, and the eyes are two pale rings with small pupils under drawn lashes. The lines across it are long, thin and nearly straight, in yellow, white and pink, crossing at shallow angles. A spiral sits at the upper right like a sun."),
          ]),
 ]
 
-CLOSING = "Look again at the first mask and the last. In June the boxes are packed to the edges and the eyes are a red X and a purple cross. In August a long yellow face stands behind a cage of lines, with two pale eyes that are almost human. The parts never changed. The arrangement did."
+CLOSING = "In June, the first mask is packed to the edges with boxes, and its eyes are a red X and a purple cross. In August, the last is a long yellow face behind a cage of lines, with two pale eyes that are almost human. The parts never changed. The arrangement did."
 CLOSING_SECOND = '#141'

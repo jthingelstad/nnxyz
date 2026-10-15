@@ -152,10 +152,27 @@ the record of what was asked.
      captions from a checked list; `review-page.py` renders one or more
      rewrite files as a review page with the images. Tours run 7 to 9
      minutes a room (Scribbled Heads and the two Masks rooms are longest).
-     The editing pass so far is light: the "It is the first" construction
-     still appears about 35 times across the site and "like a" about 75
-     times in 34,000 spoken words; a page-order read for repeats is still
-     owed before the text goes live. Review pages (private artifacts):
+     Editing pass done October 15, 2026, after a page-order read of all 28
+     rooms (collector: look for repetition and for things out of place for
+     a visitor; apply directly). What changed: 369 closing stroke-count
+     sentences were removed from the artwork-page readings, keeping the
+     eight where the number carries an argument (most, fewest, a difference
+     between two versions); every "recorded points" figure in visitor text
+     was replaced with plain wording (densest, sparest), since point count
+     is a method proxy; all UTC clock times in prose became relative
+     wording ("two hours before", "twelve hours after"); "minted" and "on
+     the chain" became "published" and "made", and the Abstract wing intro no
+     longer says "another chain"; 13 of the 25 closings that opened "Look
+     again at" and 7 of the 17 introductions that opened "Watch the" were
+     reworded; the "With N recorded strokes it is the most worked drawing in
+     the room" formula and the "It is the first" opener were each varied in
+     about ten places. Numbers were not changed, only sentences dropped or
+     rephrased. The approved pilot room kept its text except two global
+     fixes (a points sentence and a cross-room comparison). Left alone on
+     purpose: the per-work readings still open with the part named ("The
+     teeth are", "The eyes are"); they appear one per artwork page, where
+     the inventory voice is right, and the review pages exaggerate the
+     effect by stacking them. Review pages (private artifacts, republished):
      NNOTB part 1 <https://claude.ai/artifact/FP22mn2GY6BnZQoAfrpZg3>, parts 2 and 3
      <https://claude.ai/artifact/5rRpXDKJsgKZ5Yngi2PcUr>, Faces <https://claude.ai/artifact/EjrMVjrrTuAKqJxry78UF8>,
      the rest <https://claude.ai/artifact/GuzCegaGfP6wNS7eJSBvoQ>.
