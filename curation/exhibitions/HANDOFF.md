@@ -127,6 +127,13 @@ the record of what was asked.
    - the short artwork-page readings.
 
    Show it to the collector before writing the rest.
+   - Drafted October 15, 2026 in `rewrite/nnotb--p1--silhouettes.json`
+     (status `pilot-draft-for-collector-review`): introduction, five chapters,
+     8 labels, 15 one-liners, 5 silent works, three comparisons, closing, a
+     caption and a reading for all 28, and the tour segments (about 8.8
+     minutes). `rewrite/working/pilot-review-page.py` renders a rewrite file
+     as a review page. Three spoken forms were added to
+     `curation/voice/pronunciation.json` as proposals.
 4. **Write every gallery,** wing by wing, plus the wing and part
    introductions. Then do one editing pass in page order to remove repeats.
    Rewrites go in `curation/exhibitions/rewrite/`.
