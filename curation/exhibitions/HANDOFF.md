@@ -204,11 +204,20 @@ the record of what was asked.
      `npm test`, `npm run build`, `tools/validate-site.py` and the browser
      suite pass; the browser checks now read the rooms from `rewrite/`.
    - Preview only; main deploys the live site. Merging is the collector's call.
-6. **Audio tour.** `curation/exhibitions/audio/HANDOFF.md` is the prompt for a
-   local session on the Mac: sample the OpenAI voices on three segments and
-   stop for the collector's choice, then generate every segment, record a
-   manifest and publish through the write-once media pipeline. The site's
-   tour player comes after that, in the cloud.
+6. **Audio tour.** `curation/exhibitions/audio/HANDOFF.md` was the prompt for
+   a local session on the Mac. Done October 15, 2026: the collector chose the
+   voice "echo" on `gpt-4o-mini-tts` (`curation/voice/voice.json`), confirmed
+   the three spoken forms and ruled out speaking titles; 785 segments, about
+   201 minutes, are published write-once under `audio/` and recorded with
+   spoken text, hashes, durations and request ids in
+   `curation/exhibitions/audio/manifest.json`. The player is on every room
+   page: `src/lib/tour.ts` joins the manifest to the room's segments by index
+   (`TourPlayer.astro`, `src/scripts/tour.ts`); "Play the audio tour" shows
+   the length, a fixed bar carries pause, previous, next, progress and stop,
+   each stop brings its work on screen and outlines it, silent works hold for
+   their seconds, Escape ends the tour, and the page reads the same without
+   it. `tools/validate-site.py` checks every embedded audio key against
+   `data/media.json`.
 
 ## Working materials
 

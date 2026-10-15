@@ -117,6 +117,20 @@ def main():
         assert item["caption"], item["id"]
         for ref in [item["src"], *(c.split()[0] for c in item["srcset"].split(","))]:
             assert ref.lstrip("/") in media, f"Unpublished screen saver image: {ref}"
+    # The audio tour embeds each room's stops as JSON; every key is published.
+    import re as _re
+
+    tours = 0
+    for room in rooms:
+        html = (DIST / "galleries" / room["id"] / "index.html").read_text()
+        found = _re.search(r"data-tour-stops>(.*?)</script>", html, _re.S)
+        if not found:
+            continue
+        tours += 1
+        for stop in json.loads(found.group(1)):
+            if stop["src"]:
+                assert stop["src"].lstrip("/") in media, f"Unpublished tour audio: {stop['src']}"
+    assert tours == len(rooms), "Every room has an audio tour"
     for work in gallery:
         cid = work["inkId"]
         assert (DIST / "artworks" / cid / "index.html").is_file(), cid

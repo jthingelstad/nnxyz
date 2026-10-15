@@ -356,6 +356,58 @@ try {
       'All galleries retain exact curated order and work without JavaScript',
     passed: true,
   });
+  // Audio tour: the button appears with the script, the first segment plays,
+  // skipping brings the stop's work on screen, pause holds, Escape ends it.
+  await go(galleryURL);
+  const tourButton = page.locator('[data-tour-start]');
+  assert.ok(await tourButton.isVisible());
+  assert.match(await tourButton.textContent(), /about \d+ min/);
+  await tourButton.click();
+  await page.waitForFunction(
+    () =>
+      document.querySelector('[data-tour-player]')?.dataset.tourState ===
+      'playing',
+  );
+  await page.waitForFunction(
+    () => document.querySelector('[data-tour-audio]').currentTime > 0.5,
+  );
+  const firstStop = JSON.parse(
+    await page.locator('[data-tour-stops]').textContent(),
+  );
+  assert.equal(firstStop.length, firstGallery.tour.segments.length);
+  const firstWorkStop = firstStop.findIndex((stop) => stop.artworkId);
+  for (let i = 0; i < firstWorkStop; i++)
+    await page.locator('[data-tour-next]').click();
+  await page.waitForFunction(
+    (id) =>
+      document.getElementById(`work-${id}`)?.classList.contains('tour-current'),
+    firstStop[firstWorkStop].artworkId,
+  );
+  await page.locator('[data-tour-toggle]').click();
+  assert.equal(
+    await page.locator('[data-tour-player]').getAttribute('data-tour-state'),
+    'paused',
+  );
+  const held = await page.evaluate(
+    () => document.querySelector('[data-tour-audio]').currentTime,
+  );
+  await page.waitForTimeout(500);
+  assert.equal(
+    await page.evaluate(
+      () => document.querySelector('[data-tour-audio]').currentTime,
+    ),
+    held,
+  );
+  await page.keyboard.press('Escape');
+  assert.equal(
+    await page.locator('[data-tour-player]').getAttribute('data-tour-state'),
+    'idle',
+  );
+  assert.ok(await tourButton.isVisible());
+  results.push({
+    check: 'Audio tour plays, follows the stop, pauses and ends',
+    passed: true,
+  });
   // Screen saver: works load, the overlay names the work, keys step and pause.
   await go('/screensaver/');
   await page.waitForFunction(() =>

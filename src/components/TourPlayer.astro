@@ -1,0 +1,48 @@
+---
+import Icon from './Icon.astro';
+import type { Tour } from '../lib/tour';
+import { minutes } from '../lib/tour';
+interface Props {
+  tour: Tour;
+  roomTitle: string;
+}
+const { tour, roomTitle } = Astro.props;
+---
+
+<div class="tour-player" data-tour-player data-tour-state="idle" hidden>
+  <script
+    type="application/json"
+    data-tour-stops
+    set:html={JSON.stringify(tour.stops)}
+  />
+  <audio data-tour-audio preload="none"></audio>
+  <div class="tour-bar" data-tour-bar hidden>
+    <button type="button" data-tour-toggle aria-label="Pause tour">
+      <span class="when-playing">
+        <Icon name="pause" size={20} />
+      </span>
+      <span class="when-paused">
+        <Icon name="play" size={20} />
+      </span>
+    </button>
+    <button type="button" data-tour-previous aria-label="Previous stop">
+      <Icon name="left" size={18} />
+    </button>
+    <button type="button" data-tour-next aria-label="Next stop">
+      <Icon name="right" size={18} />
+    </button>
+    <div class="tour-status">
+      <span class="tour-room">{roomTitle}</span>
+      <span class="tour-position" data-tour-position></span>
+      <div class="tour-progress" aria-hidden="true">
+        <div class="tour-progress-done" data-tour-progress></div>
+      </div>
+    </div>
+    <span class="tour-time" data-tour-time>
+      0:00 / {minutes(tour.seconds)} min
+    </span>
+    <button type="button" data-tour-stop aria-label="Stop tour">
+      <Icon name="close" size={18} />
+    </button>
+  </div>
+</div>

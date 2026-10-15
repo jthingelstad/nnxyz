@@ -1890,3 +1890,101 @@ body:has(.enlargement[open]) {
     font-size: 14px;
   }
 }
+
+/* Audio tour: a start button in the room header and a quiet bar while playing. */
+.tour-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  min-height: 44px;
+  padding: 0 18px 0 14px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+}
+.tour-start:hover {
+  border-color: var(--text);
+}
+.tour-length {
+  color: var(--muted);
+  font-size: 13px;
+}
+.tour-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px clamp(16px, 4vw, 48px);
+  background: color-mix(in srgb, var(--background) 86%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+}
+.tour-bar button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.tour-player[data-tour-state='playing'] .when-paused,
+.tour-player:not([data-tour-state='playing']) .when-playing {
+  display: none;
+}
+.tour-status {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  gap: 2px 16px;
+}
+.tour-room {
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tour-progress {
+  grid-column: 1 / -1;
+  height: 2px;
+  background: var(--border);
+}
+.tour-progress-done {
+  height: 100%;
+  width: 0;
+  background: var(--text);
+  transition: width 250ms linear;
+}
+.tour-time {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+body.tour-active {
+  padding-bottom: 72px;
+}
+.exhibition-work.tour-current .exhibition-art img {
+  outline: 2px solid var(--text);
+  outline-offset: 6px;
+}
+@media (max-width: 760px) {
+  .tour-bar {
+    gap: 8px;
+    padding: 8px 12px;
+  }
+  .tour-time {
+    display: none;
+  }
+  .tour-status {
+    grid-template-columns: 1fr;
+  }
+  .tour-position {
+    display: none;
+  }
+}

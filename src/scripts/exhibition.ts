@@ -9,8 +9,12 @@ export function initExhibition() {
   const links = Array.from(
     exhibition.querySelectorAll<HTMLAnchorElement>('[data-chapter-link]'),
   );
-  function showLocation(scroll: boolean) {
-    const target = document.getElementById(location.hash.slice(1));
+  function showLocation(
+    scroll: boolean,
+    id = location.hash.slice(1),
+    focus = true,
+  ) {
+    const target = document.getElementById(id);
     const chapter =
       target?.closest<HTMLElement>('[data-chapter]') ?? chapters[0];
     const atClosing = target === closing;
@@ -35,6 +39,7 @@ export function initExhibition() {
       : chapter.dataset.chapter;
     if (scroll && target) {
       target.scrollIntoView({ block: 'start', behavior: 'instant' });
+      if (!focus) return;
       const focusTarget = target.querySelector<HTMLElement>(
         'h2[tabindex], .exhibition-art',
       );
@@ -43,4 +48,10 @@ export function initExhibition() {
   }
   showLocation(Boolean(location.hash));
   window.addEventListener('hashchange', () => showLocation(true));
+  // The audio tour brings each stop on screen without touching the hash or
+  // moving keyboard focus away from its controls.
+  document.addEventListener('nnxyz:reveal', (event) => {
+    const id = (event as CustomEvent<{ id: string | null }>).detail.id;
+    if (id) showLocation(true, id, false);
+  });
 }

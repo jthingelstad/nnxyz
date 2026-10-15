@@ -64,6 +64,7 @@ interface RoomFile {
   tour: {
     segments: TourSegment[];
     spokenWords: number;
+    silentHoldSeconds?: number;
     estimatedMinutesAt150wpm: number;
   };
 }

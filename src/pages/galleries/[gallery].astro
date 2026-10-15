@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import RoomWork from '../../components/RoomWork.astro';
+import TourPlayer from '../../components/TourPlayer.astro';
+import { tourFor, minutes } from '../../lib/tour';
 import {
   rooms,
   exhibitionPath,
@@ -55,6 +57,7 @@ const closingIds = [closingSegment.secondArtworkId, closingSegment.artworkId]
       works.findIndex((w) => w.artworkId === b),
   );
 const description = room.introduction[0];
+const tour = tourFor(room);
 ---
 
 <Layout title={`${room.title} — nnxyz`} description={description}>
@@ -63,7 +66,7 @@ const description = room.introduction[0];
       <Icon name="left" size={18} />
       Back to {room.wingTitle}
     </a>
-    <header class="exhibition-opening">
+    <header class="exhibition-opening" id="tour-top">
       <p class="exhibition-meta room-context">
         {room.wingTitle}
         {part && ` · ${part.title}`}
@@ -80,6 +83,20 @@ const description = room.introduction[0];
         {room.chapters.length}{' '}
         {room.chapters.length === 1 ? 'chapter' : 'chapters'}
       </p>
+      {tour && (
+        <button
+          type="button"
+          class="tour-start"
+          data-tour-start
+          data-tinylytics-event="tour.play"
+          data-tinylytics-event-value={room.id}
+          hidden
+        >
+          <Icon name="play" size={20} />
+          Play the audio tour
+          <span class="tour-length">about {minutes(tour.seconds)} min</span>
+        </button>
+      )}
     </header>
     <nav class="chapter-nav" aria-label="Gallery chapters">
       {room.chapters.map((chapter, i) => (
@@ -196,9 +213,12 @@ const description = room.introduction[0];
         </a>
       </nav>
     </section>
+    {tour && <TourPlayer tour={tour} roomTitle={room.title} />}
   </article>
   <script>
     import { initExhibition } from '../../scripts/exhibition';
+    import { initTour } from '../../scripts/tour';
     initExhibition();
+    initTour();
   </script>
 </Layout>
