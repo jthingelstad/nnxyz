@@ -64,7 +64,7 @@ CHAPTERS = [
                   reading="The crown is a zigzag of white spikes along the top with black between. The ring eye is white with a yellow center and spikes above it. The X eye is red over a dark box. Recorded with 127 strokes."),
              dict(short='#273', treatment='label', compare='#236',
                   text="A robot mask on lavender drawn in a few lines, a red X in a black ring for one eye, a red bar for the other, a box of white and red bars for a mouth, and thin legs below it like a stand. Forty-one recorded strokes. Set beside the purple crowned mask from August, it is the same arrangement with the scribble taken out: the X, the box and the grille, and nothing else.",
-                  caption="A robot mask on lavender in a few lines, a red X in a black ring for one eye, on thin legs.",
+                  caption="A robot mask on lavender in a few lines, a red X for an eye, standing on thin legs.",
                   reading="The X eye sits in a black ring with a white rim. The red bar at the right has white zigzag inside. The mouth is a red box with a yellow bar of teeth. Thin black lines under the mask make legs and a stand. A yellow bar runs along the top."),
              dict(short='#274', treatment='line',
                   text="A blue mask with two crowned eyes, one a ring and one a box, a wide mouth of white teeth in a red frame, and bars of red and orange at the sides.",
