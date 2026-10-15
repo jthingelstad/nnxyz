@@ -30,10 +30,9 @@ const drawing = 'inkId' in work;
     <h3>
       <a href={artworkPath(id)}>{displayTitle(work)}</a>
     </h3>
-    <p class="exhibition-artist">{work.artistName}</p>
-    <a class="watch-work" href={artworkPath(id)}>
-      {drawing ? 'View & watch drawing' : 'View artwork'}
-    </a>
+    {work.artistName !== 'nnxyz' && (
+      <p class="exhibition-artist">{work.artistName}</p>
+    )}
     <div class="exhibition-note">
       <p>{stop.whyHere}</p>
     </div>

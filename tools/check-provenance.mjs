@@ -30,12 +30,15 @@ export async function checkProvenance(browser, base, output) {
     assert.ok(await link.isVisible());
     assert.equal(
       await page
-        .locator(
-          'details, summary, .token-provenance, .transfer-history, .collector-wallets',
-        )
+        .locator('.token-provenance, .transfer-history, .collector-wallets')
         .count(),
       0,
     );
+    assert.equal(await page.locator('details').count(), 1);
+    assert.equal(await page.locator('#provenance').getAttribute('open'), null);
+    assert.equal(await page.locator('#provenance dl').isVisible(), false);
+    assert.ok(await page.locator('.curator-reading p').isVisible());
+    assert.equal(await page.locator('.work-caption .byline').count(), 0);
     assert.equal(
       await page
         .locator('a[href*="/tx/"], a[href*="/address/"], a[href*="/block/"]')
@@ -79,6 +82,13 @@ export async function checkProvenance(browser, base, output) {
               .count(),
             1,
           );
+          await page.locator('#provenance summary').click();
+          assert.ok(
+            await page
+              .getByRole('link', { name: 'Download SVG', exact: true })
+              .isVisible(),
+          );
+          await page.locator('#provenance summary').click();
           if (work === samples[0]) {
             await page.locator('.work-caption').scrollIntoViewIfNeeded();
             await page.screenshot({
@@ -89,6 +99,14 @@ export async function checkProvenance(browser, base, output) {
         await page.goto(`${base}/artworks/${abstract.id}/`);
         await checkLink(
           `https://polygonscan.com/token/${abstract.contract}?a=${abstract.tokenId}`,
+        );
+        await page.locator('#provenance summary').focus();
+        await page.keyboard.press('Enter');
+        assert.ok(await page.locator('#provenance dl').isVisible());
+        assert.ok(
+          await page
+            .getByRole('link', { name: 'Download original JPEG', exact: true })
+            .isVisible(),
         );
         assert.match(
           await page.locator('#provenance').innerText(),
@@ -109,6 +127,9 @@ export async function checkProvenance(browser, base, output) {
     const staticPage = await noScript.newPage();
     await staticPage.goto(`${base}/artworks/${samples[0].inkId}/`);
     assert.equal(await staticPage.locator('[data-nft-link]').count(), 1);
+    assert.equal(await staticPage.locator('#provenance dl').isVisible(), false);
+    await staticPage.locator('#provenance summary').click();
+    assert.ok(await staticPage.locator('#provenance dl').isVisible());
     assert.ok(
       await staticPage
         .getByRole('link', { name: 'View NFT ↗', exact: true })
@@ -120,6 +141,6 @@ export async function checkProvenance(browser, base, output) {
   return {
     pass: true,
     coverage:
-      'One collected NFT link per artwork; exact chain/contract/token identity, no transaction/address panels, desktop/mobile light/dark, no JavaScript and no analytics',
+      'One collected NFT link per artwork; exact chain/contract/token identity, no transaction/address panels, closed archive details with keyboard and no-JS access, desktop/mobile light/dark, no JavaScript and no analytics',
   };
 }

@@ -86,6 +86,12 @@ try {
   results.push(await checkAbstract(browser, base, output));
   await go('/');
   assert.equal(await page.locator('h1').textContent(), 'A collection of nnxyz');
+  assert.equal(
+    await page
+      .locator('h1')
+      .evaluate((element) => getComputedStyle(element).color),
+    'rgb(72, 72, 72)',
+  );
   assert.equal(await page.locator('.collection-entrance').count(), 5);
   assert.equal(
     await page.getByRole('link', { name: /^All works$/i }).count(),
@@ -162,6 +168,23 @@ try {
     assert.equal(await page.locator('.exhibition-entrance').count(), count);
     assert.equal(await page.locator('.art-card').count(), 0);
   }
+  const relatedGallery = exhibitionMap.collections
+    .flatMap((collection) => collection.galleries)
+    .find((gallery) =>
+      gallery.chapters.some((chapter) =>
+        chapter.stops.some(
+          (stop) =>
+            catalog.find((work) => work.inkId === stop.artworkId)
+              ?.artistName === 'scrimshaw.eth',
+        ),
+      ),
+    );
+  await go(`/galleries/${relatedGallery.id}/`);
+  assert.ok(
+    (await page
+      .locator('.exhibition-artist', { hasText: 'scrimshaw' })
+      .count()) > 0,
+  );
   await go('/collections/nifty-faces/');
   await page.screenshot({
     path: path.join(output, 'faces-wing-desktop.png'),
@@ -175,6 +198,11 @@ try {
   await waitChapter('1');
   assert.ok(page.url().endsWith(galleryURL));
   assert.equal(await page.locator('.exhibition-work').count(), 17);
+  assert.equal(
+    await page.locator('.watch-work, .exhibition-artist').count(),
+    0,
+  );
+  assert.equal(await page.locator('.exhibition-work figcaption a').count(), 17);
   assert.equal(
     await page
       .locator('.exhibition-chapter:not([hidden]) .exhibition-work')
@@ -405,7 +433,10 @@ try {
   );
   await page.locator('[data-seek]').press('End');
   assert.ok(await page.locator('#provenance').isVisible());
-  assert.equal(await page.locator('details, summary').count(), 0);
+  assert.equal(await page.locator('#provenance dl').isVisible(), false);
+  await page.locator('#provenance summary').focus();
+  await page.keyboard.press('Space');
+  assert.ok(await page.locator('#provenance dl').isVisible());
   assert.ok(
     (await page.locator('#provenance').innerText()).includes(
       'Timing is reconstructed',

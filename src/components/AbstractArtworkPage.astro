@@ -60,7 +60,6 @@ const next = abstractById.get(sequence[position + 1]?.artworkId);
       <div class="work-caption">
         <div>
           <h1>{title}</h1>
-          <p class="byline">nnxyz · Abstract</p>
           <ProvenanceNote
             tokens={[
               { url: tokenUrl(work.chainId, work.contract, work.tokenId) },
@@ -69,15 +68,6 @@ const next = abstractById.get(sequence[position + 1]?.artworkId);
         </div>
         <div class="work-actions">
           <Kudos path={artworkPath(work.id)} title={title} />
-          <a
-            class="download-link"
-            href={abstractOriginal(work)}
-            download={`${title}.jpg`}
-            data-tinylytics-event="file.download"
-            data-tinylytics-event-value={work.id}
-          >
-            Download original JPEG
-          </a>
           <button
             data-raster-enlarge
             data-tinylytics-event="artwork.enlarge"
@@ -113,52 +103,60 @@ const next = abstractById.get(sequence[position + 1]?.artworkId);
           </a>
         )}
       </nav>
-      <section
+      <details
         class="provenance raster-provenance"
         id="provenance"
         aria-label="Artwork details and provenance"
       >
-        <p>
-          This image is reproduced from the published JPEG preserved in the
-          collector’s earlier gallery. No brush paths have been recovered for
-          this work.
-        </p>
-        <dl>
-          <dt>Original image</dt>
-          <dd>
-            {work.width} × {work.height} pixels · JPEG
-          </dd>
-          <dt>Collection dates</dt>
-          <dd>
-            March 30–April 4, 2022, according to the collector’s earlier
-            account.
-          </dd>
-          {work.giftRecipientAsRecorded && (
-            <>
-              <dt>Gift recipient in the earlier account</dt>
-              <dd>{work.giftRecipientAsRecorded}</dd>
-            </>
-          )}
-        </dl>
-        <p>
-          Titles and token links come from that saved account. The recovery
-          preserves its collection history; it does not establish current
-          on-chain ownership. Title order is distinct from creation order.
-        </p>
-        <p class="record-links">
-          <a href={`/abstract/records/${work.id}.json`} download>
-            Source &amp; provenance record
-          </a>
-          <a href={abstractOriginal(work)} download={`${title}.jpg`}>
-            Original JPEG
-          </a>
-          <a href={work.sourcePageUrl}>Collector’s earlier gallery</a>
-        </p>
-        <p>
-          The AI reading is a visual interpretation, not a claim about the
-          artist’s intentions or making process.
-        </p>
-      </section>
+        <summary>Details &amp; downloads</summary>
+        <div class="artwork-details-content">
+          <p>
+            This image is reproduced from the published JPEG preserved in the
+            collector’s earlier gallery. No brush paths have been recovered for
+            this work.
+          </p>
+          <dl>
+            <dt>Original image</dt>
+            <dd>
+              {work.width} × {work.height} pixels · JPEG
+            </dd>
+            <dt>Collection dates</dt>
+            <dd>
+              March 30–April 4, 2022, according to the collector’s earlier
+              account.
+            </dd>
+            {work.giftRecipientAsRecorded && (
+              <>
+                <dt>Gift recipient in the earlier account</dt>
+                <dd>{work.giftRecipientAsRecorded}</dd>
+              </>
+            )}
+          </dl>
+          <p>
+            Titles and token links come from that saved account. The recovery
+            preserves its collection history; it does not establish current
+            on-chain ownership. Title order is distinct from creation order.
+          </p>
+          <p class="record-links">
+            <a
+              href={abstractOriginal(work)}
+              download={`${title}.jpg`}
+              data-tinylytics-event="file.download"
+              data-tinylytics-event-value={work.id}
+            >
+              Download original JPEG
+            </a>
+            <a href={`/abstract/records/${work.id}.json`} download>
+              Source &amp; provenance record
+            </a>
+            <a href={work.sourcePageUrl}>Collector’s earlier gallery</a>
+          </p>
+          <p>
+            The AI reading is a visual interpretation, not a claim about the
+            artist’s intentions or making process.
+          </p>
+        </div>
+      </details>
     </div>
   </div>
   <dialog

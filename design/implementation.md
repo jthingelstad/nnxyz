@@ -82,3 +82,18 @@ there are several editions. Abstract uses its recovered Polygon identity.
 Full records remain downloadable; the website does not claim a fresh ownership
 lookup. No transaction timelines, wallet lists, contract blocks or token IDs
 are printed on the artwork pages.
+
+
+## October 14 presentation cleanup
+
+The later clutter pass keeps curator readings visible and moves technical facts,
+archival context and all downloads into one initially closed “Details & downloads”
+control on each artwork page. This narrowly supersedes the visible artwork
+details choice above. Native disclosure semantics support keyboard and no-JS
+access; the quiet NFT link remains visible beneath the title.
+
+Artwork captions omit repetitive nnxyz bylines, while related Scrimshaw works
+retain attribution. Exhibition titles and images provide the artwork links,
+without a duplicate viewing CTA. Duplicate download links and related-work
+CTAs are removed. Collection entrances show each name once. Light-theme
+headings and body text use charcoal; original artwork colors are unchanged.
