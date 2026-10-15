@@ -106,7 +106,7 @@ try {
   results.push(await checkProvenance(browser, base, output));
   results.push(await checkAbstract(browser, base, output));
   await go('/');
-  assert.equal(await page.locator('h1').textContent(), 'A collection of nnxyz');
+  assert.equal(await page.locator('h1').textContent(), 'The nnxyz Rooms');
   assert.equal(
     await page
       .locator('h1')

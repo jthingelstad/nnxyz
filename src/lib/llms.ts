@@ -25,7 +25,7 @@ const url = (path: string) => `${SITE}${path}`;
 
 export function llmsIndex(): string {
   const lines: string[] = [];
-  lines.push('# nnxyz: a collection', '');
+  lines.push('# The nnxyz Rooms', '');
   lines.push(
     `> A museum-style gallery of ${total} works by the Nifty Ink artist nnxyz, with a related collection by Scrimshaw. Every work hangs in one of ${rooms.length} rooms across six wings, in the order it was drawn, with unsigned gallery text, an audio tour, a floor plan and a screen saver. Nifty Ink drawings are reconstructed from their archived brush strokes and can be watched being drawn.`,
     '',
@@ -68,7 +68,7 @@ export function llmsIndex(): string {
 
 export function llmsFull(): string {
   const lines: string[] = [];
-  lines.push('# nnxyz: a collection', '');
+  lines.push('# The nnxyz Rooms', '');
   lines.push(
     `> The complete gallery text of ${SITE}: ${wings.length} wings, ${rooms.length} rooms, ${total} works. Generated from the same files as the pages.`,
     '',

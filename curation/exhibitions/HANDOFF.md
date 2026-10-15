@@ -239,6 +239,10 @@ the record of what was asked.
    who the curator is and how the site was made, without naming a model.
    `tools/validate-site.py` checks every page the llms files link to.
 
+9. **Name.** The collector chose "The nnxyz Rooms" on October 15, 2026,
+   from a list of six. It is the wordmark, the default and page titles, the
+   front-page heading, `og:site_name` and the heading of `llms.txt`.
+
 ## Where the branch stands
 
 Everything through the curator's notes and `llms.txt` is merged to main and

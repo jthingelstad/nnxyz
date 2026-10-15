@@ -89,7 +89,7 @@ export function initTour() {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: title ?? roomTitle,
       artist: title ? roomTitle : 'nnxyz',
-      album: 'nnxyz audio tour',
+      album: 'The nnxyz Rooms, audio tour',
       artwork,
     });
   };

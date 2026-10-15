@@ -1,6 +1,6 @@
-# nnxyz gallery
+# The nnxyz Rooms
 
-Working project for an online gallery of the collector's owned nnxyz artwork, with scrimshaw as a related collection. The local gallery baseline is built with Astro and TypeScript from the approved October 13 design. GitHub Actions validates and deploys the gallery to private S3 storage behind CloudFront.
+Working project for The nnxyz Rooms, an online gallery of the collector's owned nnxyz artwork, with scrimshaw as a related collection. The local gallery baseline is built with Astro and TypeScript from the approved October 13 design. GitHub Actions validates and deploys the gallery to private S3 storage behind CloudFront.
 
 The gallery's public domain will be **nnxyz.thingelstad.xyz**. Deployment and DNS instructions are in [docs/deployment.md](docs/deployment.md).
 

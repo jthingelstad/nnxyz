@@ -2,7 +2,7 @@
 
 This project is the local Astro gallery baseline for the collector's owned nnxyz artworks. Scrimshaw is the only related artist included for now.
 
-The collector selected `nnxyz.thingelstad.xyz` as the gallery's public domain. Use `https://nnxyz.thingelstad.xyz` as the production site URL when implementing canonical URLs, sharing metadata and deployment configuration. S3/CloudFront infrastructure and GitHub OIDC deployment are implemented; current resource IDs are in `infra/deployment.json`, and DNS/operating instructions are in `docs/deployment.md`.
+The site is named **The nnxyz Rooms** (collector's choice, October 15, 2026); the name is the wordmark, the default title, the front-page heading, the share site name and the first line of `llms.txt`. The collector selected `nnxyz.thingelstad.xyz` as the gallery's public domain. Use `https://nnxyz.thingelstad.xyz` as the production site URL when implementing canonical URLs, sharing metadata and deployment configuration. S3/CloudFront infrastructure and GitHub OIDC deployment are implemented; current resource IDs are in `infra/deployment.json`, and DNS/operating instructions are in `docs/deployment.md`.
 
 ## Website priorities
 

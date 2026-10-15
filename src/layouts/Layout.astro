@@ -7,9 +7,9 @@ interface Props {
   description?: string;
 }
 const {
-  title = 'nnxyz — a collection',
+  title = 'The nnxyz Rooms',
   image,
-  description = 'A collection of nnxyz artwork, with scrimshaw. Explore Abstract, Faces, New Nifty on the Block and Rawblocks.',
+  description = 'A collection of nnxyz artwork hung in twenty-eight rooms, with a related collection by Scrimshaw. Faces, New Nifty on the Block, Rawblocks, Abstract, and Other & related.',
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const analytics =
@@ -36,6 +36,7 @@ const analytics =
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The nnxyz Rooms" />
     <meta property="og:url" content={canonical} />
     {image && (
       <meta property="og:image" content={new URL(image, Astro.site).href} />
@@ -47,8 +48,8 @@ const analytics =
       Skip to content
     </a>
     <header class="site-header">
-      <a class="wordmark" href="/" aria-label="nnxyz collection home">
-        nnxyz
+      <a class="wordmark" href="/" aria-label="The nnxyz Rooms, home">
+        The nnxyz Rooms
       </a>
       <nav aria-label="Main navigation">
         <a href="/#collections">Collections</a>
