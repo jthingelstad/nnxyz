@@ -58,7 +58,7 @@ Every push to main, internal pull request and manual workflow run uses `.github/
 
 1. ESLint, Prettier, Astro/TypeScript, Node tests, Ruff lint/format, dependency audit, CloudFormation schema and infrastructure policy validation.
 2. CodeQL scans maintained JavaScript/TypeScript and Python. Immutable curator review reports, preview references and archived renderer source are excluded because they are retained evidence and are not served by the website; application source and maintained tools remain scanned. High or critical open findings on the workflow ref block publication.
-3. Build the pages (about 11 MB, no AWS credentials and no archive), check every link and that each media URL is published, and run Chromium interaction/fidelity/responsive tests with media served from CloudFront. The job keeps its historical name, "Archive, build and browser validation", because branch protection requires it.
+3. Build the pages (about 11 MB, no AWS credentials and no archive), check every link and that each media URL is published, and run Chromium interaction/fidelity/responsive tests with media served from CloudFront.
 4. Main only: pass the build as a short-lived GitHub artifact to the deployment job. Check that the workflow revision remains current main, upload changed pages and scripts, publish the revision marker, invalidate only the page paths in the build, and compare delivered HTML/revision bytes with the build.
 
 `.github/workflows/archive.yml` restores the private source archive and validates it, the curation and the token links extracted into `data/tokens.json`. It runs by hand, on pull requests that change curation or archive data, and, called from `ci.yml`, before deploying a main push that changes that data. Routine deploys skip it.
@@ -100,7 +100,7 @@ Tinylytics is enabled in production builds and activates only on the canonical g
 
 ## Rollback and updating artwork
 
-To roll back website code, revert the relevant Git commit on main. The same validation/deployment pipeline will publish it; the live `revision.json` identifies the running commit. S3 versioning is an additional recovery mechanism, not the normal release workflow.
+To roll back website code, revert the relevant Git commit on main. The same validation/deployment pipeline will publish it; the live `revision.json` identifies the running commit. S3 versioning is an additional recovery mechanism, not the normal release workflow: replaced or deleted web bucket objects stay recoverable for 30 days, then expire. The archive bucket keeps every version.
 
 If the owned collection changes, import independent copies from the permanent archive, verify them, then run `python3 tools/pack-collection.py /tmp/nnxyz-source-blobs.tar.gz` to generate a new snapshot and manifests. Upload the new immutable key using AWS MCP's presigned upload tool and verify its checksum before committing the new dataset pointer. Never overwrite an existing snapshot key. A routine website change needs no dataset upload or model invocation.
 
