@@ -50,6 +50,12 @@ The artwork page gets its own short reading, written in the same session as the
 gallery text. It covers what the gallery text leaves out (a closer look at the
 one work) and does not repeat the gallery's sentence.
 
+Every work, including the ones that get nothing in the gallery, also gets a
+**caption**: one sentence of 20 words or fewer that makes sense with no gallery
+around it. The screen-saver mode shows it over the full-screen image with the
+title. It names the one thing to look at, never refers to other works or to
+the gallery, and does not repeat the gallery line word for word.
+
 ## Written to be heard
 
 The same text will also be read aloud as an audio tour: the visitor enters a
