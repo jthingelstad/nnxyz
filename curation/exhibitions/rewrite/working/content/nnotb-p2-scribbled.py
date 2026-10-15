@@ -113,7 +113,7 @@ CHAPTERS = [
                   reading="The spiral at the left is drawn in blue and white, and the X at the right is red over a pink box. The yellow bar runs through both eyes and out to the right. The jaw is white bars in a red mouth. Recorded with 141 strokes."),
              dict(short='#210', treatment='line', compare='#195',
                   text="A dark head with a spiral eye at the right and a red X at the left, white teeth in a red mouth, and the yellow bar again, in dense red, blue and white scribble, four days after the heavy black face on orange.",
-                  caption="A dark head with a red X for its left eye and a spiral for its right, white teeth in red.",
+                  caption="A dark head, red X for the left eye, spiral for the right, white teeth in a red mouth.",
                   reading="The X here is drawn in red bars over a blue ring at the upper left, and the spiral is drawn at the upper right in blue and white. The teeth are a row of white bars with red between them. The ground is dark grey. Recorded with 111 strokes."),
              dict(short='#211', treatment='line',
                   text="A black skull in profile on red and orange, facing right, with a yellow crown of spikes along the back of the head, a spiral eye, a mouth of white teeth and a yellow bar through the face.",

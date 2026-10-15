@@ -28,7 +28,7 @@ CHAPTERS = [
                   reading="The heart is drawn in red with a white edge and a black arrow through it from the left. The flower has yellow petals and a red center. The teeth are a box of white bars with a red zigzag under them. A loop of yellow line at the lower right ends in a small hook."),
              dict(short='#174', treatment='line',
                   text="Half an hour later, a round mask on teal with a red X in a white box for one eye and a black spiral in a red box for the other, a mouth of white fangs below.",
-                  caption="A round mask on teal with a red X in a white box for one eye and a black spiral for the other.",
+                  caption="A round mask on teal, one eye a red X in a white box, the other a black spiral.",
                   reading="The two eyes sit at different heights, the X higher and to the left. The fangs are white triangles in a red mouth at the lower left. The face is filled with red, blue and black scribble, with white loops around the edge. Eighty recorded strokes."),
              dict(short='#175', treatment='line',
                   text="A pale blue mask with a border of purple dots, a wheel for one eye, a ringed eye for the other, and a mouth of white bars at the lower right.",

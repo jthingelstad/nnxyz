@@ -12,7 +12,7 @@ CHAPTERS = [
          works=[
              dict(short='#142', treatment='line',
                   text="A red figure with spiral eyes and a grin stands in a field of yellow, green and purple pattern, a small black figure at its feet, white lines looping over everything.",
-                  caption="A tall red figure with spiral eyes grins in a field of colored bars, a small black figure at its feet.",
+                  caption="A tall red figure with spiral eyes grins in a field of colored bars, a small black figure below.",
                   reading="The figure is a tall red shape with a round head and short arms, drawn in red scribble with a black outline. The field behind it is made of vertical bars and squares in many colors. The small black figure at the lower right has a round white head. Recorded with 121 strokes."),
              dict(short='#146', treatment='label',
                   text="A black figure with a red face and a red chest walks through a pale city holding a red balloon on a long string. The buildings are a few thin lines, a tower, a fence, a window grid, and the sky is patches of blue and pink. The balloon has a small crown drawn on it. Fifty-four recorded strokes make the whole scene, and the figure, drawn in solid black with a thin red edge, is the one dark thing in it.",
@@ -28,7 +28,7 @@ CHAPTERS = [
                   reading="The roof is a shallow triangle drawn in yellow, red and white with scribble inside. The red lines are drawn straight down from it at even spacing, and the figure is visible between them. The crown is a yellow zigzag. The black ground is flat."),
              dict(short='#156', treatment='line',
                   text="A crow with a red X eye and a red target on its wing stands on a perch in a storm of grey and black scribble, inside a grey frame.",
-                  caption="A crow with a red X eye and a red target on its wing perches in a storm of grey scribble.",
+                  caption="A crow with a red X eye and a red target on its wing, perched in a storm of scribble.",
                   reading="The crow is drawn in black and blue with a pointed beak and a crest. Its eye is a red X, and the red target on its wing is drawn in rings. The scribble around it is black and grey dashes in every direction. The perch is a black bar at the bottom. Recorded with 186 strokes."),
              dict(short='#158', treatment='label',
                   text="A valley. A blue river runs down between yellow hills, a green ridge rises at the right, and a pale sky of white and blue clouds is drawn over with thin black lines. Everything is scribbled in loops, the hills in yellow, the ridge in green, the river in blue, but the loops follow the land. It is the one open landscape in the mask months, drawn June 28, 2022.",

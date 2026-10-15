@@ -16,8 +16,10 @@ the collector's explicit go.
   New Nifty on the Block (NNOTB, 303 works) is split into three dated parts,
   which the collector likes because they are time-bound.
 - **An unsigned voice.** No page names a curator or says "AI curator". The
-  collector's own words appear only in the front-page introduction, which the
-  collector will write last. One line on the About page says the galleries
+  collector's own words appear only in the front-page introduction. The
+  collector supplied the final statement on October 15, 2026; it is saved
+  verbatim in `curation/collector-statement.json` and goes on the front page
+  unchanged, signed Jamie, October 2026. One line on the About page says the galleries
   were curated with AI. The footers no longer say so.
 - **Reference voice.** The collector liked all five sample labels in the style
   guide.

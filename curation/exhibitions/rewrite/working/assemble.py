@@ -26,14 +26,16 @@ def short(t):
     for p in PREFIXES:
         if t.startswith(p): return t[len(p):]
     return t
-BY = collections.OrderedDict()
+# Works are matched by artworkId when the content gives one (repeated titles), else by short title.
+BYID = {w['artworkId']: w for w in gal['works']}
+BY = {}
 for w in gal['works']:
-    k = short(w['title'])
-    if k in BY: k = k + ' (' + w['recordedAt'][11:16] + ')'  # repeated title: disambiguate by time
-    BY[k] = w
-order = list(BY)
-placed = [w['short'] for c in C.CHAPTERS for w in c['works']]
-assert placed == order, f'order mismatch\n placed {placed}\n room   {order}'
+    BY.setdefault(short(w['title']), w)
+def resolve(w):
+    return BYID[w['artworkId']] if w.get('artworkId') else BY[w['short']]
+order = [w['artworkId'] for w in gal['works']]
+placed = [resolve(w)['artworkId'] for c in C.CHAPTERS for w in c['works']]
+assert placed == order, f'order mismatch\n placed {[w["short"] for c in C.CHAPTERS for w in c["works"]]}\n room   {[short(w["title"]) for w in gal["works"]]}'
 
 def facts(w):
     aid = w['artworkId']
@@ -45,12 +47,12 @@ chapters = []
 for c in C.CHAPTERS:
     works = []
     for w in c['works']:
-        src = BY[w['short']]
+        src = resolve(w)
         item = dict(artworkId=src['artworkId'], title=src['title'], short=w['short'], treatment=w['treatment'],
                     text=w.get('text'), caption=w['caption'], reading=w['reading'], facts=facts(src))
         assert (item['text'] is None) == (w['treatment'] == 'none'), w['short']
         if w.get('compare'):
-            item['compareWith'] = dict(artworkId=BY[w['compare']]['artworkId'], short=w['compare'])
+            item['compareWith'] = dict(artworkId=BY[w['compare']]['artworkId'] if w['compare'] in BY else BYID[w['compare']], short=w.get('compareShort', w['compare']))
         works.append(item)
     chapters.append(dict(key=c['key'], title=c['title'], opening=c['opening'], works=works))
 
@@ -63,7 +65,7 @@ for c in chapters:
         if w.get('compareWith'): s['kind'] = 'comparison'; s['secondArtworkId'] = w['compareWith']['artworkId']
         segs.append(s)
 closing = dict(kind='closing', artworkId=chapters[-1]['works'][-1]['artworkId'], text=C.CLOSING)
-if getattr(C, 'CLOSING_SECOND', None): closing['secondArtworkId'] = BY[C.CLOSING_SECOND]['artworkId']
+if getattr(C, 'CLOSING_SECOND', None): closing['secondArtworkId'] = BY[C.CLOSING_SECOND]['artworkId'] if C.CLOSING_SECOND in BY else BYID[C.CLOSING_SECOND]
 segs.append(closing)
 
 def words(t): return len(re.findall(r"[A-Za-z0-9#']+", t))
