@@ -4,6 +4,13 @@
  * (#room=<roomId>) or wing (#wing=<wingId>). Space pauses, arrows step,
  * F enters fullscreen. Reduced motion gets cuts instead of crossfades.
  */
+import {
+  rasterKey,
+  abstractKey,
+  rasterWidths,
+  abstractWidths,
+} from '../lib/media-paths';
+
 interface SaverWork {
   id: string;
   title: string;
@@ -14,9 +21,16 @@ interface SaverWork {
   wing: string;
   wingId: string;
   href: string;
-  src: string;
-  srcset: string;
+  kind: 'ink' | 'abstract';
 }
+const imageUrl = (work: SaverWork, width: number) =>
+  work.kind === 'ink' ? rasterKey(work.id, width) : abstractKey(work.id, width);
+// Full-viewport sizes only; the small thumbnails would be upscaled.
+const srcsetFor = (work: SaverWork) =>
+  (work.kind === 'ink' ? rasterWidths : abstractWidths)
+    .filter((width) => width >= 1200)
+    .map((width) => `${imageUrl(work, width)} ${width}w`)
+    .join(', ');
 const HOLD_MS = 12000;
 const FADE_MS = 900;
 
@@ -48,6 +62,9 @@ export function initScreensaver() {
   let front = 0;
   let playing = true;
   let timer: ReturnType<typeof setTimeout> | undefined;
+  // Only the newest request may reveal; an earlier decode that was replaced
+  // would otherwise flip the layers back.
+  let request = 0;
 
   function selection(all: SaverWork[]): SaverWork[] {
     const params = new URLSearchParams(location.hash.slice(1));
@@ -70,9 +87,9 @@ export function initScreensaver() {
   }
   function preload(work: SaverWork) {
     const img = new Image();
-    img.srcset = work.srcset;
+    img.srcset = srcsetFor(work);
     img.sizes = '100vw';
-    img.src = work.src;
+    img.src = imageUrl(work, 2000);
   }
   function show(next: number) {
     if (!works.length) return;
@@ -81,7 +98,9 @@ export function initScreensaver() {
     const work = works[index];
     const incoming = layers[1 - front];
     const outgoing = layers[front];
+    const mine = ++request;
     const reveal = () => {
+      if (mine !== request) return;
       incoming.classList.add('is-front');
       outgoing.classList.remove('is-front');
       front = 1 - front;
@@ -91,8 +110,8 @@ export function initScreensaver() {
       if (playing) timer = setTimeout(() => show(index + 1), HOLD_MS);
     };
     incoming.sizes = '100vw';
-    incoming.srcset = work.srcset;
-    incoming.src = work.src;
+    incoming.srcset = srcsetFor(work);
+    incoming.src = imageUrl(work, 2000);
     incoming.alt = work.title;
     incoming.decode().then(reveal, reveal);
   }
@@ -121,7 +140,12 @@ export function initScreensaver() {
       else root.requestFullscreen?.();
     });
   document.addEventListener('keydown', (event) => {
-    if (event.target instanceof HTMLInputElement) return;
+    // A focused button or link handles Space and Enter itself.
+    if (
+      event.target instanceof HTMLElement &&
+      event.target.closest('button, a, input, select, textarea')
+    )
+      return;
     if (event.key === ' ') {
       event.preventDefault();
       setPlaying(!playing);

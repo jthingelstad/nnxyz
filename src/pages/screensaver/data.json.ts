@@ -7,8 +7,7 @@ import {
   exhibitionArtwork,
   partOf,
 } from '../../lib/exhibitions';
-import { displayTitle, rasterPath, artworkPath } from '../../lib/catalog';
-import { abstractImage } from '../../lib/abstract';
+import { displayTitle, artworkPath } from '../../lib/catalog';
 
 export interface SaverWork {
   id: string;
@@ -20,8 +19,8 @@ export interface SaverWork {
   wing: string;
   wingId: string;
   href: string;
-  src: string;
-  srcset: string;
+  /** 'ink' works have raster/<id>-<w>.webp; 'abstract' works abstract/images/<id>-<w>.webp. */
+  kind: 'ink' | 'abstract';
 }
 
 export function saverWorks(): SaverWork[] {
@@ -40,14 +39,7 @@ export function saverWorks(): SaverWork[] {
         wing: part ? `${room.wingTitle} · ${part.title}` : room.wingTitle,
         wingId: room.wingId,
         href: artworkPath(work.artworkId),
-        src: drawing ? rasterPath(art, 2000) : abstractImage(art, 2000),
-        srcset: drawing
-          ? [1200, 1600, 2000]
-              .map((w) => `${rasterPath(art, w)} ${w}w`)
-              .join(', ')
-          : [1200, 2000]
-              .map((w) => `${abstractImage(art, w)} ${w}w`)
-              .join(', '),
+        kind: drawing ? ('ink' as const) : ('abstract' as const),
       };
     }),
   );

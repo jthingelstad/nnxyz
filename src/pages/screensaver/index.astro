@@ -1,8 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
-import { rooms, roomWorks } from '../../lib/exhibitions';
-const total = rooms.reduce((n, room) => n + roomWorks(room).length, 0);
+import { saverWorks } from './data.json';
+const total = saverWorks().length;
 ---
 
 <Layout

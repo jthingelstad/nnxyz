@@ -115,8 +115,11 @@ def main():
     assert len(saver) == len(gallery) + len(abstract), "Screen saver covers every work"
     for item in saver:
         assert item["caption"], item["id"]
-        for ref in [item["src"], *(c.split()[0] for c in item["srcset"].split(","))]:
-            assert ref.lstrip("/") in media, f"Unpublished screen saver image: {ref}"
+        widths = [1200, 1600, 2000] if item["kind"] == "ink" else [1200, 2000]
+        prefix = "raster/" if item["kind"] == "ink" else "abstract/images/"
+        for width in widths:
+            key = f"{prefix}{item['id']}-{width}.webp"
+            assert key in media, f"Unpublished screen saver image: {key}"
     # The audio tour embeds each room's stops as JSON; every key is published.
     import re as _re
 

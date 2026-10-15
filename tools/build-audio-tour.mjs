@@ -210,14 +210,28 @@ async function main() {
   }
 
   const order = new Map(planned.map((p, i) => [`${p.roomId}:${p.index}`, i]));
-  // Keep entries for rooms outside a --room run untouched.
+  // Keep entries for rooms outside a --room run untouched; drop entries for
+  // segments of planned rooms that no longer have text.
+  const plannedRooms = new Set(planned.map((p) => p.roomId));
   const kept = manifest.entries.filter(
-    (entry) => !order.has(`${entry.roomId}:${entry.index}`),
+    (entry) =>
+      !order.has(`${entry.roomId}:${entry.index}`) &&
+      !plannedRooms.has(entry.roomId),
   );
   const made = [];
   // The manifest is rewritten after every render, so an interrupted run
-  // resumes from the files already on disk.
-  async function flush() {
+  // resumes from the files already on disk. Writes are serialized so
+  // concurrent workers never interleave on the file.
+  let writing = Promise.resolve();
+  function flush() {
+    const result = writing.then(() => writeManifest());
+    writing = result.then(
+      () => undefined,
+      () => undefined,
+    );
+    return result;
+  }
+  async function writeManifest() {
     const all = [...entries, ...made].sort(
       (a, b) =>
         order.get(`${a.roomId}:${a.index}`) -

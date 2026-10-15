@@ -416,8 +416,17 @@ try {
   const saverCount = (
     await (await page.request.get(base + '/screensaver/data.json')).json()
   ).works.length;
-  assert.equal(saverCount, catalog.length + 52);
+  const abstractCount = JSON.parse(
+    await fs.readFile('data/abstract.json', 'utf8'),
+  ).artworks.length;
+  assert.equal(saverCount, catalog.length + abstractCount);
   assert.ok((await page.locator('[data-caption]').textContent()).length > 10);
+  assert.ok(
+    await page
+      .locator('.saver-image.is-front')
+      .evaluate((img) => img.naturalWidth > 0),
+    'The screen saver shows a decoded image',
+  );
   const firstShown = await page
     .locator('[data-saver]')
     .getAttribute('data-current');

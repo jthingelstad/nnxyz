@@ -2,6 +2,7 @@ import gallery from '../../data/gallery.json';
 import collectionData from '../../data/collections.json';
 import labelData from '../../curation/catalog/labels.json';
 import { abstractImage, type AbstractArtwork } from './abstract';
+import { rasterKey, rasterWidths, abstractWidths } from './media-paths';
 
 export const artworks = gallery;
 export type Artwork = (typeof artworks)[number];
@@ -19,9 +20,8 @@ export const artworkPath = (cid: string) => `/artworks/${cid}/`;
 // 2x. Browsing never downloads SVG geometry; artwork pages draw it over the
 // poster. Media URLs must be published: validate-site checks each against
 // data/media.json.
-const rasterWidths = [320, 640, 1200, 1600, 2000];
 export const rasterPath = (work: Artwork, width = 1600) =>
-  `/raster/${work.inkId}-${width}.webp`;
+  rasterKey(work.inkId, width);
 export const rasterSrcset = (work: Artwork) =>
   rasterWidths
     .map((width) => `${rasterPath(work, width)} ${width}w`)
@@ -30,7 +30,7 @@ export function thumbnail(work: DisplayArtwork) {
   if (!('inkId' in work))
     return {
       src: abstractImage(work, 640),
-      srcset: [640, 1200, 2000]
+      srcset: abstractWidths
         .map((width) => `${abstractImage(work, width)} ${width}w`)
         .join(', '),
     };

@@ -12,6 +12,9 @@ interface TourStop {
   seconds: number;
 }
 
+/** A breath between one segment and the next, so stops do not run together. */
+const GAP_MS = 700;
+
 function clock(seconds: number) {
   const m = Math.floor(seconds / 60);
   const s = Math.floor(seconds % 60);
@@ -42,6 +45,7 @@ export function initTour() {
   let holdElapsed = 0;
   let playing = false;
   let ticker: ReturnType<typeof setInterval> | undefined;
+  let gap: ReturnType<typeof setTimeout> | undefined;
   // Changing the source rejects the previous play() with an abort; only a
   // failure to start the current segment should show the tour as paused.
   let attempt = 0;
@@ -60,7 +64,26 @@ export function initTour() {
     toggle.setAttribute('aria-label', playing ? 'Pause tour' : 'Resume tour');
     document.body.classList.toggle('tour-active', state !== 'idle');
   };
+  const roomTitle =
+    player.querySelector('.tour-room')?.textContent?.trim() ?? document.title;
+  const announce = (stop: TourStop) => {
+    if (!('mediaSession' in navigator)) return;
+    const figure = stop.artworkId
+      ? document.getElementById(`work-${stop.artworkId}`)
+      : null;
+    const title = figure?.querySelector('h3')?.textContent?.trim();
+    const image = figure?.querySelector('img')?.currentSrc;
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: title ?? roomTitle,
+      artist: title ? roomTitle : 'nnxyz',
+      album: 'nnxyz audio tour',
+      artwork: image
+        ? [{ src: image, sizes: '640x640', type: 'image/webp' }]
+        : [],
+    });
+  };
   const reveal = (stop: TourStop) => {
+    announce(stop);
     document
       .querySelectorAll('.tour-current')
       .forEach((el) => el.classList.remove('tour-current'));
@@ -68,11 +91,9 @@ export function initTour() {
     if (stop.kind === 'introduction') target = 'tour-top';
     else if (stop.kind === 'closing') target = 'closing';
     else if (stop.artworkId) target = `work-${stop.artworkId}`;
-    if (stop.kind === 'chapter') {
-      // The chapter segment follows the chapter's first work in the order of
-      // the page; show the chapter heading instead.
-      const next = stops.slice(stop.index + 1).find((s) => s.artworkId);
-      const figure = next && document.getElementById(`work-${next.artworkId}`);
+    if (stop.kind === 'chapter' && stop.artworkId) {
+      // A chapter segment carries its first work; show the chapter heading.
+      const figure = document.getElementById(`work-${stop.artworkId}`);
       const chapter = figure?.closest<HTMLElement>('[data-chapter]');
       target = chapter ? chapter.id : target;
     }
@@ -101,9 +122,11 @@ export function initTour() {
     clearTimeout(hold);
     hold = undefined;
   };
+  const prefetched = new Set<string>();
   const preload = (index: number) => {
     const next = stops[index];
-    if (next?.src) {
+    if (next?.src && !prefetched.has(next.src)) {
+      prefetched.add(next.src);
       const link = document.createElement('link');
       link.rel = 'prefetch';
       link.href = next.src;
@@ -113,6 +136,7 @@ export function initTour() {
   };
   const play = (index: number) => {
     clearHold();
+    clearTimeout(gap);
     audio.pause();
     if (index >= stops.length) {
       finish();
@@ -136,6 +160,7 @@ export function initTour() {
   const pause = () => {
     if (!playing) return;
     const stop = stops[current];
+    clearTimeout(gap);
     if (stop.src) audio.pause();
     else {
       clearHold();
@@ -146,6 +171,12 @@ export function initTour() {
   const resume = () => {
     if (playing || current < 0) return;
     const stop = stops[current];
+    // Paused in the breath after a segment ended: go on to the next stop
+    // rather than replaying the finished one.
+    if (stop.src && audio.ended) {
+      play(current + 1);
+      return;
+    }
     setState('playing');
     if (stop.src) tryPlay();
     else {
@@ -156,6 +187,7 @@ export function initTour() {
   };
   const finish = () => {
     clearHold();
+    clearTimeout(gap);
     audio.pause();
     audio.removeAttribute('src');
     clearInterval(ticker);
@@ -169,7 +201,12 @@ export function initTour() {
     start.focus({ preventScroll: true });
   };
 
-  audio.addEventListener('ended', () => play(current + 1));
+  audio.addEventListener('ended', () => {
+    clearTimeout(gap);
+    gap = setTimeout(() => {
+      if (playing) play(current + 1);
+    }, GAP_MS);
+  });
   audio.addEventListener('error', () => {
     // A segment that will not play is skipped rather than ending the tour.
     if (playing) play(current + 1);
@@ -185,6 +222,21 @@ export function initTour() {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && current >= 0) finish();
   });
+  if ('mediaSession' in navigator) {
+    const actions: [MediaSessionAction, () => void][] = [
+      ['play', resume],
+      ['pause', pause],
+      ['nexttrack', () => play(current + 1)],
+      ['previoustrack', () => play(Math.max(0, current - 1))],
+      ['stop', finish],
+    ];
+    for (const [action, handler] of actions)
+      try {
+        navigator.mediaSession.setActionHandler(action, handler);
+      } catch {
+        // An action this browser does not offer is simply not wired.
+      }
+  }
   start.addEventListener('click', () => {
     start.hidden = true;
     bar.hidden = false;
