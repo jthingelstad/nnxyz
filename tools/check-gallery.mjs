@@ -356,6 +356,51 @@ try {
       'All galleries retain exact curated order and work without JavaScript',
     passed: true,
   });
+  // Screen saver: works load, the overlay names the work, keys step and pause.
+  await go('/screensaver/');
+  await page.waitForFunction(() =>
+    Boolean(document.querySelector('[data-saver]')?.dataset.current),
+  );
+  const saverCount = (
+    await (await page.request.get(base + '/screensaver/data.json')).json()
+  ).works.length;
+  assert.equal(saverCount, catalog.length + 52);
+  assert.ok((await page.locator('[data-caption]').textContent()).length > 10);
+  const firstShown = await page
+    .locator('[data-saver]')
+    .getAttribute('data-current');
+  await page.keyboard.press('ArrowRight');
+  await page.waitForFunction(
+    (id) => document.querySelector('[data-saver]').dataset.current !== id,
+    firstShown,
+  );
+  await page.keyboard.press(' ');
+  assert.equal(
+    await page.locator('[data-saver]').getAttribute('data-playing'),
+    'false',
+  );
+  assert.ok(
+    (await page.locator('[data-title-link]').getAttribute('href')).startsWith(
+      '/artworks/',
+    ),
+  );
+  // A hash-only navigation keeps the page; the saver reselects on hashchange.
+  const roomContext = `${wingsFile.wings[0].title} · ${firstGallery.title}`;
+  await go(`/screensaver/#room=${firstGallery.id}`);
+  await page.waitForFunction(
+    (text) => document.querySelector('[data-context]')?.textContent === text,
+    roomContext,
+  );
+  await page.reload();
+  await page.waitForFunction(
+    (text) => document.querySelector('[data-context]')?.textContent === text,
+    roomContext,
+  );
+  results.push({
+    check:
+      'Screen saver rotates every work with captions, pauses and limits to a room',
+    passed: true,
+  });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   for (const [width, height] of [
     [320, 740],
@@ -373,6 +418,7 @@ try {
       '/collections/rawblocks/',
       '/collections/other-related/',
       '/map/',
+      '/screensaver/',
       galleryURL,
     ]) {
       await go(route);

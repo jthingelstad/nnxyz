@@ -62,8 +62,8 @@ def main():
     retired += json.loads((ROOT / "curation/abstract/exhibitions.json").read_text())["collections"]
     redirects = {"collections/nnxyz-other/index.html", "collections/scrimshaw/index.html"}
     redirects |= {f"galleries/{g['id']}/index.html" for c in retired for g in c["galleries"]}
-    # 4 utility pages (home, about, map, 404) and 5 collection entrances.
-    assert len(pages) == len(gallery) + len(abstract) + len(rooms) + len(redirects) + 9, (
+    # 5 utility pages (home, about, map, screen saver, 404) and 5 collection entrances.
+    assert len(pages) == len(gallery) + len(abstract) + len(rooms) + len(redirects) + 10, (
         "Missing generated routes"
     )
     hung = [w["artworkId"] for room in rooms for c in room["chapters"] for w in c["works"]]
@@ -109,6 +109,13 @@ def main():
             if url.path.endswith("/"):
                 target /= "index.html"
             assert target.is_file(), f"Broken local link in {path}: {ref}"
+    # The screen saver fetches its works as JSON; every image it names is published.
+    saver = json.loads((DIST / "screensaver/data.json").read_text())["works"]
+    assert len(saver) == len(gallery) + len(abstract), "Screen saver covers every work"
+    for item in saver:
+        assert item["caption"], item["id"]
+        for ref in [item["src"], *(c.split()[0] for c in item["srcset"].split(","))]:
+            assert ref.lstrip("/") in media, f"Unpublished screen saver image: {ref}"
     for work in gallery:
         cid = work["inkId"]
         assert (DIST / "artworks" / cid / "index.html").is_file(), cid

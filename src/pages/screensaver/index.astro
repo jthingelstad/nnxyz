@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import { rooms, roomWorks } from '../../lib/exhibitions';
+const total = rooms.reduce((n, room) => n + roomWorks(room).length, 0);
+---
+
+<Layout
+  title="Screen saver — nnxyz"
+  description="One work at a time from the collection, on a rotating schedule, with its title and caption."
+>
+  <section class="saver" data-saver data-source="/screensaver/data.json">
+    <div class="saver-stage" data-stage aria-live="off">
+      <img class="saver-image" data-layer="a" alt="" decoding="async" />
+      <img class="saver-image" data-layer="b" alt="" decoding="async" />
+    </div>
+    <div class="saver-overlay" data-overlay hidden>
+      <div class="saver-panel">
+        <p class="saver-context" data-context></p>
+        <h1 class="saver-title">
+          <a data-title-link href="/"></a>
+        </h1>
+        <p class="saver-caption" data-caption></p>
+      </div>
+    </div>
+    <div class="saver-controls" data-controls>
+      <button type="button" data-saver-toggle aria-label="Pause">
+        <span class="when-playing">
+          <Icon name="pause" size={20} /> Pause
+        </span>
+        <span class="when-paused">
+          <Icon name="play" size={20} /> Play
+        </span>
+      </button>
+      <button type="button" data-saver-previous aria-label="Previous work">
+        <Icon name="left" size={20} /> Previous
+      </button>
+      <button type="button" data-saver-next aria-label="Next work">
+        Next <Icon name="right" size={20} />
+      </button>
+      <button type="button" data-saver-fullscreen aria-label="Fullscreen">
+        <Icon name="enlarge" size={20} /> Fullscreen
+      </button>
+      <span class="saver-note" data-note>
+        Loading {total} works…
+      </span>
+    </div>
+    <noscript>
+      <p class="saver-noscript">
+        The screen saver needs JavaScript. The works themselves are in the
+        <a href="/#collections">collections</a>.
+      </p>
+    </noscript>
+  </section>
+  <script>
+    import { initScreensaver } from '../../scripts/screensaver';
+    initScreensaver();
+  </script>
+</Layout>
