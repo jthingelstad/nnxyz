@@ -1,8 +1,14 @@
 # Exhibition map — October 14, 2026
 
 This is the content foundation for the collector's museum direction: welcome,
-collection wings, bounded exhibitions and individual artworks. The live Astro
-layout has not been replaced by this pass.
+collection wings, bounded exhibitions and individual artworks.
+
+**Superseded on October 15, 2026.** The site now hangs every work in the
+rooms of `structure/` (locked wings, parts and rooms, formed from the images)
+and shows the unsigned gallery text in `rewrite/` (introductions, labels,
+captions, readings and audio tour segments). `HANDOFF.md` records that pass.
+The files below are preserved as the October 14 record; their gallery
+addresses redirect to their wings.
 
 - `map.json`: 28 AI-reviewed exhibition drafts covering all 574 owned drawings,
   exactly one primary gallery per stable drawing CID. Sizes range from 8 to 30;
@@ -115,8 +121,10 @@ membership changes, with preserved prose in `chapter-count-corrections.json`.
 
 ## Repository delivery
 
-The website imports the saved `map.json` and `presentation.json` without model
-calls. Editorial records, prompts, receipts and source/input hash manifests are
+The website no longer imports `map.json` or `presentation.json`; since
+October 15, 2026 it reads `structure/` and `rewrite/` (see `HANDOFF.md`), and
+`tools/retired-galleries.mjs` turns the October 14 gallery addresses into
+redirects. Editorial records, prompts, receipts and source/input hash manifests are
 versioned. Generated review JPEGs and white-composited PNGs remain locally
 preserved but are ignored by Git, like website media and imported artwork. They
 are not served by the static website. Hydrating the pinned source snapshot
