@@ -14,13 +14,17 @@ export const collections = collectionData.filter(
   (collection) => collection.included,
 );
 export const artworkPath = (cid: string) => `/artworks/${cid}/`;
-// WebPs downscaled from the archived PNGs (tools/build-raster-assets.mjs makes
-// 320 and 640 px copies of wider PNGs, plus one at the PNG's own width).
-// Browsing never downloads SVG geometry; artwork pages draw it over the poster.
-export const rasterPath = (work: Artwork, width?: number) =>
-  width && width < Math.round(work.width)
-    ? `/raster/${work.inkId}-${width}.webp`
-    : `/raster/${work.inkId}.webp`;
+// WebPs rendered from each native SVG (tools/build-raster-assets.mjs); the
+// widths cover a 560 px gallery image at 3x and the 900 px artwork poster at
+// 2x. Browsing never
+// downloads SVG geometry; artwork pages draw it over the poster.
+const rasterWidths = [320, 640, 1200, 1600, 2000];
+export const rasterPath = (work: Artwork, width = 1600) =>
+  `/raster/${work.inkId}-${width}.webp`;
+export const rasterSrcset = (work: Artwork) =>
+  rasterWidths
+    .map((width) => `${rasterPath(work, width)} ${width}w`)
+    .join(', ');
 export function thumbnail(work: DisplayArtwork) {
   if (!('inkId' in work))
     return {
@@ -29,13 +33,7 @@ export function thumbnail(work: DisplayArtwork) {
         .map((width) => `${abstractImage(work, width)} ${width}w`)
         .join(', '),
     };
-  const full = Math.round(work.width);
-  return {
-    src: rasterPath(work, 640),
-    srcset: [...[320, 640].filter((width) => width < full), full]
-      .map((width) => `${rasterPath(work, width)} ${width}w`)
-      .join(', '),
-  };
+  return { src: rasterPath(work, 640), srcset: rasterSrcset(work) };
 }
 export const collectionPath = (id: string) => `/collections/${id}/`;
 export function displayTitle(work: Pick<DisplayArtwork, 'name'>): string {

@@ -1,6 +1,11 @@
 ---
 import Icon from './Icon.astro';
-import { displayTitle, rasterPath, type Artwork } from '../lib/catalog';
+import {
+  displayTitle,
+  rasterPath,
+  rasterSrcset,
+  type Artwork,
+} from '../lib/catalog';
 interface Props {
   work: Artwork;
   autoplay?: boolean;
@@ -27,6 +32,12 @@ const title = displayTitle(work);
     <img
       class="art-poster"
       src={rasterPath(work)}
+      srcset={rasterSrcset(work)}
+      sizes={
+        autoplay
+          ? '(max-width: 760px) 100vw, 490px'
+          : '(max-width: 760px) 100vw, min(61vw, 900px)'
+      }
       alt=""
       width={work.width}
       height={work.height}

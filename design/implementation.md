@@ -14,7 +14,7 @@ Tinylytics loads only when explicitly enabled for production and the browser hos
 
 Implementation/QA evidence is recorded in `qa-baseline.md`. Source artwork and curation records remain immutable.
 
-Full artwork pages use SVG for every drawing. Browsing uses WebPs downscaled from the archived PNGs, and the full-width WebP is the poster while an artwork's SVG downloads; native vectors total about 1.5 GiB. This preserves accurate full artwork while preventing enormous gallery grid downloads. SVG HTTP compression is required when choosing production hosting.
+Full artwork pages use SVG for every drawing. Browsing uses WebPs rendered from the native SVGs (320–2000 px, sized for retina displays), and one is the poster while an artwork's SVG downloads; native vectors total about 1.5 GiB. This preserves accurate full artwork while preventing enormous gallery grid downloads. SVG HTTP compression is required when choosing production hosting.
 
 October 13 theme extension: collector requested a visitor-switchable dark mode. Shared header offers Dark/Light with moon/sun icons; default white, optional pure black with light neutral text. Save the explicit preference locally and apply it before first paint. Browser storage failure must not block switching. Theme changes do not recolor artwork, reset replay or alter downloads. White drawing canvases remain beneath translucent/unpainted strokes; fullscreen/dialog surrounds follow the selected theme.
 
