@@ -108,3 +108,11 @@ validators pass. The build contains 617 pages and 574 native SVGs. All 11,599
 imported files still match the permanent archive. The default Python environment
 skips the Pillow-only alpha test; all nine exhibition tests pass in the existing
 curation virtual environment, including that test.
+
+## October 15 verification
+
+Checked on the branch before each merge: `npm run lint`, `npm run format:check`, `npm run check`, `npm test` (17 node tests and the Python suites, including `tests/test_rooms.py` for the locked structure and `tests/audio-tour.test.mjs` for the manifest against the current text), ruff, `npm run validate:infra`, `npm run build` (697 pages), `tools/validate-site.py` (every image, audio key and screen saver image against `data/media.json`), and `npm run test:ci-browser` against the built site, which now also plays an audio tour, follows a stop, pauses and ends it, and runs the screen saver with a decoded image, stepping, pausing and the room filter. The same suite was rehearsed with `PUBLIC_TINYLYTICS_ENABLED=true`: the embed script appears once per page and the tests record no analytics requests.
+
+Direct checks in headless Chromium beyond the suite: pausing holds the audio exactly; resuming inside the breath after a segment goes to the next stop rather than replaying; skipping inside the breath advances once; a silent work advances by itself after its hold; the screen saver's arrows work with a control focused, Space on a focused button acts once, and rapid steps leave one front layer. An axe-core audit (WCAG 2.1 AA and best practice) of the front page, two wing pages, two room pages with the tour running, an artwork page, the map, the screen saver and About reported no violations after the map's SVG became a labelled group.
+
+Screenshots from these checks are in the session scratchpad, not the repository. Two independent code reviews of the branch diff were run; their findings were fixed or, where a change would have broken the write-once audio keys, reverted and documented in `curation/exhibitions/HANDOFF.md`.

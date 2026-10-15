@@ -97,3 +97,11 @@ retain attribution. Exhibition titles and images provide the artwork links,
 without a duplicate viewing CTA. Duplicate download links and related-work
 CTAs are removed. Collection entrances show each name once. Light-theme
 headings and body text use charcoal; original artwork colors are unchanged.
+
+## October 15 rooms, map, screen saver and audio tour
+
+The site now hangs every work in the locked rooms (`curation/exhibitions/structure/`) and shows the unsigned gallery text (`curation/exhibitions/rewrite/`): wing and part introductions on the entrance pages; room pages with chapter openings, full-width labels, paired one-liners and silent works with their captions, in-room comparisons, the related item after Occasions and Figures, and a closing with its two works; artwork pages with the room reading, "Work n of m in Room, Wing", and the UTC creation instant annotated with the viewer's local time. The front page renders the collector's statement verbatim. The October 14 gallery addresses redirect to their wings.
+
+`/map/` is an isometric SVG of the collection as a three-floor building (`src/lib/floor-plan.ts`): ground floor with the entrance hall, Abstract, Other nnxyz and Scrimshaw; Faces and Rawblocks on the second; the three NNOTB parts on the third. Rooms are sized by work count and colored by wing, consecutive rooms share a doorway, stairs join the floors, and a picture legend names the wings. The SVG is a group with labelled room links.
+
+`/screensaver/` rotates one work at a time on a twelve-second schedule with a translucent panel of wing, room, title and caption; `#room=` or `#wing=` limits it. Every room page has an audio tour: the room's published segments (`curation/exhibitions/audio/manifest.json`, voice in `curation/voice/voice.json`) play in order from a button in the header, with a fixed bar for pause, previous, next, progress and stop; each stop brings its work on screen and outlines it, silent works hold, a short breath separates segments, and OS media controls carry the current work. Both are progressive enhancements: without the script the page reads the same and the buttons are absent.

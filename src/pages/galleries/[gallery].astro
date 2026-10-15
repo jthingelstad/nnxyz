@@ -16,6 +16,7 @@ import {
   type RoomWork as Work,
 } from '../../lib/exhibitions';
 import { artworkPath, displayTitle, thumbnail } from '../../lib/catalog';
+import { abstractImage } from '../../lib/abstract';
 export function getStaticPaths() {
   return rooms.map((room) => ({
     params: { gallery: room.id },
@@ -58,9 +59,16 @@ const closingIds = [closingSegment.secondArtworkId, closingSegment.artworkId]
   );
 const description = room.introduction[0];
 const tour = tourFor(room);
+const cover = exhibitionArtwork(works[0].artworkId);
+const shareImage =
+  'inkId' in cover ? `/png/${cover.inkId}.png` : abstractImage(cover, 1200);
 ---
 
-<Layout title={`${room.title} — nnxyz`} description={description}>
+<Layout
+  title={`${room.title} — nnxyz`}
+  description={description}
+  image={shareImage}
+>
   <article class="museum-page exhibition-page" data-exhibition>
     <a class="museum-back" href={wingPath(room.wingId)}>
       <Icon name="left" size={18} />

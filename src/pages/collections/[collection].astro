@@ -2,7 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import RoomEntrance from '../../components/RoomEntrance.astro';
-import { entrances, roomWorks } from '../../lib/exhibitions';
+import { entrances, roomWorks, entranceWork } from '../../lib/exhibitions';
+import { abstractImage } from '../../lib/abstract';
 import { displayTitle } from '../../lib/catalog';
 export function getStaticPaths() {
   return entrances.map((entrance) => ({
@@ -12,9 +13,17 @@ export function getStaticPaths() {
 }
 const { entrance } = Astro.props;
 const combined = entrance.wings.length > 1;
+const cover = entranceWork(entrance);
+const shareImage =
+  'inkId' in cover ? `/png/${cover.inkId}.png` : abstractImage(cover, 1200);
+const description = entrance.wings[0].introduction[0];
 ---
 
-<Layout title={`${entrance.title} — nnxyz`}>
+<Layout
+  title={`${entrance.title} — nnxyz`}
+  description={description}
+  image={shareImage}
+>
   <article class="museum-page collection-wing">
     <a class="museum-back" href="/#collections">
       <Icon name="left" size={18} />
