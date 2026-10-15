@@ -30,6 +30,11 @@ the collector's explicit go.
     standalone caption of 20 words or fewer.
   - a museum map page: the wings as a floor plan, with the galleries as
     rooms. Build it once the structure is locked.
+  - audio generation: the collector placed an OpenAI API key in the local
+    `.env` on the Mac (October 15, 2026, expiring in seven days) and wants
+    OpenAI's TTS models for the voice. The key is not available in cloud
+    sessions. Generate audio per tour segment from the rewrite files once the
+    text is final, on the Mac, and never commit the key or `.env`.
 
 ## Where the structure stands
 
