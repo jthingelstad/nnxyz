@@ -383,6 +383,12 @@ try {
       document.getElementById(`work-${id}`)?.classList.contains('tour-current'),
     firstStop[firstWorkStop].artworkId,
   );
+  // Let the stop's segment start before pausing; a pause during loading is
+  // legitimate but the time reads as zero until the file arrives.
+  await page.waitForFunction(() => {
+    const audio = document.querySelector('[data-tour-audio]');
+    return !audio.paused && audio.currentTime > 0.3;
+  });
   await page.locator('[data-tour-toggle]').click();
   assert.equal(
     await page.locator('[data-tour-player]').getAttribute('data-tour-state'),
