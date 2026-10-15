@@ -95,7 +95,14 @@ Facts settled along the way:
 1. **Final review page (asked for by the collector).** One page showing every
    work in its wing, part and gallery, with the open questions above shown in
    place so the collector can decide them while looking.
-   - Publish it as a private artifact.
+   - Done October 15, 2026: `structure/working/hanging-plan.py` builds it from
+     the structure files and the published thumbnails. Published as a private
+     artifact at <https://claude.ai/artifact/4BNxGBb3ioHQrZQsrYnh87>. The
+     page suggests answers, reached by looking at the walls: a two-work coda
+     for the landscapes; moving #42 to #46 into Scribbled Heads and #19, #20,
+     #24, #25 into Patterned Masks (21, 21 and 22 works); GM as a related item
+     on Occasions and Figures; ending each wing with its #0000 by ordering
+     rooms rather than moving works. None of these is decided.
    - Earlier review pages used embedded WebP thumbnails and stayed under
      16 MB. That works out to about 180 to 220 px at quality 60 for about 625
      works.
