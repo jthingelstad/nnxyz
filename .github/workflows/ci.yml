@@ -56,10 +56,10 @@ jobs:
             exit 1
           fi
   # Builds pages only. Media is published once and referenced by URL, so this
-  # job needs no AWS access and never downloads the archive. The name is kept
-  # because branch protection requires it.
+  # job needs no AWS access and never downloads the archive. Branch protection
+  # requires this job by name.
   build:
-    name: Archive, build and browser validation
+    name: Build and browser validation
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 20
