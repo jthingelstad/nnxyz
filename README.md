@@ -40,7 +40,7 @@ npm run test:browser
 
 Alternatively set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to an existing Chromium executable. Tests cover playback, downloads, five collection entrances, chapter navigation, mobile/tablet/desktop/landscape layouts, reduced motion, SVG fidelity and the replay error path. Temporary screenshots/results go to `/tmp/nnxyz-gallery-qa`.
 
-The full-precision SVG collection is about 1.5 GiB uncompressed; the largest drawing is about 19 MiB. Browsing uses WebPs downscaled from the original PNGs, and each artwork page shows one as a poster until its SVG arrives; every full Nifty Ink artwork view and replay uses SVG. Abstract uses responsive raster images and original JPEG downloads. Production hosting must provide compressed SVG delivery. The permanent archive and imported artwork bytes remain unchanged.
+The full-precision SVG collection is about 1.5 GiB uncompressed; the largest drawing is about 19 MiB. Browsing uses WebPs rendered from the native SVGs at up to 1600 px, so gallery images stay sharp on 2x and 3x displays, and each artwork page shows one as a poster until its SVG arrives; every full Nifty Ink artwork view and replay uses SVG. Abstract uses responsive raster images and original JPEG downloads. Production hosting must provide compressed SVG delivery. The permanent archive and imported artwork bytes remain unchanged.
 
 Copy `.env.example` to `.env` and enable `PUBLIC_TINYLYTICS_ENABLED=true` only for production. The hostname guard additionally limits the embed to `nnxyz.thingelstad.xyz`. Preview kudos explain that giving kudos becomes available on the published gallery.
 
