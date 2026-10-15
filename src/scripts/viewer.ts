@@ -27,6 +27,12 @@ export function initViewer() {
   let frame = 0;
   let last = 0;
   let action = 0;
+  const still = viewer.querySelector<HTMLImageElement>('.finished-art')!;
+  const svgReady = () => {
+    if (still.naturalWidth) viewer.dataset.svgReady = 'true';
+  };
+  if (still.complete) svgReady();
+  else still.addEventListener('load', svgReady, { once: true });
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   let automatic = viewer.dataset.autoplay === 'true' && !motion.matches;
   let repeat: ReturnType<typeof setTimeout> | undefined;

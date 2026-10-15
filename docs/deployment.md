@@ -21,8 +21,9 @@ Each bundle stores identical files once; restoration makes independent regular-f
 Generated artwork is persisted separately in a third checksum-pinned bundle:
 `infra/derived-dataset.json` / `infra/derived-dataset-files.json`. Its immutable
 S3 key is `datasets/derived/<sha256>/assets.tar.gz`, covered by the existing
-read-only build role. It contains the 574 native SVGs, 156 Abstract WebPs and
-their two manifests. Archived PNG/JPEG originals and metadata remain in the
+read-only build role. It contains the 574 native SVGs, the Nifty Ink WebPs (320/640 px and full
+width, downscaled from the archived PNGs), 156 Abstract WebPs and their three
+manifests. Archived PNG/JPEG originals and metadata remain in the
 source snapshots and are copied directly during preparation.
 
 `npm run hydrate` restores all three bundles. `npm run build` verifies the

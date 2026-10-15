@@ -1,6 +1,6 @@
 ---
 import Icon from './Icon.astro';
-import { thumbnailPath, displayTitle } from '../lib/catalog';
+import { thumbnail, displayTitle } from '../lib/catalog';
 import {
   representative,
   exhibitionPath,
@@ -20,7 +20,8 @@ const work = representative(gallery);
   href={exhibitionPath(gallery.id)}
 >
   <img
-    src={thumbnailPath(work)}
+    {...thumbnail(work)}
+    sizes={featured ? '420px' : '110px'}
     alt={displayTitle(work)}
     width={work.width}
     height={work.height}

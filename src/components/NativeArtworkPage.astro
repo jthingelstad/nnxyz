@@ -16,7 +16,7 @@ import {
   displayTitle,
   labels,
   byId,
-  thumbnailPath,
+  thumbnail,
 } from '../lib/catalog';
 interface Props {
   work: (typeof artworks)[number];
@@ -168,7 +168,8 @@ const tokens = readProvenance(work.provenancePath);
                 data-tinylytics-event-value={related.inkId}
               >
                 <img
-                  src={thumbnailPath(related)}
+                  {...thumbnail(related)}
+                  sizes="140px"
                   alt={displayTitle(related)}
                   width="140"
                   height="140"

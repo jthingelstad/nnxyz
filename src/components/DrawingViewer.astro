@@ -1,6 +1,6 @@
 ---
 import Icon from './Icon.astro';
-import { displayTitle, type Artwork } from '../lib/catalog';
+import { displayTitle, rasterPath, type Artwork } from '../lib/catalog';
 interface Props {
   work: Artwork;
   autoplay?: boolean;
@@ -25,13 +25,27 @@ const title = displayTitle(work);
   </button>
   <div class="art-stage" style={`aspect-ratio:${work.width}/${work.height}`}>
     <img
+      class="art-poster"
+      src={rasterPath(work)}
+      alt=""
+      width={work.width}
+      height={work.height}
+      fetchpriority="high"
+    />
+    <img
       class="finished-art"
       src={`/art/${work.inkId}.svg`}
       alt={`${title} by ${work.artistName}`}
       width={work.width}
       height={work.height}
-      fetchpriority="high"
     />
+    <noscript>
+      <style>
+        .art-poster {
+          display: none;
+        }
+      </style>
+    </noscript>
     <div class="drawing-art" aria-hidden="true"></div>
   </div>
   <div class="player" aria-label="Drawing playback">

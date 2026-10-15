@@ -18,8 +18,14 @@ def digest(path):
 def pack(output):
     gallery = json.loads((ROOT / "data/gallery.json").read_text())
     abstract = json.loads((ROOT / "data/abstract.json").read_text())["artworks"]
-    names = ["public/asset-manifest.json", "public/abstract/asset-manifest.json"]
+    names = [
+        "public/asset-manifest.json",
+        "public/abstract/asset-manifest.json",
+        "public/raster/asset-manifest.json",
+    ]
     names += [f"public/art/{work['inkId']}.svg" for work in gallery]
+    raster = json.loads((ROOT / "public/raster/asset-manifest.json").read_text())
+    names += ["public" + image["path"] for work in raster["artworks"] for image in work["images"]]
     names += [
         f"public/abstract/images/{work['id']}-{width}.webp"
         for work in abstract
@@ -52,6 +58,7 @@ def pack(output):
         "data/abstract.json",
         "tools/export-svg.py",
         "tools/build-web-assets.py",
+        "tools/build-raster-assets.mjs",
         "tools/build-abstract-assets.mjs",
     ]
     config = {

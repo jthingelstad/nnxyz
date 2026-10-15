@@ -5,7 +5,7 @@ import {
   byId,
   artworkPath,
   displayTitle,
-  thumbnailPath,
+  thumbnail,
   collectionPath,
 } from '../lib/catalog';
 import { entrances, representative } from '../lib/exhibitions';
@@ -39,7 +39,8 @@ const opening = byId.get('QmRgmiafSLrdXUocj4Twi7geisrrvZcsTxV27nymo6vurJ')!;
         return (
           <a class="collection-entrance" href={collectionPath(entrance.id)}>
             <img
-              src={thumbnailPath(work)}
+              {...thumbnail(work)}
+              sizes="(max-width: 760px) 45vw, (max-width: 1200px) 27vw, 365px"
               alt={`${displayTitle(work)} by ${work.artistName}`}
               width={work.width}
               height={work.height}

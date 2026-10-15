@@ -14,13 +14,29 @@ export const collections = collectionData.filter(
   (collection) => collection.included,
 );
 export const artworkPath = (cid: string) => `/artworks/${cid}/`;
-// Dense SVGs contain megabytes of geometry. Keep browsing light; artwork pages always use native SVG.
-export const thumbnailPath = (work: DisplayArtwork) =>
-  'inkId' in work
-    ? work.points > 12000
-      ? `/png/${work.inkId}.png`
-      : `/art/${work.inkId}.svg`
-    : abstractImage(work, 640);
+// WebPs downscaled from the archived PNGs (tools/build-raster-assets.mjs makes
+// 320 and 640 px copies of wider PNGs, plus one at the PNG's own width).
+// Browsing never downloads SVG geometry; artwork pages draw it over the poster.
+export const rasterPath = (work: Artwork, width?: number) =>
+  width && width < Math.round(work.width)
+    ? `/raster/${work.inkId}-${width}.webp`
+    : `/raster/${work.inkId}.webp`;
+export function thumbnail(work: DisplayArtwork) {
+  if (!('inkId' in work))
+    return {
+      src: abstractImage(work, 640),
+      srcset: [640, 1200, 2000]
+        .map((width) => `${abstractImage(work, width)} ${width}w`)
+        .join(', '),
+    };
+  const full = Math.round(work.width);
+  return {
+    src: rasterPath(work, 640),
+    srcset: [...[320, 640].filter((width) => width < full), full]
+      .map((width) => `${rasterPath(work, width)} ${width}w`)
+      .join(', '),
+  };
+}
 export const collectionPath = (id: string) => `/collections/${id}/`;
 export function displayTitle(work: Pick<DisplayArtwork, 'name'>): string {
   return work.name
