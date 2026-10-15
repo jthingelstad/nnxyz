@@ -235,12 +235,11 @@ the record of what was asked.
 
 ## Where the branch stands
 
-`curation-voice-pilot` carries, beyond what is live on main (the locked rooms,
-the gallery text, the map, the collector's statement): the screen saver, the
-published audio tour and its player, and a review pass over both. Every check
-passes (lint, format, type check, unit tests, ruff, build, site validation and
-the browser suite, which now plays a tour and runs the screen saver). Main
-deploys the live site on every push; merging is the collector's call.
+Everything through the curator's notes and `llms.txt` is merged to main and
+live. Every check passes (lint, format, type check, unit tests, ruff, infra
+validation, build, site validation and the browser suite, which plays a
+tour and runs the screen saver). Main deploys the live site on every push;
+the collector asked for the October 15 work to be merged as it was finished.
 
 Open for the collector:
 

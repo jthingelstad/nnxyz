@@ -7,6 +7,7 @@ import {
   roomDates,
   type Room,
 } from '../lib/exhibitions';
+import { tourFor, minutes } from '../lib/tour';
 interface Props {
   room: Room;
 }
@@ -14,6 +15,7 @@ const { room } = Astro.props;
 const work = representative(room);
 const count = roomWorks(room).length;
 const dates = roomDates(room);
+const tour = tourFor(room);
 ---
 
 <a
@@ -34,6 +36,7 @@ const dates = roomDates(room);
     <p class="exhibition-meta">
       {count} {count === 1 ? 'work' : 'works'}
       {dates ? ` · ${dates}` : ' · shown in title order'}
+      {tour && ` · audio tour, about ${minutes(tour.seconds)} min`}
     </p>
   </div>
 </a>
