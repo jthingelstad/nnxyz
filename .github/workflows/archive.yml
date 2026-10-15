@@ -1,10 +1,12 @@
 name: Verify archive
 # Restores the private source archive (about 1.8 GB) to check it, the curation
-# built from it, and the published SVGs against the raw strokes. Site deploys
-# never need the archive, so this runs only by hand or when a pull request
-# changes curation or archive data.
+# built from it, and the published SVGs against the raw strokes. Routine site
+# deploys never need the archive, so this runs by hand, on pull requests that
+# change curation or archive data, and before deploying such a change to main.
 on:
   workflow_dispatch:
+  # ci.yml calls this before deploying a main push that changes these paths.
+  workflow_call:
   pull_request:
     paths:
       - 'curation/**'
@@ -13,6 +15,11 @@ on:
       - 'data/tokens.json'
       - 'infra/dataset*.json'
       - 'infra/abstract-dataset*.json'
+      - 'tools/verify-collection.py'
+      - 'tools/verify-abstract.py'
+      - 'tools/verify-curation-catalog.py'
+      - 'tools/build-token-links.py'
+      - 'tools/hydrate-collection.mjs'
 permissions:
   contents: read
 jobs:

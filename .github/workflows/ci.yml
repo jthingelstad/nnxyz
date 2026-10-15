@@ -97,10 +97,47 @@ jobs:
           name: browser-evidence
           path: /tmp/nnxyz-gallery-qa/
           retention-days: 7
+  # Main pushes that change archive data run the archive workflow before
+  # deploying. Keep this pattern in step with the paths in archive.yml.
+  archive-changes:
+    name: Archive data changes
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - id: diff
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            echo changed=true >> "$GITHUB_OUTPUT"
+          elif git diff --name-only "$BEFORE" "$GITHUB_SHA" | grep -qE '^(curation/|data/(gallery|abstract|tokens)\.json$|infra/(abstract-)?dataset.*\.json$|tools/(verify-collection\.py|verify-abstract\.py|verify-curation-catalog\.py|build-token-links\.py|hydrate-collection\.mjs)$)'; then
+            echo changed=true >> "$GITHUB_OUTPUT"
+          else
+            echo changed=false >> "$GITHUB_OUTPUT"
+          fi
+  archive:
+    name: Archive verification before deploy
+    needs: archive-changes
+    if: needs.archive-changes.outputs.changed == 'true'
+    permissions:
+      contents: read
+      id-token: write
+    uses: ./.github/workflows/archive.yml
   deploy:
     name: Deploy
-    needs: [quality, codeql, build]
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    needs: [quality, codeql, build, archive]
+    if: >-
+      always() && github.ref == 'refs/heads/main' &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+      needs.quality.result == 'success' && needs.codeql.result == 'success' &&
+      needs.build.result == 'success' &&
+      (needs.archive.result == 'success' || needs.archive.result == 'skipped')
     runs-on: ubuntu-latest
     timeout-minutes: 30
     concurrency:
