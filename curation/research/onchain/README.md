@@ -149,3 +149,61 @@ Committed files: `nnxyz-onchain.json` (histories, sales, royalty wallet, likes),
 - **Shared storefronts beyond Polygon.** Tokens on shared marketplace contracts other than the Polygon OpenSea storefront (Rarible on Ethereum, objkt on Tezos) are not listed as artist contracts.
 - **Base method names** are raw selectors. Decoding them would need the contracts' ABIs.
 - **Seaport sales outside the artist's addresses.** A resale between two other people pays the royalty wallet only through a separate payout, and only paid sales that touched an artist address in the same transaction are listed. The royalty wallet's four receipts suggest few such resales.
+
+## Tezos (added October 16, 2026, cloud session)
+
+The artist's Tezos account is `tz1SCbhqv5YeGSR23xszDV7xyGaW5HJqrWFy` (objkt alias
+"nnxyz"; bio "born readymade to please the eye, intentionally flawed to show
+the arbitrariness of insignificance"; website linktr.ee/0000nnxyz). Active from
+August 10, 2022 to August 18, 2026 per TzKT, 1,211 transactions, 4
+originations. `tezos.json` holds every token objkt lists with this address as
+creator: 313 tokens in six collections.
+
+| Collection | Contract | Tokens | Dates | Total supply |
+| --- | --- | --- | --- | --- |
+| index collection by nnxyz | KT1TSC9ip7vjknqSRB3KyHbTyte44w2NLptR | 4 | 2022-08-16 to 2024-03-19 | 136 |
+| nnxyz (canvas everywhere, untitled, OpenLike) | KT1McNTi6T4PXQjPAM7o3VRYpC67TG2RKnio | 97 | 2022-08-22 to 2024-06-13 | 30,486 |
+| nnxyz GenAI (opticals, kanji, i send you summer, ScreenSwindler) | KT1RF7bsYiAZdqmzf7C1WGqZ1XqRqbXwfztp | 71 | 2022-11-17 to 2024-05-30 | 957 |
+| GMGL | KT1NyLH1iC39ABjaLnqk5gHyAyGnKaXoJumY | 120 | 2023-09-14 to 2023-09-22 | 1,200 |
+| hic et nunc (ScreenSwindler #17 to #31) | KT1RJ6PbjHpwc3M5rw5s2Nbmefwbuwbdxton | 15 | 2024-05-29/30 | 225 |
+| objkt Paint 98 (mauscontrol, a shared contract) | KT1X5W2akGCxvykmHoqoQzJfEgg1RGNGBCDd | 6 | 2024-02-24 to 2024-03-19 | 60 |
+
+Artist's words found in Tezos token and collection descriptions:
+
+- "Heaven or Hell" (index collection, 2022-08-16): "An artist's life can be
+  heaven or hell. Depending on the circumstances & the current contemporary
+  culture, you can make it or die trying".
+- "shrine of - create, try, hope, die" (index collection, 2024-03-19): "insert
+  coin, create, try, hope, die, Game over, repeat,".
+- GMGL collection description: "WALK THE LINE UNTIL YOU REACH THE HAPPY PATH.
+  PLEASE HAVE ALL RELEVANT FEELINGS READY WHEN YOU GET THERE. TAKE AWAY IS NOT
+  ALLOWED. VIOLATIONS WILL BE PUNISHED WITH HUMANITY."
+- OpenLike (2024-06-13) is released CC0 with the full waiver in its
+  description.
+- The "Canvas is Everywhere" series the artist burned on Ethereum in July 2022
+  ("I believe tezos is a better choice for this kind of artwork") reappears
+  here as 38 "canvas everywhere" tokens, September 30 to October 4, 2022.
+
+The collector's Tezos wallet `tz1ScjmJyVpN1ph4gGWgbbkWsTRykzAmiNtV` (objkt alias
+"jthingelstad") holds eight nnxyz works, fourteen units: Heaven or Hell ×6,
+untitled #19, untitled #37, opticals #1, kanji #1, i send you summer 1, GMGL #1,
+and shrine of - create, try, hope, die. Other holders of note: teia (the
+marketplace contract, 15), Sara Ludy, Tustont, akiradice, thebirdman, Violet
+Bond, OGW.
+
+Not captured here: Tezos sales and prices (objkt events), and the files
+themselves. Both are a Mac job (objkt's GraphQL `event` table; IPFS fetch).
+
+## Fantom (October 16, 2026)
+
+The artist address has 10 transactions on Fantom. Fantom's public GraphQL
+returned an empty list for them and ftmscout was unreachable, so the record
+comes from `eth_getLogs` over July 2022 to January 2023 (two of ten one-million
+block windows timed out) and `eth_call`. Found: the **nnxyz index collection**
+on Fantom, `0xa9d0b754c5ebce7d0655d4d4779330f5f5c2dc92` (nnxyzic), one token
+minted to the artist on 2022-08-05 11:34 UTC, still held by the artist, same
+token metadata as the Ethereum and Optimism index collections. The other hit,
+"Minereum FTM", is an unsolicited token airdrop that also landed in the
+collector's wallets and is not the artist's. No collector wallet holds anything
+on Fantom. `fantom.json` has the detail; the full ten-transaction list still
+needs an explorer key (handoff addendum).

@@ -119,6 +119,10 @@ the ignored `collection/recovered-onchain/` with a manifest, and
 - Polygon: seven "nifty faces px" (the pixelated twins airdropped to Faces
   holders in April 2022), 22 chic city cat club, 14 Friends Of Country Air,
   four cringe-eez doodles, pxlpop, and "nnxyz" #5.
+- Tezos (collector wallet tz1ScjmJ…, alias jthingelstad): Heaven or Hell ×6,
+  untitled #19 and #37, opticals #1, kanji #1, i send you summer 1, GMGL #1,
+  shrine of - create, try, hope, die. Record in
+  `curation/research/onchain/tezos.json`; files still to fetch.
 - Stills with enlargement and downloads, like Abstract. The px twins may hang
   beside their Faces on the artwork pages as well as in the room.
 - "i was famous" and "lord of the inks" shown as reference images with a link
@@ -199,11 +203,11 @@ the Mac for audio and media.
 - Whether wing essays stay unsigned like the rooms (recommended) or carry the
   notes-page style attribution.
 
-Added after the depth pass: how to show the re-issued pairs (one entry with
-both token ids, recommended); whether to search Fantom and Tezos (the index
-collection had a Fantom mint page, and the artist mints on objkt); whether to
-pin `collection/recovered-onchain/` to S3 with you present; whether to save
-the artist's email reply if one comes.
+Settled after the depth pass (collector, October 16): re-issued pairs are one
+entry with both token ids; the artist's email reply is saved verbatim if it
+comes; the S3 pin happens with the collector present once the After Nifty Ink
+data is final; Fantom and Tezos were searched (Tezos found, see
+`curation/research/onchain/README.md`; Fantom still needs an explorer key).
 
 Settled October 16, 2026: naming the collector, naming wallets and showing
 on-chain detail are all fine. The earlier rule that pages show no transaction

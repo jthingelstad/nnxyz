@@ -81,8 +81,12 @@ Off the board, the work kept its holders in mind. In April 2022 every owner
 of a Nifty Face received its pixelated twin, "nifty faces px", on Polygon.
 Later came a cat club "with no roadmap, no utility", "Friends Of Country Air",
 "cringe-eez doodles", and three re-issued contracts whose copies were
-airdropped to the people who already held the originals. This collection
-holds thirty-eight of those later works, shown in their own room.
+airdropped to the people who already held the originals. On Tezos, from August 2022, came
+"canvas everywhere", the "untitled" heads, "kanji", "i send you summer", GMGL
+and ScreenSwindler, with the artist's bio there reading "born readymade to
+please the eye, intentionally flawed to show the arbitrariness of
+insignificance". This collection holds forty-six of those later works, shown
+in their own room.
 
 ## Who was there
 
@@ -144,6 +148,12 @@ Book." And the day before: "If collectors or curators happen to be reading
 this, collect and curate more art that you don't like, because the artist who
 isn't what you're looking for today may have evolved into someone tomorrow who
 opens a whole new world for you."
+
+On the artist's life, in the description of "Heaven or Hell" (Tezos, August
+16, 2022): "An artist's life can be heaven or hell. Depending on the
+circumstances and the current contemporary culture, you can make it or die
+trying." And in "shrine of - create, try, hope, die" (March 19, 2024): "insert
+coin, create, try, hope, die, Game over, repeat."
 
 On what art is, June 20, 2024: "There is no such thing as bad or good art.
 There are only reasons for creating it, the meaning that a work may have as a

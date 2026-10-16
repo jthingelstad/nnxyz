@@ -188,3 +188,29 @@ where, and what could not be reached.
   site, any owned inks missing from the archive, whether the royalty wallet
   is the artist's, what the artist said in their own words that the gallery
   can quote, and what remains unreachable.
+
+---
+
+## Addendum, October 16, 2026: Tezos files and sales, Fantom history
+
+The cloud session found the artist's Tezos account
+(`tz1SCbhqv5YeGSR23xszDV7xyGaW5HJqrWFy`) and the collector's
+(`tz1ScjmJyVpN1ph4gGWgbbkWsTRykzAmiNtV`), recorded in
+`curation/research/onchain/tezos.json` and the README. Remaining:
+
+1. **Tezos files.** For the eight works the collector holds (listed under
+   `collectorHoldings` in `tezos.json`), download `artifact_uri` and
+   `display_uri` from IPFS and save them under
+   `collection/recovered-onchain/tezos/<contract>/<tokenId>/` with the same
+   manifest fields as the EVM works. Add them to `data/onchain-works.json`
+   with `chain: "tezos"`.
+2. **Tezos sales.** objkt's GraphQL `event` table (`data.objkt.com/v3`), events
+   where the token's creator is the artist and `marketplace_event_type` is a
+   sale: buyer, price in mutez, date. Add a `tezosSales` list to
+   `tezos.json`.
+3. **Fantom.** The artist address has 10 transactions on Fantom; the public
+   RPC and GraphQL would not list them. With the Etherscan v2 key
+   (`chainid=250`), pull the transaction list, token transfers and any contract
+   deployed, and add a `fantom` section to `nnxyz-onchain.json` and a row to
+   `contracts.json` if the index collection exists there.
+

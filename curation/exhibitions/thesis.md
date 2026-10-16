@@ -227,7 +227,7 @@ mask with teeth was already on the board when nnxyz arrived, in another hand,
 and the two artists share a room in this collection because they share a
 mouth.
 
-### After Nifty Ink (proposed room; 38 owned works new to the site)
+### After Nifty Ink (proposed room; 46 owned works new to the site)
 
 The depth pass found far more than six. Beyond the Optimism works ("Heaven or
 Hell", an animated hooded face; "oink", a painted landscape; "opticals",
@@ -236,7 +236,15 @@ the pixelated twins the artist airdropped to every Nifty Faces holder in April
 2022; 22 "chic city cat club" cats ("no roadmap, no utility"); 14 "Friends Of
 Country Air"; four "cringe-eez doodles"; one "pxlpop"; and "nnxyz" #5. Several
 are held twice because the artist re-issued three contracts and airdropped the
-copies to holders. With "i was famous" and "lord of the inks" as references.
+copies to holders. On Tezos the collector holds eight more: six copies of "Heaven or Hell",
+whose description is the closest thing to a statement the artist has written
+("An artist's life can be heaven or hell. Depending on the circumstances and
+the current contemporary culture, you can make it or die trying"); two
+"untitled" heads; opticals #1; kanji #1; "i send you summer 1"; GMGL #1, from a
+collection whose description reads "WALK THE LINE UNTIL YOU REACH THE HAPPY
+PATH. PLEASE HAVE ALL RELEVANT FEELINGS READY WHEN YOU GET THERE"; and "shrine
+of - create, try, hope, die" ("insert coin, create, try, hope, die, Game over,
+repeat"). With "i was famous" and "lord of the inks" as references.
 The room's argument: when the artist left the board the face went with it,
 first into pixels (the px twins are the Faces, literally, at lower resolution),
 then into jokes about collections (cats with no roadmap), and what remained of
@@ -244,28 +252,37 @@ the hand was its weather (landscapes) and its marks (opticals), with the look
 back at fame as the frame. How to hang the re-issued pairs is the collector's
 call.
 
-## What the stroke study should test
+## What the stroke study found
 
-Claims the rooms would like to make and the measures that would confirm or
-correct them (`tools/analyze-strokes.py`, output in
-`curation/analysis/strokes/`):
+`tools/analyze-strokes.py` ran over all 548 works on October 16
+(`curation/analysis/strokes/`, with a findings section in its README). The
+rooms may use these as facts.
 
-- The ground is laid first in nearly every work, and the teeth come last.
-  Expected: first-stroke coverage above a quarter of the canvas in most
-  works; the whitest, narrowest strokes concentrated in the final deciles.
-- The mask summer is drawn by burying: high overpainting and many buried
-  strokes in June to August 2022 compared with the spring.
-- The black silhouettes are the sparest works by far, and the collection
-  pieces the densest.
-- Rawblocks portraits use wide translucent strokes (paint) with a few thin
-  opaque lines on top; the Faces box heads are the reverse.
-- The late masks of 2023 and 2024 are heavier: wider median strokes, more
-  overpainting, than the 2022 masks.
-- Sessions: works cluster in evenings UTC and in runs of consecutive days;
-  the record should show the drawing sprees the rooms describe (July 9, 2022,
-  six masks in a day; November 5 to 9, 2022).
+- The board lays the ground as one recorded background pass in 527 works; the
+  hand then begins with line, not mass. The first drawn stroke covers almost
+  nothing in nearly every work.
+- Every series goes broad to fine. Median stroke width falls sevenfold across
+  the sequence, and the last tenth of every drawing is dots and short marks:
+  details, highlights, the signature.
+- Burying is the method. By the midpoint of a drawing nearly every new stroke
+  lands on paint already laid. The Faces are the most buried and fill 98% of
+  the square; Rawblocks and the Other works leave a sixth of the canvas bare.
+  The thesis guessed the mask summer buried most; the Faces do.
+- Paint arrives with the portraits: translucent strokes peak in January 2022
+  (the pale faces) and November 2022 (the Rawblocks portraits), and almost
+  vanish in the summer masks.
+- Dark grounds have seasons. December 2021 is the darkest month (two in
+  three grounds dark), then May 2022 and January 2023. After July 2023 the
+  ground is almost never dark.
+- Density has seasons. Under 100 drawn strokes a work from January to April
+  2022, 233 in May 2022, 88 in September 2022, 275 in March 2023, and about
+  400 in the two drawings of December 2024.
+- 197 drawing days in three years, two works on a typical day, a ten-day run
+  at the longest, and an evening practice by Central European time.
 
-Where a measure contradicts a sentence above, the sentence changes.
+Where a room sentence conflicts with these, the sentence changes. "The ground
+is laid first" should become "the board fills the ground, and the drawing
+begins with a line".
 
 ## What the depth pass changed
 
@@ -278,7 +295,8 @@ Where a measure contradicts a sentence above, the sentence changes.
 - Every nnxyz ink the collector holds is already in the archive (632 tokens,
   574 distinct inks). The December 2024 inks #64 and #66 came to the collector
   in April 2025; #65 went to another buyer.
-- The After Nifty Ink room grows from six works to 38.
+- The After Nifty Ink room grows from six works to 46: 38 on the EVM chains and
+  eight on Tezos.
 
 ## Open questions for the collector
 
