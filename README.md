@@ -1,16 +1,16 @@
 # The nnxyz Rooms
 
-Working project for The nnxyz Rooms, an online gallery of the collector's owned nnxyz artwork, with scrimshaw as a related collection. The local gallery baseline is built with Astro and TypeScript from the approved October 13 design. GitHub Actions validates and deploys the gallery to private S3 storage behind CloudFront.
+The nnxyz Rooms is an online gallery of the collector's owned nnxyz artwork, with scrimshaw as a related collection. It is built with Astro and TypeScript from the approved October 13 design. GitHub Actions validates the gallery and deploys main to private S3 storage behind CloudFront.
 
-The gallery's public domain will be **nnxyz.thingelstad.xyz**. Deployment and DNS instructions are in [docs/deployment.md](docs/deployment.md).
+The gallery is live at **https://nnxyz.thingelstad.xyz/**. Deployment and DNS instructions are in [docs/deployment.md](docs/deployment.md).
 
 Tinylytics configuration and per-artwork kudos guidance are saved in [design/tinylytics.md](design/tinylytics.md). Production analytics and per-artwork kudos are integrated, gated by an explicit build flag and the production hostname. Local review sends no Tinylytics requests.
 
 Source artwork lives in a private, versioned S3 snapshot; `collection/` is excluded from Git. The pipeline restores exact independent copies and verifies them before building. See [storage, CI and deployment](docs/deployment.md) for paths, validation, DNS and rollback.
 
-The gallery contains **600 nnxyz artworks and 26 scrimshaw artworks**: 574 Nifty Ink drawings representing 633 verified owned editions at the saved snapshots, plus 52 Abstract works recovered from the collector’s earlier public gallery. Abstract uses Polygon contract/token identities and original published JPEGs; its earlier ownership account is kept separate from chain-verified snapshot evidence. No other artists’ artwork files are included.
+The gallery contains **646 nnxyz artworks and 26 scrimshaw artworks**: 574 Nifty Ink drawings representing 633 verified owned editions at the saved snapshots, 52 Abstract works recovered from the collector’s earlier public gallery, and 46 After Nifty Ink works the collector holds on other chains (38 on Ethereum, Optimism, Arbitrum and Polygon, 8 on Tezos). Abstract uses Polygon contract/token identities and original published JPEGs; its earlier ownership account is kept separate from chain-verified snapshot evidence. After Nifty Ink works are identified by chain, contract and token id. No other artists’ artwork files are included.
 
-Offline Nifty Ink curation is complete: all **574 drawings** have verified technical dossiers, AI-reviewed museum readings and collection context. The catalog also includes inspected-image connections and five curatorial routes. See [curation/README.md](curation/README.md) for the saved records, review evidence and verification commands. The gallery uses these saved records offline. A conversational curator and PixiJS flourishes can follow later.
+Offline Nifty Ink curation is complete: all **574 drawings** have verified technical dossiers, AI-reviewed museum readings and collection context. The catalog also includes inspected-image connections and five curatorial routes. See [curation/README.md](curation/README.md) for the saved records, review evidence and verification commands. The gallery uses these saved records offline.
 
 ## Run the gallery
 
@@ -21,7 +21,7 @@ npm run dev
 
 Artwork images and downloads are published once and served from CloudFront; the dev server proxies them, so no archive download is needed to work on the site. Hydrating the private archive (`AWS_PROFILE=cloud-engineer npm run hydrate`) is only needed to validate sources and curation or to generate new media. See [publishing media](docs/deployment.md#published-media-is-write-once).
 
-Open http://127.0.0.1:4321/. The front page carries the collector’s statement beside a native drawing replay, followed by five collection entrances. Visitors choose rooms within Faces, New Nifty on the Block (NNOTB, in three dated parts), Rawblocks, Abstract, or Other & related; there is no global artwork grid. The 28 rooms hold 20 to 30 works each (plus a two-work coda), hung in the order they were drawn and presented in chapters with labels, one-liners, in-room comparisons and a closing; every room has an audio tour of six to ten minutes, and `/map/` shows the collection as a three-floor building. `/screensaver/` draws every work stroke by stroke, holds it with its caption and moves on, `/notes/` explains how the rooms, text, audio tour and map were made, and `/llms.txt` indexes the site for language models with the complete gallery text in `/llms-full.txt`. A quiet Dark/Light header switch changes the gallery surround between white and black and remembers the visitor’s choice. Nifty Ink detail pages offer native SVG, continuous stroke playback, speed/seek controls, enlargement, the room reading, the UTC creation instant with the viewer’s local time, and downloadable metadata/provenance. Abstract pages offer responsive raster images, enlargement, readings, source records and byte-exact original JPEG downloads; they expose no replay or SVG controls. Existing artwork URLs remain stable; previous/next and return links follow each work’s room. The galleries of the October 14 map and the earlier short-walk pages were retired; their addresses redirect to their wings, and their records remain in `curation/`. Other nnxyz and Scrimshaw are sections of Other & related, and their former standalone URLs redirect there.
+Open http://127.0.0.1:4321/. The front page carries the collector’s statement beside a native drawing replay, followed by six collection entrances. Visitors choose rooms within Faces, New Nifty on the Block (NNOTB, in three dated parts), Rawblocks, Abstract, Other & related, or After Nifty Ink; there is no global artwork grid. The 30 rooms hold 20 to 30 works each (plus a two-work coda), hung in the order they were drawn and presented in chapters with labels, one-liners, in-room comparisons and a closing; every room has an audio tour of six to ten minutes, and `/map/` shows the collection as a three-floor building. The story pages under `/story/` (Nifty Ink, The collector, The project, 2022, In the artist's words) tell the history of the platform, artist, collector and market from sourced records in `curation/story/`; `/technique/` reports how the drawings were built from the stroke analysis; and `/catalogue/` sets every collection the artist made, on every chain searched, against what the collector holds. `/screensaver/` draws every work stroke by stroke, holds it with its caption and moves on, `/notes/` explains how the rooms, text, audio tour and map were made, and `/llms.txt` indexes the site for language models with the complete gallery text in `/llms-full.txt`. A quiet Dark/Light header switch changes the gallery surround between white and black and remembers the visitor’s choice. Nifty Ink detail pages offer native SVG, continuous stroke playback, speed/seek controls, enlargement, the room reading, the UTC creation instant with the viewer’s local time, and downloadable metadata/provenance. Abstract pages offer responsive raster images, enlargement, readings, source records and byte-exact original JPEG downloads; they expose no replay or SVG controls. After Nifty Ink pages show a still (the first frame for animations) with the animation or video and the original to download; no stroke data exists for them. Existing artwork URLs remain stable; previous/next and return links follow each work’s room. The galleries of the October 14 map and the earlier short-walk pages were retired; their addresses redirect to their wings, and their records remain in `curation/`. Other nnxyz and Scrimshaw are sections of Other & related, and their former standalone URLs redirect there.
 
 ```sh
 npm run check
@@ -29,7 +29,7 @@ npm test
 npm run build
 ```
 
-The build creates 698 HTML pages in `dist/`: 626 artworks, 28 rooms, five collection entrances, the home, map, screen saver, about, curator's notes and 404 pages and 33 redirects from retired addresses, plus the screen saver's JSON, `llms.txt` with its full-text companion `llms-full.txt`, `robots.txt` and a sitemap of the 665 public pages. Nifty Ink artwork paths use immutable drawing CIDs; Abstract paths use Polygon contract/token identities. No model invocation or cloud service is needed.
+The build creates 755 HTML pages in `dist/`: 672 artworks, 30 rooms, six collection entrances, six story pages, the home, technique, catalogue, map, screen saver, about, curator's notes and 404 pages and 33 redirects from retired addresses, plus the screen saver's JSON, `llms.txt` with its full-text companion `llms-full.txt`, `robots.txt` and a sitemap of the 721 public pages. Nifty Ink artwork paths use immutable drawing CIDs; Abstract and After Nifty Ink paths use chain/contract/token identities. No model invocation or cloud service is needed.
 
 For browser checks, with a local server running:
 
@@ -38,9 +38,9 @@ npx playwright install chromium
 npm run test:browser
 ```
 
-Alternatively set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to an existing Chromium executable. Tests cover playback, downloads, five collection entrances, chapter navigation, mobile/tablet/desktop/landscape layouts, reduced motion, SVG fidelity and the replay error path. Temporary screenshots/results go to `/tmp/nnxyz-gallery-qa`.
+Alternatively set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to an existing Chromium executable. Tests cover playback, downloads, the collection entrances, chapter navigation, mobile/tablet/desktop/landscape layouts, reduced motion, SVG fidelity and the replay error path. Temporary screenshots/results go to `/tmp/nnxyz-gallery-qa`.
 
-The full-precision SVG collection is about 1.5 GiB uncompressed; the largest drawing is about 19 MiB. The site serves two-decimal copies (`art/display/`, about 600 MiB, largest 7.6 MiB) made by `tools/build-display-svgs.py`; the full-precision files stay published as the archival vectors. Browsing uses WebPs rendered from the native SVGs at up to 2000 px, so gallery images stay sharp on 2x and 3x displays, and each artwork page shows one as a poster until its SVG arrives; every full Nifty Ink artwork view and replay uses SVG. Abstract uses responsive raster images and original JPEG downloads. Production hosting must provide compressed SVG delivery. The permanent archive and imported artwork bytes remain unchanged.
+The full-precision SVG collection is about 1.5 GiB uncompressed; the largest drawing is about 19 MiB. The site serves two-decimal copies (`art/display/`, about 600 MiB, largest 7.6 MiB) made by `tools/build-display-svgs.py`; the full-precision files stay published as the archival vectors. Browsing uses WebPs rendered from the native SVGs at up to 2000 px, so gallery images stay sharp on 2x and 3x displays, and each artwork page shows one as a poster until its SVG arrives; every full Nifty Ink artwork view and replay uses SVG. Abstract and After Nifty Ink use responsive raster images and original downloads. Deployment stores SVG and other text assets gzip-compressed. The permanent archive and imported artwork bytes remain unchanged.
 
 Copy `.env.example` to `.env` and enable `PUBLIC_TINYLYTICS_ENABLED=true` only for production. The hostname guard additionally limits the embed to `nnxyz.thingelstad.xyz`. Preview kudos explain that giving kudos becomes available on the published gallery.
 
@@ -48,7 +48,7 @@ Design decisions and review evidence: [implementation](design/implementation.md)
 
 ## Collections
 
-Three Nifty Ink title families and the separate recovered Abstract collection retain their identities:
+Three Nifty Ink title families, the separate recovered Abstract collection and the After Nifty Ink works on other chains retain their identities:
 
 | Collection                     | Distinct artworks |
 | ------------------------------ | ----------------: |
@@ -58,7 +58,8 @@ Three Nifty Ink title families and the separate recovered Abstract collection re
 | Other nnxyz works              |                45 |
 | Scrimshaw                      |                26 |
 | Abstract                       |                52 |
-| Total                          |               626 |
+| After Nifty Ink                |                46 |
+| Total                          |               672 |
 
 Faces includes the Christmas special. Other nnxyz works retain the numbered `nnxyz` series, commemorative pieces and other titles. All artwork from both archived nnxyz creator addresses is included. Multiple owned editions and artworks appearing in both wallets keep their ownership records and share one gallery entry.
 
@@ -114,3 +115,7 @@ The stroke data preserves geometry, colors, brush radii and drawing order, with 
 `curation/abstract/` contains 52 directly inspected AI readings, three exhibitions of 18/17/17 works, image-review fingerprints and recovery evidence. This session used direct assistant image inspection, without a separate review-model call or individual human approval. Existing Nifty Ink editorial records and timestamps remain unchanged. `curation/collection-history.json` attributes historical context and the NNOTB expansion to the earlier collector gallery; its four additional NNOTB CIDs remain a reconciliation queue, not imported works.
 
 `npm run media:generate` derived 640/1200/2000-pixel WebPs outside `collection/` and kept the original JPEG bytes for downloads; both are published once and recorded in `data/media.json`. No stroke data, making-time measurements or native SVG are inferred for Abstract.
+
+## After Nifty Ink
+
+`data/onchain.json` catalogs the 46 works, built by `tools/build-onchain-catalog.py` and checked by `tools/verify-onchain.py`. Re-issued contracts are recorded under the work they copy, so the 38 EVM works account for 58 tokens. Originals live under ignored `collection/recovered-onchain/` and `collection/recovered-tezos/`, pinned as a private hash-checked S3 snapshot by `infra/onchain-dataset.json` and restored by `npm run hydrate:onchain` (included in `npm run hydrate`). Their stills, animations, originals and records are published write-once under `onchain/`. `/catalogue/` is built from `curation/research/onchain/census.json` by `tools/build-census.py`.

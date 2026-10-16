@@ -1,7 +1,7 @@
 # Tinylytics integration
 
 Recorded October 13, 2026 for `https://nnxyz.thingelstad.xyz`.
-Status: integration notes only; website implementation remains pending design review.
+Status: implemented. Production analytics and per-artwork kudos are live, gated by `PUBLIC_TINYLYTICS_ENABLED=true` and the production hostname. The notes below are the original plan.
 
 ## Collector-supplied embed
 
