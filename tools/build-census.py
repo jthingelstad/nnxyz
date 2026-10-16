@@ -5,7 +5,7 @@ chain searched, against what the collector holds.
 Sources: curation/research/onchain/contracts.json (the artist's contracts on
 Ethereum, Optimism, Polygon, Base, Arbitrum, Zora and Gnosis), holdings.json
 (the three collector wallets on those chains), tezos.json (objkt and TzKT),
-fantom.json, nnxyz-onchain.json (the Nifty Ink ledger), data/gallery.json,
+fantom.json, rarible.json, nnxyz-onchain.json (the Nifty Ink ledger), data/gallery.json,
 data/abstract.json and data/onchain.json (what the site shows). The grouping of
 contracts into collections, and the notes, are curated here and cite the
 artist's posts or the contract metadata; nothing is inferred from a title alone.
@@ -116,8 +116,8 @@ GROUPS = [
 ]
 SHARED = [
     {"id": "rari-masks", "title": "Rari Masks (Rarible, Ethereum)", "year": "2021 to 2022",
-     "note": "Masks minted on Rarible's shared Ethereum contract from December 2021 (posts of December 9 and 10, 2021; April 25, 2022, when the artist folded them into the Nifty Faces px airdrop). Not yet scanned for the collector's wallets: see the handoff.",
-     "status": "unscanned"},
+     "note": "Masks listed on Rarible's shared Ethereum ERC-1155 from December 2021 (posts of December 9 and 10, 2021; April 25, 2022, when the artist folded them into the Nifty Faces px airdrop). The October 16 scan (rarible.json) found no transfer involving an artist address on Rarible's Ethereum contracts, so the masks were lazy-minted listings, and no collector wallet holds or ever held a Rarible token.",
+     "status": "scanned"},
     {"id": "canvas-is-everywhere", "title": "canvas is everywhere (Rarible)", "year": "2022",
      "note": "Photographs of graffiti, fully biodegradable art (posts of March 29 to May 1, 2022), minted on Rarible and burned by the artist on July 20, 2022, who then chose Tezos for the series. Nothing survives to collect.",
      "status": "burned"},
