@@ -35,7 +35,9 @@ def check_paths(root=ROOT):
 def main():
     bundle = Path(sys.argv[1] if len(sys.argv) > 1 else ".build/onchain-collection.tar.gz")
     check_paths()
-    spec = importlib.util.spec_from_file_location("restore_collection", ROOT / "tools/restore-collection.py")
+    spec = importlib.util.spec_from_file_location(
+        "restore_collection", ROOT / "tools/restore-collection.py"
+    )
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     module.restore(bundle, ROOT, CONFIG, "collection")

@@ -42,7 +42,9 @@ def main():
     output.parent.mkdir(parents=True, exist_ok=True)
     catalog = json.loads((ROOT / "data/onchain.json").read_text())["artworks"]
     works = json.loads((ROOT / "data/onchain-works.json").read_text())["artworks"]
-    recovered = json.loads((ROOT / "collection/recovered-onchain/manifest.json").read_text())["files"]
+    recovered = json.loads((ROOT / "collection/recovered-onchain/manifest.json").read_text())[
+        "files"
+    ]
     recorded = {f["path"]: f["sha256"] for f in recovered if f.get("path")}
     expected = {}
     for work in catalog:
@@ -61,7 +63,10 @@ def main():
     manifest_path.write_text(json.dumps(entries, indent=2) + "\n")
     unique = {entry["sha256"]: entry for entry in entries}
     # Fixed gzip header time, owner, mode and mtime: the same files always pack to the same bytes.
-    with output.open("wb") as raw, gzip.GzipFile(fileobj=raw, mode="wb", compresslevel=6, mtime=0, filename="") as gz:
+    with (
+        output.open("wb") as raw,
+        gzip.GzipFile(fileobj=raw, mode="wb", compresslevel=6, mtime=0, filename="") as gz,
+    ):
         with tarfile.open(fileobj=gz, mode="w", format=tarfile.PAX_FORMAT) as bundle:
             for sha, entry in sorted(unique.items()):
                 source = ROOT / entry["projectPath"]
