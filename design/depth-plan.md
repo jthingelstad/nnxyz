@@ -244,6 +244,23 @@ clutter down, not to the project page.
 	- Publish
 	- Send the six questions to the artist if no reply arrives
 
+## Progress (October 16, 2026)
+
+- Faces wing: six rooms rewritten in the new voice (commit 7e1d14d).
+- New Nifty on the Block: all thirteen rooms and the wing and part
+  introductions rewritten; review sheets `review-nnotb--*.md`; audio stale.
+  The rooms now carry the story the ledger tells: the collector's first
+  purchase from the series (#16, May 1, 2022), the Terra week in Beams, the
+  gifts (#100, 200 and 300 nifties), the burn announcement of August 11, the
+  Merge day in Portraits, and the October 16, 2022 handover, when the
+  collector bought #0000 for 750 xDai and received 275 works that afternoon.
+- `curation/research/onchain/collector-acquisitions.json`: the first inbound
+  transfer of every owned Nifty Ink work into a family wallet (date, wallet,
+  kind, price), the source for "collected on" facts on artwork pages.
+- `tools/room-review-sheet.py` writes a room's review sheet.
+- Next: Rawblocks, Abstract, Other nnxyz and Scrimshaw rooms; the story
+  pages; artwork-page facts; audio re-recording on the Mac.
+
 ## The story layer (added October 16, 2026)
 
 The collector's instruction: tell the whole story, show the art, and help

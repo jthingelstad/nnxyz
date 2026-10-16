@@ -39,16 +39,21 @@ they happened.
 From there the collecting became a project of its own. Jamie bought nnxyz
 inks all summer, and in August and October 2022 the artist delivered the
 complete sets of Nifty Faces and New Nifty on the Block by direct transfer,
-hundreds of drawings at a time, together with the origin works, the ones
-titled #0000 that the artist held back as the key to each series. In
+hundreds of drawings at a time. Each set followed a purchase of the series'
+origin work, the one titled #0000: Jamie bought Faces #0000 for 500 xDai on
+August 13, 2022, and within hours the artist sent him 126 Faces and the
+first five of New Nifty on the Block; he bought NNOTB #0000 for 750 xDai on
+the morning of October 16, 2022, the day after the series ended, and that
+afternoon 275 drawings arrived in his wallet over four hours. In
 September Jamie drew "nnxyz fan art #0001," his block letters spelling the
 artist's name over a scribbled ground. On Thanksgiving morning he explained
 chains and bridges to two friends over brunch by moving an nnxyz ink from
 Gnosis to Ethereum. In January 2023, when the artist came back to the board
 after two months away, he wrote "I was excited to see nnxyz, one of my
 favorite artists, publishing again," and bought Rawblocks #49 "to
-celebrate." In March 2023, with the series ending, the artist sent the last
-batch, and Jamie moved his 736 inks into a wallet named for the board. In May
+celebrate." In March 2023, with the series ending, he bought Rawblocks #0000 for 300
+xDai and the artist sent the sixty-three Rawblocks to the wallet named for
+the board, and Jamie moved the rest of his inks there too. In May
 he bought Abstract #0000 and with it the fifty-two paintings, "the fourth
 nnxyz collection that I have now."
 
