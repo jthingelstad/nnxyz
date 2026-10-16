@@ -123,13 +123,20 @@ and the player's `<link rel=prefetch>` is ignored by Safari, so every segment
 started from a cold request.
 
 - `tools/build-audio-tour.mjs` now masters every segment (`MASTERING` in the
-  tool): silence trimmed to 0.1 s before and 0.25 s after, two-pass loudnorm
-  to -16 LUFS with a -3 dBTP ceiling, 64 kbps mono MP3 with an Info header,
-  and the cover embedded with title, album (`The nnxyz Rooms: <room>`), artist
-  and track tags. The manifest records `mastering`, `coverKey`, `tags`,
-  `sourceKey` (the unmastered text-to-speech file), `sourceSHA256` and the
-  loudness. Mastering is reproducible: the same source, cover and tags give
-  the same bytes.
+  tool) to the podcast convention WT Builder uses for The Weekly Thing and
+  Another Thing: silence trimmed to 0.1 s before and 0.15 s after, an 80 Hz
+  highpass, two-pass loudnorm to -16 LUFS / -1.5 dBTP applied linearly, and
+  44.1 kHz mono MP3 at 128 kbps with ID3v2.3 tags, an Info header and the
+  cover embedded (title, album `The nnxyz Rooms: <room>`, artist, album
+  artist, track, comment). Because each segment is mastered alone and
+  text-to-speech peaks run about 17 dB over its loudness, a short true-peak
+  limiter runs first; without it loudnorm silently falls back to its dynamic
+  mode, which rides the level (847 of 848 segments did, in a first pass). The
+  manifest records `mastering`, `coverKey`, `tags`, `sourceKey` (the
+  unmastered text-to-speech file), `sourceSHA256`, the loudness, the
+  normalization (always `linear`; the test holds it) and the headroom used.
+  Mastering is reproducible: the same source, cover and tags give the same
+  bytes.
 - A segment whose text is unchanged but whose mastering, cover or tags differ
   is re-mastered from its published source with no new speech request. A
   changed text is spoken and mastered in one step. A key already published is
@@ -143,9 +150,11 @@ started from a cold request.
   and artwork come with each stop from `src/lib/tour.ts` (the cover, then the
   work's 1200 px still), not from the page's lazily loaded images.
 
-All 848 segments were re-mastered and published on October 16: loudness now
--18.3 to -16.2 LUFS (median -16.7, one short comparison below -17.3), peaks
-under -0.5 dBTP, no leading silence, 190 MB instead of 301 MB, 309.6 minutes.
+All 848 segments were re-mastered and published on October 16 (keys `-v3` and
+`-v4`; the 64 kbps master briefly published before them as `-v2`/`-v3` keys was
+superseded the same evening): loudness now -16.9 to -15.7 LUFS (median
+-16.3), every segment linear, peaks at or under -1.7 dBTP, no leading silence,
+338 MB, 308.7 minutes.
 The embedded cover sits ahead of the audio, so a segment streamed from the
 network starts a little later: under 60 ms at 1 MB/s and 130 ms at 400 KB/s
 in WebKit, more in Chromium. Only a tour's first segment streams.

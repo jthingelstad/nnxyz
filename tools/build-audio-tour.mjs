@@ -30,21 +30,33 @@ const sha256 = (data) => createHash('sha256').update(data).digest('hex');
 const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const run = promisify(execFile);
 
-// Mastering, applied to every segment after text to speech. Leading silence is
-// trimmed to 0.1 s and trailing silence to 0.25 s (the player adds its own
-// breath between stops), loudness is normalized in two passes to -16 LUFS
-// with a -3 dBTP ceiling (speech peaks send most segments through loudnorm's
-// limiter rather than a plain gain, and the 64 kbps encode overshoots the
-// ceiling by up to 1.5 dB, so decoded peaks stay under -1 dBTP), and the
-// result is encoded as 64 kbps mono
-// MP3 with an Info header so a player knows the length from the first frame.
-// Changing any of this needs a new id: every segment is then re-mastered
-// under a new key.
+// Mastering, applied to every segment after text to speech, follows the
+// podcast convention WT Builder masters The Weekly Thing and Another Thing to
+// (wt-builder src/server/integrations/audio.ts): leading silence trimmed to
+// 0.1 s and trailing to 0.15 s, an 80 Hz highpass under the voice, two-pass
+// loudnorm to -16 LUFS / -1.5 dBTP applied linearly, and 44.1 kHz mono MP3 at
+// 128 kbps with ID3v2.3 tags, an Info header and the cover embedded.
+//
+// A segment is mastered alone, not as one programme, and speech from text to
+// speech peaks some 17 dB over its loudness, so the gain to -16 LUFS would
+// carry its peaks past the ceiling and loudnorm would drop to its dynamic
+// mode, which rides the level. Each segment is therefore raised to 0.5 dB
+// above the target (more, in half-decibel steps up to 3 dB, if the limiter
+// takes too much) and its few peaks caught by a -3 dB limiter at 96 kHz
+// (so inter-sample peaks are caught too); loudnorm then only trims, and stays
+// linear. Changing any of this needs a new id: every segment is then
+// re-mastered under a new key.
 export const MASTERING = {
-  id: 'speech-16lufs-64k-1',
-  trim: 'silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.1,areverse,silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.25,areverse',
-  loudnorm: 'loudnorm=I=-16:TP=-3:LRA=11',
-  encode: ['-ar', '24000', '-ac', '1', '-c:a', 'libmp3lame', '-b:a', '64k'],
+  id: 'podcast-16lufs-128k-1',
+  trim: 'silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.1,areverse,silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.15,areverse,highpass=f=80',
+  loudnorm: 'loudnorm=I=-16:TP=-1.5:LRA=11',
+  targetLUFS: -16,
+  headroomDB: 0.5,
+  maxHeadroomDB: 3,
+  ceilingDBTP: -1.5,
+  limiter:
+    'aresample=96000,alimiter=limit=0.708:attack=1:release=50:level=0:latency=1,aresample=24000',
+  encode: ['-ar', '44100', '-ac', '1', '-c:a', 'libmp3lame', '-b:a', '128k'],
 };
 // Covers: the work a segment is about, square on white, embedded in its MP3
 // and shown on the lock screen by the site's player. Published write-once, so
@@ -126,7 +138,9 @@ export function segmentTags(room, index, workTitle) {
     title: workTitle ?? room.title,
     artist: 'nnxyz',
     album: `The nnxyz Rooms: ${room.title}`,
+    album_artist: 'nnxyz',
     track: `${index + 1}/${room.tour.segments.length}`,
+    comment: 'An audio tour of The nnxyz Rooms. nnxyz.thingelstad.xyz',
   };
 }
 
@@ -232,25 +246,45 @@ async function buildCover(artworkId, sources, media) {
 const lastJson = (text) =>
   JSON.parse(text.slice(text.lastIndexOf('{'), text.lastIndexOf('}') + 1));
 
-// Two-pass loudnorm over the trimmed speech, then one encode with the cover
-// as the attached picture. Source tags are dropped and the encoder version is
-// left out, so the same inputs give the same bytes.
+// Measure, raise and limit, measure again, then one linear loudnorm and one
+// encode with the cover as the attached picture. Source tags are dropped and
+// the encoder version is left out, so the same inputs give the same bytes.
 export async function master(source, cover, tags, out) {
   const ffmpeg = (args) =>
-    run('ffmpeg', ['-hide_banner', '-nostats', ...args], {
+    run('ffmpeg', ['-hide_banner', '-nostats', '-threads', '1', ...args], {
       maxBuffer: 1 << 24,
     }).then(({ stderr }) => stderr);
-  const measured = lastJson(
-    await ffmpeg([
-      '-i',
-      source,
-      '-af',
-      `${MASTERING.trim},${MASTERING.loudnorm}:print_format=json`,
-      '-f',
-      'null',
-      '-',
-    ]),
-  );
+  const measure = async (filters) =>
+    lastJson(
+      await ffmpeg([
+        '-i',
+        source,
+        '-af',
+        `${filters},${MASTERING.loudnorm}:print_format=json`,
+        '-f',
+        'null',
+        '-',
+      ]),
+    );
+  const raw = await measure(MASTERING.trim);
+  // Raise in half-decibel steps until the limited speech can reach the
+  // target with a plain gain inside the ceiling; a segment with stronger
+  // peaks loses more loudness to the limiter and needs more.
+  let headroom = MASTERING.headroomDB;
+  let chain;
+  let measured;
+  for (;;) {
+    const gain = MASTERING.targetLUFS - Number(raw.input_i) + headroom;
+    chain = `${MASTERING.trim},volume=${gain.toFixed(2)}dB,${MASTERING.limiter}`;
+    measured = await measure(chain);
+    const peak =
+      Number(measured.input_tp) +
+      MASTERING.targetLUFS -
+      Number(measured.input_i);
+    if (peak <= MASTERING.ceilingDBTP || headroom >= MASTERING.maxHeadroomDB)
+      break;
+    headroom += 0.5;
+  }
   const second = [
     MASTERING.loudnorm,
     'linear=true',
@@ -273,7 +307,7 @@ export async function master(source, cover, tags, out) {
       '-map',
       '1:v',
       '-af',
-      `${MASTERING.trim},${second}`,
+      `${chain},${second}`,
       ...MASTERING.encode,
       '-c:v',
       'copy',
@@ -304,6 +338,7 @@ export async function master(source, cover, tags, out) {
     loudnessLUFS: Number(result.output_i),
     truePeakDBTP: Number(result.output_tp),
     normalization: result.normalization_type,
+    headroomDB: headroom,
   };
 }
 

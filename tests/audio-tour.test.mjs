@@ -102,6 +102,8 @@ test('manifest entries match the rooms and carry every field', async () => {
       `${entry.key} at ${entry.loudnessLUFS} LUFS`,
     );
     assert.match(entry.coverKey, /^audio\/covers\/[\w-]+\.jpg$/);
+    // Linear, as the podcasts are: dynamic loudnorm rides the level.
+    assert.equal(entry.normalization, 'linear', `${entry.key} not linear`);
     if (entry.sourceKey)
       assert.notEqual(entry.sourceKey, entry.key, 'a source is never reused');
   }
@@ -141,7 +143,9 @@ test('tags read like the page', () => {
     title: 'Heads Built from Boxes',
     artist: 'nnxyz',
     album: 'The nnxyz Rooms: Heads Built from Boxes',
+    album_artist: 'nnxyz',
     track: '2/2',
+    comment: 'An audio tour of The nnxyz Rooms. nnxyz.thingelstad.xyz',
   });
   assert.equal(coverKey('Qm1'), 'audio/covers/Qm1.jpg');
 });
