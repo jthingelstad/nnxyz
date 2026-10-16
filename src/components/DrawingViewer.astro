@@ -6,6 +6,7 @@ import {
   rasterSrcset,
   type Artwork,
 } from '../lib/catalog';
+import { svgKey } from '../lib/media-paths';
 interface Props {
   work: Artwork;
   autoplay?: boolean;
@@ -17,7 +18,7 @@ const title = displayTitle(work);
 <div
   class="work-viewer"
   data-viewer
-  data-src={`/art/${work.inkId}.svg`}
+  data-src={svgKey(work.inkId)}
   data-id={work.inkId}
   data-autoplay={autoplay ? 'true' : undefined}
 >
@@ -45,7 +46,7 @@ const title = displayTitle(work);
     />
     <img
       class="finished-art"
-      src={`/art/${work.inkId}.svg`}
+      src={svgKey(work.inkId)}
       alt={`${title} by ${work.artistName}`}
       width={work.width}
       height={work.height}

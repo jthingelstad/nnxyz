@@ -17,6 +17,7 @@ import {
   labels,
   byId,
 } from '../lib/catalog';
+import { svgKey } from '../lib/media-paths';
 interface Props {
   work: (typeof artworks)[number];
 }
@@ -209,7 +210,7 @@ const strokeMeasures = technique ? measures.get(work.inkId) : undefined;
           </dl>
           <p class="record-links">
             <a
-              href={`/art/${work.inkId}.svg`}
+              href={svgKey(work.inkId)}
               download={`${title}.svg`}
               data-tinylytics-event="file.download"
               data-tinylytics-event-value={work.inkId}
@@ -264,7 +265,7 @@ const strokeMeasures = technique ? measures.get(work.inkId) : undefined;
       <Icon name="close" />
     </button>
     <div class="enlargement-art">
-      <img src={`/art/${work.inkId}.svg`} alt={title} />
+      <img src={svgKey(work.inkId)} alt={title} />
     </div>
   </dialog>
 </Layout>

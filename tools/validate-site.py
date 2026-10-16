@@ -213,7 +213,7 @@ def main():
     for work in gallery:
         cid = work["inkId"]
         assert (DIST / "artworks" / cid / "index.html").is_file(), cid
-        for key in [f"art/{cid}.svg", f"png/{cid}.png", f"raster/{cid}-640.webp"]:
+        for key in [f"art/display/{cid}.svg", f"png/{cid}.png", f"raster/{cid}-640.webp"]:
             assert key in referenced, f"Artwork media not used: {key}"
     for work in abstract:
         page = DIST / "artworks" / work["id"] / "index.html"

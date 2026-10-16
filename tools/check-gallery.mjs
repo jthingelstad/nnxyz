@@ -1068,7 +1068,7 @@ try {
   // Failure path: retain the finished artwork if the separate replay request fails.
   await go(`/artworks/${face}/`);
   await waitArt();
-  await page.route(`**/art/${face}.svg`, (route) => route.abort());
+  await page.route(`**/art/display/${face}.svg`, (route) => route.abort());
   await page
     .getByRole('button', { name: 'Watch drawing', exact: true })
     .click();

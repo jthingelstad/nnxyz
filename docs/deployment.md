@@ -10,6 +10,7 @@ The public repository is https://github.com/jthingelstad/nnxyz. Application sour
 | Independent local gallery inputs, ignored by Git | `~/Projects/nnxyz/collection/`                                                         |
 | Private, versioned source snapshot               | `s3://nnxyz-storage-archive-999153317627/datasets/<snapshot-sha256>/collection.tar.gz` |
 | Public SVGs through CloudFront                   | `s3://nnxyz-storage-web-999153317627/art/<drawing-CID>.svg`                            |
+| Two-decimal display SVGs the site uses           | `s3://nnxyz-storage-web-999153317627/art/display/<drawing-CID>.svg`                    |
 | Original PNGs through CloudFront                 | `s3://nnxyz-storage-web-999153317627/png/<drawing-CID>.png`                            |
 | Responsive WebPs                                 | `s3://nnxyz-storage-web-999153317627/raster/<drawing-CID>-<width>.webp`                |
 | Selected metadata/provenance downloads           | `s3://nnxyz-storage-web-999153317627/records/<drawing-CID>.*.json`                     |
@@ -25,9 +26,10 @@ Each bundle stores identical files once; restoration makes independent regular-f
 ## Published media is write-once
 
 The artwork is an archive: it was generated once and does not change. All
-5,426 media files (574 native SVGs, PNG copies, Nifty Ink WebPs at
-320/640/1200/1600/2000 px, 156 Abstract WebPs, original JPEGs and record
-downloads) live permanently at the web bucket paths above. The site only
+7,704 media files (574 native SVGs and their two-decimal display copies, PNG
+copies, Nifty Ink WebPs at 320/640/1200/1600/2000 px, Abstract and on-chain
+images, original JPEGs, record downloads, and the audio tour's segments and
+covers) live permanently at the web bucket paths above. The site only
 references their URLs. Builds and deploys never read, copy or upload media.
 
 `data/media.json` records every published key with the SHA-256 of its bytes.

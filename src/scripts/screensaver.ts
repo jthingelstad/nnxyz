@@ -9,6 +9,7 @@
 import { advance } from '../lib/timeline';
 import {
   rasterKey,
+  svgKey,
   abstractKey,
   onchainKey,
   rasterWidths,
@@ -210,7 +211,7 @@ export function initScreensaver() {
     const incoming = layers[1 - front];
     let loaded: Drawing;
     try {
-      loaded = await loadDrawing(`/art/${work.id}.svg`, incoming);
+      loaded = await loadDrawing(svgKey(work.id), incoming);
     } catch {
       // Without its strokes, the work is still shown.
       if (mine === request) showStill(work, mine);

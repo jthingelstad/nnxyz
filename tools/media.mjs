@@ -59,6 +59,7 @@ const expected = [
   ...covers,
   ...gallery.flatMap(({ inkId }) => [
     `art/${inkId}.svg`,
+    `art/display/${inkId}.svg`,
     `png/${inkId}.png`,
     `records/${inkId}.metadata.json`,
     `records/${inkId}.provenance.json`,

@@ -5,6 +5,7 @@
 // say what they would show.
 import { rasterPath, type Artwork } from '../lib/catalog';
 import { techniqueFrames } from '../lib/technique';
+import { svgKey } from '../lib/media-paths';
 interface Props {
   work: Artwork;
   strokes: number;
@@ -19,7 +20,7 @@ const label = (f: number) =>
 <div
   class:list={['build-sequence', { compact }]}
   data-sequence
-  data-src={`/art/${work.inkId}.svg`}
+  data-src={svgKey(work.inkId)}
   data-frames={frames.join(',')}
   role="group"
   aria-label={`${strokes} strokes, shown at five points in their order`}
