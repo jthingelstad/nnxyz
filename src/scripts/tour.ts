@@ -10,6 +10,8 @@ interface TourStop {
   secondArtworkId: string | null;
   src: string | null;
   seconds: number;
+  title: string;
+  artwork: { src: string; sizes: string; type: string }[];
 }
 
 /** A breath between one segment and the next, so stops do not run together. */
@@ -69,28 +71,15 @@ export function initTour() {
   };
   const roomTitle =
     player.querySelector('.tour-room')?.textContent?.trim() ?? document.title;
+  // Title and artwork come with the stop from the build, so the lock screen
+  // has a picture even for a work whose image the page has not loaded yet.
   const announce = (stop: TourStop) => {
     if (!('mediaSession' in navigator)) return;
-    const figure = stop.artworkId
-      ? document.getElementById(`work-${stop.artworkId}`)
-      : null;
-    const title = figure?.querySelector('h3')?.textContent?.trim();
-    const img = figure?.querySelector('img');
-    const artwork =
-      img?.currentSrc && img.naturalWidth
-        ? [
-            {
-              src: img.currentSrc,
-              sizes: `${img.naturalWidth}x${img.naturalHeight}`,
-              type: 'image/webp',
-            },
-          ]
-        : [];
     navigator.mediaSession.metadata = new MediaMetadata({
-      title: title ?? roomTitle,
-      artist: title ? roomTitle : 'nnxyz',
+      title: stop.title,
+      artist: stop.artworkId ? roomTitle : 'nnxyz',
       album: 'The nnxyz Rooms, audio tour',
-      artwork,
+      artwork: stop.artwork,
     });
   };
   const reveal = (stop: TourStop) => {
@@ -133,18 +122,58 @@ export function initTour() {
     clearTimeout(hold);
     hold = undefined;
   };
-  const prefetched = new Set<string>();
-  const preload = (index: number) => {
-    const next = stops[index];
-    if (next?.src && !prefetched.has(next.src)) {
-      prefetched.add(next.src);
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
-      link.href = next.src;
-      link.as = 'audio';
-      document.head.append(link);
-    }
+  // The next spoken segments are fetched whole and played from memory.
+  // Safari ignores <link rel=prefetch>, and on a phone a new network source
+  // can take seconds to start; a segment is about 100 to 300 KB. A segment
+  // still loading, or one that failed, plays from the network as before.
+  const loading = new Map<string, Promise<void>>();
+  const ready = new Map<string, string>();
+  const fetchSegment = (src: string) => {
+    if (loading.has(src)) return;
+    loading.set(
+      src,
+      fetch(src)
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.blob();
+        })
+        .then((blob) => {
+          if (loading.has(src)) ready.set(src, URL.createObjectURL(blob));
+        })
+        .catch(() => {
+          loading.delete(src);
+        }),
+    );
   };
+  const spokenFrom = (index: number) =>
+    stops
+      .slice(index)
+      .filter((stop) => stop.src)
+      .slice(0, 2)
+      .map((stop) => stop.src!);
+  const preload = (index: number) => spokenFrom(index).forEach(fetchSegment);
+  // Keep only the current segment, the one before it and the two preloaded
+  // after it in memory; with no index, release everything.
+  const release = (index?: number) => {
+    const keep = new Set(
+      index === undefined
+        ? []
+        : [stops[index - 1]?.src, stops[index].src, ...spokenFrom(index + 1)],
+    );
+    for (const src of [...loading.keys()])
+      if (!keep.has(src)) {
+        const url = ready.get(src);
+        if (url) URL.revokeObjectURL(url);
+        ready.delete(src);
+        loading.delete(src);
+      }
+  };
+  let streaming = -1;
+  audio.addEventListener('playing', () => {
+    if (streaming !== current) return;
+    streaming = -1;
+    preload(current + 1);
+  });
   const play = (index: number) => {
     clearHold();
     clearTimeout(gap);
@@ -158,11 +187,18 @@ export function initTour() {
     reveal(stop);
     setState('playing');
     render();
-    preload(index + 1);
     if (stop.src) {
-      audio.src = stop.src;
+      const url = ready.get(stop.src);
+      audio.src = url ?? stop.src;
       tryPlay();
+      release(index);
+      // A segment streaming from the network has the connection to itself
+      // until it plays; one already in memory lets the next ones load now.
+      if (url) preload(index + 1);
+      else streaming = index;
     } else {
+      preload(index + 1);
+      release(index);
       holdElapsed = 0;
       holdStarted = Date.now();
       hold = setTimeout(() => play(index + 1), stop.seconds * 1000);
@@ -201,6 +237,7 @@ export function initTour() {
     clearTimeout(gap);
     audio.pause();
     audio.removeAttribute('src');
+    release();
     clearInterval(ticker);
     current = -1;
     setState('idle');
@@ -258,7 +295,9 @@ export function initTour() {
     play(0);
     toggle.focus({ preventScroll: true });
   });
-  // Fetch the first segment as soon as the visitor shows interest.
+  // Fetch the first segments as soon as the visitor shows interest. A touch
+  // gives no warning before its click, and a fetch begun then would only
+  // compete with the first segment's own stream.
   const warm = () => preload(0);
   start.addEventListener('pointerenter', warm, { once: true });
   start.addEventListener('focus', warm, { once: true });

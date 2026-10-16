@@ -5,6 +5,10 @@ import {
   spokenText,
   segmentKey,
   roomOrder,
+  displayTitle,
+  segmentTags,
+  coverKey,
+  MASTERING,
 } from '../tools/build-audio-tour.mjs';
 
 const pronunciation = JSON.parse(
@@ -77,6 +81,11 @@ test('manifest entries match the rooms and carry every field', async () => {
       'fileSHA256',
       'generatedAt',
       'requestId',
+      'mastering',
+      'coverKey',
+      'tags',
+      'sourceSHA256',
+      'loudnessLUFS',
     ])
       assert.ok(field in entry, `${entry.key} lacks ${field}`);
     assert.ok(entry.key.startsWith('audio/'));
@@ -84,6 +93,17 @@ test('manifest entries match the rooms and carry every field', async () => {
     seen.add(entry.key);
     if (entry.key in media.objects)
       assert.equal(media.objects[entry.key], entry.fileSHA256);
+    // Every segment is mastered the current way, and its loudness landed
+    // near the -16 LUFS target.
+    assert.equal(entry.mastering, MASTERING.id, `${entry.key} not mastered`);
+    assert.equal(manifest.mastering.id, MASTERING.id);
+    assert.ok(
+      Math.abs(entry.loudnessLUFS + 16) < 2.5,
+      `${entry.key} at ${entry.loudnessLUFS} LUFS`,
+    );
+    assert.match(entry.coverKey, /^audio\/covers\/[\w-]+\.jpg$/);
+    if (entry.sourceKey)
+      assert.notEqual(entry.sourceKey, entry.key, 'a source is never reused');
   }
   let expected = 0;
   for (const room of roomOrder(wings)) {
@@ -111,4 +131,17 @@ test('manifest entries match the rooms and carry every field', async () => {
     });
   }
   assert.equal(manifest.entries.length, expected);
+});
+
+test('tags read like the page', () => {
+  assert.equal(displayTitle('nnxyz nifty faces #0000'), 'Nifty Faces #0000');
+  assert.equal(displayTitle('nnxyzic Heaven or Hell #3'), 'Heaven or Hell #3');
+  const room = { title: 'Heads Built from Boxes', tour: { segments: [1, 2] } };
+  assert.deepEqual(segmentTags(room, 1, null), {
+    title: 'Heads Built from Boxes',
+    artist: 'nnxyz',
+    album: 'The nnxyz Rooms: Heads Built from Boxes',
+    track: '2/2',
+  });
+  assert.equal(coverKey('Qm1'), 'audio/covers/Qm1.jpg');
 });

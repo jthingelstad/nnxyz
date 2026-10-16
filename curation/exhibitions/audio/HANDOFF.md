@@ -110,3 +110,42 @@ text's hash differs), publish the new keys with `npm run media:publish`, then
 remove `audioStale` and `audioStaleNote` from the room file and commit the
 manifest and the room file together. Expect most rooms to be re-recorded as the
 rewrite proceeds; one recording session per wing is the plan.
+
+---
+
+## Addendum, October 16, 2026 (evening): mastering, covers and preloading
+
+The collector heard uneven levels, wanted each file to carry the picture it is
+about, and saw segments take seconds to start on an iPhone. Measured before
+the fix: loudness ran from -23.9 to -19.5 LUFS, 92 segments opened with more
+than half a second of silence (up to 1.8 s), the files had no Info header,
+and the player's `<link rel=prefetch>` is ignored by Safari, so every segment
+started from a cold request.
+
+- `tools/build-audio-tour.mjs` now masters every segment (`MASTERING` in the
+  tool): silence trimmed to 0.1 s before and 0.25 s after, two-pass loudnorm
+  to -16 LUFS with a -3 dBTP ceiling, 64 kbps mono MP3 with an Info header,
+  and the cover embedded with title, album (`The nnxyz Rooms: <room>`), artist
+  and track tags. The manifest records `mastering`, `coverKey`, `tags`,
+  `sourceKey` (the unmastered text-to-speech file), `sourceSHA256` and the
+  loudness. Mastering is reproducible: the same source, cover and tags give
+  the same bytes.
+- A segment whose text is unchanged but whose mastering, cover or tags differ
+  is re-mastered from its published source with no new speech request. A
+  changed text is spoken and mastered in one step. A key already published is
+  never reused, even if a manifest entry was lost.
+- Covers are `audio/covers/<artworkId>.jpg`, 480 px square on white, built
+  from the work's PNG or published 1200 px still; introductions use the
+  room's first work. `npm run media:publish` uploads them with the segments.
+- The player (`src/scripts/tour.ts`) fetches the next two spoken segments
+  whole and plays them from memory, starting only once the current segment
+  plays so the first stream has the connection to itself. Lock-screen title
+  and artwork come with each stop from `src/lib/tour.ts` (the cover, then the
+  work's 1200 px still), not from the page's lazily loaded images.
+
+All 848 segments were re-mastered and published on October 16: loudness now
+-18.3 to -16.2 LUFS (median -16.7, one short comparison below -17.3), peaks
+under -0.5 dBTP, no leading silence, 190 MB instead of 301 MB, 309.6 minutes.
+The embedded cover sits ahead of the audio, so a segment streamed from the
+network starts a little later: under 60 ms at 1 MB/s and 130 ms at 400 KB/s
+in WebKit, more in Chromium. Only a tour's first segment streams.

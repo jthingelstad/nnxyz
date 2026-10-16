@@ -196,6 +196,10 @@ def main():
         for stop in json.loads(found.group(1)):
             if stop["src"]:
                 assert stop["src"].lstrip("/") in media, f"Unpublished tour audio: {stop['src']}"
+            # Lock-screen artwork: the segment's cover and the work's still.
+            assert stop["artwork"], f"Tour stop without artwork in {room['id']}"
+            for art in stop["artwork"]:
+                assert art["src"].lstrip("/") in media, f"Unpublished tour artwork: {art['src']}"
     assert tours + stale == len(rooms), "Every room has an audio tour or is marked stale"
     # llms.txt and its full-text companion name only pages that exist.
     for name in ["llms.txt", "llms-full.txt"]:

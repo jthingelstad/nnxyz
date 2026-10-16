@@ -47,12 +47,16 @@ const onchainExtension = {
   'video/mp4': 'mp4',
 };
 // Audio tour segments: tools/build-audio-tour.mjs renders them and records
-// each key in the manifest; a regenerated segment is a new key.
+// each key in the manifest; a regenerated segment is a new key. Segments
+// about the same work share one cover.
 const audio = JSON.parse(
   await fs.readFile('curation/exhibitions/audio/manifest.json', 'utf8'),
 );
+const covers = new Set(audio.entries.map(({ coverKey }) => coverKey));
+covers.delete(undefined);
 const expected = [
   ...audio.entries.map(({ key }) => key),
+  ...covers,
   ...gallery.flatMap(({ inkId }) => [
     `art/${inkId}.svg`,
     `png/${inkId}.png`,
