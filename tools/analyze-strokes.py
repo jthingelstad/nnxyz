@@ -73,10 +73,27 @@ def decile_of(index, count):
 def measure(drawing: dict) -> dict:
     width = float(drawing["width"])
     height = float(drawing["height"])
-    lines = [line for line in drawing["lines"] if line.get("points")]
-    n = len(lines)
+    all_lines = [line for line in drawing["lines"] if line.get("points")]
     short = min(width, height) or 1.0
     scale = GRID / max(width, height)
+
+    # Helper passes: the board records the canvas background as one giant brush
+    # stroke, and may record a reference-image pass. strokes.json flags them
+    # (`background`, `ref`); a rebuilt record from SVG has no flags, so a stroke
+    # at least 0.9 of the longer canvas side wide is read as a background pass.
+    def is_helper(line):
+        if line.get("background") is True or line.get("ref") is True:
+            return True
+        return float(line["brushRadius"]) * 2 >= 0.9 * max(width, height)
+
+    helpers = [line for line in all_lines if is_helper(line)]
+    lines = [line for line in all_lines if not is_helper(line)]
+    n = len(lines)
+    ground = None
+    for line in helpers:
+        rgb, a = parse_color(str(line.get("brushColor", "")))
+        if rgb is not None and ground is None:
+            ground = {"rgb": list(rgb), "alpha": a, "dark": luminance(rgb) < 80}
 
     painted = Image.new("1", (GRID, GRID), 0)
     painted_draw = ImageDraw.Draw(painted)
@@ -180,13 +197,16 @@ def measure(drawing: dict) -> dict:
         return sum(xs) / len(xs) if xs else None
 
     return {
+        "recordedStrokes": len(all_lines),
+        "helperStrokes": len(helpers),
+        "ground": ground,
         "strokes": n,
         "points": sum(points_per_stroke),
         "dots": dots,
         "translucentStrokes": translucent,
         "distinctColors": len(colors_seen),
         "paletteEntrySequence": sorted(colors_seen.values()),
-        "width": {"min": min(widths), "median": med(widths), "max": max(widths)},
+        "width": {"min": min(widths), "median": med(widths), "max": max(widths)} if widths else None,
         "lengthMedian": med(lengths),
         "finalCoverage": coverage_by_decile[-1],
         "firstStroke": first_stroke,
@@ -314,6 +334,13 @@ def aggregate(records):
     return {
         "works": len(records),
         "strokesMedian": med(col("strokes")),
+        "recordedStrokesMedian": med(col("recordedStrokes")),
+        "worksWithHelperPass": sum(1 for r in records if r.get("helperStrokes")),
+        "darkGroundShare": (
+            sum(1 for r in records if r.get("ground") and r["ground"]["dark"]) / len(records)
+            if records
+            else None
+        ),
         "distinctColorsMedian": med(col("distinctColors")),
         "finalCoverageMedian": med(col("finalCoverage")),
         "overpaintMeanMedian": med(col("overpaintMean")),
@@ -433,8 +460,10 @@ def main():
             "Widths and lengths are divided by the shorter canvas side.",
             "Coverage and overpainting are measured on a 160x160 raster of the stroke paths with round caps; alpha is ignored for coverage.",
             "A stroke counts as buried when more than 90% of its pixels were already painted when it was laid down.",
-            "firstStroke.coverageShare above 0.25 is read as a ground laid first.",
+            "firstStroke is the first drawn stroke after the helper passes; coverageShare above 0.25 is read as a large shape laid before any detail.",
             "Sessions come from recorded creation timestamps (UTC); the archive has no per-point timing.",
+            "Helper passes (the recorded background fill and any reference pass) are excluded from every measure except recordedStrokes, helperStrokes and ground. From strokes.json they are the flagged lines; from a rebuilt SVG record, any stroke at least 0.9 of the longer canvas side wide.",
+            "strokes is the count of drawn strokes without helper passes; recordedStrokes matches the archive and the site's stroke count.",
         ],
         "all": aggregate(per_work),
         "byCollection": {k: aggregate(v) for k, v in sorted(by_collection.items())},
@@ -450,8 +479,9 @@ def main():
     }
     (out / "measures.json").write_text(json.dumps(per_work, indent=1))
     (out / "summary.json").write_text(json.dumps(summary, indent=1))
+    shown = out.relative_to(ROOT) if out.is_relative_to(ROOT) else out
     print(
-        f"measured {len(per_work)} works; missing {len(missing)}; wrote {out.relative_to(ROOT)}/measures.json and summary.json"
+        f"measured {len(per_work)} works; missing {len(missing)}; wrote {shown}/measures.json and summary.json"
     )
 
 
