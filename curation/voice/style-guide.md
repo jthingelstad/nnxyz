@@ -1,7 +1,14 @@
 # Curator voice: style guide
 
-Status: draft for the collector, October 15, 2026. It governs the exhibition
-rewrite that starts with the two pilots in `curation/exhibitions/rewrite/`.
+Status: draft for the collector, October 15, 2026; amended October 16, 2026.
+It governs the exhibition rewrite that starts with the two pilots in
+`curation/exhibitions/rewrite/`.
+
+October 16 amendment: the collector removed the rule that the text may never
+say what the artist meant or felt. That rule was written for the first
+labelling pass, not for the whole project. The gallery may now read feeling
+and message in the work. "What the writing may claim" and "Feeling and
+message" below say how.
 
 ## Who is speaking
 
@@ -13,19 +20,60 @@ a snarl".
 
 The collector's own words appear in one place only: the introduction on the
 front page. Gallery, wing and artwork text never quotes or paraphrases the
-collector, and never puts words in the artist's mouth.
+collector. The artist's words appear only where they exist: titles, the one
+public bio line, the names of contracts and series. The text never invents a
+quotation or a statement the artist did not make.
 
 ## What the writing may claim
 
 - **Confidently:** what is in the picture (marks, colors, shapes, faces,
   expressions on those faces), how pictures differ, and what the records show
-  (dates, stroke counts, title order). A drawn face can scowl; say so.
-- **Never:** what the artist meant, felt or was influenced by. No "the artist
-  explores", no "nnxyz wanted". Nothing about the artist's life.
+  (dates, stroke counts, title order, and the on-chain record in
+  `curation/research/onchain/`). A drawn face can scowl; say so.
+- **As a reading, with a museum's confidence:** what a work feels like and what
+  it says. The gallery may say that a room is angry, that a series mourns its
+  own ending, that a grin is a threat. It says so because of something it can
+  point to: the picture, the order the works were made in, the titles, the
+  artist's own line about the work, or what the artist did with the work
+  afterwards. A reading is stated, not hedged into mush; "may suggest" stays
+  on the habits list. Once per gallery at most, the text may say plainly that
+  a reading is one of several.
+- **Sourced only:** the artist's words, life and influences. Quote the bio
+  line, a title or a contract name when it exists and cite where it is from.
+  Comparisons to other artists (Duchamp's readymade, Warhol's grid, art brut)
+  are the gallery's comparisons and are written as such, never as the artist's
+  influences, unless the artist named them. No invented quotations, no
+  biography beyond the public record, no diagnosis of the person.
 - **Only from software:** numbers. Dates, stroke counts and sizes come from the
   verified dossier. Dates are UTC, from the archived creation timestamp; text
   prefers the month, or a span of days, over a single date unless the day is
   the point.
+
+## Feeling and message
+
+The collector wants the rooms to reach the feeling and the message of the art,
+not only its description. Three sources carry that weight, in this order.
+
+1. **The picture itself.** Expression, posture, color, how the marks were laid
+   down, what is hidden under scribble and what is left to show. Say what the
+   face does to a viewer: "the grin is a threat" is a claim about the picture,
+   and the gallery may make it.
+2. **The record.** What the artist did is evidence of what the work was for.
+   The series were numbered, closed with an origin work, and the unsold
+   editions were minted to a dead address so no one could buy them. The gifts
+   went to named people. The mainnet works were titled "i was famous" and "lord
+   of the inks". The bio line says "born readymade to please the eye". These
+   are facts, and a reading may rest on them.
+3. **The gallery's reading.** With the first two in hand, the text may say what
+   a work or a room means. Keep it specific to this work and this room, and let
+   the argument build across the room rather than repeating the same feeling
+   on every label. Contrast is a reading too: a room can hold joy and anger
+   and say which works carry which.
+
+Where a reading rests on the record or on the artist's words, the sentence
+makes that visible without a footnote: "The title says it", "The series ended
+with a burn". Where it rests on looking, no attribution is needed; the picture
+is on the wall.
 
 ## Shape of an exhibition
 
@@ -108,7 +156,7 @@ in 38%.
 | "pushes forward", "pulls the eye", "pressure", "tension" | name the specific thing that draws attention, and why |
 | "holds both A and B at once", "refuses to settle", "without resolving" | pick the stronger reading, or say plainly that the face is ambiguous, once per exhibition at most |
 | "nnxyz nifty faces #87's X; nnxyz nifty faces #47's Y" | a comparison only where it matters, with short titles |
-| emotional readings in every label | the exhibition carries the emotional argument; individual labels can stay with the drawing |
+| the same emotional reading in every label | the exhibition carries the emotional argument; vary which works carry it, and let some labels stay with the drawing |
 
 ## Labels the collector likes
 
