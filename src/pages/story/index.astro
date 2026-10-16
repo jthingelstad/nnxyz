@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { storyPages, storyPath } from '../../lib/story';
+---
+
+<Layout
+  title="The story — The nnxyz Rooms"
+  description="The drawing board, the collector, the artist's project, the year 2022 and the artist's own words: the story behind the rooms, from the archive, the ledger and the record."
+>
+  <article class="text-page story-index">
+    <h1>The story</h1>
+    <p>
+      The rooms show the art. These pages tell what was around it: the drawing
+      board that kept every stroke, the collector who kept buying, the three
+      years of the artist's project, the year most of it was drawn, and what the
+      artist has said in public. Every fact on them comes from the archive, the
+      public ledgers, the artist's posts or the collector's own published
+      writing, and each page lists its sources.
+    </p>
+    <ol class="story-list">
+      {storyPages.map((page) => (
+        <li>
+          <a href={storyPath(page.slug)}>{page.title}</a>
+          <p>{page.summary}</p>
+        </li>
+      ))}
+    </ol>
+    <p>
+      <a href="/#collections">Enter the collections →</a>
+    </p>
+  </article>
+</Layout>

@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 
-export async function checkAbstract(browser, base, output) {
+export async function checkAbstract(browser, base, output, entrances = 5) {
   const data = JSON.parse(await fs.readFile('data/abstract.json', 'utf8'));
   const wingsFile = JSON.parse(
     await fs.readFile('curation/exhibitions/rewrite/wings.json', 'utf8'),
@@ -50,7 +50,7 @@ export async function checkAbstract(browser, base, output) {
     );
   try {
     await page.goto(base + '/');
-    assert.equal(await page.locator('.collection-entrance').count(), 5);
+    assert.equal(await page.locator('.collection-entrance').count(), entrances);
     await page.getByRole('link', { name: /Abstract/ }).click();
     assert.ok(page.url().endsWith('/collections/abstract/'));
     assert.equal(await page.locator('.exhibition-entrance').count(), 2);

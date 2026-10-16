@@ -4,11 +4,14 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import { checkAbstract } from './check-abstract.mjs';
 import { checkProvenance } from './check-provenance.mjs';
+import { onchainState } from './onchain-ready.mjs';
 
 const base = process.env.GALLERY_TEST_URL || 'http://127.0.0.1:4321';
 const output = '/tmp/nnxyz-gallery-qa';
 await fs.mkdir(output, { recursive: true });
 const catalog = JSON.parse(await fs.readFile('data/gallery.json', 'utf8'));
+// Five entrances, six once After Nifty Ink is published.
+const onchain = await onchainState();
 const browser = await chromium.launch({
   headless: true,
   executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined,
@@ -104,7 +107,7 @@ async function seek(fraction) {
 }
 try {
   results.push(await checkProvenance(browser, base, output));
-  results.push(await checkAbstract(browser, base, output));
+  results.push(await checkAbstract(browser, base, output, onchain.entrances));
   await go('/');
   assert.equal(await page.locator('h1').textContent(), 'The nnxyz Rooms');
   assert.equal(
@@ -113,7 +116,10 @@ try {
       .evaluate((element) => getComputedStyle(element).color),
     'rgb(72, 72, 72)',
   );
-  assert.equal(await page.locator('.collection-entrance').count(), 5);
+  assert.equal(
+    await page.locator('.collection-entrance').count(),
+    onchain.entrances,
+  );
   assert.equal(
     await page.getByRole('link', { name: /^All works$/i }).count(),
     0,
@@ -358,62 +364,75 @@ try {
   });
   // Audio tour: the button appears with the script, the first segment plays,
   // skipping brings the stop's work on screen, pause holds, Escape ends it.
+  // While a rewritten room waits for its audio to be re-recorded, the player
+  // stays hidden and the check is that it does.
   await go(galleryURL);
   const tourButton = page.locator('[data-tour-start]');
-  assert.ok(await tourButton.isVisible());
-  assert.match(await tourButton.textContent(), /about \d+ min/);
-  await tourButton.click();
-  await page.waitForFunction(
-    () =>
-      document.querySelector('[data-tour-player]')?.dataset.tourState ===
-      'playing',
-  );
-  await page.waitForFunction(
-    () => document.querySelector('[data-tour-audio]').currentTime > 0.5,
-  );
-  const firstStop = JSON.parse(
-    await page.locator('[data-tour-stops]').textContent(),
-  );
-  assert.equal(firstStop.length, firstGallery.tour.segments.length);
-  const firstWorkStop = firstStop.findIndex((stop) => stop.artworkId);
-  for (let i = 0; i < firstWorkStop; i++)
-    await page.locator('[data-tour-next]').click();
-  await page.waitForFunction(
-    (id) =>
-      document.getElementById(`work-${id}`)?.classList.contains('tour-current'),
-    firstStop[firstWorkStop].artworkId,
-  );
-  // Let the stop's segment start before pausing; a pause during loading is
-  // legitimate but the time reads as zero until the file arrives.
-  await page.waitForFunction(() => {
-    const audio = document.querySelector('[data-tour-audio]');
-    return !audio.paused && audio.currentTime > 0.3;
-  });
-  await page.locator('[data-tour-toggle]').click();
-  assert.equal(
-    await page.locator('[data-tour-player]').getAttribute('data-tour-state'),
-    'paused',
-  );
-  const held = await page.evaluate(
-    () => document.querySelector('[data-tour-audio]').currentTime,
-  );
-  await page.waitForTimeout(500);
-  assert.equal(
-    await page.evaluate(
+  if (firstGallery.tour.audioStale) {
+    assert.equal(await tourButton.count(), 0);
+    assert.equal(await page.locator('[data-tour-player]:visible').count(), 0);
+    results.push({
+      check: 'Audio tour hidden while the room waits for its re-recording',
+      passed: true,
+    });
+  } else {
+    assert.ok(await tourButton.isVisible());
+    assert.match(await tourButton.textContent(), /about \d+ min/);
+    await tourButton.click();
+    await page.waitForFunction(
+      () =>
+        document.querySelector('[data-tour-player]')?.dataset.tourState ===
+        'playing',
+    );
+    await page.waitForFunction(
+      () => document.querySelector('[data-tour-audio]').currentTime > 0.5,
+    );
+    const firstStop = JSON.parse(
+      await page.locator('[data-tour-stops]').textContent(),
+    );
+    assert.equal(firstStop.length, firstGallery.tour.segments.length);
+    const firstWorkStop = firstStop.findIndex((stop) => stop.artworkId);
+    for (let i = 0; i < firstWorkStop; i++)
+      await page.locator('[data-tour-next]').click();
+    await page.waitForFunction(
+      (id) =>
+        document
+          .getElementById(`work-${id}`)
+          ?.classList.contains('tour-current'),
+      firstStop[firstWorkStop].artworkId,
+    );
+    // Let the stop's segment start before pausing; a pause during loading is
+    // legitimate but the time reads as zero until the file arrives.
+    await page.waitForFunction(() => {
+      const audio = document.querySelector('[data-tour-audio]');
+      return !audio.paused && audio.currentTime > 0.3;
+    });
+    await page.locator('[data-tour-toggle]').click();
+    assert.equal(
+      await page.locator('[data-tour-player]').getAttribute('data-tour-state'),
+      'paused',
+    );
+    const held = await page.evaluate(
       () => document.querySelector('[data-tour-audio]').currentTime,
-    ),
-    held,
-  );
-  await page.keyboard.press('Escape');
-  assert.equal(
-    await page.locator('[data-tour-player]').getAttribute('data-tour-state'),
-    'idle',
-  );
-  assert.ok(await tourButton.isVisible());
-  results.push({
-    check: 'Audio tour plays, follows the stop, pauses and ends',
-    passed: true,
-  });
+    );
+    await page.waitForTimeout(500);
+    assert.equal(
+      await page.evaluate(
+        () => document.querySelector('[data-tour-audio]').currentTime,
+      ),
+      held,
+    );
+    await page.keyboard.press('Escape');
+    assert.equal(
+      await page.locator('[data-tour-player]').getAttribute('data-tour-state'),
+      'idle',
+    );
+    assert.ok(await tourButton.isVisible());
+    results.push({
+      check: 'Audio tour plays, follows the stop, pauses and ends',
+      passed: true,
+    });
+  }
   // Screen saver: works load, the overlay names the work, keys step and pause.
   await go('/screensaver/');
   await page.waitForFunction(() =>
@@ -425,7 +444,7 @@ try {
   const abstractCount = JSON.parse(
     await fs.readFile('data/abstract.json', 'utf8'),
   ).artworks.length;
-  assert.equal(saverCount, catalog.length + abstractCount);
+  assert.equal(saverCount, catalog.length + abstractCount + onchain.count);
   assert.ok((await page.locator('[data-caption]').textContent()).length > 10);
   // The front layer holds either a drawing being painted from its strokes
   // or, for a work without strokes, a decoded still.
@@ -700,7 +719,10 @@ try {
       exact: true,
     })
     .click();
-  assert.equal(await page.locator('.collection-entrance').count(), 5);
+  assert.equal(
+    await page.locator('.collection-entrance').count(),
+    onchain.entrances,
+  );
   await page.locator('.collection-entrance').first().click();
   await page.locator('.exhibition-entrance').first().click();
   await page.locator('#chapter-1 .exhibition-art').first().click();

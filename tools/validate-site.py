@@ -83,10 +83,15 @@ def main():
     retired += json.loads((ROOT / "curation/abstract/exhibitions.json").read_text())["collections"]
     redirects = {"collections/nnxyz-other/index.html", "collections/scrimshaw/index.html"}
     redirects |= {f"galleries/{g['id']}/index.html" for c in retired for g in c["galleries"]}
-    # 7 utility pages (home, about, notes, map, catalogue, screen saver, 404) and the entrances.
-    assert len(pages) == len(gallery) + len(abstract) + len(onchain) + len(rooms) + len(redirects) + 7 + entrances, (
+    # 7 utility pages (home, about, notes, map, catalogue, screen saver, 404), the story
+    # index with one page per file under curation/story/, and the entrances.
+    story_pages = [p for p in (ROOT / "curation/story").glob("*.md") if p.name != "README.md"]
+    story = 1 + len(story_pages)
+    assert len(pages) == len(gallery) + len(abstract) + len(onchain) + len(rooms) + len(redirects) + 7 + story + entrances, (
         "Missing generated routes"
     )
+    for path in story_pages:
+        assert (DIST / "story" / path.stem / "index.html").is_file(), f"Missing story page {path.stem}"
     hung = [w["artworkId"] for room in rooms for c in room["chapters"] for w in c["works"]]
     assert len(hung) == len(set(hung)) == len(gallery) + len(abstract) + len(onchain) - 1, "Every work hangs once"
     related = [r["artworkId"] for room in rooms for r in room.get("relatedItems", [])]

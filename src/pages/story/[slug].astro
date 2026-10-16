@@ -1,0 +1,241 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import {
+  storyPages,
+  storyPath,
+  render,
+  monthFacts,
+  timeline2022,
+} from '../../lib/story';
+import words from '../../../curation/story/words.json';
+import { rooms, roomWorks, exhibitionPath } from '../../lib/exhibitions';
+import { formatUtcDate } from '../../lib/dates';
+export function getStaticPaths() {
+  return storyPages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+const { page } = Astro.props;
+const index = storyPages.findIndex((p) => p.slug === page.slug);
+const previous = storyPages[index - 1];
+const next = storyPages[index + 1];
+const blocks = render(page.body);
+const MONTHS = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+const monthName = (month: string) => MONTHS[Number(month.slice(5, 7)) - 1];
+// Which rooms hold the works drawn in a month: the link from the year to the walls.
+const roomsForMonth = (month: string) =>
+  rooms
+    .map((room) => ({
+      room,
+      count: roomWorks(room).filter((w) =>
+        (w.facts.recordedDate ?? '').startsWith(month),
+      ).length,
+    }))
+    .filter((r) => r.count > 0)
+    .sort((a, b) => b.count - a.count);
+const who: Record<string, string> = {
+  artist: 'The artist',
+  collector: 'The collector',
+  market: 'The market',
+};
+const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`;
+const topics: Record<string, string> = {
+  'nifty-ink': 'On Nifty Ink',
+  series: 'On the series',
+  'index collection': 'On the index collection',
+  burn: 'On the burn',
+  process: 'On process',
+  views: 'On art',
+};
+---
+
+<Layout title={`${page.title} — The nnxyz Rooms`} description={page.summary}>
+  <article class="text-page story-page">
+    <a class="back-link story-back" href="/story/">
+      <Icon name="left" size={20} /> The story
+    </a>
+    <h1>{page.title}</h1>
+    <p class="story-summary">{page.summary}</p>
+    {blocks.map((block) =>
+      block.type === 'html' ? (
+        <div class="story-text" set:html={block.html} />
+      ) : (
+        (() => {
+          const facts = monthFacts.get(block.month);
+          if (!facts) throw new Error(`No timeline facts for ${block.month}`);
+          const hung = roomsForMonth(block.month);
+          return (
+            <section
+              class="story-month"
+              aria-label={`${monthName(block.month)} 2022, from the record`}
+            >
+              <h3>{monthName(block.month)} 2022, from the record</h3>
+              <ul class="story-month-counts">
+                <li>
+                  {plural(facts.inksCreated, 'ink')} drawn on Nifty Ink
+                  {facts.ownedInksDrawn !== facts.inksCreated && (
+                    <>, {facts.ownedInksDrawn} of them in this collection</>
+                  )}
+                </li>
+                {facts.sales > 0 && (
+                  <li>
+                    {plural(facts.sales, 'sale')} on the board,{' '}
+                    {facts.salesXDai} xDai
+                  </li>
+                )}
+                {facts.collectorBought > 0 && (
+                  <li>
+                    The collector buys {plural(facts.collectorBought, 'work')}
+                    {facts.collectorPaidXDai > 0 && (
+                      <> for {facts.collectorPaidXDai} xDai</>
+                    )}
+                  </li>
+                )}
+                {facts.collectorGiven > 0 && (
+                  <li>
+                    {plural(facts.collectorGiven, 'work')} sent to the collector
+                    by the artist
+                  </li>
+                )}
+                {facts.burnMints > 0 && (
+                  <li>
+                    {plural(facts.burnMints, 'unsold edition')} minted to the
+                    dead address
+                  </li>
+                )}
+                <li>{plural(facts.artistPosts, 'post')} by the artist</li>
+                {facts.artistLikes > 0 && (
+                  <li>
+                    The artist likes {plural(facts.artistLikes, 'ink')} by
+                    others
+                  </li>
+                )}
+              </ul>
+              {facts.events.length > 0 && (
+                <ul class="story-month-events">
+                  {facts.events.map((event) => (
+                    <li>
+                      <span class="story-event-date">
+                        {formatUtcDate(event.date)}
+                      </span>{' '}
+                      <span class="story-event-who">{who[event.who]}.</span>{' '}
+                      {event.text}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {hung.length > 0 && (
+                <p class="story-month-rooms">
+                  Drawn this month and hanging in{' '}
+                  {hung.map((r, i) => (
+                    <>
+                      <a href={exhibitionPath(r.room.id)}>{r.room.title}</a> (
+                      {r.count})
+                      {i < hung.length - 2
+                        ? ', '
+                        : i === hung.length - 2
+                          ? ' and '
+                          : ''}
+                    </>
+                  ))}
+                  .
+                </p>
+              )}
+            </section>
+          );
+        })()
+      ),
+    )}
+    {page.kind === 'timeline' && (
+      <p class="story-method">
+        The counts are the ledger's and the archive's:{' '}
+        {timeline2022.totals.inksCreated} inks drawn on Nifty Ink in 2022,{' '}
+        {timeline2022.totals.sales} sales for {timeline2022.totals.salesXDai}{' '}
+        xDai, {timeline2022.totals.burnMints} unsold editions minted to the dead
+        address, {timeline2022.totals.artistPosts} posts. A sale is a payment to
+        the artist through the board; a post is one captured from the artist's
+        account.
+      </p>
+    )}
+    {page.kind === 'words' && (
+      <>
+        <h2 id="bios">The bios</h2>
+        <ul class="story-bios">
+          {words.bios.map((bio) => (
+            <li>
+              <a href={bio.url}>{bio.site}</a>: <q>{bio.text}</q>
+            </li>
+          ))}
+          <li>
+            <a href={words.xProfile.url}>X</a>: the bio is empty; the location
+            reads <q>{words.xProfile.location}</q>.
+          </li>
+        </ul>
+        <h2 id="posts">The posts</h2>
+        <ol class="story-quotes">
+          {words.quotes.map((quote) => (
+            <li id={`post-${quote.id}`}>
+              <p class="story-quote-meta">
+                <a href={quote.url}>{formatUtcDate(quote.postedAt)}</a>
+                {' · '}
+                {topics[quote.topic] ?? quote.topic}
+              </p>
+              <blockquote>
+                {quote.printed.split('\n\n').map((paragraph) => (
+                  <p
+                    set:html={paragraph
+                      .replaceAll('&', '&amp;')
+                      .replaceAll('<', '&lt;')
+                      .replaceAll('\n', '<br />')}
+                  />
+                ))}
+              </blockquote>
+              <p class="story-quote-note">{quote.note}</p>
+            </li>
+          ))}
+        </ol>
+      </>
+    )}
+    {page.sources.length > 0 && (
+      <section class="story-sources" aria-label="Sources">
+        <h2 id="sources">Sources</h2>
+        <ul>
+          {page.sources.map((source) => (
+            <li
+              set:html={source.replaceAll('&', '&amp;').replaceAll('<', '&lt;')}
+            />
+          ))}
+        </ul>
+      </section>
+    )}
+    <nav class="story-navigation" aria-label="Story pages">
+      {previous ? (
+        <a href={storyPath(previous.slug)}>
+          <Icon name="left" size={20} /> {previous.title}
+        </a>
+      ) : (
+        <span></span>
+      )}
+      {next && (
+        <a href={storyPath(next.slug)}>
+          {next.title} <Icon name="right" size={20} />
+        </a>
+      )}
+    </nav>
+  </article>
+</Layout>

@@ -6,7 +6,8 @@ import DrawingViewer from './DrawingViewer.astro';
 import ProvenanceNote from './ProvenanceNote.astro';
 import { ownedTokens } from '../lib/provenance';
 import { placement, roomWorks, exhibitionPath } from '../lib/exhibitions';
-import { formatUtcDateTime } from '../lib/dates';
+import { formatUtcDateTime, formatUtcDate } from '../lib/dates';
+import { workFacts } from '../lib/story';
 import {
   artworks,
   artworkPath,
@@ -37,6 +38,11 @@ const technical = label.technical.filter(
   (fact) => fact.id !== 'recorded-creation',
 );
 const tokens = ownedTokens(work.inkId);
+// The story facts: the artist's own post about the drawing, and the day and
+// way it reached the collector (curation/story/facts.json).
+const facts = workFacts.get(work.inkId);
+const post = facts?.post;
+const collected = facts?.collected;
 ---
 
 <Layout
@@ -73,6 +79,22 @@ const tokens = ownedTokens(work.inkId);
       <section class="curator-reading" aria-label="Label">
         <p>{reading}</p>
       </section>
+      {post && (
+        <section class="artist-post" aria-label="The artist’s post">
+          <p>
+            The artist <a href={post.url}>posted this drawing</a> on{' '}
+            {formatUtcDate(post.postedAt)}
+            {post.priceXDai !== null && <>, at {post.priceXDai} xDai</>}.
+          </p>
+          {post.remark && (
+            <blockquote class="artist-remark">
+              {post.remark.split('\n').map((line) => (
+                <p>{line}</p>
+              ))}
+            </blockquote>
+          )}
+        </section>
+      )}
       <p class="gallery-position">
         {position === null ? (
           <>
@@ -141,6 +163,18 @@ const tokens = ownedTokens(work.inkId);
                   <time datetime={recordedAt} data-utc>
                     {formatUtcDateTime(recordedAt)}
                   </time>
+                </dd>
+              </>
+            )}
+            {collected && (
+              <>
+                <dt>Collected</dt>
+                <dd>
+                  {collected.how},{' '}
+                  <time datetime={collected.on}>
+                    {formatUtcDate(collected.on)}
+                  </time>
+                  {collected.wallet && <> ({collected.wallet})</>}.
                 </dd>
               </>
             )}

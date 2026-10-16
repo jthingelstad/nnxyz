@@ -22,6 +22,37 @@ const shareImage =
       ? onchainImage(cover, 1200)
       : abstractImage(cover, 1200);
 const description = entrance.wings[0].introduction[0];
+// One line from each wing into the story page that bears on it.
+const storyFor: Record<string, { slug: string; line: string }> = {
+  'nifty-faces': {
+    slug: 'the-collector',
+    line: 'How the collector found the board and bought his first Face.',
+  },
+  nnotb: {
+    slug: '2022',
+    line: 'The year these were drawn, month by month, with the market beside them.',
+  },
+  rawblocks: {
+    slug: '2022',
+    line: 'The autumn these were drawn: the burn, the handovers and the second crash.',
+  },
+  abstract: {
+    slug: 'the-project',
+    line: 'Where the paintings sit in the artist’s three years.',
+  },
+  'nnxyz-other': {
+    slug: 'nifty-ink',
+    line: 'The drawing board that kept every stroke.',
+  },
+  scrimshaw: {
+    slug: 'nifty-ink',
+    line: 'The board where both artists drew.',
+  },
+  'after-nifty-ink': {
+    slug: 'in-the-artists-words',
+    line: 'What the artist has said about the later collections, verbatim.',
+  },
+};
 ---
 
 <Layout
@@ -74,6 +105,12 @@ const description = entrance.wings[0].introduction[0];
               <RoomEntrance room={room} />
             ))}
           </div>
+        )}
+        {storyFor[wing.id] && (
+          <p class="wing-story-link">
+            <a href={`/story/${storyFor[wing.id].slug}/`}>The story</a>:{' '}
+            {storyFor[wing.id].line}
+          </p>
         )}
         <p class="exhibition-meta wing-count">
           {wing.rooms.reduce((n, room) => n + roomWorks(room).length, 0)} works

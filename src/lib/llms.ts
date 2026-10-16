@@ -14,6 +14,7 @@ import {
 } from './exhibitions';
 import { displayTitle, artworkPath } from './catalog';
 import statement from '../../curation/collector-statement.json';
+import { storyPages, storyPath, plainText } from './story';
 
 const SITE = 'https://nnxyz.thingelstad.xyz';
 // Every work in the collection: the rooms plus the related item hung after one.
@@ -31,7 +32,7 @@ export function llmsIndex(): string {
     '',
   );
   lines.push(
-    'The site shows the owned subset of each series, not a complete catalogue. Dates are UTC, from the archived creation timestamps. Readings describe what is visible and do not claim what the artist intended. Numbers (stroke counts, dates) come from the archive, not from looking.',
+    "The site shows the owned subset of each series, not a complete catalogue. Dates are UTC, from the archived creation timestamps. Readings are grounded in the picture, the archived record and the artist's own sourced words; numbers (stroke counts, dates, prices) come from the archive and the public ledgers, not from looking. Only the collector is named.",
     '',
   );
   lines.push('## Wings', '');
@@ -49,6 +50,11 @@ export function llmsIndex(): string {
         `- [${room.title}](${url(exhibitionPath(room.id))}): ${room.theme} ${roomWorks(room).length} works, ${where}${dates ? `, ${dates}` : ''}.`,
       );
     }
+  lines.push('', '## The story', '');
+  for (const page of storyPages)
+    lines.push(
+      `- [${page.title}](${url(storyPath(page.slug))}): ${page.summary}`,
+    );
   lines.push('', '## Pages', '');
   lines.push(
     `- [Map](${url('/map/')}): the collection as a three-floor building, rooms sized by work count.`,
@@ -77,6 +83,21 @@ export function llmsFull(): string {
   lines.push('## From the collector', '');
   for (const paragraph of statement.paragraphs) lines.push(paragraph, '');
   lines.push(`${statement.signature}, ${statement.dateline}`, '');
+  for (const page of storyPages) {
+    lines.push(
+      `## The story: ${page.title}`,
+      '',
+      url(storyPath(page.slug)),
+      '',
+    );
+    lines.push(page.summary, '');
+    for (const paragraph of plainText(page.body)) lines.push(paragraph, '');
+    if (page.sources.length) {
+      lines.push('Sources:', '');
+      for (const source of page.sources) lines.push(`- ${source}`);
+      lines.push('');
+    }
+  }
   for (const wing of wings) {
     lines.push(`## ${wing.title}`, '', `${url(wingPath(wing.id))}`, '');
     for (const paragraph of wing.introduction) lines.push(paragraph, '');

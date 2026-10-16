@@ -1,5 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { artworks } from '../lib/catalog';
+import { abstractArtworks } from '../lib/abstract';
+import { onchainArtworks, onchainReady } from '../lib/onchain';
+const inks = artworks.filter((work) => work.artistName === 'nnxyz').length;
+const scrimshaw = artworks.length - inks;
+const later = onchainReady ? onchainArtworks.length : 0;
+const nnxyzTotal = inks + abstractArtworks.length + later;
 ---
 
 <Layout title="About the collection — The nnxyz Rooms">
@@ -7,15 +14,24 @@ import Layout from '../layouts/Layout.astro';
     <h1>About the collection</h1>
     <p>
       The collector’s own introduction is on the front page. Everything else on
-      the site, the wing and room texts and the artwork labels, is unsigned
-      gallery text written from the works and their archived records.
+      the site, the wing and room texts, the artwork labels and the story pages,
+      is unsigned gallery text written from the works, their archived records,
+      the public ledgers and the artist’s own posts.
     </p>
     <h2>The artwork and the archive</h2>
     <p>
-      This gallery brings together 600 nnxyz works and 26 works by scrimshaw.
-      The Nifty Ink archive preserves 574 drawings representing 633 owned
-      editions at its saved snapshots. Another 52 Abstract works have been
-      recovered from the collector’s earlier public gallery.
+      This gallery brings together {nnxyzTotal} nnxyz works and {scrimshaw}{' '}
+      works by Scrimshaw. The Nifty Ink archive preserves {artworks.length}{' '}
+      drawings representing 633 owned editions at its saved snapshots.
+      {abstractArtworks.length} Abstract works have been recovered from the
+      collector’s earlier public gallery
+      {later > 0 && (
+        <>
+          , and {later} later works on Polygon, Ethereum, Optimism, Arbitrum and
+          Tezos are shown from their original files
+        </>
+      )}
+      .
     </p>
     <p>
       Each Nifty Ink drawing is reconstructed as a native vector image from its
@@ -32,7 +48,8 @@ import Layout from '../layouts/Layout.astro';
     <p>
       The artwork pages link to the collected NFTs. Nifty Ink links use the
       editions recorded in the archived collection; Abstract links come from the
-      collector’s earlier gallery.
+      collector’s earlier gallery; the later works link to their chain’s
+      explorer or to objkt.
     </p>
     <h2>Collection history</h2>
     <p>
@@ -43,30 +60,43 @@ import Layout from '../layouts/Layout.astro';
       title does not necessarily mark the first recorded drawing.
     </p>
     <p>
+      The story of the collection, from the drawing board to the handovers of
+      the complete sets, is told on <a href="/story/">the story pages</a>: Nifty
+      Ink, the collector, the artist’s project, the year 2022 and the artist’s
+      own words, each with its sources. The day each Nifty Ink work reached the
+      collector, and how, is in the details panel of its page, from the public
+      ledger of his wallets.
+    </p>
+    <p>
       The earlier{' '}
       <a href="https://www.thingelstad.com/art/nnxyz/abstract/">
         Abstract account
       </a>
-      also lists scrimshaw.eth as the gift recipient beside #06. This is
-      historical context from the collector’s account, separate from the
-      galleries’ visual comparisons.
+      also lists scrimshaw.eth as the gift recipient beside #06. The ledger
+      confirms the April 2022 gifts; the earlier gallery’s dates and lists are
+      the collector’s historical account, kept distinct from a current ownership
+      snapshot.
     </p>
     <h2>How the rooms were made</h2>
     <p>
       Every work hangs in one room, in the order it was drawn, and the rooms
       were formed from the images rather than from titles. The galleries were
-      curated with AI, working from the artwork and the archived records; the
-      text offers specific ways of looking rather than claims about what the
-      artist intended. Dates are UTC, from the archived creation timestamps.
+      curated with AI, working from the artwork, the archived records, the
+      ledgers and the artist’s public posts; the text reads feeling and message
+      in the work, grounded in the picture and the record, and invents no
+      quotation, biography or influence. Comparisons to other artists are the
+      gallery’s. Dates are UTC, from the archived creation timestamps.
     </p>
     <p>
       The gallery shows an owned subset. Title sequence does not establish
-      creation order or a complete catalogue of either artist’s work. Related
-      works are visual comparisons, not evidence of influence.
+      creation order, and <a href="/catalogue/">the catalogue</a> lists every
+      collection the artist is known to have made, held here or not. Only the
+      collector is named; other buyers appear by Ethereum name where they have
+      one, and are otherwise counted.
     </p>
     <p>
       <a href="/notes/">Notes from the curator →</a>, on how the rooms, the
-      text, the audio tour and the map were made.
+      text, the story pages, the audio tour and the map were made.
     </p>
     <p>
       <a href="/map/">See the map of the collection →</a>
