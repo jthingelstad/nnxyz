@@ -14,8 +14,8 @@ export interface SaverWork {
   wing: string;
   wingId: string;
   href: string;
-  /** 'ink' works have raster/<id>-<w>.webp; 'abstract' works abstract/images/<id>-<w>.webp. */
-  kind: 'ink' | 'abstract';
+  /** 'ink' works have raster/<id>-<w>.webp; 'abstract' works abstract/images/<id>-<w>.webp; 'onchain' works onchain/images/<id>-<w>.webp. */
+  kind: 'ink' | 'abstract' | 'onchain';
 }
 
 export function saverWorks(): SaverWork[] {
@@ -34,7 +34,11 @@ export function saverWorks(): SaverWork[] {
         wing: part ? `${room.wingTitle} · ${part.title}` : room.wingTitle,
         wingId: room.wingId,
         href: artworkPath(work.artworkId),
-        kind: drawing ? ('ink' as const) : ('abstract' as const),
+        kind: drawing
+          ? ('ink' as const)
+          : 'chain' in art
+            ? ('onchain' as const)
+            : ('abstract' as const),
       };
     }),
   );

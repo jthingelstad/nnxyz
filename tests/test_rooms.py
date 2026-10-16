@@ -19,6 +19,7 @@ class RoomTests(unittest.TestCase):
         self.rooms = {p.stem: read(p) for p in REWRITE.glob("*--*.json")}
         self.gallery = read(ROOT / "data/gallery.json")
         self.abstract = read(ROOT / "data/abstract.json")["artworks"]
+        self.onchain = read(ROOT / "data/onchain.json")["artworks"]
 
     def room_ids(self):
         for wing in self.wings:
@@ -57,7 +58,11 @@ class RoomTests(unittest.TestCase):
             for w in c["works"]
         ]
         self.assertEqual(len(hung), len(set(hung)))
-        owned = {w["inkId"] for w in self.gallery} | {w["id"] for w in self.abstract}
+        owned = (
+            {w["inkId"] for w in self.gallery}
+            | {w["id"] for w in self.abstract}
+            | {w["id"] for w in self.onchain}
+        )
         related = [r for room in self.rooms.values() for r in room.get("relatedItems", [])]
         self.assertEqual([r["title"] for r in related], ["GM"])
         self.assertEqual(set(hung) | {related[0]["artworkId"]}, owned)
@@ -71,11 +76,16 @@ class RoomTests(unittest.TestCase):
                 self.assertTrue(work["caption"] and work["reading"], work["artworkId"])
                 self.assertLessEqual(len(work["caption"].split()), 22)
                 recorded = work["facts"]["recordedAt"]
-                if room["collectionId"] != "abstract":
+                if room["collectionId"] == "abstract":
+                    self.assertIsNone(recorded)
+                elif room["collectionId"] == "after-nifty-ink":
+                    # Mint instants are known for some chains only; null is allowed.
+                    if recorded:
+                        self.assertTrue(recorded.endswith("Z"), work["artworkId"])
+                        self.assertEqual(work["facts"]["recordedDate"], recorded[:10])
+                else:
                     self.assertTrue(recorded and recorded.endswith("Z"), work["artworkId"])
                     self.assertEqual(work["facts"]["recordedDate"], recorded[:10])
-                else:
-                    self.assertIsNone(recorded)
 
     def test_the_text_is_unsigned_and_uses_utc(self):
         # The curation is unsigned (no "AI curator") and dates are UTC. Since

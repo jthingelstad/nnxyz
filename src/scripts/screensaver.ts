@@ -10,8 +10,10 @@ import { advance } from '../lib/timeline';
 import {
   rasterKey,
   abstractKey,
+  onchainKey,
   rasterWidths,
   abstractWidths,
+  onchainWidths,
 } from '../lib/media-paths';
 import { loadDrawing, paintFrame, type Drawing } from './replay';
 
@@ -25,7 +27,7 @@ interface SaverWork {
   wing: string;
   wingId: string;
   href: string;
-  kind: 'ink' | 'abstract';
+  kind: 'ink' | 'abstract' | 'onchain';
 }
 /** Drawing pace at the 1× setting, relative to the artwork page's 1×. */
 const BASE_SPEED = 0.7;
@@ -52,9 +54,18 @@ function remember(key: string, value: string) {
 }
 
 const imageUrl = (work: SaverWork, width: number) =>
-  work.kind === 'ink' ? rasterKey(work.id, width) : abstractKey(work.id, width);
+  work.kind === 'ink'
+    ? rasterKey(work.id, width)
+    : work.kind === 'onchain'
+      ? onchainKey(work.id, width)
+      : abstractKey(work.id, width);
 const srcsetFor = (work: SaverWork) =>
-  (work.kind === 'ink' ? rasterWidths : abstractWidths)
+  (work.kind === 'ink'
+    ? rasterWidths
+    : work.kind === 'onchain'
+      ? onchainWidths
+      : abstractWidths
+  )
     .filter((width) => width >= 1200)
     .map((width) => `${imageUrl(work, width)} ${width}w`)
     .join(', ');

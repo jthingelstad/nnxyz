@@ -20,6 +20,10 @@ MEDIA_PREFIXES = (
     "abstract/originals/",
     "abstract/records/",
     "audio/",
+    "onchain/images/",
+    "onchain/animations/",
+    "onchain/originals/",
+    "onchain/records/",
 )
 
 
@@ -47,10 +51,23 @@ class Page(HTMLParser):
 
 
 def main():
+    # ONCHAIN_PREVIEW=1 builds After Nifty Ink from locally generated media/ before
+    # the Mac publishes it; the same flag relaxes the published-media check for
+    # those keys only.
+    import os
+
+    preview = os.environ.get("ONCHAIN_PREVIEW") == "1"
     gallery = json.loads((ROOT / "data/gallery.json").read_text())
     abstract = json.loads((ROOT / "data/abstract.json").read_text())["artworks"]
     pages = sorted(DIST.rglob("*.html"))
     media = json.loads((ROOT / "data/media.json").read_text())["objects"]
+    # After Nifty Ink opens only once its media is published (src/lib/onchain.ts);
+    # the same rule decides which rooms and works the build should contain.
+    onchain_all = json.loads((ROOT / "data/onchain.json").read_text())["artworks"]
+    onchain_ready = all(
+        f"onchain/images/{w['id']}-{width}.webp" in media for w in onchain_all for width in (640, 1200, 2000)
+    ) or (DIST / "collections/after-nifty-ink/index.html").is_file()
+    onchain = onchain_all if onchain_ready else []
     built = [str(path.relative_to(DIST)) for path in DIST.rglob("*") if path.is_file()]
     assert not [key for key in built if key.startswith(MEDIA_PREFIXES)], "Media in the build"
     referenced = set()
@@ -60,16 +77,18 @@ def main():
         json.loads(path.read_text())
         for path in sorted((ROOT / "curation/exhibitions/rewrite").glob("*--*.json"))
     ]
+    rooms = [room for room in rooms if room["collectionId"] != "after-nifty-ink" or onchain_ready]
+    entrances = 6 if onchain_ready else 5
     retired = json.loads((ROOT / "curation/exhibitions/map.json").read_text())["collections"]
     retired += json.loads((ROOT / "curation/abstract/exhibitions.json").read_text())["collections"]
     redirects = {"collections/nnxyz-other/index.html", "collections/scrimshaw/index.html"}
     redirects |= {f"galleries/{g['id']}/index.html" for c in retired for g in c["galleries"]}
-    # 6 utility pages (home, about, notes, map, screen saver, 404) and 5 entrances.
-    assert len(pages) == len(gallery) + len(abstract) + len(rooms) + len(redirects) + 11, (
+    # 6 utility pages (home, about, notes, map, screen saver, 404) and the entrances.
+    assert len(pages) == len(gallery) + len(abstract) + len(onchain) + len(rooms) + len(redirects) + 6 + entrances, (
         "Missing generated routes"
     )
     hung = [w["artworkId"] for room in rooms for c in room["chapters"] for w in c["works"]]
-    assert len(hung) == len(set(hung)) == len(gallery) + len(abstract) - 1, "Every work hangs once"
+    assert len(hung) == len(set(hung)) == len(gallery) + len(abstract) + len(onchain) - 1, "Every work hangs once"
     related = [r["artworkId"] for room in rooms for r in room.get("relatedItems", [])]
     assert len(related) == 1 and related[0] not in hung, "GM hangs only as a related item"
     assert not (DIST / "walks").exists(), "Retired walk pages were generated"
@@ -99,6 +118,9 @@ def main():
                 continue
             key = unquote(url.path).lstrip("/")
             if url.path.startswith("/") and key.startswith(MEDIA_PREFIXES):
+                if key.startswith("onchain/") and preview:
+                    assert (ROOT / "media" / key).is_file(), f"Preview media not generated: {key}"
+                    continue
                 assert key in media, f"Unpublished media in {path}: {ref}"
                 referenced.add(key)
                 continue
@@ -113,15 +135,18 @@ def main():
             assert target.is_file(), f"Broken local link in {path}: {ref}"
     # The screen saver fetches its works as JSON; every image it names is published.
     saver = json.loads((DIST / "screensaver/data.json").read_text())["works"]
-    assert len(saver) == len(gallery) + len(abstract), "Screen saver covers every work"
+    assert len(saver) == len(gallery) + len(abstract) + len(onchain), "Screen saver covers every work"
     # The widths and prefixes mirror src/lib/media-paths.ts and the >= 1200
     # filter in src/scripts/screensaver.ts; change all three together.
     for item in saver:
         assert item["caption"], item["id"]
         widths = [1200, 1600, 2000] if item["kind"] == "ink" else [1200, 2000]
-        prefix = "raster/" if item["kind"] == "ink" else "abstract/images/"
+        prefix = {"ink": "raster/", "abstract": "abstract/images/", "onchain": "onchain/images/"}[item["kind"]]
         for width in widths:
             key = f"{prefix}{item['id']}-{width}.webp"
+            if key.startswith("onchain/") and preview:
+                assert (ROOT / "media" / key).is_file(), key
+                continue
             assert key in media, f"Unpublished screen saver image: {key}"
     # The audio tour embeds each room's stops as JSON; every key is published.
     import re as _re

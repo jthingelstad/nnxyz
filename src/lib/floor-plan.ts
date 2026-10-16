@@ -62,6 +62,7 @@ export const WING_COLORS: Record<string, string> = {
   abstract: '#c45c93',
   'nnxyz-other': '#5b9c5a',
   scrimshaw: '#7b6fc4',
+  'after-nifty-ink': '#8a7a52',
 };
 export const PLAN_W = 900;
 export const PLAN_H = 420;
@@ -272,7 +273,12 @@ function wingBlock(id: string, x: number, w: number, rows: number[]): Block {
 }
 
 // Ground floor.
-const groundIds = ['abstract', 'nnxyz-other', 'scrimshaw'];
+const groundIds = [
+  'abstract',
+  'nnxyz-other',
+  'scrimshaw',
+  ...(wings.some((w) => w.id === 'after-nifty-ink') ? ['after-nifty-ink'] : []),
+];
 const groundWidths = splitWidths(
   groundIds.map((id) => total(wing(id).rooms)),
   PLAN_W,
@@ -321,7 +327,9 @@ const thirdBlocks = nnotb.parts.map((part, i) => {
 export const floors: Floor[] = [
   buildFloor(
     1,
-    'Entrance, Abstract, Other nnxyz and Scrimshaw',
+    groundIds.length > 3
+      ? 'Entrance, Abstract, Other nnxyz, Scrimshaw and After Nifty Ink'
+      : 'Entrance, Abstract, Other nnxyz and Scrimshaw',
     groundBlocks,
     true,
   ),
@@ -335,6 +343,9 @@ export const legend = [
   { id: 'abstract', floor: 1 },
   { id: 'nnxyz-other', floor: 1 },
   { id: 'scrimshaw', floor: 1 },
+  ...(wings.some((w) => w.id === 'after-nifty-ink')
+    ? [{ id: 'after-nifty-ink', floor: 1 }]
+    : []),
 ].map(({ id, floor }) => {
   const data = wing(id);
   return {

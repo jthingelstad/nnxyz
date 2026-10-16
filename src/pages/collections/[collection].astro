@@ -4,7 +4,8 @@ import Icon from '../../components/Icon.astro';
 import RoomEntrance from '../../components/RoomEntrance.astro';
 import { entrances, roomWorks, entranceWork } from '../../lib/exhibitions';
 import { abstractImage } from '../../lib/abstract';
-import { displayTitle } from '../../lib/catalog';
+import { onchainImage } from '../../lib/onchain';
+import { displayTitle, isOnchain } from '../../lib/catalog';
 export function getStaticPaths() {
   return entrances.map((entrance) => ({
     params: { collection: entrance.id },
@@ -15,7 +16,11 @@ const { entrance } = Astro.props;
 const combined = entrance.wings.length > 1;
 const cover = entranceWork(entrance);
 const shareImage =
-  'inkId' in cover ? `/png/${cover.inkId}.png` : abstractImage(cover, 1200);
+  'inkId' in cover
+    ? `/png/${cover.inkId}.png`
+    : isOnchain(cover)
+      ? onchainImage(cover, 1200)
+      : abstractImage(cover, 1200);
 const description = entrance.wings[0].introduction[0];
 ---
 

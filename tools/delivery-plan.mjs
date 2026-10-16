@@ -14,6 +14,8 @@ export const mime = {
   '.txt': 'text/plain; charset=utf-8',
   '.xml': 'application/xml; charset=utf-8',
   '.mp3': 'audio/mpeg',
+  '.gif': 'image/gif',
+  '.mp4': 'video/mp4',
 };
 // Published media: generated once, uploaded once by tools/media.mjs, and only
 // referenced by the site. Site deploys never write these keys.
@@ -26,6 +28,10 @@ export const mediaPrefixes = [
   'abstract/originals/',
   'abstract/records/',
   'audio/',
+  'onchain/images/',
+  'onchain/animations/',
+  'onchain/originals/',
+  'onchain/records/',
 ];
 export const isMediaKey = (key) =>
   mediaPrefixes.some((prefix) => key.startsWith(prefix));

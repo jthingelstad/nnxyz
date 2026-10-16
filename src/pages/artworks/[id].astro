@@ -3,6 +3,8 @@ import NativeArtworkPage from '../../components/NativeArtworkPage.astro';
 import AbstractArtworkPage from '../../components/AbstractArtworkPage.astro';
 import { artworks } from '../../lib/catalog';
 import { abstractArtworks } from '../../lib/abstract';
+import OnchainArtworkPage from '../../components/OnchainArtworkPage.astro';
+import { onchainArtworks, onchainReady } from '../../lib/onchain';
 export function getStaticPaths() {
   return [
     ...artworks.map((work) => ({
@@ -13,6 +15,10 @@ export function getStaticPaths() {
       params: { id: work.id },
       props: { kind: 'raster' as const, work },
     })),
+    ...(onchainReady ? onchainArtworks : []).map((work) => ({
+      params: { id: work.id },
+      props: { kind: 'onchain' as const, work },
+    })),
   ];
 }
 const props = Astro.props;
@@ -20,6 +26,8 @@ const props = Astro.props;
 
 {props.kind === 'drawing' ? (
   <NativeArtworkPage work={props.work} />
+) : props.kind === 'onchain' ? (
+  <OnchainArtworkPage work={props.work} />
 ) : (
   <AbstractArtworkPage work={props.work} />
 )}

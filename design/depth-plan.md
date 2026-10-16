@@ -262,6 +262,13 @@ clutter down, not to the project page.
   (one) rewritten the same way, with their wing introductions. All 28 rooms
   now carry the depth-pass voice and have `tour.audioStale` set; the audio
   tour is hidden on every room until the Mac re-records it.
+- After Nifty Ink (workstream C) is built: `data/onchain.json` (46 works,
+  `tools/build-onchain-catalog.py`), the wing `after-nifty-ink` with two rooms,
+  Twins and Cats (20) and The Index and After (26), artwork pages with stills,
+  animations and original downloads, the screen saver and map. It is gated on
+  its media: the Mac fetches the sources, generates `media/onchain/` and
+  publishes (HANDOFF addendum); until then the wing is absent and the build is
+  the same 698 pages.
 - Next: the story pages under `/story/`; artwork-page "collected on" facts
   from `collector-acquisitions.json`; notes/about revisions; welcome text;
   audio re-recording on the Mac; QA and publish.

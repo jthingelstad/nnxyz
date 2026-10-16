@@ -49,7 +49,7 @@ test('keys are file safe and versioned', () => {
 
 test('every room in wing order has a rewrite file', async () => {
   const rooms = roomOrder(wings);
-  assert.equal(rooms.length, 28);
+  assert.equal(rooms.length, 30);
   assert.equal(rooms[0], 'nifty-faces--boxes');
   for (const room of rooms)
     await fs.access(`curation/exhibitions/rewrite/${room}.json`);
@@ -94,7 +94,7 @@ test('manifest entries match the rooms and carry every field', async () => {
       // Rewritten text waiting for re-recording: its old entries stay in the
       // manifest and are counted, but their spoken text is expected to differ.
       expected += manifest.entries.filter((e) => e.roomId === room).length;
-      return;
+      continue;
     }
     file.tour.segments.forEach((segment, index) => {
       if (!segment.text) return;

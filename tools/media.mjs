@@ -39,6 +39,13 @@ const current = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
 // Every key the site references or offers for download.
 const gallery = JSON.parse(await fs.readFile('data/gallery.json', 'utf8'));
 const abstract = JSON.parse(await fs.readFile('data/abstract.json', 'utf8'));
+const onchain = JSON.parse(await fs.readFile('data/onchain.json', 'utf8'));
+const onchainExtension = {
+  'image/gif': 'gif',
+  'image/jpeg': 'jpg',
+  'image/png': 'png',
+  'video/mp4': 'mp4',
+};
 // Audio tour segments: tools/build-audio-tour.mjs renders them and records
 // each key in the manifest; a regenerated segment is a new key.
 const audio = JSON.parse(
@@ -59,6 +66,18 @@ const expected = [
     ...current.abstractWidths.map(
       (width) => `abstract/images/${id}-${width}.webp`,
     ),
+  ]),
+  // After Nifty Ink: stills, the original file, a record, and an animated
+  // WebP for each GIF (tools/build-onchain-assets.mjs).
+  ...onchain.artworks.flatMap((work) => [
+    `onchain/originals/${work.id}.${onchainExtension[work.imageMimeType]}`,
+    `onchain/records/${work.id}.json`,
+    ...(current.onchainWidths ?? [640, 1200, 2000]).map(
+      (width) => `onchain/images/${work.id}-${width}.webp`,
+    ),
+    ...(work.animated && work.imageMimeType === 'image/gif'
+      ? [`onchain/animations/${work.id}.webp`]
+      : []),
   ]),
 ].sort();
 

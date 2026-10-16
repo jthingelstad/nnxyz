@@ -9,7 +9,9 @@ import rawblocksStructure from '../../curation/exhibitions/structure/rawblocks.j
 import abstractStructure from '../../curation/exhibitions/structure/abstract.json';
 import otherStructure from '../../curation/exhibitions/structure/nnxyz-other.json';
 import scrimshawStructure from '../../curation/exhibitions/structure/scrimshaw.json';
+import onchainStructure from '../../curation/exhibitions/structure/after-nifty-ink.json';
 import { abstractById } from './abstract';
+import { onchainById, onchainReady } from './onchain';
 import { byId, collectionPath } from './catalog';
 import { formatUtcSpan } from './dates';
 
@@ -136,6 +138,7 @@ const structures = [
   abstractStructure,
   otherStructure,
   scrimshawStructure,
+  onchainStructure,
 ] as unknown as StructureFile[];
 const structureGalleries = new Map(
   structures.flatMap((file) =>
@@ -179,7 +182,11 @@ function buildRoom(
   };
 }
 
-export const wings: Wing[] = (wingsFile.wings as WingFile[]).map((wing) => {
+// The After Nifty Ink wing waits for its media (src/lib/onchain.ts).
+export const wingFiles = (wingsFile.wings as WingFile[]).filter(
+  (wing) => wing.collectionId !== 'after-nifty-ink' || onchainReady,
+);
+export const wings: Wing[] = wingFiles.map((wing) => {
   const parts: Part[] = (wing.parts ?? []).map((part) => ({
     key: part.key,
     title: part.title,
@@ -226,7 +233,7 @@ export const wingPath = (id: string) =>
     ? `${collectionPath('other-related')}#${id}`
     : collectionPath(id);
 export const exhibitionArtwork = (id: string) => {
-  const work = byId.get(id) ?? abstractById.get(id);
+  const work = byId.get(id) ?? abstractById.get(id) ?? onchainById.get(id);
   if (!work) throw new Error(`Unknown exhibition artwork: ${id}`);
   return work;
 };
@@ -284,6 +291,15 @@ export const entrances = [
     title: 'Other & related',
     wings: [wing('nnxyz-other'), wing('scrimshaw')],
   },
+  ...(onchainReady
+    ? [
+        {
+          id: 'after-nifty-ink',
+          title: 'After Nifty Ink',
+          wings: [wing('after-nifty-ink')],
+        },
+      ]
+    : []),
 ];
 export const entranceWork = (entrance: (typeof entrances)[number]) =>
   representative(entrance.wings[0].rooms[0]);

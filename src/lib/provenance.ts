@@ -2,9 +2,18 @@ import tokens from '../../data/tokens.json' with { type: 'json' };
 
 const explorers = new Map([
   [1, 'https://etherscan.io'],
+  [10, 'https://optimistic.etherscan.io'],
   [100, 'https://gnosisscan.io'],
   [137, 'https://polygonscan.com'],
+  [42161, 'https://arbiscan.io'],
 ]);
+
+export function tezosTokenUrl(contract: string, tokenId: string) {
+  if (!/^KT1[1-9A-HJ-NP-Za-km-z]{33}$/.test(contract))
+    throw new Error('Invalid Tezos contract');
+  if (!/^\d+$/.test(tokenId)) throw new Error('Invalid token ID');
+  return `https://objkt.com/tokens/${contract}/${tokenId}`;
+}
 
 export function tokenUrl(chainId: number, contract: string, tokenId: string) {
   const explorer = explorers.get(chainId);

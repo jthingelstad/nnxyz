@@ -214,3 +214,28 @@ The cloud session found the artist's Tezos account
    deployed, and add a `fantom` section to `nnxyz-onchain.json` and a row to
    `contracts.json` if the index collection exists there.
 
+
+## Addendum, October 16 (evening): After Nifty Ink is wired; publish its media
+
+The wing is built on `depth-plan` and gated: it appears on the site only once
+every key it needs is in `data/media.json`. The cloud session fetched all 46
+originals from IPFS (38 EVM, hash-checked against your recovery; 8 Tezos, hashes
+now recorded in `data/onchain.json`) and generated the media locally to prove
+the pipeline, but it cannot publish. On the Mac, with the `cloud-engineer`
+identity:
+
+1. `git pull` and `npm ci`.
+2. `python3 tools/fetch-onchain-sources.py` fetches anything missing under
+   `collection/recovered-onchain/` and `collection/recovered-tezos/` and verifies
+   every SHA-256; the one video needs `ffmpeg` on the PATH for its still.
+3. `node tools/build-onchain-assets.mjs` writes `media/onchain/{images,
+   animations,originals,records}/` (about 180 MB; the originals include four
+   11 MB GIFs and a 19 MB MP4).
+4. `npm run media:publish` uploads only the new `onchain/` keys (write-once)
+   and rewrites `data/media.json`; `npm run media:verify` afterwards.
+5. `npm run build && python3 tools/validate-site.py` must now report 747 pages
+   and the wing in `dist/collections/after-nifty-ink/`. Commit `data/media.json`.
+6. Record the two new rooms with the others when you re-record the audio.
+
+Until step 4 the site builds without the wing (698 pages) and CI stays green.
+`ONCHAIN_PREVIEW=1 npm run build` shows it locally from `media/`.

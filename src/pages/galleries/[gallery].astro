@@ -15,8 +15,14 @@ import {
   exhibitionArtwork,
   type RoomWork as Work,
 } from '../../lib/exhibitions';
-import { artworkPath, displayTitle, thumbnail } from '../../lib/catalog';
+import {
+  artworkPath,
+  displayTitle,
+  thumbnail,
+  isOnchain,
+} from '../../lib/catalog';
 import { abstractImage } from '../../lib/abstract';
+import { onchainImage } from '../../lib/onchain';
 export function getStaticPaths() {
   return rooms.map((room) => ({
     params: { gallery: room.id },
@@ -61,7 +67,11 @@ const description = room.introduction[0];
 const tour = tourFor(room);
 const cover = exhibitionArtwork(works[0].artworkId);
 const shareImage =
-  'inkId' in cover ? `/png/${cover.inkId}.png` : abstractImage(cover, 1200);
+  'inkId' in cover
+    ? `/png/${cover.inkId}.png`
+    : isOnchain(cover)
+      ? onchainImage(cover, 1200)
+      : abstractImage(cover, 1200);
 ---
 
 <Layout

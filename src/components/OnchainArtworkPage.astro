@@ -1,0 +1,266 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from './Icon.astro';
+import Kudos from './Kudos.astro';
+import ProvenanceNote from './ProvenanceNote.astro';
+import { tokenUrl, tezosTokenUrl } from '../lib/provenance';
+import {
+  onchainImage,
+  onchainOriginal,
+  onchainRecord,
+  onchainAnimation,
+  onchainById,
+  chainNames,
+  type OnchainArtwork,
+} from '../lib/onchain';
+import { artworkPath, displayTitle } from '../lib/catalog';
+import { placement, exhibitionPath, roomWorks } from '../lib/exhibitions';
+import { formatUtcDateTime } from '../lib/dates';
+interface Props {
+  work: OnchainArtwork;
+}
+const { work } = Astro.props;
+const title = displayTitle(work);
+const place = placement(work.id);
+const home = place.room;
+const sequence = roomWorks(home);
+const position = place.index!;
+const reading = place.work.reading;
+const previous = onchainById.get(sequence[position - 1]?.artworkId);
+const next = onchainById.get(sequence[position + 1]?.artworkId);
+const link =
+  work.chain === 'tezos'
+    ? tezosTokenUrl(work.contract, work.tokenId)
+    : tokenUrl(work.chainId!, work.contract, work.tokenId);
+const animation = onchainAnimation(work);
+const video = work.imageMimeType === 'video/mp4';
+const formatLabel: Record<string, string> = {
+  'image/gif': 'GIF',
+  'image/jpeg': 'JPEG',
+  'image/png': 'PNG',
+  'video/mp4': 'MP4 video',
+};
+const extension = onchainOriginal(work).split('.').pop();
+const price = work.acquisitionPricePerToken ?? work.acquisitionPrice;
+const priceText =
+  Array.isArray(price) && price.length
+    ? price
+        .map(
+          (p: { amount: string; currency: string }) =>
+            `${p.amount} ${p.currency}`,
+        )
+        .join(', ')
+    : null;
+const collected = work.acquiredAt ? formatUtcDateTime(work.acquiredAt) : null;
+const minted = work.createdAt ? formatUtcDateTime(work.createdAt) : null;
+---
+
+<Layout
+  title={`${title} — The nnxyz Rooms`}
+  image={onchainImage(work)}
+  description={reading}
+>
+  <a class="back-link" href={`${exhibitionPath(home.id)}#work-${work.id}`}>
+    <Icon name="left" size={20} /> Back to {home.title}
+  </a>
+  <div class="work-page">
+    <div class="raster-viewer">
+      <button
+        class="raster-stage"
+        data-raster-enlarge
+        aria-label={`Enlarge ${title}`}
+      >
+        <img
+          src={onchainImage(work)}
+          srcset={`${onchainImage(work, 640)} 640w, ${onchainImage(work)} 1200w, ${onchainImage(work, 2000)} 2000w`}
+          sizes="(max-width: 760px) 86vw, (max-width: 1200px) 55vw, 760px"
+          alt={`${title} by nnxyz`}
+          width={work.width}
+          height={work.height}
+          fetchpriority="high"
+        />
+      </button>
+      {animation && (
+        <p class="animation-note">
+          <a
+            href={animation}
+            data-tinylytics-event="artwork.animation"
+            data-tinylytics-event-value={work.id}
+          >
+            Play the animation ({work.frames} frames)
+          </a>
+        </p>
+      )}
+      {video && (
+        <p class="animation-note">
+          <a
+            href={onchainOriginal(work)}
+            data-tinylytics-event="artwork.animation"
+            data-tinylytics-event-value={work.id}
+          >
+            Play the video
+          </a>
+        </p>
+      )}
+    </div>
+    <div class="work-content">
+      <div class="work-caption">
+        <div>
+          <h1>{title}</h1>
+          <ProvenanceNote tokens={[{ url: link }]} />
+        </div>
+        <div class="work-actions">
+          <Kudos path={artworkPath(work.id)} title={title} />
+          <button
+            data-raster-enlarge
+            data-tinylytics-event="artwork.enlarge"
+            data-tinylytics-event-value={work.id}
+          >
+            <Icon name="enlarge" size={22} />
+            <span>Enlarge</span>
+          </button>
+        </div>
+      </div>
+      <section class="curator-reading" aria-label="Label">
+        <p>{reading}</p>
+      </section>
+      <p class="gallery-position">
+        Work {position + 1} of {sequence.length} in{' '}
+        <a href={exhibitionPath(home.id)}>{home.title}</a>, {home.wingTitle}.
+      </p>
+      <nav class="work-navigation" aria-label="Artwork navigation">
+        {previous ? (
+          <a href={artworkPath(previous.id)}>
+            <Icon name="left" size={20} />
+            Previous{' '}
+            <span class="mobile-neighbor">({displayTitle(previous)})</span>
+          </a>
+        ) : (
+          <span />
+        )}
+        {next && (
+          <a href={artworkPath(next.id)}>
+            Next <span class="mobile-neighbor">({displayTitle(next)})</span>
+            <Icon name="right" size={20} />
+          </a>
+        )}
+      </nav>
+      <details
+        class="provenance raster-provenance"
+        id="provenance"
+        aria-label="Artwork details and provenance"
+      >
+        <summary>Details &amp; downloads</summary>
+        <div class="artwork-details-content">
+          <p>
+            {work.animated
+              ? `This still is the first frame of the published ${formatLabel[work.imageMimeType]}, fetched from the token’s own IPFS address. The whole animation is in the download.`
+              : `This image is reproduced from the published ${formatLabel[work.imageMimeType]}, fetched from the token’s own IPFS address.`}{' '}
+            No brush paths exist for this work; it was not drawn on Nifty Ink.
+          </p>
+          <dl>
+            <dt>Series</dt>
+            <dd>{work.series}</dd>
+            <dt>Chain</dt>
+            <dd>{chainNames[work.chain]}</dd>
+            <dt>Original</dt>
+            <dd>
+              {work.width} × {work.height} pixels ·{' '}
+              {formatLabel[work.imageMimeType]}
+              {work.animated && ` · ${work.frames} frames`}
+            </dd>
+            {minted && (
+              <>
+                <dt>Minted</dt>
+                <dd>
+                  {minted} ({work.createdAtBasis})
+                </dd>
+              </>
+            )}
+            {collected && (
+              <>
+                <dt>Collected</dt>
+                <dd>
+                  {collected}, {work.acquisitionHow}
+                  {priceText && `, ${priceText}`}, into {work.walletName}
+                </dd>
+              </>
+            )}
+            {work.reissues.length > 0 && (
+              <>
+                <dt>Re-issued</dt>
+                <dd>
+                  The artist re-issued this token on a later contract; the
+                  collector holds both copies.
+                </dd>
+              </>
+            )}
+            {'editionSize' in work && work.editionSize && (
+              <>
+                <dt>Edition</dt>
+                <dd>
+                  {work.editionSize}, of which the collector holds{' '}
+                  {work.heldQuantity}
+                </dd>
+              </>
+            )}
+            {work.description && (
+              <>
+                <dt>The artist’s description</dt>
+                <dd>{work.description}</dd>
+              </>
+            )}
+          </dl>
+          <p class="record-links">
+            <a
+              href={onchainOriginal(work)}
+              download={`${title}.${extension}`}
+              data-tinylytics-event="file.download"
+              data-tinylytics-event-value={work.id}
+            >
+              Download original {formatLabel[work.imageMimeType]}
+            </a>
+            <a href={onchainRecord(work)} download>
+              Source &amp; provenance record
+            </a>
+          </p>
+          <p>
+            The label is a visual reading, not a claim about the artist’s
+            intentions or making process.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+  <dialog
+    class="enlargement"
+    data-raster-dialog
+    aria-label={`Enlarged ${title}`}
+  >
+    <button data-raster-close aria-label="Close enlarged artwork">
+      <Icon name="close" />
+    </button>
+    <div class="enlargement-art">
+      <img
+        src={animation ?? onchainImage(work, 2000)}
+        alt={`${title} by nnxyz`}
+        width={work.width}
+        height={work.height}
+        loading="lazy"
+      />
+    </div>
+  </dialog>
+  <script>
+    const dialog = document.querySelector<HTMLDialogElement>(
+      '[data-raster-dialog]',
+    );
+    document
+      .querySelectorAll<HTMLButtonElement>('[data-raster-enlarge]')
+      .forEach((button) =>
+        button.addEventListener('click', () => dialog?.showModal()),
+      );
+    dialog
+      ?.querySelector('[data-raster-close]')
+      ?.addEventListener('click', () => dialog.close());
+  </script>
+</Layout>
