@@ -33,9 +33,7 @@ DECILES = 10
 
 
 def parse_color(color: str):
-    m = re.fullmatch(
-        r"rgba\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*\)", color
-    )
+    m = re.fullmatch(r"rgba\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*\)", color)
     if m:
         r, g, b, a = (float(x) for x in m.groups())
         return (round(r), round(g), round(b)), a
@@ -206,7 +204,9 @@ def measure(drawing: dict) -> dict:
         "translucentStrokes": translucent,
         "distinctColors": len(colors_seen),
         "paletteEntrySequence": sorted(colors_seen.values()),
-        "width": {"min": min(widths), "median": med(widths), "max": max(widths)} if widths else None,
+        "width": {"min": min(widths), "median": med(widths), "max": max(widths)}
+        if widths
+        else None,
         "lengthMedian": med(lengths),
         "finalCoverage": coverage_by_decile[-1],
         "firstStroke": first_stroke,
@@ -228,9 +228,9 @@ def measure(drawing: dict) -> dict:
     }
 
 
-PATH_RE = re.compile(r'<path ([^>]*?)/>')
+PATH_RE = re.compile(r"<path ([^>]*?)/>")
 ATTR_RE = re.compile(r'([a-zA-Z-]+)="([^"]*)"')
-NUM_RE = re.compile(r'-?\d+(?:\.\d+)?(?:e-?\d+)?')
+NUM_RE = re.compile(r"-?\d+(?:\.\d+)?(?:e-?\d+)?")
 
 
 def drawing_from_svg(text: str) -> dict:
@@ -314,9 +314,7 @@ def sessions(items):
         "busiestDays": by_day.most_common(10),
         "longestStreakDays": max(streaks) if streaks else 0,
         "byUtcHour": [by_hour.get(h, 0) for h in range(24)],
-        "byMonth": sorted(
-            collections.Counter(d[:7] for d in by_day.elements()).items()
-        ),
+        "byMonth": sorted(collections.Counter(d[:7] for d in by_day.elements()).items()),
     }
 
 
@@ -327,10 +325,12 @@ def aggregate(records):
     def med(xs):
         return statistics.median(xs) if xs else None
 
-    dec = lambda name: [
-        med([r["deciles"][name][i] for r in records if r["deciles"][name][i] is not None])
-        for i in range(DECILES)
-    ]
+    def dec(name):
+        return [
+            med([r["deciles"][name][i] for r in records if r["deciles"][name][i] is not None])
+            for i in range(DECILES)
+        ]
+
     return {
         "works": len(records),
         "strokesMedian": med(col("strokes")),
@@ -414,12 +414,10 @@ def main():
                 continue
             drawing = drawing_from_svg(raw.decode("utf-8"))
             source = "published-svg"
-            declared = sum(l["_declaredPoints"] for l in drawing["lines"])
-            got = sum(len(l["points"]) for l in drawing["lines"])
+            declared = sum(line["_declaredPoints"] for line in drawing["lines"])
+            got = sum(len(line["points"]) for line in drawing["lines"])
             if declared and declared != got:
-                raise SystemExit(
-                    f"{item['inkId']}: SVG declares {declared} points, parsed {got}"
-                )
+                raise SystemExit(f"{item['inkId']}: SVG declares {declared} points, parsed {got}")
         else:
             missing.append(item["inkId"])
             continue
@@ -430,9 +428,9 @@ def main():
                 "artworkId": item["inkId"],
                 "title": item["name"],
                 "collectionId": item["collectionId"],
-                "recordedAt": dt.datetime.fromtimestamp(
-                    int(item["createdAt"]), dt.UTC
-                ).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "recordedAt": dt.datetime.fromtimestamp(int(item["createdAt"]), dt.UTC).strftime(
+                    "%Y-%m-%dT%H:%M:%SZ"
+                ),
                 "sourceSHA256": hashlib.sha256(raw).hexdigest(),
             }
         )

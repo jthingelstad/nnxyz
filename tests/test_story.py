@@ -74,7 +74,8 @@ class StoryPageTests(unittest.TestCase):
             if "collected" in record
         }
         self.assertTrue(
-            wallets <= {None, "thingelstad.eth", "nnxyz.thingelstad.eth", "niftyink.thingelstad.eth"},
+            wallets
+            <= {None, "thingelstad.eth", "nnxyz.thingelstad.eth", "niftyink.thingelstad.eth"},
             wallets,
         )
         for record in self.facts["works"].values():
@@ -90,7 +91,9 @@ class StoryPageTests(unittest.TestCase):
         self.assertEqual(quotes, sorted(quotes, key=lambda q: q["postedAt"]))
         source = {
             q["id"]: q["text"]
-            for q in json.loads((ROOT / "curation/research/social/quotes.json").read_text())["quotes"]
+            for q in json.loads((ROOT / "curation/research/social/quotes.json").read_text())[
+                "quotes"
+            ]
         }
         for quote in quotes:
             self.assertEqual(quote["text"], source[quote["id"]])

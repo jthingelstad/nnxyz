@@ -28,9 +28,13 @@ def main():
     fetched = verified = 0
     for work in catalog["artworks"]:
         path = ROOT / work["sourcePath"]
-        if not (path.exists() and hashlib.sha256(path.read_bytes()).hexdigest() == work["imageSHA256"]):
+        if not (
+            path.exists() and hashlib.sha256(path.read_bytes()).hexdigest() == work["imageSHA256"]
+        ):
             uri = work["imageSourceURI"].replace("ipfs://ipfs/", "ipfs://").replace("ipfs://", "")
-            request = urllib.request.Request(args.gateway + uri, headers={"User-Agent": "nnxyz-gallery"})
+            request = urllib.request.Request(
+                args.gateway + uri, headers={"User-Agent": "nnxyz-gallery"}
+            )
             data = urllib.request.urlopen(request, timeout=300).read()
             if hashlib.sha256(data).hexdigest() != work["imageSHA256"]:
                 raise SystemExit(f"Hash differs for {work['name']} from {uri}")
@@ -40,11 +44,30 @@ def main():
         verified += 1
         if work["stillPath"]:
             still = ROOT / work["stillPath"]
-            if not (still.exists() and hashlib.sha256(still.read_bytes()).hexdigest() == work["stillSHA256"]):
-                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "1", "-i", str(path),
-                                "-frames:v", "1", str(still)], check=True)
+            if not (
+                still.exists()
+                and hashlib.sha256(still.read_bytes()).hexdigest() == work["stillSHA256"]
+            ):
+                subprocess.run(
+                    [
+                        "ffmpeg",
+                        "-y",
+                        "-loglevel",
+                        "error",
+                        "-ss",
+                        "1",
+                        "-i",
+                        str(path),
+                        "-frames:v",
+                        "1",
+                        str(still),
+                    ],
+                    check=True,
+                )
                 if hashlib.sha256(still.read_bytes()).hexdigest() != work["stillSHA256"]:
-                    raise SystemExit(f"Extracted still differs for {work['name']}; use the same ffmpeg build or copy the still")
+                    raise SystemExit(
+                        f"Extracted still differs for {work['name']}; use the same ffmpeg build or copy the still"
+                    )
     print(f"verified {verified} originals, fetched {fetched}")
 
 

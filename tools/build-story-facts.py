@@ -66,41 +66,206 @@ HANDLES = {
 # market dates are the public record; the artist's dates are the ledger and
 # the posts (ids in curation/research/social/x-posts.json).
 EVENTS_2022 = [
-    ("2022-02-01", "artist", "austingriffith.eth funds the artist's first Ethereum wallet with 0.06 ETH.", "Ethereum ledger"),
-    ("2022-03-02", "artist", "The artist posts why they work on Nifty Ink: easy and fun entry, no entry costs, an active community.", "post 1499050033068584965"),
-    ("2022-03-20", "collector", "The Weekly Thing #216 recommends Nifty Ink, found through its Gitcoin grant: not about going to the moon, all about fun.", "The Weekly Thing #216"),
-    ("2022-03-30", "artist", "The fifty-two Abstract paintings begin minting on Polygon, through April 4.", "Polygon ledger"),
-    ("2022-04-02", "artist", "Forty-six Abstract paintings are given to collectors and artists on the board, over the following days.", "Polygon ledger"),
-    ("2022-04-12", "artist", "The artist explains the proof-of-support airdrop: value outside Nifty Ink for every holder, as a small thank you.", "post 1513745968646262787"),
-    ("2022-04-14", "collector", "The first purchase: Nifty Faces #109, for 20 xDai.", "Gnosis ledger"),
-    ("2022-04-23", "collector", "The collector mints fifty copies of an ink reading UKRAINE and matches every sale with a donation.", "thingelstad.com, April 23, 2022"),
-    ("2022-04-25", "artist", "The artist mints 200 nifties, the drawing for two hundred inks, straight into the collector's wallet.", "Gnosis ledger"),
-    ("2022-04-27", "artist", "Every holder of a Nifty Face receives its pixel twin on Polygon, through May 4.", "Polygon ledger; posts of April 21 and May 4"),
-    ("2022-05-06", "artist", "\"Today I noticed that I have already created 552 NFTs as nnxyz.\"", "post 1522493952661856257"),
-    ("2022-05-09", "market", "Terra's stablecoin loses its peg; by May 13 the UST and LUNA tokens are near zero and the crypto market has fallen with them.", "public record"),
-    ("2022-05-10", "collector", "Three purchases from the collector's wallet for a single xDai each; two other wallets buy three inks each the same day.", "Gnosis ledger"),
-    ("2022-05-11", "collector", "\"I'm the top collector on Nifty Ink. I just have so much fun here.\"", "thingelstad.com, May 11, 2022"),
-    ("2022-05-23", "artist", "New Nifty on the Block #100 is minted into the collector's wallet, unpaid.", "Gnosis ledger"),
-    ("2022-05-29", "collector", "A hundred copies of a stranger's HELLO ink go to the readers who hold a newsletter token.", "thingelstad.com, May 29, 2022"),
+    (
+        "2022-02-01",
+        "artist",
+        "austingriffith.eth funds the artist's first Ethereum wallet with 0.06 ETH.",
+        "Ethereum ledger",
+    ),
+    (
+        "2022-03-02",
+        "artist",
+        "The artist posts why they work on Nifty Ink: easy and fun entry, no entry costs, an active community.",
+        "post 1499050033068584965",
+    ),
+    (
+        "2022-03-20",
+        "collector",
+        "The Weekly Thing #216 recommends Nifty Ink, found through its Gitcoin grant: not about going to the moon, all about fun.",
+        "The Weekly Thing #216",
+    ),
+    (
+        "2022-03-30",
+        "artist",
+        "The fifty-two Abstract paintings begin minting on Polygon, through April 4.",
+        "Polygon ledger",
+    ),
+    (
+        "2022-04-02",
+        "artist",
+        "Forty-six Abstract paintings are given to collectors and artists on the board, over the following days.",
+        "Polygon ledger",
+    ),
+    (
+        "2022-04-12",
+        "artist",
+        "The artist explains the proof-of-support airdrop: value outside Nifty Ink for every holder, as a small thank you.",
+        "post 1513745968646262787",
+    ),
+    (
+        "2022-04-14",
+        "collector",
+        "The first purchase: Nifty Faces #109, for 20 xDai.",
+        "Gnosis ledger",
+    ),
+    (
+        "2022-04-23",
+        "collector",
+        "The collector mints fifty copies of an ink reading UKRAINE and matches every sale with a donation.",
+        "thingelstad.com, April 23, 2022",
+    ),
+    (
+        "2022-04-25",
+        "artist",
+        "The artist mints 200 nifties, the drawing for two hundred inks, straight into the collector's wallet.",
+        "Gnosis ledger",
+    ),
+    (
+        "2022-04-27",
+        "artist",
+        "Every holder of a Nifty Face receives its pixel twin on Polygon, through May 4.",
+        "Polygon ledger; posts of April 21 and May 4",
+    ),
+    (
+        "2022-05-06",
+        "artist",
+        '"Today I noticed that I have already created 552 NFTs as nnxyz."',
+        "post 1522493952661856257",
+    ),
+    (
+        "2022-05-09",
+        "market",
+        "Terra's stablecoin loses its peg; by May 13 the UST and LUNA tokens are near zero and the crypto market has fallen with them.",
+        "public record",
+    ),
+    (
+        "2022-05-10",
+        "collector",
+        "Three purchases from the collector's wallet for a single xDai each; two other wallets buy three inks each the same day.",
+        "Gnosis ledger",
+    ),
+    (
+        "2022-05-11",
+        "collector",
+        '"I\'m the top collector on Nifty Ink. I just have so much fun here."',
+        "thingelstad.com, May 11, 2022",
+    ),
+    (
+        "2022-05-23",
+        "artist",
+        "New Nifty on the Block #100 is minted into the collector's wallet, unpaid.",
+        "Gnosis ledger",
+    ),
+    (
+        "2022-05-29",
+        "collector",
+        "A hundred copies of a stranger's HELLO ink go to the readers who hold a newsletter token.",
+        "thingelstad.com, May 29, 2022",
+    ),
     ("2022-06-20", "artist", "300 nifties is minted into the collector's wallet.", "Gnosis ledger"),
-    ("2022-07-15", "artist", "Chic City Cat Club: a cat for every holder of an ink, no roadmap, no utility.", "Polygon ledger; post 1548675109338206209"),
-    ("2022-07-20", "artist", "The artist decides to burn the Canvas is Everywhere series and move that kind of work to Tezos.", "post 1549574173256810496"),
-    ("2022-08-02", "artist", "The index collection is named, after Warhol's Index Book, and described as open, never-ending and planned completely openly.", "posts 1554286514615582720 and 1554449359135281153"),
-    ("2022-08-05", "artist", "The index collection contract is deployed on Ethereum; Heaven or Hell follows on Ethereum, Optimism and Arbitrum.", "Ethereum and Optimism ledgers"),
-    ("2022-08-11", "artist", "\"My first ink will be the last burned.\" The artist announces that every unsold Nifty Ink edition will be burned.", "post 1557869984587595782"),
-    ("2022-08-13", "collector", "Nifty Faces #0000 is bought for 500 xDai; within hours the artist sends 126 Faces and the first five of New Nifty on the Block.", "Gnosis ledger"),
-    ("2022-08-15", "artist", "\"Why should an artist disclose the tools he uses?\"", "post 1559284888775409671"),
-    ("2022-08-21", "artist", "i was famous: Duchamp's Fountain four times over, in editions of three on the artist's own Ethereum contract.", "Ethereum ledger"),
-    ("2022-08-23", "artist", "\"All 400 created nifties will be gradually burned. Everything after that is part of a new story.\"", "post 1561950869066846208"),
+    (
+        "2022-07-15",
+        "artist",
+        "Chic City Cat Club: a cat for every holder of an ink, no roadmap, no utility.",
+        "Polygon ledger; post 1548675109338206209",
+    ),
+    (
+        "2022-07-20",
+        "artist",
+        "The artist decides to burn the Canvas is Everywhere series and move that kind of work to Tezos.",
+        "post 1549574173256810496",
+    ),
+    (
+        "2022-08-02",
+        "artist",
+        "The index collection is named, after Warhol's Index Book, and described as open, never-ending and planned completely openly.",
+        "posts 1554286514615582720 and 1554449359135281153",
+    ),
+    (
+        "2022-08-05",
+        "artist",
+        "The index collection contract is deployed on Ethereum; Heaven or Hell follows on Ethereum, Optimism and Arbitrum.",
+        "Ethereum and Optimism ledgers",
+    ),
+    (
+        "2022-08-11",
+        "artist",
+        '"My first ink will be the last burned." The artist announces that every unsold Nifty Ink edition will be burned.',
+        "post 1557869984587595782",
+    ),
+    (
+        "2022-08-13",
+        "collector",
+        "Nifty Faces #0000 is bought for 500 xDai; within hours the artist sends 126 Faces and the first five of New Nifty on the Block.",
+        "Gnosis ledger",
+    ),
+    (
+        "2022-08-15",
+        "artist",
+        '"Why should an artist disclose the tools he uses?"',
+        "post 1559284888775409671",
+    ),
+    (
+        "2022-08-21",
+        "artist",
+        "i was famous: Duchamp's Fountain four times over, in editions of three on the artist's own Ethereum contract.",
+        "Ethereum ledger",
+    ),
+    (
+        "2022-08-23",
+        "artist",
+        '"All 400 created nifties will be gradually burned. Everything after that is part of a new story."',
+        "post 1561950869066846208",
+    ),
     ("2022-09-15", "market", "Ethereum completes the Merge and stops mining.", "public record"),
-    ("2022-09-28", "collector", "The collector draws nnxyz fan art #0001.", "thingelstad.com, September 28, 2022"),
-    ("2022-10-15", "artist", "The last New Nifty on the Block drawing in the collection is recorded.", "archive"),
-    ("2022-10-16", "collector", "New Nifty on the Block #0000 is bought for 750 xDai in the morning; 275 drawings arrive that afternoon over four hours.", "Gnosis ledger"),
-    ("2022-11-06", "market", "FTX begins to fail; it files for bankruptcy on November 11.", "public record"),
-    ("2022-11-06", "artist", "oink, eleven painted pictures on Optimism, through November 8; the collector buys #1 on November 7.", "Optimism ledger"),
-    ("2022-11-16", "artist", "opticals, three series of stripe and noise fields on Optimism, through November 20.", "Optimism ledger"),
-    ("2022-11-20", "artist", "lord of the inks: one picture of about five hundred of the artist's own Nifty Ink drawings, on Ethereum.", "Ethereum ledger"),
-    ("2022-11-24", "collector", "Over Thanksgiving brunch the collector moves an nnxyz ink from Gnosis to Ethereum to show two friends how a bridge works.", "thingelstad.com, November 24, 2022"),
+    (
+        "2022-09-28",
+        "collector",
+        "The collector draws nnxyz fan art #0001.",
+        "thingelstad.com, September 28, 2022",
+    ),
+    (
+        "2022-10-15",
+        "artist",
+        "The last New Nifty on the Block drawing in the collection is recorded.",
+        "archive",
+    ),
+    (
+        "2022-10-16",
+        "collector",
+        "New Nifty on the Block #0000 is bought for 750 xDai in the morning; 275 drawings arrive that afternoon over four hours.",
+        "Gnosis ledger",
+    ),
+    (
+        "2022-11-06",
+        "market",
+        "FTX begins to fail; it files for bankruptcy on November 11.",
+        "public record",
+    ),
+    (
+        "2022-11-06",
+        "artist",
+        "oink, eleven painted pictures on Optimism, through November 8; the collector buys #1 on November 7.",
+        "Optimism ledger",
+    ),
+    (
+        "2022-11-16",
+        "artist",
+        "opticals, three series of stripe and noise fields on Optimism, through November 20.",
+        "Optimism ledger",
+    ),
+    (
+        "2022-11-20",
+        "artist",
+        "lord of the inks: one picture of about five hundred of the artist's own Nifty Ink drawings, on Ethereum.",
+        "Ethereum ledger",
+    ),
+    (
+        "2022-11-24",
+        "collector",
+        "Over Thanksgiving brunch the collector moves an nnxyz ink from Gnosis to Ethereum to show two friends how a bridge works.",
+        "thingelstad.com, November 24, 2022",
+    ),
 ]
 
 
@@ -151,7 +316,23 @@ def remark(printed: str, title: str) -> str:
             w
             for w in words
             if not w.isdigit()
-            and w not in title_words | {"nifty", "ink", "inks", "nnxyz", "new", "on", "the", "block", "faces", "rawblocks", "newniftyontheblock", "nnotb", "xdai"}
+            and w
+            not in title_words
+            | {
+                "nifty",
+                "ink",
+                "inks",
+                "nnxyz",
+                "new",
+                "on",
+                "the",
+                "block",
+                "faces",
+                "rawblocks",
+                "newniftyontheblock",
+                "nnotb",
+                "xdai",
+            }
         ]
         # A line that only names the drawing (title words, "Nifty Ink", an edition
         # count or a price) is the announcement itself, not a remark.
@@ -205,7 +386,10 @@ def main() -> None:
         acquisition = acquisitions["works"].get(cid)
         if acquisition:
             if acquisition["kind"] == "purchase" and acquisition.get("txHash") in paid_by_tx:
-                acquisition = {**acquisition, "paidToArtistXDai": round(paid_by_tx[acquisition["txHash"]], 6)}
+                acquisition = {
+                    **acquisition,
+                    "paidToArtistXDai": round(paid_by_tx[acquisition["txHash"]], 6),
+                }
             wallet = acquisition["wallet"]
             record["collected"] = {
                 "on": acquisition["collectedOn"],
@@ -219,7 +403,11 @@ def main() -> None:
             first = linked[0]
             printed = print_text(first["text"])
             price = next(
-                (PRICE.search(line) for line in first["text"].split("\n") if PRICE_LINE.match(line.strip())),
+                (
+                    PRICE.search(line)
+                    for line in first["text"].split("\n")
+                    if PRICE_LINE.match(line.strip())
+                ),
                 None,
             )
             record["post"] = {
@@ -361,9 +549,17 @@ def main() -> None:
     profiles = {p["site"]: p for p in read(PROFILES)["profiles"]}
     x_profile = read(X_PROFILE)
     bios = [
-        {"site": "Linktree", "url": profiles["Linktree"]["url"], "text": profiles["Linktree"]["bio"]},
+        {
+            "site": "Linktree",
+            "url": profiles["Linktree"]["url"],
+            "text": profiles["Linktree"]["bio"],
+        },
         {"site": "objkt", "url": profiles["objkt"]["url"], "text": profiles["objkt"]["bio"]},
-        {"site": "Threads", "url": profiles["Threads"]["url"], "text": print_text(profiles["Threads"]["bio"])},
+        {
+            "site": "Threads",
+            "url": profiles["Threads"]["url"],
+            "text": print_text(profiles["Threads"]["bio"]),
+        },
         {
             "site": "TikTok",
             "url": ledger["artistWords"]["bioLine"]["source"],

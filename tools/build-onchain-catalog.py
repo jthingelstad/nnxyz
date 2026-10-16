@@ -36,9 +36,21 @@ def dimensions(path, mime):
 
     if mime == "video/mp4":
         out = subprocess.run(
-            ["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
-             "stream=width,height,nb_frames", "-of", "json", str(path)],
-            capture_output=True, text=True, check=True,
+            [
+                "ffprobe",
+                "-v",
+                "error",
+                "-select_streams",
+                "v:0",
+                "-show_entries",
+                "stream=width,height,nb_frames",
+                "-of",
+                "json",
+                str(path),
+            ],
+            capture_output=True,
+            text=True,
+            check=True,
         )
         s = json.loads(out.stdout)["streams"][0]
         return int(s["width"]), int(s["height"]), int(s.get("nb_frames") or 0)
@@ -50,8 +62,22 @@ def still_for_video(path):
     """A PNG frame one second in, kept beside the original, for the WebP derivatives."""
     still = path.with_name("still.png")
     if not still.exists():
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "1", "-i", str(path),
-                        "-frames:v", "1", str(still)], check=True)
+        subprocess.run(
+            [
+                "ffmpeg",
+                "-y",
+                "-loglevel",
+                "error",
+                "-ss",
+                "1",
+                "-i",
+                str(path),
+                "-frames:v",
+                "1",
+                str(still),
+            ],
+            check=True,
+        )
     return still
 
 
@@ -65,34 +91,68 @@ def main():
         if token.get("alreadyInSite"):
             continue
         if token.get("reissueOf"):
-            reissues.setdefault(token["reissueOf"], []).append({
-                "chain": token["chain"], "chainId": token["chainId"], "contract": token["contract"],
-                "tokenId": token["tokenId"], "tokenUrl": token["tokenUrl"], "acquiredAt": token["acquiredAt"],
-                "acquisitionHow": token["acquisitionHow"], "wallet": token["wallet"],
-            })
+            reissues.setdefault(token["reissueOf"], []).append(
+                {
+                    "chain": token["chain"],
+                    "chainId": token["chainId"],
+                    "contract": token["contract"],
+                    "tokenId": token["tokenId"],
+                    "tokenUrl": token["tokenUrl"],
+                    "acquiredAt": token["acquiredAt"],
+                    "acquisitionHow": token["acquisitionHow"],
+                    "wallet": token["wallet"],
+                }
+            )
             continue
-        works.append({
-            "id": token["id"], "name": token["name"], "artistName": "nnxyz", "series": token["series"],
-            "number": token["number"], "chain": token["chain"], "chainId": token["chainId"],
-            "contract": token["contract"], "tokenId": token["tokenId"], "standard": token["standard"],
-            "tokenUrl": token["tokenUrl"], "sourcePath": token["imagePath"],
-            "imageSHA256": token["imageSHA256"], "imageBytes": token["imageBytes"],
-            "imageMimeType": token["imageMimeType"], "width": token["width"], "height": token["height"],
-            "frames": token["frames"], "animated": (token["frames"] or 1) > 1,
-            "stillPath": None, "stillSHA256": None,
-            "imageSourceURI": token["imageSourceURI"], "tokenURI": token["tokenURI"],
-            "metadataPath": token["metadataPath"],
-            "createdAt": token["acquiredAt"] if token["acquisitionHow"].startswith("mint") else None,
-            "createdAtBasis": ("the collector's own mint transaction" if token["acquisitionHow"].startswith("mint")
-                               else "unknown: the token was minted by the artist before the transfer"),
-            "wallet": token["wallet"], "walletName": token["walletName"],
-            "acquiredAt": token["acquiredAt"], "acquisitionHow": token["acquisitionHow"],
-            "acquiredFrom": token["acquiredFrom"], "acquisitionPrice": token["acquisitionPrice"],
-            "acquisitionPricePerToken": token["acquisitionPricePerToken"],
-            "acquisitionTxHash": token["acquisitionTxHash"], "acquisitionNote": token["acquisitionNote"],
-            "ownershipEvidence": "chain", "reissues": [],
-            "description": None, "collectionDescription": None,
-        })
+        works.append(
+            {
+                "id": token["id"],
+                "name": token["name"],
+                "artistName": "nnxyz",
+                "series": token["series"],
+                "number": token["number"],
+                "chain": token["chain"],
+                "chainId": token["chainId"],
+                "contract": token["contract"],
+                "tokenId": token["tokenId"],
+                "standard": token["standard"],
+                "tokenUrl": token["tokenUrl"],
+                "sourcePath": token["imagePath"],
+                "imageSHA256": token["imageSHA256"],
+                "imageBytes": token["imageBytes"],
+                "imageMimeType": token["imageMimeType"],
+                "width": token["width"],
+                "height": token["height"],
+                "frames": token["frames"],
+                "animated": (token["frames"] or 1) > 1,
+                "stillPath": None,
+                "stillSHA256": None,
+                "imageSourceURI": token["imageSourceURI"],
+                "tokenURI": token["tokenURI"],
+                "metadataPath": token["metadataPath"],
+                "createdAt": token["acquiredAt"]
+                if token["acquisitionHow"].startswith("mint")
+                else None,
+                "createdAtBasis": (
+                    "the collector's own mint transaction"
+                    if token["acquisitionHow"].startswith("mint")
+                    else "unknown: the token was minted by the artist before the transfer"
+                ),
+                "wallet": token["wallet"],
+                "walletName": token["walletName"],
+                "acquiredAt": token["acquiredAt"],
+                "acquisitionHow": token["acquisitionHow"],
+                "acquiredFrom": token["acquiredFrom"],
+                "acquisitionPrice": token["acquisitionPrice"],
+                "acquisitionPricePerToken": token["acquisitionPricePerToken"],
+                "acquisitionTxHash": token["acquisitionTxHash"],
+                "acquisitionNote": token["acquisitionNote"],
+                "ownershipEvidence": "chain",
+                "reissues": [],
+                "description": None,
+                "collectionDescription": None,
+            }
+        )
     by_id = {w["id"]: w for w in works}
     for original, copies in reissues.items():
         by_id[original]["reissues"] = copies
@@ -113,43 +173,82 @@ def main():
         still = still_for_video(path) if mime == "video/mp4" else None
         received = sorted(inbound.get(key, []), key=lambda t: t["timestamp"])
         first = received[0] if received else None
-        works.append({
-            "id": f"tezos-{key[0]}-{key[1]}", "name": token["name"].strip(), "artistName": "nnxyz",
-            "series": token["fa"]["name"], "number": None, "chain": "tezos", "chainId": None,
-            "contract": key[0], "tokenId": key[1], "standard": "fa2",
-            "tokenUrl": f"https://objkt.com/tokens/{key[0]}/{key[1]}",
-            "sourcePath": str(path.relative_to(ROOT)), "imageSHA256": sha(path), "imageBytes": path.stat().st_size,
-            "imageMimeType": mime, "width": width, "height": height, "frames": frames, "animated": frames > 1,
-            "stillPath": str(still.relative_to(ROOT)) if still else None,
-            "stillSHA256": sha(still) if still else None,
-            "imageSourceURI": token["artifact_uri"], "tokenURI": None, "metadataPath": None,
-            "createdAt": token["timestamp"].replace("+00:00", "Z"), "createdAtBasis": "token mint on Tezos (objkt)",
-            "wallet": COLLECTOR_TEZOS, "walletName": "jthingelstad (Tezos)",
-            "acquiredAt": first["timestamp"] if first else None,
-            "acquisitionHow": ("transfer from artist" if first and first["from.address"] == ARTIST_TEZOS else
-                               "transfer" if first else "unknown"),
-            "acquiredFrom": first["from.address"] if first else None,
-            "acquisitionPrice": None, "acquisitionPricePerToken": None,
-            "acquisitionTxHash": str(first["transactionId"]) if first else None,
-            "acquisitionNote": ("Sales are not distinguished from gifts on Tezos in this record; the transfer "
-                                "came from the artist's address."),
-            "ownershipEvidence": "chain", "reissues": [],
-            "editionSize": token["supply"], "heldQuantity": holding["quantity"],
-            "description": token.get("description"), "collectionDescription": token["fa"].get("description"),
-        })
+        works.append(
+            {
+                "id": f"tezos-{key[0]}-{key[1]}",
+                "name": token["name"].strip(),
+                "artistName": "nnxyz",
+                "series": token["fa"]["name"],
+                "number": None,
+                "chain": "tezos",
+                "chainId": None,
+                "contract": key[0],
+                "tokenId": key[1],
+                "standard": "fa2",
+                "tokenUrl": f"https://objkt.com/tokens/{key[0]}/{key[1]}",
+                "sourcePath": str(path.relative_to(ROOT)),
+                "imageSHA256": sha(path),
+                "imageBytes": path.stat().st_size,
+                "imageMimeType": mime,
+                "width": width,
+                "height": height,
+                "frames": frames,
+                "animated": frames > 1,
+                "stillPath": str(still.relative_to(ROOT)) if still else None,
+                "stillSHA256": sha(still) if still else None,
+                "imageSourceURI": token["artifact_uri"],
+                "tokenURI": None,
+                "metadataPath": None,
+                "createdAt": token["timestamp"].replace("+00:00", "Z"),
+                "createdAtBasis": "token mint on Tezos (objkt)",
+                "wallet": COLLECTOR_TEZOS,
+                "walletName": "jthingelstad (Tezos)",
+                "acquiredAt": first["timestamp"] if first else None,
+                "acquisitionHow": (
+                    "transfer from artist"
+                    if first and first["from.address"] == ARTIST_TEZOS
+                    else "transfer"
+                    if first
+                    else "unknown"
+                ),
+                "acquiredFrom": first["from.address"] if first else None,
+                "acquisitionPrice": None,
+                "acquisitionPricePerToken": None,
+                "acquisitionTxHash": str(first["transactionId"]) if first else None,
+                "acquisitionNote": (
+                    "Sales are not distinguished from gifts on Tezos in this record; the transfer "
+                    "came from the artist's address."
+                ),
+                "ownershipEvidence": "chain",
+                "reissues": [],
+                "editionSize": token["supply"],
+                "heldQuantity": holding["quantity"],
+                "description": token.get("description"),
+                "collectionDescription": token["fa"].get("description"),
+            }
+        )
     catalog = {
         "schemaVersion": 1,
         "collectionId": "after-nifty-ink",
         "title": "After Nifty Ink",
         "builtAt": "2026-10-16T17:00:00Z",
         "method": __doc__.strip(),
-        "sourceFiles": ["data/onchain-works.json", "curation/research/onchain/tezos.json",
-                        "curation/research/onchain/tezos-transfers.json"],
-        "counts": {"works": len(works), "evmWorks": len(by_id), "tezosWorks": len(works) - len(by_id),
-                   "reissuedTokensHeld": sum(len(w["reissues"]) for w in works)},
+        "sourceFiles": [
+            "data/onchain-works.json",
+            "curation/research/onchain/tezos.json",
+            "curation/research/onchain/tezos-transfers.json",
+        ],
+        "counts": {
+            "works": len(works),
+            "evmWorks": len(by_id),
+            "tezosWorks": len(works) - len(by_id),
+            "reissuedTokensHeld": sum(len(w["reissues"]) for w in works),
+        },
         "artworks": works,
     }
-    (ROOT / "data/onchain.json").write_text(json.dumps(catalog, indent=2, ensure_ascii=False) + "\n")
+    (ROOT / "data/onchain.json").write_text(
+        json.dumps(catalog, indent=2, ensure_ascii=False) + "\n"
+    )
     print(json.dumps(catalog["counts"]))
 
 

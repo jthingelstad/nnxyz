@@ -64,9 +64,14 @@ def main():
     # After Nifty Ink opens only once its media is published (src/lib/onchain.ts);
     # the same rule decides which rooms and works the build should contain.
     onchain_all = json.loads((ROOT / "data/onchain.json").read_text())["artworks"]
-    onchain_ready = all(
-        f"onchain/images/{w['id']}-{width}.webp" in media for w in onchain_all for width in (640, 1200, 2000)
-    ) or (DIST / "collections/after-nifty-ink/index.html").is_file()
+    onchain_ready = (
+        all(
+            f"onchain/images/{w['id']}-{width}.webp" in media
+            for w in onchain_all
+            for width in (640, 1200, 2000)
+        )
+        or (DIST / "collections/after-nifty-ink/index.html").is_file()
+    )
     onchain = onchain_all if onchain_ready else []
     built = [str(path.relative_to(DIST)) for path in DIST.rglob("*") if path.is_file()]
     assert not [key for key in built if key.startswith(MEDIA_PREFIXES)], "Media in the build"
@@ -87,13 +92,25 @@ def main():
     # index with one page per file under curation/story/, and the entrances.
     story_pages = [p for p in (ROOT / "curation/story").glob("*.md") if p.name != "README.md"]
     story = 1 + len(story_pages)
-    assert len(pages) == len(gallery) + len(abstract) + len(onchain) + len(rooms) + len(redirects) + 7 + story + entrances, (
-        "Missing generated routes"
-    )
+    assert (
+        len(pages)
+        == len(gallery)
+        + len(abstract)
+        + len(onchain)
+        + len(rooms)
+        + len(redirects)
+        + 7
+        + story
+        + entrances
+    ), "Missing generated routes"
     for path in story_pages:
-        assert (DIST / "story" / path.stem / "index.html").is_file(), f"Missing story page {path.stem}"
+        assert (DIST / "story" / path.stem / "index.html").is_file(), (
+            f"Missing story page {path.stem}"
+        )
     hung = [w["artworkId"] for room in rooms for c in room["chapters"] for w in c["works"]]
-    assert len(hung) == len(set(hung)) == len(gallery) + len(abstract) + len(onchain) - 1, "Every work hangs once"
+    assert len(hung) == len(set(hung)) == len(gallery) + len(abstract) + len(onchain) - 1, (
+        "Every work hangs once"
+    )
     related = [r["artworkId"] for room in rooms for r in room.get("relatedItems", [])]
     assert len(related) == 1 and related[0] not in hung, "GM hangs only as a related item"
     assert not (DIST / "walks").exists(), "Retired walk pages were generated"
@@ -140,13 +157,17 @@ def main():
             assert target.is_file(), f"Broken local link in {path}: {ref}"
     # The screen saver fetches its works as JSON; every image it names is published.
     saver = json.loads((DIST / "screensaver/data.json").read_text())["works"]
-    assert len(saver) == len(gallery) + len(abstract) + len(onchain), "Screen saver covers every work"
+    assert len(saver) == len(gallery) + len(abstract) + len(onchain), (
+        "Screen saver covers every work"
+    )
     # The widths and prefixes mirror src/lib/media-paths.ts and the >= 1200
     # filter in src/scripts/screensaver.ts; change all three together.
     for item in saver:
         assert item["caption"], item["id"]
         widths = [1200, 1600, 2000] if item["kind"] == "ink" else [1200, 2000]
-        prefix = {"ink": "raster/", "abstract": "abstract/images/", "onchain": "onchain/images/"}[item["kind"]]
+        prefix = {"ink": "raster/", "abstract": "abstract/images/", "onchain": "onchain/images/"}[
+            item["kind"]
+        ]
         for width in widths:
             key = f"{prefix}{item['id']}-{width}.webp"
             if key.startswith("onchain/") and preview:
