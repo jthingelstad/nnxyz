@@ -274,9 +274,21 @@ clutter down, not to the project page.
   rooms, the five not held (i was famous and lord of the inks, objkt Paint
   98, hic et nunc, OpenLike, BasedCaps), and the shared contracts. Rarible's
   shared contracts (Rari Masks) remain to be scanned on the Mac.
-- Next: the story pages under `/story/`; artwork-page "collected on" facts
-  from `collector-acquisitions.json`; notes/about revisions; welcome text;
-  audio re-recording on the Mac; QA and publish.
+- The story layer is built (commit after de94ec1): `/story/` with the five
+  pages (Nifty Ink, The collector, The project, 2022, In the artist's words)
+  as Markdown under `curation/story/` with sources in the front matter,
+  rendered by `src/lib/story.ts` and carried into `llms-full.txt`;
+  `tools/build-story-facts.py` writes `facts.json` (how and when each
+  Nifty Ink work reached the collector; the artist's post announcing it,
+  263 works), `timeline-2022.json` (month counts and dated events) and
+  `words.json` (the thirty posts and the bios). Artwork pages print the
+  artist's post with its date and price and say how the work was collected
+  in the details panel; the header, front page, about, notes and each wing
+  entrance link into the story. `tests/test_story.py` checks the pages and
+  that only the collector is named. Build 754 pages; browser suite green.
+- Next: the welcome text (deferred by the collector); audio re-recording on
+  the Mac, then clearing `audioStale`; a read of the review page corrections;
+  publish.
 
 ## The story layer (added October 16, 2026)
 
