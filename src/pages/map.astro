@@ -18,6 +18,13 @@ import {
   type Rect,
 } from '../lib/floor-plan';
 const total = rooms.reduce((n, room) => n + roomWorks(room).length, 0);
+// Phones get the same floors as a stack of cards: the rooms of each wing or
+// part plate, in room order, as tiles.
+const roomsOf = (floor: Floor, plate: Floor['plates'][number]) =>
+  floor.rooms.filter(
+    (room) =>
+      room.x >= plate.x - 0.5 && room.x + room.w <= plate.x + plate.w + 0.5,
+  );
 const shade = (wingId: string, index: number) =>
   `${WING_COLORS[wingId]}${['66', '47', '80'][index]}`;
 const corner = (floor: Floor, x: number, y: number) => {
@@ -305,6 +312,61 @@ const stairBottom = project(floors[0], floors[0].stairs.x, floors[0].stairs.y);
           </g>
         ))}
       </svg>
+    </div>
+    <div class="floor-stack">
+      {[...floors].reverse().map((floor) => (
+        <section
+          class="floor-card"
+          aria-labelledby={`floor-card-${floor.number}`}
+        >
+          <h2 id={`floor-card-${floor.number}`}>
+            <span class="floor-card-number">{floor.number}</span>
+            <span>{floor.label}</span>
+          </h2>
+          {floor.plates.map((plate) => (
+            <div class="floor-wing">
+              {plate.href ? (
+                <a
+                  class="floor-plate"
+                  href={plate.href}
+                  style={`background: ${WING_COLORS[plate.wingId]}`}
+                >
+                  {plate.title}
+                </a>
+              ) : (
+                <p
+                  class="floor-plate floor-plate-part"
+                  style={`background: ${WING_COLORS[plate.wingId]}`}
+                >
+                  {plate.title}
+                </p>
+              )}
+              <div class="floor-tiles">
+                {roomsOf(floor, plate).map((room) => (
+                  <a
+                    class:list={[
+                      'floor-tile',
+                      { 'floor-tile-coda': room.isCoda },
+                    ]}
+                    href={room.href}
+                    style={`background: ${shade(room.wingId, room.shade)}`}
+                  >
+                    <span>{room.title}</span>
+                    <span class="floor-tile-count">
+                      {room.count} {room.count === 1 ? 'work' : 'works'}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+          {floor.entrance && (
+            <a class="floor-entrance" href="/">
+              ↑ Entrance
+            </a>
+          )}
+        </section>
+      ))}
     </div>
     <ul class="plan-legend" aria-label="Wings">
       {legend.map((item) => (

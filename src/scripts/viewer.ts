@@ -172,6 +172,9 @@ export function initViewer() {
       last = performance.now();
       frame = requestAnimationFrame(tick);
     } catch (error) {
+      // Leaving the page or stopping the replay aborts the fetch; that is
+      // not a playback failure to report.
+      if (currentAction !== action || !automatic) return;
       automatic = false;
       reportError(error);
     }
