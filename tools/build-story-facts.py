@@ -192,11 +192,20 @@ def main() -> None:
             if cid in owned:
                 by_cid[cid].append(post)
 
+    # The artist's income per transaction from the ledger: a purchase can pay
+    # the artist in two legs (the share and the fee), and the acquisitions file
+    # recorded only one of them for the three origin pieces.
+    paid_by_tx: dict[str, float] = defaultdict(float)
+    for payment in ledger["gnosis"]["paymentsToArtist"]:
+        paid_by_tx[payment["hash"]] += int(payment["value"]) / 1e18
+
     facts: dict[str, dict] = {}
     for cid, work in owned.items():
         record: dict = {"title": work["name"]}
         acquisition = acquisitions["works"].get(cid)
         if acquisition:
+            if acquisition["kind"] == "purchase" and acquisition.get("txHash") in paid_by_tx:
+                acquisition = {**acquisition, "paidToArtistXDai": round(paid_by_tx[acquisition["txHash"]], 6)}
             wallet = acquisition["wallet"]
             record["collected"] = {
                 "on": acquisition["collectedOn"],
@@ -237,7 +246,9 @@ def main() -> None:
                     "collected: the first inbound transfer of each owned Nifty Ink work into one of the "
                     "collector's wallets, from collector-acquisitions.json (purchase = bought from the "
                     "artist in that transaction; gift = sent by the artist; transfer = any other inbound "
-                    "move). Wallets other than the collector's three named wallets are null. post: the "
+                    "move); paidXDai is the artist's total income in that transaction from the Gnosis "
+                    "ledger (nnxyz-onchain.json), which corrects the three origin pieces where the "
+                    "acquisitions file kept only the fee leg. Wallets other than the collector's three named wallets are null. post: the "
                     "earliest post by @0000nnxyz whose text links the drawing's nifty.ink page, from "
                     "x-posts.json; text is verbatim, printed removes links, hashtag-only lines and emoji "
                     "and expands handles; remark is printed minus the lines that only name the "
@@ -287,8 +298,9 @@ def main() -> None:
     )
     collector_xdai: dict[str, float] = defaultdict(float)
     for a in acquisitions["works"].values():
-        if a["wallet"] in COLLECTOR_WALLETS and a.get("paidToArtistXDai"):
-            collector_xdai[a["collectedOn"][:7]] += a["paidToArtistXDai"]
+        if a["wallet"] in COLLECTOR_WALLETS and a["kind"] == "purchase":
+            paid = paid_by_tx.get(a.get("txHash"), a.get("paidToArtistXDai") or 0)
+            collector_xdai[a["collectedOn"][:7]] += paid
     timeline = []
     for month in months:
         timeline.append(
