@@ -1874,7 +1874,9 @@ body:has(.enlargement[open]) {
   width: 100%;
   height: calc(100dvh - 84px);
   min-height: 420px;
-  background: var(--background);
+  /* Always black around the work, whatever the gallery background. */
+  background: #000;
+  color: #e8e8e8;
   overflow: hidden;
   --saver-fade: 900ms;
 }
@@ -1920,7 +1922,7 @@ body:has(.enlargement[open]) {
 }
 .saver-timing {
   font-size: 12px;
-  color: var(--subtle);
+  color: #777;
 }
 .saver[data-mode='still'] .saver-timing {
   visibility: hidden;
@@ -1945,14 +1947,14 @@ body:has(.enlargement[open]) {
   width: fit-content;
   max-width: min(560px, 100%);
   padding: 14px 18px 16px;
-  background: color-mix(in srgb, var(--background) 74%, transparent);
+  background: rgba(0, 0, 0, 0.62);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   pointer-events: auto;
 }
 .saver-context {
   font-size: 13px;
-  color: var(--muted);
+  color: #aaa;
 }
 .saver-title {
   font-size: 24px;
@@ -1964,7 +1966,7 @@ body:has(.enlargement[open]) {
   margin-top: 8px;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--body-text);
+  color: #d0d0d0;
 }
 .saver-controls {
   position: absolute;
@@ -1974,10 +1976,28 @@ body:has(.enlargement[open]) {
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 12px clamp(16px, 4vw, 48px) 16px;
+  padding: 28px clamp(16px, 4vw, 48px) 16px;
   font-size: 14px;
-  color: var(--muted);
+  color: #ccc;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0));
   transition: opacity 400ms;
+}
+.saver-controls button:hover:not(:disabled) {
+  color: #fff;
+}
+.saver-setting {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+.saver-setting select {
+  color: #e8e8e8;
+  background: #000;
+  border: 1px solid #444;
+  padding: 4px 6px;
+  font-size: 13px;
+  min-height: 32px;
 }
 .saver-controls button {
   display: inline-flex;
@@ -1993,18 +2013,16 @@ body:has(.enlargement[open]) {
 .saver[data-playing='false'] .when-playing {
   display: none;
 }
-.saver[data-idle='true'][data-playing='true'] .saver-controls {
+.saver[data-idle='true'] .saver-controls {
   opacity: 0;
-}
-.saver[data-idle='true'][data-playing='true']:fullscreen .saver-overlay {
-  opacity: 0.9;
+  pointer-events: none;
 }
 .saver[data-idle='true'] {
   cursor: none;
 }
 .saver-noscript {
   padding: 40px;
-  color: var(--body-text);
+  color: #d0d0d0;
 }
 @media (max-width: 760px) {
   .saver {

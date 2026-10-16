@@ -27,13 +27,29 @@ interface SaverWork {
   href: string;
   kind: 'ink' | 'abstract';
 }
-/** Drawing speed relative to the artwork page's 1× reconstruction. */
-const SPEED = 0.7;
-/** How long a finished drawing stays before the next begins. */
-const HOLD_MS = 10000;
-/** How long a still (or a drawing under reduced motion) stays. */
-const STILL_MS = 12000;
+/** Drawing pace at the 1× setting, relative to the artwork page's 1×. */
+const BASE_SPEED = 0.7;
+/** Hold on each finished work at the default setting, in milliseconds. */
+const DEFAULT_HOLD_MS = 10000;
 const FADE_MS = 900;
+const SPEED_KEY = 'nnxyz-saver-speed';
+const HOLD_KEY = 'nnxyz-saver-hold';
+
+function remembered(key: string, fallback: string, allowed: string[]) {
+  try {
+    const value = localStorage.getItem(key);
+    return value && allowed.includes(value) ? value : fallback;
+  } catch {
+    return fallback;
+  }
+}
+function remember(key: string, value: string) {
+  try {
+    localStorage.setItem(key, value);
+  } catch {
+    /* The choice still holds for this visit. */
+  }
+}
 
 const imageUrl = (work: SaverWork, width: number) =>
   work.kind === 'ink' ? rasterKey(work.id, width) : abstractKey(work.id, width);
@@ -63,7 +79,26 @@ export function initScreensaver() {
   const caption = root.querySelector<HTMLElement>('[data-caption]')!;
   const note = root.querySelector<HTMLElement>('[data-note]')!;
   const toggle = root.querySelector<HTMLButtonElement>('[data-saver-toggle]')!;
+  const speedSelect =
+    root.querySelector<HTMLSelectElement>('[data-saver-speed]')!;
+  const holdSelect =
+    root.querySelector<HTMLSelectElement>('[data-saver-hold]')!;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Viewer settings: a multiple of the base pace, and the hold in seconds.
+  const options = (select: HTMLSelectElement) =>
+    Array.from(select.options).map((option) => option.value);
+  speedSelect.value = remembered(SPEED_KEY, '1', options(speedSelect));
+  holdSelect.value = remembered(HOLD_KEY, '10', options(holdSelect));
+  let speed = Number(speedSelect.value);
+  let holdMs = Number(holdSelect.value) * 1000 || DEFAULT_HOLD_MS;
+  speedSelect.addEventListener('change', () => {
+    speed = Number(speedSelect.value) || 1;
+    remember(SPEED_KEY, speedSelect.value);
+  });
+  holdSelect.addEventListener('change', () => {
+    holdMs = Number(holdSelect.value) * 1000 || DEFAULT_HOLD_MS;
+    remember(HOLD_KEY, holdSelect.value);
+  });
   let works: SaverWork[] = [];
   let index = -1;
   let front = 0;
@@ -126,13 +161,18 @@ export function initScreensaver() {
   }
   function tick(now: number) {
     if (!playing || !drawing) return;
-    time = advance(time, now - last, SPEED, drawing.timeline.duration);
+    time = advance(
+      time,
+      now - last,
+      BASE_SPEED * speed,
+      drawing.timeline.duration,
+    );
     last = now;
     const complete = paintFrame(drawing, time);
     root.dataset.progress = String(time / drawing.timeline.duration);
     if (complete) {
       root.dataset.complete = 'true';
-      startHold(HOLD_MS);
+      startHold(holdMs);
     } else frame = requestAnimationFrame(tick);
   }
   function showStill(work: SaverWork, mine: number) {
@@ -151,7 +191,7 @@ export function initScreensaver() {
       drawing = undefined;
       describe(work, true);
       note.textContent = `${index + 1} of ${works.length}`;
-      startHold(STILL_MS);
+      startHold(holdMs);
     };
     img.decode().then(reveal, reveal);
   }
@@ -178,7 +218,7 @@ export function initScreensaver() {
     root.dataset.mode = reduced ? 'still' : 'drawing';
     describe(work, complete);
     note.textContent = `${index + 1} of ${works.length}`;
-    if (complete) startHold(STILL_MS);
+    if (complete) startHold(holdMs);
     else {
       last = performance.now();
       if (playing) frame = requestAnimationFrame(tick);
@@ -246,17 +286,33 @@ export function initScreensaver() {
     else if (event.key === 'ArrowLeft') show(index - 1);
     else if (event.key === 'f' || event.key === 'F') root.requestFullscreen?.();
   });
-  // Any pointer movement brings the controls back for a moment.
+  // Real pointer movement brings the controls back for a moment; a resting
+  // pointer, or the synthetic moves some browsers send, does not.
   let idle: ReturnType<typeof setTimeout> | undefined;
+  let lastX = -1;
+  let lastY = -1;
   const wake = () => {
     root.dataset.idle = 'false';
     clearTimeout(idle);
     idle = setTimeout(() => {
-      root.dataset.idle = 'true';
+      if (
+        !root.querySelector('.saver-controls')?.contains(document.activeElement)
+      )
+        root.dataset.idle = 'true';
     }, 3000);
   };
-  root.addEventListener('pointermove', wake);
+  root.addEventListener('pointermove', (event) => {
+    if (
+      Math.abs(event.clientX - lastX) < 2 &&
+      Math.abs(event.clientY - lastY) < 2
+    )
+      return;
+    lastX = event.clientX;
+    lastY = event.clientY;
+    wake();
+  });
   root.addEventListener('pointerdown', wake);
+  root.addEventListener('focusin', wake);
   wake();
   // A hidden tab stops the clock; it resumes where it was.
   document.addEventListener('visibilitychange', () => {

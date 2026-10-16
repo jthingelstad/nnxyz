@@ -41,6 +41,28 @@ const total = saverWorks().length;
       <button type="button" data-saver-fullscreen aria-label="Fullscreen">
         <Icon name="enlarge" size={20} /> Fullscreen
       </button>
+      <label class="saver-setting">
+        <span>Drawing speed</span>
+        <select data-saver-speed aria-label="Drawing speed">
+          <option value="0.5">½×</option>
+          <option value="1" selected>
+            1×
+          </option>
+          <option value="2">2×</option>
+          <option value="4">4×</option>
+        </select>
+      </label>
+      <label class="saver-setting">
+        <span>Hold</span>
+        <select data-saver-hold aria-label="Hold on each finished work">
+          <option value="5">5 s</option>
+          <option value="10" selected>
+            10 s
+          </option>
+          <option value="20">20 s</option>
+          <option value="60">1 min</option>
+        </select>
+      </label>
       <span class="saver-note" data-note>
         Loading {total} works…
       </span>
