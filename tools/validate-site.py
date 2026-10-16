@@ -201,6 +201,9 @@ def main():
                 "pages": len(pages),
                 "mediaReferenced": len(referenced),
                 "brokenLinks": 0,
+                "rooms": len(rooms),
+                "roomsWithTour": tours,
+                "roomsWithStaleAudio": stale,
             },
             indent=2,
         )
