@@ -87,20 +87,60 @@ their own drawings laid out as a wall. The gallery reads these as the artist
 looking back at the project and naming it: a performance, a crowd of masks, a
 short fame. The titles say it; the burns and the wall confirm it.
 
-**Who is behind the mask is not the gallery's business, and the artist agrees.**
-The one line the artist has published about the work is "born readymade to
-please the eye". The gallery takes it at its word: the drawings are for
-looking, and they want to be liked. The teeth are what looking finds. Everything
-the rooms say should come back to that pair: a face made to please, and a
-mouth that will not say whether it is pleased.
+**The artist has a theory of the work, and it fits.** The depth pass of
+October 16 (`curation/research/social/`) recovered the artist's bios and about
+2,700 posts. The bios, in full: "born readymade to please the eye / flawed
+imperfect on purpose" (Linktree); "born readymade to please the eye,
+intentionally flawed to show the arbitrariness of insignificance" (objkt); "A
+drama of the arbitrariness & insignificance of latent realities in the visible
+public space" (Instagram and Threads). The posts add the rest. "Art is an
+imprint of the time and society in which an artist moves. Art is therefore
+always ethical and political, even if an artist denies it" (July 30, 2025).
+"There is no such thing as bad or good art, there are only reasons for creating
+it, the meaning that a work may have as a result and the form it follows" (June
+20, 2024). "It is not the task of a work to immediately open itself fully to
+the recipient, nor is it the task of the artist to explain his tools or his
+process" (June 3, 2024). And on feeling: "wanting to convert every bad feeling
+into a good one is an absolutely unhealthy disorder in our society" (June 18,
+2024); anger "is a completely normal feeling for a human being" (June 10,
+2024).
+
+The gallery takes the artist at their word, and the words license what the
+rooms want to do. The drawings are made to please the eye and are flawed on
+purpose; the grin that is also a snarl is that flaw, built in. The work is an
+imprint of its time and place, so reading the year's weather in the rooms is
+reading the work the way its maker says work should be read. The artist will
+not explain the pictures, so the rooms must, and may. Everything the rooms say
+should come back to that pair: a face made to please, and a mouth that will not
+say whether it is pleased.
+
+**The closing was announced, and named.** "All 400 created nifties will be
+gradually burned. Everything after that is part of a new story" (August 23,
+2022). "My first ink will be the last burned" (August 11, 2022). "I'm extremely
+bullish about Nifty Ink and my nifties; I won't stop until the site shuts down"
+(April 8, 2022). The index collection was named after Warhol's Index Book,
+"speaking of unloved works being lost" (August 2, 2022), and the artist's
+advice to collectors the day before: "collect and curate more art that you
+don't like, because the artist who isn't what you're looking for today may have
+evolved into someone tomorrow". The Abstract gifts were "a small thank you"
+to everyone who had bought on the board (April 12, 2022). The satire written
+into the Other works ("sold by Christie's", "memewashed artfluence") has a
+sequel in the artist's own words two years later: a series about "sick systems
+that value work only on the basis of vanity metrics", and "just swap me out for
+your favorite artist and you won't notice any difference" (May 30, 2024).
+Every quotation above is in `curation/research/social/x-posts.json` by id and
+date; the project page carries them verbatim.
 
 **What the gallery compares the work to, as its own comparison.** The crowns,
 the skulls, the X eyes and the words written into the picture put the drawings
 near Jean-Michel Basquiat, and "i was famous" puts the artist's own frame near
 Duchamp and Warhol. The scribbled heads sit near art brut. These are the
-gallery's comparisons. The artist named Duchamp by drawing the urinal and has
-named no one else. The text says "near", never "influenced by", until a source
-says otherwise.
+gallery's comparisons. The artist has named Duchamp (by drawing the urinal, and
+in a post of January 11, 2025: Duchamp and Dada "still presuppose intention,
+everything else is just entertainment that would like to be art"), Warhol (the
+Index Book), and documenta 5 (March 23, 2022). The artist has not named
+Basquiat. The text says "near", never "influenced by", except where the artist
+named the name.
 
 ## The wings
 
@@ -187,14 +227,22 @@ mask with teeth was already on the board when nnxyz arrived, in another hand,
 and the two artists share a room in this collection because they share a
 mouth.
 
-### After Nifty Ink (proposed room, 2022, six works owned)
+### After Nifty Ink (proposed room; 38 owned works new to the site)
 
-"Heaven or Hell", an animated hooded face; "oink", painted landscapes; and
-"opticals", generative scatters built from marks. With "i was famous" and
-"lord of the inks" as references. The room's argument: when the artist left
-the board, the face left too, and what remained was the hand's weather
-(landscapes) and the hand's marks (opticals), with the look back at fame as the
-frame.
+The depth pass found far more than six. Beyond the Optimism works ("Heaven or
+Hell", an animated hooded face; "oink", a painted landscape; "opticals",
+generative scatters), the collector holds on Polygon seven "nifty faces px",
+the pixelated twins the artist airdropped to every Nifty Faces holder in April
+2022; 22 "chic city cat club" cats ("no roadmap, no utility"); 14 "Friends Of
+Country Air"; four "cringe-eez doodles"; one "pxlpop"; and "nnxyz" #5. Several
+are held twice because the artist re-issued three contracts and airdropped the
+copies to holders. With "i was famous" and "lord of the inks" as references.
+The room's argument: when the artist left the board the face went with it,
+first into pixels (the px twins are the Faces, literally, at lower resolution),
+then into jokes about collections (cats with no roadmap), and what remained of
+the hand was its weather (landscapes) and its marks (opticals), with the look
+back at fame as the frame. How to hang the re-issued pairs is the collector's
+call.
 
 ## What the stroke study should test
 
@@ -218,6 +266,19 @@ correct them (`tools/analyze-strokes.py`, output in
   six masks in a day; November 5 to 9, 2022).
 
 Where a measure contradicts a sentence above, the sentence changes.
+
+## What the depth pass changed
+
+- The artist does explain, at length, on X. The thesis now quotes the artist
+  where the quotation carries weight, and the project page carries the rest.
+- Nifty Ink's own statistics for the main address (read October 16, 2026): 595
+  inks created, 281 sold, 442 likes, $4,040 earned. The on-chain count of 592
+  successful createInk transactions is close; the page's 595 is the number to
+  cite.
+- Every nnxyz ink the collector holds is already in the archive (632 tokens,
+  574 distinct inks). The December 2024 inks #64 and #66 came to the collector
+  in April 2025; #65 went to another buyer.
+- The After Nifty Ink room grows from six works to 38.
 
 ## Open questions for the collector
 

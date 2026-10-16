@@ -13,9 +13,9 @@ findings and may change.
 
 nnxyz drew on Nifty Ink for three years. The first ink was created on
 October 26, 2021, and the last on December 5, 2024. In between the artist
-created 592 drawings there, set a price on nearly all of them, and sold
-editions of them to fifty wallets. This collection holds 548 of those
-drawings.
+created 595 drawings there, set a price on nearly all of them, and sold
+editions of 281 of them to fifty wallets. This collection holds 548 of those
+drawings, and every one the collector owns.
 
 Nifty Ink was a free drawing board on the xDai chain, built by Austin
 Griffith in 2020 as a demonstration of what a cheap chain could do. Anyone
@@ -66,14 +66,23 @@ went the same way.
 The series each have an origin work, #0000, which was held back and sold
 last as the key to a complete set. Nifty Faces #0000 and Rawblocks #0000
 went to this collection in 2022 and 2023; Abstract #0000 followed in May
-2023, and with it all fifty-three Abstract tokens. [local: confirm the
-On the Block #0000 record.]
+2023, and with it the fifty-two Abstract paintings. A fifty-third Abstract
+token, "#1", was minted and burned within three hours on March 30, 2022 and
+never left the artist.
 
 ### Afterwards
 
 The board did not go quiet. The artist went on liking other people's inks
 through 2024, more than a hundred of them, and in December 2024 drew three
-more. They are in this collection.
+more. Two of them came to this collection in April 2025; the third went to
+another buyer.
+
+Off the board, the work kept its holders in mind. In April 2022 every owner
+of a Nifty Face received its pixelated twin, "nifty faces px", on Polygon.
+Later came a cat club "with no roadmap, no utility", "Friends Of Country Air",
+"cringe-eez doodles", and three re-issued contracts whose copies were
+airdropped to the people who already held the originals. This collection
+holds thirty-eight of those later works, shown in their own room.
 
 ## Who was there
 
@@ -102,17 +111,52 @@ bridged out in sixty-seven transactions, most of it in 2022.
 
 ## In the artist's words
 
-The artist's public bio reads, in full: "born readymade to please the eye".
+The artist's bios, where they exist, say the same thing three ways. On
+Linktree: "born readymade to please the eye / flawed imperfect on purpose". On
+objkt: "born readymade to please the eye, intentionally flawed to show the
+arbitrariness of insignificance". On Instagram: "A drama of the arbitrariness
+& insignificance of latent realities in the visible public space". On X the
+bio is empty and the location reads "latent space".
 
-The index collection's own description: "The nnxyz index collection is an
-open never-ending collection published independently on multiple
-blockchains. The collection is always expanded by another work as soon as
-all works from a drop are sold out. The collection is planned completely
-openly."
+On Nifty Ink, March 2, 2022: "Why I love Nifty Ink. Easy and fun entry into
+the NFT space for artists. Tool works without problems. Easy upgrades of the
+artwork into the mainchain ETH. No entry costs to mint the work on the Gnosis
+chain. Nice and active community. Thanks @austingriffith." And on June 1,
+2024: "The best feature of Nifty Ink is the playback of the doodles. If you
+like Bob Ross, you can look at my over 500 doodles and see how each one was
+painted."
 
-Beyond those two sentences and the titles, the artist has not said what the
-work is for. [local: add anything the Mac session finds on X, TikTok,
-Instagram or YouTube, verbatim and dated.]
+On the gifts, April 12, 2022: "It was important to me to create some value
+outside of Nifty Ink for all owners as a small thank you."
+
+On the closing, April 8, 2022: "I'm extremely bullish about Nifty Ink and my
+nifties. I won't stop until the site shuts down." August 11, 2022: "This is my
+first NFT on Nifty Ink, which was also my first NFT sold. Therefore, my first
+ink will be the last burned." August 23, 2022: "Just a little reminder that
+all 400 created nifties on Nifty Ink will be gradually burned. Everything
+after that is part of a new story."
+
+On the index collection, August 2, 2022: "The name of the collection is also
+fixed: nnxyz Index Collection. Speaking of unloved works being lost or
+perished, I couldn't help but think of artist books, a grossly underrated
+area. Among other things, of course, I had to think of Andy Warhol's Index
+Book." And the day before: "If collectors or curators happen to be reading
+this, collect and curate more art that you don't like, because the artist who
+isn't what you're looking for today may have evolved into someone tomorrow who
+opens a whole new world for you."
+
+On what art is, June 20, 2024: "There is no such thing as bad or good art.
+There are only reasons for creating it, the meaning that a work may have as a
+result, and the form it follows." July 30, 2025: "Art is an imprint of the
+time and society in which an artist moves. Art is therefore always ethical and
+political, even if an artist denies it." And on explaining, June 3, 2024: "It
+is not the task of a work to immediately open itself fully to the recipient,
+nor is it the task of the artist to explain his tools or his process."
+
+Each quotation is a post by @0000nnxyz, saved by id and date in
+`curation/research/social/x-posts.json`, with the thirty chosen for the
+gallery and their screenshots in `quotes.json`. Light edits for print are
+limited to expanding handles and removing emoji; nothing is paraphrased.
 
 ## How to read this page
 
@@ -132,7 +176,10 @@ addresses and contracts are listed in the research record.
 - "Nifty Ink was a free drawing board ... built by Austin Griffith in 2020"
   needs one citation before publication (the Nifty Ink Medium post linked
   from nifty.ink, or BuidlGuidl's page). The Mac session can capture it.
-- The 592 figure counts successful createInk transactions from the main
-  address; the gallery's 548 are the owned subset. The 44 not owned are
-  either sold to others or the December 2023 to June 2024 inks the archive
-  snapshot did not include; the Mac session's holdings check settles which.
+- 595 is Nifty Ink's own count for the main address (read October 16, 2026);
+  the ledger shows 592 successful createInk calls. The gallery's 548 are the
+  owned subset, and the depth pass confirmed that no owned nnxyz ink is
+  missing from the archive.
+- The artist posts as a European (two posts refer to "DE" and "as a
+  European"). That is a sourced fact and is left off the page unless you want
+  it; the page says nothing else about the person.

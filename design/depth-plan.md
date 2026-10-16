@@ -108,12 +108,19 @@ A new page, working title "The project", and the matching corrections to
 
 ### C. After Nifty Ink
 
-A small room, five to eight works, for what the artist made next.
+A room for what the artist made next. The depth pass of October 16 found 38
+owned works new to the site (58 tokens; three Polygon contracts were re-issued
+and the collector holds both copies of 20). Their originals and metadata are in
+the ignored `collection/recovered-onchain/` with a manifest, and
+`data/onchain-works.json` is the draft data file, unwired.
 
-- The six works the collector owns on Optimism: oink #1, opticals #7, #264,
-  #268, #295, and Heaven or Hell #3. Stills with enlargement and downloads,
-  like Abstract. Images come from IPFS, which this container reaches only
-  through one gateway; fetching on the Mac is more reliable.
+- Optimism and Ethereum: oink #1, opticals #7, #264, #268, #295 and s2 #71,
+  Heaven or Hell #2 (Ethereum) and #3 (Optimism and Arbitrum).
+- Polygon: seven "nifty faces px" (the pixelated twins airdropped to Faces
+  holders in April 2022), 22 chic city cat club, 14 Friends Of Country Air,
+  four cringe-eez doodles, pxlpop, and "nnxyz" #5.
+- Stills with enlargement and downloads, like Abstract. The px twins may hang
+  beside their Faces on the artwork pages as well as in the room.
 - "i was famous" and "lord of the inks" shown as reference images with a link
   to the token, clearly marked as not in this collection, because they are the
   artist's own comment on the inks and the room is incomplete without them.
@@ -191,6 +198,12 @@ the Mac for audio and media.
   collection.
 - Whether wing essays stay unsigned like the rooms (recommended) or carry the
   notes-page style attribution.
+
+Added after the depth pass: how to show the re-issued pairs (one entry with
+both token ids, recommended); whether to search Fantom and Tezos (the index
+collection had a Fantom mint page, and the artist mints on objkt); whether to
+pin `collection/recovered-onchain/` to S3 with you present; whether to save
+the artist's email reply if one comes.
 
 Settled October 16, 2026: naming the collector, naming wallets and showing
 on-chain detail are all fine. The earlier rule that pages show no transaction
