@@ -90,6 +90,12 @@ test('manifest entries match the rooms and carry every field', async () => {
     const file = JSON.parse(
       await fs.readFile(`curation/exhibitions/rewrite/${room}.json`, 'utf8'),
     );
+    if (file.tour.audioStale) {
+      // Rewritten text waiting for re-recording: its old entries stay in the
+      // manifest and are counted, but their spoken text is expected to differ.
+      expected += manifest.entries.filter((e) => e.roomId === room).length;
+      return;
+    }
     file.tour.segments.forEach((segment, index) => {
       if (!segment.text) return;
       expected++;

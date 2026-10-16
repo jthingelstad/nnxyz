@@ -29,6 +29,9 @@ for (const entry of manifest.entries) {
 }
 
 export function tourFor(room: Room): Tour | null {
+  // A rewritten room keeps its old recordings in the manifest until the Mac
+  // re-records it; until then the text and the audio disagree, so no player.
+  if (room.tour.audioStale) return null;
   const audio = byRoom.get(room.id);
   if (!audio) return null;
   const stops: TourStop[] = [];

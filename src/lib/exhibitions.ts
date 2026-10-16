@@ -66,6 +66,9 @@ interface RoomFile {
     spokenWords: number;
     silentHoldSeconds?: number;
     estimatedMinutesAt150wpm: number;
+    /** Set while a rewritten room waits for its audio to be re-recorded. */
+    audioStale?: boolean;
+    audioStaleNote?: string;
   };
 }
 export interface Room extends RoomFile {

@@ -96,3 +96,17 @@ names in commit messages.
 
 The tour player on the site is separate work and will be built in the cloud
 once the manifest and `data/media.json` carry the audio keys.
+
+---
+
+## Addendum, October 16, 2026: re-recording rewritten rooms
+
+Rooms rewritten for feeling and message carry `tour.audioStale: true` in their
+rewrite file (first: `nifty-faces--dark`). While the flag is set the site shows
+no player for that room, and `tests/audio-tour.test.mjs` skips it. To
+re-record: run `tools/build-audio-tour.mjs` as in Stage 2; every changed
+segment gets a new versioned key (the tool already does this when the spoken
+text's hash differs), publish the new keys with `npm run media:publish`, then
+remove `audioStale` and `audioStaleNote` from the room file and commit the
+manifest and the room file together. Expect most rooms to be re-recorded as the
+rewrite proceeds; one recording session per wing is the plan.

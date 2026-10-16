@@ -127,16 +127,25 @@ def main():
     import re as _re
 
     tours = 0
+    stale = 0
     for room in rooms:
+        room_file = json.loads(
+            (ROOT / "curation/exhibitions/rewrite" / f"{room['id']}.json").read_text()
+        )
         html = (DIST / "galleries" / room["id"] / "index.html").read_text()
         found = _re.search(r"data-tour-stops>(.*?)</script>", html, _re.S)
+        if room_file["tour"].get("audioStale"):
+            # Rewritten text waiting for re-recording shows no player.
+            assert not found, f"Stale audio must not render a player: {room['id']}"
+            stale += 1
+            continue
         if not found:
             continue
         tours += 1
         for stop in json.loads(found.group(1)):
             if stop["src"]:
                 assert stop["src"].lstrip("/") in media, f"Unpublished tour audio: {stop['src']}"
-    assert tours == len(rooms), "Every room has an audio tour"
+    assert tours + stale == len(rooms), "Every room has an audio tour or is marked stale"
     # llms.txt and its full-text companion name only pages that exist.
     for name in ["llms.txt", "llms-full.txt"]:
         text = (DIST / name).read_text()
