@@ -8,6 +8,8 @@ import { ownedTokens } from '../lib/provenance';
 import { placement, roomWorks, exhibitionPath } from '../lib/exhibitions';
 import { formatUtcDateTime, formatUtcDate } from '../lib/dates';
 import { workFacts } from '../lib/story';
+import BuildSequence from './BuildSequence.astro';
+import { techniqueById, measures, techniquePath } from '../lib/technique';
 import {
   artworks,
   artworkPath,
@@ -43,6 +45,9 @@ const tokens = ownedTokens(work.inkId);
 const facts = workFacts.get(work.inkId);
 const post = facts?.post;
 const collected = facts?.collected;
+// Twelve works carry their build at five points in the stroke order (/technique/).
+const technique = techniqueById.get(work.inkId);
+const strokeMeasures = technique ? measures.get(work.inkId) : undefined;
 ---
 
 <Layout
@@ -93,6 +98,19 @@ const collected = facts?.collected;
               ))}
             </blockquote>
           )}
+        </section>
+      )}
+      {technique && strokeMeasures && (
+        <section class="artwork-build" aria-label="How it was built">
+          <p>
+            How it was built: {strokeMeasures.strokes} strokes at five points in
+            their recorded order.{' '}
+            <a href={`${techniquePath}#work-${technique.artworkId}`}>
+              Read the technique page
+            </a>
+            .
+          </p>
+          <BuildSequence work={work} strokes={strokeMeasures.strokes} compact />
         </section>
       )}
       <p class="gallery-position">
@@ -217,6 +235,8 @@ const collected = facts?.collected;
     </div>
   </div>
   <script>
+    import { initSequences } from '../scripts/sequence';
+    initSequences();
     // Add the viewer's local time beside the UTC instant. Without JavaScript the
     // UTC text stands alone.
     for (const time of document.querySelectorAll<HTMLTimeElement>(

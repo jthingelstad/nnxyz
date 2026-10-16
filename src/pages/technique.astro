@@ -1,0 +1,257 @@
+---
+// How nnxyz drew: what the recorded stroke order of 548 drawings shows, and
+// twelve works drawn at five points in their build. Numbers come from
+// curation/analysis/strokes/ (method strokes-v1); nothing is a duration,
+// because the archive records order and not time.
+import Layout from '../layouts/Layout.astro';
+import BuildSequence from '../components/BuildSequence.astro';
+import { byId, artworkPath, displayTitle } from '../lib/catalog';
+import { placement, exhibitionPath } from '../lib/exhibitions';
+import { formatUtcDate } from '../lib/dates';
+import {
+  measures,
+  strokeSummary as s,
+  techniqueWorks,
+  techniqueMethod,
+  percent,
+} from '../lib/technique';
+const all = s.all;
+const by = s.byCollection as Record<string, typeof s.all>;
+const collections = [
+  ['nifty-faces', 'Faces'],
+  ['nnotb', 'New Nifty on the Block'],
+  ['rawblocks', 'Rawblocks'],
+  ['nnxyz-other', 'Other nnxyz'],
+] as const;
+const tenths = all.decileMedians;
+const width = (x: number) => (x * 1000).toFixed(0);
+const sessions = s.sessions.all;
+const busiest = sessions.busiestDays.slice(0, 5);
+const works = techniqueWorks.map((entry) => {
+  const work = byId.get(entry.artworkId)!;
+  const m = measures.get(entry.artworkId)!;
+  const pair = entry.pairWith ? byId.get(entry.pairWith)! : null;
+  const pairMeasures = entry.pairWith ? measures.get(entry.pairWith)! : null;
+  const place = placement(entry.artworkId);
+  return { entry, work, m, pair, pairMeasures, place };
+});
+---
+
+<Layout
+  title="Technique — The nnxyz Rooms"
+  description="How nnxyz drew: what the recorded order of every stroke in 548 drawings shows, and twelve works shown at five points in their build."
+>
+  <article class="text-page technique-page">
+    <h1>Technique</h1>
+    <p class="story-summary">
+      How the drawings were built, from the one record this collection has that
+      no gallery of paintings does: the order, width, color and transparency of
+      every stroke.
+    </p>
+    <p>
+      Nifty Ink kept every stroke of every drawing in the order it was made. The
+      replay on each artwork page follows that order, and so can a measurement.
+      This page reads the stroke record of all {all.works} Nifty Ink drawings by
+      nnxyz in the collection, then shows twelve of them at five points in their
+      build. The archive stores no timing, so nothing here is a duration or a
+      speed; "first" and "last" mean order. The board's own background pass,
+      which {all.worksWithHelperPass} of the drawings carry, is counted apart
+      from the hand's strokes.
+    </p>
+
+    <h2 id="findings">What the record shows</h2>
+    <p>
+      <strong>The hand starts with line.</strong> The board lays the ground, and
+      the first drawn stroke after it covers almost nothing: the median first
+      stroke covers {percent(all.firstStrokeCoverageMedian)} of the canvas, and
+      only {percent(all.groundFirstShare)} of the drawings open with a stroke
+      that covers more than a quarter of it. nnxyz does not block in a big shape
+      and refine it. The drawing begins as line, and the mass accumulates.
+    </p>
+    <p>
+      <strong>Broad to fine, every time.</strong> Across the sequence the median
+      stroke narrows from {width(tenths.widthMedian[0])} thousandths of the
+      canvas side in the first tenth to {width(tenths.widthMedian[9])} in the
+      last, and the median stroke shortens from{' '}
+      {tenths.lengthMedian[0].toFixed(1)} canvas sides to{' '}
+      {tenths.lengthMedian[9].toFixed(2)}. The last tenth is dots and short
+      marks: the highlights, the teeth, the signature. Every series follows the
+      same curve.
+    </p>
+    <p>
+      <strong>Burying is the method.</strong> The share of each new stroke that
+      lands on paint already laid rises from {percent(tenths.overpaintMean[0])}{' '}
+      in the first tenth to {percent(tenths.overpaintMean[9])} in the last. By
+      the midpoint nearly every mark goes over an earlier one. The Faces are the
+      most buried and fill the square to{' '}
+      {percent(by['nifty-faces'].finalCoverageMedian)}; the later series leave
+      more of the ground showing.
+    </p>
+    <p>
+      <strong>Paint arrives with the portraits.</strong> Translucent strokes are{' '}
+      {percent(by['nifty-faces'].translucentShareMedian)} of a typical Face and{' '}
+      {percent(by.rawblocks.translucentShareMedian)} of a typical Rawblocks. The
+      two peaks by month are January 2022, the pale winter portraits, and
+      November 2022, the Rawblocks heads. The summer masks of 2022 are almost
+      entirely opaque.
+    </p>
+    <p>
+      <strong>Dark grounds have seasons.</strong> {percent(all.darkGroundShare)}{' '}
+      of all grounds are dark. December 2021 is the darkest month, then May
+      2022; from July 2023 on the ground is almost never dark.
+    </p>
+    <p>
+      <strong>Sessions.</strong> {sessions.activeDays} drawing days over three
+      years, a median of {sessions.worksPerActiveDayMedian} works on a working
+      day, and a longest run of {sessions.longestStreakDays} consecutive days.
+      The busiest days were{' '}
+      {busiest.map(([day, n], i) => (
+        <>
+          {formatUtcDate(String(day))} ({n})
+          {i < busiest.length - 2
+            ? ', '
+            : i === busiest.length - 2
+              ? ' and '
+              : ''}
+        </>
+      ))}
+      . By hour the record peaks in the late evening and is quietest in the
+      small hours of UTC, which is an evening practice in Central European time.
+    </p>
+
+    <h2 id="build-order">The build, in tenths</h2>
+    <p>
+      Medians across all {all.works} drawings for each tenth of the stroke
+      order: how much of the canvas has paint, how wide the typical stroke is,
+      how many colors have appeared, and how much of each stroke lands on
+      earlier paint.
+    </p>
+    <div class="technique-table-wrap">
+      <table class="technique-table">
+        <thead>
+          <tr>
+            <th scope="col">Tenth</th>
+            <th scope="col">Canvas covered</th>
+            <th scope="col">Stroke width ‰</th>
+            <th scope="col">Colors so far</th>
+            <th scope="col">On earlier paint</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tenths.coverage.map((c, i) => (
+            <tr>
+              <th scope="row">{i + 1}</th>
+              <td>{percent(c)}</td>
+              <td>{width(tenths.widthMedian[i])}</td>
+              <td>{tenths.paletteSize[i]}</td>
+              <td>{percent(tenths.overpaintMean[i])}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="technique-table-wrap">
+      <table class="technique-table">
+        <thead>
+          <tr>
+            <th scope="col">Series</th>
+            <th scope="col">Works</th>
+            <th scope="col">Strokes (median)</th>
+            <th scope="col">Dark grounds</th>
+            <th scope="col">Canvas covered</th>
+            <th scope="col">On earlier paint</th>
+            <th scope="col">Translucent</th>
+            <th scope="col">Colors</th>
+          </tr>
+        </thead>
+        <tbody>
+          {collections.map(([id, title]) => (
+            <tr>
+              <th scope="row">{title}</th>
+              <td>{by[id].works}</td>
+              <td>{Math.round(by[id].strokesMedian)}</td>
+              <td>{percent(by[id].darkGroundShare)}</td>
+              <td>{percent(by[id].finalCoverageMedian)}</td>
+              <td>{percent(by[id].overpaintMeanMedian)}</td>
+              <td>{percent(by[id].translucentShareMedian)}</td>
+              <td>{Math.round(by[id].distinctColorsMedian)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="twelve">Twelve drawings, five frames each</h2>
+    <p>
+      Each work below is drawn from its native SVG at five points in its stroke
+      order: after a tenth, a quarter, a half and three quarters of the hand's
+      strokes, and complete. The background pass is in every frame. The reading
+      under each says what the hand did between the frames; the numbers are the
+      record's.
+    </p>
+    {works.map(({ entry, work, m, pair, pairMeasures, place }) => (
+      <section class="technique-work" id={`work-${work.inkId}`}>
+        <h3>
+          <a href={artworkPath(work.inkId)}>{displayTitle(work)}</a>
+          {pair && (
+            <>
+              {' '}
+              and <a href={artworkPath(pair.inkId)}>{displayTitle(pair)}</a>
+            </>
+          )}
+        </h3>
+        <p class="technique-why">
+          {entry.why} Hangs in{' '}
+          <a href={exhibitionPath(place.room.id)}>{place.room.title}</a>.
+        </p>
+        <BuildSequence work={work} strokes={m.strokes} />
+        {pair && pairMeasures && (
+          <BuildSequence work={pair} strokes={pairMeasures.strokes} />
+        )}
+        {entry.reading && <p class="technique-reading">{entry.reading}</p>}
+        <p class="technique-facts">
+          {m.strokes} drawn strokes
+          {m.helperStrokes > 0 && (
+            <>
+              {' '}
+              after {m.helperStrokes} background pass
+              {m.helperStrokes > 1 ? 'es' : ''}
+            </>
+          )}
+          , {m.distinctColors} colors, {m.translucentStrokes} translucent
+          strokes; {percent(m.finalCoverage)} of the canvas covered when
+          complete, {percent(m.overpaintMean)} of each stroke on earlier paint
+          {pairMeasures && (
+            <>
+              ; the second drawing {pairMeasures.strokes} strokes,{' '}
+              {pairMeasures.distinctColors} colors,{' '}
+              {pairMeasures.translucentStrokes} translucent
+            </>
+          )}
+          . Recorded {formatUtcDate(m.recordedAt)}.
+        </p>
+      </section>
+    ))}
+
+    <h2 id="method">Method</h2>
+    <p class="story-method">{techniqueMethod}</p>
+    <p class="story-method">
+      Coverage and overpainting are measured on a 160 by 160 raster of the
+      stroke paths with round caps, with transparency ignored for coverage.
+      Widths and lengths are divided by the shorter canvas side so works of
+      different sizes compare. A stroke counts as buried when more than 90% of
+      its pixels were already painted. The measures and the summaries are kept
+      with the curation record, with the hash of every file read.
+    </p>
+    <p>
+      <a href="/story/">The story →</a>
+    </p>
+    <p>
+      <a href="/">Return to the collection →</a>
+    </p>
+  </article>
+  <script>
+    import { initSequences } from '../scripts/sequence';
+    initSequences();
+  </script>
+</Layout>

@@ -62,6 +62,7 @@ export function llmsIndex(): string {
     `- [About](${url('/about/')}): the archive, the replay and what the records do and do not establish.`,
     `- [Notes from the curator](${url('/notes/')}): how the rooms, text, audio tour and map were made.`,
     `- [The collections of nnxyz](${url('/catalogue/')}): every collection the artist made on every chain searched, with what this collection holds from each.`,
+    `- [Technique](${url('/technique/')}): what the recorded order of every stroke in 548 drawings shows, and twelve works drawn at five points in their build.`,
     `- [Full text](${url('/llms-full.txt')}): every wing, room and artwork text on the site in one Markdown file.`,
     '',
   );

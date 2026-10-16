@@ -287,7 +287,15 @@ clutter down, not to the project page.
   that only the collector is named. Build 754 pages; browser suite green.
 - The collector read the story pages on October 16 and accepted them as
   written, and decided the front page keeps his statement as its welcome.
-- Next: audio re-recording on the Mac, then clearing `audioStale`; publish.
+- Audio re-recorded on the Mac (eef6073): 848 segments, every room live.
+- Technique (workstream D) is on the site: `/technique/` reports the
+  strokes-v1 findings and the build in tenths, and shows twelve works at five
+  points in their stroke order, drawn in the browser from the native SVG; the
+  same strip sits on those works' artwork pages. Wing essays were not written
+  as separate pages: the rewritten wing introductions and the story pages
+  carry the argument, and the collector's October 13 direction (less
+  structure, more room for the art) argued against a further layer of text.
+- Published to main on October 16, 2026.
 
 ## The story layer (added October 16, 2026)
 

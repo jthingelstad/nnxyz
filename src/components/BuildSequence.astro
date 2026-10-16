@@ -1,0 +1,55 @@
+---
+// A work at five points in its recorded stroke order. The frames are drawn in
+// the browser from the native SVG (src/scripts/sequence.ts); without
+// JavaScript the finished drawing stands in for the last frame and the others
+// say what they would show.
+import { rasterPath, type Artwork } from '../lib/catalog';
+import { techniqueFrames } from '../lib/technique';
+interface Props {
+  work: Artwork;
+  strokes: number;
+  compact?: boolean;
+}
+const { work, strokes, compact = false } = Astro.props;
+const frames = techniqueFrames;
+const label = (f: number) =>
+  f >= 1 ? 'Complete' : `${Math.round(f * 100)}% of the strokes`;
+---
+
+<div
+  class:list={['build-sequence', { compact }]}
+  data-sequence
+  data-src={`/art/${work.inkId}.svg`}
+  data-frames={frames.join(',')}
+  role="group"
+  aria-label={`${strokes} strokes, shown at five points in their order`}
+>
+  {frames.map((f, i) => (
+    <figure class="sequence-frame" data-frame={f}>
+      <div
+        class="sequence-stage"
+        style={`aspect-ratio:${work.width}/${work.height}`}
+      >
+        {i === frames.length - 1 && (
+          <img
+            class="sequence-still"
+            src={rasterPath(work, 640)}
+            alt=""
+            width={work.width}
+            height={work.height}
+            loading="lazy"
+          />
+        )}
+      </div>
+      <figcaption>
+        {label(f)}
+        {f < 1 && (
+          <span class="sequence-count">
+            {' '}
+            · {Math.ceil(f * strokes)} of {strokes}
+          </span>
+        )}
+      </figcaption>
+    </figure>
+  ))}
+</div>

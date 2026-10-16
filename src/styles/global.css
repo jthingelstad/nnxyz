@@ -2362,3 +2362,118 @@ body.tour-active {
   text-underline-offset: 4px;
   color: var(--body-text);
 }
+
+/* Technique: the build of a drawing at five points in its stroke order. */
+.technique-page {
+  max-width: 760px;
+}
+.technique-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 28px;
+}
+.technique-table {
+  border-collapse: collapse;
+  font-size: 14px;
+  color: var(--body-text);
+  font-variant-numeric: tabular-nums;
+  min-width: 420px;
+}
+.technique-table th,
+.technique-table td {
+  text-align: right;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.technique-table th:first-child,
+.technique-table td:first-child {
+  text-align: left;
+  padding-left: 0;
+}
+.technique-table thead th {
+  font-weight: 500;
+  color: var(--muted);
+}
+.technique-work {
+  margin: 44px 0;
+}
+.technique-work h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 6px;
+}
+.technique-work h3 a {
+  text-decoration: none;
+}
+.technique-why,
+.technique-facts {
+  font-size: 14px;
+  color: var(--muted);
+}
+.technique-reading {
+  max-width: 70ch;
+}
+.build-sequence {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 0 16px;
+}
+.build-sequence + .build-sequence {
+  margin-top: -4px;
+}
+.sequence-frame {
+  margin: 0;
+  min-width: 0;
+}
+.sequence-stage {
+  width: 100%;
+  max-width: 100%;
+  background: #fff;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.sequence-stage svg,
+.sequence-still {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.sequence-frame figcaption {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+.sequence-count {
+  display: none;
+}
+.build-sequence.compact {
+  gap: 6px;
+  margin: 12px 0 0;
+}
+.artwork-build {
+  margin-top: 26px;
+  max-width: 70ch;
+}
+.artwork-build p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+.artwork-build a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (min-width: 761px) {
+  .sequence-count {
+    display: inline;
+  }
+}
+@media (max-width: 760px) {
+  .build-sequence {
+    gap: 6px;
+  }
+  .sequence-frame figcaption {
+    font-size: 11px;
+  }
+}
