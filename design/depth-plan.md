@@ -161,8 +161,8 @@ use and a technique section visitors can see.
 ### E. Ship
 
 - New pages: project, technique, after-Nifty-Ink room, wing essays; revised
-  notes and about; the front-page welcome text the collector deferred, now
-  written against the thesis.
+  notes and about. The front page keeps the collector's statement as its
+  welcome (collector's decision, October 16, 2026).
 - Audio: re-record every changed segment, rebuild manifests, verify durations.
 - Site checks: `npm run check`, `npm test`, `npm run build`,
   `tools/validate-site.py` (sitemap count will change), browser suite.
@@ -190,7 +190,7 @@ other page depends on a reply.
 | 1 | Collection thesis and wing paragraphs; stroke-analysis script and first measures; project page draft | Documents for the collector to mark up |
 | 2 | Pilot room rewrite ("Dark") with review; technique renders for the chosen works | One room live on the branch for the collector |
 | 3 | All rooms rewritten and reviewed; wing essays; after-Nifty-Ink data and media; notes and about | Complete text on the branch |
-| 4 | Audio re-recorded; welcome text; QA; publish | Live site |
+| 4 | Audio re-recorded; QA; publish | Live site |
 
 Phase 1 can start now. Phase 2 waits on the thesis being read. Phase 4 needs
 the Mac for audio and media.
@@ -238,7 +238,6 @@ clutter down, not to the project page.
 	- Write wing essays
 	- Build the after-Nifty-Ink room: data file, media on the Mac, page
 	- Revise notes and about pages
-	- Write the front-page welcome text
 	- Re-record changed audio segments and rebuild manifests
 	- Run check, tests, build, validate-site and browser suite
 	- Publish
@@ -286,9 +285,9 @@ clutter down, not to the project page.
   in the details panel; the header, front page, about, notes and each wing
   entrance link into the story. `tests/test_story.py` checks the pages and
   that only the collector is named. Build 754 pages; browser suite green.
-- Next: the welcome text (deferred by the collector); audio re-recording on
-  the Mac, then clearing `audioStale`; a read of the review page corrections;
-  publish.
+- The collector read the story pages on October 16 and accepted them as
+  written, and decided the front page keeps his statement as its welcome.
+- Next: audio re-recording on the Mac, then clearing `audioStale`; publish.
 
 ## The story layer (added October 16, 2026)
 
