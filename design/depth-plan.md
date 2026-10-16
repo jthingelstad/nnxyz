@@ -37,8 +37,10 @@ left asking what nnxyz was saying. Three causes, all designed in:
   (generative scatters) on Optimism. The collector owns six of these.
 - **The collector's place in the record.** 121 of 283 payments and about half
   the artist's Nifty Ink income; two children's wallets buying on the first day;
-  the complete sets delivered by direct transfer. The ledger says it, so the
-  gallery may say it without quoting the collector.
+  the complete sets delivered by direct transfer. The collector is named, the
+  wallets are named (thingelstad.eth, nnxyz.thingelstad.eth,
+  niftyink.thingelstad.eth), and the collector's own account of why can sit
+  beside the ledger (collector's decision, October 16, 2026).
 - **The stroke record.** Order, width, color and alpha of every mark in every
   Nifty Ink work, already parsed for replay.
 - **A changed rule.** The gallery may now read feeling and message, grounded in
@@ -90,12 +92,13 @@ A new page, working title "The project", and the matching corrections to
   works, the closing burns, the gifts, the move to Ethereum and Optimism, the
   return in December 2024. Every date from the ledger or the archive.
 - **The scene.** Nifty Ink as Austin Griffith built it, the first funding, the
-  buyers, the people the artist liked and gave to. A small map of that circle,
-  not a list of addresses. Names only where an ENS name exists; otherwise a
-  count.
-- **The collector in the record.** One short section stating what the ledger
-  shows about this collection's purchases and the delivery of the complete
-  sets. Factual, no quotation.
+  buyers, the people the artist liked and gave to. A map of that circle with
+  the wallets on it: ENS names where set, shortened addresses otherwise, each
+  linking to the explorer. Transaction-level detail (the burn-mints, the gift
+  transfers, the first funding) is shown where it carries the story.
+- **The collector in the record.** One section stating what the ledger shows
+  about this collection's purchases and the delivery of the complete sets, with
+  the collector's own words on it where the collector wants them.
 - **In the artist's words.** The bio line and the index-collection
   description, verbatim, cited.
 - **Notes page.** Replace "It does not say what the artist meant" and "It is
@@ -184,19 +187,22 @@ the Mac for audio and media.
 ## Decisions for the collector
 
 - Confirm "Dark" as the pilot room, or name another.
-- Confirm that the project page may state the collector's purchases as the
-  ledger shows them.
 - Confirm showing the two mainnet works as reference images not in the
   collection.
 - Whether wing essays stay unsigned like the rooms (recommended) or carry the
   notes-page style attribution.
 
+Settled October 16, 2026: naming the collector, naming wallets and showing
+on-chain detail are all fine. The earlier rule that pages show no transaction
+histories or address lists applies to artwork pages, where it keeps the
+clutter down, not to the project page.
+
 ## Risks
 
 - Readings can slide into generic art writing. The review pass and the habits
   list stay; the thesis keeps rooms from each claiming the same feeling.
-- Wallets are addresses. The project page says so once, and names only where an
-  ENS name is set.
+- Wallets are addresses, not proof of a person. The project page says so once
+  for third parties; the collector's wallets are the collector's.
 - The artist may object to the reading of the burns or the later titles. The
   text states them as the gallery's readings resting on the record, and a
   reply from the artist replaces them.
