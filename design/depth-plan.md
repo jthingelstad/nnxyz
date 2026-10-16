@@ -265,10 +265,8 @@ clutter down, not to the project page.
 - After Nifty Ink (workstream C) is built: `data/onchain.json` (46 works,
   `tools/build-onchain-catalog.py`), the wing `after-nifty-ink` with two rooms,
   Twins and Cats (20) and The Index and After (26), artwork pages with stills,
-  animations and original downloads, the screen saver and map. It is gated on
-  its media: the Mac fetches the sources, generates `media/onchain/` and
-  publishes (HANDOFF addendum); until then the wing is absent and the build is
-  the same 698 pages.
+  animations and original downloads, the screen saver and map. The Mac published its 238 media keys the same evening
+  (commit 21e380e); the wing is live on the branch and the build is 748 pages.
 - The census: `curation/research/onchain/census.json` (tools/build-census.py)
   groups the artist's 43 contracts on eight chains into 18 collections with
   works, 13 of which the collector holds from, and `/catalogue/` shows it on
