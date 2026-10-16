@@ -77,7 +77,10 @@ class RoomTests(unittest.TestCase):
                 else:
                     self.assertIsNone(recorded)
 
-    def test_the_text_is_unsigned_and_never_quotes_the_collector(self):
+    def test_the_text_is_unsigned_and_uses_utc(self):
+        # The curation is unsigned (no "AI curator") and dates are UTC. Since
+        # October 16, 2026 the collector may be named in room text, so that is
+        # no longer checked here.
         for room in self.rooms.values():
             text = json.dumps(
                 {
@@ -86,7 +89,7 @@ class RoomTests(unittest.TestCase):
                     if k not in ("method", "voice", "collectorDecisions")
                 }
             ).lower()
-            for phrase in ("ai curator", "the collector", "jamie", "chicago", "central time"):
+            for phrase in ("ai curator", "chicago", "central time"):
                 self.assertNotIn(phrase, text, f"{room['id']}: {phrase}")
 
 

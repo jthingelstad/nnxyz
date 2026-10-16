@@ -243,3 +243,79 @@ clutter down, not to the project page.
 	- Run check, tests, build, validate-site and browser suite
 	- Publish
 	- Send the six questions to the artist if no reply arrives
+
+## The story layer (added October 16, 2026)
+
+The collector's instruction: tell the whole story, show the art, and help
+people connect and feel it. No limit on naming the collector, the platform,
+the people or the market. This section is the plan for that.
+
+### Background articles (long-form pages, unsigned gallery voice)
+
+Drafts live in `curation/research/story/`; each becomes a page under `/story/`
+with an audio reading like the rooms. Every fact cited to the archive, the
+ledger, the artist's posts or the collector's published writing.
+
+1. **Nifty Ink.** The origin: Austin Griffith's drawing board, launched in
+   August 2020 on the xDai chain, "putting the fun in non-fungible tokens";
+   burner wallets, strokes saved to IPFS, editions for a few cents, the
+   upgrade to Ethereum. Why the board recorded every stroke, which is why this
+   site can replay them. The community on it: Griffith funding nnxyz,
+   jasperart, ekeko, scrimshaw, the Gitcoin grant the collector found it
+   through. The artist's own words about the board. Sources: Decrypt, August
+   28, 2020; the xDai project page; the 1Hive post of September 2020; the
+   artist's posts of March 2 and August 11, 2022 and June 1, 2024; the
+   collector's Weekly Thing #216.
+2. **The collector.** Jamie Thingelstad's story in his words and the ledger:
+   finding Nifty Ink through its Gitcoin grant in March 2022 ("this isn't about
+   going to the moon"); the first nnxyz purchase on May 10, 2022, the day his
+   children Tyler and Mazie bought three inks each; Mazie's first drawing;
+   becoming the board's top collector the next day; the Ukraine ink; the HELLO
+   gift to newsletter readers; the artist's gifts to the family (editions
+   minted straight to the three wallets on May 23 and June 20, 2022); the
+   complete sets; fan art #0001; the Thanksgiving bridge of an ink to mainnet;
+   "publishing again after a couple months away"; the fourth collection; the
+   earlier gallery at thingelstad.com/art/nnxyz; this site.
+3. **The project.** The artist's arc, already drafted in
+   `curation/research/project-page-draft.md`.
+4. **2022.** The year as a dated timeline: inks, posts, purchases, gifts,
+   Terra (May 9 to 13), the Merge (September 15), FTX (November 8 to 11), the
+   burns, and what was drawn each week. The collection's weather, with dates.
+5. **In the artist's words.** The thirty quotable posts and the bios,
+   verbatim, dated, with screenshots.
+
+### Per-work facts, woven in
+
+- **The artist's post.** 206 of the 548 Nifty Ink works can be matched by
+  title to the artist's own X post announcing them (`x-posts.json`). Each
+  artwork page gets "Posted by the artist on <date>" with the text, and the
+  room text may use it ("posted the same night as the one before it").
+- **Collected on.** The ledger gives the day each edition reached a collector
+  wallet, and whether it was bought, gifted by the artist, or part of a
+  complete set delivered later. Artwork pages say so in one line, in the
+  details panel and once in the room text where it matters (Faces #12 came
+  as a gift; the family's three inks each on May 10).
+- **The market, where it touches.** One sentence per room at most, with the
+  date: the glossy heads of May 2022 and Terra; the Rawblocks portraits of
+  November 5 to 9 and FTX.
+- **The comparison, where it is unmistakable.** Basquiat in Crossed-Out Eyes
+  and the NNOTB crowns; Duchamp and Warhol in After Nifty Ink.
+
+### Site structure
+
+- `/story/` entrance from the header, with the five pages in order.
+- Each wing introduction ends with one sentence pointing at the story page
+  that bears on it.
+- The front page keeps the collector's statement and adds one line into the
+  story.
+- `/notes/` says the story pages are the gallery's, from sources listed on
+  each page.
+
+### Data work
+
+- `tools/build-story-facts.py`: artist-post matches and collected-on facts
+  into `curation/story/facts.json`, keyed by artwork id, with the post id,
+  date and text, the wallet, the date and the kind of acquisition.
+- Family wallets are named with the collector's permission (given October
+  16): Tyler and Mazie.
+

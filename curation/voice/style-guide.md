@@ -18,11 +18,22 @@ says "AI curator". The text is simply the gallery speaking. Write with a
 museum's confidence: "the grin turns into a snarl", not "the grin may read as
 a snarl".
 
-The collector's own words appear in one place only: the introduction on the
-front page. Gallery, wing and artwork text never quotes or paraphrases the
-collector. The artist's words appear only where they exist: titles, the one
-public bio line, the names of contracts and series. The text never invents a
-quotation or a statement the artist did not make.
+The collector is part of the story and may be named, quoted and described
+anywhere it helps: in room text, on artwork pages, on the story pages. Jamie
+Thingelstad found the work, bought it, gave it to his children, made fan art
+of it, and built this gallery; the text says so where it matters, using his
+published words (thingelstad.com, The Weekly Thing) and the ledger. The
+artist's words appear where they exist: posts, bios, titles, contract and
+series descriptions, each cited by date. The text never invents a quotation.
+(October 16, 2026: the collector lifted the earlier rule that kept his words
+to the front page.)
+
+The world the work was made in is part of the story too. Name the platform
+(Nifty Ink, built by Austin Griffith on the xDai chain), the people on it, and
+the market events of the time (the Terra collapse of May 2022, the FTX
+collapse of November 2022) where they bear on a room. Comparisons to other
+artists (Basquiat, Duchamp, Warhol, art brut) are made as the gallery's
+comparisons, plainly, and once per room at most.
 
 ## What the writing may claim
 
