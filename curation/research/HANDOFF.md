@@ -45,8 +45,8 @@ Collector wallets:
 - `0xb009e269060c0d6e652176c166c96c97965ca19f` niftyink.thingelstad.eth
 
 Family wallets that bought inks on 2022-05-10, include only if the collector
-says so: `0x6493db62998997134e0451cacd32360858f9a3d6` tyler.thingelstad.eth,
-`0x74dbbcb9c08c51b38510d130d928e1e8c68eda7c` mazie.thingelstad.eth. Ask the
+says so: `0x6493db62998997134e0451cacd32360858f9a3d6`,
+`0x74dbbcb9c08c51b38510d130d928e1e8c68eda7c` (household wallets; do not name their holders). Ask the
 collector for any other wallet before starting.
 
 Contracts already found are listed in `nnxyz-onchain.json` under `contracts`.

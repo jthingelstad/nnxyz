@@ -1,12 +1,12 @@
 # Occasions and Figures (nnxyz-other--ot-occasions)
 
-Spoken words: 2287, about 15.2 minutes.
+Spoken words: 2292, about 15.3 minutes.
 
 ## Introduction
 
 Pieces made for a moment. The works in this room were drawn for occasions: the hundredth, two hundredth, three hundredth and five hundredth inks, a summer, a pizza day, a greeting. With them hang the few full figures and painted scenes from outside the named series. Twenty-two works, from the artist's first day on Nifty Ink in October 2021 to December 2024, the last drawing in the collection. This is the artist in public.
 
-Most of them carry words. NIFTY INK on a tee shirt, WAGMI on a bottle, a number held up like a sign, slogans written across a face. The words are drawn, not typed, and they sit in the picture like any other mark. The milestones were never for sale: 200 nifties was minted straight into the wallets of collectors who had bought the inks, Jamie Thingelstad's among them, on April 25, 2022, the first nnxyz work the family owned, and 300 nifties followed the same way in June. The artist celebrated by handing the celebration out.
+Most of them carry words. NIFTY INK on a tee shirt, WAGMI on a bottle, a number held up like a sign, slogans written across a face. The words are drawn, not typed, and they sit in the picture like any other mark. The milestones were never for sale: 200 nifties was minted straight into the wallets of collectors who had bought the inks, Jamie Thingelstad's among them, on April 25, 2022, the first nnxyz work he was given, and 300 nifties followed the same way in June. The artist celebrated by handing the celebration out.
 
 Watch the sun-head. It appears in May 2022 as a figure with a sun for a face, in a NIFTY INK tee shirt, on a beach, in the dark, dancing, and the collector bought all three for a single xDai each. Two years later it comes back as a pizza. The room ends on two masks covered in writing from December 2024: dishwasher to memewasher, blue chip, sold by Christie's, no need for a wall. By then the artist had been posting for a year about the market as a rare-token scheme that had nothing to do with art, and these are the drawings that say it.
 
@@ -22,13 +22,13 @@ October 20, 2021, the first day of nnxyz on Nifty Ink: a figure in a cap and a r
 
 ## Hundreds and Summers
 
-January to November 2022. Four milestone drawings for the hundredth, two hundredth, three hundredth and five hundredth inks, and three summer figures with a sun for a head. Two of the milestones were gifts to the family; the summer figures cost one xDai each.
+January to November 2022. Four milestone drawings for the hundredth, two hundredth, three hundredth and five hundredth inks, and three summer figures with a sun for a head. Two of the milestones were gifts to the collector; the summer figures cost one xDai each.
 
 **100 nifties** (label) Three cartoon characters in green, blue and pink stand in a row with the letters X, Y and Z on their chests and the number 100 drawn above them in pale balloon letters. Their eyes are wide, their mouths open, and they drip at the feet into a grey floor. The milestone for the hundredth ink, made January 28, 2022, and the artist posted that it had been dropped into the pockets of some niftians. The three letters are the artist's name split into three people, and they are melting. The collector bought a copy in November 2022 for five xDai, after the series had ended, to have the first of the milestones.
 
-**200 nifties** (line) Figures glow in a burst of light, drawn in gold and grey with a hand raised, and the words 200 NIFTY INK at the upper left; minted into the collector's wallet on April 25, 2022, the first nnxyz work the family owned.
+**200 nifties** (line) Figures glow in a burst of light, drawn in gold and grey with a hand raised, and the words 200 NIFTY INK at the upper left; minted into the collector's wallet on April 25, 2022, the first nnxyz work he was given.
 
-**nifty summer ink** (label) A figure with a sun for a head stands on blue in a white tee that says NIFTY INK, black shorts and sunglasses with X Y Z on the lenses, holding a bottle labeled WAGMI with bubbles rising from it. The sun is yellow with short rays. The arms and legs are yellow lines. The first of three summer figures, drawn May 10, 2022, the day after the market fell, and posted with a joke about Nifty Ink as a no-fuss printer. A sun in sunglasses with a bottle of champagne is a picture of a good mood held up against the news, and the collector bought it the morning it appeared, for one xDai, his first nnxyz purchase outside the Faces.
+**nifty summer ink** (label) A figure with a sun for a head stands on blue in a white tee that says NIFTY INK, black shorts and sunglasses with X Y Z on the lenses, holding a bottle labeled WAGMI with bubbles rising from it. The sun is yellow with short rays. The arms and legs are yellow lines. The first of three summer figures, drawn May 10, 2022, the day after the market fell, and posted with a joke about Nifty Ink as a no-fuss printer. A sun in sunglasses with a bottle of champagne is a picture of a good mood held up against the news, and the collector bought it the morning it appeared, for one xDai, his first nnxyz purchase outside the Faces, three weeks after the first.
 
 **nifty summer night ink** (line) The same sun-headed figure at night, glowing in a ring of yellow on black, its tee grey, its arms out, bought the same evening for one xDai.
 

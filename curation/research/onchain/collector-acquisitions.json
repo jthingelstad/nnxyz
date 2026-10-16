@@ -1,13 +1,13 @@
 {
  "schemaVersion": 1,
  "builtAt": "2026-10-16T16:00:00Z",
- "method": "For each Nifty Ink token (NiftyToken 0xcf964c89f509a8c0ac36391c5460df94b91daba5 on Gnosis) that entered one of the collector's five wallets, the first inbound transfer, read from the Blockscout v2 token-transfers API for each wallet on October 16, 2026 and keyed by the drawing CID in the token metadata. kind: purchase = buyInk mint to the wallet with a payment to the artist in the same transaction; gift = direct transfer from one of the artist's two addresses; transfer = mint or transfer from any other address (airdrop mints from 0x0, moves between family wallets, purchases from other holders). paid is xDai received by the artist in that transaction, when any. Only owned works (data/gallery.json) are listed; two works (nnxyz #64 and #66) had no inbound transfer in the paged data and are omitted.",
+ "method": "For each Nifty Ink token (NiftyToken 0xcf964c89f509a8c0ac36391c5460df94b91daba5 on Gnosis) that entered one of five wallets in the collector's household, the first inbound transfer, read from the Blockscout v2 token-transfers API for each wallet on October 16, 2026 and keyed by the drawing CID in the token metadata. kind: purchase = buyInk mint to the wallet with a payment to the artist in the same transaction; gift = direct transfer from one of the artist's two addresses; transfer = mint or transfer from any other address (airdrop mints from 0x0, moves between family wallets, purchases from other holders). paid is xDai received by the artist in that transaction, when any. Only owned works (data/gallery.json) are listed; two works (nnxyz #64 and #66) had no inbound transfer in the paged data and are omitted. Only the collector is named; the two household wallets that are not his are labelled by letter.",
  "wallets": {
   "thingelstad.eth": "0x2bda946a7740b1ddb0fd5c226819170c4dd15720",
   "nnxyz.thingelstad.eth": "0xf872525e4dba6ca8418fe5319b5959de7b947a37",
   "niftyink.thingelstad.eth": "0xb009e269060c0d6e652176c166c96c97965ca19f",
-  "tyler.thingelstad.eth": "0x6493db62998997134e0451cacd32360858f9a3d6",
-  "mazie.thingelstad.eth": "0x74dbbcb9c08c51b38510d130d928e1e8c68eda7c"
+  "household-wallet-a": "0x6493db62998997134e0451cacd32360858f9a3d6",
+  "household-wallet-b": "0x74dbbcb9c08c51b38510d130d928e1e8c68eda7c"
  },
  "artistAddresses": [
   "0x9410bc26732ed9480833cb3a4a0f377908e261e2",

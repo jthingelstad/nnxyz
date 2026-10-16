@@ -16,7 +16,7 @@ Committed files: `nnxyz-onchain.json` (histories, sales, royalty wallet, likes),
 
 ## Gnosis / Nifty Ink (5,669 transactions, 2021-10-26 to 2024-12-05)
 - 593 createInk, 869 setPrice, 3,226 mint, 536 safeTransferFrom, 346 likes, 67 bridge-out transactions (Connext, Hop) totalling 3,969 xDAI
-- Sales income: 283 payments, 4,026 xDAI, 50 distinct buyers. Collector wallets: 121 payments, 2,127 xDAI. tyler.thingelstad.eth and mazie.thingelstad.eth each bought 3 on 2022-05-10. austingriffith.eth: 18 payments, 268 xDAI, first 2022-02-01. iamjim.eth 16, jaxcodes.eth 15, justn.eth 7, superphiz.eth 3, cvjoint.eth 3, fahim.eth 3, danielsheldon.eth 2, polimyl.eth 2.
+- Sales income: 283 payments, 4,026 xDAI, 50 distinct buyers. Collector wallets: 121 payments, 2,127 xDAI. two other wallets in the collector's household (addresses in collector-acquisitions.json) each bought 3 on 2022-05-10. austingriffith.eth: 18 payments, 268 xDAI, first 2022-02-01. iamjim.eth 16, jaxcodes.eth 15, justn.eth 7, superphiz.eth 3, cvjoint.eth 3, fahim.eth 3, danielsheldon.eth 2, polimyl.eth 2.
 - Monthly payments peak in 2022-05 (78). Late sales run from 2023-12 to 2024-06, plus 2025-01 and 2025-04.
   - 2025-01: #65, bought on 2025-01-11 by 0x78e87757861185ec5e8c0ef6bf0c69fa7832df6c. That is not a collector wallet.
   - 2025-04: #64 and #66, bought by nnxyz.thingelstad.eth on 2025-04-06.

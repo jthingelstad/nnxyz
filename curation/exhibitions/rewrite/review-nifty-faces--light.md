@@ -1,6 +1,6 @@
 # Modelled in Light (nifty-faces--light)
 
-Spoken words: 1621, about 11.1 minutes.
+Spoken words: 1689, about 11.3 minutes.
 
 ## Introduction
 
@@ -8,7 +8,7 @@ Faces with weight, and for the first time in the collection, faces with someone 
 
 The ground changes with the paint, and so does the distance. The winter faces float in haze, with no edge between the face and the air, and three strokes in four are translucent, the most in the whole wing. You are close to them, the way you are close to someone across a table. The spring heads stand on one color, teal, orange, cyan, and their edges are hard. You are looking at an object on a shelf.
 
-In the winter portraits the eyes look at you, or down, or away, and the mouths are closed. In the spring heads the eyes narrow, cross and hollow out, and the mouth starts to sneer. This is the room where the collection shows what it can do when it stops performing, and then, in April, decides to perform again.
+In the winter portraits the eyes look at you, or down, or away, and the mouths are closed. In the spring heads the eyes narrow, cross and hollow out, and the mouth starts to sneer. The glossy heads were drawn in the weeks the crypto market broke: the Terra collapse of May 9 to 13, 2022 falls between the mask with yellow beads and the head caught in the beams. The drawings do not mention it. They do not have to. This is the room where the collection shows what it can do when it stops performing, and then, as the money around it fell, decides to perform again, harder.
 
 ## Faces in the Glow
 
@@ -60,7 +60,7 @@ April 13 to May 22, 2022. Eight heads that shine: sculpted in dark paint, lit fr
 
 **#131** (line) A glossy face on cyan with crooked eyes, one high and one low, a row of white teeth, and a crown of yellow scribble for hair, the crooked eyes of the first painted head back in April, with the softness gone.
 
-**#132** (label) A glossy dark head on orange, lit by pale beams from the upper left, its mouth open on white teeth, one eye a white ring in shadow. The beams are soft wedges of pale yellow laid over the head. Five months after the pale head in the orange glow, the light is back, but now it falls on something solid and casts a shadow. The last work in the room, from May 22, 2022, and the last of the numbered Faces. The first painted face dissolved in the light. This one is caught in it, mouth open, like something found with a torch. That is the distance the series travelled in five months: from a face the light passes through to a face the light catches.
+**#132** (label) A glossy dark head on orange, lit by pale beams from the upper left, its mouth open on white teeth, one eye a white ring in shadow. The beams are soft wedges of pale yellow laid over the head. Five months after the pale head in the orange glow, the light is back, but now it falls on something solid and casts a shadow. The last work in the room, from May 22, 2022, and the last of the numbered Faces, drawn nine days after Terra's collapse and five weeks after the collector bought his first nnxyz ink. The first painted face dissolved in the light. This one is caught in it, mouth open, like something found with a torch. That is the distance the series travelled in five months: from a face the light passes through to a face the light catches.
 
 ## Closing
 

@@ -290,11 +290,9 @@ ledger, the artist's posts or the collector's published writing.
    collector's Weekly Thing #216.
 2. **The collector.** Jamie Thingelstad's story in his words and the ledger:
    finding Nifty Ink through its Gitcoin grant in March 2022 ("this isn't about
-   going to the moon"); the first nnxyz purchase on May 10, 2022, the day his
-   children Tyler and Mazie bought three inks each; Mazie's first drawing;
-   becoming the board's top collector the next day; the Ukraine ink; the HELLO
-   gift to newsletter readers; the artist's gifts to the family (editions
-   minted straight to the three wallets on May 23 and June 20, 2022); the
+   going to the moon"); the first nnxyz purchase on April 14, 2022; becoming the board's top collector the next day; the Ukraine ink; the HELLO
+   gift to newsletter readers; the artist's gifts (editions
+   minted straight to his wallet on April 25, May 23 and June 20, 2022); the
    complete sets; fan art #0001; the Thanksgiving bridge of an ink to mainnet;
    "publishing again after a couple months away"; the fourth collection; the
    earlier gallery at thingelstad.com/art/nnxyz; this site.
@@ -338,6 +336,8 @@ ledger, the artist's posts or the collector's published writing.
 - `tools/build-story-facts.py`: artist-post matches and collected-on facts
   into `curation/story/facts.json`, keyed by artwork id, with the post id,
   date and text, the wallet, the date and the kind of acquisition.
-- Family wallets are named with the collector's permission (given October
-  16): Tyler and Mazie.
+- Only the collector is named. No other member of the collector's family is
+  named or described anywhere on the site, in the story pages or in the
+  curation text (collector's instruction, October 16, 2026). Wallets other
+  than the collector's own appear in research data by address only.
 

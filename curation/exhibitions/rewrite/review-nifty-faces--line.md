@@ -1,6 +1,6 @@
 # Clean Lines, Flat Color (nifty-faces--line)
 
-Spoken words: 1713, about 11.7 minutes.
+Spoken words: 1712, about 11.4 minutes.
 
 ## Introduction
 

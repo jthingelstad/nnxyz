@@ -60,6 +60,9 @@ comparisons, plainly, and once per room at most.
   prefers the month, or a span of days, over a single date unless the day is
   the point.
 
+
+**Only the collector is named.** Jamie Thingelstad may be named and quoted. No other member of his family is named, described or alluded to (no children, no partner, no "the family"), in rooms, wings, artwork pages, story pages or notes. Gifts and purchases are told as the collector's. (Collector's instruction, October 16, 2026.)
+
 ## Feeling and message
 
 The collector wants the rooms to reach the feeling and the message of the art,

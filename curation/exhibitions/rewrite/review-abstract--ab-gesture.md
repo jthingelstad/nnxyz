@@ -1,10 +1,10 @@
 # Splatter, Scribble and Swirl (abstract--ab-gesture)
 
-Spoken words: 1810, about 12.1 minutes.
+Spoken words: 1809, about 12.1 minutes.
 
 ## Introduction
 
-Marks thrown, dripped, scribbled and spun. The twenty-seven works in this room are the Abstract series at its loosest: splashes on a bare ground, crowds of short strokes, swirls that turn in a circle, lines that sweep across the square and leave. The room ends on the collection piece, #0000, which Jamie Thingelstad bought on May 3, 2023, and with it the fifty paintings that came with it, the fourth nnxyz collection in the family.
+Marks thrown, dripped, scribbled and spun. The twenty-seven works in this room are the Abstract series at its loosest: splashes on a bare ground, crowds of short strokes, swirls that turn in a circle, lines that sweep across the square and leave. The room ends on the collection piece, #0000, which Jamie Thingelstad bought on May 3, 2023, and with it the fifty paintings that came with it, the fourth nnxyz collection he owned.
 
 Three kinds of gesture hang here. The splash, which hits the ground and spreads. The scribble, which covers it. And the swirl, which turns the whole square into one motion, like a ball of yarn or a storm seen from above. All three are the marks the masks were made of, with the mask taken away: the scribble that buried the summer heads, the loops that drew the Faces, the beam that swept across the skulls, here allowed to be only themselves.
 

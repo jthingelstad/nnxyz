@@ -18,23 +18,20 @@ buy created images for very low costs. Many are a dollar. All about fun."
 
 He made things on it before he collected much. In April 2022 he drew the word
 UKRAINE in block letters, his "one talent," minted fifty copies at ten dollars
-and matched every sale with a donation. On the first of May his daughter
-Mazie drew her first ink, "Sunshine and Rainbows," two rabbits in a garden,
-and sold a copy within hours. At the end of May he bought a hundred copies of
+and matched every sale with a donation. At the end of May he bought a hundred copies of
 a stranger's ink that said HELLO and sent one to every reader who held a
 newsletter token.
 
-The first nnxyz drawing in the family was a gift, and it came before the
+The first nnxyz drawing he was given came as a gift, and it came before the
 first purchase. On April 25, 2022, the artist minted "200 nifties," the
 drawing made to mark two hundred inks on the board, straight into Jamie's
 wallet. nnxyz gave the milestone pieces to the collectors who were paying
 attention, and by late April Jamie was one of them. He had bought his first nnxyz
 ink, Nifty Faces #109, on April 14, and on May 10 he bought the three summer
-figures for a single xDai each; the same day two smaller wallets, Tyler's and
-Mazie's, each bought three. A day later he wrote: "I'm the top collector on Nifty Ink.
+figures for a single xDai each. A day later he wrote: "I'm the top collector on Nifty Ink.
 I just have so much fun here." On May 23 the artist minted New Nifty on the
-Block #100 into all three family wallets, unpaid, and on June 20 did the same
-with "300 nifties." The milestones of the artist's year went to the family as
+Block #100 into his wallet, unpaid, and on June 20 did the same
+with "300 nifties." The milestones of the artist's year went to him as
 they happened.
 
 From there the collecting became a project of its own. Jamie bought nnxyz
@@ -74,14 +71,12 @@ his own account there was a lot of it.
 
 - The Weekly Thing #216, March 20, 2022, "Nifty Ink": discovery through the
   Gitcoin grant; "loved Nifty Ink as soon as I discovered it"; "This isn't
-  about buying NFTs ..."; "All about fun"; Mazie's collection.
+  about buying NFTs ..."; "All about fun".
 - Blog, April 23, 2022, "Support Ukraine via Nifty.Ink": fifty copies, block
   lettering, "my one talent", the match.
-- Blog, May 1, 2022: "Sunshine and Rainbows", Mazie's first drawing, sold one
-  within hours.
 - Ledger: artist mints "200 nifties" to thingelstad.eth April 25, 2022;
-  first payments from thingelstad.eth, Tyler's and Mazie's wallets May 10,
-  2022; artist mints NNOTB #100 to the three wallets May 23 and "300 nifties"
+  first payments from thingelstad.eth May 10,
+  2022; artist mints NNOTB #100 to thingelstad.eth May 23 and "300 nifties"
   June 20, 2022, and Nifty Faces #14 to thingelstad.eth August 14; 508 direct
   transfers in August and October 2022 and March 2023; income share
   (`curation/research/onchain/nnxyz-onchain.json`).

@@ -1,6 +1,6 @@
 # Figures and Places (nnotb--p2--between)
 
-Spoken words: 1915, about 12.8 minutes.
+Spoken words: 1914, about 12.8 minutes.
 
 ## Introduction
 
@@ -50,7 +50,7 @@ July 31 to August 19. Two flat figures on one day, a skull in a summer shirt, a 
 
 **#213** (line) A figure with a sun for a head walks on black, its body a pink dress and its legs long yellow lines, with a ring of purple discs behind it like a flower; the collector bought it on August 2 for one xDai.
 
-**#214** (line) A yellow skull with blue goggles and a red cap, a grin of grey teeth, in a white tee that says CCO SUMMER, on black scattered with white marks, bought by the collector on August 8 for one xDai, as cheap as any ink in the family.
+**#214** (line) A yellow skull with blue goggles and a red cap, a grin of grey teeth, in a white tee that says CCO SUMMER, on black scattered with white marks, bought by the collector on August 8 for one xDai, as cheap as any ink he owns.
 
 **#219** (label) A tree in full leaf, painted in hundreds of small dabs of yellow, green, pink and red, standing behind a fence in a yellow light that falls from the upper left. The trunk is a few dark strokes under the mass of leaves, and the grass at the bottom is small dabs too. With 1,758 recorded strokes it is the most worked drawing in the whole collection, and it is the one drawing in the mask months with no face in it at all. It was made on August 12, 2022, the morning after the artist announced that the inks would be burned and the first ink, the first thing ever sold, would be the last to go. The day after deciding to burn the year, the artist spent longer than on any other drawing putting leaves on a tree, one dab at a time. Nothing in the series says more plainly what the drawing was for.
 

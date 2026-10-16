@@ -1,6 +1,6 @@
 # Skulls and Shadows (nifty-faces--dark)
 
-Spoken words: 1754, about 11.8 minutes.
+Spoken words: 1753, about 11.7 minutes.
 
 ## Introduction
 

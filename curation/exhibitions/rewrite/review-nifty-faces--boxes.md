@@ -1,6 +1,6 @@
 # Heads Built from Boxes (nifty-faces--boxes)
 
-Spoken words: 1839, about 12.9 minutes.
+Spoken words: 1839, about 12.3 minutes.
 
 ## Introduction
 

@@ -1,12 +1,12 @@
 # Crossed-Out Eyes (nifty-faces--crossed)
 
-Spoken words: 1949, about 14.1 minutes.
+Spoken words: 2020, about 13.5 minutes.
 
 ## Introduction
 
 Box heads with their eyes struck through. In this room the eye is an X, a red cross, a plus sign, or a letter, and the box head of the first room comes back with its eyes cancelled. Twenty-six works, from December 1, 2021 to March 18, 2022, and then the collection piece, #0000, made in July. The grin from the first room is still here, under every crossed eye, and that is the room's unease: a face that cannot see you and is still smiling.
 
-The cross is drawn many ways. A red X over a ring. A plus sign in a white box. Two red bars. And in a handful of works the eyes spell the artist's name: an X in one box, a Y in the next, a Z in the third. The letters N, N, X, Y and Z appear as eyes, as a brow, and on #48 as the whole face. An X for an eye is the cartoonist's sign for dead, or drunk, or knocked out. The artist takes that sign and makes it a signature. The name is in the eyes, so the one thing the face cannot do is look.
+The cross is drawn many ways. A red X over a ring. A plus sign in a white box. Two red bars. And in a handful of works the eyes spell the artist's name: an X in one box, a Y in the next, a Z in the third. The letters N, N, X, Y and Z appear as eyes, as a brow, and on #48 as the whole face. An X for an eye is the cartoonist's sign for dead, or drunk, or knocked out. The artist takes that sign and makes it a signature. The name is in the eyes, so the one thing the face cannot do is look. Anyone who knows Jean-Michel Basquiat will see him here: the crowns, the crossed eyes, the words written into the face, the name as the subject. The gallery makes the comparison; the artist has not. What the two share is the habit of signing the picture from inside it.
 
 Watch the mouth under the crossed eyes. It is almost always a grid of white block teeth in a box, and as the eyes get stranger the teeth stay the same. Blind and grinning, head after head, until the room ends on the one work that puts every mark in the series into a single square, with the name drawn large and no face at all.
 
@@ -76,7 +76,7 @@ February 27 to March 18, 2022, five last box heads, and then the collection piec
 
 **#109** (line) A box head on maroon with a red and white X in a cyan box for one eye and a slash in the other, orange horns, a long nose, and a grin of white teeth, the last of the crossed boxes, from March 18, 2022, horned and blind and still pleased.
 
-**#0000** (label) The collection piece, an edition of one, drawn on July 20, 2022, four months after the last numbered face. A dense square of pattern: the letters N, N, X, Y and Z drawn large in the center, a red heart at the top, a flower at the right, beads, zigzags, grids and teeth filling every corner. With 753 recorded strokes it is the most worked drawing in the Faces. The name that was a face in December is here the whole picture, and there is no face left around it: no eyes to cross, no mouth to grin, only the heart above the letters and the rows of teeth at the bottom edge, where they have become a border. The record says this work was held back and sold last, as the key to the complete set. The picture says the same thing in its own way. The series is over, and what remains is the signature, the heart, and the teeth.
+**#0000** (label) The collection piece, an edition of one, drawn on July 20, 2022, four months after the last numbered face. A dense square of pattern: the letters N, N, X, Y and Z drawn large in the center, a red heart at the top, a flower at the right, beads, zigzags, grids and teeth filling every corner. With 753 recorded strokes it is the most worked drawing in the Faces. The name that was a face in December is here the whole picture, and there is no face left around it: no eyes to cross, no mouth to grin, only the heart above the letters and the rows of teeth at the bottom edge, where they have become a border. The artist held this one back and sold it last, as the key to the complete set. Jamie Thingelstad bought it, and with it the artist sent the Faces that had not sold, so that the set on these walls is the whole series. The picture says what the sale says. The series is over, and what remains is the signature, the heart, and the teeth.
 
 ## Closing
 

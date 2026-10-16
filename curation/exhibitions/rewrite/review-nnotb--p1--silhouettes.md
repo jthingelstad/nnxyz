@@ -24,7 +24,7 @@ The room begins with four cats. The first arrives in March, the other three in o
 
 ## Three Days in April
 
-Six works in three days, April 25 to 27. The cat gives way to other creatures, a black horizon appears under them, and two are set inside a frame. On April 25 the artist also minted a drawing called 200 nifties, to mark two hundred inks on the board, straight into the collector's wallet: the first nnxyz work the family owned.
+Six works in three days, April 25 to 27. The cat gives way to other creatures, a black horizon appears under them, and two are set inside a frame. On April 25 the artist also minted a drawing called 200 nifties, to mark two hundred inks on the board, straight into the collector's wallet, the first nnxyz work he was given.
 
 **#58** (label) Two cats sit facing each other on a red ground, and between them a heart made of two black bars meets at its point. Both have yellow spiral eyes and a jagged yellow grin. Yellow lines fill the red in rings around them. Two cats and a heart is the gentlest picture in the series, and it was made on April 25, the day the artist celebrated two hundred inks on the board and sent the celebration piece to the collectors who had been paying attention. The affection in the drawing and the affection in the gesture are the same thing.
 
