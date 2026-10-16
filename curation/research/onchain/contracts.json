@@ -1,0 +1,1414 @@
+{
+ "schemaVersion": 1,
+ "collectedAt": "2026-10-16T13:37:44Z",
+ "artistAddresses": {
+  "main": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+  "second": "0x14a19d826e03e5a33df33f4ff898968329cb4085",
+  "royaltyWalletCandidate": "0x7e7336db34290da67fdf8c7c02e55dde6c656105"
+ },
+ "chainsSearched": [
+  "ethereum (1)",
+  "optimism (10)",
+  "polygon (137)",
+  "base (8453)",
+  "arbitrum (42161)",
+  "zora (7777777)",
+  "gnosis (100)"
+ ],
+ "method": "Candidates are every contract an artist address called, received NFTs from, or created. Transaction and transfer lists come from Etherscan v2 (Ethereum, Polygon, Arbitrum), Blockscout PRO (Optimism, Gnosis), Base Blockscout, and full-range eth_getLogs on rpc.zora.energy, mainnet.optimism.io and rpc.gnosischain.com. thirdweb proxies are read from ProxyDeployed events in factory deployProxy receipts; Zora 1155 contracts from SetupNewContract. A candidate counts as the artist's when an artist address created it (directly or through a factory), is owner(), or holds DEFAULT_ADMIN_ROLE; whyArtist lists which. name/symbol/owner/totalSupply/contractURI are eth_call reads at the latest block. tokenCount is totalSupply() for ERC-721 where present, else mint events; ERC-1155 counts distinct token ids minted. contractURIResolved is the JSON fetched through the gateway named. Royalty wallet: no contracts.",
+ "countsByChain": {
+  "ethereum": 2,
+  "optimism": 7,
+  "polygon": 20,
+  "base": 5,
+  "arbitrum": 1,
+  "zora": 1
+ },
+ "contractCount": 36,
+ "contracts": [
+  {
+   "chain": "ethereum",
+   "chainId": 1,
+   "address": "0x6abb1cd04ede4560355ff90d82967b2eca0b4f7d",
+   "name": "nnxyz",
+   "symbol": "nnxyz",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": null,
+   "tokenCount": 7,
+   "tokenCountMethod": "mint events (Transfer from 0x0); 0 burned",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x04619771cf1a5e5f996f58287365a5f6e3c82e8ab819886a8ef16ac98f4e77ec",
+    "block": 15380785,
+    "time": "2022-08-21T00:23:58Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "direct creation by artist",
+    "contract creator is artist",
+    "owner() is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://etherscan.io/address/0x6abb1cd04ede4560355ff90d82967b2eca0b4f7d",
+   "sampleTokenId": "1",
+   "openseaSampleUrl": "https://opensea.io/assets/ethereum/0x6abb1cd04ede4560355ff90d82967b2eca0b4f7d/1"
+  },
+  {
+   "chain": "ethereum",
+   "chainId": 1,
+   "address": "0x7ebfcf1f26845f1deface5b7043f57a560df8780",
+   "name": "nnxyz index collection",
+   "symbol": "nnxyzic",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 2,
+   "tokenCount": 2,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmS1hX1j9HQZAVWpiEP7wutpowh9kePXAkaHpicbqhjrKk/0",
+   "contractURIResolved": {
+    "name": "nnxyz index collection",
+    "description": "The nnxyz index collection is an open never-ending collection published independently on multiple blockchains. The collection is always expanded by another work as soon as all works from a drop are sold out.\n\nThe collection is planned completely openly. \n\nMint & get Updates:\nhttps://twitter.com/0000nnxyz/status/1554449359135281153\n\nhttps://nnxyz.notion.site/nnxyz-index-collection-e5ec035dd7a54937a905a2a9f2661896",
+    "image": "ipfs://QmWiAM3TXPajwfAQGadjU35vS4B7RxuTLA9hUptrR7RvZU/0.gif",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzic",
+    "platform_fee_basis_points": 0,
+    "platform_fee_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "primary_sale_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "trusted_forwarders": []
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x706ff0246dbcfed416f454a9f72f8ae0331032d3016315a8597714a14bac5f53",
+    "block": 15283868,
+    "time": "2022-08-05T18:13:34Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://etherscan.io/address/0x7ebfcf1f26845f1deface5b7043f57a560df8780",
+   "sampleTokenId": "0",
+   "openseaSampleUrl": "https://opensea.io/assets/ethereum/0x7ebfcf1f26845f1deface5b7043f57a560df8780/0"
+  },
+  {
+   "chain": "optimism",
+   "chainId": 10,
+   "address": "0x3d42539721aaff66ebe049dcd33d82e2f9c7726a",
+   "name": "nnxyz",
+   "symbol": "nnxyz",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 11,
+   "tokenCount": 11,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmZgszBRFf6w7CQS1mAxVRf39Jb1LuPu5b6MQaX3xaPNbV/0",
+   "contractURIResolved": {
+    "name": "nnxyz",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "symbol": "nnxyz",
+    "platform_fee_basis_points": 0,
+    "platform_fee_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "primary_sale_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "trusted_forwarders": []
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x307b44803fe082e3b730f330a619cf9cd5357276b631e66887bcdd13364808d2",
+    "block": 35142497,
+    "time": "2022-11-06T18:16:12Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://optimistic.etherscan.io/address/0x3d42539721aaff66ebe049dcd33d82e2f9c7726a",
+   "sampleTokenId": "0",
+   "openseaSampleUrl": "https://opensea.io/assets/optimism/0x3d42539721aaff66ebe049dcd33d82e2f9c7726a/0"
+  },
+  {
+   "chain": "optimism",
+   "chainId": 10,
+   "address": "0x62129c832e1fd5a83393b7bfeb75d010b5bff0c8",
+   "name": "nnxyz index collection",
+   "symbol": "nnxyzic",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 0,
+   "tokenCount": 0,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://Qma3ryg2mk9e63A8M48VQXyCfkhBjxrtiWVqS41VsXXPqy/0",
+   "contractURIResolved": {
+    "name": "TRASH",
+    "description": "",
+    "seller_fee_basis_points": 9900,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzic"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": null,
+   "deploy": {
+    "transactionHash": "0x4fad410a5e4fc62d11e19702db8caa34be8c16c15639ee69f84a8bd5dc9a1c7f",
+    "block": 17294457,
+    "time": "2022-08-02T16:07:49Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://optimistic.etherscan.io/address/0x62129c832e1fd5a83393b7bfeb75d010b5bff0c8",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "optimism",
+   "chainId": 10,
+   "address": "0x72a3f8ce5c34628194ada80f7f1edcb50017c9af",
+   "name": "nnxyz index collection",
+   "symbol": "nnxyzic",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 0,
+   "tokenCount": 0,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmXebLwymhAYhFuuejfCWpy4nUzQGkKjd434M3TvZTW39C/0",
+   "contractURIResolved": {
+    "name": "TRASH",
+    "description": "",
+    "image": "ipfs://QmWiAM3TXPajwfAQGadjU35vS4B7RxuTLA9hUptrR7RvZU/0.gif",
+    "seller_fee_basis_points": 9900,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzic"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": null,
+   "deploy": {
+    "transactionHash": "0x85e0652547f5df2a28ef4a614191a5855a9e542ed50e2fbc79d05c8499c27fea",
+    "block": 17288118,
+    "time": "2022-08-02T15:24:08Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://optimistic.etherscan.io/address/0x72a3f8ce5c34628194ada80f7f1edcb50017c9af",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "optimism",
+   "chainId": 10,
+   "address": "0x81a95c21bf5d76d2fbb49e39b057fb5667f34b0a",
+   "name": "nnxyz index collection",
+   "symbol": "nnxyzic",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 3,
+   "tokenCount": 3,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://Qmaz6mB1GqRjUgewFywTjVgs6CgCJkCPJNGV6hvFQsbV1K/0",
+   "contractURIResolved": {
+    "name": "nnxyz index collection",
+    "description": "The nnxyz index collection is an open never-ending collection published independently on multiple blockchains. The collection is always expanded by another work as soon as all works from a drop are sold out.\n\nThe collection is planned completely openly. \n\nMint & get Updates:\nhttps://twitter.com/0000nnxyz/status/1554449359135281153\n\nhttps://nnxyz.notion.site/nnxyz-index-collection-e5ec035dd7a54937a905a2a9f2661896",
+    "image": "ipfs://QmQ3pVr235GdRiWtsBKxfaxbCUsNLXm8BRZ2rb4FqVxhN5/0.gif",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzic"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": null,
+   "deploy": {
+    "transactionHash": "0xef7abebe696dff15381188d359bfcfd7f6e69b6ffe6963cfab2ba872f8a237e9",
+    "block": 17336937,
+    "time": "2022-08-02T23:06:00Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://optimistic.etherscan.io/address/0x81a95c21bf5d76d2fbb49e39b057fb5667f34b0a",
+   "sampleTokenId": "0",
+   "openseaSampleUrl": "https://opensea.io/assets/optimism/0x81a95c21bf5d76d2fbb49e39b057fb5667f34b0a/0"
+  },
+  {
+   "chain": "optimism",
+   "chainId": 10,
+   "address": "0x95b76ca11d29f591ecb848e5fe10c21da9b5a008",
+   "name": "nnxyz opticals s3",
+   "symbol": "nnxyzop",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 1,
+   "tokenCount": 1,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmRjbUNCV51zL3uWbe1MQewguyUeYv9ivqGKQhC9gdJqMn/0",
+   "contractURIResolved": {
+    "name": "nnxyz opticals s3",
+    "image": "ipfs://QmPdtw59Y9NU9rofHrqEjYya5KbJmyRzuDDQu49E21PSii/niftyink.011.png",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzop",
+    "platform_fee_basis_points": 0,
+    "platform_fee_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "primary_sale_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "trusted_forwarders": []
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x00cede6023715b9906d464ba3ce6eddc815aa20100f343a0e01a4cf9d2c1d629",
+    "block": 39881879,
+    "time": "2022-11-20T01:18:30Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://optimistic.etherscan.io/address/0x95b76ca11d29f591ecb848e5fe10c21da9b5a008",
+   "sampleTokenId": "0"
+  },
+  {
+   "chain": "optimism",
+   "chainId": 10,
+   "address": "0x9660fa7f5f3a896912e587b77ef6dbc4cf0f6dc2",
+   "name": "nnxyz opticals s1",
+   "symbol": "nnxyzop",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 4,
+   "tokenCount": 4,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmTFxHoiioG8msT13E7foWFV8E3sDFYDxyPSUtWK9FN36d/0",
+   "contractURIResolved": {
+    "name": "nnxyz opticals s1",
+    "image": "ipfs://QmfKV9JZtj41mjhQnFeWnR2jSmZrYMHP6NezhdQtZFLYpc/nnxyz.opticals.series01.20.png",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzop",
+    "platform_fee_basis_points": 0,
+    "platform_fee_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "primary_sale_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "trusted_forwarders": []
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x28d17670f83d24ec1b5cc557597d01be05ba1307512d908721e4be3e2de9a3a4",
+    "block": 38826002,
+    "time": "2022-11-16T22:30:32Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://optimistic.etherscan.io/address/0x9660fa7f5f3a896912e587b77ef6dbc4cf0f6dc2",
+   "sampleTokenId": "0"
+  },
+  {
+   "chain": "optimism",
+   "chainId": 10,
+   "address": "0xe7df60fd9dec072a01ff72d4b0420e23faf7615b",
+   "name": "nnxyz opticals s2",
+   "symbol": "nnxyzop",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 133,
+   "tokenCount": 133,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmZBEcUiybFJs7i256odzPRYCA3szEDbT8PvCPSgcQ5R75/0",
+   "contractURIResolved": {
+    "name": "nnxyz opticals s2",
+    "image": "ipfs://QmaMQ28ZWKEXjfRfgxF5NGNSAa72aaU8QivB94Sn6uEGge/%20(20).png",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {
+     "0x33b08879f0e79c313aa54b5cd6da5469e2349636f4d3bc5c49261692c7a2fb94": "ipfs://QmfEejNabyYwv8ecq3FVLcj4K8WmnmXBoTBVPDTdrKvAf1/0"
+    },
+    "symbol": "nnxyzop"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": null,
+   "deploy": {
+    "transactionHash": "0xfa6d1ef645174022b0489717ed4e318d0873dbfd8b92c7d31e39a43884afbdc0",
+    "block": 39479295,
+    "time": "2022-11-19T00:22:20Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://optimistic.etherscan.io/address/0xe7df60fd9dec072a01ff72d4b0420e23faf7615b",
+   "sampleTokenId": "0",
+   "openseaSampleUrl": "https://opensea.io/assets/optimism/0xe7df60fd9dec072a01ff72d4b0420e23faf7615b/0"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x1372ce2c2e8b623f6375811931266106df63b4e4",
+   "name": "nnxyz Friends Of Country Air",
+   "symbol": "nnxyzfoca",
+   "standard": "ERC-721",
+   "owner": "0x0000000000000000000000000000000000000000",
+   "totalSupply": 12,
+   "tokenCount": 12,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmWkraN7hp9ontp3g1hpofcUsbvfMqSgX8tgYgaF5aX95i/0",
+   "contractURIResolved": {
+    "name": "nnxyz Friends Of Country Air [Locked]",
+    "description": "",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "symbol": "nnxyzfoca"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x3adad9e8d73ab4c2dc12087c637fcd9386599d6860c3ad0c6c0f79f3e90c0c09",
+    "block": 49823886,
+    "time": "2023-11-11T18:53:31Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x1372ce2c2e8b623f6375811931266106df63b4e4",
+   "sampleTokenId": "0",
+   "openseaSampleUrl": "https://opensea.io/assets/matic/0x1372ce2c2e8b623f6375811931266106df63b4e4/0"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x1695cb79ef1641cec0c0a1528725fef5b44b0dca",
+   "name": "nnxyz 0000",
+   "symbol": "nnxyz 0000",
+   "standard": "ERC-721",
+   "owner": null,
+   "totalSupply": null,
+   "tokenCount": 3,
+   "tokenCountMethod": "mint events (Transfer from 0x0); 0 burned",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x025718a115ebe63d2e9f0355c816fb4b1a852e8d35c783d519821659a03aa125",
+    "block": 26907649,
+    "time": "2022-04-08T23:19:25Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "direct creation by artist",
+    "contract creator is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x1695cb79ef1641cec0c0a1528725fef5b44b0dca",
+   "sampleTokenId": "1",
+   "openseaSampleUrl": "https://opensea.io/assets/matic/0x1695cb79ef1641cec0c0a1528725fef5b44b0dca/1"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x32ad953d36775417ebce3eedaf088ca31f028cae",
+   "name": "nnxyz cringe-eez doodles",
+   "symbol": "nnxyzceez",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 69,
+   "tokenCount": 69,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmcR3cmzc6nEFbwqPTgdnRhvyhrNAeNcyuJR75jNW6r8bR/0",
+   "contractURIResolved": {
+    "name": "nnxyz cringe-eez doodles",
+    "description": "",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzceez",
+    "snapshotUri": "ipfs://QmT7GHysweXegNhCWeVpd2hbCf423ZvrakBW7S56Egtp77/0"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x577bdf0215f87e12600c8860746a3251f7cad59c767dfa0f91cdf0577a996947",
+    "block": 58323787,
+    "time": "2024-06-18T20:30:25Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x32ad953d36775417ebce3eedaf088ca31f028cae",
+   "sampleTokenId": "0"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x386519324f0b6e65fa76c9f15c62ef918965342a",
+   "name": "nnxyz chic city cat club",
+   "symbol": "nnxyzcccc",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 414,
+   "tokenCount": 414,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmRVRDfAh81cBdZ6rg1BHiMxoNAQccEtNtneLoaFCCf3e1/0",
+   "contractURIResolved": {
+    "name": "nnxyz chic city cat club",
+    "description": "Give a home to one of the 9792 cats - nnxyz chic city cat club - no roadmap, no utility ",
+    "image": "ipfs://bafybeicae7zjtdwpexhjhp7d6zl45aj45pv3yf3jx75shhwzyrs27nicku/0.jpg",
+    "social_urls": {
+     "twitter": "https://twitter.com/0000nnxyz",
+     "instagram": "https://www.instagram.com/0000nnxyz/",
+     "notion": "https://nnxyz.notion.site/nnxyz/0000nnxyz-a385ae802ba74c109d809c02375f5e69"
+    },
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzcccc",
+    "snapshotUri": "ipfs://QmVCWi347b32f6FhH4ex5opT59VnT537nCAxfeecm88YCB/0"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0xbd689c076e9159a4dee7f05e1c66b4d7626692686bde7baa74e9c1e350f8e7c1",
+    "block": 50768807,
+    "time": "2023-12-05T11:35:45Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x386519324f0b6e65fa76c9f15c62ef918965342a",
+   "sampleTokenId": "23",
+   "openseaSampleUrl": "https://opensea.io/assets/matic/0x386519324f0b6e65fa76c9f15c62ef918965342a/23"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x5cdf1ccfd250298c252fceb621337bb77d63c345",
+   "name": "nnxyz",
+   "symbol": "nnxyz",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": null,
+   "tokenCount": 8,
+   "tokenCountMethod": "mint events (Transfer from 0x0); 7 burned",
+   "contractURI": "https://api-mainnet.rarible.com/contractMetadata/{address}",
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x1318892802d908255bd5673404eb7dc54c55375d3a93f894439b66549f0d90f5",
+    "block": 27027132,
+    "time": "2022-04-11T23:58:34Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "contract creator is artist",
+    "owner() is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x5cdf1ccfd250298c252fceb621337bb77d63c345",
+   "sampleTokenId": "66971869708281235608242978183358759975370113896863171678736017270563890266113",
+   "openseaSampleUrl": "https://opensea.io/assets/matic/0x5cdf1ccfd250298c252fceb621337bb77d63c345/66971869708281235608242978183358759975370113896863171678736017270563890266113"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x60644a9ef4a438f7b08770f7f857654e8952d8df",
+   "name": "nnxyz cringe-eez doodles",
+   "symbol": "nnxyzceez",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 1970,
+   "tokenCount": 1970,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmYDdktDx4a8Ck6u9mWTtt92UrTfJuPFNJ3cSdEBgLsgci/0",
+   "contractURIResolved": {
+    "name": "nnxyz cringe-eez doodles [Locked]",
+    "description": "",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzceez"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x033e788312783a4c8042d127c92f586693f67a91743cb54677919472932ad63a",
+    "block": 45325042,
+    "time": "2023-07-21T01:36:50Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "owner() is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x60644a9ef4a438f7b08770f7f857654e8952d8df",
+   "sampleTokenId": "0",
+   "openseaSampleUrl": "https://opensea.io/assets/matic/0x60644a9ef4a438f7b08770f7f857654e8952d8df/0"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x6a52cf573642e0199927a1cd426d794be76baa9c",
+   "name": "nnxyz 0000",
+   "symbol": "nnxyz 0000",
+   "standard": "ERC-721",
+   "owner": null,
+   "totalSupply": null,
+   "tokenCount": 0,
+   "tokenCountMethod": "mint events (Transfer from 0x0); 0 burned",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0xa1722db2e3581a917958c696c729bf4c5d73b2fef191aa5a7357fa1cdcbf30b4",
+    "block": 26908372,
+    "time": "2022-04-08T23:46:19Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "direct creation by artist",
+    "contract creator is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x6a52cf573642e0199927a1cd426d794be76baa9c",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x717a5b30838c89b6a238e28498b40bbf4eba7d4b",
+   "name": "nnxyz",
+   "symbol": "",
+   "standard": "ERC-721",
+   "owner": "0x0000000000000000000000000000000000000000",
+   "totalSupply": 0,
+   "tokenCount": 0,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmatVqXLdFhYcB7DapEUTTv6NFUxVZwbde2JNh6T8RdXsu/0",
+   "contractURIResolved": {
+    "name": "nnxyz [Locked]",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "symbol": "",
+    "platform_fee_basis_points": 0,
+    "platform_fee_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "primary_sale_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "trusted_forwarders": []
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x8a256095367d161c4f7c7487eabc82e4fe1f9715509ab9bd35431698bbfe541f",
+    "block": 30700526,
+    "time": "2022-07-14T03:02:03Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x717a5b30838c89b6a238e28498b40bbf4eba7d4b",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x73cc4478c5d3adf01d78d95d774bf4006d48f3a3",
+   "name": "nnxyz abstract",
+   "symbol": "nnxyzstrct",
+   "standard": "ERC-1155",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": null,
+   "tokenCount": 53,
+   "tokenCountMethod": "distinct token ids minted (TransferSingle/TransferBatch from 0x0)",
+   "contractURI": "https://api-mainnet.rarible.com/contractMetadata/{address}",
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x80d05812054913506a80083e2625ef0f20407c62e8d61f6c766e640c21e15a49",
+    "block": 26476668,
+    "time": "2022-03-28T22:15:09Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "contract creator is artist",
+    "owner() is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x73cc4478c5d3adf01d78d95d774bf4006d48f3a3",
+   "sampleTokenId": "66971869708281235608242978183358759975370113896863171678736017270563890266113",
+   "openseaSampleUrl": "https://opensea.io/assets/matic/0x73cc4478c5d3adf01d78d95d774bf4006d48f3a3/66971869708281235608242978183358759975370113896863171678736017270563890266113"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x7b522c8a0c6d0d84a17e660e4f7e9878f91ad16e",
+   "name": "nnxyz abstract",
+   "symbol": "nnxyzabstract",
+   "standard": "ERC-721",
+   "owner": null,
+   "totalSupply": null,
+   "tokenCount": 0,
+   "tokenCountMethod": "mint events (Transfer from 0x0); 0 burned",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x45870e2d6f17b8291e80641d73929aa5d583ea90c3a4dacddc975267a4275841",
+    "block": 26551400,
+    "time": "2022-03-30T20:11:44Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "direct creation by artist",
+    "contract creator is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x7b522c8a0c6d0d84a17e660e4f7e9878f91ad16e",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x84420bd6c3681cb91d3c041daf0b815ba5a35174",
+   "name": "nnxyz Friends Of Country Air",
+   "symbol": "nnxyzfoca",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 12,
+   "tokenCount": 12,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmSYiJy9BZ4xg1ei4TRjwXxhkgE2Xsn8hQLQwe89aADQ9B/0",
+   "contractURIResolved": {
+    "name": "nnxyz Friends Of Country Air",
+    "description": "",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "symbol": "nnxyzfoca",
+    "snapshotUri": "ipfs://QmUZn3rMTyPC62PX3MQJ5k99DT2jtwMZggzNEK4Unt7XZa/0"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x8742ae53608d2d9eff27d5f5518d6cbb1e7684d0d59262a8414fa2da0d37bdc1",
+    "block": 50768132,
+    "time": "2023-12-05T11:11:08Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x84420bd6c3681cb91d3c041daf0b815ba5a35174",
+   "sampleTokenId": "0"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x8672c0a41eee5b69f1e92ed046f1715e26c4ee79",
+   "name": "nnxyz abstract",
+   "symbol": "nnxyzabstract",
+   "standard": "ERC-721",
+   "owner": null,
+   "totalSupply": null,
+   "tokenCount": 0,
+   "tokenCountMethod": "mint events (Transfer from 0x0); 0 burned",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0xefd3312f8d782659eef6c58fac1d601d248c06f1081c2f53ddcd7719e8be4059",
+    "block": 26551425,
+    "time": "2022-03-30T20:12:42Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "direct creation by artist",
+    "contract creator is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0x8672c0a41eee5b69f1e92ed046f1715e26c4ee79",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0xa34d1e82352a245873cc54572beb86a8359bf707",
+   "name": "nnxyz cringe-eez doodles",
+   "symbol": "nnxyzceez",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 0,
+   "tokenCount": 0,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://Qmai57UdN6U7Pp7UwMqdNJJZxirRwQRxcwqunjn4ZabJap/0",
+   "contractURIResolved": {
+    "name": "nnxyz cringe-eez doodles",
+    "description": "",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzceez",
+    "snapshotUri": "ipfs://QmNiRZZDyhpV66Yoi3iLsyyywL9tLGjKc6zH6fGYrKAi8g/0"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0xf8fa5ec7eec4d7aeaf8f8431f07199685e55ae364a87d52cdc6d977189f9af45",
+    "block": 50768654,
+    "time": "2023-12-05T11:30:19Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "owner() is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0xa34d1e82352a245873cc54572beb86a8359bf707",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0xa999271a4058ee3144ed970362318748508ad186",
+   "name": "nnxyz abstract",
+   "symbol": "nnxyzabstract",
+   "standard": "ERC-721",
+   "owner": null,
+   "totalSupply": null,
+   "tokenCount": 0,
+   "tokenCountMethod": "mint events (Transfer from 0x0); 0 burned",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x05076abd329b513c3a7ec677d64c4c5968335c1b0936c1147b33ed50bde10ba8",
+    "block": 26551426,
+    "time": "2022-03-30T20:12:46Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "direct creation by artist",
+    "contract creator is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0xa999271a4058ee3144ed970362318748508ad186",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0xb00096a74fc0d24ee139ad21bea8b1fe904eee93",
+   "name": "nnxyz",
+   "symbol": "",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 0,
+   "tokenCount": 0,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmUoqmrS5skVwCwiY7upTTvFtH8yTkBSBDj78TjnPAk3MT/0",
+   "contractURIResolved": {
+    "name": "nnxyz",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "symbol": "",
+    "platform_fee_basis_points": 0,
+    "platform_fee_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "primary_sale_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "trusted_forwarders": [],
+    "snapshotUri": "ipfs://QmPx6MYMZzTFkNp36xz9H27NXC7S3MEJiGGkYcjMkvjZ5q/0"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x852714952da63ea07bdc380420b4b12314eb5bf3c115715b13d1e6dedef94a23",
+    "block": 58326356,
+    "time": "2024-06-18T22:16:39Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0xb00096a74fc0d24ee139ad21bea8b1fe904eee93",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0xbfdf6e515dbef6e9e6f474867c10302c395b8dd8",
+   "name": "nnxyz chic city cat club",
+   "symbol": "nnxyzcccc",
+   "standard": "ERC-721",
+   "owner": "0x0000000000000000000000000000000000000000",
+   "totalSupply": 415,
+   "tokenCount": 415,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmNbfVXHsEYYW9ti41h14738UaQLsWtnj4QMQmnMe5hhi9/0",
+   "contractURIResolved": {
+    "name": "nnxyz chic city cat club [Locked]",
+    "description": "Give a home to one of the 9792 cats - nnxyz chic city cat club - no roadmap, no utility ",
+    "image": "ipfs://bafybeicae7zjtdwpexhjhp7d6zl45aj45pv3yf3jx75shhwzyrs27nicku/0.jpg",
+    "social_urls": {
+     "twitter": "https://twitter.com/0000nnxyz",
+     "instagram": "https://www.instagram.com/0000nnxyz/",
+     "notion": "https://nnxyz.notion.site/nnxyz/0000nnxyz-a385ae802ba74c109d809c02375f5e69"
+    },
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzcccc"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x3149ad1340e39dfa110e287893f93d69ee5252284e1a1bf52adbe986d1df7526",
+    "block": 30695896,
+    "time": "2022-07-13T23:19:43Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0xbfdf6e515dbef6e9e6f474867c10302c395b8dd8",
+   "sampleTokenId": "0",
+   "openseaSampleUrl": "https://opensea.io/assets/matic/0xbfdf6e515dbef6e9e6f474867c10302c395b8dd8/0"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0xc9cd103578bdec5ffdd235c2db34dc520968dc00",
+   "name": "nnxyz index collection",
+   "symbol": "nnxyzic",
+   "standard": "ERC-721",
+   "owner": "0x0000000000000000000000000000000000000000",
+   "totalSupply": 0,
+   "tokenCount": 0,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmaFXgEtyiXc5aDRX2TjzPgX29og1TBL5UVFXRxwhLWguX/0",
+   "contractURIResolved": {
+    "name": "TRASH",
+    "description": "",
+    "image": "ipfs://QmT95xfuUF7H6Q3E5ofSLZZRyjtqXN1ywv6oQMDvCZjfeN/0.jpg",
+    "seller_fee_basis_points": 9990,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzic"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x66a5b746fec419f4a14febdad38c6944bc11208404c9e5c822107645b5348699",
+    "block": 31416426,
+    "time": "2022-08-02T02:19:38Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "DEFAULT_ADMIN_ROLE held by artist2"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0xc9cd103578bdec5ffdd235c2db34dc520968dc00",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0xd9b66ba086c02c5813d6fbc25b0752f3f0f2585d",
+   "name": "nnxyz index collection",
+   "symbol": "nnxyzic",
+   "standard": "ERC-721",
+   "owner": "0x0000000000000000000000000000000000000000",
+   "totalSupply": 2,
+   "tokenCount": 2,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmZYF74KjQoEtSNQPnjSfdyVFzCgPiqTDYH4Lhi5eLsQrj/0",
+   "contractURIResolved": {
+    "name": "nnxyz index collection [Locked]",
+    "description": "The nnxyz index collection is an open never-ending collection published independently on multiple blockchains. The collection is always expanded by another work as soon as all works from a drop are sold out.\n\nThe collection is planned completely openly. \n\nMint & get Updates:\nhttps://twitter.com/0000nnxyz/status/1554449359135281153\n\nhttps://nnxyz.notion.site/nnxyz-index-collection-e5ec035dd7a54937a905a2a9f2661896",
+    "image": "ipfs://bafybeid4maz673opwde6h5ep56x34zdjz3o6so7zbnk32b5onto6cy6pv4/0.gif",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzic"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x43be0b6df7bda3cae37d7717a9c0d542ff27aef4b1074fc1df2186a397c7b4f1",
+    "block": 31441383,
+    "time": "2022-08-02T17:41:54Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0xd9b66ba086c02c5813d6fbc25b0752f3f0f2585d",
+   "sampleTokenId": "0",
+   "openseaSampleUrl": "https://opensea.io/assets/matic/0xd9b66ba086c02c5813d6fbc25b0752f3f0f2585d/0"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0xf4055eafd3fec28a5e958d150a82a5270a9091c4",
+   "name": "nnxyz pxlpop",
+   "symbol": "nnxyzpxlpp",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": null,
+   "tokenCount": 51,
+   "tokenCountMethod": "mint events (Transfer from 0x0); 0 burned",
+   "contractURI": "https://api-mainnet.rarible.com/contractMetadata/{address}",
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0xe4e46446d3fdbc91478fba12089d6bb0294b13a97bce848e6ca63ca0ac7a48a1",
+    "block": 27285428,
+    "time": "2022-04-18T13:12:00Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "contract creator is artist",
+    "owner() is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0xf4055eafd3fec28a5e958d150a82a5270a9091c4",
+   "sampleTokenId": "66971869708281235608242978183358759975370113896863171678736017270563890266113",
+   "openseaSampleUrl": "https://opensea.io/assets/matic/0xf4055eafd3fec28a5e958d150a82a5270a9091c4/66971869708281235608242978183358759975370113896863171678736017270563890266113"
+  },
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0xfa56cd63c6121926be7bb400918ff34a72648f3e",
+   "name": "nnxyz nifty faces px",
+   "symbol": "nnxyznfpx",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": null,
+   "tokenCount": 209,
+   "tokenCountMethod": "mint events (Transfer from 0x0); 2 burned",
+   "contractURI": "https://api-mainnet.rarible.com/contractMetadata/{address}",
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x0890180120d6697c6969e77d07836dfc31ea57b3aaff20fd18e883e965f37f6e",
+    "block": 27624171,
+    "time": "2022-04-27T04:48:10Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "contract creator is artist",
+    "owner() is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://polygonscan.com/address/0xfa56cd63c6121926be7bb400918ff34a72648f3e",
+   "sampleTokenId": "66971869708281235608242978183358759975370113896863171678736017270563890266113",
+   "openseaSampleUrl": "https://opensea.io/assets/matic/0xfa56cd63c6121926be7bb400918ff34a72648f3e/66971869708281235608242978183358759975370113896863171678736017270563890266113"
+  },
+  {
+   "chain": "base",
+   "chainId": 8453,
+   "address": "0x0f84df25934b176f9927558220f972010fd18c77",
+   "name": "BasedCaps",
+   "symbol": "BSDCPS",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 0,
+   "tokenCount": 0,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0xf1814213a5ef856aaa1fdb0f7f375569168d8e73",
+   "deploy": {
+    "transactionHash": "0x99ca21652cc95e10ce95f443723f5056e5ac68a51045616850d5cc5ed7d670f5",
+    "block": 15898175,
+    "time": "2024-06-17T00:54:57Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+    "source": "base.blockscout.com API v2"
+   },
+   "whyArtist": [
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist",
+    "deploy transaction sent by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://basescan.org/address/0x0f84df25934b176f9927558220f972010fd18c77",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "base",
+   "chainId": 8453,
+   "address": "0x1ce9b41e020c85b0ff0949be15c0a6ad9df2c709",
+   "name": "nnxyz base",
+   "symbol": "nnxyz",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 1,
+   "tokenCount": 1,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmRVdbzfjdzR7hrZZ7RM1jmFwmHL7piegwV8Qfp7fKC1pB/0",
+   "contractURIResolved": {
+    "name": "nnxyz base",
+    "symbol": "nnxyz",
+    "description": "nnxyz",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x76f948e5f13b9a84a81e5681df8682bbf524805e",
+   "deploy": {
+    "transactionHash": "0x009bc82729aa3ca94231978f2d3b8374c7370498bd08429832a8108a57e244b8",
+    "block": 16220713,
+    "time": "2024-06-24T12:06:13Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+    "source": "base.blockscout.com API v2"
+   },
+   "whyArtist": [
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist",
+    "deploy transaction sent by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://basescan.org/address/0x1ce9b41e020c85b0ff0949be15c0a6ad9df2c709",
+   "sampleTokenId": "0",
+   "openseaSampleUrl": "https://opensea.io/assets/base/0x1ce9b41e020c85b0ff0949be15c0a6ad9df2c709/0"
+  },
+  {
+   "chain": "base",
+   "chainId": 8453,
+   "address": "0x712a590f626a9c32cb7186d4595fbd0da2e6a070",
+   "name": "nnxyz",
+   "symbol": "NNXYZFND",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 1,
+   "tokenCount": 1,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0xf1814213a5ef856aaa1fdb0f7f375569168d8e73",
+   "deploy": {
+    "transactionHash": "0xdc172d04e13b6a6cfbc60ee78b69f3a96adaa3c628cee531117fbe870a760513",
+    "block": 15736285,
+    "time": "2024-06-13T06:58:37Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+    "source": "base.blockscout.com API v2"
+   },
+   "whyArtist": [
+    "owner() is artist",
+    "deploy transaction sent by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://basescan.org/address/0x712a590f626a9c32cb7186d4595fbd0da2e6a070",
+   "sampleTokenId": "1",
+   "openseaSampleUrl": "https://opensea.io/assets/base/0x712a590f626a9c32cb7186d4595fbd0da2e6a070/1"
+  },
+  {
+   "chain": "base",
+   "chainId": 8453,
+   "address": "0x8267872711208d5eb81212fc9fd87eab10486626",
+   "name": "nnxyz",
+   "symbol": "nnxyzfed",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 0,
+   "tokenCount": 0,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0xf1814213a5ef856aaa1fdb0f7f375569168d8e73",
+   "deploy": {
+    "transactionHash": "0x2b9a3bb08c89ac961456b8da218c6bdd207af04b8cc4d9b83133a7dde41c5b66",
+    "block": 15762024,
+    "time": "2024-06-13T21:16:35Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+    "source": "base.blockscout.com API v2"
+   },
+   "whyArtist": [
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist",
+    "deploy transaction sent by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://basescan.org/address/0x8267872711208d5eb81212fc9fd87eab10486626",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "base",
+   "chainId": 8453,
+   "address": "0xc7f990188a6a182772eb82a37085411a908de890",
+   "name": "BasedCaps",
+   "symbol": "BasedCaps",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 16,
+   "tokenCount": 16,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "https://arweave.net/YlhUZa8uG4wHZoQGRBZ3q38bCoVI2c0q50U99wgZgtA",
+   "contractURIResolved": {
+    "name": "BasedCaps",
+    "description": "Are you a Hypebeast & craving Klout? BasedCaps are exactly the crazy freaking shh your profile needs - everything else is yesterday",
+    "image": "https://arweave.net/IZ0Rauk0UQbO5xWiGSY5I8xs35k2ZWbJ6PmCyBeiBwA",
+    "fee_recipient": "0x9410Bc26732ed9480833CB3A4a0F377908e261E2",
+    "seller_fee_basis_points": 1000
+   },
+   "contractURIGateway": "original-url",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x7fdfccec6b4a43678d2515905e46f3466226ec426544b65a8e330a601e625432",
+    "block": 15957139,
+    "time": "2024-06-18T09:40:25Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+    "source": "base.blockscout.com API v2"
+   },
+   "whyArtist": [
+    "direct creation by artist",
+    "owner() is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://basescan.org/address/0xc7f990188a6a182772eb82a37085411a908de890",
+   "sampleTokenId": "1",
+   "openseaSampleUrl": "https://opensea.io/assets/base/0xc7f990188a6a182772eb82a37085411a908de890/1"
+  },
+  {
+   "chain": "arbitrum",
+   "chainId": 42161,
+   "address": "0x31b2638abace6e0982ee1e3be4b264088fe1946f",
+   "name": "nnxyz index collection",
+   "symbol": "nnxyzic",
+   "standard": "ERC-721",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": 3,
+   "tokenCount": 3,
+   "tokenCountMethod": "totalSupply()",
+   "contractURI": "ipfs://QmdyAYjmmCv987vTe79qgaUM6ckyyBGyLZG8vbPnaE3XYm/0",
+   "contractURIResolved": {
+    "name": "nnxyz index collection",
+    "description": "The nnxyz index collection is an open never-ending collection published independently on multiple blockchains. The collection is always expanded by another work as soon as all works from a drop are sold out.\n\nThe collection is planned completely openly. \n\nMint & get Updates:\nhttps://twitter.com/0000nnxyz/status/1554449359135281153\n\nhttps://nnxyz.notion.site/nnxyz-index-collection-e5ec035dd7a54937a905a2a9f2661896",
+    "image": "ipfs://QmWiAM3TXPajwfAQGadjU35vS4B7RxuTLA9hUptrR7RvZU/0.gif",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0x7E7336db34290DA67fdf8c7c02e55DdE6C656105",
+    "merkle": {},
+    "symbol": "nnxyzic"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "deploy": {
+    "transactionHash": "0x1679a851153de05d65fcb17421be5601e20bf7c4de17c84e338f301ba027195b",
+    "block": 19271985,
+    "time": "2022-08-03T09:46:22Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "thirdweb factory ProxyDeployed by artist",
+    "contract creator is artist",
+    "owner() is artist",
+    "DEFAULT_ADMIN_ROLE held by artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://arbiscan.io/address/0x31b2638abace6e0982ee1e3be4b264088fe1946f",
+   "sampleTokenId": "0",
+   "openseaSampleUrl": "https://opensea.io/assets/arbitrum/0x31b2638abace6e0982ee1e3be4b264088fe1946f/0"
+  },
+  {
+   "chain": "zora",
+   "chainId": 7777777,
+   "address": "0x4d799e5b1217a436dac87cac0b6dce9e40e15ca8",
+   "name": "nnxyz",
+   "symbol": "",
+   "standard": "ERC-1155",
+   "owner": "0x9410bc26732ed9480833cb3a4a0f377908e261e2",
+   "totalSupply": null,
+   "tokenCount": 3,
+   "tokenCountMethod": "distinct token ids minted (TransferSingle/TransferBatch from 0x0)",
+   "contractURI": "ipfs://bafkreig3w6r456g24avx6oeq3y5wfwdebutiqcxnyzwag2pzxc7gwbyhti",
+   "contractURIResolved": {
+    "name": "nnxyz",
+    "description": "",
+    "image": "ipfs://bafybeihkln3smlsk5m5l7ki5foyd45ooiucnzdk2qk4ihiq3lytcwuc6rm"
+   },
+   "contractURIGateway": "https://ipfs.filebase.io/ipfs/",
+   "creator": null,
+   "deploy": {
+    "transactionHash": "0x13d8b2be391b410e8874306337ad2cf0e0c0bc97ba904e567236a148583277c9",
+    "block": 15783717,
+    "time": "2024-06-13T06:47:53Z",
+    "sender": "0x9410bc26732ed9480833cb3a4a0f377908e261e2"
+   },
+   "whyArtist": [
+    "Zora 1155 factory SetupNewContract by artist",
+    "owner() is artist"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://explorer.zora.energy/address/0x4d799e5b1217a436dac87cac0b6dce9e40e15ca8",
+   "sampleTokenId": "1",
+   "openseaSampleUrl": "https://opensea.io/assets/zora/0x4d799e5b1217a436dac87cac0b6dce9e40e15ca8/1"
+  }
+ ],
+ "sharedContracts": [
+  {
+   "chain": "polygon",
+   "chainId": 137,
+   "address": "0x2953399124f0cbb46d2cbacd8a89cf0599974963",
+   "name": "OpenSea Collections",
+   "symbol": "OPENSTORE",
+   "standard": "ERC-1155",
+   "owner": "0x8ca72e236bc1de2350e12c86c07f66d07c5d2562",
+   "totalSupply": null,
+   "tokenCount": null,
+   "tokenCountMethod": "not counted: shared contract (see holdings for the artist's tokens)",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0x5b3256965e7c3cf26e11fcaf296dfc8807c01073",
+   "deploy": {
+    "transactionHash": "0x63e241edcdd54988d0f7095a9ef2fffff52b8f9bf2ce677b58fda659964ba099",
+    "block": 17852973,
+    "time": "2021-08-11T02:56:07Z",
+    "sender": "0x5b3256965e7c3cf26e11fcaf296dfc8807c01073"
+   },
+   "whyArtist": [
+    "shared storefront; artist tokens identified by creator bits of the token id"
+   ],
+   "sharedContract": true,
+   "explorerUrl": "https://polygonscan.com/address/0x2953399124f0cbb46d2cbacd8a89cf0599974963",
+   "sampleTokenId": null,
+   "note": "Shared storefront; the artist's tokens here are those whose id carries the artist address in the top 160 bits. See holdings.json for the collector's."
+  }
+ ],
+ "platformContracts": [
+  {
+   "chain": "gnosis",
+   "chainId": 100,
+   "address": "0x49de55fba08af88f55eb797a456fdf76b151c8b0",
+   "name": null,
+   "symbol": null,
+   "standard": null,
+   "owner": null,
+   "totalSupply": null,
+   "tokenCount": null,
+   "tokenCountMethod": "not counted: shared contract (see holdings for the artist's tokens)",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": null,
+   "deploy": null,
+   "whyArtist": [
+    "platform contract (Nifty Ink), not the artist's"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://gnosisscan.io/address/0x49de55fba08af88f55eb797a456fdf76b151c8b0",
+   "sampleTokenId": null
+  },
+  {
+   "chain": "gnosis",
+   "chainId": 100,
+   "address": "0xcf964c89f509a8c0ac36391c5460df94b91daba5",
+   "name": "🎨 Nifty.Ink",
+   "symbol": "🎨",
+   "standard": "ERC-721",
+   "owner": "0xa2197a282967dac145e85d15e7960aa30b86b771",
+   "totalSupply": 52443,
+   "tokenCount": null,
+   "tokenCountMethod": "not counted: shared contract (see holdings for the artist's tokens)",
+   "contractURI": null,
+   "contractURIResolved": null,
+   "contractURIGateway": null,
+   "creator": "0xa2197a282967dac145e85d15e7960aa30b86b771",
+   "deploy": {
+    "transactionHash": "0x5f5853c15b9607a70b5ceaa2c79e7875d72af1f8fecac09da6dd8c77abe03ca9",
+    "block": 11296638,
+    "time": "2020-08-03T19:01:35Z",
+    "sender": "0xa2197a282967dac145e85d15e7960aa30b86b771"
+   },
+   "whyArtist": [
+    "platform contract (Nifty Ink), not the artist's"
+   ],
+   "sharedContract": false,
+   "explorerUrl": "https://gnosisscan.io/address/0xcf964c89f509a8c0ac36391c5460df94b91daba5",
+   "sampleTokenId": null
+  }
+ ]
+}
