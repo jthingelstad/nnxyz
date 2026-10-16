@@ -12,13 +12,13 @@ The original nine-work experiment remains intact in `pilot/`, and the 30-work ex
 - `relationship-candidates.json`: title-family neighbors, archived creation neighbors, recorded-stroke-count matches and two color-histogram candidate sets for every artwork. These are candidate links, not completed editorial curation.
 - `measurement-summary.json`: exact totals, collection distributions, image-analysis methods and limitations.
 - `collector-perspective.json`: original collector response and a separately labeled normalization of the spoken transcription. Keep it distinct from AI interpretation and artist intent.
-- `curator-prompt.md`: versioned instructions for the offline worker and future conversational curator.
+- `curator-prompt.md`: versioned instructions for the offline worker.
 - `pilot/sample-selection.json`: nine selected gallery records.
 - `pilot/editorial-drafts.json`: the assistant's visual observations and editorial drafting inputs.
 - `pilot/labels.json`: the nine structured three-layer label records, with evidence, related IDs and draft status.
 - `pilot/approach-comparison.json`: qualitative comparison of image-only text, a fact-heavy caption and the recommended three-layer format. It is not an independent-model or blinded quality experiment.
 - `pilot/contact-sheet.jpg` and `palette-comparison.jpg`: the exact visual comparisons inspected during the study.
-- `pilot/qa-examples.json`: seven illustrative answers for a future conversational curator; these are not a live chat test.
+- `pilot/qa-examples.json`: seven illustrative answers written for a conversational curator that was later dropped; kept as a record.
 - `pilot/review.fragment.html` and `review.html`: a self-contained nine-work label review and its standalone preview. This is a content review, not the production gallery design.
 - `pilot/verification.json`: source/data checks and browser checks performed on this pilot.
 - `recommendation.md`: findings, proposed whole-collection workflow and live curator boundaries.
