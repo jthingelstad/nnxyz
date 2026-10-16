@@ -28,9 +28,10 @@ The first nnxyz drawing in the family was a gift, and it came before the
 first purchase. On April 25, 2022, the artist minted "200 nifties," the
 drawing made to mark two hundred inks on the board, straight into Jamie's
 wallet. nnxyz gave the milestone pieces to the collectors who were paying
-attention, and by late April Jamie was one of them. He bought his first nnxyz
-inks on May 10, and the same day two smaller wallets, Tyler's and Mazie's,
-each bought three. A day later he wrote: "I'm the top collector on Nifty Ink.
+attention, and by late April Jamie was one of them. He had bought his first nnxyz
+ink, Nifty Faces #109, on April 14, and on May 10 he bought the three summer
+figures for a single xDai each; the same day two smaller wallets, Tyler's and
+Mazie's, each bought three. A day later he wrote: "I'm the top collector on Nifty Ink.
 I just have so much fun here." On May 23 the artist minted New Nifty on the
 Block #100 into all three family wallets, unpaid, and on June 20 did the same
 with "300 nifties." The milestones of the artist's year went to the family as

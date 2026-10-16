@@ -258,8 +258,13 @@ clutter down, not to the project page.
   transfer of every owned Nifty Ink work into a family wallet (date, wallet,
   kind, price), the source for "collected on" facts on artwork pages.
 - `tools/room-review-sheet.py` writes a room's review sheet.
-- Next: Rawblocks, Abstract, Other nnxyz and Scrimshaw rooms; the story
-  pages; artwork-page facts; audio re-recording on the Mac.
+- Rawblocks (four rooms), Abstract (two), Other nnxyz (two) and Scrimshaw
+  (one) rewritten the same way, with their wing introductions. All 28 rooms
+  now carry the depth-pass voice and have `tour.audioStale` set; the audio
+  tour is hidden on every room until the Mac re-records it.
+- Next: the story pages under `/story/`; artwork-page "collected on" facts
+  from `collector-acquisitions.json`; notes/about revisions; welcome text;
+  audio re-recording on the Mac; QA and publish.
 
 ## The story layer (added October 16, 2026)
 
