@@ -126,24 +126,33 @@ export function initTour() {
   // Safari ignores <link rel=prefetch>, and on a phone a new network source
   // can take seconds to start; a segment is about 100 to 300 KB. A segment
   // still loading, or one that failed, plays from the network as before.
-  const loading = new Map<string, Promise<void>>();
+  const loading = new Map<string, AbortController>();
   const ready = new Map<string, string>();
   const fetchSegment = (src: string) => {
     if (loading.has(src)) return;
-    loading.set(
-      src,
-      fetch(src)
-        .then((response) => {
-          if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          return response.blob();
-        })
-        .then((blob) => {
-          if (loading.has(src)) ready.set(src, URL.createObjectURL(blob));
-        })
-        .catch(() => {
-          loading.delete(src);
-        }),
-    );
+    const controller = new AbortController();
+    loading.set(src, controller);
+    fetch(src, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.blob();
+      })
+      .then((blob) => {
+        if (loading.get(src) === controller)
+          ready.set(src, URL.createObjectURL(blob));
+      })
+      .catch(() => {
+        if (loading.get(src) === controller) loading.delete(src);
+      });
+  };
+  // Cancel the fetches still under way, so a segment that has to stream is
+  // not left waiting behind them; they start again once it plays.
+  const hush = () => {
+    for (const [src, controller] of loading)
+      if (!ready.has(src)) {
+        controller.abort();
+        loading.delete(src);
+      }
   };
   const spokenFrom = (index: number) =>
     stops
@@ -164,6 +173,7 @@ export function initTour() {
       if (!keep.has(src)) {
         const url = ready.get(src);
         if (url) URL.revokeObjectURL(url);
+        else loading.get(src)?.abort();
         ready.delete(src);
         loading.delete(src);
       }
@@ -195,7 +205,10 @@ export function initTour() {
       // A segment streaming from the network has the connection to itself
       // until it plays; one already in memory lets the next ones load now.
       if (url) preload(index + 1);
-      else streaming = index;
+      else {
+        hush();
+        streaming = index;
+      }
     } else {
       preload(index + 1);
       release(index);
@@ -295,12 +308,19 @@ export function initTour() {
     play(0);
     toggle.focus({ preventScroll: true });
   });
-  // Fetch the first segments as soon as the visitor shows interest. A touch
-  // gives no warning before its click, and a fetch begun then would only
-  // compete with the first segment's own stream.
-  const warm = () => preload(0);
-  start.addEventListener('pointerenter', warm, { once: true });
-  start.addEventListener('focus', warm, { once: true });
+  // Fetch the first segments as soon as the visitor shows interest: a mouse
+  // or pen hovering, or keyboard focus. A touch fires pointerenter and focus
+  // only just before its click, and a fetch begun then would hold up the
+  // first segment's own stream (eight seconds on a slow phone connection).
+  const warm = () => {
+    if (current < 0) preload(0);
+  };
+  start.addEventListener('pointerenter', (event) => {
+    if (event.pointerType !== 'touch') warm();
+  });
+  start.addEventListener('focus', () => {
+    if (start.matches(':focus-visible')) warm();
+  });
   player.hidden = false;
   start.hidden = false;
 }
