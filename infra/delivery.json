@@ -143,6 +143,18 @@
                     },
                     {
                       "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/audio/*"
+                    },
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/onchain/images/*"
+                    },
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/onchain/animations/*"
+                    },
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/onchain/originals/*"
+                    },
+                    {
+                      "Fn::Sub": "arn:${AWS::Partition}:s3:::${SiteBucket}/onchain/records/*"
                     }
                   ]
                 }

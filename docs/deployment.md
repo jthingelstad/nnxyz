@@ -40,8 +40,9 @@ deploy cannot replace artwork. The list in that template must match
 checks this), and a new prefix only protects the bucket once the delivery
 stack is updated with a reviewed change set. The `audio/` prefix for the
 audio tour (October 15, 2026) was added to the template with the site
-change; apply the change set to the delivery stack to bring the deployed
-policy in line. `tools/validate-site.py` fails the build if
+change, and the four `onchain/` prefixes for After Nifty Ink (October 16,
+2026) likewise; apply the change set to the delivery stack to bring the
+deployed policy in line. `tools/validate-site.py` fails the build if
 any page references a media URL missing from `data/media.json`, or if media
 files appear in `dist/`.
 
