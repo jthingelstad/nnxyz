@@ -269,6 +269,13 @@ clutter down, not to the project page.
   its media: the Mac fetches the sources, generates `media/onchain/` and
   publishes (HANDOFF addendum); until then the wing is absent and the build is
   the same 698 pages.
+- The census: `curation/research/onchain/census.json` (tools/build-census.py)
+  groups the artist's 43 contracts on eight chains into 18 collections with
+  works, 13 of which the collector holds from, and `/catalogue/` shows it on
+  the site: Nifty Ink by series, the held collections with links to their
+  rooms, the five not held (i was famous and lord of the inks, objkt Paint
+  98, hic et nunc, OpenLike, BasedCaps), and the shared contracts. Rarible's
+  shared contracts (Rari Masks) remain to be scanned on the Mac.
 - Next: the story pages under `/story/`; artwork-page "collected on" facts
   from `collector-acquisitions.json`; notes/about revisions; welcome text;
   audio re-recording on the Mac; QA and publish.

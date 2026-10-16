@@ -1,0 +1,142 @@
+---
+// Every collection nnxyz made, on every chain searched, against what the
+// collector holds. Built from curation/research/onchain/census.json by
+// tools/build-census.py; this page shows the record and links to the rooms.
+import Layout from '../layouts/Layout.astro';
+import census from '../../curation/research/onchain/census.json';
+import { wings, exhibitionPath, wingPath } from '../lib/exhibitions';
+const roomTitle = (id: string | null) => {
+  if (!id) return null;
+  const wing = wings.find((w) => w.id === id);
+  if (wing) return { href: wingPath(id), title: wing.title };
+  const room = wings.flatMap((w) => w.rooms).find((r) => r.id === id);
+  return room ? { href: exhibitionPath(room.id), title: room.title } : null;
+};
+const chainName: Record<string, string> = {
+  ethereum: 'Ethereum',
+  optimism: 'Optimism',
+  polygon: 'Polygon',
+  arbitrum: 'Arbitrum',
+  base: 'Base',
+  zora: 'Zora',
+  fantom: 'Fantom',
+  tezos: 'Tezos',
+};
+const held = census.collections.filter((c) => c.heldWorks > 0);
+const notHeld = census.collections.filter(
+  (c) => c.heldWorks === 0 && c.tokensMinted > 0,
+);
+const inkWings = census.niftyInk.series.map((s) => ({
+  ...s,
+  ...roomTitle(s.id),
+}));
+---
+
+<Layout
+  title="The collections of nnxyz — The nnxyz Rooms"
+  description="Every collection nnxyz made, on every chain searched, with what this collection holds from each."
+>
+  <article class="text-page catalogue-page">
+    <h1>The collections of nnxyz</h1>
+    <p>
+      Everything the artist is known to have published, on every chain the
+      research searched, and what this collection holds from each. The record is
+      the chain’s own: {census.totals.artistContracts} contracts created or
+      owned by the artist’s addresses, {census.totals.collectionsWithWorks} of
+      them with works minted, and the collector holding work from{' '}
+      {census.totals.collectionsHeld}. Everything held is on the site,{' '}
+      {census.totals.worksOnSite} works in all.
+    </p>
+    <h2>Nifty Ink</h2>
+    <p>
+      The drawing board on Gnosis, where it began. The artist created{' '}
+      {census.niftyInk.inksCreated} inks between October 2021 and December 2024;
+      the collector holds {census.niftyInk.inksOwned} of them, in{' '}
+      {census.niftyInk.editionsOwned} editions, and every one hangs in the
+      rooms. {census.niftyInk.note}
+    </p>
+    <ul class="catalogue-list">
+      {inkWings.map((s) => (
+        <li>
+          <a href={s.href}>{s.title}</a>: {s.owned} works
+        </li>
+      ))}
+    </ul>
+    <h2>Collections the collector holds work from</h2>
+    {held.map((c) => {
+      const room = roomTitle(c.room);
+      return (
+        <section class="catalogue-entry">
+          <h3>{c.title}</h3>
+          <p class="catalogue-meta">
+            {c.year} · {c.tokensMinted} tokens minted · {c.heldWorks} held
+            {c.shownWorks < c.heldWorks && ` (${c.shownWorks} distinct works)`}
+            {room && (
+              <>
+                {' '}
+                · <a href={room.href}>{room.title}</a>
+              </>
+            )}
+          </p>
+          <p>{c.note}</p>
+          <ul class="catalogue-contracts">
+            {c.contracts.map((k) => (
+              <li>
+                <a href={k.explorerUrl}>{chainName[k.chain]}</a>
+                {k.from && ` · ${k.from}`}
+                {k.tokens
+                  ? ` · ${k.tokens} ${k.standard === 'FA2' ? 'tokens' : 'minted'}`
+                  : ' · empty'}
+                {k.held ? ` · ${k.held} held` : ''}
+              </li>
+            ))}
+          </ul>
+        </section>
+      );
+    })}
+    <h2>Collections not in this collection</h2>
+    <p>
+      The artist’s remaining collections, listed so the record is whole. Links
+      go to the contract on its chain.
+    </p>
+    {notHeld.map((c) => (
+      <section class="catalogue-entry">
+        <h3>{c.title}</h3>
+        <p class="catalogue-meta">
+          {c.year} · {c.tokensMinted} tokens minted
+        </p>
+        <p>{c.note}</p>
+        <ul class="catalogue-contracts">
+          {c.contracts
+            .filter((k) => k.tokens)
+            .map((k) => (
+              <li>
+                <a href={k.explorerUrl}>{chainName[k.chain]}</a>
+                {k.from && ` · ${k.from}`} · {k.tokens}{' '}
+                {k.standard === 'FA2' ? 'tokens' : 'minted'}
+              </li>
+            ))}
+        </ul>
+      </section>
+    ))}
+    <h2>Shared contracts</h2>
+    <p>
+      Work the artist minted on other people’s contracts, where the census is
+      only as good as the scan.
+    </p>
+    {census.sharedContracts.map((c) => (
+      <section class="catalogue-entry">
+        <h3>{c.title}</h3>
+        <p class="catalogue-meta">{c.year}</p>
+        <p>{c.note}</p>
+      </section>
+    ))}
+    <p class="catalogue-method">
+      Chains searched: {census.chainsSearched.join(', ')}. Contracts count as
+      the artist’s when an artist address created them, owns them or holds their
+      admin role; holdings are net transfers into the collector’s wallets. The
+      research files under curation/research/onchain/ in the repository hold
+      every transaction and token behind this page.
+    </p>
+  </article>
+</Layout>

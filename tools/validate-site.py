@@ -83,8 +83,8 @@ def main():
     retired += json.loads((ROOT / "curation/abstract/exhibitions.json").read_text())["collections"]
     redirects = {"collections/nnxyz-other/index.html", "collections/scrimshaw/index.html"}
     redirects |= {f"galleries/{g['id']}/index.html" for c in retired for g in c["galleries"]}
-    # 6 utility pages (home, about, notes, map, screen saver, 404) and the entrances.
-    assert len(pages) == len(gallery) + len(abstract) + len(onchain) + len(rooms) + len(redirects) + 6 + entrances, (
+    # 7 utility pages (home, about, notes, map, catalogue, screen saver, 404) and the entrances.
+    assert len(pages) == len(gallery) + len(abstract) + len(onchain) + len(rooms) + len(redirects) + 7 + entrances, (
         "Missing generated routes"
     )
     hung = [w["artworkId"] for room in rooms for c in room["chapters"] for w in c["works"]]

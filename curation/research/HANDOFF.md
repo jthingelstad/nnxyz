@@ -239,3 +239,22 @@ identity:
 
 Until step 4 the site builds without the wing (698 pages) and CI stays green.
 `ONCHAIN_PREVIEW=1 npm run build` shows it locally from `media/`.
+
+## Addendum, October 16 (evening): close the census
+
+`curation/research/onchain/census.json` (tools/build-census.py) now lists every
+collection against the holdings. Two scans are still missing on the Mac side:
+
+1. **Rarible shared contracts.** The Rari Masks of December 2021 and anything
+   else lazy-minted there: Ethereum Rarible ERC-721 `0xF6793dA657495ffeFF9Ee6350824910Abc21356C`
+   and ERC-1155 `0xd07dc4262BCDbf85190C01c996b4C06a461d2430`, and Rarible's
+   Polygon contracts. Find token ids whose creator is an artist address (the
+   Rarible `Creators` event or the token's `creators()`), then the balances of
+   the three collector wallets. Write `rarible.json` beside the others with the
+   same shape as holdings.json, and rerun `tools/build-census.py`.
+2. **Fantom balances** are already zero (fantom.json); nothing to do.
+
+If any Rarible token is held, add it to `data/onchain-works.json` as the
+recovery did (image from the token URI, hash, acquisition), rerun
+`tools/build-onchain-catalog.py`, and the wing will need a third room once the
+count passes 60; say so and the cloud session will write it.

@@ -10,7 +10,8 @@ import sharp from 'sharp';
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 // The largest animation is 3243 x 4740 over 101 frames; lift sharp's default
 // pixel limit for it.
-const open = (input, options = {}) => sharp(input, { limitInputPixels: false, ...options });
+const open = (input, options = {}) =>
+  sharp(input, { limitInputPixels: false, ...options });
 const catalog = JSON.parse(await fs.readFile('data/onchain.json', 'utf8'));
 const output = 'media/onchain';
 for (const dir of ['images', 'originals', 'records', 'animations'])
