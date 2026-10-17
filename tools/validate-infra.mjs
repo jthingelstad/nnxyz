@@ -63,6 +63,14 @@ assert.equal(
   'redirect-to-https',
 );
 assert.equal(site.Resources.CachePolicy.Properties.CachePolicyConfig.MinTTL, 0);
+// The access log keeps two weeks and never records who made a request.
+const accessLog = site.Resources.AccessLogDelivery.Properties.RecordFields;
+assert.ok(accessLog.includes('time-to-first-byte'));
+assert.ok(
+  !accessLog.some((field) => /^c-ip|x-forwarded-for|cs\(Cookie\)/.test(field)),
+  'The access log records no client addresses or cookies',
+);
+assert.equal(site.Resources.AccessLogGroup.Properties.RetentionInDays, 14);
 for (const [name, allowed] of [
   ['BuildRole', ['s3:GetObject']],
   [

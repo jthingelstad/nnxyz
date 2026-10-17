@@ -97,6 +97,25 @@ npm run test:ci-browser
 
 Install Chromium once with `npx playwright install chromium`, or set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH`. Browser evidence is saved under `/tmp/nnxyz-gallery-qa`, and CI retains it for seven days. A full browser run on localhost or the CloudFront hostname sends no Tinylytics hits. Live-domain QA must intercept the analytics script and avoid real kudos writes.
 
+## Access log
+
+The `nnxyz-site` stack sends the CloudFront access log to the CloudWatch log
+group `/nnxyz/web-access`, kept for 14 days (October 16, 2026). Each record
+is JSON with the time, method, path, status, bytes, byte range, time taken,
+time to first byte, cache result, edge location, protocol and user agent. It
+records no client IP addresses or cookies. Records arrive a few minutes after
+the request. Query it with CloudWatch Logs Insights (times are UTC), for
+example the audio tour's requests:
+
+```
+fields @timestamp, `cs-uri-stem`, `sc-status`, `sc-range-start`, `sc-range-end`, `time-to-first-byte`, `time-taken`, `x-edge-result-type`, `cs(User-Agent)`
+| filter `cs-uri-stem` like '/audio/'
+| sort @timestamp desc
+```
+
+The log shows what the CDN served and how fast. It cannot show what a
+browser did with it, such as how long a phone took to start playing.
+
 ## DNS and HTTPS
 
 At the DNS provider for `thingelstad.xyz`:
