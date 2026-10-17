@@ -71,6 +71,13 @@ assert.ok(
   'The access log records no client addresses or cookies',
 );
 assert.equal(site.Resources.AccessLogGroup.Properties.RetentionInDays, 14);
+// A run of server errors reaches the projects-ops-alerts queue.
+const alarm = site.Resources.Distribution5xxAlarm.Properties;
+assert.equal(alarm.MetricName, '5xxErrorRate');
+assert.match(
+  alarm.AlarmActions[0]['Fn::Sub'],
+  /:weekly-thing-librarian-alarms$/,
+);
 for (const [name, allowed] of [
   ['BuildRole', ['s3:GetObject']],
   [
