@@ -1,11 +1,13 @@
 // The story pages: long-form background on Nifty Ink, the collector, the
-// artist's project, the year 2022 and the artist's own words. Each page is a
+// artist's project, the year 2022, the collector's fan art and the artist's
+// own words. Each page is a
 // Markdown file under curation/story/ with a short front matter block; this
 // module parses the subset of Markdown those files use (paragraphs, ##
 // headings, > quotes, - lists, links, emphasis) so the pages, llms-full.txt
 // and the tests all read the same text. Nothing here is fetched or inferred.
 import timeline from '../../curation/story/timeline-2022.json';
 import factsFile from '../../curation/story/facts.json';
+import worksFile from '../../curation/story/works.json';
 
 export interface StoryPage {
   slug: string;
@@ -19,7 +21,15 @@ export interface StoryPage {
   sources: string[];
 }
 export type StoryBlock =
-  { type: 'html'; html: string } | { type: 'month'; month: string };
+  | { type: 'html'; html: string }
+  | { type: 'month'; month: string }
+  | { type: 'work'; inkId: string };
+
+// Drawings outside the collection that a story page shows with {{work <inkId>}}.
+export type StoryWork = (typeof worksFile.works)[number];
+export const storyWorks = new Map<string, StoryWork>(
+  worksFile.works.map((work) => [work.inkId, work]),
+);
 
 // Every Markdown page in curation/story/ except its README.
 const files = import.meta.glob<string>(
@@ -108,6 +118,15 @@ export function render(body: string): StoryBlock[] {
     const month = text.match(/^\{\{month (\d{4}-\d{2})\}\}$/);
     if (month) {
       blocks.push({ type: 'month', month: month[1] });
+      continue;
+    }
+    const work = text.match(/^\{\{work (\w+)\}\}$/);
+    if (work) {
+      if (!storyWorks.has(work[1]))
+        throw new Error(
+          `No story work ${work[1]} in curation/story/works.json`,
+        );
+      blocks.push({ type: 'work', inkId: work[1] });
       continue;
     }
     const heading = text.match(/^(#{2,3}) (.+)$/);

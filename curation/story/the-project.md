@@ -1,7 +1,7 @@
 ---
 title: The project
 slug: the-project
-order: 3
+order: 4
 kind: prose
 summary: Three years on the board, four series and a closing, and what the artist made afterwards on other chains.
 sources:

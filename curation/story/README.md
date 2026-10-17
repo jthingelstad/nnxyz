@@ -1,6 +1,6 @@
 # The story layer
 
-The five pages under `/story/` and the per-work facts woven into the artwork
+The six pages under `/story/` and the per-work facts woven into the artwork
 pages. Built on October 16, 2026 from the research under `curation/research/`
 (the drafts in `curation/research/story/` and `project-page-draft.md` were the
 starting point and are kept as records).
@@ -11,6 +11,8 @@ starting point and are kept as records).
 | `the-collector.md`       | Jamie Thingelstad's story in his words and the ledger.                                                                                                     | written                                          |
 | `the-project.md`         | The artist's three years, the closing and the later collections.                                                                                           | written                                          |
 | `2022.md`                | The year month by month; `{{month YYYY-MM}}` lines place the record blocks.                                                                                | written; blocks from `timeline-2022.json`        |
+| `fan-art.md`             | The collector's nnxyz fan art #0001 and the artist's like; `{{work <inkId>}}` places the replayed drawing.                                                 | written                                          |
+| `works.json`             | Drawings outside the collection shown on a story page, pinned to the archive.                                                                               | written; media from `tools/build-story-media.py` |
 | `in-the-artists-words.md`| The introduction; the page renders `words.json` after it.                                                                                                  | written                                          |
 | `facts.json`             | Per Nifty Ink work: when and how it reached the collector (first inbound transfer) and the artist's post announcing it (matched by the drawing's link). | `python3 tools/build-story-facts.py`             |
 | `timeline-2022.json`     | Month counts from the ledger, the archive and the posts, plus the dated events the 2022 page names, each with its record.                                 | `python3 tools/build-story-facts.py`             |

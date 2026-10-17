@@ -1,7 +1,7 @@
 ---
 title: In the artist's words
 slug: in-the-artists-words
-order: 5
+order: 6
 kind: words
 summary: The artist's bios and thirty posts, verbatim and dated, on the board, the burn, the index collection and what art is for.
 sources:

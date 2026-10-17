@@ -40,6 +40,9 @@ const current = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
 const gallery = JSON.parse(await fs.readFile('data/gallery.json', 'utf8'));
 const abstract = JSON.parse(await fs.readFile('data/abstract.json', 'utf8'));
 const onchain = JSON.parse(await fs.readFile('data/onchain.json', 'utf8'));
+const { works: storyWorks } = JSON.parse(
+  await fs.readFile('curation/story/works.json', 'utf8'),
+);
 const onchainExtension = {
   'image/gif': 'gif',
   'image/jpeg': 'jpg',
@@ -63,6 +66,14 @@ const expected = [
     `png/${inkId}.png`,
     `records/${inkId}.metadata.json`,
     `records/${inkId}.provenance.json`,
+    ...current.rasterWidths.map((width) => `raster/${inkId}-${width}.webp`),
+  ]),
+  // Drawings outside the collection shown on the story pages
+  // (curation/story/works.json): the same keys a gallery drawing has for its
+  // vectors and WebPs.
+  ...storyWorks.flatMap(({ inkId }) => [
+    `art/${inkId}.svg`,
+    `art/display/${inkId}.svg`,
     ...current.rasterWidths.map((width) => `raster/${inkId}-${width}.webp`),
   ]),
   ...abstract.artworks.flatMap(({ id }) => [

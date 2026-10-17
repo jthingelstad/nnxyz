@@ -40,8 +40,8 @@ class StoryPageTests(unittest.TestCase):
         self.words = json.loads((STORY / "words.json").read_text())
         self.gallery = json.loads((ROOT / "data/gallery.json").read_text())
 
-    def test_five_pages_with_distinct_order_titles_and_summaries(self):
-        self.assertEqual(len(self.pages), 5)
+    def test_six_pages_with_distinct_order_titles_and_summaries(self):
+        self.assertEqual(len(self.pages), 6)
         orders, titles = [], []
         for path in self.pages:
             meta, body = front_matter(path)
@@ -51,8 +51,8 @@ class StoryPageTests(unittest.TestCase):
             orders.append(int(meta["order"]))
             titles.append(meta["title"])
             self.assertGreater(len(body.split()), 150, f"{path.name}: too short to be a page")
-        self.assertEqual(sorted(orders), list(range(1, 6)))
-        self.assertEqual(len(set(titles)), 5)
+        self.assertEqual(sorted(orders), list(range(1, 7)))
+        self.assertEqual(len(set(titles)), 6)
 
     def test_timeline_page_names_every_month_once_and_the_data_has_them(self):
         page = next(p for p in self.pages if front_matter(p)[0].get("kind") == "timeline")
@@ -98,6 +98,23 @@ class StoryPageTests(unittest.TestCase):
         for quote in quotes:
             self.assertEqual(quote["text"], source[quote["id"]])
             self.assertTrue(quote["printed"])
+
+    def test_story_works_are_placed_once_and_have_their_media(self):
+        works = json.loads((STORY / "works.json").read_text())["works"]
+        media = json.loads((ROOT / "data/media.json").read_text())
+        placed = re.findall(
+            r"^\{\{work (\w+)\}\}$",
+            "\n".join(p.read_text() for p in self.pages),
+            re.M,
+        )
+        self.assertEqual(sorted(placed), sorted(w["inkId"] for w in works))
+        gallery = {w["inkId"] for w in self.gallery}
+        for work in works:
+            self.assertNotIn(work["inkId"], gallery)
+            keys = [f"art/{work['inkId']}.svg", f"art/display/{work['inkId']}.svg"]
+            keys += [f"raster/{work['inkId']}-{w}.webp" for w in media["rasterWidths"]]
+            for key in keys:
+                self.assertTrue(key in media["objects"], key)
 
     def test_no_other_family_member_is_named_anywhere_on_the_site(self):
         for path in SITE_TEXT:
