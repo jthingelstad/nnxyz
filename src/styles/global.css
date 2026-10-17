@@ -2086,8 +2086,39 @@ body:has(.enlargement[open]) {
   height: 40px;
 }
 .tour-player[data-tour-state='playing'] .when-paused,
-.tour-player:not([data-tour-state='playing']) .when-playing {
+.tour-player:not([data-tour-state='playing']) .when-playing,
+.tour-player:not([data-tour-loading]) .when-loading,
+.tour-player[data-tour-loading] .when-playing {
   display: none;
+}
+/* Waiting for a segment's first sound: a turning ring on the toggle and a
+   pulse on the progress line, so a slow start does not look like a stop. */
+.when-loading {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border);
+  border-top-color: var(--text);
+  border-radius: 50%;
+  animation: tour-spin 0.9s linear infinite;
+}
+.tour-player[data-tour-loading] .tour-progress {
+  animation: tour-pulse 1.2s ease-in-out infinite alternate;
+}
+@keyframes tour-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes tour-pulse {
+  to {
+    opacity: 0.35;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .when-loading,
+  .tour-player[data-tour-loading] .tour-progress {
+    animation: none;
+  }
 }
 .tour-status {
   flex: 1 1 auto;

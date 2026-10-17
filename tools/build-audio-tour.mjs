@@ -1,6 +1,6 @@
 // Audio tour: one MP3 per spoken segment of every room, rendered with OpenAI
 // text to speech using the voice the collector chose (curation/voice/voice.json)
-// and then mastered (MASTERING below) with the segment's cover embedded.
+// and then mastered (MASTERING below).
 //
 //   node --env-file=.env tools/build-audio-tour.mjs [--dry-run] [--room <id>] [--concurrency <n>]
 //
@@ -35,7 +35,12 @@ const run = promisify(execFile);
 // (wt-builder src/server/integrations/audio.ts): leading silence trimmed to
 // 0.1 s and trailing to 0.15 s, an 80 Hz highpass under the voice, two-pass
 // loudnorm to -16 LUFS / -1.5 dBTP applied linearly, and 44.1 kHz mono MP3 at
-// 128 kbps with ID3v2.3 tags, an Info header and the cover embedded.
+// 128 kbps with ID3v2.3 tags and an Info header.
+//
+// No cover is embedded. Chromium reads an MP3 with an attached picture to
+// the end before it plays, so a streamed segment waited on its whole file
+// (3 s instead of 0.4 s on a 1.6 Mbps link); the lock screen takes its
+// picture from the page instead (src/lib/tour.ts).
 //
 // A segment is mastered alone, not as one programme, and speech from text to
 // speech peaks some 17 dB over its loudness, so the gain to -16 LUFS would
@@ -47,7 +52,7 @@ const run = promisify(execFile);
 // linear. Changing any of this needs a new id: every segment is then
 // re-mastered under a new key.
 export const MASTERING = {
-  id: 'podcast-16lufs-128k-1',
+  id: 'podcast-16lufs-128k-nocover-1',
   trim: 'silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.1,areverse,silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.15,areverse,highpass=f=80',
   loudnorm: 'loudnorm=I=-16:TP=-1.5:LRA=11',
   targetLUFS: -16,
@@ -58,8 +63,8 @@ export const MASTERING = {
     'aresample=96000,alimiter=limit=0.708:attack=1:release=50:level=0:latency=1,aresample=24000',
   encode: ['-ar', '44100', '-ac', '1', '-c:a', 'libmp3lame', '-b:a', '128k'],
 };
-// Covers: the work a segment is about, square on white, embedded in its MP3
-// and shown on the lock screen by the site's player. Published write-once, so
+// Covers: the work a segment is about, square on white, shown on the lock
+// screen by the site's player (no longer embedded in the MP3). Published write-once, so
 // a change to the cover rendering needs a new prefix.
 export const COVER_PREFIX = 'audio/covers/';
 const COVER_SIZE = 480;
@@ -247,9 +252,9 @@ const lastJson = (text) =>
   JSON.parse(text.slice(text.lastIndexOf('{'), text.lastIndexOf('}') + 1));
 
 // Measure, raise and limit, measure again, then one linear loudnorm and one
-// encode with the cover as the attached picture. Source tags are dropped and
+// encode. Source tags are dropped and
 // the encoder version is left out, so the same inputs give the same bytes.
-export async function master(source, cover, tags, out) {
+export async function master(source, tags, out) {
   const ffmpeg = (args) =>
     run('ffmpeg', ['-hide_banner', '-nostats', '-threads', '1', ...args], {
       maxBuffer: 1 << 24,
@@ -300,23 +305,11 @@ export async function master(source, cover, tags, out) {
       '-y',
       '-i',
       source,
-      '-i',
-      cover,
       '-map',
       '0:a',
-      '-map',
-      '1:v',
       '-af',
       `${chain},${second}`,
       ...MASTERING.encode,
-      '-c:v',
-      'copy',
-      '-disposition:v',
-      'attached_pic',
-      '-metadata:s:v',
-      'title=Album cover',
-      '-metadata:s:v',
-      'comment=Cover (front)',
       '-map_metadata',
       '-1',
       ...Object.entries(tags).flatMap(([name, value]) => [
@@ -479,8 +472,8 @@ async function main() {
   const key = process.env.OPENAI_API_KEY;
   if (!key && speak) throw new Error('OPENAI_API_KEY is not set');
 
-  // Covers first: every segment waits on its cover, and a cover is shared by
-  // the segments about the same work.
+  // Every segment's cover is made (or found published) for the lock screen;
+  // a cover is shared by the segments about the same work.
   const covers = new Map();
   const coverFile = (item) => {
     if (!covers.has(item.coverKey)) {
@@ -565,12 +558,8 @@ async function main() {
           await fs.writeFile(source, bytes);
           spoken = { requestId, generatedAt: new Date().toISOString() };
         }
-        const loudness = await master(
-          source,
-          await coverFile(item),
-          item.tags,
-          file,
-        );
+        await coverFile(item);
+        const loudness = await master(source, item.tags, file);
         const bytes = await fs.readFile(file);
         made.push({
           roomId: item.roomId,

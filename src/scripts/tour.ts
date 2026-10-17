@@ -37,6 +37,7 @@ export function initTour() {
   const position = player.querySelector<HTMLElement>('[data-tour-position]')!;
   const progress = player.querySelector<HTMLElement>('[data-tour-progress]')!;
   const time = player.querySelector<HTMLElement>('[data-tour-time]')!;
+  const announcer = player.querySelector<HTMLElement>('[data-tour-announce]')!;
   const total = stops.reduce((n, stop) => n + stop.seconds, 0);
   const before = stops.map((_, i) =>
     stops.slice(0, i).reduce((n, stop) => n + stop.seconds, 0),
@@ -60,10 +61,42 @@ export function initTour() {
     });
   };
 
+  // Loading: a spoken segment asked to play that has not made a sound yet,
+  // or one that stopped to buffer. Shown only after a moment, so a segment
+  // already in memory does not flash it.
+  let waiting = false;
+  let loadingTimer: ReturnType<typeof setTimeout> | undefined;
+  const label = () =>
+    toggle.setAttribute(
+      'aria-label',
+      !playing ? 'Resume tour' : waiting ? 'Loading, pause tour' : 'Pause tour',
+    );
+  const setLoading = (on: boolean) => {
+    if (on) {
+      if (!waiting && !loadingTimer)
+        loadingTimer = setTimeout(() => {
+          loadingTimer = undefined;
+          waiting = true;
+          player.dataset.tourLoading = '';
+          announcer.textContent = 'Loading';
+          label();
+        }, 250);
+      return;
+    }
+    clearTimeout(loadingTimer);
+    loadingTimer = undefined;
+    if (waiting) {
+      waiting = false;
+      delete player.dataset.tourLoading;
+      announcer.textContent = '';
+      label();
+    }
+  };
   const setState = (state: 'idle' | 'playing' | 'paused') => {
     player.dataset.tourState = state;
     playing = state === 'playing';
-    toggle.setAttribute('aria-label', playing ? 'Pause tour' : 'Resume tour');
+    if (!playing) setLoading(false);
+    label();
     document.body.classList.toggle('tour-active', state !== 'idle');
     // Silent holds have no media playing, so tell the OS controls ourselves.
     if ('mediaSession' in navigator)
@@ -179,7 +212,11 @@ export function initTour() {
       }
   };
   let streaming = -1;
+  audio.addEventListener('waiting', () => {
+    if (playing) setLoading(true);
+  });
   audio.addEventListener('playing', () => {
+    setLoading(false);
     if (streaming !== current) return;
     streaming = -1;
     preload(current + 1);
@@ -200,6 +237,7 @@ export function initTour() {
     if (stop.src) {
       const url = ready.get(stop.src);
       audio.src = url ?? stop.src;
+      setLoading(true);
       tryPlay();
       release(index);
       // A segment streaming from the network has the connection to itself
@@ -210,6 +248,7 @@ export function initTour() {
         streaming = index;
       }
     } else {
+      setLoading(false);
       preload(index + 1);
       release(index);
       holdElapsed = 0;
@@ -238,8 +277,10 @@ export function initTour() {
       return;
     }
     setState('playing');
-    if (stop.src) tryPlay();
-    else {
+    if (stop.src) {
+      setLoading(true);
+      tryPlay();
+    } else {
       holdStarted = Date.now();
       const left = Math.max(0, stop.seconds - holdElapsed);
       hold = setTimeout(() => play(current + 1), left * 1000);

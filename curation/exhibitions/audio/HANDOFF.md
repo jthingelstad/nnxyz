@@ -158,3 +158,27 @@ superseded the same evening): loudness now -16.9 to -15.7 LUFS (median
 The embedded cover sits ahead of the audio, so a segment streamed from the
 network starts a little later: under 60 ms at 1 MB/s and 130 ms at 400 KB/s
 in WebKit, more in Chromium. Only a tour's first segment streams.
+
+## Addendum, October 16, 2026 (night): no embedded covers
+
+On a phone the tour could sit silent for seconds after pressing play. Two
+causes, both measured in Chromium on a throttled 1.6 Mbps link:
+
+- The player's warm-up ran on `pointerenter`, which a touch fires just before
+  its click, so the first two segments were fetched alongside the first
+  segment's own stream: 8.2 s from tap to sound. The warm-up now runs only for
+  a mouse or pen hover or keyboard focus, and a segment that has to stream
+  cancels fetches still under way (`src/scripts/tour.ts`).
+- Chromium reads an MP3 with an attached picture to the end before it plays:
+  3.0 s for a 555 KB segment with its cover, 0.4 s for the same audio without.
+  The collector approved dropping the embedded covers. Mastering
+  `podcast-16lufs-128k-nocover-1` is the same chain with no picture; the 848
+  segments were re-mastered from their sources (no new speech) and published
+  under new keys (`-v4`/`-v5`): -16.4 to -15.2 LUFS, every segment linear,
+  peaks at or under -1.54 dBTP, 297 MB, 308.7 minutes. The covers stay
+  published under `audio/covers/` and still reach the lock screen through the
+  page (`src/lib/tour.ts`); the manifest's `coverKey` now means that.
+
+The player also shows a loading state: if a segment has not made a sound
+250 ms after it was asked to play, or stops to buffer, the toggle turns into a
+turning ring, the progress line pulses and screen readers hear "Loading".

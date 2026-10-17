@@ -24,6 +24,7 @@ const { tour, roomTitle } = Astro.props;
       <span class="when-paused">
         <Icon name="play" size={20} />
       </span>
+      <span class="when-loading" aria-hidden="true"></span>
     </button>
     <button type="button" data-tour-previous aria-label="Previous stop">
       <Icon name="left" size={18} />
@@ -34,6 +35,7 @@ const { tour, roomTitle } = Astro.props;
     <div class="tour-status">
       <span class="tour-room">{roomTitle}</span>
       <span class="tour-position" data-tour-position></span>
+      <span class="sr-only" data-tour-announce aria-live="polite"></span>
       <div class="tour-progress" aria-hidden="true">
         <div class="tour-progress-done" data-tour-progress></div>
       </div>
