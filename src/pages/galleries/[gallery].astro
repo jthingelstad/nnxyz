@@ -64,6 +64,15 @@ const closingIds = [closingSegment.secondArtworkId, closingSegment.artworkId]
       works.findIndex((w) => w.artworkId === b),
   );
 const description = room.introduction[0];
+// A story page that tells more about something the room text mentions. A
+// link, not a change to the text: the room text is what the tour reads aloud.
+const storyFor: Record<string, { slug: string; line: string }> = {
+  'nnotb--p3--portraits': {
+    slug: 'fan-art',
+    line: 'the fan art the collector drew that September, replayed stroke by stroke.',
+  },
+};
+const story = storyFor[room.id];
 const tour = tourFor(room);
 const cover = exhibitionArtwork(works[0].artworkId);
 const shareImage =
@@ -95,6 +104,11 @@ const shareImage =
           <p class="exhibition-introduction">{paragraph}</p>
         ))}
       </div>
+      {story && (
+        <p class="wing-story-link room-story-link">
+          <a href={`/story/${story.slug}/`}>The story</a>: {story.line}
+        </p>
+      )}
       <p class="exhibition-meta">
         {works.length} {works.length === 1 ? 'work' : 'works'}
         {dates ? ` · ${dates}` : ' · shown in title order'} ·{' '}

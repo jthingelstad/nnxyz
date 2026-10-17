@@ -1,12 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
+import DrawingViewer from '../../components/DrawingViewer.astro';
+import type { Artwork } from '../../lib/catalog';
 import {
   storyPages,
   storyPath,
   render,
   monthFacts,
   timeline2022,
+  storyWorks,
 } from '../../lib/story';
 import words from '../../../curation/story/words.json';
 import { rooms, roomWorks, exhibitionPath } from '../../lib/exhibitions';
@@ -74,6 +77,23 @@ const topics: Record<string, string> = {
     {blocks.map((block) =>
       block.type === 'html' ? (
         <div class="story-text" set:html={block.html} />
+      ) : block.type === 'work' ? (
+        (() => {
+          // A drawing outside the collection, replayed from its strokes like
+          // the artwork pages; the viewer needs only these fields.
+          const work = storyWorks.get(block.inkId)!;
+          return (
+            <figure class="story-work">
+              <DrawingViewer work={work as unknown as Artwork} />
+              <figcaption>
+                <cite>{work.name}</cite>, {work.artistName},{' '}
+                {new Date(Number(work.createdAt) * 1000).getUTCFullYear()}.{' '}
+                {work.strokes} strokes.{' '}
+                <a href={work.niftyInkUrl}>On Nifty Ink</a>
+              </figcaption>
+            </figure>
+          );
+        })()
       ) : (
         (() => {
           const facts = monthFacts.get(block.month);

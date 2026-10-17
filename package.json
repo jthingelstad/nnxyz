@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "media:generate": "python3 tools/build-web-assets.py && python3 tools/build-display-svgs.py && node tools/build-raster-assets.mjs && node tools/build-abstract-assets.mjs && node tools/verify-abstract-image-fidelity.mjs",
+    "media:generate": "python3 tools/build-web-assets.py && python3 tools/build-display-svgs.py && node tools/build-raster-assets.mjs && node tools/build-abstract-assets.mjs && node tools/verify-abstract-image-fidelity.mjs && python3 tools/build-story-media.py && node tools/build-story-rasters.mjs",
     "media:publish": "node tools/media.mjs publish",
     "media:verify": "node tools/media.mjs verify",
     "dev": "astro dev --host 127.0.0.1",
