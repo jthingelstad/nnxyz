@@ -378,7 +378,10 @@ try {
   } else {
     assert.ok(await tourButton.isVisible());
     assert.match(await tourButton.textContent(), /about \d+ min/);
+    const tourBar = page.locator('[data-tour-bar]');
+    assert.equal(await tourBar.isVisible(), false);
     await tourButton.click();
+    assert.ok(await tourBar.isVisible());
     await page.waitForFunction(
       () =>
         document.querySelector('[data-tour-player]')?.dataset.tourState ===
@@ -422,14 +425,21 @@ try {
       ),
       held,
     );
+    // The bar's play button picks the segment up where it paused.
+    await page.locator('[data-tour-toggle]').click();
+    await page.waitForFunction(
+      (from) => document.querySelector('[data-tour-audio]').currentTime > from,
+      held,
+    );
     await page.keyboard.press('Escape');
     assert.equal(
       await page.locator('[data-tour-player]').getAttribute('data-tour-state'),
       'idle',
     );
     assert.ok(await tourButton.isVisible());
+    assert.equal(await tourBar.isVisible(), false);
     results.push({
-      check: 'Audio tour plays, follows the stop, pauses and ends',
+      check: 'Audio tour plays, follows the stop, pauses, resumes and ends',
       passed: true,
     });
   }
