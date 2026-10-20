@@ -2078,6 +2078,11 @@ body:has(.enlargement[open]) {
   font-size: 13px;
   color: var(--muted);
 }
+/* display: flex above would otherwise show the bar before the tour starts,
+   with a play button that has no tour to resume. */
+.tour-bar[hidden] {
+  display: none;
+}
 .tour-bar button {
   display: inline-flex;
   align-items: center;
