@@ -136,6 +136,11 @@ export async function initSearch() {
   }
   async function update() {
     const current = ++run;
+    // Retire the previous results before the new search returns, so Show more
+    // cannot add them to the new list meanwhile.
+    found = [];
+    shown = 0;
+    more.hidden = true;
     const term = input.value.trim();
     const next = new URLSearchParams();
     if (term) next.set('q', term);
@@ -143,9 +148,7 @@ export async function initSearch() {
     const query = next.toString();
     history.replaceState(null, '', query ? `?${query}` : location.pathname);
     if (!term && !wing) {
-      found = [];
       list.replaceChildren();
-      more.hidden = true;
       status.textContent = 'Type a word or choose a wing.';
       return;
     }
@@ -165,7 +168,6 @@ export async function initSearch() {
             ),
         )
       : search.results;
-    shown = 0;
     list.replaceChildren();
     const count = `${found.length} ${found.length === 1 ? 'work' : 'works'}`;
     status.textContent = found.length
