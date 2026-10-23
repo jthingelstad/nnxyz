@@ -1,0 +1,24 @@
+---
+// What the search index (Pagefind, run over dist/ after the build) keeps for an
+// artwork page besides its text: the thumbnail and room shown in a result, and
+// the wing to filter by. The values sit in attributes, so nothing is added to
+// the page itself. /search/ reads them.
+import { thumbnail, type DisplayArtwork } from '../lib/catalog';
+import type { Room } from '../lib/exhibitions';
+interface Props {
+  work: DisplayArtwork;
+  room: Room;
+}
+const { work, room } = Astro.props;
+const image = thumbnail(work);
+---
+
+<span
+  hidden
+  data-pagefind-meta="image[data-image], image_srcset[data-srcset], room[data-room]"
+  data-pagefind-filter="wing[data-wing]"
+  data-image={image.src}
+  data-srcset={image.srcset}
+  data-room={room.title}
+  data-wing={room.wingTitle}
+></span>

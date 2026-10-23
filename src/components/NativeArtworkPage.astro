@@ -4,6 +4,7 @@ import Icon from './Icon.astro';
 import Kudos from './Kudos.astro';
 import DrawingViewer from './DrawingViewer.astro';
 import ProvenanceNote from './ProvenanceNote.astro';
+import SearchRecord from './SearchRecord.astro';
 import { ownedTokens } from '../lib/provenance';
 import { placement, roomWorks, exhibitionPath } from '../lib/exhibitions';
 import { formatUtcDateTime, formatUtcDate } from '../lib/dates';
@@ -61,7 +62,8 @@ const strokeMeasures = technique ? measures.get(work.inkId) : undefined;
   </a>
   <div class="work-page">
     <DrawingViewer work={work} />
-    <div class="work-content">
+    <div class="work-content" data-pagefind-body>
+      <SearchRecord work={work} room={home} />
       <div class="work-caption">
         <div>
           <h1>{title}</h1>
@@ -70,7 +72,7 @@ const strokeMeasures = technique ? measures.get(work.inkId) : undefined;
           )}
           <ProvenanceNote tokens={tokens} />
         </div>
-        <div class="work-actions">
+        <div class="work-actions" data-pagefind-ignore>
           <Kudos path={artworkPath(work.inkId)} title={title} />
           <button
             data-enlarge
@@ -128,7 +130,11 @@ const strokeMeasures = technique ? measures.get(work.inkId) : undefined;
           </>
         )}
       </p>
-      <nav class="work-navigation" aria-label="Artwork navigation">
+      <nav
+        class="work-navigation"
+        aria-label="Artwork navigation"
+        data-pagefind-ignore
+      >
         {previous ? (
           <a href={artworkPath(previous.artworkId)}>
             <Icon name="left" size={20} /> Previous
@@ -157,6 +163,7 @@ const strokeMeasures = technique ? measures.get(work.inkId) : undefined;
         )}
       </nav>
       <details
+        data-pagefind-ignore
         class="provenance"
         id="provenance"
         aria-label="Artwork details and provenance"

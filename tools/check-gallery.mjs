@@ -526,6 +526,7 @@ try {
       '/collections/rawblocks/',
       '/collections/other-related/',
       '/map/',
+      '/search/',
       '/screensaver/',
       galleryURL,
     ]) {
@@ -1071,6 +1072,45 @@ try {
   await blockedStorage.close();
   results.push({
     check: 'Theme switch still works when browser storage is blocked',
+    passed: true,
+  });
+  // Search: Pagefind's index over the artwork pages, with thumbnails, a
+  // shareable address and the wing filter.
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await go('/search/?q=teeth');
+  const firstResult = page.locator('[data-search-results] li a').first();
+  await firstResult.waitFor();
+  assert.match(await firstResult.getAttribute('href'), /^\/artworks\/[^/]+\/$/);
+  assert.match(
+    await firstResult.locator('img').getAttribute('src'),
+    /^\/(raster|abstract\/images|onchain\/images)\//,
+  );
+  assert.ok(
+    (await firstResult.locator('mark').count()) > 0,
+    'The excerpt marks the match',
+  );
+  const allWings = await page.locator('[data-search-status]').textContent();
+  await page.getByRole('button', { name: 'Rawblocks', exact: true }).click();
+  await page.waitForURL(/wing=Rawblocks/);
+  await page.waitForFunction(
+    (before) =>
+      document.querySelector('[data-search-status]').textContent !== before,
+    allWings,
+  );
+  assert.ok(
+    Number.parseInt(await page.locator('[data-search-status]').textContent()) <
+      Number.parseInt(allWings),
+    'The wing filter narrows the results',
+  );
+  await page.locator('[data-search-query]').fill('qqzzxx');
+  await page
+    .locator('[data-search-status]')
+    .filter({ hasText: 'No works match' })
+    .waitFor();
+  assert.equal(await page.locator('[data-search-results] li').count(), 0);
+  await page.screenshot({ path: path.join(output, 'search.png') });
+  results.push({
+    check: 'Search finds artworks by their labels and filters by wing',
     passed: true,
   });
   assert.deepEqual(errors, []);

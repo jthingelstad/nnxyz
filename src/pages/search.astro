@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { wings } from '../lib/exhibitions';
+// The index is written by Pagefind after the build (npm run build), from the
+// artwork pages only; src/components/SearchRecord.astro adds the thumbnail,
+// room and wing. `npm run dev` has no index, so search there says so.
+---
+
+<Layout
+  title="Search — The nnxyz Rooms"
+  description="Search the collection's artworks by what they show, their titles and their rooms."
+>
+  <article class="search-page" data-search>
+    <h1>Search the artworks</h1>
+    <form class="search-form" role="search" action="/search/" data-search-form>
+      <label class="sr-only" for="search-query">
+        Search the artworks
+      </label>
+      <input
+        id="search-query"
+        name="q"
+        type="search"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="A red face, a cat, a hood, Rawblocks"
+        data-search-query
+      />
+    </form>
+    <div class="search-wings" role="group" aria-label="Wing" data-search-wings>
+      <button type="button" aria-pressed="true" data-wing="">
+        All wings
+      </button>
+      {wings.map((wing) => (
+        <button type="button" aria-pressed="false" data-wing={wing.title}>
+          {wing.title}
+        </button>
+      ))}
+    </div>
+    <p class="search-status" role="status" data-search-status>
+      Search needs JavaScript. The <a href="/#collections">collections</a> and
+      the <a href="/map/">map</a> show every work.
+    </p>
+    <ol class="search-results" data-search-results></ol>
+    <button type="button" class="search-more" data-search-more hidden>
+      Show more
+    </button>
+  </article>
+  <script>
+    import { initSearch } from '../scripts/search';
+    initSearch();
+  </script>
+</Layout>
