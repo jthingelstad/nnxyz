@@ -88,7 +88,7 @@ def main():
     retired += json.loads((ROOT / "curation/abstract/exhibitions.json").read_text())["collections"]
     redirects = {"collections/nnxyz-other/index.html", "collections/scrimshaw/index.html"}
     redirects |= {f"galleries/{g['id']}/index.html" for c in retired for g in c["galleries"]}
-    # 8 utility pages (home, about, notes, map, catalogue, technique, screen saver, 404), the story
+    # 9 utility pages (home, about, notes, map, catalogue, technique, search, screen saver, 404), the story
     # index with one page per file under curation/story/, and the entrances.
     story_pages = [p for p in (ROOT / "curation/story").glob("*.md") if p.name != "README.md"]
     story = 1 + len(story_pages)
@@ -99,7 +99,7 @@ def main():
         + len(onchain)
         + len(rooms)
         + len(redirects)
-        + 8
+        + 9
         + story
         + entrances
     ), "Missing generated routes"

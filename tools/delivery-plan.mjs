@@ -16,7 +16,17 @@ export const mime = {
   '.mp3': 'audio/mpeg',
   '.gif': 'image/gif',
   '.mp4': 'video/mp4',
+  // The search index (Pagefind, under pagefind/). These files are gzipped by
+  // Pagefind itself and read as bytes, so they are stored as they are.
+  '.pagefind': 'application/octet-stream',
+  '.pf_meta': 'application/octet-stream',
+  '.pf_index': 'application/octet-stream',
+  '.pf_fragment': 'application/octet-stream',
+  '.pf_filter': 'application/octet-stream',
 };
+// Pagefind names its index files by content hash; its wasm, scripts and entry
+// file keep fixed names.
+const hashedIndex = ['.pf_meta', '.pf_index', '.pf_fragment', '.pf_filter'];
 // Published media: generated once, uploaded once by tools/media.mjs, and only
 // referenced by the site. Site deploys never write these keys.
 export const mediaPrefixes = [
@@ -46,7 +56,13 @@ export function publicationOrder(files) {
 export const immutable = 'public,max-age=31536000,immutable';
 function cacheControl(key, extension) {
   if (key.startsWith('_astro/') || isMediaKey(key)) return immutable;
-  if (['.html', '.txt', '.xml'].includes(extension) || key === 'revision.json')
+  if (key.startsWith('pagefind/') && hashedIndex.includes(extension))
+    return immutable;
+  if (
+    ['.html', '.txt', '.xml'].includes(extension) ||
+    key === 'revision.json' ||
+    key === 'pagefind/pagefind-entry.json'
+  )
     return 'public,max-age=0,s-maxage=60,must-revalidate';
   return 'public,max-age=3600';
 }

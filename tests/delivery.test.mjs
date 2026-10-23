@@ -98,3 +98,32 @@ test('Write-once media is immutable and only media keys count as media', () => {
     'public,max-age=3600',
   );
 });
+test('The search index publishes as stored bytes, cached by whether its names are hashed', () => {
+  const bytes = Buffer.from([31, 139, 8, 0]);
+  for (const key of [
+    'pagefind/fragment/en_1a2b3c.pf_fragment',
+    'pagefind/index/en_1a2b3c.pf_index',
+    'pagefind/filter/en_1a2b3c.pf_filter',
+    'pagefind/pagefind.en_1a2b3c.pf_meta',
+  ]) {
+    const result = prepareObject(key, bytes);
+    assert.deepEqual(result.Body, bytes);
+    assert.equal(result.ContentEncoding, undefined);
+    assert.equal(result.ContentType, 'application/octet-stream');
+    assert.match(result.CacheControl, /immutable/);
+  }
+  assert.doesNotMatch(
+    prepareObject('pagefind/wasm.en.pagefind', bytes).CacheControl,
+    /immutable/,
+  );
+  assert.doesNotMatch(
+    prepareObject('pagefind/pagefind.js', Buffer.from('1')).CacheControl,
+    /immutable/,
+  );
+  assert.match(
+    prepareObject('pagefind/pagefind-entry.json', Buffer.from('{}'))
+      .CacheControl,
+    /max-age=0/,
+  );
+  assert.ok(!isMediaKey('pagefind/pagefind.js'));
+});

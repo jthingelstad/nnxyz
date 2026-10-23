@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Icon from './Icon.astro';
 import Kudos from './Kudos.astro';
 import ProvenanceNote from './ProvenanceNote.astro';
+import SearchRecord from './SearchRecord.astro';
 import { tokenUrl, tezosTokenUrl } from '../lib/provenance';
 import {
   onchainImage,
@@ -103,13 +104,14 @@ const minted = work.createdAt ? formatUtcDateTime(work.createdAt) : null;
         </p>
       )}
     </div>
-    <div class="work-content">
+    <div class="work-content" data-pagefind-body>
+      <SearchRecord work={work} room={home} />
       <div class="work-caption">
         <div>
           <h1>{title}</h1>
           <ProvenanceNote tokens={[{ url: link }]} />
         </div>
-        <div class="work-actions">
+        <div class="work-actions" data-pagefind-ignore>
           <Kudos path={artworkPath(work.id)} title={title} />
           <button
             data-raster-enlarge
@@ -128,7 +130,11 @@ const minted = work.createdAt ? formatUtcDateTime(work.createdAt) : null;
         Work {position + 1} of {sequence.length} in{' '}
         <a href={exhibitionPath(home.id)}>{home.title}</a>, {home.wingTitle}.
       </p>
-      <nav class="work-navigation" aria-label="Artwork navigation">
+      <nav
+        class="work-navigation"
+        aria-label="Artwork navigation"
+        data-pagefind-ignore
+      >
         {previous ? (
           <a href={artworkPath(previous.id)}>
             <Icon name="left" size={20} />
@@ -146,6 +152,7 @@ const minted = work.createdAt ? formatUtcDateTime(work.createdAt) : null;
         )}
       </nav>
       <details
+        data-pagefind-ignore
         class="provenance raster-provenance"
         id="provenance"
         aria-label="Artwork details and provenance"
