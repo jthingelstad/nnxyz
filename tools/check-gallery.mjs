@@ -1102,6 +1102,26 @@ try {
       Number.parseInt(allWings),
     'The wing filter narrows the results',
   );
+  // A double click on Show more loads the next two pages once each.
+  await go('/search/?q=face');
+  await page.locator('[data-search-results] li').first().waitFor();
+  await page.locator('[data-search-more]').dblclick();
+  await page.waitForFunction(
+    () => document.querySelector('[data-search-more]').disabled === false,
+  );
+  if (!(await page.locator('[data-search-more]').isHidden()))
+    await page.locator('[data-search-more]').click();
+  await page.waitForFunction(
+    () => document.querySelectorAll('[data-search-results] li').length >= 72,
+  );
+  const shownLinks = await page
+    .locator('[data-search-results] li a')
+    .evaluateAll((links) => links.map((link) => link.getAttribute('href')));
+  assert.equal(
+    new Set(shownLinks).size,
+    shownLinks.length,
+    'No repeated results',
+  );
   await page.locator('[data-search-query]').fill('qqzzxx');
   await page
     .locator('[data-search-status]')

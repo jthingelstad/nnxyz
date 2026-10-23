@@ -11,13 +11,18 @@ interface Result {
     room?: string;
   };
 }
+interface Match {
+  words: number[];
+  matchedMetaFields?: string[];
+  data(): Promise<Result>;
+}
 interface Pagefind {
   options(options: Record<string, unknown>): Promise<void>;
   init(): void;
   search(
     term: string | null,
     options: { filters?: Record<string, string> },
-  ): Promise<{ results: { data(): Promise<Result> }[] } | null>;
+  ): Promise<{ results: Match[] } | null>;
 }
 
 const page = 24;
@@ -112,16 +117,21 @@ export async function initSearch() {
     return;
   }
 
-  let found: { data(): Promise<Result> }[] = [];
+  let found: Match[] = [];
   let shown = 0;
   let run = 0;
+  // Reserve the next range before its data loads, so a second click while a
+  // batch is loading takes the range after it rather than the same one.
   async function showMore(current: number) {
+    const start = shown;
+    shown = Math.min(start + page, found.length);
+    more.disabled = true;
     const batch = await Promise.all(
-      found.slice(shown, shown + page).map((result) => result.data()),
+      found.slice(start, shown).map((result) => result.data()),
     );
     if (current !== run) return;
     list.append(...batch.map(card));
-    shown += batch.length;
+    more.disabled = false;
     more.hidden = shown >= found.length;
   }
   async function update() {
@@ -143,7 +153,18 @@ export async function initSearch() {
       filters: wing ? { wing } : {},
     });
     if (current !== run || !search) return;
-    found = search.results;
+    // Pagefind also searches metadata, and loosely: the thumbnail paths carry
+    // drawing CIDs, which match nonsense words. Keep matches in the text or
+    // the room name.
+    found = term
+      ? search.results.filter(
+          (result) =>
+            result.words.length > 0 ||
+            result.matchedMetaFields?.some(
+              (field) => !field.startsWith('image'),
+            ),
+        )
+      : search.results;
     shown = 0;
     list.replaceChildren();
     const count = `${found.length} ${found.length === 1 ? 'work' : 'works'}`;
