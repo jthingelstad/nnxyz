@@ -1,15 +1,26 @@
 ---
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
+import { entrances } from '../lib/exhibitions';
 interface Props {
   title?: string;
   image?: string;
   description?: string;
 }
+// The default description counts the rooms and names the entrances the home
+// page shows, so it follows a wing when one opens (After Nifty Ink waits for
+// its media).
+const roomCount = entrances.reduce(
+  (n, entrance) => n + entrance.wings.reduce((m, w) => m + w.rooms.length, 0),
+  0,
+);
+const entranceList = new Intl.ListFormat('en', { type: 'conjunction' }).format(
+  entrances.map((entrance) => entrance.title),
+);
 const {
   title = 'The nnxyz Rooms',
   image,
-  description = 'A collection of nnxyz artwork hung in twenty-eight rooms, with a related collection by Scrimshaw. Faces, New Nifty on the Block, Rawblocks, Abstract, and Other & related.',
+  description = `A collection of nnxyz artwork hung in ${roomCount} rooms, with a related collection by Scrimshaw. ${entranceList}.`,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const analytics =
