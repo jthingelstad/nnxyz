@@ -127,6 +127,12 @@ def main():
     for room in rooms:
         assert (DIST / "galleries" / room["id"] / "index.html").is_file()
     assert (DIST / "collections/other-related/index.html").is_file()
+    # The default description (src/layouts/Layout.astro) counts the rooms and
+    # names After Nifty Ink only when its wing is open.
+    home = (DIST / "index.html").read_text()
+    description = re.search(r'<meta name="description" content="([^"]*)"', home).group(1)
+    assert f"hung in {len(rooms)} rooms" in description, f"Home description: {description}"
+    assert ("After Nifty Ink" in description) == onchain_ready, f"Home description: {description}"
     for path in pages:
         page = Page()
         page.feed(path.read_text())
