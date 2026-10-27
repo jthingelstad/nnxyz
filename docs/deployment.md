@@ -118,7 +118,7 @@ browser did with it, such as how long a phone took to start playing.
 
 ## DNS and HTTPS
 
-At the DNS provider for `thingelstad.xyz`:
+`thingelstad.xyz` is a Route 53 hosted zone, and both of the gallery's records are code in the `dns-thingelstad-xyz` stack (`config/dns-thingelstad-xyz-stack.yaml` in `projects-sysadmin`). DNS moved there from Namecheap BasicDNS on October 27, 2026; Namecheap is still the registrar but no longer serves the zone. A record changes by a pull request to that stack and a deploy, never in a console.
 
 | Type  | Host                                      | Target                                                             |
 | ----- | ----------------------------------------- | ------------------------------------------------------------------ |
