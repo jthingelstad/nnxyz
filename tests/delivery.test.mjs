@@ -59,7 +59,7 @@ test('Abstract JPEG and WebP delivery preserves bytes and declares image types',
     assert.deepEqual(result.Body, bytes);
   }
 });
-test('robots.txt and sitemaps publish compressed with page caching', () => {
+test('robots.txt and sitemaps publish as plain bytes with page caching', () => {
   for (const [key, type] of [
     ['robots.txt', 'text/plain; charset=utf-8'],
     ['sitemap-index.xml', 'application/xml; charset=utf-8'],
@@ -67,9 +67,36 @@ test('robots.txt and sitemaps publish compressed with page caching', () => {
     const bytes = Buffer.from('Sitemap: https://nnxyz.thingelstad.xyz/');
     const result = prepareObject(key, bytes);
     assert.equal(result.ContentType, type);
-    assert.equal(result.ContentEncoding, 'gzip');
-    assert.deepEqual(gunzipSync(result.Body), bytes);
+    assert.equal(result.ContentEncoding, undefined);
+    assert.deepEqual(result.Body, bytes);
     assert.match(result.CacheControl, /max-age=0/);
+  }
+});
+test('Pages are stored uncompressed so CloudFront negotiates the encoding', () => {
+  const bytes = Buffer.from('<p>' + 'gallery '.repeat(1000) + '</p>');
+  for (const key of [
+    'index.html',
+    '404.html',
+    'artworks/work/index.html',
+    'abstract/index.html',
+    '_astro/viewer.hash.js',
+    '_astro/site.hash.css',
+    'screensaver/data.json',
+    'revision.json',
+    'llms-full.txt',
+    'favicon.svg',
+  ]) {
+    const result = prepareObject(key, bytes);
+    assert.equal(result.ContentEncoding, undefined, key);
+    assert.deepEqual(result.Body, bytes, key);
+  }
+});
+test('Write-once media SVG and JSON stay gzip-stored', () => {
+  const bytes = Buffer.from('{"work":"' + 'x'.repeat(2000) + '"}');
+  for (const key of ['art/display/work.svg', 'records/work.metadata.json']) {
+    const result = prepareObject(key, bytes);
+    assert.equal(result.ContentEncoding, 'gzip', key);
+    assert.deepEqual(gunzipSync(result.Body), bytes, key);
   }
 });
 test('Write-once media is immutable and only media keys count as media', () => {
