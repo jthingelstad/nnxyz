@@ -100,7 +100,7 @@ Install Chromium once with `npx playwright install chromium`, or set `PLAYWRIGHT
 ## Access log
 
 The `nnxyz-site` stack sends the CloudFront access log to the CloudWatch log
-group `/nnxyz/web-access`, kept for 14 days (October 16, 2026). Each record
+group `/nnxyz/web-access`, kept for 24 months (October 16, 2026; 14 days until October 28, 2026). Each record
 is JSON with the time, method, path, status, bytes, byte range, time taken,
 time to first byte, cache result, edge location, protocol and user agent. It
 records no client IP addresses or cookies. Records arrive a few minutes after
