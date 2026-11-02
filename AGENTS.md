@@ -68,6 +68,7 @@ The collector's nnxyz works on chains other than Gnosis form a sixth wing, After
 
 - Public repository: `jthingelstad/nnxyz`. Imported `collection/` is intentionally ignored; hydrate the hash-pinned private S3 snapshot rather than committing artwork. Keep original archive and source bytes immutable.
 - CI performs formatting/lint, type/unit checks, CodeQL, page/link and published-media checks and browser tests without AWS credentials. Main alone publishes the exact verified build. The separate archive workflow validates sources, curation and token links when they change.
+- The `nnxyz-site` distribution uses the shared `edge` web ACL (projects-sysadmin `edge-waf` stack; rules count only until tuned).
 - AWS IAM roles belong to `nnxyz-delivery`; build is read-only, publication is bounded to this site bucket/CDN. Never substitute broad local credentials in the publication script or add static GitHub AWS keys. Local infrastructure work uses AWS MCP and reviewed CloudFormation change sets.
 - Routine deployments do not modify infrastructure, regenerate curation, bulk-delete artwork or alter the permanent archive. Deploys upload pages only, invalidate only page paths, and verify the deployed revision.
 
