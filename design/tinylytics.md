@@ -1,25 +1,21 @@
 # Tinylytics integration
 
 Recorded October 13, 2026 for `https://nnxyz.thingelstad.xyz`.
-Status: implemented. Production analytics and per-artwork kudos are live, gated by `PUBLIC_TINYLYTICS_ENABLED=true` and the production hostname. The notes below are the original plan.
+Status: implemented. Production analytics and per-artwork kudos are live, gated by `PUBLIC_TINYLYTICS_ENABLED=true` and the production hostname. The notes below are the original plan, with the embed updated on November 2, 2026.
 
 ## Collector-supplied embed
 
 ```html
-<script src="https://tinylytics.app/embed/7MaUUztU7BVzhcxntCUh.js" defer></script>
+<script defer src="https://tinylytics.app/js/script.js" data-site="7MaUUztU7BVzhcxntCUh"></script>
 ```
 
-This is a public browser embed identifier, not an API credential. Preserve it in the eventual site configuration. The configured domain in Tinylytics has not been independently verified.
+Since November 2, 2026 Tinylytics serves one script for every site, keyed by `data-site`; the tag takes no query parameters. Widgets and options (custom kudos, events) are set in the site's Tinylytics settings, not in the URL. The site ID is a public browser identifier, not an API credential. Preserve it in the eventual site configuration. The configured domain in Tinylytics has not been independently verified.
 
 ## Planned implementation
 
-Load one script in the shared production layout. Keep it disabled in local development and review previews. The base script supports normal document navigation. If client-side navigation is introduced, consult the SPA integration and call `window.tinylytics?.triggerUpdate()` after navigation using the `spa` option.
+Load one script in the shared production layout. Keep it disabled in local development and review previews. `src/layouts/Layout.astro` creates the element on the production host only, sets `defer`, `src = 'https://tinylytics.app/js/script.js'` and `dataset.site = '7MaUUztU7BVzhcxntCUh'`, and appends it. The script counts document loads and also `pushState`, `replaceState` (when the address other than its hash changes), `popstate` and `turbo:load` by itself. A router that changes the page without touching history calls `window.tinylytics?.triggerUpdate()`, which also draws widgets for newly added elements.
 
-For custom kudos controls and interaction events, the proposed production embed is:
-
-```html
-<script src="https://tinylytics.app/embed/7MaUUztU7BVzhcxntCUh.js?kudos=custom&amp;events" defer></script>
-```
+Custom kudos controls and interaction events were first enabled with `?kudos=custom&events` on the old per-site embed URL; they are now the site's Tinylytics settings.
 
 Every kudos button must use `class="tinylytics_kudos"` and a `data-path` matching the artwork's canonical pathname, beginning with `/`. Use the same path on cards and detail pages. Derive routes from drawing CIDs, not titles or editions. Final route shape remains to be chosen.
 

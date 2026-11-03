@@ -112,9 +112,9 @@ const analytics =
     {analytics && <script is:inline>
       if (location.hostname === 'nnxyz.thingelstad.xyz') {
         const script = document.createElement('script');
-        script.src =
-          'https://tinylytics.app/embed/7MaUUztU7BVzhcxntCUh.js?kudos=custom&events';
         script.defer = true;
+        script.src = 'https://tinylytics.app/js/script.js';
+        script.dataset.site = '7MaUUztU7BVzhcxntCUh';
         document.body.append(script);
       }
     </script>}
