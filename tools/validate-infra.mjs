@@ -74,7 +74,9 @@ assert.equal(site.Resources.AccessLogGroup.Properties.RetentionInDays, 731);
 // No CloudWatch alarm since November 3, 2026 (Jamie kept a handful
 // account-wide, none here).
 assert.deepEqual(
-  Object.values(site.Resources).filter((r) => r.Type === 'AWS::CloudWatch::Alarm'),
+  Object.values(site.Resources).filter(
+    (r) => r.Type === 'AWS::CloudWatch::Alarm',
+  ),
   [],
 );
 for (const [name, allowed] of [
