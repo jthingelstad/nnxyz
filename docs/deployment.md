@@ -4,10 +4,10 @@ The public repository is https://github.com/jthingelstad/nnxyz. Application sour
 
 ## Storage paths
 
-| Purpose                                    | Location                                                                               |
-| ------------------------------------------ | -------------------------------------------------------------------------------------- |
-| Permanent local archive, read-only         | `~/Projects/nifty-ink-archive/`                                                        |
-| Hydrated gallery inputs, ignored by Git    | `~/Projects/nnxyz/collection/`, present only when hydrated                             |
+| Purpose                                    | Location                                                                            |
+| ------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Permanent local archive, read-only         | `~/Projects/nifty-ink-archive/`                                                     |
+| Hydrated gallery inputs, ignored by Git    | `~/Projects/nnxyz/collection/`, present only when hydrated                          |
 | Private, versioned source snapshot         | `s3://nnxyz-storage-archive-<account>/datasets/<snapshot-sha256>/collection.tar.gz` |
 | Cold copy of the Mac's local folders       | `s3://thingelstad-archive-<account>/nnxyz/{collection,media}/`                      |
 | Public SVGs through CloudFront             | `s3://nnxyz-storage-web-<account>/art/<drawing-CID>.svg`                            |
@@ -16,7 +16,7 @@ The public repository is https://github.com/jthingelstad/nnxyz. Application sour
 | Responsive WebPs                           | `s3://nnxyz-storage-web-<account>/raster/<drawing-CID>-<width>.webp`                |
 | Selected metadata/provenance downloads     | `s3://nnxyz-storage-web-<account>/records/<drawing-CID>.*.json`                     |
 | Abstract WebPs, original JPEGs and records | `s3://nnxyz-storage-web-<account>/abstract/{images,originals,records}/`             |
-| HTML and hashed browser bundles            | Same web bucket, normal route paths and `_astro/`                                      |
+| HTML and hashed browser bundles            | Same web bucket, normal route paths and `_astro/`                                   |
 
 Both buckets block public S3 access, use server-side encryption and versioning, and are retained if their stacks are removed. CloudFront alone reads the web origin. The archival bucket has no CDN connection. `infra/dataset.json` pins the source bundle by SHA-256, and `infra/dataset-files.json` maps every original path to its exact bytes. A separate `infra/abstract-dataset.json` / `infra/abstract-dataset-files.json` pair pins the recovered Abstract JPEGs and saved earlier-gallery HTML sources in the same private bucket under `datasets/abstract/<sha256>/collection.tar.gz`. Hydration restores both bundles without requiring the public source pages to remain unchanged. The Nifty Ink bundle is unchanged.
 
