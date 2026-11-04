@@ -3,6 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import deployment from './infra/deployment.json' with { type: 'json' };
 import { mediaPrefixes } from './tools/delivery-plan.mjs';
 import { retiredGalleryRedirects } from './tools/retired-galleries.mjs';
+import { pageDates } from './tools/content-date.mjs';
 
 const site = 'https://nnxyz.thingelstad.xyz';
 // Sections of Other & related that were briefly published as their own pages,
@@ -12,6 +13,8 @@ const redirects = {
   '/collections/scrimshaw/': '/collections/other-related/#scrimshaw',
   ...retiredGalleryRedirects(),
 };
+
+const lastmodOf = pageDates(site);
 
 export default defineConfig({
   site,
@@ -32,9 +35,12 @@ export default defineConfig({
     },
   },
   integrations: [
+    // Every page carries the date its content last changed
+    // (tools/content-date.mjs); the index takes the newest.
     sitemap({
       filter: (page) =>
         !Object.keys(redirects).some((path) => page === site + path),
+      serialize: (item) => ({ ...item, lastmod: lastmodOf(item.url) }),
     }),
   ],
 });

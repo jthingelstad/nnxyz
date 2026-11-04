@@ -76,15 +76,12 @@ export function prepareObject(key, bytes) {
   const extension = path.extname(key);
   const type = mime[extension];
   if (!type) throw new Error(`Unexpected public asset type: ${key}`);
-  const compressed = [
-    '.svg',
-    '.html',
-    '.json',
-    '.css',
-    '.js',
-    '.txt',
-    '.xml',
-  ].includes(extension);
+  // Pages are stored as they are; CloudFront compresses them per request
+  // (gzip or brotli, by Accept-Encoding) and sends identity to clients that
+  // ask for no encoding. Only write-once media SVG and JSON stay gzip-stored:
+  // the largest native SVGs exceed the 10 MB CloudFront compresses, and
+  // published media keys are never rewritten.
+  const compressed = isMediaKey(key) && ['.svg', '.json'].includes(extension);
   const body = compressed ? gzipSync(bytes, { level: 9 }) : bytes;
   if (compressed && !gunzipSync(body).equals(bytes))
     throw new Error('Compression changed source bytes');

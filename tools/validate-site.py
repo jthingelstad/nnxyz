@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate generated routes, links and metadata, and that every media URL is published."""
 
+from datetime import datetime, timezone
 from html.parser import HTMLParser
 import json
 import re
@@ -123,6 +124,20 @@ def main():
         if path.name == "index.html" and str(path.relative_to(DIST)) not in redirects
     }
     assert locs == expected, "Sitemap differs from the generated pages"
+    # Every URL and the index carry a W3C lastmod (tools/content-date.mjs), never in the future.
+    w3c = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{3})?Z")
+    now = datetime.now(timezone.utc)
+    index = (DIST / "sitemap-index.xml").read_text()
+    entries = re.findall(r"<url>(.*?)</url>", sitemap, re.S) + re.findall(
+        r"<sitemap>(.*?)</sitemap>", index, re.S
+    )
+    assert len(entries) == len(locs) + 1, "Sitemap entries differ from its locations"
+    for entry in entries:
+        stamp = re.search(r"<lastmod>([^<]+)</lastmod>", entry)
+        assert stamp and w3c.fullmatch(stamp[1]), f"No valid lastmod: {entry[:120]}"
+        assert datetime.fromisoformat(stamp[1].replace("Z", "+00:00")) <= now, (
+            f"Future lastmod: {entry[:120]}"
+        )
     assert f"Sitemap: {site}sitemap-index.xml" in (DIST / "robots.txt").read_text()
     for room in rooms:
         assert (DIST / "galleries" / room["id"] / "index.html").is_file()

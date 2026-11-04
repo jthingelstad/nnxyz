@@ -117,6 +117,9 @@
           "HttpVersion": "http2and3",
           "IPV6Enabled": true,
           "PriceClass": "PriceClass_100",
+          "WebACLId": {
+            "Fn::ImportValue": "edge-waf-WebAclArn"
+          },
           "DefaultRootObject": "index.html",
           "Aliases": {
             "Fn::If": [
@@ -201,7 +204,7 @@
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
         "LogGroupName": "/nnxyz/web-access",
-        "RetentionInDays": 14
+        "RetentionInDays": 731
       }
     },
     "AccessLogSource": {
@@ -249,41 +252,6 @@
           "cs(User-Agent)"
         ]
       }
-    },
-    "Distribution5xxAlarm": {
-      "Type": "AWS::CloudWatch::Alarm",
-      "Properties": {
-        "AlarmName": {
-          "Fn::Sub": "${AWS::StackName}-distribution-5xx"
-        },
-        "AlarmDescription": "CloudFront returned more than 5% 5xx responses for nnxyz.thingelstad.xyz in two of three five-minute windows.",
-        "Namespace": "AWS/CloudFront",
-        "MetricName": "5xxErrorRate",
-        "Dimensions": [
-          {
-            "Name": "DistributionId",
-            "Value": {
-              "Ref": "Distribution"
-            }
-          },
-          {
-            "Name": "Region",
-            "Value": "Global"
-          }
-        ],
-        "Statistic": "Average",
-        "Period": 300,
-        "EvaluationPeriods": 3,
-        "DatapointsToAlarm": 2,
-        "Threshold": 5,
-        "ComparisonOperator": "GreaterThanThreshold",
-        "TreatMissingData": "notBreaching",
-        "AlarmActions": [
-          {
-            "Fn::Sub": "arn:${AWS::Partition}:sns:${AWS::Region}:${AWS::AccountId}:weekly-thing-librarian-alarms"
-          }
-        ]
-      }
     }
   },
   "Outputs": {
@@ -303,7 +271,7 @@
       "Value": {
         "Ref": "AccessLogGroup"
       },
-      "Description": "CloudFront access log, 14 days, no client IPs"
+      "Description": "CloudFront access log, 24 months, no client IPs"
     }
   }
 }

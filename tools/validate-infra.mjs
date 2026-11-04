@@ -70,13 +70,14 @@ assert.ok(
   !accessLog.some((field) => /^c-ip|x-forwarded-for|cs\(Cookie\)/.test(field)),
   'The access log records no client addresses or cookies',
 );
-assert.equal(site.Resources.AccessLogGroup.Properties.RetentionInDays, 14);
-// A run of server errors reaches the projects-ops-alerts queue.
-const alarm = site.Resources.Distribution5xxAlarm.Properties;
-assert.equal(alarm.MetricName, '5xxErrorRate');
-assert.match(
-  alarm.AlarmActions[0]['Fn::Sub'],
-  /:weekly-thing-librarian-alarms$/,
+assert.equal(site.Resources.AccessLogGroup.Properties.RetentionInDays, 731);
+// No CloudWatch alarm since November 3, 2026 (Jamie kept a handful
+// account-wide, none here).
+assert.deepEqual(
+  Object.values(site.Resources).filter(
+    (r) => r.Type === 'AWS::CloudWatch::Alarm',
+  ),
+  [],
 );
 for (const [name, allowed] of [
   ['BuildRole', ['s3:GetObject']],

@@ -15,7 +15,6 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import {
   isMediaKey,
-  mediaPrefixes,
   publicationOrder,
   prepareObject,
 } from './delivery-plan.mjs';
@@ -119,32 +118,15 @@ for (const group of [
   );
 }
 await upload('revision.json');
-// Refresh pages, never media: wildcards for folders that hold only pages,
-// exact paths where a folder also holds media (abstract/).
-const mediaFolders = new Set(
-  mediaPrefixes.map((prefix) => prefix.split('/')[0]),
-);
-const paths = [
-  ...new Set(
-    ordered
-      .filter((key) => !key.startsWith('_astro/'))
-      .flatMap((key) => {
-        const [folder] = key.split('/');
-        if (folder === key)
-          return key === 'index.html' ? ['/', `/${key}`] : [`/${key}`];
-        if (!mediaFolders.has(folder)) return [`/${folder}/*`];
-        return key.endsWith('/index.html')
-          ? [`/${key.slice(0, -'index.html'.length)}`, `/${key}`]
-          : [`/${key}`];
-      }),
-  ),
-];
+// One wildcard path per deploy: CloudFront bills invalidations per path, and
+// "/*" counts as one. Published media is write-once, so refreshing it from S3
+// changes nothing a visitor sees.
 const invalidation = await cdn.send(
   new CreateInvalidationCommand({
     DistributionId: config.distributionId,
     InvalidationBatch: {
       CallerReference: `${process.env.GITHUB_RUN_ID}-${process.env.GITHUB_RUN_ATTEMPT}`,
-      Paths: { Quantity: paths.length, Items: paths },
+      Paths: { Quantity: 1, Items: ['/*'] },
     },
   }),
 );
