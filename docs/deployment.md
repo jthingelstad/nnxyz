@@ -8,14 +8,14 @@ The public repository is https://github.com/jthingelstad/nnxyz. Application sour
 | ------------------------------------------ | -------------------------------------------------------------------------------------- |
 | Permanent local archive, read-only         | `~/Projects/nifty-ink-archive/`                                                        |
 | Hydrated gallery inputs, ignored by Git    | `~/Projects/nnxyz/collection/`, present only when hydrated                             |
-| Private, versioned source snapshot         | `s3://nnxyz-storage-archive-999153317627/datasets/<snapshot-sha256>/collection.tar.gz` |
-| Cold copy of the Mac's local folders       | `s3://thingelstad-archive-999153317627/nnxyz/{collection,media}/`                      |
-| Public SVGs through CloudFront             | `s3://nnxyz-storage-web-999153317627/art/<drawing-CID>.svg`                            |
-| Two-decimal display SVGs the site uses     | `s3://nnxyz-storage-web-999153317627/art/display/<drawing-CID>.svg`                    |
-| Original PNGs through CloudFront           | `s3://nnxyz-storage-web-999153317627/png/<drawing-CID>.png`                            |
-| Responsive WebPs                           | `s3://nnxyz-storage-web-999153317627/raster/<drawing-CID>-<width>.webp`                |
-| Selected metadata/provenance downloads     | `s3://nnxyz-storage-web-999153317627/records/<drawing-CID>.*.json`                     |
-| Abstract WebPs, original JPEGs and records | `s3://nnxyz-storage-web-999153317627/abstract/{images,originals,records}/`             |
+| Private, versioned source snapshot         | `s3://nnxyz-storage-archive-<account>/datasets/<snapshot-sha256>/collection.tar.gz` |
+| Cold copy of the Mac's local folders       | `s3://thingelstad-archive-<account>/nnxyz/{collection,media}/`                      |
+| Public SVGs through CloudFront             | `s3://nnxyz-storage-web-<account>/art/<drawing-CID>.svg`                            |
+| Two-decimal display SVGs the site uses     | `s3://nnxyz-storage-web-<account>/art/display/<drawing-CID>.svg`                    |
+| Original PNGs through CloudFront           | `s3://nnxyz-storage-web-<account>/png/<drawing-CID>.png`                            |
+| Responsive WebPs                           | `s3://nnxyz-storage-web-<account>/raster/<drawing-CID>-<width>.webp`                |
+| Selected metadata/provenance downloads     | `s3://nnxyz-storage-web-<account>/records/<drawing-CID>.*.json`                     |
+| Abstract WebPs, original JPEGs and records | `s3://nnxyz-storage-web-<account>/abstract/{images,originals,records}/`             |
 | HTML and hashed browser bundles            | Same web bucket, normal route paths and `_astro/`                                      |
 
 Both buckets block public S3 access, use server-side encryption and versioning, and are retained if their stacks are removed. CloudFront alone reads the web origin. The archival bucket has no CDN connection. `infra/dataset.json` pins the source bundle by SHA-256, and `infra/dataset-files.json` maps every original path to its exact bytes. A separate `infra/abstract-dataset.json` / `infra/abstract-dataset-files.json` pair pins the recovered Abstract JPEGs and saved earlier-gallery HTML sources in the same private bucket under `datasets/abstract/<sha256>/collection.tar.gz`. Hydration restores both bundles without requiring the public source pages to remain unchanged. The Nifty Ink bundle is unchanged.
@@ -24,7 +24,7 @@ Both buckets block public S3 access, use server-side encryption and versioning, 
 
 Each bundle stores identical files once; restoration makes independent regular-file copies, checks every hash and refuses to overwrite a changed local file. This snapshot backs up the imported nnxyz/scrimshaw website inputs; it does not replace or upload the entire permanent Nifty Ink archive.
 
-The Mac no longer keeps `collection/` or `media/` (removed November 4, 2026, to free disk). Their exact files, as they stood that day, are in the shared archive bucket `thingelstad-archive-999153317627` under `nnxyz/collection/` and `nnxyz/media/`, in Glacier Instant Retrieval with SHA-256 checksums. That copy is a cold backup, including anything in `media/` that was never published, such as audio samples. `npm run hydrate` stays the normal way to get `collection/` back, and `npm run media:generate` the way to make new media.
+The Mac no longer keeps `collection/` or `media/` (removed November 4, 2026, to free disk). Their exact files, as they stood that day, are in the shared archive bucket `thingelstad-archive-<account>` under `nnxyz/collection/` and `nnxyz/media/`, in Glacier Instant Retrieval with SHA-256 checksums. That copy is a cold backup, including anything in `media/` that was never published, such as audio samples. `npm run hydrate` stays the normal way to get `collection/` back, and `npm run media:generate` the way to make new media.
 
 ## Published media is write-once
 
