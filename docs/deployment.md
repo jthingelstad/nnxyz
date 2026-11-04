@@ -4,24 +4,27 @@ The public repository is https://github.com/jthingelstad/nnxyz. Application sour
 
 ## Storage paths
 
-| Purpose                                          | Location                                                                               |
-| ------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| Permanent local archive, read-only               | `~/Projects/nifty-ink-archive/`                                                        |
-| Independent local gallery inputs, ignored by Git | `~/Projects/nnxyz/collection/`                                                         |
-| Private, versioned source snapshot               | `s3://nnxyz-storage-archive-999153317627/datasets/<snapshot-sha256>/collection.tar.gz` |
-| Public SVGs through CloudFront                   | `s3://nnxyz-storage-web-999153317627/art/<drawing-CID>.svg`                            |
-| Two-decimal display SVGs the site uses           | `s3://nnxyz-storage-web-999153317627/art/display/<drawing-CID>.svg`                    |
-| Original PNGs through CloudFront                 | `s3://nnxyz-storage-web-999153317627/png/<drawing-CID>.png`                            |
-| Responsive WebPs                                 | `s3://nnxyz-storage-web-999153317627/raster/<drawing-CID>-<width>.webp`                |
-| Selected metadata/provenance downloads           | `s3://nnxyz-storage-web-999153317627/records/<drawing-CID>.*.json`                     |
-| Abstract WebPs, original JPEGs and records       | `s3://nnxyz-storage-web-999153317627/abstract/{images,originals,records}/`             |
-| HTML and hashed browser bundles                  | Same web bucket, normal route paths and `_astro/`                                      |
+| Purpose                                    | Location                                                                               |
+| ------------------------------------------ | -------------------------------------------------------------------------------------- |
+| Permanent local archive, read-only         | `~/Projects/nifty-ink-archive/`                                                        |
+| Hydrated gallery inputs, ignored by Git    | `~/Projects/nnxyz/collection/`, present only when hydrated                             |
+| Private, versioned source snapshot         | `s3://nnxyz-storage-archive-999153317627/datasets/<snapshot-sha256>/collection.tar.gz` |
+| Cold copy of the Mac's local folders       | `s3://thingelstad-archive-999153317627/nnxyz/{collection,media}/`                      |
+| Public SVGs through CloudFront             | `s3://nnxyz-storage-web-999153317627/art/<drawing-CID>.svg`                            |
+| Two-decimal display SVGs the site uses     | `s3://nnxyz-storage-web-999153317627/art/display/<drawing-CID>.svg`                    |
+| Original PNGs through CloudFront           | `s3://nnxyz-storage-web-999153317627/png/<drawing-CID>.png`                            |
+| Responsive WebPs                           | `s3://nnxyz-storage-web-999153317627/raster/<drawing-CID>-<width>.webp`                |
+| Selected metadata/provenance downloads     | `s3://nnxyz-storage-web-999153317627/records/<drawing-CID>.*.json`                     |
+| Abstract WebPs, original JPEGs and records | `s3://nnxyz-storage-web-999153317627/abstract/{images,originals,records}/`             |
+| HTML and hashed browser bundles            | Same web bucket, normal route paths and `_astro/`                                      |
 
 Both buckets block public S3 access, use server-side encryption and versioning, and are retained if their stacks are removed. CloudFront alone reads the web origin. The archival bucket has no CDN connection. `infra/dataset.json` pins the source bundle by SHA-256, and `infra/dataset-files.json` maps every original path to its exact bytes. A separate `infra/abstract-dataset.json` / `infra/abstract-dataset-files.json` pair pins the recovered Abstract JPEGs and saved earlier-gallery HTML sources in the same private bucket under `datasets/abstract/<sha256>/collection.tar.gz`. Hydration restores both bundles without requiring the public source pages to remain unchanged. The Nifty Ink bundle is unchanged.
 
 `infra/onchain-dataset.json` / `infra/onchain-dataset-files.json` pin the After Nifty Ink originals the same way, under `datasets/onchain/<sha256>/collection.tar.gz`: every original and the video still named in `data/onchain.json` and the token metadata files named in `data/onchain-works.json`, restored into `collection/recovered-onchain/` and `collection/recovered-tezos/`. `python3 tools/pack-onchain.py .build/onchain-collection.tar.gz` packs them deterministically (add `--pointer` only after the upload is verified, as for Abstract); `npm run hydrate:onchain` downloads the bundle and restores it through `tools/restore-onchain.py`, which refuses symlinks, paths outside the two trees and changed local copies. `npm run hydrate` restores all three bundles.
 
 Each bundle stores identical files once; restoration makes independent regular-file copies, checks every hash and refuses to overwrite a changed local file. This snapshot backs up the imported nnxyz/scrimshaw website inputs; it does not replace or upload the entire permanent Nifty Ink archive.
+
+The Mac no longer keeps `collection/` or `media/` (removed November 4, 2026, to free disk). Their exact files, as they stood that day, are in the shared archive bucket `thingelstad-archive-999153317627` under `nnxyz/collection/` and `nnxyz/media/`, in Glacier Instant Retrieval with SHA-256 checksums. That copy is a cold backup, including anything in `media/` that was never published, such as audio samples. `npm run hydrate` stays the normal way to get `collection/` back, and `npm run media:generate` the way to make new media.
 
 ## Published media is write-once
 
@@ -62,7 +65,7 @@ npm run dev
 ```
 
 `npm run dev` and the browser tests read media from CloudFront, so only the
-archive checks need hydration. Hydration requires authorized AWS credentials because source snapshots are private. CI uses GitHub OIDC; no static AWS keys or repository secrets are needed. Keep local `collection/` between builds. The larger source archive, original source bytes and saved curation are never regenerated by CI.
+archive checks need hydration. Hydration requires authorized AWS credentials because source snapshots are private. CI uses GitHub OIDC; no static AWS keys or repository secrets are needed. Local `collection/` is not kept between tasks; hydrate it when a task needs it. The larger source archive, original source bytes and saved curation are never regenerated by CI.
 
 ## Validation and publication
 
