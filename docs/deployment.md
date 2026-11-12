@@ -82,6 +82,8 @@ Fork pull requests run the credential-free Quality and CodeQL jobs. The archive 
 
 Pages, scripts, styles and data files are uploaded as they are. CloudFront compresses them per request (gzip or brotli, as the client's `Accept-Encoding` asks; the `nnxyz-site` cache policy and behavior already allow both), and a client that asks for no encoding gets plain bytes. Until October 28, 2026 deploys stored them gzip-encoded, so every client got gzip whether it asked or not; plain HTTP clients, some crawlers and feed readers saw compressed bytes. Only write-once media SVG and JSON stay gzip-stored: the largest native SVGs exceed the 10 MB CloudFront will compress, and published media is never rewritten. Hashed `_astro/` bundles are immutable; pages revalidate after 60 seconds. Unchanged pages are skipped by source hash and HTTP metadata. Old pages and S3 versions remain available for rollback; publication never deletes artwork.
 
+The `nnxyz-site` response headers policy allows cross-origin `GET` and `HEAD` reads from `https://thingelstad.xyz` only (November 12, 2026), so the gallery's entry there can replay one published drawing in the reader's browser from its display SVG. No other origin is allowed, no credentials are allowed, and nothing about the files changes.
+
 Local verification:
 
 ```sh

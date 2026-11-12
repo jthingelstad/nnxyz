@@ -74,6 +74,19 @@
           "Name": {
             "Fn::Sub": "${AWS::StackName}-headers"
           },
+          "CorsConfig": {
+            "AccessControlAllowCredentials": false,
+            "AccessControlAllowHeaders": {
+              "Items": ["*"]
+            },
+            "AccessControlAllowMethods": {
+              "Items": ["GET", "HEAD"]
+            },
+            "AccessControlAllowOrigins": {
+              "Items": ["https://thingelstad.xyz"]
+            },
+            "OriginOverride": true
+          },
           "SecurityHeadersConfig": {
             "ContentTypeOptions": {
               "Override": true
