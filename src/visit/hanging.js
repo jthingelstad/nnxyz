@@ -93,14 +93,23 @@ export function hangChapters(room, sides) {
       light === 'dusk'
         ? panels
         : runs.toSorted((a, b) => b.len - a.len).slice(0, 3);
-    // Present the broadest hanging wall first, then continue round the room.
-    const first = runs.indexOf(faces[0]);
-    if (light !== 'dusk')
-      faces.sort(
-        (a, b) =>
-          ((runs.indexOf(a) - first + runs.length) % runs.length) -
-          ((runs.indexOf(b) - first + runs.length) % runs.length),
+    if (light !== 'dusk') {
+      // The first two paintings share a view from across their corner. Keep the
+      // third wall for a work the visitor reaches by turning into the room.
+      const pairs = faces.flatMap((a, i) =>
+        faces.slice(i + 1).map((b) => ({
+          a,
+          b,
+          distance: Math.hypot(a.x - b.x, a.z - b.z),
+        })),
       );
+      const { a, b } = pairs.reduce((nearest, pair) =>
+        pair.distance < nearest.distance ? pair : nearest,
+      );
+      const ordered = [a, b].sort((a, b) => runs.indexOf(a) - runs.indexOf(b));
+      ordered.push(faces.find((face) => face !== a && face !== b));
+      faces.splice(0, faces.length, ...ordered);
+    }
     for (const [i, art] of room.works.entries()) {
       const face = faces[i % faces.length];
       const width = Math.min(face.len - 1.05, 6.2, 5.18 * art.ratio);

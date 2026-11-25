@@ -8,11 +8,10 @@ const { work, room, from = 'map' } = Astro.props;
 const hash = new URLSearchParams(work ? { work } : room ? { room } : { from });
 ---
 
-{process.env.NNXYZ_VIRTUAL_VISIT === '1' && (
-  <a class="virtual-visit-link" data-pagefind-ignore href={'/visit/#' + hash}>
-    <slot />
-  </a>
-)}
+<a class="virtual-visit-link" data-pagefind-ignore href={'/visit/#' + hash}>
+  <slot />
+  <span aria-hidden="true">↗</span>
+</a>
 
 <style>
   .virtual-visit-link {
@@ -29,8 +28,7 @@ const hash = new URLSearchParams(work ? { work } : room ? { room } : { from });
     color: inherit;
     margin: 0.55rem 0;
   }
-  .virtual-visit-link::after {
-    content: '↗';
+  .virtual-visit-link span {
     font-size: 0.9em;
   }
 </style>

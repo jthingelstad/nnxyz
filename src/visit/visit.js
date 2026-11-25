@@ -34,7 +34,13 @@ let floor,
   tourRoom,
   tourIndex = 0;
 let restoreFocus = null,
-  lastWork = 0;
+  lastWork = 0,
+  movedOnce = false;
+function hideWalkHint() {
+  if (movedOnce) return;
+  movedOnce = true;
+  $('walk-hint').hidden = true;
+}
 let drawings;
 function toggleDrawing(r, index, focus = false) {
   if (!scene || !r.works[index].replay) return;
@@ -48,7 +54,8 @@ $('draw-pair').onclick = () => {
   if (room?.light === 'dusk') drawings?.together(room);
 };
 const player = makePlayer($('audio'), deliveryUrl, updatePlayer);
-const hosted = Boolean($('return-link') && !Object.keys(pictures).length);
+const hosted = Boolean($('visit-entrance'));
+let entrySource = '';
 let guided = false,
   entryTimer = 0;
 const heard = new Set();
@@ -151,8 +158,10 @@ function location() {
     scheduleIntro(next);
   }
   room = next;
+  updateAddress();
   updateHangingButton();
   $('place').textContent = room?.title ?? 'Gallery hall';
+  $('walk-hint').hidden = Boolean(room || movedOnce || !scene);
   $('address').textContent =
     'Floor ' +
     String(floor.number).padStart(2, '0') +
@@ -175,6 +184,7 @@ function updateHangingButton() {
 function showHanging(r, set) {
   if (r.activeSet === set) return;
   r.activeSet = set;
+  if (room === r) updateAddress();
   drawings?.keepVisible(r);
   scene?.sync(pose.x, pose.z);
   updateHangingButton();
@@ -215,6 +225,18 @@ function stand(r, index = 0, arrival = false) {
       z: (left.z + right.z) / 2,
       y: (left.y + right.y) / 2,
     };
+  } else if (arrival && r.hangingCount > 1 && aspect > 1.3) {
+    const [first, second] = r.hang;
+    const x = r.x + r.w * 0.39,
+      z = r.z + r.d * 0.62;
+    if (walkable(floor, x, z)) {
+      Object.assign(pose, { x, z });
+      target = {
+        x: (first.x + second.x) / 2,
+        z: (first.z + second.z) / 2,
+        y: (first.y + second.y) / 2,
+      };
+    }
   } else if (arrival && !r.light && aspect > 1) {
     const next = r.hang[index + 1];
     if (next)
@@ -230,6 +252,7 @@ function stand(r, index = 0, arrival = false) {
     Math.hypot(pose.x - target.x, pose.z - target.z),
   );
   location();
+  updateAddress(arrival ? null : s.art);
   updateHangingButton();
   lastWork = index;
   scene?.sync(pose.x, pose.z);
@@ -250,6 +273,32 @@ function landing(f) {
 function jump(r, i = 0) {
   stand(r, i, true);
   closeSheet();
+}
+function showRooms(number = floor.number) {
+  const level = floors.find((f) => f.number === number);
+  sheet('rooms', 'The nnxyz Rooms', 'Choose a room');
+  content.append(
+    row(
+      ...floors.map((f) => {
+        const item = button('Floor ' + f.number, () => showRooms(f.number));
+        if (f === level) item.setAttribute('aria-current', 'true');
+        return item;
+      }),
+    ),
+  );
+  content.append(element('p', level.label, 'note'));
+  const rooms = element('div', undefined, 'room-directory');
+  for (const r of level.rooms) {
+    const item = button('', () => jump(r));
+    const img = picture(r.works[0]);
+    img.loading = 'lazy';
+    img.alt = '';
+    const label = element('span', r.title);
+    label.append(element('small', r.wing));
+    item.append(img, label);
+    rooms.append(item);
+  }
+  content.append(rooms);
 }
 function showMap(number = floor.number) {
   const f = floors.find((f) => f.number === number);
@@ -444,29 +493,30 @@ function browse() {
   if (!room) return;
   const r = room;
   sheet('works', r.wing + ' / ' + r.works.length + ' works', r.title);
-  const list = element('div', undefined, 'work-list');
+  content.append(element('p', r.introduction, 'bodycopy'));
+  let list;
   r.works.forEach((art, i) => {
+    const spot = r.hang[i];
+    if (spot.first || !list) {
+      content.append(element('h3', spot.chapter));
+      list = element('div', undefined, 'work-list');
+      content.append(list);
+    }
     const b = button('', () => describe(r, i));
-    b.append(picture(art), element('span', art.title));
+    const img = picture(art);
+    img.loading = 'lazy';
+    b.append(img, element('span', art.title));
     list.append(b);
   });
-  content.append(list);
 }
-let narratedWork;
+function narratedIndex() {
+  if (!player.room || player.room !== room) return -1;
+  const id = room.tour[player.index]?.id;
+  return room.works.findIndex((w) => w.id === id);
+}
 function updatePlayer() {
   const r = player.room;
-  const id = r?.tour[player.index]?.id;
-  if (
-    id &&
-    id !== narratedWork &&
-    r === room &&
-    r.hangingCount > 1 &&
-    player.playing
-  ) {
-    const spot = r.hang.find((s) => s.art.id === id);
-    if (spot) showHanging(r, spot.set);
-  }
-  narratedWork = id;
+  $('tour-look').hidden = narratedIndex() < 0;
   $('playing').hidden = !r;
   if (r) {
     $('pause').textContent = player.playing ? 'Pause' : 'Play';
@@ -590,13 +640,17 @@ function help() {
 $('map-button').onclick = () => showMap();
 $('lift-button').onclick = () => showMap();
 $('help-button').onclick = help;
-$('works-button').onclick = () => (room ? browse() : showMap());
+$('works-button').onclick = () => (room ? browse() : showRooms());
 $('hall-button').onclick = () => arrive(floor, room?.id);
 $('tour-button').onclick = () => {
   if (room) showTour(room, player.room === room ? player.index : 0);
 };
 $('now').onclick = () => {
   if (player.room) showTour(player.room, player.index);
+};
+$('tour-look').onclick = () => {
+  const index = narratedIndex();
+  if (index >= 0) stand(room, index);
 };
 $('pause').onclick = () => (player.playing ? player.pause() : player.resume());
 $('stop').onclick = () => player.end();
@@ -725,36 +779,57 @@ function arrive(f, id) {
   closeSheet();
   if (!scene) $('flat-image').src = pictures[g.art.image] ?? g.art.image;
 }
-function startVisit() {
-  const p = new URLSearchParams(window.location.hash.slice(1)),
-    work = p.get('work');
-  const r = allRooms.find((r) =>
-    work ? r.works.some((w) => w.id === work) : r.id === p.get('room'),
+function updateAddress(art = null) {
+  if (!hosted) return;
+  const hash = new URLSearchParams(
+    art && room
+      ? { work: art.id }
+      : room
+        ? { room: room.id }
+        : { floor: String(floor.number) },
   );
-  const i = work && r ? r.works.findIndex((w) => w.id === work) : 0;
-  if (r) stand(r, i, !work);
+  if (entrySource) hash.set('from', entrySource);
+  if (window.location.hash !== '#' + hash)
+    history.replaceState(history.state, '', '#' + hash);
+  const link = $('return-link');
+  link.hidden = false;
+  link.href =
+    art?.href ?? room?.href ?? (entrySource === 'map' ? '/map/' : '/');
+  link.textContent = art
+    ? 'Artwork page'
+    : room
+      ? 'Room page'
+      : entrySource === 'map'
+        ? 'Museum map'
+        : 'Gallery home';
+}
+function startVisit() {
+  const p = new URLSearchParams(window.location.hash.slice(1));
+  entrySource = ['home', 'map'].includes(p.get('from')) ? p.get('from') : '';
+  const work = p.get('work');
+  const workRoom = work
+    ? allRooms.find((r) => r.works.some((w) => w.id === work))
+    : null;
+  const r = workRoom ?? allRooms.find((r) => r.id === p.get('room'));
+  if (r)
+    stand(r, workRoom ? r.works.findIndex((w) => w.id === work) : 0, !workRoom);
   else
     arrive(
       floors.find((f) => f.number === Number(p.get('floor'))) ?? floors[0],
     );
-  if (hosted) {
-    const link = $('return-link');
-    link.hidden = false;
-    link.href = r
-      ? work
-        ? r.works[i].href
-        : r.href
-      : p.get('from') === 'home'
-        ? '/'
-        : '/map/';
-    link.textContent = r
-      ? work
-        ? 'Artwork page'
-        : 'Room page'
-      : p.get('from') === 'home'
-        ? 'Gallery home'
-        : 'Museum map';
+  if (!r) updateAddress();
+  if (hosted && scene) {
+    $('visit-entrance').hidden = true;
+    $('visit').hidden = false;
+    document.body.classList.add('visit-active');
+    scene.resize();
   }
+}
+if (hosted) {
+  if (scene) $('visit').hidden = false;
+  else
+    $('visit-entrance').querySelector('p').textContent =
+      'Open a room below to see the art and hear its audio tour. The walk-through needs WebGL.';
 }
 startVisit();
 window.addEventListener('hashchange', startVisit);
@@ -816,6 +891,7 @@ canvas.addEventListener('pointermove', (e) => {
   if (!drag || !e.isPrimary) return;
   if (Math.hypot(e.clientX - drag.x, e.clientY - drag.y) > 4) drag.moved = true;
   if (drag.moved) {
+    hideWalkHint();
     pose.yaw -= (e.clientX - drag.lastX) * 0.004;
     pose.pitch = clamp(
       pose.pitch - (e.clientY - drag.lastY) * 0.003,
@@ -843,6 +919,7 @@ canvas.addEventListener('pointerup', (e) => {
     else if (hit?.enter) jump(allRooms.find((r) => r.id === hit.enter));
     else if (hit?.lift) landing(floors.find((f) => f.number === hit.lift));
     else if (hit?.point && walkable(floor, hit.point.x, hit.point.z)) {
+      hideWalkHint();
       pose.x = hit.point.x;
       pose.z = hit.point.z;
       location();
@@ -861,6 +938,7 @@ function move(dt, held) {
   pose.yaw += turn * dt * 1.5;
   const f = down('ArrowUp', 'KeyW') - down('ArrowDown', 'KeyS'),
     s = down('KeyD') - down('KeyA');
+  if (turn || f || s) hideWalkHint();
   const speed = down('ShiftLeft', 'ShiftRight') ? 8 : Number($('pace').value);
   const step = (speed * dt) / Math.max(1, Math.hypot(s, f));
   const dx = (s * Math.cos(pose.yaw) - f * Math.sin(pose.yaw)) * step,

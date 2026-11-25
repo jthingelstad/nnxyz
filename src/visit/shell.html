@@ -9,7 +9,9 @@
     <p id="flat-message"></p>
   </div>
   <header>
-    <div class="wordmark">The nnxyz Rooms<span>Virtual visit</span></div>
+    <a class="wordmark" id="visit-home" href="/"
+      >The nnxyz Rooms<span>Virtual visit</span></a
+    >
     <nav aria-label="Visit tools">
       <a id="return-link" hidden>Return</a>
       <button id="vr-button" hidden>Enter VR</button
@@ -25,7 +27,11 @@
   </header>
   <div class="location paper">
     <div class="kicker"><i id="wing-dot"></i><span id="address"></span></div>
-    <h1 id="place"></h1>
+    <h1 id="place" aria-live="polite"></h1>
+    <p id="walk-hint" hidden>
+      <span class="desktop-hint">Drag to look. Use W or ↑ to walk.</span>
+      <span class="touch-hint">Drag to look. Use the arrows to walk.</span>
+    </p>
     <div class="actions">
       <button id="guide-button" aria-pressed="false">Room audio off</button
       ><button id="tour-button">Audio tour</button
@@ -75,7 +81,8 @@
     <button id="draw-stop" aria-label="Close selected drawing replay">×</button>
   </aside>
   <aside id="playing" class="paper" hidden aria-label="Audio playback">
-    <button id="pause"></button><button id="now"></button
+    <button id="pause"></button><button id="now"></button>
+    <button id="tour-look" hidden>Find this work</button>
     ><button id="stop" aria-label="End audio tour">×</button>
   </aside>
 </main>

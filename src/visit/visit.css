@@ -533,3 +533,106 @@ small {
     flex-wrap: wrap;
   }
 }
+
+#visit-entrance {
+  width: min(100% - 36px, 45rem);
+  height: auto;
+  min-height: 100%;
+  margin-inline: auto;
+  padding-block: 2rem;
+  overflow: visible;
+}
+body:has(#visit-entrance):not(.visit-active) {
+  overflow: auto;
+}
+#visit-entrance section ul {
+  columns: 2 13rem;
+}
+#visit-entrance li {
+  padding: 0.18rem 0;
+}
+#visit-home {
+  pointer-events: auto;
+  color: var(--ink);
+  text-decoration: none;
+}
+.room-directory {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.room-directory button {
+  text-align: start;
+  padding: 0;
+  overflow: hidden;
+}
+.room-directory img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.4;
+  object-fit: contain;
+  background: var(--tone);
+  margin: 0;
+}
+.room-directory span {
+  display: block;
+  padding: 9px 10px 12px;
+}
+.room-directory small {
+  display: block;
+  margin-top: 3px;
+  color: var(--dim);
+}
+
+#walk-hint {
+  margin: -4px 0 12px;
+  color: var(--dim);
+  font-size: 12px;
+}
+.touch-hint {
+  display: none;
+}
+@media (pointer: coarse) {
+  .touch-hint {
+    display: inline;
+  }
+  .desktop-hint {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) and (orientation: portrait) {
+  #return-link {
+    padding-inline: 7px;
+    font-size: 12px;
+  }
+  nav svg {
+    display: none;
+  }
+  nav button {
+    padding-inline: 7px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .location {
+    right: 12px;
+    bottom: calc(max(12px, env(safe-area-inset-bottom)) + 58px);
+    max-width: none;
+  }
+  .location .actions button {
+    padding-inline: 7px;
+    font-size: 12px;
+  }
+  .movement {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    top: auto;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    transform: none;
+  }
+  .pad {
+    grid-template-columns: repeat(4, 42px);
+  }
+}

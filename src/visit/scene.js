@@ -133,7 +133,13 @@ export function createGallery(canvas, pictures, actions) {
     wallShadow = ink('#c6bfb2'),
     mount = ink('#faf8ef');
   const hallStone = matte('#89998f', stone());
-  const roofMaterials = { soffit: ceiling, glass: windowMat, timber: oak };
+  const reveal = matte('#b5afa0');
+  const roofMaterials = {
+    soffit: ceiling,
+    glass: windowMat,
+    timber: oak,
+    reveal,
+  };
   for (const m of Object.values(roofMaterials)) m.side = T.DoubleSide;
   const pool = canvasTexture(256, 256, (ctx, w, h) => {
     const g = ctx.createRadialGradient(w / 2, h / 2, 10, w / 2, h / 2, w / 2);
@@ -157,6 +163,7 @@ export function createGallery(canvas, pictures, actions) {
     frame,
     ceiling,
     windowMat,
+    reveal,
     wallShadow,
     mount,
     benchShadow,
@@ -216,9 +223,10 @@ export function createGallery(canvas, pictures, actions) {
       soffit: matte(colors[3]),
       glass: ink(colors[4]),
       timber: oak,
+      reveal: matte(colors[0]),
     };
     for (const m of Object.values(finish)) {
-      m.side = T.DoubleSide;
+      if (m !== finish.wall) m.side = T.DoubleSide;
       shared.add(m);
     }
     finishes[name] = finish;

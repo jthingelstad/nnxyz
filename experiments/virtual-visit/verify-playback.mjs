@@ -15,7 +15,24 @@ try {
   });
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
-  await page.goto(url);
+  if (process.env.VISIT_TEST_URL) {
+    const origin = new URL(url).origin;
+    await page.goto(origin);
+    await page
+      .getByRole('navigation', { name: 'Main navigation' })
+      .getByRole('link', { name: 'Virtual visit', exact: true })
+      .click();
+    await page
+      .getByRole('button', { name: 'Choose a room', exact: true })
+      .click();
+    await page.getByRole('button', { name: 'Floor 2', exact: true }).click();
+    await page.getByRole('button', { name: /Coda: Two Landscapes/ }).click();
+    assert.match(page.url(), /#room=rawblocks--rb-coda/);
+    assert.equal(
+      await page.locator('#return-link').getAttribute('href'),
+      '/galleries/rawblocks--rb-coda/',
+    );
+  } else await page.goto(url);
   await page.getByRole('button', { name: 'Draw both landscapes' }).click();
   const picker = page.getByLabel('Painting to control'),
     time = page.getByLabel('Drawing progress');
@@ -100,6 +117,29 @@ try {
   await page.getByRole('button', { name: 'Gallery hall', exact: true }).click();
   assert(await page.locator('#replay').isHidden());
   assert.equal(await picker.locator('option').count(), 0);
+  if (process.env.VISIT_TEST_URL) {
+    const origin = new URL(url).origin;
+    await page.goto(origin + '/galleries/rawblocks--rb-coda/');
+    await page
+      .getByRole('link', { name: 'Walk into this room', exact: true })
+      .click();
+    await page
+      .getByRole('button', { name: 'Browse works', exact: true })
+      .click();
+    await page.locator('.work-list button').nth(1).click();
+    await page.getByRole('button', { name: 'Stand here', exact: true }).click();
+    const work = new URLSearchParams(new URL(page.url()).hash.slice(1)).get(
+      'work',
+    );
+    assert(work);
+    await page.getByRole('link', { name: 'Artwork page', exact: true }).click();
+    assert.equal(new URL(page.url()).pathname, '/artworks/' + work + '/');
+    await page.getByRole('link', { name: 'See this work on the wall' }).click();
+    await page
+      .getByRole('button', { name: 'Browse works', exact: true })
+      .waitFor();
+    assert.match(page.url(), new RegExp('#work=' + work));
+  }
   assert.deepEqual(errors, []);
   console.log(
     'Both landscapes advance independently. Each speed, pause, scrub, wall image and close is isolated.',

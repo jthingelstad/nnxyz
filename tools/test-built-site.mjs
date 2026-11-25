@@ -11,7 +11,7 @@ const { objects } = JSON.parse(await fs.readFile('data/media.json', 'utf8'));
 const published = new Map(
   Object.keys(objects).map((key) => [
     `/${key}`,
-    new URL(key, deployment.deliveryUrl).href,
+    new URL(key, deployment.productionUrl).href,
   ]),
 );
 const mime = {
@@ -61,18 +61,28 @@ const server = createServer(async (req, res) => {
   }
 });
 await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
-const child = spawn(process.execPath, ['tools/check-gallery.mjs'], {
-  stdio: 'inherit',
-  env: {
-    ...process.env,
-    GALLERY_TEST_URL: `http://127.0.0.1:${server.address().port}`,
-  },
-});
-try {
-  process.exitCode = await new Promise((resolve, reject) => {
+const origin = `http://127.0.0.1:${server.address().port}`;
+function run(script, env) {
+  const child = spawn(process.execPath, [script], {
+    stdio: 'inherit',
+    env: { ...process.env, ...env },
+  });
+  return new Promise((resolve, reject) => {
     child.on('error', reject);
     child.on('exit', (code) => resolve(code ?? 1));
   });
+}
+try {
+  process.exitCode = await run('tools/check-gallery.mjs', {
+    GALLERY_TEST_URL: origin,
+  });
+  if (process.exitCode === 0)
+    process.exitCode = await run(
+      'experiments/virtual-visit/verify-playback.mjs',
+      {
+        VISIT_TEST_URL: origin + '/visit/#room=rawblocks--rb-coda',
+      },
+    );
 } finally {
   server.closeAllConnections();
   await new Promise((resolve) => server.close(resolve));

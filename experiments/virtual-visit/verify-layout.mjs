@@ -1,21 +1,21 @@
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 import { createServer } from 'vite';
-import { insideDoor, planFloor, walkable } from './layout.js';
-import { viewpoint } from './viewpoint.js';
+import { insideDoor, planFloor, walkable } from '../../src/visit/layout.js';
+import { viewpoint } from '../../src/visit/viewpoint.js';
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const vite = await createServer({
   root,
   configFile: false,
   envDir: false,
   logLevel: 'error',
-  server: { middlewareMode: true, hmr: false },
+  server: { middlewareMode: true, ws: false },
 });
 let floors;
 try {
-  floors = (
-    await vite.ssrLoadModule('/experiments/virtual-visit/catalog.ts')
-  ).museum.map(planFloor);
+  floors = (await vite.ssrLoadModule('/src/visit/catalog.ts')).museum.map(
+    planFloor,
+  );
 } finally {
   await vite.close();
 }

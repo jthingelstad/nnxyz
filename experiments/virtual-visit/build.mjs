@@ -7,12 +7,13 @@ import { fileURLToPath } from 'node:url';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '../..');
+const visit = path.join(root, 'src/visit');
 const output = path.join(root, '.build/virtual-visit');
 const cache = path.join(output, 'textures');
 await mkdir(cache, { recursive: true });
 const json = async (file) =>
   JSON.parse(await readFile(path.join(root, file), 'utf8'));
-const { deliveryUrl, productionUrl } = await json('infra/deployment.json');
+const { productionUrl } = await json('infra/deployment.json');
 const { objects } = await json('data/media.json');
 const config = {
   root,
@@ -23,13 +24,11 @@ const config = {
 };
 const vite = await createServer({
   ...config,
-  server: { middlewareMode: true, hmr: false },
+  server: { middlewareMode: true, ws: false },
 });
 let floors;
 try {
-  ({ museum: floors } = await vite.ssrLoadModule(
-    '/experiments/virtual-visit/catalog.ts',
-  ));
+  ({ museum: floors } = await vite.ssrLoadModule('/src/visit/catalog.ts'));
 } finally {
   await vite.close();
 }
@@ -49,7 +48,7 @@ async function collect() {
     const file = path.join(cache, expected + '.webp');
     let bytes = await readFile(file).catch(() => null);
     if (!bytes || digest(bytes) !== expected) {
-      const reply = await fetch(new URL(key, deliveryUrl), {
+      const reply = await fetch(new URL(key, productionUrl), {
         signal: AbortSignal.timeout(45000),
       });
       if (!reply.ok) throw Error(key + ' HTTP ' + reply.status);
@@ -63,14 +62,14 @@ async function collect() {
 }
 await Promise.all(Array.from({ length: 8 }, collect));
 console.log(paths.length + ' distinct artwork images verified');
-await packDrawings(works, objects, deliveryUrl, output);
+await packDrawings(works, objects, productionUrl, output);
 const bundle = await build({
   ...config,
   build: {
     write: false,
     target: 'es2022',
     lib: {
-      entry: path.join(here, 'visit.js'),
+      entry: path.join(visit, 'visit.js'),
       name: 'Visit',
       formats: ['iife'],
     },
@@ -78,12 +77,12 @@ const bundle = await build({
 });
 const js = bundle[0].output.find((part) => part.type === 'chunk').code;
 const html = await readFile(path.join(here, 'visit.html'), 'utf8');
-const shell = await readFile(path.join(here, 'shell.html'), 'utf8');
-const css = await readFile(path.join(here, 'visit.css'), 'utf8');
+const shell = await readFile(path.join(visit, 'shell.html'), 'utf8');
+const css = await readFile(path.join(visit, 'visit.css'), 'utf8');
 const data = JSON.stringify({
   floors,
   pictures,
-  deliveryUrl,
+  deliveryUrl: productionUrl,
   productionUrl,
 }).replaceAll('<', String.fromCharCode(92) + 'u003c');
 const target = path.join(output, 'The nnxyz Rooms.html');

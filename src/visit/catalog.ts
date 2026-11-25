@@ -1,13 +1,13 @@
-import { floors, WING_COLORS } from '../../src/lib/floor-plan';
+import { floors, WING_COLORS } from '../lib/floor-plan';
 import {
   roomById,
   roomWorks,
   rooms,
   exhibitionArtwork,
-} from '../../src/lib/exhibitions';
-import { artworkPath, displayTitle, thumbnail } from '../../src/lib/catalog';
-import { svgKey } from '../../src/lib/media-paths';
-import { tourFor } from '../../src/lib/tour';
+} from '../lib/exhibitions';
+import { artworkPath, displayTitle, thumbnail } from '../lib/catalog';
+import { svgKey } from '../lib/media-paths';
+import { tourFor } from '../lib/tour';
 
 const primaryIds = new Set(
   rooms.flatMap((r) => roomWorks(r).map((w) => w.artworkId)),
@@ -29,6 +29,7 @@ export const museum = floors.map((floor) => ({
     return {
       ...plan,
       primaryCount: primary.length,
+      introduction: room.introduction[0],
       wing: room.wingTitle,
       color: WING_COLORS[room.wingId],
       chapters: [

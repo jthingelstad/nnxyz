@@ -1,4 +1,4 @@
-import { createTimeline, strokeFraction } from '../../src/lib/timeline.ts';
+import { createTimeline, strokeFraction } from '../lib/timeline.ts';
 
 // Project the selected work’s published display SVG into its frame. Cache
 // complete strokes separately so a partially transparent path is painted once.

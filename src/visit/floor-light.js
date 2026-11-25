@@ -62,21 +62,16 @@ export function floorLight(floor) {
       ctx.fillStyle = tone[0];
       ctx.fillRect(x, z, w, d);
     }
-    // Raking light marks the volume of the room without adding a walk obstacle.
-    const wash = ctx.createLinearGradient(x, z, x + w * 0.94, z + d * 0.65);
+    // The coves light the end walls and cast a diffuse pool, with no hard
+    // bands across the aisle. Cooler top light falls near the skylight bays.
+    ctx.translate(x + w * 0.5, z + d * (light === 'dusk' ? 0.24 : 0.5));
+    ctx.scale(w * 0.66, d * 0.64);
+    const wash = ctx.createRadialGradient(0, 0, 0, 0, 0, 1);
     wash.addColorStop(0, tone?.[1] ?? 'rgba(255,247,217,.22)');
+    wash.addColorStop(0.56, 'rgba(255,250,230,.09)');
     wash.addColorStop(1, 'rgba(255,250,230,0)');
     ctx.fillStyle = wash;
-    const bays = light === 'lantern' ? 4 : 2;
-    for (let i = 0; i < bays; i++) {
-      const start = z + d * (0.13 + (i * 0.67) / bays);
-      ctx.beginPath();
-      ctx.moveTo(x, start);
-      ctx.lineTo(x + w, start + d * 0.28);
-      ctx.lineTo(x + w, start + d * (0.28 + 0.32 / bays));
-      ctx.lineTo(x, start + (d * 0.32) / bays);
-      ctx.fill();
-    }
+    ctx.fillRect(-1, -1, 2, 2);
     ctx.restore();
   }
   floor.guides.forEach(shadow);
