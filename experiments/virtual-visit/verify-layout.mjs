@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 import { createServer } from 'vite';
-import { planFloor, walkable } from './layout.js';
+import { insideDoor, planFloor, walkable } from './layout.js';
 import { viewpoint } from './viewpoint.js';
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const vite = await createServer({
@@ -20,7 +20,8 @@ try {
   await vite.close();
 }
 let count = 0,
-  replays = 0;
+  replays = 0,
+  crossings = 0;
 const ids = new Set();
 for (const floor of floors) {
   // Every room can get back to the hall even if any one doorway is closed.
@@ -39,7 +40,7 @@ for (const floor of floors) {
     );
   }
   // Flood the actual walking surface at a visitor's scale, including benches,
-  // chapter partitions, hall previews and the clearance around solid walls.
+  // perimeter walls, hall previews and the clearance around solid walls.
   const step = 0.24,
     cols = Math.ceil(floor.width / step),
     rows = Math.ceil(floor.depth / step),
@@ -63,6 +64,41 @@ for (const floor of floors) {
       r.hang.map((s) => s.art.id),
       r.works.map((w) => w.id),
     );
+    // A visitor can walk straight between the approaches of ANY two doors.
+    // Sample a strip 1.1 m wide, including the collider's own wall clearance.
+    const doors = floor.exits
+      .filter((e) => e.from === r.id || e.to === r.id)
+      .map((e) => e.door);
+    const approaches = doors.map((d) => insideDoor(r, d));
+    function clearLane(a, b) {
+      const dx = b.x - a.x,
+        dz = b.z - a.z,
+        len = Math.hypot(dx, dz),
+        n = Math.ceil(len / 0.1);
+      for (let i = 0; i <= n; i++)
+        for (const offset of [-0.55, 0, 0.55]) {
+          assert(
+            walkable(
+              floor,
+              a.x + (dx * i) / n - (offset * dz) / len,
+              a.z + (dz * i) / n + (offset * dx) / len,
+            ),
+            'Obstructed aisle in ' + r.title,
+          );
+        }
+    }
+    for (const [i, a] of approaches.entries()) {
+      clearLane(insideDoor(r, doors[i], 0), a);
+      for (const b of approaches.slice(i + 1)) {
+        clearLane(a, b);
+        crossings++;
+      }
+    }
+    if (r.light) {
+      assert(r.hang.every((s) => s.art.svg && s.art.replay && s.height > 3.5));
+      for (let set = 0; set < r.hangingCount; set++)
+        assert(r.hang.filter((s) => s.set === set).length <= 3);
+    }
     for (const [i, w] of r.works.entries()) {
       assert(!ids.has(w.id));
       ids.add(w.id);
@@ -105,3 +141,4 @@ console.log(
   replays,
   'with recorded strokes.',
 );
+console.log(crossings, 'unobstructed door-to-door crossings.');

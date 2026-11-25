@@ -2,7 +2,7 @@ import { createTimeline, strokeFraction } from '../../src/lib/timeline.ts';
 
 // Project the selected work’s published display SVG into its frame. Cache
 // complete strokes separately so a partially transparent path is painted once.
-export function wallDrawing(source) {
+export function wallDrawing(source, edge = 800) {
   const svg = new DOMParser().parseFromString(
     source,
     'image/svg+xml',
@@ -22,8 +22,8 @@ export function wallDrawing(source) {
     .getAttribute('viewBox')
     .split(/\s+/)
     .map(Number);
-  canvas.width = base.width = 800;
-  canvas.height = base.height = Math.round((800 * height) / width);
+  canvas.width = base.width = Math.round(edge * Math.min(1, width / height));
+  canvas.height = base.height = Math.round((canvas.width * height) / width);
   const ctx = canvas.getContext('2d'),
     complete = base.getContext('2d');
   let layers = 0;

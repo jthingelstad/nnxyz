@@ -2,7 +2,9 @@ import * as T from 'three';
 import { floorLight } from './floor-light.js';
 import { buildRoof } from './roof.js';
 import { makeHeadset } from './headset.js';
-import { bench } from './layout.js';
+import { roomAt } from './layout.js';
+import { mountPlaque, wallHit } from './plaque.js';
+import { vectorWall } from './vector-wall.js';
 
 const height = 4.1;
 const eye = 1.62;
@@ -160,28 +162,75 @@ export function createGallery(canvas, pictures, actions) {
     benchShadow,
     hallStone,
   ]);
-  const playSign = lettering('▶  Draw', true),
-    pauseSign = lettering('Ⅱ  Pause', true),
-    resumeSign = lettering('▶  Resume', true);
-  for (const m of [playSign, pauseSign, resumeSign]) shared.add(m);
+  // A single pigmented return wall gives each wing a landmark from its door.
+  const pigments = {
+    'nifty-faces': '#bcbca9',
+    rawblocks: '#b3bbb1',
+    abstract: '#a8bdb9',
+    nnotb: '#b2c0c9',
+    'nnxyz-other': '#c2ad98',
+    scrimshaw: '#b9aec3',
+    'after-nifty-ink': '#aeb8c0',
+  };
+  const returns = Object.fromEntries(
+    Object.entries(pigments).map(([id, color]) => {
+      const m = matte(color, wall.map);
+      shared.add(m);
+      return [id, m];
+    }),
+  );
   const loader = new T.TextureLoader();
-  let activePlaque = null;
+  const vectorEdge = Math.min(
+    renderer.capabilities.maxTextureSize,
+    matchMedia('(pointer: coarse)').matches ? 1536 : 2048,
+  );
+  // Each finish pairs a lit plaster wall with the underside of its roof.
+  const finishes = {};
+  for (const [name, colors] of Object.entries({
+    dusk: ['#263840', '#4c5e63', '#ab8567', '#465258', '#f9d9ab'],
+    lantern: ['#3e302c', '#755342', '#e0ba86', '#786354', '#fff0ca'],
+    northlight: ['#384957', '#728894', '#cbdae1', '#82919b', '#effaff'],
+  })) {
+    const map = canvasTexture(512, 512, (ctx, w, h) => {
+      const wash = ctx.createLinearGradient(0, 0, 0, h);
+      wash.addColorStop(0, colors[2]);
+      wash.addColorStop(0.24, colors[1]);
+      wash.addColorStop(1, colors[0]);
+      ctx.fillStyle = wash;
+      ctx.fillRect(0, 0, w, h);
+      const beam = ctx.createRadialGradient(
+        w * 0.48,
+        -h * 0.2,
+        0,
+        w * 0.48,
+        -h * 0.2,
+        h * 1.05,
+      );
+      beam.addColorStop(0, 'rgba(255,249,228,.34)');
+      beam.addColorStop(0.78, 'rgba(255,249,228,0)');
+      ctx.fillStyle = beam;
+      ctx.fillRect(0, 0, w, h);
+    });
+    const finish = {
+      wall: new T.MeshBasicMaterial({ map }),
+      soffit: matte(colors[3]),
+      glass: ink(colors[4]),
+      timber: oak,
+    };
+    for (const m of Object.values(finish)) {
+      m.side = T.DoubleSide;
+      shared.add(m);
+    }
+    finishes[name] = finish;
+  }
+  const projections = new Map();
   function replaySign(id, state) {
-    if (activePlaque) activePlaque.material = playSign;
-    activePlaque = targets.find(
-      (t) => t.userData.room.works[t.userData.index].id === id,
-    )?.userData.plaque;
-    if (activePlaque)
-      activePlaque.material =
-        state === 'playing'
-          ? pauseSign
-          : state === 'paused'
-            ? resumeSign
-            : playSign;
+    targets
+      .find((t) => t.userData.room.works[t.userData.index].id === id)
+      ?.userData.printLabel?.(state);
     epoch++;
   }
-  let projection = null,
-    shell = null,
+  let shell = null,
     floor = null,
     hanging = new Map(),
     targets = [],
@@ -189,8 +238,10 @@ export function createGallery(canvas, pictures, actions) {
   function clearArt(id) {
     const group = hanging.get(id);
     if (!group) return;
-    if (projection?.userData.room.id === id) setDrawing();
+    for (const [artId, projection] of projections)
+      if (projection.userData.room.id === id) setDrawing(null, artId);
     group.userData.active = false;
+    group.userData.detail?.abort();
     discard(group, shared);
     hanging.delete(id);
     targets = targets.filter((mesh) => mesh.userData.room.id !== id);
@@ -198,12 +249,14 @@ export function createGallery(canvas, pictures, actions) {
   function hangRoom(room) {
     const group = new T.Group();
     group.userData.active = true;
+    group.userData.set = room.activeSet ?? 0;
     shell.add(group);
     hanging.set(room.id, group);
     for (const [index, spot] of room.hang.entries()) {
+      if (spot.set !== group.userData.set) continue;
       const g = new T.Group();
       group.add(g);
-      g.position.set(spot.x, eye, spot.z);
+      g.position.set(spot.x, spot.y, spot.z);
       g.rotation.y = spot.angle;
       const w = spot.width,
         h = spot.height;
@@ -215,7 +268,7 @@ export function createGallery(canvas, pictures, actions) {
       face.userData = { room, index };
       targets.push(face);
       loader.load(pictures[spot.art.image] ?? spot.art.image, (map) => {
-        if (!group.userData.active) {
+        if (!group.userData.active || face.userData.detailed) {
           map.dispose();
           return;
         }
@@ -225,51 +278,7 @@ export function createGallery(canvas, pictures, actions) {
         surface.needsUpdate = true;
         epoch++;
       });
-      if (index === 0 && room.tour.length) {
-        const sign = plate(
-          g,
-          0.57,
-          0.12,
-          0,
-          -h / 2 - 0.32,
-          0.015,
-          lettering('Play room tour', true, true),
-        );
-        sign.userData.tour = room;
-      }
-      if (spot.art.replay) {
-        const plaque = plate(
-          g,
-          0.54,
-          0.17,
-          Math.min(w * 0.24, 0.34),
-          -h / 2 - 0.17,
-          0.016,
-          playSign,
-        );
-        plaque.userData.replay = { room, index };
-        face.userData.plaque = plaque;
-      }
-      if (spot.first) {
-        plate(
-          g,
-          Math.min(w + 0.35, 2.4),
-          0.26,
-          0,
-          1.05,
-          0.016,
-          lettering(spot.chapter),
-        );
-      }
-      plate(
-        g,
-        Math.min(0.47, w * 0.76),
-        0.12,
-        spot.art.replay ? -Math.min(w * 0.26, 0.36) : 0,
-        -h / 2 - 0.17,
-        0.016,
-        lettering(spot.art.title, true),
-      );
+      face.userData.printLabel = mountPlaque(g, spot, room, index);
     }
   }
   function setFloor(next) {
@@ -341,6 +350,33 @@ export function createGallery(canvas, pictures, actions) {
       }
     }
     for (const room of floor.rooms) {
+      const finish = finishes[room.light];
+      if (finish)
+        for (const side of room.sides) {
+          const face = (lo, hi, bottom) => {
+            if (hi <= lo + 0.002) return;
+            const t = (lo + hi) / (2 * side.len),
+              nx = Math.sin(side.angle),
+              nz = Math.cos(side.angle);
+            plate(
+              shell,
+              hi - lo,
+              room.ceiling - bottom,
+              side.a.x + (side.b.x - side.a.x) * t + 0.08 * nx,
+              (room.ceiling + bottom) / 2,
+              side.a.z + (side.b.z - side.a.z) * t + 0.08 * nz,
+              finish.wall,
+              side.angle,
+            );
+          };
+          let at = 0;
+          for (const gap of side.gaps) {
+            face(at, gap.lo, 0);
+            face(gap.lo, gap.hi, 2.65);
+            at = gap.hi;
+          }
+          face(at, side.len, 0);
+        }
       for (const s of room.panels) {
         box(
           shell,
@@ -350,7 +386,9 @@ export function createGallery(canvas, pictures, actions) {
           s.x,
           s.height / 2,
           s.z,
-          wall,
+          finish?.wall ??
+            (s === room.panels[0] ? returns[room.wingId] : wall) ??
+            wall,
           s.angle,
           s.len / 3.3,
         );
@@ -377,8 +415,8 @@ export function createGallery(canvas, pictures, actions) {
           s.angle,
         );
       }
-      buildRoof(shell, room, height, roofMaterials);
-      const b = bench(room);
+      buildRoof(shell, room, room.ceiling, finish ?? roofMaterials);
+      const b = room.seat;
       if (b) {
         const shade = plate(shell, 3.4, 1.25, b.x, 0.006, b.z, benchShadow);
         shade.rotation.x = -Math.PI / 2;
@@ -576,14 +614,48 @@ export function createGallery(canvas, pictures, actions) {
       ).userData.lift = n;
     epoch++;
   }
+  function sharpen(room, group) {
+    if (group.userData.detail) return;
+    const request = new AbortController();
+    group.userData.detail = request;
+    for (const face of targets.filter((t) => t.userData.room === room)) {
+      const art = room.works[face.userData.index];
+      vectorWall(art, vectorEdge, request.signal)
+        .then((canvas) => {
+          if (request.signal.aborted) return;
+          const map = new T.CanvasTexture(canvas);
+          map.colorSpace = T.SRGBColorSpace;
+          map.anisotropy = Math.min(
+            8,
+            renderer.capabilities.getMaxAnisotropy(),
+          );
+          face.userData.detailed = true;
+          face.material.map?.dispose();
+          face.material.map = map;
+          face.material.needsUpdate = true;
+          epoch++;
+        })
+        .catch(() => {
+          /* The published poster remains available while off-line. */
+        });
+    }
+  }
   function sync(x, z) {
+    const current = roomAt(floor, x, z);
     for (const room of floor.rooms) {
       const near =
         x >= room.x - 5 &&
         x <= room.x + room.w + 5 &&
         z >= room.z - 5 &&
         z <= room.z + room.d + 5;
+      if (
+        near &&
+        hanging.has(room.id) &&
+        hanging.get(room.id).userData.set !== (room.activeSet ?? 0)
+      )
+        clearArt(room.id);
       if (near && !hanging.has(room.id)) hangRoom(room);
+      if (current === room && room.light) sharpen(room, hanging.get(room.id));
       if (!near && hanging.has(room.id)) clearArt(room.id);
     }
   }
@@ -592,18 +664,19 @@ export function createGallery(canvas, pictures, actions) {
     ray.setFromCamera(new T.Vector2(x, y), camera);
     const hit = ray.intersectObject(shell, true)[0];
     if (!hit || hit.distance > 18) return null;
-    const d = hit.object.userData;
+    const d = wallHit(hit);
     if (d.ground) return { point: hit.point };
     return d;
   }
   function setDrawing(source, artId) {
+    let projection = projections.get(artId);
     if (!source) {
       if (projection) {
         projection.material.map.dispose();
         projection.material.dispose();
         projection.geometry.dispose();
         projection.removeFromParent();
-        projection = null;
+        projections.delete(artId);
         epoch++;
       }
       return;
@@ -616,6 +689,8 @@ export function createGallery(canvas, pictures, actions) {
       const map = new T.CanvasTexture(source);
       map.colorSpace = T.SRGBColorSpace;
       map.anisotropy = 4;
+      map.generateMipmaps = false;
+      map.minFilter = T.LinearFilter;
       projection = new T.Mesh(
         face.geometry.clone(),
         new T.MeshBasicMaterial({ map }),
@@ -624,6 +699,7 @@ export function createGallery(canvas, pictures, actions) {
       projection.position.z += 0.001;
       projection.userData = face.userData;
       face.parent.add(projection);
+      projections.set(artId, projection);
     }
     projection.material.map.needsUpdate = true;
     epoch++;
@@ -646,6 +722,8 @@ export function createGallery(canvas, pictures, actions) {
   }
   function theme(dark) {
     wall.color.set(dark ? '#454640' : '#ffffff');
+    for (const [id, m] of Object.entries(returns))
+      m.color.set(pigments[id]).multiplyScalar(dark ? 0.26 : 1);
     ceiling.color.set(dark ? '#514f49' : '#f0eee7');
     plinth.color.set(dark ? '#3b3b34' : '#b7b1a7');
     wallShadow.color.set(dark ? '#3d3b35' : '#c6bfb2');
@@ -654,6 +732,7 @@ export function createGallery(canvas, pictures, actions) {
   }
   return {
     headset,
+    vectorEdge,
     setDrawing,
     replaySign,
     setFloor,

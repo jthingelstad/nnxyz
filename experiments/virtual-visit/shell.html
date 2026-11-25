@@ -29,6 +29,8 @@
     <div class="actions">
       <button id="guide-button" aria-pressed="false">Room audio off</button
       ><button id="tour-button">Audio tour</button
+      ><button id="draw-pair" hidden>Draw both landscapes</button
+      ><button id="hanging-button" hidden>Next hanging</button
       ><button id="works-button">Browse works</button
       ><button id="hall-button">Gallery hall</button
       ><button id="lift-button" hidden>Use lift</button>
@@ -51,8 +53,11 @@
     >
   </div>
   <aside class="paper" id="replay" hidden aria-label="Wall drawing playback">
-    <span id="draw-status" role="status">Reconstructed drawing</span
-    ><button id="draw-toggle">Pause</button>
+    <div class="drawing-name">
+      <select id="draw-work" aria-label="Painting to control"></select
+      ><span id="draw-status" role="status">Reconstructed drawing</span>
+    </div>
+    <button id="draw-toggle">Pause</button>
     <input
       id="draw-time"
       aria-label="Drawing progress"
@@ -63,11 +68,11 @@
     />
     <select id="draw-speed" aria-label="Drawing speed">
       <option value=".5">½×</option>
-      <option selected>1×</option>
-      <option>2×</option>
-      <option>4×</option>
+      <option selected value="1">1×</option>
+      <option value="2">2×</option>
+      <option value="4">4×</option>
     </select>
-    <button id="draw-stop" aria-label="Close drawing replay">×</button>
+    <button id="draw-stop" aria-label="Close selected drawing replay">×</button>
   </aside>
   <aside id="playing" class="paper" hidden aria-label="Audio playback">
     <button id="pause"></button><button id="now"></button

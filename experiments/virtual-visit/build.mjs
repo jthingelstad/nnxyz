@@ -98,3 +98,16 @@ await writeFile(
     ),
 );
 console.log(target);
+
+// Direct offline entrances for comparing the three large-scale installations.
+for (const [name, room] of [
+  ['Coda', 'rawblocks--rb-coda'],
+  ['Numbered Masks', 'nnxyz-other--ot-masks'],
+  ['Black Silhouettes', 'nnotb--p1--silhouettes'],
+]) {
+  const href = 'The%20nnxyz%20Rooms.html#room=' + room;
+  await writeFile(
+    path.join(output, name + '.html'),
+    `<!doctype html><html lang="en"><meta charset="utf-8"><title>${name} · The nnxyz Rooms</title><meta http-equiv="refresh" content="0;url=${href}"><a href="${href}">Enter ${name}</a></html>`,
+  );
+}

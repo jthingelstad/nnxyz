@@ -57,6 +57,19 @@ export const museum = floors.map((floor) => ({
       return {
         id: record.artworkId,
         title: displayTitle(art),
+        artist: art.artistName,
+        date:
+          'inkId' in art
+            ? String(new Date(Number(art.createdAt) * 1000).getUTCFullYear())
+            : 'chain' in art && art.createdAt
+              ? 'Minted ' + art.createdAt.slice(0, 4)
+              : '',
+        medium:
+          'inkId' in art
+            ? 'Nifty Ink drawing'
+            : 'chain' in art && art.animated
+              ? 'Animation, still frame'
+              : 'Digital image',
         caption: record.caption,
         ratio: Number(art.width) / Number(art.height),
         image: thumbnail(art).src,

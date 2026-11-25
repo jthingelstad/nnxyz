@@ -1,13 +1,15 @@
 import { nearSegment } from './hanging.js';
 import { walkable, roomAt } from './layout.js';
 
-export function viewpoint(floor, room, index, arrival = false) {
+export function viewpoint(floor, room, index, arrival = false, aspect = 1.5) {
   const s = room.hang[index];
-  for (const distance of arrival
+  const framing = Math.max(1, s.height / 1.65, s.width / (2.3 * aspect));
+  for (const step of arrival
     ? [4.3, 3.7, 3.0, 2.35, 1.8, 1.15, 0.7]
     : [2.35, 2.15, 1.8, 1.15, 0.7]) {
+    const distance = step * framing;
     for (const lean of arrival
-      ? [-0.27, 0, 0.3, -0.62, 0.62]
+      ? [-0.45, 0, 0.45, -0.72, 0.72]
       : [0, 0.3, -0.3, 0.62, -0.62]) {
       const slide = distance * lean;
       const dx = s.nx * distance + Math.cos(s.angle) * slide,

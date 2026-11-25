@@ -46,6 +46,39 @@ export function floorLight(floor) {
     ctx.fill();
   }
   ctx.restore();
+  for (const room of floor.rooms) {
+    ctx.save();
+    const { x, z, w, d, light } = room;
+    ctx.beginPath();
+    ctx.rect(x, z, w, d);
+    ctx.clip();
+    const tones = {
+      dusk: ['rgba(49,65,74,.68)', 'rgba(255,203,137,.29)'],
+      lantern: ['rgba(99,70,53,.49)', 'rgba(255,222,158,.36)'],
+      northlight: ['rgba(67,88,104,.46)', 'rgba(224,243,255,.42)'],
+    };
+    const tone = tones[light];
+    if (tone) {
+      ctx.fillStyle = tone[0];
+      ctx.fillRect(x, z, w, d);
+    }
+    // Raking light marks the volume of the room without adding a walk obstacle.
+    const wash = ctx.createLinearGradient(x, z, x + w * 0.94, z + d * 0.65);
+    wash.addColorStop(0, tone?.[1] ?? 'rgba(255,247,217,.22)');
+    wash.addColorStop(1, 'rgba(255,250,230,0)');
+    ctx.fillStyle = wash;
+    const bays = light === 'lantern' ? 4 : 2;
+    for (let i = 0; i < bays; i++) {
+      const start = z + d * (0.13 + (i * 0.67) / bays);
+      ctx.beginPath();
+      ctx.moveTo(x, start);
+      ctx.lineTo(x + w, start + d * 0.28);
+      ctx.lineTo(x + w, start + d * (0.28 + 0.32 / bays));
+      ctx.lineTo(x, start + (d * 0.32) / bays);
+      ctx.fill();
+    }
+    ctx.restore();
+  }
   floor.guides.forEach(shadow);
   floor.rooms.forEach((r) => r.panels.forEach(shadow));
   const texture = new T.CanvasTexture(canvas);

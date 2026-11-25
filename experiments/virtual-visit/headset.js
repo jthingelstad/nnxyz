@@ -1,4 +1,5 @@
 import * as T from 'three';
+import { wallHit } from './plaque.js';
 
 // Windows and immersive sessions share one building. WebXR supplies the viewer's
 // eye height and head pose; the rig supplies only the visitor's place in the plan.
@@ -52,7 +53,7 @@ export function makeHeadset(renderer, scene, shell, actions) {
       c.addEventListener('select', () => {
         const hit = intersect(c);
         if (!hit) return;
-        const d = hit.object.userData;
+        const d = wallHit(hit);
         if (d.ground && actions.allowed(hit.point.x, hit.point.z))
           at(hit.point.x, hit.point.z);
         else if (d.enter) {
@@ -66,6 +67,7 @@ export function makeHeadset(renderer, scene, shell, actions) {
           const destination = actions.lift(d.lift);
           at(destination.x, destination.z);
         } else if (d.tour) actions.tour(d.tour);
+        else if (d.change) actions.change(d.change);
         else if (d.replay) actions.replay(d.replay);
         else if (d.room) actions.art(d.room, d.index);
       });
