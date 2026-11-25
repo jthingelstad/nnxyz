@@ -29,7 +29,7 @@ export default defineConfig({
       proxy: Object.fromEntries(
         mediaPrefixes.map((prefix) => [
           `/${prefix}`,
-          { target: deployment.deliveryUrl, changeOrigin: true },
+          { target: deployment.productionUrl, changeOrigin: true },
         ]),
       ),
     },

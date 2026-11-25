@@ -1,4 +1,5 @@
 ---
+import VisitLink from '../components/VisitLink.astro';
 import Layout from '../layouts/Layout.astro';
 import { rooms, roomWorks, exhibitionArtwork } from '../lib/exhibitions';
 import { thumbnail, displayTitle } from '../lib/catalog';
@@ -72,6 +73,7 @@ const stairBottom = project(floors[0], floors[0].stairs.x, floors[0].stairs.y);
       it was drawn, and each room has a door into the next. Room sizes follow
       the number of works. Choose a room to enter it.
     </p>
+    <VisitLink>Enter the gallery hall</VisitLink>
     <div class="floor-plan-frame">
       <svg
         class="floor-plan"

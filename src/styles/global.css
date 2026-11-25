@@ -2671,3 +2671,14 @@ body.tour-active {
     white-space: nowrap;
   }
 }
+
+/* Keep all paths to the collection available on narrow screens. */
+.visit-nav {
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .site-header nav {
+    flex-wrap: wrap;
+    row-gap: 0;
+  }
+}

@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import { analytics } from '../lib/analytics';
+import SiteAnalytics from '../components/SiteAnalytics.astro';
 import Icon from '../components/Icon.astro';
 import { entrances } from '../lib/exhibitions';
 interface Props {
@@ -23,8 +25,6 @@ const {
   description = `A collection of nnxyz artwork hung in ${roomCount} rooms, with a related collection by Scrimshaw. ${entranceList}.`,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const analytics =
-  import.meta.env.PROD && import.meta.env.PUBLIC_TINYLYTICS_ENABLED === 'true';
 ---
 
 <!doctype html>
@@ -78,6 +78,9 @@ const analytics =
         <a href="/#collections">Collections</a>
         <a href="/story/">Story</a>
         <a href="/map/">Map</a>
+        <a href="/visit/#from=home" class="visit-nav">
+          Virtual visit
+        </a>
         <a href="/search/" class="search-link">
           <span class="search-icon">
             <Icon name="search" size={17} />
@@ -109,15 +112,7 @@ const analytics =
     <div id="kudos-notice" role="status" class="notice" hidden>
       Kudos will be available on the published gallery.
     </div>
-    {analytics && <script is:inline>
-      if (location.hostname === 'nnxyz.thingelstad.xyz') {
-        const script = document.createElement('script');
-        script.defer = true;
-        script.src = 'https://tinylytics.app/js/script.js';
-        script.dataset.site = '7MaUUztU7BVzhcxntCUh';
-        document.body.append(script);
-      }
-    </script>}
+    <SiteAnalytics />
     <script>
       const themeToggle = document.querySelector<HTMLButtonElement>(
         '[data-theme-toggle]',

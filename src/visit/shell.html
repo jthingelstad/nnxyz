@@ -1,0 +1,97 @@
+<main>
+  <canvas
+    id="view"
+    tabindex="0"
+    aria-label="Walk through the gallery. Use W and S to walk, A and D to step sideways, and the left and right arrows to turn. Drag to look around. Select a picture to read its label."
+  ></canvas>
+  <div id="flat" hidden>
+    <img id="flat-image" alt="" />
+    <p id="flat-message"></p>
+  </div>
+  <header>
+    <a class="wordmark" id="visit-home" href="/"
+      >The nnxyz Rooms<span>Virtual visit</span></a
+    >
+    <nav aria-label="Visit tools">
+      <a id="return-link" hidden>Return</a>
+      <button id="vr-button" hidden>Enter VR</button
+      ><button id="map-button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16m6-14v16" /></svg
+        >Floor plan
+      </button>
+      <button id="help-button" aria-label="Visit controls and settings">
+        ?
+      </button>
+    </nav>
+  </header>
+  <div class="location paper">
+    <div class="kicker"><i id="wing-dot"></i><span id="address"></span></div>
+    <h1 id="place" aria-live="polite"></h1>
+    <p id="walk-hint" hidden>
+      <span class="desktop-hint">Drag to look. Use W or ↑ to walk.</span>
+      <span class="touch-hint">Drag to look. Use the arrows to walk.</span>
+    </p>
+    <div class="actions">
+      <button id="guide-button" aria-pressed="false">Room audio off</button
+      ><button id="tour-button">Audio tour</button
+      ><button id="draw-pair" hidden>Draw both landscapes</button
+      ><button id="hanging-button" hidden>Next hanging</button
+      ><button id="works-button">Browse works</button
+      ><button id="hall-button">Gallery hall</button
+      ><button id="lift-button" hidden>Use lift</button>
+    </div>
+  </div>
+  <div class="movement">
+    <div class="pad" aria-label="Walking controls">
+      <button data-move="ArrowLeft" aria-label="Turn left">↶</button
+      ><button data-move="ArrowUp" aria-label="Walk forward">↑</button
+      ><button data-move="ArrowDown" aria-label="Walk backward">↓</button
+      ><button data-move="ArrowRight" aria-label="Turn right">↷</button>
+    </div>
+    <label
+      >Walk
+      <select id="pace" aria-label="Walking pace">
+        <option value="2.65">Slow</option>
+        <option value="4.8" selected>Brisk</option>
+        <option value="7.5">Fast</option>
+      </select></label
+    >
+  </div>
+  <aside class="paper" id="replay" hidden aria-label="Wall drawing playback">
+    <div class="drawing-name">
+      <select id="draw-work" aria-label="Painting to control"></select
+      ><span id="draw-status" role="status">Reconstructed drawing</span>
+    </div>
+    <button id="draw-toggle">Pause</button>
+    <input
+      id="draw-time"
+      aria-label="Drawing progress"
+      type="range"
+      min="0"
+      step="0.05"
+      value="0"
+    />
+    <select id="draw-speed" aria-label="Drawing speed">
+      <option value=".5">½×</option>
+      <option selected value="1">1×</option>
+      <option value="2">2×</option>
+      <option value="4">4×</option>
+    </select>
+    <button id="draw-stop" aria-label="Close selected drawing replay">×</button>
+  </aside>
+  <aside id="playing" class="paper" hidden aria-label="Audio playback">
+    <button id="pause"></button><button id="now"></button>
+    <button id="tour-look" hidden>Find this work</button>
+    ><button id="stop" aria-label="End audio tour">×</button>
+  </aside>
+</main>
+<dialog id="panel">
+  <div class="panel-head">
+    <span class="kicker" id="panel-type"></span
+    ><button class="close" aria-label="Close panel">×</button>
+  </div>
+  <div id="content"></div>
+</dialog>
+<audio id="audio" preload="none"></audio
+><noscript>This walk-through needs JavaScript to display the rooms.</noscript>

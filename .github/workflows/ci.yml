@@ -27,6 +27,7 @@ jobs:
       - run: npm run format:check
       - run: npm run check
       - run: npm test
+      - run: npm run check --prefix experiments/virtual-visit
       - run: pipx run --spec ruff==0.17.0 ruff check tools tests
       - run: pipx run --spec ruff==0.17.0 ruff format --check tools tests
       - run: npm audit --audit-level=high

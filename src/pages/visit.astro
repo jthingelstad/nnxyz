@@ -1,0 +1,85 @@
+---
+import SiteAnalytics from '../components/SiteAnalytics.astro';
+import shell from '../visit/shell.html?raw';
+import '../visit/visit.css';
+import { museum } from '../visit/catalog';
+const title = 'Virtual visit — The nnxyz Rooms';
+const description =
+  'Walk the galleries, listen to the room introductions and watch artworks draw on the walls.';
+const canonical = new URL('/visit/', Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" />
+    <link
+      rel="preload"
+      href="/visit/museum.json"
+      as="fetch"
+      crossorigin="anonymous"
+    />
+    <meta property="og:site_name" content="The nnxyz Rooms" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <script is:inline>
+      try {
+        if (localStorage.getItem('nnxyz-theme') === 'dark')
+          document.documentElement.dataset.theme = 'dark';
+      } catch {
+        /* The default background works without storage. */
+      }
+    </script>
+  </head>
+  <body>
+    <main id="visit-entrance">
+      <a href="/">The nnxyz Rooms</a>
+      <h1>Virtual visit</h1>
+      <p>
+        Walk through the rooms, listen to the audio tour, and watch drawings
+        take shape on the walls.
+      </p>
+      <noscript>
+        <p>Use the links below to read the rooms and view the art.</p>
+      </noscript>
+      <a href="/map/">Museum map</a>
+      {museum.map((floor) => (
+        <section aria-label={floor.label}>
+          <h2>Floor {floor.number}</h2>
+          <ul>
+            {floor.rooms.map((room) => (
+              <li>
+                <a href={room.href}>{room.title}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </main>
+    <Fragment set:html={shell.replace('<main>', '<main id="visit" hidden>')} />
+    <SiteAnalytics />
+    <script>
+      import { startMuseum } from '../visit/visit.js';
+      try {
+        const response = await fetch('/visit/museum.json');
+        if (!response.ok) throw Error('Museum catalog unavailable');
+        startMuseum(await response.json());
+      } catch {
+        const entrance = document.getElementById('visit-entrance');
+        if (entrance && !entrance.hidden)
+          entrance.querySelector('p')!.textContent =
+            'The virtual visit could not load. Open a room below to see the art and hear its audio tour.';
+      }
+    </script>
+  </body>
+</html>

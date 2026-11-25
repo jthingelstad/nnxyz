@@ -1,4 +1,5 @@
 ---
+import VisitLink from './VisitLink.astro';
 import Layout from '../layouts/Layout.astro';
 import Icon from './Icon.astro';
 import Kudos from './Kudos.astro';
@@ -84,6 +85,7 @@ const strokeMeasures = technique ? measures.get(work.inkId) : undefined;
           </button>
         </div>
       </div>
+      <VisitLink work={work.inkId}>See this work on the wall</VisitLink>
       <section class="curator-reading" aria-label="Label">
         <p>{reading}</p>
       </section>
