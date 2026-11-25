@@ -7,10 +7,6 @@ const title = 'Virtual visit — The nnxyz Rooms';
 const description =
   'Walk the galleries, listen to the room introductions and watch artworks draw on the walls.';
 const canonical = new URL('/visit/', Astro.site).href;
-const payload = JSON.stringify({ floors: museum }).replaceAll(
-  '<',
-  String.fromCharCode(92) + 'u003c',
-);
 ---
 
 <!doctype html>
@@ -25,6 +21,12 @@ const payload = JSON.stringify({ floors: museum }).replaceAll(
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" />
+    <link
+      rel="preload"
+      href="/visit/museum.json"
+      as="fetch"
+      crossorigin="anonymous"
+    />
     <meta property="og:site_name" content="The nnxyz Rooms" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -65,15 +67,19 @@ const payload = JSON.stringify({ floors: museum }).replaceAll(
       ))}
     </main>
     <Fragment set:html={shell.replace('<main>', '<main id="visit" hidden>')} />
-    <script
-      is:inline
-      type="application/json"
-      id="museum"
-      set:html={payload}
-    ></script>
     <SiteAnalytics />
     <script>
-      import '../visit/visit.js';
+      import { startMuseum } from '../visit/visit.js';
+      try {
+        const response = await fetch('/visit/museum.json');
+        if (!response.ok) throw Error('Museum catalog unavailable');
+        startMuseum(await response.json());
+      } catch {
+        const entrance = document.getElementById('visit-entrance');
+        if (entrance && !entrance.hidden)
+          entrance.querySelector('p')!.textContent =
+            'The virtual visit could not load. Open a room below to see the art and hear its audio tour.';
+      }
     </script>
   </body>
 </html>

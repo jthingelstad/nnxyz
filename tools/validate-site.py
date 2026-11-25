@@ -56,8 +56,6 @@ def main():
     # ONCHAIN_PREVIEW=1 builds After Nifty Ink from locally generated media/ before
     # the Mac publishes it; the same flag relaxes the published-media check for
     # those keys only.
-    import os
-
     preview = os.environ.get("ONCHAIN_PREVIEW") == "1"
     gallery = json.loads((ROOT / "data/gallery.json").read_text())
     abstract = json.loads((ROOT / "data/abstract.json").read_text())["artworks"]
@@ -94,6 +92,11 @@ def main():
     # index with one page per file under curation/story/, and the entrances.
     story_pages = [p for p in (ROOT / "curation/story").glob("*.md") if p.name != "README.md"]
     assert (DIST / "visit/index.html").is_file(), "Missing virtual visit"
+    visit = json.loads((DIST / "visit/museum.json").read_text())
+    assert sorted(room["id"] for floor in visit["floors"] for room in floor["rooms"]) == sorted(
+        room["id"] for room in rooms
+    ), "Virtual visit rooms differ from the gallery"
+
     story = 1 + len(story_pages)
     assert (
         len(pages)

@@ -76,6 +76,12 @@ try {
   }
   // With both clocks paused, only the wall that is scrubbed should change.
   await seek('Home');
+  await seek('ArrowRight');
+  assert(
+    Number(await time.inputValue()) > 0,
+    'Arrow keys must scrub the focused slider',
+  );
+  await seek('Home');
   await choose(1);
   await seek('Home');
   const before = await page.screenshot();
