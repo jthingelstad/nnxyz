@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#f5f2ec" />
+    <title>Virtual visit — The nnxyz Rooms</title>
+    <link rel="icon" href="data:," />
+    <script>
+      try {
+        if (localStorage.getItem('nnxyz-theme') === 'dark')
+          document.documentElement.dataset.theme = 'dark';
+      } catch {}
+    </script>
+    <style>
+      /* VISIT_STYLE */
+    </style>
+  </head>
+  <body>
+    <main>
+      <canvas
+        id="view"
+        tabindex="0"
+        aria-label="Walk through the gallery. Use W and S to walk, A and D to step sideways, and the left and right arrows to turn. Drag to look around. Select a picture to read its label."
+      ></canvas>
+      <div id="flat" hidden>
+        <img id="flat-image" alt="" />
+        <p id="flat-message"></p>
+      </div>
+      <header>
+        <div class="wordmark">The nnxyz Rooms<span>Virtual visit</span></div>
+        <nav aria-label="Visit tools">
+          <button id="vr-button" hidden>Enter VR</button
+          ><button id="map-button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16m6-14v16" /></svg
+            >Floor plan
+          </button>
+          <button id="help-button" aria-label="Visit controls and settings">
+            ?
+          </button>
+        </nav>
+      </header>
+      <div class="location paper">
+        <div class="kicker">
+          <i id="wing-dot"></i><span id="address"></span>
+        </div>
+        <h1 id="place"></h1>
+        <div class="actions">
+          <button id="tour-button">Audio tour</button
+          ><button id="works-button">Browse works</button
+          ><button id="lift-button" hidden>Use lift</button>
+        </div>
+      </div>
+      <div class="movement">
+        <div class="pad" aria-label="Walking controls">
+          <button data-move="ArrowLeft" aria-label="Turn left">↶</button
+          ><button data-move="ArrowUp" aria-label="Walk forward">↑</button
+          ><button data-move="ArrowDown" aria-label="Walk backward">↓</button
+          ><button data-move="ArrowRight" aria-label="Turn right">↷</button>
+        </div>
+        <span>WASD to walk · Drag to look</span>
+      </div>
+      <aside
+        class="paper"
+        id="replay"
+        hidden
+        aria-label="Wall drawing playback"
+      >
+        <span>Reconstructed drawing</span
+        ><button id="draw-toggle">Pause</button>
+        <input
+          id="draw-time"
+          aria-label="Drawing progress"
+          type="range"
+          min="0"
+          step="0.05"
+          value="0"
+        />
+        <select id="draw-speed" aria-label="Drawing speed">
+          <option value=".5">½×</option>
+          <option selected>1×</option>
+          <option>2×</option>
+          <option>4×</option>
+        </select>
+        <button id="draw-stop" aria-label="Close drawing replay">×</button>
+      </aside>
+      <aside id="playing" class="paper" hidden aria-label="Audio playback">
+        <button id="pause"></button><button id="now"></button
+        ><button id="stop" aria-label="End audio tour">×</button>
+      </aside>
+    </main>
+    <dialog id="panel">
+      <div class="panel-head">
+        <span class="kicker" id="panel-type"></span
+        ><button class="close" aria-label="Close panel">×</button>
+      </div>
+      <div id="content"></div>
+    </dialog>
+    <audio id="audio" preload="none"></audio
+    ><noscript
+      >This walk-through needs JavaScript to display the rooms.</noscript
+    >
+    <script type="application/json" id="museum">
+      /* MUSEUM_DATA */
+    </script>
+    <script>
+      /* VISIT_SCRIPT */
+    </script>
+  </body>
+</html>
