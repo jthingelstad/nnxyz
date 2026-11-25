@@ -1,4 +1,6 @@
 import * as T from 'three';
+import { floorLight } from './floor-light.js';
+import { buildRoof } from './roof.js';
 import { makeHeadset } from './headset.js';
 import { bench } from './layout.js';
 
@@ -103,7 +105,7 @@ function discard(group, shared) {
   });
   group.removeFromParent();
 }
-export function createGallery(canvas, pictures, actions, sampleId) {
+export function createGallery(canvas, pictures, actions) {
   const renderer = new T.WebGLRenderer({
     canvas,
     antialias: true,
@@ -125,11 +127,12 @@ export function createGallery(canvas, pictures, actions, sampleId) {
     leg = matte('#514c43'),
     frame = matte('#716554'),
     ceiling = matte('#f0eee7'),
-    reveal = matte('#b9b3a7'),
     windowMat = ink('#fffcf0'),
     wallShadow = ink('#c6bfb2'),
-    mount = ink('#faf8ef'),
-    trim = matte('#ccc6b9');
+    mount = ink('#faf8ef');
+  const hallStone = matte('#89998f', stone());
+  const roofMaterials = { soffit: ceiling, glass: windowMat, timber: oak };
+  for (const m of Object.values(roofMaterials)) m.side = T.DoubleSide;
   const pool = canvasTexture(256, 256, (ctx, w, h) => {
     const g = ctx.createRadialGradient(w / 2, h / 2, 10, w / 2, h / 2, w / 2);
     g.addColorStop(0, 'rgba(55,42,29,.26)');
@@ -151,14 +154,32 @@ export function createGallery(canvas, pictures, actions, sampleId) {
     leg,
     frame,
     ceiling,
-    reveal,
     windowMat,
     wallShadow,
     mount,
-    trim,
     benchShadow,
+    hallStone,
   ]);
+  const playSign = lettering('▶  Draw', true),
+    pauseSign = lettering('Ⅱ  Pause', true),
+    resumeSign = lettering('▶  Resume', true);
+  for (const m of [playSign, pauseSign, resumeSign]) shared.add(m);
   const loader = new T.TextureLoader();
+  let activePlaque = null;
+  function replaySign(id, state) {
+    if (activePlaque) activePlaque.material = playSign;
+    activePlaque = targets.find(
+      (t) => t.userData.room.works[t.userData.index].id === id,
+    )?.userData.plaque;
+    if (activePlaque)
+      activePlaque.material =
+        state === 'playing'
+          ? pauseSign
+          : state === 'paused'
+            ? resumeSign
+            : playSign;
+    epoch++;
+  }
   let projection = null,
     shell = null,
     floor = null,
@@ -193,7 +214,7 @@ export function createGallery(canvas, pictures, actions, sampleId) {
       const face = plate(g, w, h, 0, 0, 0.038, surface);
       face.userData = { room, index };
       targets.push(face);
-      loader.load(pictures[spot.art.image], (map) => {
+      loader.load(pictures[spot.art.image] ?? spot.art.image, (map) => {
         if (!group.userData.active) {
           map.dispose();
           return;
@@ -215,25 +236,37 @@ export function createGallery(canvas, pictures, actions, sampleId) {
           lettering('Play room tour', true, true),
         );
         sign.userData.tour = room;
-        if (spot.art.id === sampleId) {
-          const replay = plate(
-            g,
-            0.57,
-            0.12,
-            0,
-            -h / 2 - 0.47,
-            0.015,
-            lettering('Draw / pause', true, true),
-          );
-          replay.userData.replay = room;
-        }
+      }
+      if (spot.art.replay) {
+        const plaque = plate(
+          g,
+          0.54,
+          0.17,
+          Math.min(w * 0.24, 0.34),
+          -h / 2 - 0.17,
+          0.016,
+          playSign,
+        );
+        plaque.userData.replay = { room, index };
+        face.userData.plaque = plaque;
+      }
+      if (spot.first) {
+        plate(
+          g,
+          Math.min(w + 0.35, 2.4),
+          0.26,
+          0,
+          1.05,
+          0.016,
+          lettering(spot.chapter),
+        );
       }
       plate(
         g,
         Math.min(0.47, w * 0.76),
-        0.096,
-        0,
-        -h / 2 - 0.136,
+        0.12,
+        spot.art.replay ? -Math.min(w * 0.26, 0.36) : 0,
+        -h / 2 - 0.17,
         0.016,
         lettering(spot.art.title, true),
       );
@@ -257,16 +290,6 @@ export function createGallery(canvas, pictures, actions, sampleId) {
     ground.userData.ground = true;
     ground.rotation.x = -Math.PI / 2;
     floorMat.map.repeat.set(floor.width / 1.6, floor.depth / 1.6);
-    box(
-      shell,
-      floor.width,
-      0.12,
-      floor.depth,
-      floor.width / 2,
-      height + 0.06,
-      floor.depth / 2,
-      ceiling,
-    );
     for (const s of floor.walls) {
       const l = s.hi - s.lo,
         at = (s.lo + s.hi) / 2,
@@ -318,33 +341,43 @@ export function createGallery(canvas, pictures, actions, sampleId) {
       }
     }
     for (const room of floor.rooms) {
-      // A run of roof lights and narrow mullions gives each bay a visible scale.
-      const skylightWidth = Math.min(room.w * 0.53, 4.1),
-        depth = room.d * 0.86;
-      const cx = room.x + room.w * 0.27,
-        cz = room.z + room.d / 2;
-      box(
-        shell,
-        skylightWidth + 0.19,
-        0.07,
-        depth + 0.18,
-        cx,
-        height - 0.035,
-        cz,
-        reveal,
-      );
-      box(shell, skylightWidth, 0.018, depth, cx, height - 0.08, cz, windowMat);
-      for (let i = 0; i <= depth; i += 2.4)
+      for (const s of room.panels) {
         box(
           shell,
-          skylightWidth + 0.12,
-          0.095,
-          0.055,
-          cx,
-          height - 0.077,
-          cz - depth / 2 + i,
-          trim,
+          s.len + 0.035,
+          s.height,
+          0.18,
+          s.x,
+          s.height / 2,
+          s.z,
+          wall,
+          s.angle,
+          s.len / 3.3,
         );
+        box(
+          shell,
+          s.len + 0.045,
+          0.052,
+          0.202,
+          s.x,
+          s.height,
+          s.z,
+          oak,
+          s.angle,
+        );
+        box(
+          shell,
+          s.len + 0.025,
+          0.085,
+          0.196,
+          s.x,
+          0.043,
+          s.z,
+          plinth,
+          s.angle,
+        );
+      }
+      buildRoof(shell, room, height, roofMaterials);
       const b = bench(room);
       if (b) {
         const shade = plate(shell, 3.4, 1.25, b.x, 0.006, b.z, benchShadow);
@@ -355,41 +388,192 @@ export function createGallery(canvas, pictures, actions, sampleId) {
           box(shell, 2.28, 0.085, 0.087, b.x, 0.47, b.z + i * 0.095, oak);
       }
     }
-    const l = floor.landing;
-    box(shell, 2.8, 2.5, 0.16, l.x, 1.25, l.z + 1.8, leg);
-    plate(
+    // A daylit promenade. The angled frames are full-size previews with a
+    // destination label; the room doors opposite them remain physical exits.
+    const loadPreview = (group, art, w, h, x, y, z, meta) => {
+      const m = ink('#ffffff');
+      const mesh = plate(group, w, h, x, y, z, m);
+      mesh.userData = meta;
+      const owner = shell;
+      loader.load(pictures[art.image] ?? art.image, (map) => {
+        if (shell !== owner) {
+          map.dispose();
+          return;
+        }
+        map.colorSpace = T.SRGBColorSpace;
+        map.anisotropy = 4;
+        m.map = map;
+        m.needsUpdate = true;
+        epoch++;
+      });
+    };
+    const hallDepth = floor.depth - floor.hallZ,
+      cz = floor.hallZ + hallDepth * 0.46;
+    const promenade = plate(
       shell,
-      2.5,
-      0.42,
-      l.x,
-      1.7,
-      l.z + 1.7,
-      lettering('Floor ' + floor.number + '   /   Lift', false, true),
-      Math.PI,
+      floor.width,
+      hallDepth,
+      floor.width / 2,
+      0.004,
+      cz + hallDepth * 0.04,
+      hallStone,
     );
-    plate(
+    promenade.rotation.x = -Math.PI / 2;
+    promenade.userData.ground = true;
+    const light = plate(
       shell,
-      2.5,
-      0.42,
-      l.x,
-      1.7,
-      l.z + 1.9,
+      floor.width,
+      floor.depth,
+      floor.width / 2,
+      0.016,
+      floor.depth / 2,
+      floorLight(floor),
+    );
+    light.rotation.x = -Math.PI / 2;
+    light.userData.ground = true;
+    hallStone.map.repeat.set(floor.width / 1.35, hallDepth / 1.35);
+    for (let j = 0; j <= Math.ceil(floor.width / 4); j++) {
+      const x = Math.min(
+        floor.width - 0.14,
+        (j * floor.width) / Math.ceil(floor.width / 4),
+      );
+      box(shell, 0.17, height, 0.16, x, height / 2, floor.depth - 0.1, oak);
+    }
+    buildRoof(
+      shell,
+      { x: 0, z: floor.hallZ, w: floor.width, d: hallDepth, wingId: 'hall' },
+      height,
+      roofMaterials,
+    );
+    // A narrow inlaid line ties the lift and the room thresholds together.
+    box(shell, floor.width, 0.008, 0.028, floor.width / 2, 0.005, cz, leg);
+    for (const g of floor.guides) {
+      const shadow = plate(
+        shell,
+        g.len + 1.3,
+        1.5,
+        g.x,
+        0.012,
+        g.z,
+        benchShadow,
+      );
+      shadow.rotation.order = 'YXZ';
+      shadow.rotation.y = g.angle;
+      shadow.rotation.x = -Math.PI / 2;
+      const group = new T.Group();
+      group.position.set(g.x, 0, g.z);
+      group.rotation.y = g.angle;
+      shell.add(group);
+      const meta = { enter: g.roomId },
+        w = g.len;
+      box(group, w, 2.94, 0.22, 0, 1.47, 0, wall).userData = meta;
+      box(group, w + 0.05, 0.07, 0.26, 0, 2.94, 0, oak);
+      const iw = Math.min(w * 0.47, 1.96, 1.84 * g.art.ratio),
+        ih = iw / g.art.ratio;
+      box(
+        group,
+        iw + 0.085,
+        ih + 0.085,
+        0.075,
+        -w * 0.22,
+        1.56,
+        0.135,
+        frame,
+      ).userData = meta;
+      loadPreview(group, g.art, iw, ih, -w * 0.22, 1.56, 0.176, meta);
+      const sign = canvasTexture(896, 768, (ctx, W, H) => {
+        ctx.fillStyle = '#f4f1e9';
+        ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = g.color;
+        ctx.fillRect(54, 58, 100, 12);
+        ctx.fillStyle = '#474840';
+        ctx.font = '500 39px Helvetica Neue,Arial,sans-serif';
+        ctx.fillText(g.wing, 54, 150, W - 110);
+        ctx.fillStyle = '#282923';
+        ctx.font = 'normal 80px Georgia,serif';
+        let line = '',
+          y = 300;
+        for (const word of g.title.split(' ')) {
+          const test = line ? line + ' ' + word : word;
+          if (line && ctx.measureText(test).width > W - 105) {
+            ctx.fillText(line, 54, y);
+            y += 86;
+            line = word;
+          } else line = test;
+        }
+        ctx.fillText(line, 54, y, W - 105);
+        ctx.font = '500 41px Helvetica Neue,Arial,sans-serif';
+        ctx.fillText('Enter room  →', 54, H - 67);
+      });
+      plate(
+        group,
+        w * 0.43,
+        (w * 0.43 * 768) / 896,
+        w * 0.265,
+        1.58,
+        0.12,
+        new T.MeshBasicMaterial({ map: sign }),
+      ).userData = meta;
+      // The back is a readable destination from the other end of the hall too.
+      plate(
+        group,
+        w * 0.72,
+        0.48,
+        0,
+        1.62,
+        -0.12,
+        lettering(g.title),
+        Math.PI,
+      ).userData = meta;
+    }
+    for (const exit of floor.exits.filter((e) => e.to === 'hall')) {
+      const r = floor.rooms.find((r) => r.id === exit.from),
+        art = r.works.at(r.primaryCount - 1);
+      const door = exit.door,
+        side = door.lo - r.x > r.x + r.w - door.hi ? -1 : 1;
+      const at = side === 1 ? door.hi + 1.38 : door.lo - 1.38;
+      if (at < r.x + 0.8 || at > r.x + r.w - 0.8) continue;
+      const iw = Math.min(1.48, 1.48 * art.ratio),
+        ih = iw / art.ratio;
+      box(
+        shell,
+        iw + 0.08,
+        ih + 0.08,
+        0.07,
+        at,
+        1.58,
+        floor.hallZ + 0.12,
+        frame,
+      );
+      loadPreview(shell, art, iw, ih, at, 1.58, floor.hallZ + 0.16, {
+        enter: r.id,
+      });
+    }
+    // Mount the lift directory on the end wall, out of the view of the art.
+    const lift = new T.Group();
+    shell.add(lift);
+    lift.position.set(floor.width - 0.12, 0, floor.landing.z);
+    lift.rotation.y = -Math.PI / 2;
+    box(lift, 3.15, 2.8, 0.11, 0, 1.4, 0, leg);
+    plate(
+      lift,
+      2.72,
+      0.5,
+      0,
+      1.94,
+      0.063,
       lettering('Floor ' + floor.number + '   /   Lift', false, true),
     );
-    for (const sign of [-1, 1])
-      for (let n = 1; n <= 3; n++) {
-        const tile = plate(
-          shell,
-          0.68,
-          0.28,
-          l.x + (n - 2) * 0.8 * sign,
-          1.17,
-          l.z + 1.8 + sign * 0.102,
-          lettering('Floor ' + n, true),
-          sign > 0 ? 0 : Math.PI,
-        );
-        tile.userData.lift = n;
-      }
+    for (let n = 1; n <= 3; n++)
+      plate(
+        lift,
+        0.82,
+        0.34,
+        (n - 2) * 0.9,
+        1.16,
+        0.071,
+        lettering('Floor ' + n, true),
+      ).userData.lift = n;
     epoch++;
   }
   function sync(x, z) {
@@ -412,7 +596,7 @@ export function createGallery(canvas, pictures, actions, sampleId) {
     if (d.ground) return { point: hit.point };
     return d;
   }
-  function setDrawing(source) {
+  function setDrawing(source, artId) {
     if (!source) {
       if (projection) {
         projection.material.map.dispose();
@@ -426,7 +610,7 @@ export function createGallery(canvas, pictures, actions, sampleId) {
     }
     if (!projection) {
       const face = targets.find(
-        (t) => t.userData.room.works[t.userData.index].id === sampleId,
+        (t) => t.userData.room.works[t.userData.index].id === artId,
       );
       if (!face) return;
       const map = new T.CanvasTexture(source);
@@ -471,6 +655,7 @@ export function createGallery(canvas, pictures, actions, sampleId) {
   return {
     headset,
     setDrawing,
+    replaySign,
     setFloor,
     sync,
     draw,

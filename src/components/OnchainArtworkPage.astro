@@ -1,4 +1,5 @@
 ---
+import VisitLink from './VisitLink.astro';
 import Layout from '../layouts/Layout.astro';
 import Icon from './Icon.astro';
 import Kudos from './Kudos.astro';
@@ -123,6 +124,7 @@ const minted = work.createdAt ? formatUtcDateTime(work.createdAt) : null;
           </button>
         </div>
       </div>
+      <VisitLink work={work.id}>See this work on the wall</VisitLink>
       <section class="curator-reading" aria-label="Label">
         <p>{reading}</p>
       </section>

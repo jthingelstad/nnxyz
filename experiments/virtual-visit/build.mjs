@@ -1,4 +1,5 @@
 import { build, createServer } from 'vite';
+import { packDrawings } from './drawing-pack.mjs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
@@ -62,18 +63,7 @@ async function collect() {
 }
 await Promise.all(Array.from({ length: 8 }, collect));
 console.log(paths.length + ' distinct artwork images verified');
-const firstFace = floors
-  .flatMap((f) => f.rooms)
-  .find((r) => r.id === 'nifty-faces--boxes').works[0];
-const key = 'art/display/' + firstFace.id + '.svg';
-const response = await fetch(new URL(key, deliveryUrl), {
-  signal: AbortSignal.timeout(45000),
-});
-if (!response.ok) throw Error('Drawing HTTP ' + response.status);
-const svg = await response.text();
-if (digest(Buffer.from(svg)) !== objects[key])
-  throw Error('Drawing hash mismatch');
-const drawing = { id: firstFace.id, svg };
+await packDrawings(works, objects, deliveryUrl, output);
 const bundle = await build({
   ...config,
   build: {
@@ -88,11 +78,11 @@ const bundle = await build({
 });
 const js = bundle[0].output.find((part) => part.type === 'chunk').code;
 const html = await readFile(path.join(here, 'visit.html'), 'utf8');
+const shell = await readFile(path.join(here, 'shell.html'), 'utf8');
 const css = await readFile(path.join(here, 'visit.css'), 'utf8');
 const data = JSON.stringify({
   floors,
   pictures,
-  drawing,
   deliveryUrl,
   productionUrl,
 }).replaceAll('<', String.fromCharCode(92) + 'u003c');
@@ -100,6 +90,7 @@ const target = path.join(output, 'The nnxyz Rooms.html');
 await writeFile(
   target,
   html
+    .replace('<!-- VISIT_SHELL -->', () => shell)
     .replace('/* VISIT_STYLE */', () => css)
     .replace('/* MUSEUM_DATA */', () => data)
     .replace('/* VISIT_SCRIPT */', () =>

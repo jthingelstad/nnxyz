@@ -1,23 +1,40 @@
 # Virtual visit to The nnxyz Rooms
 
-Open the generated **The nnxyz Rooms.html** in a browser. The visit starts beside the first wall in _Heads Built from Boxes_. Drag to look, use WASD to walk, or select a patch of floor to move there. The floor plan and artwork list also let you jump to a particular room or work. The help button includes the wall color switch.
+The local site preview offers a first-person visit at `/visit/`. Double-click **Open site preview.command** on the Mac to open the gallery home page. Choose **Walk through the museum** below the collector’s welcome. The Terminal window serves the review on loopback. Control-C closes it.
 
-Select _Nifty Faces #1_ to try a reconstructed drawing on the wall. Its display SVG supplies the paths and the gallery's timeline supplies the reconstructed timing. The pilot uses this one drawing for in-room replay. Each Nifty Ink label also links to the full artwork viewer. The audio tour uses the existing recordings, transcripts, and silent holds. You decide when to listen. Leaving the room stops playback.
+## How a visitor enters
 
-An immersive-capable WebXR browser offers **Enter VR**. The headset must have access to the file in a browser context that permits immersive sessions, such as a trusted HTTPS origin. Select the floor with a tracked controller to teleport, press the thumbstick sideways to turn 30 degrees, or aim through a doorway to enter the adjoining room. The lift has a selector for each floor. Select a painting to hear its recorded work segment where available, or select the room tour plaque under the first picture. That first picture in _Heads Built from Boxes_ also has a drawing playback plaque.
+| Starting point      | Destination                               | Return       |
+| ------------------- | ----------------------------------------- | ------------ |
+| Collector’s welcome | Ground-floor gallery hall                 | Gallery home |
+| Museum map          | Ground-floor gallery hall                 | Museum map   |
+| Room introduction   | The first chapter of that room            | Room page    |
+| Artwork page        | A viewing position facing that exact work | Artwork page |
 
-## Build a portable copy
+A shared room link uses `/visit/#room=<room-id>`. An artwork link uses `/visit/#work=<artwork-id>`. Copies with repeated titles keep their distinct catalog IDs. Each hall presents a representative work for every room on its floor. Selecting its picture or destination label takes the visitor into that room. The map inside the visit shows the walking plan and the actual doorways from the current room.
 
-From the repository root, with the project's Node version:
+## The building and its collection
+
+The three floors, wing addresses, chapter titles, artwork order, captions, tour recordings and silent stops come from the existing museum. The walking plan adds passages wherever room boundaries share enough wall for an opening. The ribbed gallery halls have inlaid terrazzo floors and lead to chapter-sized display walls. Faces hang on folds, Abstract works on faceted arcs, and the upper New Nifty on the Block galleries sit under sawtooth skylights. Rawblocks has stepped rooflights. Its two landscapes share a folded wall and three doorways lead onward from their room.
+
+Each of the 574 works with recorded strokes has a play plaque and an action on its label. Playback uses the published display SVG, the gallery’s reconstructed timing, continuous strokes, and a white drawing canvas. Only one work draws at a time. The 98 works in Abstract and After Nifty Ink use their stills. _GM_ hangs in its source room as a related work. The **Room audio** switch opts a visitor into opening narration once per room per visit. Entering another space stops it. The full audio tour and individual recorded work labels remain available on demand.
+
+Walking defaults to Brisk. The pace selector offers Slow, Brisk and Fast. Hold Shift for a quicker crossing, or select visible floor to jump there. In a capable WebXR browser on a secure origin, **Enter VR** offers tracked viewing, controller teleportation, room previews, drawing plaques and 30-degree snap turns.
+
+## Preview and release
+
+From the repository root, install the root and experiment packages with `npm ci` and `npm ci --prefix experiments/virtual-visit`.
 
 ```sh
-npm ci --prefix experiments/virtual-visit
-npm run build --prefix experiments/virtual-visit
-open ".build/virtual-visit/The nnxyz Rooms.html"
+NNXYZ_VIRTUAL_VISIT=1 npm run dev
+npm run check --prefix experiments/virtual-visit
+NNXYZ_VIRTUAL_VISIT=1 npm run build
+NNXYZ_VIRTUAL_VISIT=1 npm run validate:site
+npm run test:ci-browser
 ```
 
-The build reads the museum's existing floor plan, locked exhibitions, thumbnail paths and audio tour. Three.js and Vite dependencies are local to this experiment. The build fetches the published 640 px images and one display SVG, verifies their SHA-256 against the media manifest, and embeds them with the application. The finished HTML file can be moved on its own. Images and the sample replay work offline. Audio streams from the published media host. Artwork-page links open the public gallery.
+The opt-in Astro build produces the visit and its entry links together. Ordinary pages carry a link. The Three.js runtime loads on the visit page. The building and curatorial metadata are static. The browser reads existing published media on demand, including the selected drawing SVG. The site build needs neither archived originals nor the offline drawing packs.
 
-Floor areas, room sequence, doorways and stair positions come from the printed map. Heights, physical scale, lighting, bench placement, a lift at the stair landing and the clockwise hanging are prototype choices. The hanging uses the primary works in the locked rooms. Related works are available at their recorded tour stops. Only nearby rooms acquire artwork textures on the GPU.
+Before opening the visit publicly, walk one route on a physical phone and headset, including starting narration, turning, moving between rooms and playing a dense drawing. Review scale, label legibility, frame pacing and comfort in the hall and the three-exit Coda. After collector acceptance, install the locked runtime dependencies in site CI, enable the visit in both quality and publication builds, and use the existing verified main deployment. The site bucket, CDN, media keys and ownership records already support the feature.
 
-This is a local experiment outside the Astro site and its deployment. The portable file favors offline review. For a hosted version, the room textures could load on demand from the gallery's existing media paths.
+For the offline edition run `npm run build --prefix experiments/virtual-visit`. Open `.build/virtual-visit/The nnxyz Rooms.html` and keep the adjacent `drawings/` folder with it. The build checks thumbnails and display SVGs against the published SHA-256 manifest. The portable visitor loads one compressed drawing when selected. Listening to the recorded audio needs a connection.

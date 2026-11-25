@@ -1,15 +1,16 @@
 import { planFloor, roomAt, walkable } from './layout.js';
+import { viewpoint } from './viewpoint.js';
 import { createGallery } from './scene.js';
+import { loadDrawingSource } from './load-drawing.js';
 import { wallDrawing } from './drawing.js';
 import { makePlayer } from './audio.js';
 const $ = (id) => document.getElementById(id);
 const dataEl = $('museum');
 const {
   floors: raw,
-  pictures,
-  drawing,
-  deliveryUrl,
-  productionUrl,
+  pictures = {},
+  deliveryUrl = window.location.origin,
+  productionUrl = window.location.origin,
 } = JSON.parse(dataEl.textContent);
 dataEl.remove();
 const floors = raw.map(planFloor),
@@ -35,13 +36,15 @@ let floor,
   tourIndex = 0;
 let restoreFocus = null,
   lastWork = 0;
+let replayWork = null,
+  pending = null;
 let replay = null,
   replayRoom = null,
   drawingTime = 0,
   drawPlaying = false,
   drawClock = 0;
 function paintDrawing() {
-  scene?.setDrawing(replay.paint(drawingTime));
+  scene?.setDrawing(replay.paint(drawingTime), replayWork.id);
   $('draw-time').value = drawingTime;
   $('draw-toggle').textContent = drawPlaying
     ? 'Pause'
@@ -50,25 +53,70 @@ function paintDrawing() {
       : 'Play';
 }
 function endDrawing() {
+  pending?.abort();
+  pending = null;
+  replay = null;
+  replayWork = null;
   replayRoom = null;
   drawPlaying = false;
   $('replay').hidden = true;
   scene?.setDrawing();
+  scene?.replaySign();
 }
-function toggleDrawing(r, focus = false) {
-  if (!scene) return;
+function setDrawingState() {
+  scene.replaySign(
+    replayWork.id,
+    drawPlaying
+      ? 'playing'
+      : drawingTime >= replay.duration
+        ? 'ready'
+        : 'paused',
+  );
+  $('draw-toggle').disabled = false;
+  $('draw-time').disabled = false;
+  $('draw-status').textContent = 'Reconstructed drawing';
+  paintDrawing();
+}
+async function toggleDrawing(r, index, focus = false) {
+  const art = r.works[index];
+  if (!scene || !art.replay) return;
   if (focus) {
-    stand(r, 0);
+    stand(r, index);
     closeSheet();
   }
-  replay ??= wallDrawing(drawing.svg);
-  if (!replayRoom || drawingTime >= replay.duration) drawingTime = 0;
-  drawPlaying = !replayRoom || !drawPlaying;
-  drawClock = 0;
+  if (replayRoom === r && replayWork === art && replay) {
+    if (drawingTime >= replay.duration) drawingTime = 0;
+    drawPlaying = !drawPlaying;
+    drawClock = 0;
+    setDrawingState();
+    return;
+  }
+  endDrawing();
+  replayWork = art;
   replayRoom = r;
+  const request = new AbortController();
+  pending = request;
   $('replay').hidden = false;
-  $('draw-time').max = replay.duration;
-  paintDrawing();
+  $('draw-status').textContent = 'Loading ' + art.title;
+  $('draw-toggle').disabled = true;
+  $('draw-time').disabled = true;
+  try {
+    const source = await loadDrawingSource(art, request.signal);
+    if (request.signal.aborted) return;
+    replay = wallDrawing(source);
+    drawingTime = 0;
+    drawPlaying = true;
+    drawClock = 0;
+    $('draw-time').max = replay.duration;
+    setDrawingState();
+  } catch {
+    if (request.signal.aborted) return;
+    $('draw-toggle').disabled = false;
+    $('draw-toggle').textContent = 'Retry';
+    $('draw-status').textContent = 'Drawing unavailable';
+  } finally {
+    if (pending === request) pending = null;
+  }
 }
 function tickDrawing(t) {
   if (!drawPlaying) return;
@@ -83,10 +131,14 @@ function tickDrawing(t) {
       (Math.min(t - drawClock, 100) / 1000) * parseFloat($('draw-speed').value),
   );
   drawClock = t;
-  if (drawingTime >= replay.duration) drawPlaying = false;
+  if (drawingTime >= replay.duration) {
+    drawPlaying = false;
+    scene.replaySign(replayWork.id, 'ready');
+  }
   paintDrawing();
 }
-$('draw-toggle').onclick = () => toggleDrawing(replayRoom);
+$('draw-toggle').onclick = () =>
+  toggleDrawing(replayRoom, replayRoom.works.indexOf(replayWork));
 $('draw-time').oninput = () => {
   drawingTime = Number($('draw-time').value);
   drawClock = 0;
@@ -94,6 +146,32 @@ $('draw-time').oninput = () => {
 };
 $('draw-stop').onclick = endDrawing;
 const player = makePlayer($('audio'), deliveryUrl, updatePlayer);
+const hosted = Boolean($('return-link') && !Object.keys(pictures).length);
+let guided = false,
+  entryTimer = 0;
+const heard = new Set();
+function scheduleIntro(r, immediate = false) {
+  clearTimeout(entryTimer);
+  if (!guided || !r || heard.has(r.id)) return;
+  function begin() {
+    if (!guided || room !== r || player.room || document.hidden) return;
+    const n = r.tour.findIndex((s) => s.kind === 'introduction' && s.src);
+    if (n < 0) return;
+    heard.add(r.id);
+    player.start(r, n, false, true);
+  }
+  if (immediate) begin();
+  else entryTimer = setTimeout(begin, 600);
+}
+$('guide-button').onclick = () => {
+  guided = !guided;
+  $('guide-button').setAttribute('aria-pressed', String(guided));
+  $('guide-button').textContent = guided ? 'Room audio on' : 'Room audio off';
+  if (!guided) {
+    clearTimeout(entryTimer);
+    if (player.intro) player.end();
+  } else scheduleIntro(room, true);
+};
 function element(tag, text, cls) {
   const e = document.createElement(tag);
   if (text !== undefined) e.textContent = text;
@@ -107,7 +185,7 @@ function button(text, fn) {
 }
 function picture(work) {
   const img = element('img');
-  img.src = pictures[work.image];
+  img.src = pictures[work.image] ?? work.image;
   img.alt = work.title;
   return img;
 }
@@ -122,7 +200,7 @@ function artLink(work) {
     work.replay ? 'Open artwork and drawing replay ↗' : 'Open artwork page ↗',
   );
   a.href = new URL(work.href, productionUrl);
-  a.target = '_blank';
+  a.target = hosted ? '_self' : '_blank';
   a.rel = 'noopener noreferrer';
   return a;
 }
@@ -151,15 +229,25 @@ panel.addEventListener('click', (e) => {
 });
 panel.addEventListener('close', () => {
   viewMode = '';
-  resetInput();
   if (restoreFocus?.isConnected) restoreFocus.focus({ preventScroll: true });
   else canvas.focus();
 });
+let displayedFloor, displayedRoom;
 function location() {
   const next = roomAt(floor, pose.x, pose.z);
+  const liftHidden =
+    Math.hypot(pose.x - floor.landing.x, pose.z - floor.landing.z) > 4;
+  if ($('lift-button').hidden !== liftHidden)
+    $('lift-button').hidden = liftHidden;
+  if (displayedFloor === floor && displayedRoom === next) return;
+  displayedFloor = floor;
+  displayedRoom = next;
   if (replayRoom && replayRoom !== next) endDrawing();
   if (next !== room && player.room && player.room !== next) player.end();
-  if (next !== room) lastWork = 0;
+  if (next !== room) {
+    lastWork = 0;
+    scheduleIntro(next);
+  }
   room = next;
   $('place').textContent = room?.title ?? 'Gallery hall';
   $('address').textContent =
@@ -168,10 +256,10 @@ function location() {
     ' / ' +
     (room?.wing ?? 'The nnxyz Rooms');
   $('wing-dot').style.background = room?.color ?? '#9a978c';
-  $('works-button').hidden = !room;
+  $('works-button').hidden = false;
+  $('works-button').textContent = room ? 'Browse works' : 'Choose a room';
+  $('hall-button').hidden = !room;
   $('tour-button').hidden = !room?.tour.length;
-  $('lift-button').hidden =
-    Math.hypot(pose.x - floor.landing.x, pose.z - floor.landing.z) > 4;
 }
 function setFloor(f) {
   if (f !== floor) {
@@ -187,35 +275,15 @@ function face(tx, tz) {
 }
 function stand(r, index = 0, arrival = false) {
   setFloor(floors.find((f) => f.rooms.includes(r)));
-  const s = r.hang[index],
-    distance = Math.min(arrival ? 3.9 : 2.15, r.d * 0.38, r.w * 0.38);
-  pose.x = clamp(s.x + s.nx * distance, r.x + 0.48, r.x + r.w - 0.48);
-  pose.z = clamp(s.z + s.nz * distance, r.z + 0.48, r.z + r.d - 0.48);
-  if (arrival) {
-    // Enter at a slight angle so the adjoining pictures read as a wall.
-    const shift = -1.16;
-    pose.x = clamp(
-      pose.x + Math.cos(s.angle) * shift,
-      r.x + 0.48,
-      r.x + r.w - 0.48,
-    );
-    pose.z = clamp(
-      pose.z - Math.sin(s.angle) * shift,
-      r.z + 0.48,
-      r.z + r.d - 0.48,
-    );
-  }
-  if (!walkable(floor, pose.x, pose.z)) {
-    pose.x = s.x + s.nx * 0.75;
-    pose.z = s.z + s.nz * 0.75;
-  }
+  const s = r.hang[index];
+  Object.assign(pose, viewpoint(floor, r, index, arrival));
   face(s.x, s.z);
   if (arrival) pose.yaw -= canvas.clientWidth > 650 ? 0.5 : 0.08;
   location();
   lastWork = index;
   scene?.sync(pose.x, pose.z);
   dirty = true;
-  if (!scene) $('flat-image').src = pictures[s.art.image];
+  if (!scene) $('flat-image').src = pictures[s.art.image] ?? s.art.image;
 }
 function landing(f) {
   setFloor(f);
@@ -243,6 +311,36 @@ function showMap(number = floor.number) {
     }),
   );
   content.append(tabs, element('p', f.label, 'note'));
+  if (f === floor && room) {
+    const exits = f.exits.filter((e) => e.from === room.id || e.to === room.id);
+    content.append(element('h3', 'Doorways from ' + room.title));
+    const links = row();
+    for (const edge of exits) {
+      const other = edge.from === room.id ? edge.to : edge.from;
+      const d = edge.door,
+        mid = (d.lo + d.hi) / 2;
+      const x = d.horizontal ? mid : d.fixed,
+        z = d.horizontal ? d.fixed : mid;
+      const nx = d.horizontal ? 0 : Math.sign(room.x + room.w / 2 - x),
+        nz = d.horizontal ? Math.sign(room.z + room.d / 2 - z) : 0;
+      links.append(
+        button(
+          'Doorway to ' +
+            (f.rooms.find((r) => r.id === other)?.title ?? 'Gallery hall'),
+          () => {
+            pose.x = x + nx * 0.9;
+            pose.z = z + nz * 0.9;
+            face(x - nx, z - nz);
+            location();
+            scene?.sync(pose.x, pose.z);
+            dirty = true;
+            closeSheet();
+          },
+        ),
+      );
+    }
+    content.append(links);
+  }
   const ns = 'http://www.w3.org/2000/svg';
   function svg(tag, attrs) {
     const e = document.createElementNS(ns, tag);
@@ -292,6 +390,19 @@ function showMap(number = floor.number) {
         'pointer-events': 'none',
       }),
     );
+  for (const s of [...f.rooms.flatMap((r) => r.panels), ...f.guides]) {
+    map.append(
+      svg('line', {
+        x1: s.a.x,
+        y1: s.a.z,
+        x2: s.b.x,
+        y2: s.b.z,
+        stroke: '#61564a',
+        'stroke-width': 0.32,
+        'pointer-events': 'none',
+      }),
+    );
+  }
   if (f === floor) {
     const dot = svg('g', {
       transform:
@@ -339,7 +450,7 @@ function showMap(number = floor.number) {
 }
 function describe(r, i) {
   const art = r.works[i];
-  sheet('label', r.wing + ' / ' + (i + 1) + ' of ' + r.works.length, art.title);
+  sheet('label', r.wing + ' / ' + r.hang[i].chapter, art.title);
   content.append(picture(art), element('p', art.caption, 'bodycopy'));
   const listen = r.tour.findIndex(
     (s) => s.id === art.id && s.kind === 'work' && s.src,
@@ -350,9 +461,9 @@ function describe(r, i) {
       closeSheet();
     }),
   );
-  if (art.id === drawing.id && scene)
+  if (art.replay && scene)
     controls.append(
-      button('Watch it draw on the wall', () => toggleDrawing(r, true)),
+      button('Watch it draw on the wall', () => toggleDrawing(r, i, true)),
     );
   if (listen >= 0)
     controls.append(
@@ -428,11 +539,14 @@ function showTour(r, index) {
     showTour(r, n);
   };
   const toggle = button(
-    player.room === r && player.index === index && player.playing
+    player.room === r &&
+      player.index === index &&
+      player.playing &&
+      !player.intro
       ? 'Pause'
       : 'Play',
     () => {
-      if (player.room === r && player.index === index) {
+      if (player.room === r && player.index === index && !player.intro) {
         if (player.playing) player.pause();
         else player.resume();
       } else player.start(r, index);
@@ -472,7 +586,7 @@ function help() {
   content.append(
     element(
       'p',
-      'Walk with W and S or the up and down arrows. Step sideways with A and D. Drag to look around, or turn with the left and right arrows. The four on-screen arrows also work by touch. Select a clear patch of floor to step straight there.',
+      'Walk with W and S or the up and down arrows. Step sideways with A and D. Drag to look around, or turn with the left and right arrows. The four on-screen arrows also work by touch. Hold Shift for the fastest pace. Select a clear patch of floor to step straight there.',
     ),
     element(
       'p',
@@ -480,7 +594,7 @@ function help() {
     ),
     element(
       'p',
-      'The audio tour follows the room’s existing recordings and silent stops. You can keep walking while it plays. Entering another room ends the tour.',
+      'The audio tour follows the room’s existing recordings and silent stops. You can keep walking while it plays. Switch on Room audio for an introduction the first time you enter each room. You can also start the full tour yourself.',
     ),
     button(
       document.documentElement.dataset.theme === 'dark'
@@ -504,7 +618,8 @@ function help() {
 $('map-button').onclick = () => showMap();
 $('lift-button').onclick = () => showMap();
 $('help-button').onclick = help;
-$('works-button').onclick = browse;
+$('works-button').onclick = () => (room ? browse() : showMap());
+$('hall-button').onclick = () => arrive(floor, room?.id);
 $('tour-button').onclick = () => {
   if (room) showTour(room, player.room === room ? player.index : 0);
 };
@@ -520,11 +635,19 @@ function fallback(message) {
   $('flat').hidden = false;
   $('flat-message').textContent = message;
   document.querySelector('.movement').hidden = true;
-  if (room) $('flat-image').src = pictures[room.works[lastWork].image];
+  if (room)
+    $('flat-image').src =
+      pictures[room.works[lastWork].image] ?? room.works[lastWork].image;
 }
 function headsetActions() {
   return {
-    replay: toggleDrawing,
+    replay: (pick) => toggleDrawing(pick.room, pick.index),
+    enter(id) {
+      const r = allRooms.find((r) => r.id === id);
+      stand(r, 0, true);
+      return { x: pose.x, z: pose.z, yaw: pose.yaw };
+    },
+
     tick: tickDrawing,
     allowed: (x, z) => walkable(floor, x, z),
     moved(x, z) {
@@ -566,7 +689,7 @@ function headsetActions() {
   };
 }
 try {
-  scene = createGallery(canvas, pictures, headsetActions(), drawing.id);
+  scene = createGallery(canvas, pictures, headsetActions());
 } catch {
   fallback('3D is unavailable here. Use Browse works or Floor plan to visit.');
 }
@@ -587,7 +710,7 @@ vr.onclick = () => {
     ),
     element(
       'p',
-      'Select a picture to hear its recorded label where available. The first picture in each room has a Play room tour plaque. The lift in the hall has a button for each floor.',
+      'Select a picture to hear its recorded label where available. Each stroke-based work has a drawing playback plaque. Select a preview in the hall to enter its room. The lift in the hall has a button for each floor.',
     ),
   );
   const message = element('p', '', 'note');
@@ -613,11 +736,53 @@ canvas.addEventListener('webglcontextlost', (event) => {
 });
 scene?.theme(document.documentElement.dataset.theme === 'dark');
 scene?.resize();
-stand(
-  allRooms.find((r) => r.id === 'nifty-faces--boxes') ?? allRooms[0],
-  0,
-  true,
-);
+function arrive(f, id) {
+  setFloor(f);
+  const g = f.guides.find((g) => g.roomId === id) ?? f.guides[0];
+  pose.x = clamp(g.x + Math.sin(g.angle) * 4.65 + 3.25, 0.5, f.width - 0.5);
+  pose.z = f.hallZ + 1.05;
+  face(g.x, g.z);
+  pose.yaw -= canvas.clientWidth > 650 ? 0.36 : 0;
+  pose.pitch = 0.08;
+  location();
+  scene?.sync(pose.x, pose.z);
+  dirty = true;
+  closeSheet();
+  if (!scene) $('flat-image').src = pictures[g.art.image] ?? g.art.image;
+}
+function startVisit() {
+  const p = new URLSearchParams(window.location.hash.slice(1)),
+    work = p.get('work');
+  const r = allRooms.find((r) =>
+    work ? r.works.some((w) => w.id === work) : r.id === p.get('room'),
+  );
+  const i = work && r ? r.works.findIndex((w) => w.id === work) : 0;
+  if (r) stand(r, i, !work);
+  else
+    arrive(
+      floors.find((f) => f.number === Number(p.get('floor'))) ?? floors[0],
+    );
+  if (hosted) {
+    const link = $('return-link');
+    link.hidden = false;
+    link.href = r
+      ? work
+        ? r.works[i].href
+        : r.href
+      : p.get('from') === 'home'
+        ? '/'
+        : '/map/';
+    link.textContent = r
+      ? work
+        ? 'Artwork page'
+        : 'Room page'
+      : p.get('from') === 'home'
+        ? 'Gallery home'
+        : 'Museum map';
+  }
+}
+startVisit();
+window.addEventListener('hashchange', startVisit);
 window.addEventListener('resize', () => {
   scene?.resize();
   dirty = true;
@@ -631,6 +796,8 @@ const movement = new Set([
   'KeyA',
   'KeyS',
   'KeyD',
+  'ShiftLeft',
+  'ShiftRight',
 ]);
 window.addEventListener('keydown', (e) => {
   if (panel.open || e.altKey || e.metaKey || e.ctrlKey || !scene) return;
@@ -697,7 +864,8 @@ canvas.addEventListener('pointerup', (e) => {
     if (hit?.room) describe(hit.room, hit.index);
     else if (hit?.tour) {
       showTour(hit.tour, 0);
-    } else if (hit?.replay) toggleDrawing(hit.replay);
+    } else if (hit?.replay) toggleDrawing(hit.replay.room, hit.replay.index);
+    else if (hit?.enter) jump(allRooms.find((r) => r.id === hit.enter));
     else if (hit?.lift) landing(floors.find((f) => f.number === hit.lift));
     else if (hit?.point && walkable(floor, hit.point.x, hit.point.z)) {
       pose.x = hit.point.x;
@@ -718,11 +886,15 @@ function move(dt, held) {
   pose.yaw += turn * dt * 1.5;
   const f = down('ArrowUp', 'KeyW') - down('ArrowDown', 'KeyS'),
     s = down('KeyD') - down('KeyA');
-  const step = (2.65 * dt) / Math.max(1, Math.hypot(s, f));
+  const speed = down('ShiftLeft', 'ShiftRight') ? 8 : Number($('pace').value);
+  const step = (speed * dt) / Math.max(1, Math.hypot(s, f));
   const dx = (s * Math.cos(pose.yaw) - f * Math.sin(pose.yaw)) * step,
     dz = (-f * Math.cos(pose.yaw) - s * Math.sin(pose.yaw)) * step;
-  if (walkable(floor, pose.x + dx, pose.z)) pose.x += dx;
-  if (walkable(floor, pose.x, pose.z + dz)) pose.z += dz;
+  const steps = Math.max(1, Math.ceil(Math.hypot(dx, dz) / 0.16));
+  for (let j = 0; j < steps; j++) {
+    if (walkable(floor, pose.x + dx / steps, pose.z)) pose.x += dx / steps;
+    if (walkable(floor, pose.x, pose.z + dz / steps)) pose.z += dz / steps;
+  }
   location();
   scene.sync(pose.x, pose.z);
   dirty = true;
@@ -731,7 +903,7 @@ function frame(time) {
   if (!scene) return;
   if (!scene.headset.active) tickDrawing(time);
   if (!panel.open && keys.size)
-    move(Math.min(0.05, (time - last) / 1000), keys);
+    move(Math.min(0.12, (time - last) / 1000), keys);
   if (dirty || previousEpoch !== scene.epoch) {
     scene.draw(pose);
     dirty = false;

@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import deployment from './infra/deployment.json' with { type: 'json' };
@@ -35,6 +36,25 @@ export default defineConfig({
     },
   },
   integrations: [
+    ...(process.env.NNXYZ_VIRTUAL_VISIT === '1'
+      ? [
+          {
+            name: 'virtual-visit-preview',
+            hooks: {
+              'astro:config:setup': ({ injectRoute }) =>
+                injectRoute({
+                  pattern: '/visit/',
+                  entrypoint: fileURLToPath(
+                    new URL(
+                      './experiments/virtual-visit/visit.astro',
+                      import.meta.url,
+                    ),
+                  ),
+                }),
+            },
+          },
+        ]
+      : []),
     // Every page carries the date its content last changed
     // (tools/content-date.mjs); the index takes the newest.
     sitemap({

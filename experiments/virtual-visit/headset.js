@@ -55,7 +55,14 @@ export function makeHeadset(renderer, scene, shell, actions) {
         const d = hit.object.userData;
         if (d.ground && actions.allowed(hit.point.x, hit.point.z))
           at(hit.point.x, hit.point.z);
-        else if (d.lift) {
+        else if (d.enter) {
+          const destination = actions.enter(d.enter);
+          rig.rotation.y +=
+            destination.yaw -
+            Math.atan2(-camera.getWorldDirection(dir).x, -dir.z);
+          rig.updateMatrixWorld(true);
+          at(destination.x, destination.z);
+        } else if (d.lift) {
           const destination = actions.lift(d.lift);
           at(destination.x, destination.z);
         } else if (d.tour) actions.tour(d.tour);

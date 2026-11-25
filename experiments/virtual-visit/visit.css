@@ -475,3 +475,35 @@ small {
     width: 62px;
   }
 }
+#return-link {
+  display: flex;
+  align-items: center;
+  color: var(--ink);
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 6px 9px;
+}
+#guide-button[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--paper);
+}
+.movement label {
+  font-size: 11px;
+  color: var(--dim);
+}
+.movement select {
+  color: var(--ink);
+  background: var(--paper);
+  border: 0;
+}
+@media (max-width: 650px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 62%;
+  }
+  .location .actions {
+    gap: 4px;
+  }
+}

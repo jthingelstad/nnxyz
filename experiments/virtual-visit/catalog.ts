@@ -2,11 +2,16 @@ import { floors, WING_COLORS } from '../../src/lib/floor-plan';
 import {
   roomById,
   roomWorks,
+  rooms,
   exhibitionArtwork,
 } from '../../src/lib/exhibitions';
 import { artworkPath, displayTitle, thumbnail } from '../../src/lib/catalog';
+import { svgKey } from '../../src/lib/media-paths';
 import { tourFor } from '../../src/lib/tour';
 
+const primaryIds = new Set(
+  rooms.flatMap((r) => roomWorks(r).map((w) => w.artworkId)),
+);
 export const museum = floors.map((floor) => ({
   number: floor.number,
   label: floor.label,
@@ -17,11 +22,25 @@ export const museum = floors.map((floor) => ({
   corridor: floor.corridor,
   rooms: floor.rooms.map((plan) => {
     const room = roomById(plan.id);
+    const primary = roomWorks(room);
+    const guests = room.relatedItems.filter(
+      (w) => !primaryIds.has(w.artworkId),
+    );
     return {
       ...plan,
+      primaryCount: primary.length,
       wing: room.wingTitle,
       color: WING_COLORS[room.wingId],
-      works: roomWorks(room).map(describe),
+      chapters: [
+        ...room.chapters.map((c) => ({
+          title: c.title,
+          count: c.works.length,
+        })),
+        ...(guests.length
+          ? [{ title: 'Related work', count: guests.length }]
+          : []),
+      ],
+      works: [...primary, ...guests].map(describe),
       related: room.relatedItems.map(describe),
       tour: (tourFor(room)?.stops ?? []).map((stop) => ({
         kind: stop.kind,
@@ -43,6 +62,7 @@ export const museum = floors.map((floor) => ({
         image: thumbnail(art).src,
         href: artworkPath(record.artworkId),
         replay: 'inkId' in art,
+        svg: 'inkId' in art ? svgKey(art.inkId) : null,
       };
     }
   }),

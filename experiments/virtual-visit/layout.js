@@ -1,5 +1,6 @@
+import { hangChapters, nearSegment, segment } from './hanging.js';
 // Plan x/y become world x/z. Heights and the hanging are exhibition design decisions.
-export const scale = 0.125;
+export const scale = 0.108;
 const key = (value) => Math.round(value * 10000) / 10000;
 function line(s) {
   const horizontal = Math.abs(s.y2 - s.y1) < 0.001;
@@ -42,75 +43,99 @@ export function planFloor(floor) {
     groups.get(id).push(wall);
   }
   const doors = floor.doors.map(line);
+  const rooms = floor.rooms.map((room) => {
+    const box = {
+      ...room,
+      x: room.x * scale,
+      z: room.y * scale,
+      w: room.w * scale,
+      d: room.h * scale,
+    };
+    return { ...box, ...hangChapters(box) };
+  });
+  const hallZ = floor.corridor.y * scale,
+    width = floor.footprint.w * scale,
+    depth = floor.footprint.h * scale;
+  // Open every sufficiently long shared edge, including the frontage on the
+  // hall. Both sides, the map, and collision use this same list of thresholds.
+  const zones = [
+    ...rooms,
+    { id: 'hall', x: 0, z: hallZ, w: width, d: depth - hallZ },
+  ];
+  const exits = [];
+  for (const [i, r] of zones.entries())
+    for (const t of zones.slice(i + 1)) {
+      for (const horizontal of [true, false]) {
+        const p = horizontal ? 'z' : 'x',
+          extent = horizontal ? 'd' : 'w',
+          along = horizontal ? 'x' : 'z',
+          length = horizontal ? 'w' : 'd';
+        const fixed =
+          Math.abs(r[p] + r[extent] - t[p]) < 0.002
+            ? t[p]
+            : Math.abs(t[p] + t[extent] - r[p]) < 0.002
+              ? r[p]
+              : null;
+        if (fixed === null) continue;
+        const lo = Math.max(r[along], t[along]),
+          hi = Math.min(r[along] + r[length], t[along] + t[length]);
+        if (hi - lo < 2.65) continue;
+        let door = doors.find(
+          (d) =>
+            d.horizontal === horizontal &&
+            Math.abs(d.fixed - fixed) < 0.002 &&
+            d.lo >= lo - 0.002 &&
+            d.hi <= hi + 0.002,
+        );
+        if (!door) {
+          const mid = (lo + hi) / 2,
+            half = Math.min(1.48, (hi - lo - 0.5) / 2);
+          door = {
+            horizontal,
+            fixed: key(fixed),
+            lo: mid - half,
+            hi: mid + half,
+          };
+          doors.push(door);
+        }
+        exits.push({ from: r.id, to: t.id, door });
+      }
+    }
   const walls = [...groups.values()]
     .flatMap(union)
     .flatMap((s) => cut(s, doors));
-  const rooms = floor.rooms.map((room) => {
-    const x = room.x * scale,
-      z = room.y * scale,
-      w = room.w * scale,
-      d = room.h * scale;
-    const sides = [
-      { horizontal: true, fixed: z, lo: x, hi: x + w, angle: 0 },
-      {
-        horizontal: false,
-        fixed: x + w,
-        lo: z,
-        hi: z + d,
-        angle: -Math.PI / 2,
-      },
-      { horizontal: true, fixed: z + d, lo: x, hi: x + w, angle: Math.PI },
-      { horizontal: false, fixed: x, lo: z, hi: z + d, angle: Math.PI / 2 },
-    ];
-    const runs = sides
-      .flatMap((side, i) => {
-        const pieces = cut({ ...side, fixed: key(side.fixed) }, doors);
-        return (i < 2 ? pieces : pieces.reverse()).map((p) => ({
-          ...p,
-          reverse: i >= 2,
-          length: p.hi - p.lo - 0.8,
-          count: 0,
-        }));
-      })
-      .filter((s) => s.length > 0.8);
-    for (let i = 0; i < room.works.length; i++) {
-      const best = runs.reduce((a, b) =>
-        b.length / (b.count + 1) > a.length / (a.count + 1) ? b : a,
-      );
-      best.count++;
-    }
-    const hang = [];
-    for (const run of runs) {
-      for (let i = 0; i < run.count; i++) {
-        const spacing = run.length / run.count;
-        const offset = 0.4 + (i + 0.5) * spacing;
-        const at = run.reverse ? run.hi - offset : run.lo + offset;
-        const art = room.works[hang.length];
-        const width = Math.min(1.72, spacing * 0.79, 1.55 * art.ratio);
-        const nx = Math.sin(run.angle),
-          nz = Math.cos(run.angle);
-        hang.push({
-          art,
-          width,
-          height: width / art.ratio,
-          angle: run.angle,
-          nx,
-          nz,
-          x: (run.horizontal ? at : run.fixed) + nx * 0.12,
-          z: (run.horizontal ? run.fixed : at) + nz * 0.12,
-        });
-      }
-    }
-    return { ...room, x, z, w, d, hang };
+  // Angled preview walls face the visitor coming from the lift. One real
+  // artwork marks each room, with a clear walking lane behind and in front.
+  const guides = rooms.map((r, i) => {
+    const x = (width * (rooms.length - i - 0.5)) / rooms.length,
+      z = depth - 2.4,
+      angle = Math.PI * 0.79;
+    const hw = Math.min(2.8, (width / rooms.length) * 0.39);
+    const s = segment(
+      { x: x - Math.cos(angle) * hw, z: z + Math.sin(angle) * hw },
+      { x: x + Math.cos(angle) * hw, z: z - Math.sin(angle) * hw },
+    );
+    return {
+      ...s,
+      roomId: r.id,
+      title: r.title,
+      wing: r.wing,
+      color: r.color,
+      art: r.works[0],
+      count: r.primaryCount ?? r.works.length,
+    };
   });
   return {
     ...floor,
     rooms,
     walls,
     doors,
+    exits,
+    guides,
+    hallZ,
     width: floor.footprint.w * scale,
     depth: floor.footprint.h * scale,
-    landing: { x: floor.stairs.x * scale, z: floor.stairs.y * scale },
+    landing: { x: width - 1.8, z: floor.stairs.y * scale },
   };
 }
 export function roomAt(floor, x, z) {
@@ -128,14 +153,17 @@ export function walkable(floor, x, z) {
     if (Math.abs(across - w.fixed) < pad && at > w.lo - pad && at < w.hi + pad)
       return false;
   }
-  for (const room of floor.rooms) {
-    const b = bench(room);
-    if (b && Math.abs(x - b.x) < 1.42 && Math.abs(z - b.z) < 0.52) return false;
-  }
+  for (const guide of floor.guides)
+    if (nearSegment(guide, x, z, 0.4)) return false;
+  const room = roomAt(floor, x, z);
+  if (room && room.panels.some((s) => nearSegment(s, x, z, 0.39))) return false;
+  const b = room && bench(room);
+  if (b && Math.abs(x - b.x) < 1.42 && Math.abs(z - b.z) < 0.52) return false;
   return true;
 }
 export function bench(room) {
-  return room.w > 7 && room.d > 7
-    ? { x: room.x + room.w / 2, z: room.z + room.d * 0.58 }
+  // Perimeter seating keeps both sides of the chapter screens accessible.
+  return room.w > 8 && room.d > 8
+    ? { x: room.x + room.w * 0.28, z: room.z + 0.79 }
     : null;
 }

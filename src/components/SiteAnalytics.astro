@@ -1,0 +1,13 @@
+---
+import { analytics } from '../lib/analytics';
+---
+
+{analytics && <script is:inline>
+  if (location.hostname === 'nnxyz.thingelstad.xyz') {
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = 'https://tinylytics.app/js/script.js';
+    script.dataset.site = '7MaUUztU7BVzhcxntCUh';
+    document.body.append(script);
+  }
+</script>}

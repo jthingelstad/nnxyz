@@ -4,6 +4,7 @@
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 import json
+import os
 import re
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -92,6 +93,8 @@ def main():
     # 9 utility pages (home, about, notes, map, catalogue, technique, search, screen saver, 404), the story
     # index with one page per file under curation/story/, and the entrances.
     story_pages = [p for p in (ROOT / "curation/story").glob("*.md") if p.name != "README.md"]
+    visit = os.environ.get("NNXYZ_VIRTUAL_VISIT") == "1"
+    assert (DIST / "visit/index.html").is_file() == visit, "Virtual visit build setting disagrees with routes"
     story = 1 + len(story_pages)
     assert (
         len(pages)
@@ -101,6 +104,7 @@ def main():
         + len(rooms)
         + len(redirects)
         + 9
+        + int(visit)
         + story
         + entrances
     ), "Missing generated routes"

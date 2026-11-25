@@ -1,0 +1,56 @@
+---
+import SiteAnalytics from '../../src/components/SiteAnalytics.astro';
+import shell from './shell.html?raw';
+import './visit.css';
+import { museum } from './catalog';
+const title = 'Virtual visit — The nnxyz Rooms';
+const description =
+  'Walk the galleries, listen to the room introductions and watch artworks draw on the walls.';
+const canonical = new URL('/visit/', Astro.site).href;
+const payload = JSON.stringify({ floors: museum }).replaceAll(
+  '<',
+  String.fromCharCode(92) + 'u003c',
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" />
+    <meta property="og:site_name" content="The nnxyz Rooms" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <script is:inline>
+      try {
+        if (localStorage.getItem('nnxyz-theme') === 'dark')
+          document.documentElement.dataset.theme = 'dark';
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <Fragment set:html={shell} />
+    <script
+      is:inline
+      type="application/json"
+      id="museum"
+      set:html={payload}
+    ></script>
+    <noscript>
+      <a href="/map/">Open the museum map</a>
+    </noscript>
+    <SiteAnalytics />
+    <script>
+      import './visit.js';
+    </script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 import { createTimeline, strokeFraction } from '../../src/lib/timeline.ts';
 
-// The pilot canvas is a projection of the published paths in Faces #1. Cache
+// Project the selected work’s published display SVG into its frame. Cache
 // complete strokes separately so a partially transparent path is painted once.
 export function wallDrawing(source) {
   const svg = new DOMParser().parseFromString(

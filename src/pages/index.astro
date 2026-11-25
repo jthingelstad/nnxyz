@@ -1,4 +1,5 @@
 ---
+import VisitLink from '../components/VisitLink.astro';
 import Layout from '../layouts/Layout.astro';
 import DrawingViewer from '../components/DrawingViewer.astro';
 import statement from '../../curation/collector-statement.json';
@@ -48,6 +49,7 @@ const paragraphHtml = (text: string) =>
             <span>{statement.dateline}</span>
           </p>
         </div>
+        <VisitLink from="home">Walk through the museum</VisitLink>
       </div>
       <div class="entrance-drawing">
         <DrawingViewer work={opening} autoplay />
