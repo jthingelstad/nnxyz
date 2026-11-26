@@ -712,6 +712,24 @@ export function createGallery(canvas, pictures, actions) {
     projection.material.map.needsUpdate = true;
     epoch++;
   }
+  // Draw the destination above the floor finish, outside the pickable shell.
+  const destination = new T.Group();
+  for (const [inner, outer, colour] of [
+    [0.13, 0.245, '#fcfaf5'],
+    [0.165, 0.21, '#292924'],
+  ]) {
+    const ring = new T.Mesh(new T.RingGeometry(inner, outer, 32), ink(colour));
+    ring.position.z = inner === 0.13 ? 0 : 0.001;
+    destination.add(ring);
+  }
+  destination.rotation.x = -Math.PI / 2;
+  destination.visible = false;
+  scene.add(destination);
+  function markDestination(point) {
+    destination.visible = Boolean(point);
+    if (point) destination.position.set(point.x, 0.035, point.z);
+    epoch++;
+  }
   const headset = makeHeadset(renderer, scene, () => shell, actions);
   function draw(pose) {
     if (headset.active) return;
@@ -740,6 +758,7 @@ export function createGallery(canvas, pictures, actions) {
   }
   return {
     headset,
+    markDestination,
     vectorEdge,
     setDrawing,
     replaySign,
