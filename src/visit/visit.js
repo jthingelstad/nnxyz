@@ -20,6 +20,8 @@ export function startMuseum({
   );
   const pose = { x: 0, z: 0, yaw: 0, pitch: 0 },
     keys = new Set(),
+    touchSteps = new Map(),
+    touchScreen = matchMedia('(pointer: coarse)'),
     clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n));
   let floor,
     room,
@@ -29,6 +31,7 @@ export function startMuseum({
     previousEpoch = -1,
     last = 0,
     drag = null,
+    walkTarget = null,
     tourRoom,
     tourIndex = 0;
   let restoreFocus = null,
@@ -112,7 +115,9 @@ export function startMuseum({
     return a;
   }
   function resetInput() {
+    stopWalking();
     keys.clear();
+    touchSteps.clear();
     drag = null;
   }
   function sheet(mode, type, title) {
@@ -209,6 +214,7 @@ export function startMuseum({
     pose.pitch = 0;
   }
   function stand(r, index = 0, arrival = false) {
+    stopWalking();
     setFloor(floors.find((f) => f.rooms.includes(r)));
     const s = r.hang[index];
     r.activeSet = s.set;
@@ -252,6 +258,8 @@ export function startMuseum({
       target.y - 1.62,
       Math.hypot(pose.x - target.x, pose.z - target.z),
     );
+    // Leave some walkable floor above the controls on a portrait screen.
+    if (arrival && touchScreen.matches && aspect < 1) pose.pitch -= 0.16;
     location();
     updateAddress(arrival ? null : s.art);
     updateHangingButton();
@@ -261,6 +269,7 @@ export function startMuseum({
     if (!scene) $('flat-image').src = pictures[s.art.image] ?? s.art.image;
   }
   function landing(f) {
+    stopWalking();
     setFloor(f);
     pose.x = f.landing.x;
     pose.z = f.landing.z;
@@ -611,11 +620,13 @@ export function startMuseum({
     content.append(
       element(
         'p',
-        'Walk with W and S or the up and down arrows. Step sideways with A and D. Drag to look around, or turn with the left and right arrows. The four on-screen arrows also work by touch. Hold Shift for the fastest pace. Select a clear patch of floor to step straight there.',
+        touchScreen.matches
+          ? 'Drag the view with one finger to look around. Tap a clear patch of floor to walk to it. Hold Walk or Back up to move in the direction you are looking.'
+          : 'Walk with W and S or the up and down arrows. Step sideways with A and D. Drag to look around, or turn with the left and right arrows. Hold Shift for the fastest pace. Click a clear patch of floor to step straight there.',
       ),
       element(
         'p',
-        'Click a picture to read its label. Browse works lets you stand directly at any picture. The floor plan takes you to any room or lift landing.',
+        'Select a picture to read its label. Browse works lets you stand directly at any picture. The floor plan takes you to any room or lift landing.',
       ),
       element(
         'p',
@@ -659,6 +670,7 @@ export function startMuseum({
     player.playing ? player.pause() : player.resume();
   $('stop').onclick = () => player.end();
   function fallback(message) {
+    stopWalking();
     drawings?.keepVisible(null);
     scene = null;
     updateHangingButton();
@@ -773,13 +785,14 @@ export function startMuseum({
   scene?.theme(document.documentElement.dataset.theme === 'dark');
   scene?.resize();
   function arrive(f, id) {
+    stopWalking();
     setFloor(f);
     const g = f.guides.find((g) => g.roomId === id) ?? f.guides[0];
     pose.x = clamp(g.x + Math.sin(g.angle) * 4.65 + 3.25, 0.5, f.width - 0.5);
     pose.z = f.hallZ + 1.05;
     face(g.x, g.z);
     pose.yaw -= canvas.clientWidth > 650 ? 0.36 : 0;
-    pose.pitch = 0.08;
+    pose.pitch = touchScreen.matches ? -0.045 : 0.08;
     location();
     scene?.sync(pose.x, pose.z);
     dirty = true;
@@ -869,6 +882,7 @@ export function startMuseum({
       return;
     if (movement.has(e.code)) {
       e.preventDefault();
+      stopWalking();
       keys.add(e.code);
     }
   });
@@ -881,21 +895,37 @@ export function startMuseum({
     }
   });
   for (const b of document.querySelectorAll('[data-move]')) {
+    const touch = b.hasAttribute('data-touch-step');
+    const code = b.dataset.move;
     b.addEventListener('pointerdown', (e) => {
+      if (!scene || e.button !== 0) return;
       e.preventDefault();
+      stopWalking();
       b.setPointerCapture(e.pointerId);
-      keys.add(b.dataset.move);
+      if (touch) {
+        touchSteps.set(e.pointerId, code);
+        // Even a quick tap advances a short step.
+        move(0.12, new Set([code]), 2.65);
+      } else keys.add(code);
     });
-    b.addEventListener('lostpointercapture', () => keys.delete(b.dataset.move));
+    b.addEventListener('lostpointercapture', (e) => {
+      if (touch) touchSteps.delete(e.pointerId);
+      else keys.delete(code);
+    });
     b.addEventListener('click', (e) => {
-      if (e.detail === 0 && scene) move(0.15, new Set([b.dataset.move]));
+      if (e.detail === 0 && scene) {
+        stopWalking();
+        move(0.15, new Set([code]), touch ? 2.65 : undefined);
+      }
     });
   }
   canvas.addEventListener('pointerdown', (e) => {
-    if (!e.isPrimary || e.button !== 0) return;
+    if (drag || e.button !== 0 || !scene) return;
+    stopWalking();
     canvas.setPointerCapture(e.pointerId);
     canvas.focus();
     drag = {
+      id: e.pointerId,
       x: e.clientX,
       y: e.clientY,
       lastX: e.clientX,
@@ -904,14 +934,16 @@ export function startMuseum({
     };
   });
   canvas.addEventListener('pointermove', (e) => {
-    if (!drag || !e.isPrimary) return;
+    if (drag?.id !== e.pointerId) return;
     if (Math.hypot(e.clientX - drag.x, e.clientY - drag.y) > 4)
       drag.moved = true;
     if (drag.moved) {
       hideWalkHint();
-      pose.yaw -= (e.clientX - drag.lastX) * 0.004;
+      // On a touchscreen the scene follows the finger, like a panorama.
+      const direction = e.pointerType === 'touch' ? 1 : -1;
+      pose.yaw += direction * (e.clientX - drag.lastX) * 0.004;
       pose.pitch = clamp(
-        pose.pitch - (e.clientY - drag.lastY) * 0.003,
+        pose.pitch + direction * (e.clientY - drag.lastY) * 0.003,
         -0.88,
         0.88,
       );
@@ -921,7 +953,7 @@ export function startMuseum({
     drag.lastY = e.clientY;
   });
   canvas.addEventListener('pointerup', (e) => {
-    if (!drag || !e.isPrimary) return;
+    if (drag?.id !== e.pointerId) return;
     if (!drag.moved) {
       if (dirty) scene?.draw(pose);
       const rect = canvas.getBoundingClientRect(),
@@ -936,28 +968,76 @@ export function startMuseum({
       else if (hit?.change) nextHanging(hit.change);
       else if (hit?.enter) jump(allRooms.find((r) => r.id === hit.enter));
       else if (hit?.lift) landing(floors.find((f) => f.number === hit.lift));
-      else if (hit?.point && walkable(floor, hit.point.x, hit.point.z)) {
-        hideWalkHint();
-        pose.x = hit.point.x;
-        pose.z = hit.point.z;
-        location();
-        scene.sync(pose.x, pose.z);
-        dirty = true;
+      else if (hit?.point) {
+        if (e.pointerType === 'touch') walkThere(hit.point);
+        else if (walkable(floor, hit.point.x, hit.point.z)) moveTo(hit.point);
       }
     }
     drag = null;
   });
-  canvas.addEventListener('lostpointercapture', () => {
-    drag = null;
+  canvas.addEventListener('lostpointercapture', (e) => {
+    if (drag?.id === e.pointerId) drag = null;
   });
-  function move(dt, held) {
+  function stopWalking() {
+    if (!walkTarget) return;
+    walkTarget = null;
+    scene?.markDestination(null);
+  }
+  function moveTo(point) {
+    hideWalkHint();
+    pose.x = point.x;
+    pose.z = point.z;
+    location();
+    scene.sync(pose.x, pose.z);
+    dirty = true;
+  }
+  function walkThere(point) {
+    if (touchSteps.size) return;
+    const dx = point.x - pose.x;
+    const dz = point.z - pose.z;
+    const steps = Math.ceil(Math.hypot(dx, dz) / 0.12);
+    let target = null;
+    // Trace the floor with the visitor's clearance, even when the camera
+    // can see the other side of a low obstruction.
+    for (let i = 1; i <= steps; i++) {
+      const x = pose.x + (dx * i) / steps;
+      const z = pose.z + (dz * i) / steps;
+      if (!walkable(floor, x, z)) break;
+      target = { x, z };
+    }
+    if (!target) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      moveTo(target);
+      return;
+    }
+    walkTarget = target;
+    scene.markDestination(target);
+  }
+  function followWalk(dt) {
+    const dx = walkTarget.x - pose.x;
+    const dz = walkTarget.z - pose.z;
+    const distance = Math.hypot(dx, dz);
+    const step = 3.6 * dt;
+    if (distance <= step) {
+      moveTo(walkTarget);
+      stopWalking();
+    } else {
+      moveTo({
+        x: pose.x + (dx * step) / distance,
+        z: pose.z + (dz * step) / distance,
+      });
+    }
+  }
+  function move(dt, held, pace) {
     const down = (...codes) => Number(codes.some((c) => held.has(c)));
     const turn = down('ArrowLeft') - down('ArrowRight');
     pose.yaw += turn * dt * 1.5;
     const f = down('ArrowUp', 'KeyW') - down('ArrowDown', 'KeyS'),
       s = down('KeyD') - down('KeyA');
     if (turn || f || s) hideWalkHint();
-    const speed = down('ShiftLeft', 'ShiftRight') ? 8 : Number($('pace').value);
+    const speed = down('ShiftLeft', 'ShiftRight')
+      ? 8
+      : (pace ?? Number($('pace').value));
     const step = (speed * dt) / Math.max(1, Math.hypot(s, f));
     const dx = (s * Math.cos(pose.yaw) - f * Math.sin(pose.yaw)) * step,
       dz = (-f * Math.cos(pose.yaw) - s * Math.sin(pose.yaw)) * step;
@@ -973,8 +1053,12 @@ export function startMuseum({
   function frame(time) {
     if (!scene) return;
     if (!scene.headset.active) drawings.tick(time);
-    if (!panel.open && keys.size)
-      move(Math.min(0.12, (time - last) / 1000), keys);
+    if (!panel.open && !scene.headset.active) {
+      const dt = Math.min(0.12, (time - last) / 1000);
+      if (touchSteps.size) move(dt, new Set(touchSteps.values()), 2.65);
+      else if (keys.size) move(dt, keys);
+      else if (walkTarget) followWalk(dt);
+    }
     if (dirty || previousEpoch !== scene.epoch) {
       scene.draw(pose);
       dirty = false;

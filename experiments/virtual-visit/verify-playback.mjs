@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { chromium } from 'playwright';
+import { chromium, devices } from 'playwright';
 import sharp from 'sharp';
 
 const url =
@@ -145,6 +145,88 @@ try {
       .getByRole('button', { name: 'Browse works', exact: true })
       .waitFor();
     assert.match(page.url(), new RegExp('#work=' + work));
+  }
+  if (process.env.VISIT_TEST_URL) {
+    const phone = await browser.newPage({ ...devices['iPhone 13'] });
+    try {
+      phone.on('pageerror', (e) => errors.push(e.message));
+      await phone.goto(url);
+      const walk = phone.getByRole('button', {
+        name: 'Walk forward',
+        exact: true,
+      });
+      await walk.waitFor();
+      assert(await phone.getByRole('button', { name: 'Turn left' }).isHidden());
+      const dock = await phone.locator('.location').boundingBox();
+      const position = async () => {
+        await phone
+          .getByRole('button', { name: 'Floor plan', exact: true })
+          .tap();
+        const transform = await phone
+          .locator('[aria-label="Your position"]')
+          .getAttribute('transform');
+        await phone
+          .getByRole('button', { name: 'Close panel', exact: true })
+          .tap();
+        const [x, z, angle] = transform.match(/[-\d.]+/g).map(Number);
+        return { x, z, angle };
+      };
+      const distance = (a, b) => Math.hypot(a.x - b.x, a.z - b.z);
+      const start = await position();
+      await walk.tap();
+      const forward = await position();
+      assert(
+        distance(start, forward) > 0.27,
+        'A quick Walk tap must take a step',
+      );
+      await phone.getByRole('button', { name: 'Back up', exact: true }).tap();
+      const backed = await position();
+      assert(distance(start, backed) < distance(start, forward));
+      await phone.touchscreen.tap(
+        phone.viewportSize().width / 2,
+        Math.round(dock.y - 6),
+      );
+      // Wait for the walk to advance before opening the map, which cancels it.
+      await phone.waitForTimeout(700);
+      const walked = await position();
+      assert(
+        distance(backed, walked) > 0.6,
+        'A floor tap must walk toward its destination',
+      );
+      assert.equal(
+        walked.angle,
+        backed.angle,
+        'Walking preserves the viewing direction',
+      );
+
+      const cdp = await phone.context().newCDPSession(phone);
+      await cdp.send('Input.dispatchTouchEvent', {
+        type: 'touchStart',
+        touchPoints: [{ x: 115, y: 288 }],
+      });
+      await cdp.send('Input.dispatchTouchEvent', {
+        type: 'touchMove',
+        touchPoints: [{ x: 250, y: 288 }],
+      });
+      await cdp.send('Input.dispatchTouchEvent', {
+        type: 'touchEnd',
+        touchPoints: [],
+      });
+      const turned = await position();
+      assert(
+        turned.angle < walked.angle - 12,
+        'Dragging right should pull the scene right',
+      );
+      assert(
+        distance(turned, walked) < 0.01,
+        'A look gesture must not move the visitor',
+      );
+      console.log(
+        'iPhone-size tap to walk, forward and backward steps, and drag to look passed.',
+      );
+    } finally {
+      await phone.close();
+    }
   }
   assert.deepEqual(errors, []);
   console.log(
