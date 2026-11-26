@@ -221,6 +221,13 @@ try {
         distance(turned, walked) < 0.01,
         'A look gesture must not move the visitor',
       );
+      await phone.setViewportSize({ width: 568, height: 320 });
+      const roomPanel = await phone.locator('.location').boundingBox();
+      const walkControls = await phone.locator('.movement').boundingBox();
+      assert(
+        roomPanel.x + roomPanel.width < walkControls.x,
+        'The touch controls must leave room actions accessible in landscape',
+      );
       console.log(
         'iPhone-size tap to walk, forward and backward steps, and drag to look passed.',
       );

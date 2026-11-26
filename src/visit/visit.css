@@ -652,3 +652,27 @@ body:has(#visit-entrance):not(.visit-active) {
     grid-template-columns: repeat(4, 42px);
   }
 }
+
+@media (pointer: coarse) and (orientation: landscape) {
+  main {
+    --walk-width: min(280px, 48vw);
+    --left-gutter: max(12px, env(safe-area-inset-left));
+    --right-gutter: max(12px, env(safe-area-inset-right));
+  }
+  .movement {
+    width: var(--walk-width);
+  }
+  .touch-walk {
+    justify-content: space-between;
+  }
+  .location {
+    left: var(--left-gutter);
+    max-width: min(
+      460px,
+      calc(
+        100% - var(--walk-width) - var(--left-gutter) - var(--right-gutter) -
+          10px
+      )
+    );
+  }
+}
