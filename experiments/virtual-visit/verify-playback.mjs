@@ -159,15 +159,18 @@ try {
       assert(await phone.getByRole('button', { name: 'Turn left' }).isHidden());
       const dock = await phone.locator('.location').boundingBox();
       const position = async () => {
+        // Use a mouse click for the measurement so it does not share the
+        // touch sequence that is under test.
         await phone
           .getByRole('button', { name: 'Floor plan', exact: true })
-          .tap();
-        const transform = await phone
+          .click();
+        const map = phone.locator('#panel');
+        await map.waitFor({ state: 'visible' });
+        const transform = await map
           .locator('[aria-label="Your position"]')
           .getAttribute('transform');
-        await phone
-          .getByRole('button', { name: 'Close panel', exact: true })
-          .tap();
+        await phone.keyboard.press('Escape');
+        await map.waitFor({ state: 'hidden' });
         const [x, z, angle] = transform.match(/[-\d.]+/g).map(Number);
         return { x, z, angle };
       };
